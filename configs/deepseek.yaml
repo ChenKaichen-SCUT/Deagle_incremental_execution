@@ -1,8 +1,20 @@
 schema_version: 1
-status: pending_stage_1
+status: verified_stage_1
 base_url: https://api.deepseek.com
 controller_key_file: apikey.txt
-model_id: null
+model_id: deepseek-v4-pro
+litellm_route: deepseek/deepseek-v4-pro
+pricing:
+  date_utc: "2026-11-23"
+  source: https://api-docs.deepseek.com/quick_start/pricing/
+  currency: USD
+  per_million_tokens:
+    peak: {cache_hit: 0.044, cache_miss: 1.32, output: 3.96}
+    off_peak: {cache_hit: 0.022, cache_miss: 0.66, output: 1.98}
+smoke:
+  max_model_calls: 6
+  timeout_seconds: 150
+  reasoning_effort: low
 repair:
   max_model_calls: 40
   timeout_seconds: 1800

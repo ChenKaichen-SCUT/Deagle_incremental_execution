@@ -1,0 +1,50 @@
+{
+  "deagle": {
+    "repository": "thufv/Deagle",
+    "url": "https://github.com/thufv/Deagle",
+    "selected_ref": "main",
+    "sha": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+    "tree": "ee983048136026478a6af5774ab20077b273db2f",
+    "github_license": "NOASSERTION",
+    "commit_utc": "2026-11-03T08:17:43Z",
+    "repository_size_kib": 109738,
+    "tree_paths": 29766,
+    "retrieved_at_utc": "2026-11-23T08:21:49+00:00"
+  },
+  "damer_camc": {
+    "repository": "shirleylee03/damer-camc",
+    "url": "https://github.com/shirleylee03/damer-camc",
+    "selected_ref": "main",
+    "sha": "c005ebbde3672fff77c6d91da2f91d1daa45d746",
+    "tree": "c6579e4823686d94a48b5482f05171ac9a0b7c1b",
+    "github_license": "BSL-1.0",
+    "commit_utc": "2023-04-29T18:49:25Z",
+    "repository_size_kib": 23278,
+    "tree_paths": 1925,
+    "retrieved_at_utc": "2026-11-23T08:21:45+00:00"
+  },
+  "mini_swe_agent": {
+    "repository": "SWE-agent/mini-swe-agent",
+    "url": "https://github.com/SWE-agent/mini-swe-agent",
+    "selected_ref": "v2.4.6",
+    "sha": "a83fcae82d2a08f0ee0c688f9d137b3566c097f8",
+    "tree": "665df42f5761252b83d9a30e1b82f76f1f17f828",
+    "github_license": "MIT",
+    "commit_utc": "2026-07-23T03:11:33Z",
+    "repository_size_kib": 20299,
+    "tree_paths": 263,
+    "retrieved_at_utc": "2026-11-23T08:21:46+00:00"
+  },
+  "yogar_cbmc_inc": {
+    "repository": "yinliangze/yogar-cbmc-inc",
+    "url": "https://github.com/yinliangze/yogar-cbmc-inc",
+    "selected_ref": "main",
+    "sha": "6e1d4eacf3cccc6634e876e884792bac6115ba82",
+    "tree": "b4351ce66bf3331605442d9de79fbbd3bf51c012",
+    "github_license": null,
+    "commit_utc": "2025-04-25T08:48:01Z",
+    "repository_size_kib": 4898,
+    "tree_paths": 174,
+    "retrieved_at_utc": "2026-11-23T08:21:46+00:00"
+  }
+}

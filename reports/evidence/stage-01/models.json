@@ -1,0 +1,10 @@
+{
+  "utc": "2026-11-23T08:27:14.905615+00:00",
+  "method": "GET",
+  "url": "https://api.deepseek.com/models",
+  "http_status": 200,
+  "model_ids": [
+    "deepseek-flash",
+    "deepseek-v4-pro"
+  ]
+}

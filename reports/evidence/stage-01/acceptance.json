@@ -1,0 +1,64 @@
+{
+  "stage": 1,
+  "outcome": "passed",
+  "started_utc": "2026-11-23T08:19:54.207637+00:00",
+  "prepublication_checked_utc": "2026-11-23T09:07:18.336364+00:00",
+  "elapsed_seconds_to_prepublication_checks": 2844.129,
+  "raw_evidence": {
+    "verified_member_count": 100,
+    "archive_sha256": "ee8d5c801f32660b2c7701411956d47aeebac765a33d9cbc915a207f90df0c5d"
+  },
+  "deagle": {
+    "native_runs": 10,
+    "checked_property_documents": 4,
+    "graphml_witnesses_checked": 2,
+    "rejected_invalid_documents": [
+      "trailing_data",
+      "wrong_property",
+      "wrong_overall_status",
+      "unpatched_worker_output",
+      "unpatched_join_output"
+    ],
+    "both_binaries_identical": true,
+    "bundle_replay_verified": true,
+    "text_patch_tree_verified": true
+  },
+  "damer": {
+    "native_property_runs": 3,
+    "search_graph_states": {
+      "old": 40,
+      "new": 43,
+      "cia": 27
+    },
+    "verdicts": [
+      "FALSE",
+      "FALSE",
+      "FALSE"
+    ],
+    "cia_reused_previous_verdict": false
+  },
+  "mini": {
+    "official_hash_verified_wheels": 89,
+    "offline_hash_lock_resolution_passed": true,
+    "pip_check_passed": true,
+    "model_list_queries": 1,
+    "total_model_calls": 5,
+    "successful_run_model_calls": 2,
+    "matching_tool_id_and_receipt": true,
+    "prior_reasoning_round_tripped_exactly": true,
+    "input_tokens": 2817,
+    "output_tokens": 868,
+    "cache_hit_tokens": 1408,
+    "cache_miss_tokens": 1409,
+    "estimated_peak_usd": "0.005359112"
+  },
+  "publication_checks": {
+    "tracked_files_and_archive_members_checked_for_key": true,
+    "key_ignored_and_untracked": true,
+    "json_yaml_python_syntax": "passed",
+    "report_relative_links": "resolved",
+    "staged_diff_check": "passed"
+  },
+  "stop_check": "stop-check.json",
+  "next_stage_approved": false
+}

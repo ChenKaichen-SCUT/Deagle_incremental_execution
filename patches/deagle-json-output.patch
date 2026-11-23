@@ -1,0 +1,61 @@
+--- a/src/util/ui_message.cpp
++++ b/src/util/ui_message.cpp
+@@ -8,6 +8,7 @@
+ 
+ #include "ui_message.h"
+ 
++#include <cstdlib>
+ #include <fstream>
+ #include <iostream>
+ 
+@@ -20,6 +21,22 @@
+ #include "structured_data.h"
+ #include "xml.h"
+ #include "xml_irep.h"
++
++// Dedicated structured output for callers that also need the solver's diagnostics.
++static std::unique_ptr<std::ofstream> open_json_output(ui_message_handlert::uit ui)
++{
++  const char *path = std::getenv("INCDEAGLE_JSON_OUTPUT");
++  if(ui != ui_message_handlert::uit::JSON_UI || path == nullptr)
++    return nullptr;
++
++  auto file = util_make_unique<std::ofstream>(path);
++  if(!*file)
++  {
++    std::cerr << "Cannot open INCDEAGLE_JSON_OUTPUT: " << path << '\n';
++    std::exit(EXIT_FAILURE);
++  }
++  return file;
++}
+ 
+ ui_message_handlert::ui_message_handlert(
+   message_handlert *_message_handler,
+@@ -31,7 +48,8 @@
+     _ui(__ui),
+     always_flush(always_flush),
+     time(timestampert::make(clock_type)),
+-    out(std::cout),
++    json_output_file(open_json_output(_ui)),
++    out(json_output_file ? static_cast<std::ostream &>(*json_output_file) : std::cout),
+     json_stream(nullptr)
+ {
+   switch(_ui)
+--- a/src/util/ui_message.h
++++ b/src/util/ui_message.h
+@@ -10,6 +10,7 @@
+ #ifndef CPROVER_UTIL_UI_MESSAGE_H
+ #define CPROVER_UTIL_UI_MESSAGE_H
+ 
++#include <iosfwd>
+ #include <memory>
+ 
+ #include "message.h"
+@@ -50,6 +51,7 @@
+   uit _ui;
+   const bool always_flush;
+   std::unique_ptr<const timestampert> time;
++  std::unique_ptr<std::ofstream> json_output_file;
+   std::ostream &out;
+   std::unique_ptr<json_stream_arrayt> json_stream;
+ 

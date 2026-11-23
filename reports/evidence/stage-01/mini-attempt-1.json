@@ -1,0 +1,133 @@
+{
+  "started_utc": "2026-11-23T08:46:12.263435+00:00",
+  "model": "deepseek-v4-pro",
+  "route": "deepseek/deepseek-v4-pro",
+  "api_base": "https://api.deepseek.com",
+  "requests": [
+    {
+      "started_utc": "2026-11-23T08:46:12.282268+00:00",
+      "roles": [
+        "system",
+        "user"
+      ],
+      "returned_tool_ids": [],
+      "prior_reasoning_present": false,
+      "prior_reasoning_exact": null,
+      "response_id": "040405ff-332f-4255-9447-edaeba15f770",
+      "returned_model": "deepseek-v4-pro",
+      "finish_reason": "tool_calls",
+      "reasoning_present": true,
+      "tool_calls": [
+        {
+          "id": "call_00_lRX4Rc9HHc0r1UgfIuCR3622",
+          "tool": "bash",
+          "arguments": "{\"command\": \"cd \\\"$TMPDIR\\\" 2>/dev/null || cd /tmp; ls -la; cat status.txt; echo \\\"---\\\"; find . -maxdepth 3 -name \\\"status.txt\\\" 2>/dev/null\"}"
+        }
+      ],
+      "input_tokens": 378,
+      "output_tokens": 187,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 378,
+      "reasoning_tokens": 99
+    },
+    {
+      "started_utc": "2026-11-23T08:46:15.342266+00:00",
+      "roles": [
+        "system",
+        "user",
+        "assistant",
+        "tool"
+      ],
+      "returned_tool_ids": [
+        "call_00_lRX4Rc9HHc0r1UgfIuCR3622"
+      ],
+      "prior_reasoning_present": true,
+      "prior_reasoning_exact": true,
+      "response_id": "8daea384-e1e3-4e81-9f48-4bc95964d23b",
+      "returned_model": "deepseek-v4-pro",
+      "finish_reason": "tool_calls",
+      "reasoning_present": true,
+      "tool_calls": [
+        {
+          "id": "call_00_bTTLDNzU8nJtuSOQDFqL7941",
+          "tool": "bash",
+          "arguments": "{\"command\": \"pwd; echo \\\"---\\\"; cat status.txt; echo \\\"---\\\"; cat receipt.txt\"}"
+        }
+      ],
+      "input_tokens": 605,
+      "output_tokens": 255,
+      "cache_hit_tokens": 256,
+      "cache_miss_tokens": 349,
+      "reasoning_tokens": 195
+    },
+    {
+      "started_utc": "2026-11-23T08:46:19.723881+00:00",
+      "roles": [
+        "system",
+        "user",
+        "assistant",
+        "tool",
+        "assistant",
+        "tool"
+      ],
+      "returned_tool_ids": [
+        "call_00_lRX4Rc9HHc0r1UgfIuCR3622",
+        "call_00_bTTLDNzU8nJtuSOQDFqL7941"
+      ],
+      "prior_reasoning_present": true,
+      "prior_reasoning_exact": true,
+      "response_id": "a0c41ad1-d19d-4d3b-ae37-9fb11ecf51aa",
+      "returned_model": "deepseek-v4-pro",
+      "finish_reason": "tool_calls",
+      "reasoning_present": true,
+      "tool_calls": [
+        {
+          "id": "call_00_JMlEJOkUBasAwQUBfq8m9990",
+          "tool": "bash",
+          "arguments": "{\"command\": \"cd /tmp/minisweagent-30f44974 && printf 'ready\\\\n' > status.txt && cat receipt.txt\"}"
+        }
+      ],
+      "input_tokens": 914,
+      "output_tokens": 234,
+      "cache_hit_tokens": 768,
+      "cache_miss_tokens": 146,
+      "reasoning_tokens": 167
+    }
+  ],
+  "prompt_receipt_supplied": false,
+  "status_before": "pending",
+  "isolation": {
+    "output": "uid=65534\n     65534          0          1\nIface\tDestination\tGateway \tFlags\tRefCnt\tUse\tMetric\tMask\t\tMTU\tWindow\tIRTT                                                       \n",
+    "returncode": 0,
+    "exception_info": ""
+  },
+  "host_uid_of_sandbox_created_file": 65534,
+  "exit_status": "LimitsExceeded",
+  "submission": "",
+  "status_after": "ready\n",
+  "observations": [
+    {
+      "tool_call_id": "call_00_lRX4Rc9HHc0r1UgfIuCR3622",
+      "output": "bash: line 1: ls: command not found\npending\n---\n",
+      "returncode": 127
+    },
+    {
+      "tool_call_id": "call_00_bTTLDNzU8nJtuSOQDFqL7941",
+      "output": "/tmp/minisweagent-30f44974\n---\npending\n---\nack-bd83983c1c5448d9\n",
+      "returncode": 0
+    },
+    {
+      "tool_call_id": "call_00_JMlEJOkUBasAwQUBfq8m9990",
+      "output": "ack-bd83983c1c5448d9\n",
+      "returncode": 0
+    }
+  ],
+  "agent_calls": 3,
+  "estimated_usd_by_tariff": {
+    "peak": "0.003874376",
+    "off_peak": "0.001937188"
+  },
+  "result": "failed",
+  "error_type": "RuntimeError",
+  "http_status": null
+}

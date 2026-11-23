@@ -1,0 +1,158 @@
+{
+  "binary_sha256": "df67c44454340811f02a90221b5a7056fe2d34c98727d49398eb23ef70581828",
+  "input_sha256": {
+    "08_Lazy.c": "65a9d78f74797709aa5dc85a24afb68aec392b4ff859f5ba94ffca68f467add7",
+    "08_Lazy-new.c": "1c45d31bab0b264dd7fa146839ad46623fe6d212869c77ab4abca29f8406abc1",
+    "08_Lazy.xml": "1c69c83bd4944d169c9dafa47ad4b4b4707edd622ec4be1123c0198df705fb74"
+  },
+  "runs": {
+    "help": {
+      "command": [
+        "systemd-run",
+        "--quiet",
+        "--pipe",
+        "--wait",
+        "--collect",
+        "-p",
+        "WorkingDirectory=/root/Deagle_incremental_execution",
+        "-p",
+        "MemoryMax=21474836480",
+        "--setenv=LC_ALL=C",
+        "--",
+        "/usr/bin/timeout",
+        "--kill-after=5",
+        "300",
+        "/root/Deagle_incremental_execution/third_party/damer-camc/build/PDNet2_0",
+        "-help"
+      ],
+      "started_utc": "2026-11-23T08:44:41.200503+00:00",
+      "wall_seconds": 0.0113,
+      "exit_code": 0,
+      "stdout": "help.stdout",
+      "stderr": "help.stderr",
+      "stdout_sha256": "eae608a3e0510ccbdfb089983a76ae85a32b54cf1a080b1d8629b11f40e92324",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "old": {
+      "command": [
+        "systemd-run",
+        "--quiet",
+        "--pipe",
+        "--wait",
+        "--collect",
+        "-p",
+        "WorkingDirectory=/root/Deagle_incremental_execution/runs/stage-01/damer-smoke/old-18toniod/build",
+        "-p",
+        "MemoryMax=21474836480",
+        "--setenv=LC_ALL=C",
+        "--",
+        "/usr/bin/timeout",
+        "--kill-after=5",
+        "300",
+        "/root/Deagle_incremental_execution/third_party/damer-camc/build/PDNet2_0",
+        "-property",
+        "../test/08_Lazy.xml",
+        "../test/08_Lazy.c"
+      ],
+      "started_utc": "2026-11-23T08:44:41.214097+00:00",
+      "wall_seconds": 0.0362,
+      "exit_code": 0,
+      "stdout": "old.stdout",
+      "stderr": "old.stderr",
+      "stdout_sha256": "0c598d4df8e2aca6a18610f2ce55e5d32b47017359f5d0495f87a3947d7d445d",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdict": "FALSE",
+      "model_counts": {
+        "placenum": 82,
+        "transnum": 41,
+        "Synthesised graph node num": 40
+      },
+      "csv": {
+        "DirectBuild.csv": "DirectBuild.csv\n,P,Pv,Pc,Pf,T,S,Tm,Ts,Tc,R,Tpro\n../test/08_Lazy.iii,82,6,48,28,41,40,1.939000,NULL,13.447000,false,NULL\n"
+      },
+      "rendered_property_sha256": "b23dbbc29674cd92206d54b9934a60687905c0951594572073a8861264f6e8dd"
+    },
+    "new": {
+      "command": [
+        "systemd-run",
+        "--quiet",
+        "--pipe",
+        "--wait",
+        "--collect",
+        "-p",
+        "WorkingDirectory=/root/Deagle_incremental_execution/runs/stage-01/damer-smoke/new-wps3k7n_/build",
+        "-p",
+        "MemoryMax=21474836480",
+        "--setenv=LC_ALL=C",
+        "--",
+        "/usr/bin/timeout",
+        "--kill-after=5",
+        "300",
+        "/root/Deagle_incremental_execution/third_party/damer-camc/build/PDNet2_0",
+        "-property",
+        "../test/08_Lazy.xml",
+        "../test/08_Lazy-new.c"
+      ],
+      "started_utc": "2026-11-23T08:44:41.252998+00:00",
+      "wall_seconds": 0.036,
+      "exit_code": 0,
+      "stdout": "new.stdout",
+      "stderr": "new.stderr",
+      "stdout_sha256": "7d1b9a0f74018a0c7a1320d690b250b5c8d74b96335c09eeec875b7016a0c221",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdict": "FALSE",
+      "model_counts": {
+        "placenum": 82,
+        "transnum": 41,
+        "Synthesised graph node num": 43
+      },
+      "csv": {
+        "DirectBuild.csv": "DirectBuild.csv\n,P,Pv,Pc,Pf,T,S,Tm,Ts,Tc,R,Tpro\n../test/08_Lazy-new.iii,82,6,48,28,41,43,1.948000,NULL,12.815000,false,NULL\n"
+      },
+      "rendered_property_sha256": "b23dbbc29674cd92206d54b9934a60687905c0951594572073a8861264f6e8dd"
+    },
+    "cia": {
+      "command": [
+        "systemd-run",
+        "--quiet",
+        "--pipe",
+        "--wait",
+        "--collect",
+        "-p",
+        "WorkingDirectory=/root/Deagle_incremental_execution/runs/stage-01/damer-smoke/cia-5ma3h5n_/build",
+        "-p",
+        "MemoryMax=21474836480",
+        "--setenv=LC_ALL=C",
+        "--",
+        "/usr/bin/timeout",
+        "--kill-after=5",
+        "300",
+        "/root/Deagle_incremental_execution/third_party/damer-camc/build/PDNet2_0",
+        "-CIA",
+        "-PDNetSlice",
+        "-property",
+        "../test/08_Lazy.xml",
+        "../test/08_Lazy.c"
+      ],
+      "started_utc": "2026-11-23T08:44:41.291341+00:00",
+      "wall_seconds": 0.0496,
+      "exit_code": 0,
+      "stdout": "cia.stdout",
+      "stderr": "cia.stderr",
+      "stdout_sha256": "6bfe07fe2b3769109a5d832d41e7c3c6e2a63776a36d50d2d7a5858f980e5283",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "verdict": "FALSE",
+      "model_counts": {
+        "placenum": 44,
+        "transnum": 26,
+        "Synthesised graph node num": 27
+      },
+      "previous_verdict_reused": false,
+      "csv": {
+        "CIAresults.csv": "../test/08_Lazy.iii, xml, 44, 2, 26, 16, 26, false, 14.996, 1.934, 0.507, 0.357, 0.149, 0.440, 12.096\n",
+        "PDNetSlice.csv": "PDNetSlice.csv\n,P,Pv,Pc,Pf,T,S,Tm,Ts,Tc,R,Tpro\n"
+      },
+      "rendered_property_sha256": "b23dbbc29674cd92206d54b9934a60687905c0951594572073a8861264f6e8dd"
+    }
+  }
+}

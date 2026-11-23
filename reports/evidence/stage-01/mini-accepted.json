@@ -1,0 +1,88 @@
+{
+  "started_utc": "2026-11-23T08:48:27.755296+00:00",
+  "model": "deepseek-v4-pro",
+  "route": "deepseek/deepseek-v4-pro",
+  "api_base": "https://api.deepseek.com",
+  "requests": [
+    {
+      "started_utc": "2026-11-23T08:48:27.773392+00:00",
+      "roles": [
+        "system",
+        "user"
+      ],
+      "returned_tool_ids": [],
+      "prior_reasoning_present": false,
+      "prior_reasoning_exact": null,
+      "response_id": "835d499b-6692-4ab6-94a7-3631b475d791",
+      "returned_model": "deepseek-v4-pro",
+      "finish_reason": "tool_calls",
+      "reasoning_present": true,
+      "tool_calls": [
+        {
+          "id": "call_00_QE0G9n1rmhhF8JlL78Hv7620",
+          "tool": "bash",
+          "arguments": "{\"command\": \"printf '%s\\\\n' ready > status.txt && cat receipt.txt\"}"
+        }
+      ],
+      "input_tokens": 393,
+      "output_tokens": 98,
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 393,
+      "reasoning_tokens": 43
+    },
+    {
+      "started_utc": "2026-11-23T08:48:30.002804+00:00",
+      "roles": [
+        "system",
+        "user",
+        "assistant",
+        "tool"
+      ],
+      "returned_tool_ids": [
+        "call_00_QE0G9n1rmhhF8JlL78Hv7620"
+      ],
+      "prior_reasoning_present": true,
+      "prior_reasoning_exact": true,
+      "response_id": "f4acc60d-995d-44ef-b0ea-866fa3043447",
+      "returned_model": "deepseek-v4-pro",
+      "finish_reason": "tool_calls",
+      "reasoning_present": true,
+      "tool_calls": [
+        {
+          "id": "call_00_H94Y5weLjdaSp8gUrhux6210",
+          "tool": "bash",
+          "arguments": "{\"command\": \"printf '%s\\\\n' COMPLETE_TASK_AND_SUBMIT_FINAL_OUTPUT ack-e496cb93e9da0227\"}"
+        }
+      ],
+      "input_tokens": 527,
+      "output_tokens": 94,
+      "cache_hit_tokens": 384,
+      "cache_miss_tokens": 143,
+      "reasoning_tokens": 22
+    }
+  ],
+  "prompt_receipt_supplied": false,
+  "status_before": "pending",
+  "isolation": {
+    "output": "uid=65534\n     65534          0          1\nIface\tDestination\tGateway \tFlags\tRefCnt\tUse\tMetric\tMask\t\tMTU\tWindow\tIRTT                                                       \n",
+    "returncode": 0,
+    "exception_info": ""
+  },
+  "host_uid_of_sandbox_created_file": 65534,
+  "exit_status": "Submitted",
+  "submission": "ack-e496cb93e9da0227",
+  "status_after": "ready\n",
+  "observations": [
+    {
+      "tool_call_id": "call_00_QE0G9n1rmhhF8JlL78Hv7620",
+      "output": "ack-e496cb93e9da0227\n",
+      "returncode": 0
+    }
+  ],
+  "agent_calls": 2,
+  "estimated_usd_by_tariff": {
+    "peak": "0.001484736",
+    "off_peak": "0.000742368"
+  },
+  "result": "passed"
+}

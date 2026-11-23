@@ -1,10 +1,11 @@
 {
   "schema_version": 1,
-  "current_stage": 0,
-  "stage_name": "环境探测与项目初始化",
+  "current_stage": 1,
+  "stage_name": "下载工具、配置环境并独立跑通",
   "status": "READY_FOR_REVIEW",
-  "report": "reports/stage-00.md",
+  "report": "reports/stage-01.md",
   "environment": "reports/environment.json",
-  "next_stage": 1,
+  "last_user_approved_stage": 1,
+  "next_stage": 2,
   "next_stage_approved": false
 }

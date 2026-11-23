@@ -1,7 +1,7 @@
 schema_version: 1
 resource_snapshot: reports/environment.json
 
-# 阶段 0 的预算。阶段 1 部署后再验证操作系统是否实际执行这些限制。
+# 阶段 1 已在 systemd cgroup 中核对内存上限，并实测 timeout。检查点预算供后续实现使用。
 resources:
   build:
     jobs: 4

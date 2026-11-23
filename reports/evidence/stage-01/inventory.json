@@ -1,0 +1,273 @@
+{
+  "observed_utc": "2026-11-23T08:53:04.957638+00:00",
+  "tools": {
+    "gcc": {
+      "command": [
+        "gcc",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "stderr": ""
+    },
+    "g++": {
+      "command": [
+        "g++",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "stderr": ""
+    },
+    "git": {
+      "command": [
+        "git",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "git version 2.34.1",
+      "stderr": ""
+    },
+    "make": {
+      "command": [
+        "make",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "GNU Make 4.3\nBuilt for x86_64-pc-linux-gnu\nCopyright (C) 1988-2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.",
+      "stderr": ""
+    },
+    "cmake": {
+      "command": [
+        "cmake",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "cmake version 3.22.1\n\nCMake suite maintained and supported by Kitware (kitware.com/cmake).",
+      "stderr": ""
+    },
+    "flex": {
+      "command": [
+        "flex",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "flex 2.6.4",
+      "stderr": ""
+    },
+    "bison": {
+      "command": [
+        "bison",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "bison (GNU Bison) 3.8.2\nWritten by Robert Corbett and Richard Stallman.\n\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "stderr": ""
+    },
+    "ccache": {
+      "command": [
+        "ccache",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "ccache version 4.5.1\nFeatures: file-storage http-storage redis-storage\n\nCopyright (C) 2002-2007 Andrew Tridgell\nCopyright (C) 2009-2021 Joel Rosdahl and other contributors\n\nSee <https://ccache.dev/credits.html> for a complete list of contributors.\n\nThis program is free software; you can redistribute it and/or modify it under\nthe terms of the GNU General Public License as published by the Free Software\nFoundation; either version 3 of the License, or (at your option) any later\nversion.",
+      "stderr": ""
+    },
+    "bwrap": {
+      "command": [
+        "bwrap",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "bubblewrap 0.6.1",
+      "stderr": ""
+    },
+    "python3": {
+      "command": [
+        "python3",
+        "--version"
+      ],
+      "exit_code": 0,
+      "stdout": "Python 3.10.12",
+      "stderr": ""
+    },
+    "graphviz": {
+      "command": [
+        "dot",
+        "-V"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "dot - graphviz version 2.43.0 (0)"
+    },
+    "packages": {
+      "command": [
+        "dpkg-query",
+        "-W",
+        "-f=${binary:Package} ${Version} ${db:Status-Abbrev}\\n",
+        "build-essential",
+        "cmake",
+        "bison",
+        "flex",
+        "python3-venv",
+        "libgoogle-perftools-dev",
+        "libtcmalloc-minimal4",
+        "bubblewrap",
+        "ccache",
+        "time",
+        "gcc-multilib",
+        "graphviz"
+      ],
+      "exit_code": 0,
+      "stdout": "bison 2:3.8.2+dfsg-1ubuntu0.22.04.1 ii \nbubblewrap 0.6.1-1ubuntu0.3 ii \nbuild-essential 12.9ubuntu3 ii \nccache 4.5.1-1 ii \ncmake 3.22.1-1ubuntu1.22.04.2 ii \nflex 2.6.4-8build2 ii \ngcc-multilib 4:11.2.0-1ubuntu1 ii \ngraphviz 2.42.2-6ubuntu0.1 ii \nlibgoogle-perftools-dev:amd64 2.9.1-0ubuntu3 ii \nlibtcmalloc-minimal4:amd64 2.9.1-0ubuntu3 ii \npython3-venv 3.10.6-1~22.04.1 ii \ntime 1.9-0.1build2 ii",
+      "stderr": ""
+    },
+    "python_distributions": {
+      "command": [
+        "/root/Deagle_incremental_execution/.venv/bin/python",
+        "-c",
+        "from importlib.metadata import version; print({k:version(k) for k in ('mini-swe-agent','litellm','openai','pip')})"
+      ],
+      "exit_code": 0,
+      "stdout": "{'mini-swe-agent': '2.4.6', 'litellm': '1.110.2', 'openai': '3.57.0', 'pip': '25.3'}",
+      "stderr": ""
+    },
+    "linked_tcmalloc": "libtcmalloc.so.4 => /lib/x86_64-linux-gnu/libtcmalloc.so.4"
+  },
+  "sources": {
+    "deagle-baseline": {
+      "head": "a159f9923722646185ba8028610b2eef2618fa72",
+      "tree": "53d7e7c29471d96efbff747e7b4be1063f2a658d",
+      "branch": "stage1-baseline",
+      "tracked_status": "",
+      "remote": "https://github.com/thufv/Deagle.git",
+      "tracked_file_count": 20924,
+      "license_file": "LICENSE",
+      "license_sha256": "b14387d3daaee30ca91b272c2d88b7730a96ff9d75835b27cfa083443a9c56e8"
+    },
+    "deagle-work": {
+      "head": "a159f9923722646185ba8028610b2eef2618fa72",
+      "tree": "53d7e7c29471d96efbff747e7b4be1063f2a658d",
+      "branch": "incdeagle-work",
+      "tracked_status": "",
+      "remote": "https://github.com/thufv/Deagle.git",
+      "tracked_file_count": 20924,
+      "license_file": "LICENSE",
+      "license_sha256": "b14387d3daaee30ca91b272c2d88b7730a96ff9d75835b27cfa083443a9c56e8"
+    },
+    "damer-camc": {
+      "head": "c005ebbde3672fff77c6d91da2f91d1daa45d746",
+      "tree": "c6579e4823686d94a48b5482f05171ac9a0b7c1b",
+      "branch": "",
+      "tracked_status": "",
+      "remote": "https://github.com/shirleylee03/damer-camc.git",
+      "tracked_file_count": 1837,
+      "license_file": "LICENSE",
+      "license_sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+    },
+    "mini-swe-agent": {
+      "head": "a83fcae82d2a08f0ee0c688f9d137b3566c097f8",
+      "tree": "665df42f5761252b83d9a30e1b82f76f1f17f828",
+      "branch": "",
+      "tracked_status": "",
+      "remote": "https://github.com/SWE-agent/mini-swe-agent.git",
+      "tracked_file_count": 221,
+      "license_file": "LICENSE.md",
+      "license_sha256": "0f796e58f91d1c07bb2c1b1d0f8bf3a83017c3a5dec1bdc6fae733b2cd2e875b"
+    },
+    "yogar-cbmc-inc": {
+      "head": "6e1d4eacf3cccc6634e876e884792bac6115ba82",
+      "tree": "b4351ce66bf3331605442d9de79fbbd3bf51c012",
+      "branch": "",
+      "tracked_status": "",
+      "remote": "https://github.com/yinliangze/yogar-cbmc-inc.git",
+      "tracked_file_count": 164,
+      "license_file": null,
+      "license_sha256": null,
+      "binaries": [
+        "bin/Yogar-CBMC",
+        "bin/Yogar-CBMC-Inc"
+      ],
+      "benchmark_inputs": 150,
+      "top_level": [
+        "README.md",
+        "benchmarks",
+        "bin",
+        "results",
+        "scripts"
+      ],
+      "license_candidates": [],
+      "verifier_implementation_candidates": [],
+      "input_folders": [
+        "benchmarks/EX1/bench-origin",
+        "benchmarks/EX1/bench-regression",
+        "benchmarks/EX2/bench-origin",
+        "benchmarks/EX2/bench-regression"
+      ]
+    }
+  },
+  "builds": {
+    "unpatched baseline": {
+      "rc": 0,
+      "wall_time": "3:59.62",
+      "maximum_resident_set_kib": 601484,
+      "compile_lines": 715
+    },
+    "unpatched development": {
+      "rc": 0,
+      "wall_time": "0:03.10",
+      "maximum_resident_set_kib": 151216,
+      "compile_lines": 715
+    },
+    "native DAMER": {
+      "rc": 0,
+      "wall_time": "0:28.07",
+      "maximum_resident_set_kib": 770624,
+      "compile_lines": 29
+    },
+    "patched baseline": {
+      "rc": 0,
+      "wall_time": "0:22.75",
+      "maximum_resident_set_kib": 602436,
+      "compile_lines": 36
+    },
+    "patched development": {
+      "rc": 0,
+      "wall_time": "0:01.70",
+      "maximum_resident_set_kib": 151232,
+      "compile_lines": 36
+    }
+  },
+  "ccache_statistics": {
+    "command": [
+      "ccache",
+      "-s"
+    ],
+    "exit_code": 0,
+    "stdout": "Summary:\n  Hits:             751 / 1533 (48.99 %)\n    Direct:         748 / 1533 (48.79 %)\n    Preprocessed:     3 /  785 (0.38 %)\n  Misses:           782\n    Direct:         785\n    Preprocessed:   782\n  Uncacheable:       23\nPrimary storage:\n  Hits:            1532 / 3066 (49.97 %)\n  Misses:          1534\n  Cache size (GB): 0.05 / 4.00 (1.18 %)\n\nUse the -v/--verbose option for more details.",
+    "stderr": ""
+  },
+  "prepatch_json": {
+    "worker_violation": {
+      "parse_error": "Expecting ',' delimiter: line 54 column 4 (char 1412)",
+      "stdout_bytes": 62291,
+      "stdout_sha256": "7ca70c542c7dbe2fe2d9c0b7433eba2b91bb4bbab2f9cd027ec3eba1cfe5320e"
+    },
+    "join_pass": {
+      "parse_error": "Expecting ',' delimiter: line 54 column 4 (char 1398)",
+      "stdout_bytes": 21235,
+      "stdout_sha256": "19ccc950e56c01b701028b8d256c8e3a18270df045cd9972c6fb1d8b819dad5f"
+    }
+  },
+  "patch_tree_from_upstream": "53d7e7c29471d96efbff747e7b4be1063f2a658d",
+  "bounds": {
+    "systemd_memory_max_bytes": 21474836480,
+    "one_second_timeout_of_two_second_sleep_exit": 124
+  },
+  "apt_extra_command": "apt-get -y --no-install-recommends install gcc-multilib graphviz python3-yaml",
+  "final_binaries": {
+    "third_party/deagle-baseline/src/cbmc/deagle_exe": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "third_party/deagle-work/src/cbmc/deagle_exe": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "third_party/damer-camc/build/PDNet2_0": "df67c44454340811f02a90221b5a7056fe2d34c98727d49398eb23ef70581828"
+  }
+}

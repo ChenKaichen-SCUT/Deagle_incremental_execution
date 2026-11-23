@@ -1,26 +1,101 @@
 {
   "schema_version": 1,
-  "status": "pending_stage_1",
+  "status": "locked_stage_1",
   "repositories": {
     "deagle": {
       "url": "https://github.com/thufv/Deagle",
-      "checkouts": ["third_party/deagle-baseline", "third_party/deagle-work"],
-      "commit": null
+      "checkouts": [
+        "third_party/deagle-baseline",
+        "third_party/deagle-work"
+      ],
+      "commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+      "tree": "ee983048136026478a6af5774ab20077b273db2f",
+      "selected_ref": "main",
+      "license": {
+        "declared": "BSD-4-Clause except where noted; bundled CBMC and MiniSat terms in LICENSE",
+        "file": "LICENSE",
+        "sha256": "b14387d3daaee30ca91b272c2d88b7730a96ff9d75835b27cfa083443a9c56e8"
+      },
+      "compatibility_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "compatibility_tree": "53d7e7c29471d96efbff747e7b4be1063f2a658d",
+      "patch": {
+        "path": "patches/deagle-json-output.patch",
+        "sha256": "fc3f82e530d98233e91aa37dc1b3c7eb1a2c3999cf55ba0965134eca13d71788"
+      },
+      "bundle": {
+        "path": "patches/deagle-stage01.bundle",
+        "sha256": "112b127b580bf546ebf007edfe5dce745ac389d6f9a5f3a9f506a92a453cecf8"
+      },
+      "branches": [
+        "stage1-baseline",
+        "incdeagle-work"
+      ],
+      "target": "make -C src -j4 cbmc.dir",
+      "version": "4.2.0",
+      "backend": "--deagle-closure (MiniSat 2.2.1 + ordering consistency)",
+      "binary_sha256": {
+        "third_party/deagle-baseline/src/cbmc/deagle_exe": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+        "third_party/deagle-work/src/cbmc/deagle_exe": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3"
+      }
     },
     "damer_camc": {
       "url": "https://github.com/shirleylee03/damer-camc",
-      "checkouts": ["third_party/damer-camc"],
-      "commit": null
+      "checkouts": [
+        "third_party/damer-camc"
+      ],
+      "commit": "c005ebbde3672fff77c6d91da2f91d1daa45d746",
+      "tree": "c6579e4823686d94a48b5482f05171ac9a0b7c1b",
+      "selected_ref": "main",
+      "license": {
+        "declared": "BSL-1.0",
+        "file": "LICENSE",
+        "sha256": "c9bff75738922193e67fa726fa225535870d2aa1059f91452c411736284ad566"
+      },
+      "target": "CMake PDNet2_0",
+      "linked_tcmalloc": "libtcmalloc.so.4 => /lib/x86_64-linux-gnu/libtcmalloc.so.4",
+      "binary_sha256": "df67c44454340811f02a90221b5a7056fe2d34c98727d49398eb23ef70581828"
     },
     "mini_swe_agent": {
       "url": "https://github.com/SWE-agent/mini-swe-agent",
-      "checkouts": ["third_party/mini-swe-agent"],
-      "commit": null
+      "checkouts": [
+        "third_party/mini-swe-agent"
+      ],
+      "commit": "a83fcae82d2a08f0ee0c688f9d137b3566c097f8",
+      "tree": "665df42f5761252b83d9a30e1b82f76f1f17f828",
+      "selected_ref": "v2.4.6",
+      "license": {
+        "declared": "MIT",
+        "file": "LICENSE.md",
+        "sha256": "0f796e58f91d1c07bb2c1b1d0f8bf3a83017c3a5dec1bdc6fae733b2cd2e875b"
+      },
+      "version": "2.4.6",
+      "litellm": "1.110.2",
+      "openai_sdk": "3.57.0",
+      "venv": ".venv",
+      "wheels_lock": "configs/mini-requirements.lock",
+      "wheels_lock_sha256": "840e59e886a3ae4ed2f5058c6512a7922a38347c71de59de0e223313fa7257d2"
     },
     "yogar_cbmc_inc": {
       "url": "https://github.com/yinliangze/yogar-cbmc-inc",
-      "checkouts": ["third_party/yogar-cbmc-inc"],
-      "commit": null
+      "checkouts": [
+        "third_party/yogar-cbmc-inc"
+      ],
+      "commit": "6e1d4eacf3cccc6634e876e884792bac6115ba82",
+      "tree": "b4351ce66bf3331605442d9de79fbbd3bf51c012",
+      "selected_ref": "main",
+      "license": {
+        "declared": null,
+        "file": null,
+        "sha256": null
+      },
+      "stage_1_scope": "tracked artifact inventory",
+      "verifier_source_observed": false
     }
+  },
+  "target": {
+    "os": "Ubuntu 22.04.5 LTS",
+    "arch": "amd64",
+    "python": "3.10.12",
+    "cxx": "GCC 11.4.0"
   }
 }

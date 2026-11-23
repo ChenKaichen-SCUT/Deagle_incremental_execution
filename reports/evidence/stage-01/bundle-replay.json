@@ -1,0 +1,9 @@
+{
+  "starting_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "restored_heads": {
+    "deagle-baseline": "a159f9923722646185ba8028610b2eef2618fa72",
+    "deagle-work": "a159f9923722646185ba8028610b2eef2618fa72"
+  },
+  "from_bundle": true,
+  "native_rebuild_in_this_extra_check": false
+}
