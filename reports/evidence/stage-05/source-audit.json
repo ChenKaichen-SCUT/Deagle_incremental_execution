@@ -1,0 +1,233 @@
+{
+  "files": {
+    "minisat-2.2.1/minisat/core/Closure.cc": {
+      "git_blob": "6bc872300c28952792078b73486dff8587fbe8fa",
+      "locations": [
+        {
+          "lines": [
+            40
+          ],
+          "symbol_or_statement": "lbool closure::get_assignment"
+        },
+        {
+          "lines": [
+            505
+          ],
+          "symbol_or_statement": "conflict_origin = \"self_cycle\""
+        },
+        {
+          "lines": [
+            515
+          ],
+          "symbol_or_statement": "conflict_origin = \"atomic_order_cycle\""
+        },
+        {
+          "lines": [
+            562
+          ],
+          "symbol_or_statement": "conflict_origin = \"race\""
+        },
+        {
+          "lines": [
+            147
+          ],
+          "symbol_or_statement": "std::string address = get_address(name)"
+        }
+      ],
+      "sha256": "d5cb4aba6f9d8f99bca7de45e294976414382a3013519502259a69752c768694"
+    },
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": {
+      "git_blob": "64a54ffc7913a6be4e3fee0ea75784e123d66752",
+      "locations": [
+        {
+          "lines": [
+            28
+          ],
+          "symbol_or_statement": "void ClosureSolver::init()"
+        },
+        {
+          "lines": [
+            34
+          ],
+          "symbol_or_statement": "void ClosureSolver::save_raw_graph("
+        },
+        {
+          "lines": [
+            122
+          ],
+          "symbol_or_statement": "graph.activate_apo(u, v)"
+        },
+        {
+          "lines": [
+            531
+          ],
+          "symbol_or_statement": "minisat_lv.push(~l);"
+        },
+        {
+          "lines": [
+            534
+          ],
+          "symbol_or_statement": "observe_order_conflict(graph.conflict_origin"
+        },
+        {
+          "lines": [
+            535
+          ],
+          "symbol_or_statement": "confl = ca.alloc(minisat_lv, true)"
+        },
+        {
+          "lines": [
+            343
+          ],
+          "symbol_or_statement": "if(before_first_search)"
+        },
+        {
+          "lines": [
+            796
+          ],
+          "symbol_or_statement": "Var var12 = newVar(), var21 = newVar()"
+        }
+      ],
+      "sha256": "5d4b20cd91b4106b253fe744159cf77f71700147a7cc33fc70c1c798865eb334"
+    },
+    "minisat-2.2.1/minisat/core/Solver.cc": {
+      "git_blob": "2dcef489d40b5368a7a770ec3a2dbf27c4e7a646",
+      "locations": [
+        {
+          "lines": [
+            137
+          ],
+          "symbol_or_statement": "bool Solver::addClause_"
+        },
+        {
+          "lines": [
+            139,
+            417,
+            596,
+            647,
+            687
+          ],
+          "symbol_or_statement": "decisionLevel() == 0"
+        },
+        {
+          "lines": [
+            155
+          ],
+          "symbol_or_statement": "uncheckedEnqueue(ps[0])"
+        },
+        {
+          "lines": [
+            156
+          ],
+          "symbol_or_statement": "propagate() == CRef_Undef"
+        }
+      ],
+      "sha256": "1c1db284ada160cae95caa2431e9029f3a34283d464a5f6aa4e9b418839c6e2b"
+    },
+    "src/goto-checker/bmc_util.cpp": {
+      "git_blob": "1b47976069d9ba2a74c74e43ebd7a50cd90037af",
+      "locations": [
+        {
+          "lines": [
+            510
+          ],
+          "symbol_or_statement": "prepare_order_lemma_cache(deagle_closure_solver"
+        },
+        {
+          "lines": [
+            511
+          ],
+          "symbol_or_statement": "deagle_closure_solver.save_raw_graph"
+        },
+        {
+          "lines": [
+            507,
+            562
+          ],
+          "symbol_or_statement": "oc_location_map.insert"
+        }
+      ],
+      "sha256": "3cc3ecbb3beb7f01daa575d20052165dec4ec807f3ad8bfc93c3fd81e6bdeaa3"
+    },
+    "src/goto-checker/goto_symex_property_decider.cpp": {
+      "git_blob": "f5fa7bea21a171707377caa20c2401f4fdd50d56",
+      "locations": [
+        {
+          "lines": [
+            36
+          ],
+          "symbol_or_statement": "solver = solvers.get_solver()"
+        }
+      ],
+      "sha256": "62f70baa3872574a743d13e980c03e4e34659a3ba31973e6525d95265865aaa3"
+    },
+    "src/goto-checker/multi_path_symex_checker.cpp": {
+      "git_blob": "6f06ec6fc1bac2853f9e14de5e408eb9d2552435",
+      "locations": [
+        {
+          "lines": [
+            68
+          ],
+          "symbol_or_statement": "create_solver_for_unconverted_equation"
+        },
+        {
+          "lines": [
+            70
+          ],
+          "symbol_or_statement": "record_fresh_order_solver"
+        }
+      ],
+      "sha256": "2b7115046f0f7b6dda48c05674dbb6969e329b913850fd214f330c37123cbb04"
+    },
+    "src/goto-checker/theory_lemma.cpp": {
+      "git_blob": "84725f57315a4fc6187c17d68aea8e3cbacdd5c0",
+      "locations": [
+        {
+          "lines": [
+            106
+          ],
+          "symbol_or_statement": "if(okay) adapter.lcnf(entry.clause)"
+        },
+        {
+          "lines": [
+            200
+          ],
+          "symbol_or_statement": "read_plan(dir+"
+        },
+        {
+          "lines": [
+            206
+          ],
+          "symbol_or_statement": "solver.before_first_search="
+        }
+      ],
+      "sha256": "c38966af58d18534897bafee1f70ddf8ef7d0ca1a53c64578b3abe773329af1e"
+    },
+    "src/solvers/sat/satcheck_minisat2.cpp": {
+      "git_blob": "0b87f95a122328b6ec2d6cd82c564002915b1f87",
+      "locations": [
+        {
+          "lines": [
+            170
+          ],
+          "symbol_or_statement": "solver->addClause_(c)"
+        }
+      ],
+      "sha256": "caca85099e0ac67624dc8eaf2f7a9ce9383346d7ac9edf39d7598d44327868a4"
+    },
+    "src/solvers/sat/satcheck_minisat2.h": {
+      "git_blob": "608d0b31abeb1b2c16b961a4cc80fcd6b4a3a03d",
+      "locations": [
+        {
+          "lines": [
+            109
+          ],
+          "symbol_or_statement": "public satcheck_minisat2_baset<Minisat::ClosureSolver>"
+        }
+      ],
+      "sha256": "23d5dfad4f936dda34f7bb9fc3c75e333ed867f6334b53514a439e1c6532b5f6"
+    }
+  },
+  "lookup": "git show <source_commit>:<path>, one-based lines",
+  "source_commit": "0be9e2167d46c66ea12ca7f9f801063a03873625"
+}

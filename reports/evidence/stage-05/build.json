@@ -1,0 +1,64 @@
+{
+  "build_jobs": 4,
+  "build_logs": {
+    "build-published.log": {
+      "sha256": "a06fe882ce3e6729cb46e3fc1b16f2f65da35b55b7b91667247356e5b32a7e08",
+      "time_and_rss": [
+        "/root/Deagle_incremental_execution/third_party/deagle-stage5/src/cbmc/deagle_exe: OK"
+      ]
+    },
+    "bundle.log": {
+      "sha256": "cdf9da8c00a6cac0188a044e136b933e50cefdf8cddcbce781476c462f8ed08a",
+      "time_and_rss": []
+    },
+    "deagle-stage5.log": {
+      "sha256": "8ca5dbe17e40b463b659efdd69603e9514fd2924ab8eaca44c88ab2079b0c4bc",
+      "time_and_rss": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.13",
+        "Maximum resident set size (kbytes): 164844",
+        "Exit status: 0"
+      ]
+    },
+    "prepare-published.log": {
+      "sha256": "3ca4ea998c84725baa56517e64e67af8ec7d09a53b3476d29de56b6b50ab46a6",
+      "time_and_rss": []
+    },
+    "replay.log": {
+      "sha256": "ee6d8134576ce4be1099b8ebf432450fad5b38c11e9c3d72926a6c2a831cbb41",
+      "time_and_rss": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.05",
+        "Maximum resident set size (kbytes): 150188",
+        "Exit status: 0"
+      ]
+    }
+  },
+  "independent_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "lock": {
+    "backend": "SC / Deagle ClosureSolver / MiniSat without SimpSolver",
+    "baseline_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+    "baseline_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "binding_protocol": "stage5-local-bindings-v1",
+    "build_command": "bash scripts/stage5/build.sh",
+    "build_jobs": 4,
+    "bundle_sha256": "1b727c860520eecbfc55486d131f7ea55e740f0e69b53990bb2b621805e8f805",
+    "dependency_mode": "whole_theory_context",
+    "development_commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+    "development_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+    "development_tree": "9cc773689bd88f68e6f087f898dcbdaa23843f7e",
+    "lemma_kind": "oc-cycle",
+    "parent_commit": "3e5472e8edb93491acd6263596eea681c64c1549",
+    "parent_sha256": "cc0e91e9d698b57754c28686f3d267e2f16e6df081c924d907512b9af88583da",
+    "patch_sha256": "752942ea62dc25bc89bedc0130a007bca3241dd4bd72c4d0f6c42111b0f1285f",
+    "prior_toolchain": "configs/stage04.lock.json",
+    "raw_export": "ClosureSolver::propagate/pre-analyze",
+    "schema": 1,
+    "upstream_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e"
+  },
+  "memory_limit_bytes": 21474836480,
+  "native_tracked_status": "",
+  "patch_replay_tree": "9cc773689bd88f68e6f087f898dcbdaa23843f7e",
+  "replay_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+  "replay_tree": "9cc773689bd88f68e6f087f898dcbdaa23843f7e",
+  "stage3_sha256": "a5960294056efe0bdd8242054e8a6f2e9f56801901aa7d38ccf52ba6f8360c37",
+  "stage4_sha256": "cc0e91e9d698b57754c28686f3d267e2f16e6df081c924d907512b9af88583da"
+}

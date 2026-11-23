@@ -1,0 +1,21 @@
+{
+  "backend": "SC / Deagle ClosureSolver / MiniSat without SimpSolver",
+  "baseline_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+  "baseline_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "binding_protocol": "stage5-local-bindings-v1",
+  "build_command": "bash scripts/stage5/build.sh",
+  "build_jobs": 4,
+  "bundle_sha256": "1b727c860520eecbfc55486d131f7ea55e740f0e69b53990bb2b621805e8f805",
+  "dependency_mode": "whole_theory_context",
+  "development_commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+  "development_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+  "development_tree": "9cc773689bd88f68e6f087f898dcbdaa23843f7e",
+  "lemma_kind": "oc-cycle",
+  "parent_commit": "3e5472e8edb93491acd6263596eea681c64c1549",
+  "parent_sha256": "cc0e91e9d698b57754c28686f3d267e2f16e6df081c924d907512b9af88583da",
+  "patch_sha256": "752942ea62dc25bc89bedc0130a007bca3241dd4bd72c4d0f6c42111b0f1285f",
+  "prior_toolchain": "configs/stage04.lock.json",
+  "raw_export": "ClosureSolver::propagate/pre-analyze",
+  "schema": 1,
+  "upstream_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e"
+}

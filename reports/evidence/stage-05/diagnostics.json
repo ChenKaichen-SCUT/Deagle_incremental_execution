@@ -1,0 +1,89 @@
+{
+  "independent_order_check": {
+    "no_premises": {
+      "constraints": "PO, APO as precedence, selected RF, forced write guards and last writer only",
+      "graph_nodes": 23,
+      "has_schedule": true,
+      "states_visited": 24
+    },
+    "old_root_premise_removed": {
+      "constraints": "PO, APO as precedence, selected RF, forced write guards and last writer only",
+      "graph_nodes": 23,
+      "has_schedule": true,
+      "states_visited": 30
+    },
+    "original_lemma_falsified": {
+      "constraints": "PO, APO as precedence, selected RF, forced write guards and last writer only",
+      "graph_nodes": 23,
+      "has_schedule": false,
+      "states_visited": 31
+    }
+  },
+  "origin": "c7b61eaa2233b68e374d7852582b32036d209d36a94c85e385a36b4146667546",
+  "probes": {
+    "backend": [
+      "backend_mismatch",
+      "context_changed:backend"
+    ],
+    "bad_origin_version": "unaudited_or_modified_lemma",
+    "declared_true_to_false": [
+      "context_changed:atom_bindings"
+    ],
+    "duplicated_raw_record_fixture": {
+      "deduplicated": 1,
+      "exported": 2,
+      "supported": 2,
+      "unique": 1
+    },
+    "empty_reason": "unsupported_empty_reason",
+    "engine": [
+      "context_changed:engine"
+    ],
+    "guard_constant_changed": [
+      "context_changed:atom_bindings"
+    ],
+    "mixed_cdcl_origin": "unaudited_or_modified_lemma",
+    "old_level_zero_premise_removed": "duplicate_or_invalid_certificate",
+    "propagation_reason": "unaudited_or_modified_lemma",
+    "reverse_alias_changed": [
+      "context_changed:atom_bindings"
+    ],
+    "schema": [
+      "schema_mismatch",
+      "context_changed:schema"
+    ],
+    "signed_alias_and_global_polarity_flip": {
+      "clause": [
+        {
+          "atom": {
+            "event": "a",
+            "kind": "guard"
+          },
+          "negative": true
+        }
+      ],
+      "new": [
+        103,
+        102,
+        103
+      ],
+      "new_clause": [
+        102
+      ],
+      "old": [
+        20,
+        21,
+        20
+      ],
+      "old_clause": [
+        21
+      ]
+    },
+    "static_edges": [
+      "context_changed:edges"
+    ],
+    "unmapped_dynamic_co": "unmapped_dynamic_co_or_special_literal",
+    "unproved_clause": "duplicate_or_invalid_certificate"
+  },
+  "real_clause_sha256": "20a7b0db2d94dad961a513986e1810ccffabc78b2924d9165515b0c211939c36"
+}

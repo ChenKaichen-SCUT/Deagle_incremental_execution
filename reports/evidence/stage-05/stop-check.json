@@ -1,0 +1,21 @@
+{
+  "active_stage_build_verifier_or_session_pids": [],
+  "checked_utc": "2026-11-23T12:56:32.318979+00:00",
+  "controller_stage_directory_created_utc": "2026-11-23T12:35:56.894560+00:00",
+  "deepseek_calls": 0,
+  "frozen_case_changes": [],
+  "frozen_case_tree": "6d3a21f391836d5dc846b7d63123ba28d721a5dd",
+  "memory_limit_bytes": 21474836480,
+  "native_checkouts": {
+    "third_party/deagle-baseline": "a159f9923722646185ba8028610b2eef2618fa72",
+    "third_party/deagle-stage4": "3e5472e8edb93491acd6263596eea681c64c1549",
+    "third_party/deagle-stage5": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+    "third_party/deagle-work": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332"
+  },
+  "next_stage": 6,
+  "next_stage_approved": false,
+  "seconds_from_directory_creation_to_check": 1235.424,
+  "separate_partial_counter_tree": "aa441a41d3a7ddadfbf86c45621b85f48ca85efc",
+  "status": "READY_FOR_REVIEW",
+  "verifier_job_concurrency": 1
+}

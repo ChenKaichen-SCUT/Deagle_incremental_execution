@@ -1,0 +1,374 @@
+{
+  "addresses": {
+    "__CPROVER_alloca_object#1": "__CPROVER_alloca_object",
+    "__CPROVER_dead_object#1": "__CPROVER_dead_object",
+    "__CPROVER_deallocated#1": "__CPROVER_deallocated",
+    "__CPROVER_malloc_is_new_array#1": "__CPROVER_malloc_is_new_array",
+    "__CPROVER_max_malloc_size#1": "__CPROVER_max_malloc_size",
+    "__CPROVER_memory_leak#1": "__CPROVER_memory_leak",
+    "__CPROVER_new_object#1": "__CPROVER_new_object",
+    "__CPROVER_next_thread_id#1": "__CPROVER_next_thread_id",
+    "__CPROVER_next_thread_id#2": "__CPROVER_next_thread_id",
+    "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id",
+    "__CPROVER_pipe_count#1": "__CPROVER_pipe_count",
+    "__CPROVER_threads_exited#1": "__CPROVER_threads_exited",
+    "__CPROVER_threads_exited#2": "__CPROVER_threads_exited",
+    "__CPROVER_threads_exited#3": "__CPROVER_threads_exited",
+    "__CPROVER_threads_exited#4": "__CPROVER_threads_exited",
+    "main::1::worker!0@1#1": "main::1::worker!0@1",
+    "main::1::worker!0@1#2": "main::1::worker!0@1",
+    "main::1::worker!0@1#4": "main::1::worker!0@1",
+    "shipped_units#1": "shipped_units",
+    "shipped_units#2": "shipped_units",
+    "shipped_units#3": "shipped_units",
+    "shipped_units#4": "shipped_units",
+    "t1$14$spwnclk": "t1$14$spwnclk"
+  },
+  "edges": [
+    {
+      "from": "__CPROVER_threads_exited#1",
+      "kind": "rf",
+      "slot": 0,
+      "to": "__CPROVER_threads_exited#2",
+      "x": 1894
+    },
+    {
+      "from": "__CPROVER_threads_exited#4",
+      "kind": "rf",
+      "slot": 1,
+      "to": "__CPROVER_threads_exited#2",
+      "x": 1900
+    },
+    {
+      "from": "__CPROVER_threads_exited#1",
+      "kind": "rf",
+      "slot": 2,
+      "to": "__CPROVER_threads_exited#3",
+      "x": 1910
+    },
+    {
+      "from": "__CPROVER_next_thread_id#1",
+      "kind": "rf",
+      "slot": 3,
+      "to": "__CPROVER_next_thread_id#3",
+      "x": 1914
+    },
+    {
+      "from": "__CPROVER_next_thread_id#2",
+      "kind": "rf",
+      "slot": 4,
+      "to": "__CPROVER_next_thread_id#3",
+      "x": 1918
+    },
+    {
+      "from": "shipped_units#1",
+      "kind": "rf",
+      "slot": 5,
+      "to": "shipped_units#2",
+      "x": 1922
+    },
+    {
+      "from": "shipped_units#4",
+      "kind": "rf",
+      "slot": 6,
+      "to": "shipped_units#2",
+      "x": 1992
+    },
+    {
+      "from": "shipped_units#1",
+      "kind": "rf",
+      "slot": 7,
+      "to": "shipped_units#3",
+      "x": 2072
+    },
+    {
+      "from": "main::1::worker!0@1#1",
+      "kind": "rf",
+      "slot": 8,
+      "to": "main::1::worker!0@1#4",
+      "x": 2076
+    },
+    {
+      "from": "main::1::worker!0@1#2",
+      "kind": "rf",
+      "slot": 9,
+      "to": "main::1::worker!0@1#4",
+      "x": 2208
+    },
+    {
+      "from": "t1$14$spwnclk",
+      "kind": "po",
+      "slot": 10,
+      "to": "shipped_units#3",
+      "x": -1
+    },
+    {
+      "from": "t1$14$spwnclk",
+      "kind": "po",
+      "slot": 11,
+      "to": "shipped_units#4",
+      "x": -1
+    },
+    {
+      "from": "t1$14$spwnclk",
+      "kind": "po",
+      "slot": 12,
+      "to": "__CPROVER_threads_exited#3",
+      "x": -1
+    },
+    {
+      "from": "t1$14$spwnclk",
+      "kind": "po",
+      "slot": 13,
+      "to": "__CPROVER_threads_exited#4",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_alloca_object#1",
+      "kind": "po",
+      "slot": 14,
+      "to": "__CPROVER_dead_object#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_dead_object#1",
+      "kind": "po",
+      "slot": 15,
+      "to": "__CPROVER_deallocated#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_deallocated#1",
+      "kind": "po",
+      "slot": 16,
+      "to": "__CPROVER_malloc_is_new_array#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_malloc_is_new_array#1",
+      "kind": "po",
+      "slot": 17,
+      "to": "__CPROVER_max_malloc_size#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_max_malloc_size#1",
+      "kind": "po",
+      "slot": 18,
+      "to": "__CPROVER_memory_leak#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_memory_leak#1",
+      "kind": "po",
+      "slot": 19,
+      "to": "__CPROVER_new_object#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_new_object#1",
+      "kind": "po",
+      "slot": 20,
+      "to": "__CPROVER_next_thread_id#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_next_thread_id#1",
+      "kind": "po",
+      "slot": 21,
+      "to": "__CPROVER_pipe_count#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_pipe_count#1",
+      "kind": "po",
+      "slot": 22,
+      "to": "__CPROVER_threads_exited#1",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_threads_exited#1",
+      "kind": "po",
+      "slot": 23,
+      "to": "shipped_units#1",
+      "x": -1
+    },
+    {
+      "from": "shipped_units#1",
+      "kind": "po",
+      "slot": 24,
+      "to": "main::1::worker!0@1#1",
+      "x": -1
+    },
+    {
+      "from": "main::1::worker!0@1#1",
+      "kind": "po",
+      "slot": 25,
+      "to": "__CPROVER_next_thread_id#2",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_next_thread_id#2",
+      "kind": "po",
+      "slot": 26,
+      "to": "main::1::worker!0@1#2",
+      "x": -1
+    },
+    {
+      "from": "main::1::worker!0@1#2",
+      "kind": "po",
+      "slot": 27,
+      "to": "t1$14$spwnclk",
+      "x": -1
+    },
+    {
+      "from": "t1$14$spwnclk",
+      "kind": "po",
+      "slot": 28,
+      "to": "main::1::worker!0@1#4",
+      "x": -1
+    },
+    {
+      "from": "main::1::worker!0@1#4",
+      "kind": "po",
+      "slot": 29,
+      "to": "__CPROVER_next_thread_id#3",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_next_thread_id#3",
+      "kind": "po",
+      "slot": 30,
+      "to": "__CPROVER_threads_exited#2",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_threads_exited#2",
+      "kind": "po",
+      "slot": 31,
+      "to": "shipped_units#2",
+      "x": -1
+    },
+    {
+      "from": "shipped_units#3",
+      "kind": "po",
+      "slot": 32,
+      "to": "shipped_units#4",
+      "x": -1
+    },
+    {
+      "from": "shipped_units#4",
+      "kind": "po",
+      "slot": 33,
+      "to": "__CPROVER_threads_exited#3",
+      "x": -1
+    },
+    {
+      "from": "__CPROVER_threads_exited#3",
+      "kind": "apo",
+      "slot": 34,
+      "to": "__CPROVER_threads_exited#4",
+      "x": -1
+    }
+  ],
+  "guards": [
+    {
+      "event": "__CPROVER_alloca_object#1",
+      "line": 19,
+      "slot": 35,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_dead_object#1",
+      "line": 14,
+      "slot": 36,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_deallocated#1",
+      "line": 13,
+      "slot": 37,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_malloc_is_new_array#1",
+      "line": 16,
+      "slot": 38,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_max_malloc_size#1",
+      "line": 21,
+      "slot": 39,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_memory_leak#1",
+      "line": 17,
+      "slot": 40,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_new_object#1",
+      "line": 15,
+      "slot": 41,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_next_thread_id#1",
+      "line": 8,
+      "slot": 42,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_next_thread_id#2",
+      "line": 29,
+      "slot": 43,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_pipe_count#1",
+      "line": 34,
+      "slot": 44,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_threads_exited#1",
+      "line": 7,
+      "slot": 45,
+      "x": -1
+    },
+    {
+      "event": "__CPROVER_threads_exited#4",
+      "line": 55,
+      "slot": 46,
+      "x": -1
+    },
+    {
+      "event": "main::1::worker!0@1#1",
+      "line": 17,
+      "slot": 47,
+      "x": -1
+    },
+    {
+      "event": "main::1::worker!0@1#2",
+      "line": 33,
+      "slot": 48,
+      "x": -1
+    },
+    {
+      "event": "shipped_units#1",
+      "line": 4,
+      "slot": 49,
+      "x": -1
+    },
+    {
+      "event": "shipped_units#4",
+      "line": 3,
+      "slot": 50,
+      "x": -1
+    }
+  ],
+  "site": "bmc_util before save_raw_graph/init",
+  "snapshot_ns": 5063728
+}

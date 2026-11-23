@@ -1,0 +1,406 @@
+{
+  "baseline_matches": true,
+  "candidate": "NO_VIOLATION_WITHIN_BOUND",
+  "candidate_trace_steps": 0,
+  "case": "batch_total",
+  "checked_native_imports": [
+    {
+      "candidate_debug_x": [
+        1901,
+        1923
+      ],
+      "clause_sha256": "20a7b0db2d94dad961a513986e1810ccffabc78b2924d9165515b0c211939c36",
+      "clauses_after": 2304,
+      "clauses_before": 2304,
+      "cnf_numbers_differ": true,
+      "effect": "contradiction",
+      "kind": "oc-cycle",
+      "old_debug_x": [
+        1897,
+        1919
+      ],
+      "proof_rules": [
+        "static",
+        "static",
+        "static",
+        "static",
+        "transitive",
+        "transitive",
+        "static",
+        "transitive",
+        "transitive",
+        "from_read",
+        "static",
+        "static",
+        "transitive",
+        "rf",
+        "static",
+        "transitive",
+        "transitive",
+        "transitive"
+      ],
+      "semantic_clause": [
+        {
+          "atom": {
+            "kind": "rf",
+            "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+            "write": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+          },
+          "negative": true
+        },
+        {
+          "atom": {
+            "kind": "rf",
+            "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+            "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+          },
+          "negative": true
+        }
+      ]
+    }
+  ],
+  "counts": {
+    "full": {
+      "constraint_fragments": 113,
+      "counts": {
+        "constraint_fragments": 113,
+        "full_model": {
+          "constraint_comments": {
+            "rf-some": 6,
+            "rf-val": 10
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 24,
+            "rf": 10
+          },
+          "events": 24,
+          "oc_guards": 16,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 16,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 131
+        },
+        "raw_ssa": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 25,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 7,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 116
+        },
+        "sc_input": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 24,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 115
+        },
+        "symbolic_instruction_dispatches": 73
+      },
+      "event_fingerprints": 24
+    },
+    "online": {
+      "constraint_fragments": 113,
+      "counts": {
+        "constraint_fragments": 113,
+        "full_model": {
+          "constraint_comments": {
+            "rf-some": 6,
+            "rf-val": 10
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 24,
+            "rf": 10
+          },
+          "events": 24,
+          "oc_guards": 16,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 16,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 131
+        },
+        "raw_ssa": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 25,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 7,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 116
+        },
+        "sc_input": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 24,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 115
+        },
+        "symbolic_instruction_dispatches": 73
+      },
+      "event_fingerprints": 24
+    }
+  },
+  "different_phases": [],
+  "fallback_reason": "",
+  "fresh_solvers": {
+    "candidate": {
+      "assignments": 0,
+      "clauses": 0,
+      "learnts": 0,
+      "pid": 111546,
+      "site": "new factory instance after generate_equation, before CNF",
+      "solves": 0,
+      "variables": 0
+    },
+    "old": {
+      "assignments": 0,
+      "clauses": 0,
+      "learnts": 0,
+      "pid": 111564,
+      "site": "new factory instance after generate_equation, before CNF",
+      "solves": 0,
+      "variables": 0
+    }
+  },
+  "frontend_seconds": 0.21409258200219483,
+  "full_candidate_exit": 0,
+  "full_dispatches": 73,
+  "full_oracle_started_after_online": true,
+  "full_wall_seconds": 0.08079207899936591,
+  "model_digests": {
+    "full": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655",
+    "online": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655"
+  },
+  "native": {
+    "changed_instruction_type": "integer_rhs",
+    "checkpoint_budget_bytes": 2147483648,
+    "checkpoint_dispatch": 60,
+    "checkpoint_fork_ns": 376567,
+    "checkpoint_raw_events": 20,
+    "checkpoint_raw_ssa_rows": 102,
+    "checkpoint_symbol_table_entries": 1,
+    "checkpoint_threads": 2,
+    "checkpoint_used": true,
+    "checkpoint_virtual_bytes_upper_bound": 28299264,
+    "executed_symex_steps": 13,
+    "exit_code": 0,
+    "fallback_reason": "",
+    "function": "record_batch",
+    "goto_nodes_checked": 72,
+    "prefix_symbol_references_resolved": 93,
+    "program_symbols_checked": 94,
+    "reused_prefix_symex_steps": 60,
+    "role": "candidate",
+    "sc_counters": {
+      "coverage_formulas_reused": 2,
+      "read_bundles_generated": 4,
+      "read_bundles_reused": 2,
+      "rf_edges_reused": 4,
+      "thread_edges_generated": 3,
+      "thread_edges_reused": 18,
+      "value_formulas_reused": 4
+    },
+    "sc_regions": [
+      {
+        "family": "rf",
+        "name": "__CPROVER_threads_exited",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "__CPROVER_next_thread_id",
+        "reused": true
+      },
+      {
+        "family": "rf",
+        "name": "shipped_units",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "main::1::worker!0@1",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "0",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "1",
+        "reused": false
+      }
+    ]
+  },
+  "old": "VIOLATION",
+  "old_warmup_seconds": 0.2341673590017308,
+  "online_candidate_seconds": 0.33703357400008827,
+  "path": "incremental",
+  "phase_digests": {
+    "full_model": {
+      "full": "13867bbb18d5a6ab0bdab534e0d7a222052e30f92bc7e057440e22c555a0712a",
+      "online": "13867bbb18d5a6ab0bdab534e0d7a222052e30f92bc7e057440e22c555a0712a"
+    },
+    "goto": {
+      "full": "a0628fcf3de147a6bf98b58be19cfd6d7a0a856a235367f16ee0bbe7c71ac2bc",
+      "online": "a0628fcf3de147a6bf98b58be19cfd6d7a0a856a235367f16ee0bbe7c71ac2bc"
+    },
+    "raw_ssa": {
+      "full": "0082b761313f5e2107a0128fcc75fde91fe7733352c7d13424060c320f62405c",
+      "online": "0082b761313f5e2107a0128fcc75fde91fe7733352c7d13424060c320f62405c"
+    },
+    "sc_input": {
+      "full": "97ca8113a88eed881fbcdd6aecd0191fa7d2e4c0aeca8dfdd5daad5b28984898",
+      "online": "97ca8113a88eed881fbcdd6aecd0191fa7d2e4c0aeca8dfdd5daad5b28984898"
+    }
+  },
+  "prefix_dispatch_trace_matches": true,
+  "suffix_dispatch_trace_matches": true,
+  "theory": {
+    "accepted": 1,
+    "audit_ns": 12701506,
+    "binding_ns": 3340,
+    "context_differences": [],
+    "deduplicated": 0,
+    "export_rejected": 0,
+    "exported": 1,
+    "import_ns": 10100,
+    "imported": 1,
+    "native_rows": [
+      {
+        "assignments_after": 848,
+        "assignments_before": 780,
+        "candidate_literals": [
+          1901,
+          1923
+        ],
+        "clauses_after": 2304,
+        "clauses_before": 2304,
+        "effect": "contradiction",
+        "id": 0
+      }
+    ],
+    "new_context": "bd81c4e241687a3e227d48257f474589a102ddd1a39b4beeb45e3e32b27a8394",
+    "new_fingerprint_ns": 6047727,
+    "no_effect": 0,
+    "not_submitted": 0,
+    "old_audit_ns": 1273435,
+    "old_context": "bd81c4e241687a3e227d48257f474589a102ddd1a39b4beeb45e3e32b27a8394",
+    "old_fingerprint_ns": 6605158,
+    "rejected": 0,
+    "submitted": 1,
+    "supported": 1,
+    "unique": 1,
+    "validation_rejected": 0
+  }
+}

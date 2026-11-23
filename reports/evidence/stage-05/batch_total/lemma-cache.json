@@ -1,0 +1,207 @@
+{
+  "backend": "Deagle Closure / MiniSat core / SC",
+  "context_sha256": "bd81c4e241687a3e227d48257f474589a102ddd1a39b4beeb45e3e32b27a8394",
+  "dependency_mode": "whole_theory_context",
+  "lemmas": [
+    {
+      "certificate": [
+        {
+          "edge": [
+            "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+            "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+            "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9",
+            "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58",
+            "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9",
+            "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d"
+          ],
+          "rule": "transitive",
+          "uses": [
+            2,
+            3
+          ]
+        },
+        {
+          "edge": [
+            "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+            "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d"
+          ],
+          "rule": "transitive",
+          "uses": [
+            1,
+            4
+          ]
+        },
+        {
+          "edge": [
+            "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d",
+            "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+            "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+          ],
+          "rule": "transitive",
+          "uses": [
+            5,
+            6
+          ]
+        },
+        {
+          "edge": [
+            "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+            "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+          ],
+          "rule": "transitive",
+          "uses": [
+            0,
+            7
+          ]
+        },
+        {
+          "edge": [
+            "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+            "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+          ],
+          "rule": "from_read",
+          "uses": [
+            8
+          ]
+        },
+        {
+          "edge": [
+            "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+            "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325",
+            "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+            "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+          ],
+          "rule": "transitive",
+          "uses": [
+            10,
+            11
+          ]
+        },
+        {
+          "edge": [
+            "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a",
+            "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8"
+          ],
+          "rule": "rf",
+          "uses": []
+        },
+        {
+          "edge": [
+            "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+            "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+          ],
+          "rule": "static",
+          "uses": []
+        },
+        {
+          "edge": [
+            "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a",
+            "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+          ],
+          "rule": "transitive",
+          "uses": [
+            13,
+            14
+          ]
+        },
+        {
+          "edge": [
+            "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+            "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+          ],
+          "rule": "transitive",
+          "uses": [
+            12,
+            15
+          ]
+        },
+        {
+          "edge": [
+            "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+            "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+          ],
+          "rule": "transitive",
+          "uses": [
+            9,
+            16
+          ]
+        }
+      ],
+      "clause": [
+        {
+          "atom": {
+            "kind": "rf",
+            "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+            "write": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+          },
+          "negative": true
+        },
+        {
+          "atom": {
+            "kind": "rf",
+            "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+            "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+          },
+          "negative": true
+        }
+      ],
+      "clause_sha256": "20a7b0db2d94dad961a513986e1810ccffabc78b2924d9165515b0c211939c36",
+      "export_site": "ClosureSolver::propagate/pre-analyze",
+      "kind": "oc-cycle",
+      "origin": "self_cycle",
+      "origin_version": "c7b61eaa2233b68e374d7852582b32036d209d36a94c85e385a36b4146667546",
+      "raw_index": 0
+    }
+  ],
+  "origin_version": "c7b61eaa2233b68e374d7852582b32036d209d36a94c85e385a36b4146667546",
+  "schema": 1
+}

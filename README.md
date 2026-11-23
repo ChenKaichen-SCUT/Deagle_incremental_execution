@@ -2,9 +2,9 @@
 
 本项目研究并发 C 程序经过一次修复后，增量构建事件顺序模型、复用有效理论约束，与独立全量 Deagle 验证同一程序和性质的结果。实施范围和每一阶段的验收条件见[执行指南](EXECUTION_GUIDE.md)。
 
-阶段 4 已完成，状态为 `READY_FOR_REVIEW`。`batch_total` 和 `threshold_guard` 分别跳过 60 和 61 条原生符号指令，并在候选 SC 模型中复用了读约束与线程顺序边。两个同步修改自动回退。仅部分修复的计数器在回退后仍产生 156 步反例，错误乘数在实际复用前缀后仍产生 62 步反例。阶段 5 等待确认。[阶段 4 报告与复现命令](reports/stage-04.md) · [原生运行证据](reports/evidence/stage-04/acceptance.json) · [项目状态](project_state.json)
+阶段 5 已完成，状态为 `READY_FOR_REVIEW`。`batch_total` 修改乘数后，新求解器实际导入了一条旧排序冲突子句，候选有界通过。在同一旧程序的另一个候选上，导入后仍检出 62 步反例。条件或同步修改使理论图发生变化，三个候选共拒绝 14 条旧子句。五个候选的目标性质结论均与独立全量 Deagle 一致。阶段 6 等待确认。[阶段 5 报告与复现命令](reports/stage-05.md) · [原生导入回执](reports/evidence/stage-05/batch_total/candidate-import.json) · [五个候选的验收记录](reports/evidence/stage-05/acceptance.json) · [项目状态](project_state.json)
 
-运行 `python -B scripts/stage4/check_evidence.py` 可离线核对阶段 4 的原始方程、派发轨迹和性质结果。三个冻结版本对可用 `python -B scripts/stage2/freeze.py` 复核。[阶段 3 全量对照](reports/stage-03.md) · [阶段 2 病例与反例](reports/stage-02.md) · [阶段 1 工具报告](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md)
+运行 `python -B scripts/stage5/check_evidence.py` 可离线核对阶段 5 的原始冲突、带符号映射、原生导入回执、两路性质结果和独立顺序枚举。`python -B scripts/stage4/check_evidence.py` 可重放已有的模型构建证据，`python -B scripts/stage2/freeze.py` 可核对三个冻结版本对。[阶段 4 模型增量构建](reports/stage-04.md) · [阶段 3 全量对照](reports/stage-03.md) · [阶段 2 病例与反例](reports/stage-02.md) · [阶段 1 工具报告](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md)
 
 ## 复查环境
 

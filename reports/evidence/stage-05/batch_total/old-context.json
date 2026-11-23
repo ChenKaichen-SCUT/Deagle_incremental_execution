@@ -1,0 +1,4875 @@
+{
+  "atom_bindings": [
+    {
+      "atom": {
+        "event": "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "3d0fe646db3ecaa43e832278bc3dc025eb905db57c23ed3c2d5946e26ec2146f",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "9bd69df7f85d7bc0f5c9effb75496be2eae60b2db9a8ed2f051c18b7ec02e68c",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "b59a8c01cd050ea076f8e0eb10cd735671837472114511739a6714fa83c02710",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "c121273be00a061528d4057fa794a9909cffad050bf2b066b628954164d74f00",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "d04c1d6151d788c9de5c4047fb7675ac379b5f853133d7671a0249b139bfc4b6",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "e11d5fa135006fdf09c86eb14305f410f5a3f12c2a3318b8790c436306dc38ec",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "e67de5d2ca25f8605af9790de2e3986777a3b8da6adce61ba4750042de50a6ce",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "f132159556d7d6dbf3e03fb0ec932f0fe9c0dbaacd6c76de34d3cf550f8f326a",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "event": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b",
+        "kind": "guard"
+      },
+      "binding": {
+        "constant": true
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a",
+        "write": "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a",
+          "write": "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc",
+        "write": "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc",
+          "write": "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+        "write": "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+          "write": "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc",
+        "write": "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc",
+          "write": "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a",
+        "write": "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a",
+          "write": "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+        "write": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+          "write": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+        "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+          "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "dc35347ad1f683547d965c651eb2d93d9b91f45619d14c495709dcc03382d4cf",
+        "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "dc35347ad1f683547d965c651eb2d93d9b91f45619d14c495709dcc03382d4cf",
+          "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325",
+        "write": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325",
+          "write": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b"
+        }
+      }
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+        "write": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b"
+      },
+      "binding": {
+        "opposite": false,
+        "representative": {
+          "kind": "rf",
+          "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+          "write": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b"
+        }
+      }
+    }
+  ],
+  "atomic_sections": [
+    [
+      "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9"
+    ]
+  ],
+  "backend": "Deagle Closure / MiniSat core / SC",
+  "configuration": {
+    "architecture": 64,
+    "backend": "deagle-closure",
+    "cpp_flags": [
+      [
+        "-E",
+        "-D__CPROVER__",
+        "-m64",
+        "-std=gnu11",
+        "-D__LP64__",
+        "-D__x86_64",
+        "-D__x86_64__",
+        "-D_LP64",
+        "-D__amd64__",
+        "-D__amd64"
+      ]
+    ],
+    "gamma": {
+      "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+      "deagle_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "entry": "main",
+      "frontend_mode": [
+        "--show-goto-functions"
+      ],
+      "harness": "harness.c",
+      "harness_sha256": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+      "included_source": "program.c",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "platform": "Ubuntu 22.04 amd64 LP64, GCC 11.4, libc6-dev headers",
+      "semantics": {
+        "assumptions": [
+          "One batch with two boxes; three units per box."
+        ],
+        "backend": "deagle-closure",
+        "check_unwinding": true,
+        "compiler_flags": [],
+        "initial_state": "static C initialization; main is the sole entry",
+        "library_model": "pthread and C library built into the pinned Deagle binary",
+        "memory_model": "sc",
+        "preprocessor": "GCC system preprocessor as invoked by the locked Deagle C front end",
+        "target_bits": 64,
+        "thread_bound": "fixed by the protected harness: one create per worker, no spawn loop",
+        "unwind": 4,
+        "worker_threads": 1
+      },
+      "source_argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "4",
+        "--unwinding-assertions"
+      ],
+      "target_property": "main.assertion.1",
+      "translation_unit": "harness.c",
+      "verification_output": [
+        "--trace",
+        "--json-ui"
+      ]
+    },
+    "harness": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "headers_and_builtin_inputs": {
+      "/usr/include/asm-generic/errno-base.h": "2c148e92b8318deeb767fabd60822113e575ee664ff09a1873aed8f7a495793c",
+      "/usr/include/asm-generic/errno.h": "fb7b5a504015f3a9074c641e7371b250d867d751d90e4a22a8ac17fced3d50af",
+      "/usr/include/assert.h": "bad015347aa769ffa2a27e04d94b277f4a7345a893b99fad7d6d76b016240f71",
+      "/usr/include/errno.h": "c46073c84e5396855c6861272a8b02e352bb20d658bbfc12690e483a4be73053",
+      "/usr/include/features-time64.h": "f204758482abaeaf9a9c49f0054c1ac19c5804c82b6d4d249ae0329ec293c973",
+      "/usr/include/features.h": "dcd1855804e2c64d528adb4c9c36f1567c67472a47654d4302d61b32eacd294b",
+      "/usr/include/linux/errno.h": "a47fb2f49bce0546a1e88805cec954338abb1b2ac87de042166e8e3a74b23261",
+      "/usr/include/pthread.h": "e54517e7ee53dc85fbe051da9897014f40fc358c8ba5bbdcbbbc1f9286752b9b",
+      "/usr/include/sched.h": "c61636209796fdca0aa5330af947a828deac93e8d9f89a5a25bbe4fff68bd6c4",
+      "/usr/include/stdc-predef.h": "cb08cd5d4cc059a90833ac48a284d25016e8d56ded8ad4cd98d8ac59cc5053f3",
+      "/usr/include/time.h": "a858b225b72e51b709b675ad0d934dfdbe8433417af303bbc36ef2e3038629d9",
+      "/usr/include/x86_64-linux-gnu/asm/errno.h": "4ee384515a4325315992e61dd957f0fa91f3858fe7c079de59f56edded51de86",
+      "/usr/include/x86_64-linux-gnu/bits/atomic_wide_counter.h": "9173b7b0871d897f23be423601da3f5390340cb973825e229ec5e1969014d28a",
+      "/usr/include/x86_64-linux-gnu/bits/cpu-set.h": "d8e66ef983cdc543bd89054602baa01dbc6ac929291e14deef19f8ea8b6eb4b8",
+      "/usr/include/x86_64-linux-gnu/bits/endian.h": "5d71d0f214a8c1e97e062746d5ecebc941940852d8fda981cb0fc0df1e1137de",
+      "/usr/include/x86_64-linux-gnu/bits/endianness.h": "659a7060004eda113671a38852c4d1e9cb97a35932bcd1d8540f98c09c180747",
+      "/usr/include/x86_64-linux-gnu/bits/errno.h": "082689a9803a076e0829a09499695ae7f1a2589a3a9c2a7872bdb675dbc47736",
+      "/usr/include/x86_64-linux-gnu/bits/long-double.h": "de8ef43fbb73a2525346914ce91fd9e72bb5c1040ae2ac739569001220e2da8d",
+      "/usr/include/x86_64-linux-gnu/bits/pthread_stack_min-dynamic.h": "a3ad1fe86b237d2ffd3859f7f843d9e3c537e58a5b850ea81f76d5474a775108",
+      "/usr/include/x86_64-linux-gnu/bits/pthread_stack_min.h": "da2421da57529906a893eecac72cb3d8d518e3d8d0867aed0dd28475fbf849e6",
+      "/usr/include/x86_64-linux-gnu/bits/pthreadtypes-arch.h": "6ae238f55f44735ac9620fd12bde9b24819070fb24c152ac2a2780d4127382af",
+      "/usr/include/x86_64-linux-gnu/bits/pthreadtypes.h": "fff61342a6113237a009b613f4b43febb36379969f4b52e73fb8c27386f8bb86",
+      "/usr/include/x86_64-linux-gnu/bits/sched.h": "1a2e9817abd10e007e7171eff48a89782b3a7b79c9c9d572c8a725ec9ab1bac5",
+      "/usr/include/x86_64-linux-gnu/bits/setjmp.h": "78cf693dc231fb7747a393f827b5b9dada8c102feb1920a4c32e3ab2df04875e",
+      "/usr/include/x86_64-linux-gnu/bits/struct_mutex.h": "ebabd2655346965420fd6c57af3cefe3628585d031755316b34f8cf6221d61e7",
+      "/usr/include/x86_64-linux-gnu/bits/struct_rwlock.h": "51f077162f9e4d207efa0d5f930f3a1a31d3e27d08dec2ca65ddc147b11c87d2",
+      "/usr/include/x86_64-linux-gnu/bits/thread-shared-types.h": "4e23c9bd52829222b95e7fab409a29c5feeb223d3f68d8f825019bab4966fa7b",
+      "/usr/include/x86_64-linux-gnu/bits/time.h": "e92f48b8008563fdc2c872e16754099160d83d81fc9adfe6414e06ffbf8288cc",
+      "/usr/include/x86_64-linux-gnu/bits/time64.h": "5f423dcbb2c2969085506456ff16788d8d7d0a430d994fc18fec4780e68dba39",
+      "/usr/include/x86_64-linux-gnu/bits/timesize.h": "b675674807d56aa8b0c97ce136e70bfc27bf49c72ec49f4de9f273202604c0ef",
+      "/usr/include/x86_64-linux-gnu/bits/types.h": "cd152b6a5b70db5ff301e428b13e7a02d64dde93c4ae0a7879378dc04fd4fbcd",
+      "/usr/include/x86_64-linux-gnu/bits/types/__locale_t.h": "1676792ec98d138a17d4dfd730bf5956c4a8fe1b14ffd8b852b8dbe766ffe994",
+      "/usr/include/x86_64-linux-gnu/bits/types/__sigset_t.h": "05291a7d38bb1d0da1ed01c09fe85fa2b1f4d5bc708e06bb930efec672db08d5",
+      "/usr/include/x86_64-linux-gnu/bits/types/clock_t.h": "81e60e8a8d99b28bc723c14b156d7f7fc8ff663d98a857a3f5aea90431f577e3",
+      "/usr/include/x86_64-linux-gnu/bits/types/clockid_t.h": "dcd64d184855b245e5c7acf21910a0aaca590f1faf094e400da5d30551d11eb0",
+      "/usr/include/x86_64-linux-gnu/bits/types/locale_t.h": "59fddb68b7159ea419f3d02c46919ead67366ef6fa4b3cf17ecaea260e3fe99f",
+      "/usr/include/x86_64-linux-gnu/bits/types/struct___jmp_buf_tag.h": "3de39c60924cd6ea6568ee9573254882a8e4047589b70c60066a19cba959b325",
+      "/usr/include/x86_64-linux-gnu/bits/types/struct_itimerspec.h": "d6299fbc46fc57e7d14635cd5cf69125710ed021ab7305586c84644a03a39f8e",
+      "/usr/include/x86_64-linux-gnu/bits/types/struct_sched_param.h": "6ae1d4cea4d93184a32f1f73da02e80c50129d36478545ada68dc2a1815b1ee3",
+      "/usr/include/x86_64-linux-gnu/bits/types/struct_timespec.h": "8e7e964087b9c7638be2b5fb0fa01ceab43e4af8393b805b54ac2bd8642a1b98",
+      "/usr/include/x86_64-linux-gnu/bits/types/struct_tm.h": "e7bdda3f42eb0633850ed150fef0a0cf6193cbba8fa740e7505925424a595566",
+      "/usr/include/x86_64-linux-gnu/bits/types/time_t.h": "721a557cff3ed308c69719a44ba8f7cd9536f6c602fb8f1b1eea8ed6749ee37d",
+      "/usr/include/x86_64-linux-gnu/bits/types/timer_t.h": "d96a2452da0d933941273d11d1048ea525f033306892835b0a7a0999b13853aa",
+      "/usr/include/x86_64-linux-gnu/bits/typesizes.h": "5663fc72923363ef9bffe3fbbafa3ca9b94da2d5aadae781dd6f6da5e435a9c6",
+      "/usr/include/x86_64-linux-gnu/bits/wordsize.h": "716d8459074e2a082d65a28192b32eddbfd7587348372395b1c283a723ae4c18",
+      "/usr/include/x86_64-linux-gnu/gnu/stubs-64.h": "0b6ab3e2ed3ba79b30fe6ba81a68fc41f57965b8d56662763633431b703c9289",
+      "/usr/include/x86_64-linux-gnu/gnu/stubs.h": "ef444295a0a9e8f5c40918399a00cc91ba0bd79774110cdf6e652baa6cfadb2e",
+      "/usr/include/x86_64-linux-gnu/sys/cdefs.h": "8a068582a598badb96c25adb724c7d33769fa7e456ad7e3b996699716544538b",
+      "/usr/lib/gcc/x86_64-linux-gnu/11/include/stddef.h": "8fe9e3ecaf491fa5fb1c8e7d7caf8fb0c69b13bec84cbf1f8ff7e399fc0c8bc7",
+      "generated/a8c871884aa5857b140fb1bceeae8513156a3618da88a8dc1e692834a771975f": "a8c871884aa5857b140fb1bceeae8513156a3618da88a8dc1e692834a771975f",
+      "generated/f20783e1fd0595f1446d7f51224088c7a1ec6a190ed0eb8f94586bfc1214dea1": "f20783e1fd0595f1446d7f51224088c7a1ec6a190ed0eb8f94586bfc1214dea1"
+    },
+    "layout": {
+      "alignment_bytes": 1,
+      "char_bits": 8,
+      "char_unsigned": false,
+      "endian_code": 1,
+      "int_bits": 32,
+      "long_bits": 64,
+      "long_long_bits": 64,
+      "pointer_bits": 64,
+      "short_bits": 16,
+      "wchar_bits": 32
+    },
+    "limits": {
+      "memory_bytes": 21474836480,
+      "timeout_seconds": 300
+    },
+    "preprocessor": {
+      "binary": "/usr/bin/x86_64-linux-gnu-gcc-11",
+      "sha256": "821af3c74506283c179ca413bb33e6b528805a4dd8a5c09df125e5ad560a9e89",
+      "version": "11.4.0"
+    },
+    "property": {
+      "assertion": "assert(shipped_units == 6);",
+      "assertion_sha256": "c691975f24ac5192599c2b687bfb1d5010d50f9c41a235f46d8f4f5bf5b37c23",
+      "description": "Two boxes of three units must contribute six units after the worker joins.",
+      "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+      "id": "main.assertion.1",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": 21
+      }
+    },
+    "schema": 1,
+    "toolchain": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "development_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "schema": 1
+    }
+  },
+  "edges": [
+    {
+      "from": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b",
+      "kind": "rf",
+      "to": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8"
+    },
+    {
+      "from": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a",
+      "kind": "rf",
+      "to": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8"
+    },
+    {
+      "from": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b",
+      "kind": "rf",
+      "to": "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325"
+    },
+    {
+      "from": "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219",
+      "kind": "rf",
+      "to": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a"
+    },
+    {
+      "from": "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9",
+      "kind": "rf",
+      "to": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a"
+    },
+    {
+      "from": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+      "kind": "rf",
+      "to": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+    },
+    {
+      "from": "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+      "kind": "rf",
+      "to": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+    },
+    {
+      "from": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+      "kind": "rf",
+      "to": "dc35347ad1f683547d965c651eb2d93d9b91f45619d14c495709dcc03382d4cf"
+    },
+    {
+      "from": "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+      "kind": "rf",
+      "to": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc"
+    },
+    {
+      "from": "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58",
+      "kind": "rf",
+      "to": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc"
+    },
+    {
+      "declared_true": true,
+      "from": "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d",
+      "kind": "po",
+      "to": "dc35347ad1f683547d965c651eb2d93d9b91f45619d14c495709dcc03382d4cf"
+    },
+    {
+      "declared_true": true,
+      "from": "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d",
+      "kind": "po",
+      "to": "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+    },
+    {
+      "declared_true": true,
+      "from": "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d",
+      "kind": "po",
+      "to": "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325"
+    },
+    {
+      "declared_true": true,
+      "from": "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d",
+      "kind": "po",
+      "to": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+    },
+    {
+      "declared_true": true,
+      "from": "c121273be00a061528d4057fa794a9909cffad050bf2b066b628954164d74f00",
+      "kind": "po",
+      "to": "e67de5d2ca25f8605af9790de2e3986777a3b8da6adce61ba4750042de50a6ce"
+    },
+    {
+      "declared_true": true,
+      "from": "e67de5d2ca25f8605af9790de2e3986777a3b8da6adce61ba4750042de50a6ce",
+      "kind": "po",
+      "to": "d04c1d6151d788c9de5c4047fb7675ac379b5f853133d7671a0249b139bfc4b6"
+    },
+    {
+      "declared_true": true,
+      "from": "d04c1d6151d788c9de5c4047fb7675ac379b5f853133d7671a0249b139bfc4b6",
+      "kind": "po",
+      "to": "3d0fe646db3ecaa43e832278bc3dc025eb905db57c23ed3c2d5946e26ec2146f"
+    },
+    {
+      "declared_true": true,
+      "from": "3d0fe646db3ecaa43e832278bc3dc025eb905db57c23ed3c2d5946e26ec2146f",
+      "kind": "po",
+      "to": "f132159556d7d6dbf3e03fb0ec932f0fe9c0dbaacd6c76de34d3cf550f8f326a"
+    },
+    {
+      "declared_true": true,
+      "from": "f132159556d7d6dbf3e03fb0ec932f0fe9c0dbaacd6c76de34d3cf550f8f326a",
+      "kind": "po",
+      "to": "e11d5fa135006fdf09c86eb14305f410f5a3f12c2a3318b8790c436306dc38ec"
+    },
+    {
+      "declared_true": true,
+      "from": "e11d5fa135006fdf09c86eb14305f410f5a3f12c2a3318b8790c436306dc38ec",
+      "kind": "po",
+      "to": "9bd69df7f85d7bc0f5c9effb75496be2eae60b2db9a8ed2f051c18b7ec02e68c"
+    },
+    {
+      "declared_true": true,
+      "from": "9bd69df7f85d7bc0f5c9effb75496be2eae60b2db9a8ed2f051c18b7ec02e68c",
+      "kind": "po",
+      "to": "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219"
+    },
+    {
+      "declared_true": true,
+      "from": "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219",
+      "kind": "po",
+      "to": "b59a8c01cd050ea076f8e0eb10cd735671837472114511739a6714fa83c02710"
+    },
+    {
+      "declared_true": true,
+      "from": "b59a8c01cd050ea076f8e0eb10cd735671837472114511739a6714fa83c02710",
+      "kind": "po",
+      "to": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b"
+    },
+    {
+      "declared_true": true,
+      "from": "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b",
+      "kind": "po",
+      "to": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+    },
+    {
+      "declared_true": true,
+      "from": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+      "kind": "po",
+      "to": "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464"
+    },
+    {
+      "declared_true": true,
+      "from": "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+      "kind": "po",
+      "to": "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9"
+    },
+    {
+      "declared_true": true,
+      "from": "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9",
+      "kind": "po",
+      "to": "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58"
+    },
+    {
+      "declared_true": true,
+      "from": "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58",
+      "kind": "po",
+      "to": "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d"
+    },
+    {
+      "declared_true": true,
+      "from": "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d",
+      "kind": "po",
+      "to": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc"
+    },
+    {
+      "declared_true": true,
+      "from": "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc",
+      "kind": "po",
+      "to": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a"
+    },
+    {
+      "declared_true": true,
+      "from": "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a",
+      "kind": "po",
+      "to": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8"
+    },
+    {
+      "declared_true": true,
+      "from": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+      "kind": "po",
+      "to": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+    },
+    {
+      "declared_true": true,
+      "from": "dc35347ad1f683547d965c651eb2d93d9b91f45619d14c495709dcc03382d4cf",
+      "kind": "po",
+      "to": "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+    },
+    {
+      "declared_true": true,
+      "from": "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+      "kind": "po",
+      "to": "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325"
+    },
+    {
+      "declared_true": true,
+      "from": "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325",
+      "kind": "apo",
+      "to": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+    }
+  ],
+  "engine": {
+    "backend": "SC/ClosureSolver/no SimpSolver",
+    "implementation": {
+      "incdeagle/model/identity.py": "47865ea066337bff45cd6c69bf6d47c6f69f9481b174ebb86f73fa2cf2b495fd",
+      "incdeagle/model/observe.py": "61433b379895dfebb513edd9a48ed162b3ae45b66f2408e6efb902ce4ab39da4",
+      "incdeagle/theory/cache.py": "359b3d907cde76f4a228f582cbca6403d9c60a0aea4969535e32c43e36473b2b",
+      "incdeagle/theory/certificate.py": "ae8eabf25677cd6e43a90c72aa09dd8e69ab28d8ba96cf2b12bc855ea64a6f62",
+      "incdeagle/theory/context.py": "5b126e816a5c567689f3b75233007e3a263bb19697319f3e646f1c4355b05c0b",
+      "scripts/stage5/theory_worker.py": "d2bf71936203c91a17547f84a611dc3e1185fe47bfcf80cf4666e818ba877b59"
+    },
+    "native": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "development_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "schema": 1
+    },
+    "schema": 1
+  },
+  "events": {
+    "08fbc5ac920a034c7a75761254eadfa8a6c4ccf8f07084e0b4ebdf29179808bc": {
+      "address_l1": "main::1::worker!0@1",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "harness.c",
+          "function": "main",
+          "kind": "FUNCTION_CALL",
+          "line": "19",
+          "pc": 2
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "harness.c",
+          "function": "main",
+          "kind": "FUNCTION_CALL",
+          "line": "19",
+          "pc": 2
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ]
+          ],
+          "dispatch": "c1d6b80d30e53eaba4549719fccdaf83b6e708426df7c0fc37107507a74d0f34",
+          "instruction": "c1d6b80d30e53eaba4549719fccdaf83b6e708426df7c0fc37107507a74d0f34",
+          "object": "main::1::worker",
+          "occurrence": 1,
+          "role": "read",
+          "source": "2bfa7beac972bb03729a1a4957e4394a686ad9b789899fe18fb995a166a1ad7f",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "main::1::worker",
+      "role": "read",
+      "solver_address": "main::1::worker!0@1",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_long_int",
+            {},
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "1",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#typedef": [
+            "__CPROVER_size_t",
+            {},
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9": {
+      "address_l1": "__CPROVER_next_thread_id",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-pthread_create>",
+          "function": "pthread_create",
+          "kind": "ATOMIC_END",
+          "line": "30",
+          "pc": 28
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "main",
+              "pc": 1
+            },
+            "function": "pthread_create",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-pthread_create>",
+          "function": "pthread_create",
+          "kind": "ASSIGN",
+          "line": "29",
+          "pc": 26
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ],
+            [
+              "pthread_create",
+              "1c5f8b591d7cfb65dd9b4f0c1584e0ae258bf15e67c2d9e98420db1931d1da8f",
+              []
+            ]
+          ],
+          "dispatch": "3e72697dcd5f9b39c10ff3d1d9de8b8b1add04ddaf2e7142453a888620b87868",
+          "instruction": "131cc802bbc06a8f58ca00953bcdd4829b81dcc4cf6d4f2c1db0518917d2721e",
+          "object": "__CPROVER_next_thread_id",
+          "occurrence": 1,
+          "role": "write",
+          "source": "95737f2149c7db99c684efdf20498b50763777bee21d150cd9a012209f15813e",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_next_thread_id",
+      "role": "write",
+      "solver_address": "__CPROVER_next_thread_id",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_long_int",
+            {},
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "1",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#typedef": [
+            "__CPROVER_size_t",
+            {},
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464": {
+      "address_l1": "main::1::worker!0@1",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "harness.c",
+          "function": "main",
+          "kind": "DECL",
+          "line": "17",
+          "pc": 0
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "harness.c",
+          "function": "main",
+          "kind": "DECL",
+          "line": "17",
+          "pc": 0
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ]
+          ],
+          "dispatch": "68284980d6d37a1135d6e5dfffc2f4b814281457dbcf6a6a5a4a160f8924be74",
+          "instruction": "68284980d6d37a1135d6e5dfffc2f4b814281457dbcf6a6a5a4a160f8924be74",
+          "object": "main::1::worker",
+          "occurrence": 1,
+          "role": "write",
+          "source": "916bab54a04dd46c1d796f08c3762dbc20dcd75aa8a9f7995df43a3e17273766",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "main::1::worker",
+      "role": "write",
+      "solver_address": "main::1::worker!0@1",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_long_int",
+            {},
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "1",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#typedef": [
+            "__CPROVER_size_t",
+            {},
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "3d0fe646db3ecaa43e832278bc3dc025eb905db57c23ed3c2d5946e26ec2146f": {
+      "address_l1": "__CPROVER_malloc_is_new_array",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "16",
+          "pc": 10
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "16",
+          "pc": 10
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "467bd85dfdab6d7c1094cc1fbfc70a77010a54cf1b8b44b487cb9138771ec7b5",
+          "instruction": "467bd85dfdab6d7c1094cc1fbfc70a77010a54cf1b8b44b487cb9138771ec7b5",
+          "object": "__CPROVER_malloc_is_new_array",
+          "occurrence": 1,
+          "role": "write",
+          "source": "2631aff54db3f5be7e936eb679825debd6f429f496783cadf556f96e54e621a5",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_malloc_is_new_array",
+      "role": "write",
+      "solver_address": "__CPROVER_malloc_is_new_array",
+      "type": [
+        "bool",
+        {},
+        []
+      ]
+    },
+    "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13": {
+      "address_l1": "shipped_units",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "program.c",
+          "function": "record_batch",
+          "kind": "ASSIGN",
+          "line": "3",
+          "pc": 53
+        },
+        "frames": [
+          {
+            "function": "pthread_create",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "pthread_create",
+              "pc": 36
+            },
+            "function": "__spawned_thread",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__spawned_thread",
+              "pc": 68
+            },
+            "function": "pack",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "pack",
+              "pc": 56
+            },
+            "function": "record_batch",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "program.c",
+          "function": "record_batch",
+          "kind": "ASSIGN",
+          "line": "3",
+          "pc": 53
+        },
+        "stage3": {
+          "calls": [
+            [
+              "pthread_create",
+              null,
+              []
+            ],
+            [
+              "__spawned_thread",
+              "8d8fb403f79bc8efa0daffd708ee478f39a39ee3e67b14f6208acf580728b2df",
+              []
+            ],
+            [
+              "pack",
+              "50cb339a04741887face55b0fefe0acc70d2325fa2a5e0f2e862f5de20abf481",
+              []
+            ],
+            [
+              "record_batch",
+              "975e1d0358524acae4fec1b36720c8b3143836746c6531ac30b5dca970b7af12",
+              []
+            ]
+          ],
+          "dispatch": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+          "instruction": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+          "object": "shipped_units",
+          "occurrence": 1,
+          "role": "write",
+          "source": "0c2208b884bab2dc4c45ce21e4cd5e0cda516aab637ca587a532ed95645836db",
+          "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+        },
+        "thread": 1
+      },
+      "object": "shipped_units",
+      "role": "write",
+      "solver_address": "shipped_units",
+      "type": [
+        "signedbv",
+        {
+          "#c_type": [
+            "signed_int",
+            {},
+            []
+          ],
+          "width": [
+            "32",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41": {
+      "address_l1": "shipped_units",
+      "event_guard": [
+        "or",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ]
+        },
+        [
+          [
+            "and",
+            {
+              "type": [
+                "bool",
+                {},
+                []
+              ]
+            },
+            [
+              [
+                "not",
+                {
+                  "type": [
+                    "bool",
+                    {},
+                    []
+                  ]
+                },
+                [
+                  [
+                    "symbol",
+                    {
+                      "#SSA_symbol": [
+                        "1",
+                        {},
+                        []
+                      ],
+                      "L1_object_identifier": [
+                        "goto_symex::\\guard",
+                        {},
+                        []
+                      ],
+                      "L2": [
+                        "1",
+                        {},
+                        []
+                      ],
+                      "expression": [
+                        "symbol",
+                        {
+                          "identifier": [
+                            "goto_symex::\\guard",
+                            {},
+                            []
+                          ],
+                          "type": [
+                            "bool",
+                            {},
+                            []
+                          ]
+                        },
+                        []
+                      ],
+                      "identifier": [
+                        "goto_symex::\\guard#1",
+                        {},
+                        []
+                      ],
+                      "type": [
+                        "bool",
+                        {},
+                        []
+                      ]
+                    },
+                    []
+                  ]
+                ]
+              ],
+              [
+                "or",
+                {
+                  "type": [
+                    "bool",
+                    {},
+                    []
+                  ]
+                },
+                [
+                  [
+                    "and",
+                    {
+                      "type": [
+                        "bool",
+                        {},
+                        []
+                      ]
+                    },
+                    [
+                      [
+                        "not",
+                        {
+                          "type": [
+                            "bool",
+                            {},
+                            []
+                          ]
+                        },
+                        [
+                          [
+                            "symbol",
+                            {
+                              "#SSA_symbol": [
+                                "1",
+                                {},
+                                []
+                              ],
+                              "L1_object_identifier": [
+                                "goto_symex::\\guard",
+                                {},
+                                []
+                              ],
+                              "L2": [
+                                "2",
+                                {},
+                                []
+                              ],
+                              "expression": [
+                                "symbol",
+                                {
+                                  "identifier": [
+                                    "goto_symex::\\guard",
+                                    {},
+                                    []
+                                  ],
+                                  "type": [
+                                    "bool",
+                                    {},
+                                    []
+                                  ]
+                                },
+                                []
+                              ],
+                              "identifier": [
+                                "goto_symex::\\guard#2",
+                                {},
+                                []
+                              ],
+                              "type": [
+                                "bool",
+                                {},
+                                []
+                              ]
+                            },
+                            []
+                          ]
+                        ]
+                      ],
+                      [
+                        "index",
+                        {
+                          "#lvalue": [
+                            "1",
+                            {},
+                            []
+                          ],
+                          "#source_location": [
+                            "",
+                            {
+                              "file": [
+                                "<builtin-library-pthread_join>",
+                                {},
+                                []
+                              ],
+                              "function": [
+                                "pthread_join",
+                                {},
+                                []
+                              ],
+                              "line": [
+                                "29",
+                                {},
+                                []
+                              ],
+                              "working_directory": [
+                                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                                {},
+                                []
+                              ]
+                            },
+                            []
+                          ],
+                          "type": [
+                            "bool",
+                            {},
+                            []
+                          ]
+                        },
+                        [
+                          [
+                            "symbol",
+                            {
+                              "#SSA_symbol": [
+                                "1",
+                                {},
+                                []
+                              ],
+                              "L1_object_identifier": [
+                                "__CPROVER_threads_exited",
+                                {},
+                                []
+                              ],
+                              "L2": [
+                                "2",
+                                {},
+                                []
+                              ],
+                              "expression": [
+                                "symbol",
+                                {
+                                  "identifier": [
+                                    "__CPROVER_threads_exited",
+                                    {},
+                                    []
+                                  ],
+                                  "type": [
+                                    "array",
+                                    {
+                                      "#index_type": [
+                                        "signedbv",
+                                        {
+                                          "#c_type": [
+                                            "signed_long_int",
+                                            {},
+                                            []
+                                          ],
+                                          "width": [
+                                            "64",
+                                            {},
+                                            []
+                                          ]
+                                        },
+                                        []
+                                      ],
+                                      "#source_location": [
+                                        "",
+                                        {
+                                          "file": [
+                                            "<built-in-additions>",
+                                            {},
+                                            []
+                                          ],
+                                          "line": [
+                                            "7",
+                                            {},
+                                            []
+                                          ],
+                                          "working_directory": [
+                                            "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                                            {},
+                                            []
+                                          ]
+                                        },
+                                        []
+                                      ],
+                                      "size": [
+                                        "infinity",
+                                        {
+                                          "#source_location": [
+                                            "",
+                                            {
+                                              "file": [
+                                                "<built-in-additions>",
+                                                {},
+                                                []
+                                              ],
+                                              "line": [
+                                                "10",
+                                                {},
+                                                []
+                                              ],
+                                              "working_directory": [
+                                                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                                                {},
+                                                []
+                                              ]
+                                            },
+                                            []
+                                          ],
+                                          "type": [
+                                            "signedbv",
+                                            {
+                                              "#c_type": [
+                                                "signed_long_int",
+                                                {},
+                                                []
+                                              ],
+                                              "width": [
+                                                "64",
+                                                {},
+                                                []
+                                              ]
+                                            },
+                                            []
+                                          ]
+                                        },
+                                        []
+                                      ]
+                                    },
+                                    [
+                                      [
+                                        "bool",
+                                        {},
+                                        []
+                                      ]
+                                    ]
+                                  ]
+                                },
+                                []
+                              ],
+                              "identifier": [
+                                "__CPROVER_threads_exited#2",
+                                {},
+                                []
+                              ],
+                              "type": [
+                                "array",
+                                {
+                                  "#index_type": [
+                                    "signedbv",
+                                    {
+                                      "#c_type": [
+                                        "signed_long_int",
+                                        {},
+                                        []
+                                      ],
+                                      "width": [
+                                        "64",
+                                        {},
+                                        []
+                                      ]
+                                    },
+                                    []
+                                  ],
+                                  "#source_location": [
+                                    "",
+                                    {
+                                      "file": [
+                                        "<built-in-additions>",
+                                        {},
+                                        []
+                                      ],
+                                      "line": [
+                                        "7",
+                                        {},
+                                        []
+                                      ],
+                                      "working_directory": [
+                                        "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                                        {},
+                                        []
+                                      ]
+                                    },
+                                    []
+                                  ],
+                                  "size": [
+                                    "infinity",
+                                    {
+                                      "#source_location": [
+                                        "",
+                                        {
+                                          "file": [
+                                            "<built-in-additions>",
+                                            {},
+                                            []
+                                          ],
+                                          "line": [
+                                            "10",
+                                            {},
+                                            []
+                                          ],
+                                          "working_directory": [
+                                            "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                                            {},
+                                            []
+                                          ]
+                                        },
+                                        []
+                                      ],
+                                      "type": [
+                                        "signedbv",
+                                        {
+                                          "#c_type": [
+                                            "signed_long_int",
+                                            {},
+                                            []
+                                          ],
+                                          "width": [
+                                            "64",
+                                            {},
+                                            []
+                                          ]
+                                        },
+                                        []
+                                      ]
+                                    },
+                                    []
+                                  ]
+                                },
+                                [
+                                  [
+                                    "bool",
+                                    {},
+                                    []
+                                  ]
+                                ]
+                              ]
+                            },
+                            []
+                          ],
+                          [
+                            "typecast",
+                            {
+                              "type": [
+                                "signedbv",
+                                {
+                                  "#c_type": [
+                                    "signed_long_int",
+                                    {},
+                                    []
+                                  ],
+                                  "width": [
+                                    "64",
+                                    {},
+                                    []
+                                  ]
+                                },
+                                []
+                              ]
+                            },
+                            [
+                              [
+                                "symbol",
+                                {
+                                  "#SSA_symbol": [
+                                    "1",
+                                    {},
+                                    []
+                                  ],
+                                  "L0": [
+                                    "0",
+                                    {},
+                                    []
+                                  ],
+                                  "L1": [
+                                    "1",
+                                    {},
+                                    []
+                                  ],
+                                  "L1_object_identifier": [
+                                    "pthread_join::thread!0@1",
+                                    {},
+                                    []
+                                  ],
+                                  "L2": [
+                                    "1",
+                                    {},
+                                    []
+                                  ],
+                                  "expression": [
+                                    "symbol",
+                                    {
+                                      "identifier": [
+                                        "pthread_join::thread",
+                                        {},
+                                        []
+                                      ],
+                                      "type": [
+                                        "unsignedbv",
+                                        {
+                                          "#c_type": [
+                                            "unsigned_long_int",
+                                            {},
+                                            []
+                                          ],
+                                          "#source_location": [
+                                            "",
+                                            {
+                                              "file": [
+                                                "<built-in-additions>",
+                                                {},
+                                                []
+                                              ],
+                                              "line": [
+                                                "1",
+                                                {},
+                                                []
+                                              ],
+                                              "working_directory": [
+                                                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                                                {},
+                                                []
+                                              ]
+                                            },
+                                            []
+                                          ],
+                                          "#typedef": [
+                                            "__CPROVER_size_t",
+                                            {},
+                                            []
+                                          ],
+                                          "width": [
+                                            "64",
+                                            {},
+                                            []
+                                          ]
+                                        },
+                                        []
+                                      ]
+                                    },
+                                    []
+                                  ],
+                                  "identifier": [
+                                    "pthread_join::thread!0@1#1",
+                                    {},
+                                    []
+                                  ],
+                                  "type": [
+                                    "unsignedbv",
+                                    {
+                                      "#c_type": [
+                                        "unsigned_long_int",
+                                        {},
+                                        []
+                                      ],
+                                      "#source_location": [
+                                        "",
+                                        {
+                                          "file": [
+                                            "<built-in-additions>",
+                                            {},
+                                            []
+                                          ],
+                                          "line": [
+                                            "1",
+                                            {},
+                                            []
+                                          ],
+                                          "working_directory": [
+                                            "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                                            {},
+                                            []
+                                          ]
+                                        },
+                                        []
+                                      ],
+                                      "#typedef": [
+                                        "__CPROVER_size_t",
+                                        {},
+                                        []
+                                      ],
+                                      "width": [
+                                        "64",
+                                        {},
+                                        []
+                                      ]
+                                    },
+                                    []
+                                  ]
+                                },
+                                []
+                              ]
+                            ]
+                          ]
+                        ]
+                      ]
+                    ]
+                  ],
+                  [
+                    "symbol",
+                    {
+                      "#SSA_symbol": [
+                        "1",
+                        {},
+                        []
+                      ],
+                      "L1_object_identifier": [
+                        "goto_symex::\\guard",
+                        {},
+                        []
+                      ],
+                      "L2": [
+                        "2",
+                        {},
+                        []
+                      ],
+                      "expression": [
+                        "symbol",
+                        {
+                          "identifier": [
+                            "goto_symex::\\guard",
+                            {},
+                            []
+                          ],
+                          "type": [
+                            "bool",
+                            {},
+                            []
+                          ]
+                        },
+                        []
+                      ],
+                      "identifier": [
+                        "goto_symex::\\guard#2",
+                        {},
+                        []
+                      ],
+                      "type": [
+                        "bool",
+                        {},
+                        []
+                      ]
+                    },
+                    []
+                  ]
+                ]
+              ]
+            ]
+          ],
+          [
+            "symbol",
+            {
+              "#SSA_symbol": [
+                "1",
+                {},
+                []
+              ],
+              "L1_object_identifier": [
+                "goto_symex::\\guard",
+                {},
+                []
+              ],
+              "L2": [
+                "1",
+                {},
+                []
+              ],
+              "expression": [
+                "symbol",
+                {
+                  "identifier": [
+                    "goto_symex::\\guard",
+                    {},
+                    []
+                  ],
+                  "type": [
+                    "bool",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ],
+              "identifier": [
+                "goto_symex::\\guard#1",
+                {},
+                []
+              ],
+              "type": [
+                "bool",
+                {},
+                []
+              ]
+            },
+            []
+          ]
+        ]
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "harness.c",
+          "function": "main",
+          "kind": "ASSERT",
+          "line": "21",
+          "pc": 3
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "harness.c",
+          "function": "main",
+          "kind": "ASSERT",
+          "line": "21",
+          "pc": 3
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ]
+          ],
+          "dispatch": "6f1e33b4af5a5a61e93e3500f668c53bed42f5678751da426301d37e5d773996",
+          "instruction": "6f1e33b4af5a5a61e93e3500f668c53bed42f5678751da426301d37e5d773996",
+          "object": "shipped_units",
+          "occurrence": 1,
+          "role": "read",
+          "source": "fd5020248b82e3b702ecc7ba885a71f776fecf920fb10d42a945bcc52754c962",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "shipped_units",
+      "role": "read",
+      "solver_address": "shipped_units",
+      "type": [
+        "signedbv",
+        {
+          "#c_type": [
+            "signed_int",
+            {},
+            []
+          ],
+          "width": [
+            "32",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325": {
+      "address_l1": "__CPROVER_threads_exited",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-__spawned_thread>",
+          "function": "__spawned_thread",
+          "kind": "ASSIGN",
+          "line": "55",
+          "pc": 70
+        },
+        "frames": [
+          {
+            "function": "pthread_create",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "pthread_create",
+              "pc": 36
+            },
+            "function": "__spawned_thread",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-__spawned_thread>",
+          "function": "__spawned_thread",
+          "kind": "ASSIGN",
+          "line": "55",
+          "pc": 70
+        },
+        "stage3": {
+          "calls": [
+            [
+              "pthread_create",
+              null,
+              []
+            ],
+            [
+              "__spawned_thread",
+              "8d8fb403f79bc8efa0daffd708ee478f39a39ee3e67b14f6208acf580728b2df",
+              []
+            ]
+          ],
+          "dispatch": "4060aac36a101ad1239abd3a9a0c9265866b3cdf4b63c8921ddd35e371b86636",
+          "instruction": "4060aac36a101ad1239abd3a9a0c9265866b3cdf4b63c8921ddd35e371b86636",
+          "object": "__CPROVER_threads_exited",
+          "occurrence": 1,
+          "role": "read",
+          "source": "c7108215a3a2dc7f3d72e69c347792d4f309a0a0b0e07cc2ed7ad0b1dfef2045",
+          "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+        },
+        "thread": 1
+      },
+      "object": "__CPROVER_threads_exited",
+      "role": "read",
+      "solver_address": "__CPROVER_threads_exited",
+      "type": [
+        "array",
+        {
+          "#index_type": [
+            "signedbv",
+            {
+              "#c_type": [
+                "signed_long_int",
+                {},
+                []
+              ],
+              "width": [
+                "64",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "7",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "size": [
+            "infinity",
+            {
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "10",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ],
+              "type": [
+                "signedbv",
+                {
+                  "#c_type": [
+                    "signed_long_int",
+                    {},
+                    []
+                  ],
+                  "width": [
+                    "64",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        },
+        [
+          [
+            "bool",
+            {},
+            []
+          ]
+        ]
+      ]
+    },
+    "7db6f1b544df7235b708c1ead4f73183bdbaf37a8f983fa945aeaf12a3c6cc9a": {
+      "address_l1": "__CPROVER_next_thread_id",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-pthread_join>",
+          "function": "pthread_join",
+          "kind": "GOTO",
+          "line": "26",
+          "pc": 42
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "main",
+              "pc": 2
+            },
+            "function": "pthread_join",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-pthread_join>",
+          "function": "pthread_join",
+          "kind": "GOTO",
+          "line": "26",
+          "pc": 42
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ],
+            [
+              "pthread_join",
+              "c1d6b80d30e53eaba4549719fccdaf83b6e708426df7c0fc37107507a74d0f34",
+              []
+            ]
+          ],
+          "dispatch": "2d8bda41a2f05a0183d3ab8954bf085d32d5474ffd165ac0a1a21cd7c06f478f",
+          "instruction": "2d8bda41a2f05a0183d3ab8954bf085d32d5474ffd165ac0a1a21cd7c06f478f",
+          "object": "__CPROVER_next_thread_id",
+          "occurrence": 1,
+          "role": "read",
+          "source": "c5a1e4c877e72367915fcb77a733c054db45cf4aba9ae655e81a595aff4bc1fa",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_next_thread_id",
+      "role": "read",
+      "solver_address": "__CPROVER_next_thread_id",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_long_int",
+            {},
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "1",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#typedef": [
+            "__CPROVER_size_t",
+            {},
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d": {
+      "address_l1": null,
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-pthread_create>",
+          "function": "pthread_create",
+          "kind": "START_THREAD",
+          "line": "48",
+          "pc": 34
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "main",
+              "pc": 1
+            },
+            "function": "pthread_create",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-pthread_create>",
+          "function": "pthread_create",
+          "kind": "START_THREAD",
+          "line": "48",
+          "pc": 34
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ],
+            [
+              "pthread_create",
+              "1c5f8b591d7cfb65dd9b4f0c1584e0ae258bf15e67c2d9e98420db1931d1da8f",
+              []
+            ]
+          ],
+          "dispatch": "afe89e904ca6b8dd2d1307c1a35ab09ca0b90d20b2ba826275eb67ffd6c439a8",
+          "instruction": "afe89e904ca6b8dd2d1307c1a35ab09ca0b90d20b2ba826275eb67ffd6c439a8",
+          "object": null,
+          "occurrence": 1,
+          "role": "spawn",
+          "source": "aac17299a092a45913ff69d52bd0418fb80a89346038b72a938a1325eaf3a432",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": null,
+      "role": "spawn",
+      "solver_address": "t1$14$spwnclk",
+      "type": null
+    },
+    "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58": {
+      "address_l1": "main::1::worker!0@1",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-pthread_create>",
+          "function": "pthread_create",
+          "kind": "ASSIGN",
+          "line": "33",
+          "pc": 29
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "main",
+              "pc": 1
+            },
+            "function": "pthread_create",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-pthread_create>",
+          "function": "pthread_create",
+          "kind": "ASSIGN",
+          "line": "33",
+          "pc": 29
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ],
+            [
+              "pthread_create",
+              "1c5f8b591d7cfb65dd9b4f0c1584e0ae258bf15e67c2d9e98420db1931d1da8f",
+              []
+            ]
+          ],
+          "dispatch": "2a283838efe4f39758c432b3d6ab9c3f389950689c3e87c177c28857135b554c",
+          "instruction": "2a283838efe4f39758c432b3d6ab9c3f389950689c3e87c177c28857135b554c",
+          "object": "main::1::worker",
+          "occurrence": 1,
+          "role": "write",
+          "source": "43b97adad43927e390a8e94f78f7ba81dab1d98e897fef7577358398232b4bce",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "main::1::worker",
+      "role": "write",
+      "solver_address": "main::1::worker!0@1",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_long_int",
+            {},
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "1",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#typedef": [
+            "__CPROVER_size_t",
+            {},
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219": {
+      "address_l1": "__CPROVER_next_thread_id",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "8",
+          "pc": 14
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "8",
+          "pc": 14
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "2d494d5280a56399af43c0b16aaf333a0a52d71d5c818f836c0355b3e6b08b66",
+          "instruction": "2d494d5280a56399af43c0b16aaf333a0a52d71d5c818f836c0355b3e6b08b66",
+          "object": "__CPROVER_next_thread_id",
+          "occurrence": 1,
+          "role": "write",
+          "source": "818a04f351776ed58757aa4c13d167f346177a3cc11424789f095fff95b7b78e",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_next_thread_id",
+      "role": "write",
+      "solver_address": "__CPROVER_next_thread_id",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_long_int",
+            {},
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "1",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#typedef": [
+            "__CPROVER_size_t",
+            {},
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "9bd69df7f85d7bc0f5c9effb75496be2eae60b2db9a8ed2f051c18b7ec02e68c": {
+      "address_l1": "__CPROVER_new_object",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "15",
+          "pc": 13
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "15",
+          "pc": 13
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "5dcf9a8041100cf9b199ed3d67e60db2988e12039bea3d736e19dcabfd9e7fcd",
+          "instruction": "5dcf9a8041100cf9b199ed3d67e60db2988e12039bea3d736e19dcabfd9e7fcd",
+          "object": "__CPROVER_new_object",
+          "occurrence": 1,
+          "role": "write",
+          "source": "17e1f2a7fc963f5ffc61541f54cb0de20e7526d549f7ee573a81bda34383f882",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_new_object",
+      "role": "write",
+      "solver_address": "__CPROVER_new_object",
+      "type": [
+        "pointer",
+        {
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "function": [
+                "",
+                {},
+                []
+              ],
+              "line": [
+                "19",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        [
+          [
+            "empty",
+            {
+              "#constant": [
+                "1",
+                {},
+                []
+              ],
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "function": [
+                    "",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "19",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        ]
+      ]
+    },
+    "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a": {
+      "address_l1": "__CPROVER_threads_exited",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-__spawned_thread>",
+          "function": "__spawned_thread",
+          "kind": "ASSIGN",
+          "line": "55",
+          "pc": 70
+        },
+        "frames": [
+          {
+            "function": "pthread_create",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "pthread_create",
+              "pc": 36
+            },
+            "function": "__spawned_thread",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-__spawned_thread>",
+          "function": "__spawned_thread",
+          "kind": "ASSIGN",
+          "line": "55",
+          "pc": 70
+        },
+        "stage3": {
+          "calls": [
+            [
+              "pthread_create",
+              null,
+              []
+            ],
+            [
+              "__spawned_thread",
+              "8d8fb403f79bc8efa0daffd708ee478f39a39ee3e67b14f6208acf580728b2df",
+              []
+            ]
+          ],
+          "dispatch": "4060aac36a101ad1239abd3a9a0c9265866b3cdf4b63c8921ddd35e371b86636",
+          "instruction": "4060aac36a101ad1239abd3a9a0c9265866b3cdf4b63c8921ddd35e371b86636",
+          "object": "__CPROVER_threads_exited",
+          "occurrence": 1,
+          "role": "write",
+          "source": "c7108215a3a2dc7f3d72e69c347792d4f309a0a0b0e07cc2ed7ad0b1dfef2045",
+          "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+        },
+        "thread": 1
+      },
+      "object": "__CPROVER_threads_exited",
+      "role": "write",
+      "solver_address": "__CPROVER_threads_exited",
+      "type": [
+        "array",
+        {
+          "#index_type": [
+            "signedbv",
+            {
+              "#c_type": [
+                "signed_long_int",
+                {},
+                []
+              ],
+              "width": [
+                "64",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "7",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "size": [
+            "infinity",
+            {
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "10",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ],
+              "type": [
+                "signedbv",
+                {
+                  "#c_type": [
+                    "signed_long_int",
+                    {},
+                    []
+                  ],
+                  "width": [
+                    "64",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        },
+        [
+          [
+            "bool",
+            {},
+            []
+          ]
+        ]
+      ]
+    },
+    "b0858f9106cd99f0b8d30ac18688e53aec62c7992e8e39d4dc2b2bdea77ea682": {
+      "address_l1": null,
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-__spawned_thread>",
+          "function": "__spawned_thread",
+          "kind": "OTHER",
+          "line": "35",
+          "pc": 69
+        },
+        "frames": [
+          {
+            "function": "pthread_create",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "pthread_create",
+              "pc": 36
+            },
+            "function": "__spawned_thread",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-__spawned_thread>",
+          "function": "__spawned_thread",
+          "kind": "OTHER",
+          "line": "35",
+          "pc": 69
+        },
+        "stage3": {
+          "calls": [
+            [
+              "pthread_create",
+              null,
+              []
+            ],
+            [
+              "__spawned_thread",
+              "8d8fb403f79bc8efa0daffd708ee478f39a39ee3e67b14f6208acf580728b2df",
+              []
+            ]
+          ],
+          "dispatch": "828dc7f3200e28166fcfb062418e2ea737c943c012c9ecaf0fa2402539e86af4",
+          "instruction": "828dc7f3200e28166fcfb062418e2ea737c943c012c9ecaf0fa2402539e86af4",
+          "object": null,
+          "occurrence": 1,
+          "role": "fence",
+          "source": "e763aa1660c1a669ead4588415d905d52ef2f03e0ac93ad1e150bb9a0b09fc96",
+          "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+        },
+        "thread": 1
+      },
+      "object": null,
+      "role": "fence",
+      "solver_address": null,
+      "type": null
+    },
+    "b59a8c01cd050ea076f8e0eb10cd735671837472114511739a6714fa83c02710": {
+      "address_l1": "__CPROVER_pipe_count",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "34",
+          "pc": 16
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "34",
+          "pc": 16
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "098106a0ca4c1ef33907d7f52ded1429a7915542f12ff843abe2fdcad63fc9a8",
+          "instruction": "098106a0ca4c1ef33907d7f52ded1429a7915542f12ff843abe2fdcad63fc9a8",
+          "object": "__CPROVER_pipe_count",
+          "occurrence": 1,
+          "role": "write",
+          "source": "32f0841a021cce71ce08f79e2e48bdfb95b896214aa99490415005f24ea4ee33",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_pipe_count",
+      "role": "write",
+      "solver_address": "__CPROVER_pipe_count",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_int",
+            {},
+            []
+          ],
+          "width": [
+            "32",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f": {
+      "address_l1": "shipped_units",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "harness.c",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "4",
+          "pc": 22
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "harness.c",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "4",
+          "pc": 22
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "cbaf68a38ab161c9fa0e40fc9ca0ff491d08c0de3df51ded317fa3c68f20929a",
+          "instruction": "cbaf68a38ab161c9fa0e40fc9ca0ff491d08c0de3df51ded317fa3c68f20929a",
+          "object": "shipped_units",
+          "occurrence": 1,
+          "role": "write",
+          "source": "087e7e817e1795e30767475307b026c23f54f150ac2906df8546742c96759233",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "shipped_units",
+      "role": "write",
+      "solver_address": "shipped_units",
+      "type": [
+        "signedbv",
+        {
+          "#c_type": [
+            "signed_int",
+            {},
+            []
+          ],
+          "width": [
+            "32",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "c121273be00a061528d4057fa794a9909cffad050bf2b066b628954164d74f00": {
+      "address_l1": "__CPROVER_alloca_object",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "19",
+          "pc": 7
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "19",
+          "pc": 7
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "6f7725e9361642604a16c0d1c980ed15a2111ab5d58b357b2b353154d9fe385d",
+          "instruction": "6f7725e9361642604a16c0d1c980ed15a2111ab5d58b357b2b353154d9fe385d",
+          "object": "__CPROVER_alloca_object",
+          "occurrence": 1,
+          "role": "write",
+          "source": "5c519d442368a34cac4af0d4ec3bbb7c3d1b397ea496d9ce8fc18c0d58f5498d",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_alloca_object",
+      "role": "write",
+      "solver_address": "__CPROVER_alloca_object",
+      "type": [
+        "pointer",
+        {
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "function": [
+                "",
+                {},
+                []
+              ],
+              "line": [
+                "19",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        [
+          [
+            "empty",
+            {
+              "#constant": [
+                "1",
+                {},
+                []
+              ],
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "function": [
+                    "",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "19",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        ]
+      ]
+    },
+    "d04c1d6151d788c9de5c4047fb7675ac379b5f853133d7671a0249b139bfc4b6": {
+      "address_l1": "__CPROVER_deallocated",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "13",
+          "pc": 9
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "13",
+          "pc": 9
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "a33f82d2f3cf41125328520aa89d056cf74320dcc4718e5398c2b015d7ca5009",
+          "instruction": "a33f82d2f3cf41125328520aa89d056cf74320dcc4718e5398c2b015d7ca5009",
+          "object": "__CPROVER_deallocated",
+          "occurrence": 1,
+          "role": "write",
+          "source": "662342bda6679dbc910f20a3799dbfe832c2cb37f60f4a28d396a53639971f9b",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_deallocated",
+      "role": "write",
+      "solver_address": "__CPROVER_deallocated",
+      "type": [
+        "pointer",
+        {
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "function": [
+                "",
+                {},
+                []
+              ],
+              "line": [
+                "19",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        [
+          [
+            "empty",
+            {
+              "#constant": [
+                "1",
+                {},
+                []
+              ],
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "function": [
+                    "",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "19",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        ]
+      ]
+    },
+    "dc35347ad1f683547d965c651eb2d93d9b91f45619d14c495709dcc03382d4cf": {
+      "address_l1": "shipped_units",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "program.c",
+          "function": "record_batch",
+          "kind": "ASSIGN",
+          "line": "3",
+          "pc": 53
+        },
+        "frames": [
+          {
+            "function": "pthread_create",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "pthread_create",
+              "pc": 36
+            },
+            "function": "__spawned_thread",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__spawned_thread",
+              "pc": 68
+            },
+            "function": "pack",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "pack",
+              "pc": 56
+            },
+            "function": "record_batch",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "program.c",
+          "function": "record_batch",
+          "kind": "ASSIGN",
+          "line": "3",
+          "pc": 53
+        },
+        "stage3": {
+          "calls": [
+            [
+              "pthread_create",
+              null,
+              []
+            ],
+            [
+              "__spawned_thread",
+              "8d8fb403f79bc8efa0daffd708ee478f39a39ee3e67b14f6208acf580728b2df",
+              []
+            ],
+            [
+              "pack",
+              "50cb339a04741887face55b0fefe0acc70d2325fa2a5e0f2e862f5de20abf481",
+              []
+            ],
+            [
+              "record_batch",
+              "975e1d0358524acae4fec1b36720c8b3143836746c6531ac30b5dca970b7af12",
+              []
+            ]
+          ],
+          "dispatch": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+          "instruction": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+          "object": "shipped_units",
+          "occurrence": 1,
+          "role": "read",
+          "source": "0c2208b884bab2dc4c45ce21e4cd5e0cda516aab637ca587a532ed95645836db",
+          "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+        },
+        "thread": 1
+      },
+      "object": "shipped_units",
+      "role": "read",
+      "solver_address": "shipped_units",
+      "type": [
+        "signedbv",
+        {
+          "#c_type": [
+            "signed_int",
+            {},
+            []
+          ],
+          "width": [
+            "32",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "e11d5fa135006fdf09c86eb14305f410f5a3f12c2a3318b8790c436306dc38ec": {
+      "address_l1": "__CPROVER_memory_leak",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "17",
+          "pc": 12
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "17",
+          "pc": 12
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "3ec4dced5e729d60115594eafb8f4076e8fd2d702c0fc3fb9041827c6f36f54a",
+          "instruction": "3ec4dced5e729d60115594eafb8f4076e8fd2d702c0fc3fb9041827c6f36f54a",
+          "object": "__CPROVER_memory_leak",
+          "occurrence": 1,
+          "role": "write",
+          "source": "b1329bd92de90a37884fb44d7d26ac2a8e61c24f4da92dda18a1ba3c23880531",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_memory_leak",
+      "role": "write",
+      "solver_address": "__CPROVER_memory_leak",
+      "type": [
+        "pointer",
+        {
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "function": [
+                "",
+                {},
+                []
+              ],
+              "line": [
+                "19",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        [
+          [
+            "empty",
+            {
+              "#constant": [
+                "1",
+                {},
+                []
+              ],
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "function": [
+                    "",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "19",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        ]
+      ]
+    },
+    "e67de5d2ca25f8605af9790de2e3986777a3b8da6adce61ba4750042de50a6ce": {
+      "address_l1": "__CPROVER_dead_object",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "14",
+          "pc": 8
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "14",
+          "pc": 8
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "533fa35301e963a2b3b10b251e6a6e759ab6ee0038ad5c3d60c18b7f58351479",
+          "instruction": "533fa35301e963a2b3b10b251e6a6e759ab6ee0038ad5c3d60c18b7f58351479",
+          "object": "__CPROVER_dead_object",
+          "occurrence": 1,
+          "role": "write",
+          "source": "a9f8fa100ce176c9e24307879549d474677c022dd6f4e4c20318d2b2a85837e2",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_dead_object",
+      "role": "write",
+      "solver_address": "__CPROVER_dead_object",
+      "type": [
+        "pointer",
+        {
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "function": [
+                "",
+                {},
+                []
+              ],
+              "line": [
+                "19",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        [
+          [
+            "empty",
+            {
+              "#constant": [
+                "1",
+                {},
+                []
+              ],
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "function": [
+                    "",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "19",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        ]
+      ]
+    },
+    "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8": {
+      "address_l1": "__CPROVER_threads_exited",
+      "event_guard": [
+        "and",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ]
+        },
+        [
+          [
+            "not",
+            {
+              "type": [
+                "bool",
+                {},
+                []
+              ]
+            },
+            [
+              [
+                "symbol",
+                {
+                  "#SSA_symbol": [
+                    "1",
+                    {},
+                    []
+                  ],
+                  "L1_object_identifier": [
+                    "goto_symex::\\guard",
+                    {},
+                    []
+                  ],
+                  "L2": [
+                    "1",
+                    {},
+                    []
+                  ],
+                  "expression": [
+                    "symbol",
+                    {
+                      "identifier": [
+                        "goto_symex::\\guard",
+                        {},
+                        []
+                      ],
+                      "type": [
+                        "bool",
+                        {},
+                        []
+                      ]
+                    },
+                    []
+                  ],
+                  "identifier": [
+                    "goto_symex::\\guard#1",
+                    {},
+                    []
+                  ],
+                  "type": [
+                    "bool",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            ]
+          ],
+          [
+            "not",
+            {
+              "type": [
+                "bool",
+                {},
+                []
+              ]
+            },
+            [
+              [
+                "symbol",
+                {
+                  "#SSA_symbol": [
+                    "1",
+                    {},
+                    []
+                  ],
+                  "L1_object_identifier": [
+                    "goto_symex::\\guard",
+                    {},
+                    []
+                  ],
+                  "L2": [
+                    "2",
+                    {},
+                    []
+                  ],
+                  "expression": [
+                    "symbol",
+                    {
+                      "identifier": [
+                        "goto_symex::\\guard",
+                        {},
+                        []
+                      ],
+                      "type": [
+                        "bool",
+                        {},
+                        []
+                      ]
+                    },
+                    []
+                  ],
+                  "identifier": [
+                    "goto_symex::\\guard#2",
+                    {},
+                    []
+                  ],
+                  "type": [
+                    "bool",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            ]
+          ]
+        ]
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<builtin-library-pthread_join>",
+          "function": "pthread_join",
+          "kind": "ASSUME",
+          "line": "29",
+          "pc": 50
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 60
+            },
+            "function": "main",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "main",
+              "pc": 2
+            },
+            "function": "pthread_join",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<builtin-library-pthread_join>",
+          "function": "pthread_join",
+          "kind": "ASSUME",
+          "line": "29",
+          "pc": 50
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "main",
+              "9f038a2dc4ab9a09b357731db50ffb99ac533ed8c45dfbb7fc87453e23b51308",
+              []
+            ],
+            [
+              "pthread_join",
+              "c1d6b80d30e53eaba4549719fccdaf83b6e708426df7c0fc37107507a74d0f34",
+              []
+            ]
+          ],
+          "dispatch": "3929db3542e75c9dae99f3ffc29b8b03ce11ff6f13707ac8dd04d6ac61acf416",
+          "instruction": "3929db3542e75c9dae99f3ffc29b8b03ce11ff6f13707ac8dd04d6ac61acf416",
+          "object": "__CPROVER_threads_exited",
+          "occurrence": 1,
+          "role": "read",
+          "source": "2900181de4153c4267eee8a23a5c008391998319e1fd51ae3973597c2b199068",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_threads_exited",
+      "role": "read",
+      "solver_address": "__CPROVER_threads_exited",
+      "type": [
+        "array",
+        {
+          "#index_type": [
+            "signedbv",
+            {
+              "#c_type": [
+                "signed_long_int",
+                {},
+                []
+              ],
+              "width": [
+                "64",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "7",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "size": [
+            "infinity",
+            {
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "10",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ],
+              "type": [
+                "signedbv",
+                {
+                  "#c_type": [
+                    "signed_long_int",
+                    {},
+                    []
+                  ],
+                  "width": [
+                    "64",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        },
+        [
+          [
+            "bool",
+            {},
+            []
+          ]
+        ]
+      ]
+    },
+    "f132159556d7d6dbf3e03fb0ec932f0fe9c0dbaacd6c76de34d3cf550f8f326a": {
+      "address_l1": "__CPROVER_max_malloc_size",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "21",
+          "pc": 11
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "21",
+          "pc": 11
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "97858727ca0409d0d3825288845bf26af022fbebe51f9a741a63d8e276ef054e",
+          "instruction": "97858727ca0409d0d3825288845bf26af022fbebe51f9a741a63d8e276ef054e",
+          "object": "__CPROVER_max_malloc_size",
+          "occurrence": 1,
+          "role": "write",
+          "source": "0e56affd3de6e4f5a7d847acdd096e8c26f2197b5bbabfcf18951d3b536873b8",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_max_malloc_size",
+      "role": "write",
+      "solver_address": "__CPROVER_max_malloc_size",
+      "type": [
+        "unsignedbv",
+        {
+          "#c_type": [
+            "unsigned_long_int",
+            {},
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "1",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#typedef": [
+            "__CPROVER_size_t",
+            {},
+            []
+          ],
+          "width": [
+            "64",
+            {},
+            []
+          ]
+        },
+        []
+      ]
+    },
+    "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b": {
+      "address_l1": "__CPROVER_threads_exited",
+      "event_guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "identity": {
+        "dispatch": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "7",
+          "pc": 21
+        },
+        "frames": [
+          {
+            "function": "",
+            "loops": {}
+          },
+          {
+            "caller": {
+              "function": "__CPROVER__start",
+              "pc": 59
+            },
+            "function": "__CPROVER_initialize",
+            "loops": {}
+          }
+        ],
+        "source": {
+          "column": "",
+          "file": "<built-in-additions>",
+          "function": "__CPROVER_initialize",
+          "kind": "ASSIGN",
+          "line": "7",
+          "pc": 21
+        },
+        "stage3": {
+          "calls": [
+            [
+              "",
+              null,
+              []
+            ],
+            [
+              "__CPROVER_initialize",
+              "4aaa6717d7e05c3dd4323d55f967e131df17571dfdee4b0f36a809904ebcc372",
+              []
+            ]
+          ],
+          "dispatch": "c8ec35a3d79f3b895e810dcab05070cd7e90801ad02abb5bb429acd5822749bb",
+          "instruction": "c8ec35a3d79f3b895e810dcab05070cd7e90801ad02abb5bb429acd5822749bb",
+          "object": "__CPROVER_threads_exited",
+          "occurrence": 1,
+          "role": "write",
+          "source": "0dde3440523fc588bcff834e1b59dbea5052d9ebf78a3a4dd089a14a00df5d89",
+          "thread": "entry"
+        },
+        "thread": 0
+      },
+      "object": "__CPROVER_threads_exited",
+      "role": "write",
+      "solver_address": "__CPROVER_threads_exited",
+      "type": [
+        "array",
+        {
+          "#index_type": [
+            "signedbv",
+            {
+              "#c_type": [
+                "signed_long_int",
+                {},
+                []
+              ],
+              "width": [
+                "64",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "#source_location": [
+            "",
+            {
+              "file": [
+                "<built-in-additions>",
+                {},
+                []
+              ],
+              "line": [
+                "7",
+                {},
+                []
+              ],
+              "working_directory": [
+                "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                {},
+                []
+              ]
+            },
+            []
+          ],
+          "size": [
+            "infinity",
+            {
+              "#source_location": [
+                "",
+                {
+                  "file": [
+                    "<built-in-additions>",
+                    {},
+                    []
+                  ],
+                  "line": [
+                    "10",
+                    {},
+                    []
+                  ],
+                  "working_directory": [
+                    "/root/Deagle_incremental_execution/runs/stage-05/release/batch_total/pair/source",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ],
+              "type": [
+                "signedbv",
+                {
+                  "#c_type": [
+                    "signed_long_int",
+                    {},
+                    []
+                  ],
+                  "width": [
+                    "64",
+                    {},
+                    []
+                  ]
+                },
+                []
+              ]
+            },
+            []
+          ]
+        },
+        [
+          [
+            "bool",
+            {},
+            []
+          ]
+        ]
+      ]
+    }
+  },
+  "guard_locations": {
+    "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 29
+    },
+    "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 17
+    },
+    "3d0fe646db3ecaa43e832278bc3dc025eb905db57c23ed3c2d5946e26ec2146f": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 16
+    },
+    "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 3
+    },
+    "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 33
+    },
+    "9baa82eb2ef1ef6590cf6ea31f1288904fa9f15365c21b5cc684f3840779b219": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 8
+    },
+    "9bd69df7f85d7bc0f5c9effb75496be2eae60b2db9a8ed2f051c18b7ec02e68c": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 15
+    },
+    "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 55
+    },
+    "b59a8c01cd050ea076f8e0eb10cd735671837472114511739a6714fa83c02710": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 34
+    },
+    "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 4
+    },
+    "c121273be00a061528d4057fa794a9909cffad050bf2b066b628954164d74f00": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 19
+    },
+    "d04c1d6151d788c9de5c4047fb7675ac379b5f853133d7671a0249b139bfc4b6": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 13
+    },
+    "e11d5fa135006fdf09c86eb14305f410f5a3f12c2a3318b8790c436306dc38ec": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 17
+    },
+    "e67de5d2ca25f8605af9790de2e3986777a3b8da6adce61ba4750042de50a6ce": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 14
+    },
+    "f132159556d7d6dbf3e03fb0ec932f0fe9c0dbaacd6c76de34d3cf550f8f326a": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 21
+    },
+    "f2e6a7b74d8b0d440e2aeabe9b9a848feb669deda5ac0ad3a478ac9d6cda407b": {
+      "expression": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "line": 7
+    }
+  },
+  "layout": {
+    "alignment_bytes": 1,
+    "char_bits": 8,
+    "char_unsigned": false,
+    "endian_code": 1,
+    "int_bits": 32,
+    "long_bits": 64,
+    "long_long_bits": 64,
+    "pointer_bits": 64,
+    "short_bits": 16,
+    "wchar_bits": 32
+  },
+  "schema": 1,
+  "threads": [
+    {
+      "child": 1,
+      "guard": [
+        "constant",
+        {
+          "type": [
+            "bool",
+            {},
+            []
+          ],
+          "value": [
+            "true",
+            {},
+            []
+          ]
+        },
+        []
+      ],
+      "parent": 0,
+      "site": {
+        "column": "",
+        "file": "harness.c",
+        "function": "main",
+        "kind": "FUNCTION_CALL",
+        "line": "18",
+        "pc": 1
+      }
+    }
+  ]
+}

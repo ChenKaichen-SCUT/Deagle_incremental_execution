@@ -22,7 +22,7 @@ def require(value, why):
     if not value:raise ValueError(why)
 
 
-def verify(name,out,*,batch_error_probe=False):
+def verify(name,out,*,batch_error_probe=False,session_script=None,binary=BINARY):
     case=CASES[name]
     out.mkdir(parents=True,exist_ok=False)
     if batch_error_probe:
@@ -39,7 +39,8 @@ def verify(name,out,*,batch_error_probe=False):
         (case / "candidate/program.c").write_bytes(old_program.replace(b"boxes * 2", b"boxes * 5"))
     _,gamma,phi=load_case(case)
     pair=out/"pair"
-    cmd=[sys.executable,"-B",str(ROOT/"scripts/stage4/session.py"),name,"--out",str(pair)]
+    entry = session_script or ROOT/"scripts/stage4/session.py"
+    cmd=[sys.executable,"-B",str(entry),name,"--out",str(pair)]
     if batch_error_probe:
         cmd.extend(["--case-dir", str(case)])
     subprocess.run(cmd,check=True)
@@ -59,7 +60,7 @@ def verify(name,out,*,batch_error_probe=False):
     full=out/"full"
     full.mkdir()
     for f in ("harness.c","program.c"):shutil.copyfile(pair/"candidate"/f,full/f)
-    argv=[str(BINARY),*gamma["source_argv"],*gamma["verification_output"],"harness.c"]
+    argv=[str(binary),*gamma["source_argv"],*gamma["verification_output"],"harness.c"]
     env=["--setenv=INCDEAGLE_OBSERVE_DIR="+str(full),"--setenv=INCDEAGLE_JSON_OUTPUT="+str(full/"result.json")]
     start=time.monotonic()
     with (full/"diagnostic.stdout").open("wb") as stdout,(full/"diagnostic.stderr").open("wb") as stderr:

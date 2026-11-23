@@ -1,0 +1,1 @@
+{   "clause_x": [ 1897, 1919 ],   "levels": [ 0, 75 ],   "origin": "self_cycle",   "site": "ClosureSolver::propagate/pre-analyze" }

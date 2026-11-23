@@ -53,7 +53,7 @@ def candidate_context(old, front, case, gamma, phi, lock, gcc, frontend_exit):
     return versions, diff
 
 
-def run_pair(case, out, *, checkpoint_bytes=None):
+def run_pair(case, out, *, checkpoint_bytes=None, theory=None):
     task, gamma, phi = load_case(case)
     if int(memory_max()) != gamma["limits"]["memory_bytes"]:
         raise RuntimeError("Wrong cgroup limit")
@@ -69,16 +69,19 @@ def run_pair(case, out, *, checkpoint_bytes=None):
     for d, version in ((old, "old_source"), (front,"candidate_source"), (cand,"candidate_source")):
         shutil.copyfile(case / task[version], d / "program.c")
     shutil.copyfile(old / "program.c", working / "program.c")
-    cmd = [str(BINARY), *gamma["source_argv"], *gamma["verification_output"], "harness.c"]
+    binary = theory.binary if theory else BINARY
+    cmd = [str(binary), *gamma["source_argv"], *gamma["verification_output"], "harness.c"]
     base_env = dict(os.environ, PATH=str(tools) + ":" + os.environ["PATH"], LC_ALL="C")
     for k in tuple(base_env):
         if k.startswith("INCDEAGLE_"):
             del base_env[k]
-    build_id = str(subprocess.check_output(["git","-C",str(BINARY.parents[2]),"rev-parse","HEAD"],text=True)).strip()
-    lock = {"development_sha256":file_sha(BINARY), "commit":build_id, "schema":1}
-    expected = read(ROOT / "configs/stage04.lock.json")
+    build_id = str(subprocess.check_output(["git","-C",str(binary.parents[2]),"rev-parse","HEAD"],text=True)).strip()
+    lock = {"development_sha256":file_sha(binary), "commit":build_id, "schema":1}
+    expected = read(theory.release_lock if theory else ROOT / "configs/stage04.lock.json")
     if build_id != expected["development_commit"] or lock["development_sha256"] != expected["development_sha256"]:
-        raise ValueError("Stage 4 executable or source commit differs from the release lock")
+        raise ValueError("Executable or source commit differs from the release lock")
+    if theory:
+        base_env.update(theory.prepare(out, lock))
     gcc_path = Path("/usr/bin/gcc").resolve()
     gcc = {"binary":str(gcc_path),"sha256":file_sha(gcc_path),
            "version":subprocess.check_output([gcc_path,"-dumpfullversion"],text=True).strip()}
@@ -109,6 +112,10 @@ def run_pair(case, out, *, checkpoint_bytes=None):
         old_result, old_target = classify((old/"result.json").read_bytes(),old_exit,phi)
         if old_result["classification"] != "VIOLATION":
             raise ValueError("Expected P0 target failure")
+        if theory:
+            old_manifest = manifest(old, case, gamma, phi, lock, gcc)
+            save(old / "manifest.json", old_manifest)
+            theory.capture(old, old_manifest)
         warmup_wall = time.monotonic()-begin
         update_start = time.monotonic()
         def remaining():

@@ -1,0 +1,462 @@
+diff --git a/minisat-2.2.1/minisat/core/Closure.cc b/minisat-2.2.1/minisat/core/Closure.cc
+index 6ce5769b..6bc87230 100644
+--- a/minisat-2.2.1/minisat/core/Closure.cc
++++ b/minisat-2.2.1/minisat/core/Closure.cc
+@@ -502,6 +502,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle\n";
+ 
++            conflict_origin = "self_cycle";
+             conflict_lv = edge.reason;
+             return true;
+         }
+@@ -511,6 +512,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle due to apo\n";
+ 
++            conflict_origin = "atomic_order_cycle";
+             conflict_lv = edge.reason;
+             return true;
+         }
+@@ -557,6 +559,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
+                     if(OC_VERBOSITY >= 1)
+                         std::cout << "race" << from << " " << to << " should be set false but already true\n";
+ 
++                    conflict_origin = "race";
+                     conflict_lv = conflict_reason;
+                     return true;
+                 }
+diff --git a/minisat-2.2.1/minisat/core/Closure.h b/minisat-2.2.1/minisat/core/Closure.h
+index 6e14bc58..384f6bfc 100644
+--- a/minisat-2.2.1/minisat/core/Closure.h
++++ b/minisat-2.2.1/minisat/core/Closure.h
+@@ -131,6 +131,7 @@ public:
+     void show_race();
+     void final_check();
+     literal_vector conflict_lv;
++    const char *conflict_origin = "unclassified";
+ 
+     int union_find_parent(int n);
+     bool union_check(int m, int n) { return union_find_parent(m) == union_find_parent(n); }
+diff --git a/minisat-2.2.1/minisat/core/ClosureSolver.cc b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+index 9e12d000..64a54ffc 100644
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.cc
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+@@ -340,6 +340,12 @@ static double luby(double y, int x){
+ 
+ lbool ClosureSolver::solve_()
+ {
++    if(before_first_search)
++    {
++        auto prepare = std::move(before_first_search);
++        before_first_search = nullptr;
++        prepare();
++    }
+     model.clear();
+     conflict.clear();
+     if (!ok) return l_False;
+@@ -480,6 +486,7 @@ CRef ClosureSolver::propagate()
+     if(confl == CRef_Undef)
+     {
+         bool cycle = false;
++        graph.conflict_origin = "unclassified";
+ 
+         for(auto& edge: edges_to_add)
+         {
+@@ -523,6 +530,8 @@ CRef ClosureSolver::propagate()
+             for (auto l: lv)
+                 minisat_lv.push(~l);
+ 
++            if(observe_order_conflict)
++                observe_order_conflict(graph.conflict_origin, minisat_lv);
+             confl = ca.alloc(minisat_lv, true);
+         }
+         else if(!literals_to_assign.empty())//add literals propagated by unit edge
+diff --git a/minisat-2.2.1/minisat/core/ClosureSolver.h b/minisat-2.2.1/minisat/core/ClosureSolver.h
+index f51dd3f3..90b8a98b 100644
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.h
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.h
+@@ -4,6 +4,7 @@
+ #define CLOSURESOLVER_H
+ 
+ #include <map>
++#include <functional>
+ 
+ #include "../../minisat/mtl/Queue.h"
+ #include "../../minisat/core/Solver.h"
+@@ -45,6 +46,10 @@ protected:
+     void analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel);
+ public:
+     ClosureSolver();
++    // The recorder sees the exact clause passed to the allocator, before analyze().
++    std::function<void(const char *, const vec<Lit> &)> observe_order_conflict;
++    std::function<void()> before_first_search;
++    int order_literal_level(Lit p) const { return level(var(p)); }
+     void init();
+     void save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order);
+     void set_graph();
+@@ -78,4 +83,4 @@ public:
+ 
+ #endif //CLOSURESOLVER_H
+ 
+-// __SZH_ADD_END__
+\ No newline at end of file
++// __SZH_ADD_END__
+diff --git a/src/goto-checker/Makefile b/src/goto-checker/Makefile
+index 487bc108..1609c70f 100644
+--- a/src/goto-checker/Makefile
++++ b/src/goto-checker/Makefile
+@@ -1,4 +1,5 @@
+ SRC = bmc_util.cpp \
++      theory_lemma.cpp \
+       violation_witness.cpp \
+       counterexample_beautification.cpp \
+       cover_goals_report_util.cpp \
+diff --git a/src/goto-checker/bmc_util.cpp b/src/goto-checker/bmc_util.cpp
+index 4abfb617..1b479760 100644
+--- a/src/goto-checker/bmc_util.cpp
++++ b/src/goto-checker/bmc_util.cpp
+@@ -10,6 +10,7 @@ Author: Daniel Kroening, Peter Schrammel
+ /// Bounded Model Checking Utilities
+ 
+ #include "bmc_util.h"
++#include "theory_lemma.h"
+ #include <goto-symex/stage3_observer.h>
+ 
+ #include <iostream>
+@@ -506,6 +507,7 @@ std::chrono::duration<double> prepare_property_decider(
+         oc_location_map.insert(std::make_pair(name, location));
+     }
+ 
++    prepare_order_lemma_cache(deagle_closure_solver, oc_edge_table, oc_guard_map, oc_location_map);
+     deagle_closure_solver.save_raw_graph(oc_edge_table, oc_guard_map, oc_location_map, equation.oc_result_order);
+   }
+   else if(equation.use_deagle_icd)
+diff --git a/src/goto-checker/goto_symex_property_decider.cpp b/src/goto-checker/goto_symex_property_decider.cpp
+index 7fc4fb40..f5fa7bea 100644
+--- a/src/goto-checker/goto_symex_property_decider.cpp
++++ b/src/goto-checker/goto_symex_property_decider.cpp
+@@ -22,6 +22,12 @@ goto_symex_property_decidert::goto_symex_property_decidert(
+   const namespacet &ns)
+   : options(options), ui_message_handler(ui_message_handler), equation(equation)
+ {
++  create_solver_for_unconverted_equation(ns);
++}
++
++void goto_symex_property_decidert::create_solver_for_unconverted_equation(const namespacet &ns)
++{
++  PRECONDITION(goal_map.empty());
+   solver_factoryt solvers(
+     options,
+     ns,
+diff --git a/src/goto-checker/goto_symex_property_decider.h b/src/goto-checker/goto_symex_property_decider.h
+index 3f2f9fbd..ddd6387d 100644
+--- a/src/goto-checker/goto_symex_property_decider.h
++++ b/src/goto-checker/goto_symex_property_decider.h
+@@ -29,6 +29,9 @@ public:
+     symex_target_equationt &equation,
+     const namespacet &ns);
+ 
++  /// Create a new decision procedure before adding any data or property clauses.
++  void create_solver_for_unconverted_equation(const namespacet &ns);
++
+   /// Get the conditions for the properties from the equation
+   /// and collect all 'instances' of the properties in the `goal_map`
+   void
+diff --git a/src/goto-checker/multi_path_symex_checker.cpp b/src/goto-checker/multi_path_symex_checker.cpp
+index a0f2ad5a..6f06ec6f 100644
+--- a/src/goto-checker/multi_path_symex_checker.cpp
++++ b/src/goto-checker/multi_path_symex_checker.cpp
+@@ -12,6 +12,8 @@ Author: Daniel Kroening, Peter Schrammel
+ #include "multi_path_symex_checker.h"
+ 
+ #include <chrono>
++#include <cstdlib>
++#include "theory_lemma.h"
+ 
+ #include <util/ui_message.h>
+ 
+@@ -61,6 +63,12 @@ operator()(propertiest &properties)
+     if(!has_properties_to_check(properties))
+       return result;
+ 
++    if(std::getenv("INCDEAGLE_S5_ROOT") && equation.use_deagle_closure)
++    {
++      property_decider.create_solver_for_unconverted_equation(ns);
++      auto &adapter=dynamic_cast<deagle_closure_solvert &>(property_decider.get_solver()->prop());
++      record_fresh_order_solver(adapter);
++    }
+     solver_runtime += prepare_property_decider(properties);
+ 
+     equation_generated = true;
+diff --git a/src/goto-checker/theory_lemma.cpp b/src/goto-checker/theory_lemma.cpp
+new file mode 100644
+index 00000000..84725f57
+--- /dev/null
++++ b/src/goto-checker/theory_lemma.cpp
+@@ -0,0 +1,207 @@
++#include "theory_lemma.h"
++#include <goto-symex/stage3_observer.h>
++#include <util/json.h>
++#include <chrono>
++#include <cstdlib>
++#include <fstream>
++#include <sstream>
++#include <stdexcept>
++#ifdef __linux__
++#include <sys/wait.h>
++#include <unistd.h>
++#endif
++
++namespace
++{
++using clock_type = std::chrono::steady_clock;
++json_numbert number(long long n) { return json_numbert(std::to_string(n)); }
++long long elapsed(clock_type::time_point t)
++{
++  return std::chrono::duration_cast<std::chrono::nanoseconds>(clock_type::now()-t).count();
++}
++void write_json(const std::string &path, const jsont &doc)
++{
++  std::ofstream out(path);
++  out << doc << '\n';
++  out.close();
++  if(!out) throw std::runtime_error("Cannot write theory evidence: "+path);
++}
++
++struct graph_atom
++{
++  Minisat::Lit literal;
++  bool eligible;
++};
++struct import_row
++{
++  std::size_t id;
++  bvt clause;
++};
++
++bool read_plan(const std::string &path, const std::vector<graph_atom> &slots,
++               std::vector<import_row> &plan)
++{
++  std::ifstream in(path);
++  std::string line;
++  if(!in || !std::getline(in,line) || line!="stage5-local-bindings-v1") return false;
++  while(std::getline(in,line))
++  {
++    std::istringstream row(line);
++    import_row entry;
++    std::size_t width;
++    if(!(row>>entry.id>>width) || width<1 || width>slots.size() || entry.id!=plan.size()) return false;
++    std::set<int> seen;
++    for(std::size_t i=0;i<width;++i)
++    {
++      std::size_t index; int negative;
++      if(!(row>>index>>negative) || index>=slots.size() || (negative!=0 && negative!=1)) return false;
++      const auto &atom=slots[index];
++      if(!atom.eligible || atom.literal.x<0) return false;
++      auto lit=negative?~atom.literal:atom.literal;
++      if(!seen.insert(Minisat::var(lit)).second) return false;
++      entry.clause.emplace_back(Minisat::var(lit),Minisat::sign(lit));
++    }
++    std::string extra;
++    if(row>>extra) return false;
++    plan.push_back(std::move(entry));
++  }
++  return in.eof();
++}
++
++bool run_audit(const char *script, const std::string &directory)
++{
++#ifdef __linux__
++  pid_t pid=fork();
++  if(pid==0)
++  {
++    execl("/usr/bin/python3","python3","-B",script,"bind",directory.c_str(),static_cast<char *>(nullptr));
++    std::_Exit(127);
++  }
++  int status=0;
++  return pid>0 && waitpid(pid,&status,0)==pid && WIFEXITED(status) && WEXITSTATUS(status)==0;
++#else
++  (void)script; (void)directory;
++  return false;
++#endif
++}
++
++void submit(deagle_closure_solvert &adapter, const std::vector<import_row> &plan,
++            const std::string &directory)
++{
++  auto start=clock_type::now();
++  auto &solver=adapter.order_solver();
++  json_arrayt rows;
++  for(const auto &entry:plan)
++  {
++    json_objectt r;
++    r["id"]=number(entry.id);
++    r["clauses_before"]=number(solver.nClauses());
++    r["assignments_before"]=number(solver.nAssigns());
++    int before=solver.nClauses(), assigned=solver.nAssigns();
++    bool okay=solver.okay();
++    json_arrayt bound;
++    for(const auto literal:entry.clause)
++      bound.push_back(number(Minisat::mkLit(literal.var_no(),literal.sign()).x));
++    r["candidate_literals"]=std::move(bound);
++    if(okay) adapter.lcnf(entry.clause);
++    std::string effect=!okay?"already_inconsistent":
++      !solver.okay()?"contradiction":solver.nClauses()>before?"attached":
++      solver.nAssigns()>assigned?"enqueued":"already_implied_at_root";
++    r["effect"]=json_stringt(effect);
++    r["clauses_after"]=number(solver.nClauses());
++    r["assignments_after"]=number(solver.nAssigns());
++    rows.push_back(std::move(r));
++  }
++  json_objectt output;
++  output["site"]=json_stringt("ClosureSolver::solve_ before first search");
++  output["api"]=json_stringt("satcheck_minisat2_baset::lcnf / Solver::addClause_");
++  output["rows"]=std::move(rows); output["import_ns"]=number(elapsed(start));
++  write_json(directory+"/native-import.json",output);
++}
++}
++
++void record_fresh_order_solver(deagle_closure_solvert &adapter)
++{
++  auto &s=adapter.order_solver();
++  json_objectt row;
++  row["site"]=json_stringt("new factory instance after generate_equation, before CNF");
++  row["clauses"]=number(s.nClauses()); row["learnts"]=number(s.nLearnts());
++  row["assignments"]=number(s.nAssigns()); row["variables"]=number(s.nVars());
++  row["solves"]=number(s.solves);
++#ifdef __linux__
++  row["pid"]=number(getpid());
++#endif
++  write_json(stage3::observation_directory()+"/fresh-solver.json",row);
++}
++
++void prepare_order_lemma_cache(
++  deagle_closure_solvert &adapter, const oc_edge_tablet &edges,
++  const oc_guard_mapt &guards, const oc_location_mapt &locations)
++{
++  const char *root=std::getenv("INCDEAGLE_S5_ROOT");
++  const char *helper=std::getenv("INCDEAGLE_S5_HELPER");
++  if(!root || !helper) return;
++  auto start=clock_type::now();
++  const auto dir=stage3::declare_theory_snapshot();
++  bool old=dir==std::string(root)+"/old";
++  if(!old && dir!=std::string(root)+"/candidate") return;
++  json_objectt graph, addresses;
++  json_arrayt relations, conditions;
++  std::vector<graph_atom> slots;
++  for(const auto &edge:edges)
++  {
++    const auto &a=edge.first.first, &b=edge.first.second;
++    json_objectt row;
++    row["from"]=json_stringt(a); row["to"]=json_stringt(b);
++    row["kind"]=json_stringt(edge.second.second); row["x"]=number(edge.second.first.x);
++    row["slot"]=number(slots.size());
++    slots.push_back({edge.second.first,edge.second.second=="rf"});
++    addresses[a]=json_stringt(get_address(a)); addresses[b]=json_stringt(get_address(b));
++    relations.push_back(std::move(row));
++  }
++  for(const auto &g:guards)
++  {
++    json_objectt row;
++    row["event"]=json_stringt(g.first); row["x"]=number(g.second.x);
++    row["line"]=number(locations.at(g.first)); row["slot"]=number(slots.size());
++    slots.push_back({g.second,true}); addresses[g.first]=json_stringt(get_address(g.first));
++    conditions.push_back(std::move(row));
++  }
++  graph["edges"]=std::move(relations); graph["guards"]=std::move(conditions);
++  graph["addresses"]=std::move(addresses);
++  graph["site"]=json_stringt("bmc_util before save_raw_graph/init");
++  graph["snapshot_ns"]=number(elapsed(start));
++  write_json(dir+"/native-bindings.json",graph);
++  auto &solver=adapter.order_solver();
++  if(old)
++  {
++    const auto path=dir+"/native-conflicts.jsonl";
++    std::ofstream(path,std::ios::trunc).close();
++    solver.observe_order_conflict=[path,&solver](const char *origin,const Minisat::vec<Minisat::Lit> &clause) {
++      json_objectt result; json_arrayt lits, levels;
++      for(int i=0;i<clause.size();++i)
++      {
++        lits.push_back(number(clause[i].x));
++        levels.push_back(number(clause[i].x<0?-1:solver.order_literal_level(clause[i])));
++      }
++      result["clause_x"]=std::move(lits); result["levels"]=std::move(levels);
++      result["origin"]=json_stringt(origin);
++      result["site"]=json_stringt("ClosureSolver::propagate/pre-analyze");
++      // jsont pretty prints by default. Each record is a single compact JSON line.
++      std::ostringstream record; record<<result;
++      std::string compact=record.str();
++      for(auto &ch:compact) if(ch=='\n' || ch=='\r') ch=' ';
++      std::ofstream stream(path,std::ios::app); stream<<compact<<'\n'; stream.close();
++      if(!stream) throw std::runtime_error("Cannot retain original OC conflict");
++    };
++    return;
++  }
++  std::vector<import_row> plan;
++  bool valid=run_audit(helper,dir) && read_plan(dir+"/local-bindings.txt",slots,plan);
++  json_objectt decision;
++  decision["valid_plan"]=valid?jsont(json_truet()):jsont(json_falset());
++  decision["planned"]=number(valid?plan.size():0);
++  write_json(dir+"/native-plan.json",decision);
++  if(!valid) plan.clear();
++  solver.before_first_search=[plan,dir,&adapter]() { submit(adapter,plan,dir); };
++}
+diff --git a/src/goto-checker/theory_lemma.h b/src/goto-checker/theory_lemma.h
+new file mode 100644
+index 00000000..13aa8dbc
+--- /dev/null
++++ b/src/goto-checker/theory_lemma.h
+@@ -0,0 +1,8 @@
++#ifndef CPROVER_GOTO_CHECKER_THEORY_LEMMA_H
++#define CPROVER_GOTO_CHECKER_THEORY_LEMMA_H
++#include <solvers/sat/satcheck_minisat2.h>
++
++void record_fresh_order_solver(deagle_closure_solvert &);
++void prepare_order_lemma_cache(
++  deagle_closure_solvert &, const oc_edge_tablet &, const oc_guard_mapt &, const oc_location_mapt &);
++#endif
+diff --git a/src/goto-symex/stage3_observer.cpp b/src/goto-symex/stage3_observer.cpp
+index e558b33c..2c732e3c 100644
+--- a/src/goto-symex/stage3_observer.cpp
++++ b/src/goto-symex/stage3_observer.cpp
+@@ -314,6 +314,14 @@ void equation(const char *name, const symex_target_equationt &model)
+   timing("equation_export", before, clockt::now());
+ }
+ 
++std::string declare_theory_snapshot()
++{
++  save("visits",visits);
++  return directory;
++}
++
++const std::string &observation_directory() { return directory; }
++
+ void finish(int exit_code)
+ {
+   save("visits", visits);
+diff --git a/src/goto-symex/stage3_observer.h b/src/goto-symex/stage3_observer.h
+index 841077d2..e951fe37 100644
+--- a/src/goto-symex/stage3_observer.h
++++ b/src/goto-symex/stage3_observer.h
+@@ -20,6 +20,8 @@ void goto_model(const goto_functionst &functions);
+ std::size_t visit(const goto_symex_statet &state);
+ void name_event(const SSA_stept &step, const std::string &name);
+ void equation(const char *name, const symex_target_equationt &model);
++std::string declare_theory_snapshot();
++const std::string &observation_directory();
+ void finish(int exit_code);
+ void gate(const char *state, const char *command);
+ }
+diff --git a/src/solvers/sat/satcheck_minisat2.h b/src/solvers/sat/satcheck_minisat2.h
+index 8b8aa2f4..608d0b31 100644
+--- a/src/solvers/sat/satcheck_minisat2.h
++++ b/src/solvers/sat/satcheck_minisat2.h
+@@ -110,6 +110,7 @@ class deagle_closure_solvert:
+ {
+ public:
+   using satcheck_minisat2_baset<Minisat::ClosureSolver>::satcheck_minisat2_baset;
++  Minisat::ClosureSolver &order_solver() { return *solver; }
+   const std::string solver_text() override;
+   void save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order);
+ };
