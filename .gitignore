@@ -1,0 +1,10 @@
+apikey.txt
+.env
+.env.*
+.venv*/
+__pycache__/
+*.py[cod]
+/third_party/
+/runs/
+/build/
+/.cache/
