@@ -1,0 +1,8 @@
+--- a/program.c
++++ b/program.c
+@@ -1,4 +1,4 @@
+ static void record_batch(int boxes)
+ {
+-    shipped_units += boxes * 2;
++    shipped_units += boxes * 3;
+ }

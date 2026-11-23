@@ -1,0 +1,49 @@
+{
+  "entry": "main",
+  "target_property": "main.assertion.1",
+  "harness": "harness.c",
+  "harness_sha256": "d4c2f4480fcec4c441123be51c7c3e81ee4407f01b87b01fb409230c7d654f1b",
+  "semantics": {
+    "memory_model": "sc",
+    "backend": "deagle-closure",
+    "target_bits": 64,
+    "unwind": 4,
+    "check_unwinding": true,
+    "compiler_flags": [],
+    "preprocessor": "GCC system preprocessor as invoked by the locked Deagle C front end",
+    "library_model": "pthread and C library built into the pinned Deagle binary",
+    "worker_threads": 2,
+    "thread_bound": "fixed by the protected harness: one create per worker, no spawn loop",
+    "assumptions": [
+      "Two workers each call record_one exactly once; either ordering is allowed."
+    ],
+    "initial_state": "static C initialization; main is the sole entry"
+  },
+  "deagle_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+  "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "source_argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--64",
+    "--unwind",
+    "4",
+    "--unwinding-assertions"
+  ],
+  "translation_unit": "harness.c",
+  "included_source": "program.c",
+  "platform": "Ubuntu 22.04 amd64 LP64, GCC 11.4, libc6-dev headers",
+  "frontend_mode": [
+    "--show-goto-functions"
+  ],
+  "verification_output": [
+    "--trace",
+    "--json-ui"
+  ],
+  "limits": {
+    "timeout_seconds": 300,
+    "memory_bytes": 21474836480
+  }
+}

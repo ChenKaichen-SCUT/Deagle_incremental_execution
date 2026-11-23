@@ -1,0 +1,12 @@
+{
+  "id": "main.assertion.1",
+  "description": "Two boxes of three units must contribute six units after the worker joins.",
+  "assertion": "assert(shipped_units == 6);",
+  "source": {
+    "file": "harness.c",
+    "line": 21,
+    "function": "main"
+  },
+  "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+  "assertion_sha256": "c691975f24ac5192599c2b687bfb1d5010d50f9c41a235f46d8f4f5bf5b37c23"
+}

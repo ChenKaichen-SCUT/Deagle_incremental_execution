@@ -1,0 +1,123 @@
+{
+  "started_utc": "2026-11-23T09:35:01.486138+00:00",
+  "directory": "runs/stage-02/replay-u7_ev1iz",
+  "cases": {
+    "batch_total": {
+      "old": {
+        "classification": "VIOLATION",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "verify_exit": 10,
+        "run_json_sha256": "85bab2c504fb177a0e600a7c78a037063e99d10f51b86499468f351054cd2545",
+        "wall_seconds": {
+          "syntax": 0.0165,
+          "frontend": 0.0625,
+          "verify": 0.0696
+        },
+        "trace_steps": 62,
+        "thread_ids": [
+          0,
+          1
+        ],
+        "failure_source": {
+          "file": "harness.c",
+          "line": "21",
+          "function": "main"
+        }
+      },
+      "candidate": {
+        "classification": "NO_VIOLATION_WITHIN_BOUND",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "verify_exit": 0,
+        "run_json_sha256": "6e8df49e9783754e1a910a90f0b4469f63a4b5f04d105572d00a86c019ce41db",
+        "wall_seconds": {
+          "syntax": 0.0161,
+          "frontend": 0.0637,
+          "verify": 0.0681
+        }
+      }
+    },
+    "split_counter": {
+      "old": {
+        "classification": "VIOLATION",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "verify_exit": 10,
+        "run_json_sha256": "61963399e12752c4d250018a326b182c54557b2191f280e8c04637d5edaa3d8e",
+        "wall_seconds": {
+          "syntax": 0.0162,
+          "frontend": 0.0657,
+          "verify": 0.0974
+        },
+        "trace_steps": 166,
+        "thread_ids": [
+          0,
+          1,
+          2
+        ],
+        "failure_source": {
+          "file": "harness.c",
+          "line": "31",
+          "function": "main"
+        }
+      },
+      "candidate": {
+        "classification": "NO_VIOLATION_WITHIN_BOUND",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "verify_exit": 0,
+        "run_json_sha256": "fe2e43c24aa54c56c18ad9d290bc0bb52e5a697c1ae8b46d61a159cdea092a9e",
+        "wall_seconds": {
+          "syntax": 0.0169,
+          "frontend": 0.0647,
+          "verify": 0.0804
+        }
+      }
+    },
+    "threshold_guard": {
+      "old": {
+        "classification": "VIOLATION",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "verify_exit": 10,
+        "run_json_sha256": "3bdb119e5c0738124f45fed64cf6008f9d2f99ef7d7716ed5e56e0da1fba4aa9",
+        "wall_seconds": {
+          "syntax": 0.0162,
+          "frontend": 0.0641,
+          "verify": 0.0728
+        },
+        "trace_steps": 74,
+        "thread_ids": [
+          0,
+          1
+        ],
+        "failure_source": {
+          "file": "harness.c",
+          "line": "24",
+          "function": "main"
+        }
+      },
+      "candidate": {
+        "classification": "NO_VIOLATION_WITHIN_BOUND",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "verify_exit": 0,
+        "run_json_sha256": "35019c023bf1fa371c02d82181193d4559791308e7ac1d4aa8647d12019ce17c",
+        "wall_seconds": {
+          "syntax": 0.0164,
+          "frontend": 0.0644,
+          "verify": 0.0733
+        }
+      }
+    }
+  },
+  "measured_cgroup_memory_max_bytes": 21474836480,
+  "elapsed_seconds": 1.1895
+}

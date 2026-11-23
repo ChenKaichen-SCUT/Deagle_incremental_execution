@@ -2,7 +2,7 @@
 
 本项目研究并发 C 程序经过一次修复后，增量构建事件顺序模型、复用有效理论约束，与独立全量 Deagle 验证同一程序和性质的结果。实施范围和每一阶段的验收条件见[执行指南](EXECUTION_GUIDE.md)。
 
-阶段 1 已完成。两份 Deagle 构建通过 pthreads 断言诊断，DAMER 跑通原生版本对，mini + DeepSeek 完成隔离文件修改和工具结果回传。状态为 `READY_FOR_REVIEW`，阶段 2 等待用户确认。[阶段 1 报告和复现命令](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md) · [项目状态](project_state.json)
+阶段 2 已完成，状态为 `READY_FOR_REVIEW`。三个 pthreads 病例均已冻结原版、候选、补丁、原断言、验证配置和反例。两份人工候选及一份 DeepSeek 候选在相同配置下均有界通过。可用 `python -B scripts/stage2/freeze.py` 离线复核冻结文件。阶段 3 等待用户确认。[阶段 2 报告和复现命令](reports/stage-02.md) · [阶段 1 工具报告](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md) · [项目状态](project_state.json)
 
 ## 复查环境
 

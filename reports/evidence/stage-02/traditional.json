@@ -1,0 +1,87 @@
+{
+  "case": "split_counter",
+  "snapshot": "old",
+  "formal_input": {
+    "harness_sha256": "d4c2f4480fcec4c441123be51c7c3e81ee4407f01b87b01fb409230c7d654f1b",
+    "program_sha256": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e"
+  },
+  "conrepair": {
+    "repository": "https://github.com/thorstent/ConRepair",
+    "commit": "55e8e8ba65a98af7992611f03bc45b85b239e0cd",
+    "archive_sha256": "3954c990add3cce49a40d1db5aaf3004c5d9c5fa8645bf50389abfee69bc7329",
+    "distribution": "Author's CAV 2014 JAR, 47,917,114 bytes. Prebuilt release tested; no source rebuild.",
+    "jar_sha256": "1ef427bb84b00705035cb3900e9bed168c716d05aa9cc9c3d4784e2d2d7c8821",
+    "language_and_defect": "Restricted C; synchronization/atomic sections and instruction ordering for concurrent assertions.",
+    "input": "Its own C dialect identifies thread functions by name and uses lock(int)/unlock(int). The implementation runs its bundled CBMC/Z3 and consumes its textual output. No documented input option for a Deagle JSON trace.",
+    "runs": [
+      {
+        "runtime": "OpenJDK 11.0.33.1",
+        "args": [
+          "--help"
+        ],
+        "exit": 0
+      },
+      {
+        "runtime": "OpenJDK 11.0.33.1",
+        "args": [
+          "-t",
+          "1",
+          "harness.c"
+        ],
+        "exit": 1,
+        "reason": "Scala NumberFormatException: Not a version: 11"
+      },
+      {
+        "runtime": "OpenJDK 1.8.0_514",
+        "args": [
+          "-t",
+          "1",
+          "harness.c"
+        ],
+        "exit": 1,
+        "reason": "CPAchecker parser stops at pthread_mutex_t, line 5."
+      },
+      {
+        "runtime": "OpenJDK 1.8.0_514",
+        "preprocessing": "gcc -std=gnu11 -pthread -E -P harness.c > translation.c",
+        "args": [
+          "-t",
+          "1",
+          "translation.c"
+        ],
+        "exit": 1,
+        "reason": "CPAchecker parser rejects CASTExpressionList at the glibc assert expansion in the preprocessed translation unit."
+      }
+    ],
+    "candidate_produced": false,
+    "adaptation": "Would require a separate front end or validated translation of the thread lifecycle, mutex, joins, target assertion and source locations, then mapping its changes back to program.c.",
+    "source_checks": {
+      "implementation/ConRepair/src/main/scala/at/ac/ist/con_repair/parsing/Parsing.scala": "f85b3c073a63cf8f5d43bd852634c385d4a1429dc679601a0977162f2b172e07",
+      "implementation/ConRepair/src/main/scala/at/ac/ist/con_repair/model_checker/cbmc/InvokeCBMC.scala": "45ef89dda1b73ca94327da88b2fecbe480e7f56f03abbe019f77bc2a2a4e247f"
+    }
+  },
+  "liss": {
+    "repository": "https://github.com/thorstent/Liss",
+    "commit": "ce998b2d0650ec8250ef83a7a9d9082bc7a925fe",
+    "source_available": true,
+    "binary": "No executable in the inspected authors' tree or published GitHub releases. Local build did not produce liss.",
+    "submodules": {
+      "Limi": "d8f8fcfa16db34c5768e48f86bc9b992c232916e",
+      "z3": "0997d0d2b5aade097769be2a5868f9a54be76481"
+    },
+    "language_and_defect": "Restricted C; synthesizes locks by comparing preemptive and non-preemptive trace languages.",
+    "input": "Custom langinc.h primitives and simultaneous thread starts; pthread synchronization is ignored. The program internally generates automaton traces.",
+    "build": "After fetching both pinned sources from codeload and installing Boost 1.74, module-mode configure found Boost but could not find LLVM (3.6 requested). Jammy lacked libclang-3.6-dev and llvm-3.6-dev. The pinned Z3 also failed to compile with the host GCC 11 standard library.",
+    "executed_on_case": false,
+    "adaptation": "A period-appropriate LLVM/Clang/Z3 toolchain would address the build only. A language-model translation and property correspondence are also needed for this case."
+  },
+  "background_only": {
+    "CFix": "https://www.usenix.org/conference/osdi12/technical-sessions/presentation/jin"
+  },
+  "full_transcripts": "validation-logs.tar.gz",
+  "member_prefixes": [
+    "traditional/",
+    "conrepair/",
+    "controller/classic-source-inspection.txt"
+  ]
+}

@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "case": "threshold_guard",
+  "property": "main.assertion.1",
+  "assertion_sha256": "c7e16aee6b2d65de45e994e0cfad248e51430a0e5de32685c68a0f560780ac01",
+  "method": "manual",
+  "change_type": "guard",
+  "only_changed_file": "program.c",
+  "patch_replays_byte_for_byte": true,
+  "source_review": {
+    "method": "manual",
+    "candidate_sha256": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+    "decision": "accepted_for_bounded_verification",
+    "inspection": "Only the upper comparison changes from < to <=. The positive lower bound and both accumulators remain; the harness exercises below, at and above the threshold."
+  },
+  "results": {
+    "old": "VIOLATION",
+    "candidate": "NO_VIOLATION_WITHIN_BOUND"
+  },
+  "files_sha256": {
+    "candidate/program.c": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+    "evidence/candidate/frontend.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/frontend.stdout.gz": "bcc6baaf557ab057e08b5a262b0322edb1f6b386881b695b71680b62171df97d",
+    "evidence/candidate/result.json.gz": "f6336cb8e4476fb0efa13bc6c0bd73d94c864ca6e0722b6088fd6f31dee9f262",
+    "evidence/candidate/run.json": "0f7efff819a18647260586f1e0460595b311b61b2a8f4315a0b44ac3d6ea2d0f",
+    "evidence/candidate/syntax.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/syntax.stdout.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/verify.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/verify.stdout.gz": "6bb1082cca57642031829ede003f711614409d5f5f4989c5304b04326a233212",
+    "evidence/old/cex0.json": "8597b2dd0c0e343b8cf2aef2b8788f26adea7ad8561d25ccfafaed37be3a8a54",
+    "evidence/old/frontend.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/frontend.stdout.gz": "c27138bc409dd28f1a7e871c69b4d7a9cb4fa99d43d53bd06ca721f10c4ba7f6",
+    "evidence/old/result.json.gz": "77d3d96efb2de9056afb53d9fafecb53655be5588d5b39f23e60568fa7858e1a",
+    "evidence/old/run.json": "aeacd57a1cc11691c3dcffac60e3861c96bfb10d0faa5f1cec7fe22326d7c948",
+    "evidence/old/syntax.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/syntax.stdout.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/verify.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/verify.stdout.gz": "beed2a64ff7da15e2208bc20cf52e928bc06d8cd4e0b5c27c6c4a801a1dcdb3d",
+    "gamma.json": "54079a57472e939f9499b56f279bc0ba94370085b6d33b82b03a8a4554113560",
+    "harness.c": "a451265be9584712bcf50d00d5c2150e7f7982110d75b774dac43437d721e5ea",
+    "old/program.c": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+    "phi.json": "7f1d4f10c59309179a1e1cbad357f08f1c3e1f40c42a015a1afa85d907c3ad46",
+    "task.yaml": "a874c1c418a6674ccb2c866af190347068f40fe8586cb63aeb3f35c5a78214ef",
+    "patch.diff": "2bb442d3579b1927557187e074dc0ab8f01a4b19dce427792d7fc83dbb2ca3dd"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "case": "split_counter",
+  "property": "main.assertion.1",
+  "assertion_sha256": "f55ecef0df25de40c337a8173930678c07d79c2a5f393cd5877b146b4aa69f89",
+  "method": "mini_deepseek",
+  "change_type": "synchronization",
+  "only_changed_file": "program.c",
+  "patch_replays_byte_for_byte": true,
+  "source_review": {
+    "method": "mini_deepseek",
+    "candidate_sha256": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+    "decision": "accepted_for_bounded_verification",
+    "model_record": "reports/evidence/stage-02/mini-20261123T092658163058Z.json",
+    "inspection": "The submitted routine increments the current shared count by one under a single acquisition of the existing mutex. Both protected workers still call the routine once. There is no constant final total, added assumption, early exit or change to either join or the assertion."
+  },
+  "results": {
+    "old": "VIOLATION",
+    "candidate": "NO_VIOLATION_WITHIN_BOUND"
+  },
+  "model_record_sha256": "c248577daa6325593584353e60c2c61cb3e0fe210d89702a8534996d7821b499",
+  "files_sha256": {
+    "candidate/program.c": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+    "evidence/candidate/frontend.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/frontend.stdout.gz": "1c191f7456221762eb9941e6dbba463d5be2657eb575f2ea7e2a98cc6d3d38b7",
+    "evidence/candidate/result.json.gz": "5364b9ff8ac175b83adab78c6c04693719fb76cde1bc325d76c6711c529625e6",
+    "evidence/candidate/run.json": "310ab10443e51c84d372aed08bf99ae0be8f0113b583827b58cfb972fa5b2e4a",
+    "evidence/candidate/syntax.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/syntax.stdout.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/verify.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/verify.stdout.gz": "71961a8a910b7b4ff26151b04db7f236039fd8565760764ea7f7c980a037d4f9",
+    "evidence/old/cex0.json": "94af48f287d4badca8f154fff78decb250367f449c16dd4ac3b78962f1a8dd92",
+    "evidence/old/frontend.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/frontend.stdout.gz": "9192205f2ab19b6e985d9afa7b05bcf184a989d5eeb81799e5590e15f47d0052",
+    "evidence/old/result.json.gz": "1a4e4133a51f03c3f44572974391e8890f0570f7449f5aa5acf3d14ab10b1cb6",
+    "evidence/old/run.json": "8f1c60102475671b98959ca5fbecedb570be3bba7519981f64cd7480eeb00115",
+    "evidence/old/syntax.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/syntax.stdout.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/verify.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/verify.stdout.gz": "3c0e9aedb6e2dadd476e873c11d77de7e0aa63d96da230581cd933dbaaa33706",
+    "gamma.json": "1d346cde0da4b29ab7ccdda4283f7197c555bdf1f57e6cb74eeb9ea7e98f6927",
+    "harness.c": "d4c2f4480fcec4c441123be51c7c3e81ee4407f01b87b01fb409230c7d654f1b",
+    "old/program.c": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+    "phi.json": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "task.yaml": "82c93e495341826890b3a757754e6a76e59d09507237018d784720d7bb896326",
+    "patch.diff": "91e95f6176d5426dbbfea57b29070d12a5b5866e00bfcebf7be04e1a0aec7050"
+  }
+}

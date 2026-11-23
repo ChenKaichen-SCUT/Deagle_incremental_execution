@@ -1,0 +1,41 @@
+schema_version: 1
+case_id: split_counter
+source_origin: Original synthetic pthreads diagnostic written for stage 2, with fixed input in harness.c.
+old_source: old/program.c
+candidate_source: candidate/program.c
+entry: main
+property:
+  file: phi.json
+  id: main.assertion.1
+  description: Each worker contributes one unit, and the two joins must leave a total of two.
+  protected_files:
+  - harness.c
+  - phi.json
+  - gamma.json
+  original_assertion_fingerprint: f55ecef0df25de40c337a8173930678c07d79c2a5f393cd5877b146b4aa69f89
+semantics:
+  memory_model: sc
+  backend: deagle-closure
+  target_bits: 64
+  unwind: 4
+  check_unwinding: true
+  compiler_flags: []
+  preprocessor: GCC system preprocessor as invoked by the locked Deagle C front end
+  library_model: pthread and C library built into the pinned Deagle binary
+  worker_threads: 2
+  thread_bound: 'fixed by the protected harness: one create per worker, no spawn loop'
+  assumptions:
+  - Two workers each call record_one exactly once; either ordering is allowed.
+  initial_state: static C initialization; main is the sole entry
+verification_config: gamma.json
+limits:
+  timeout_seconds: 300
+  memory_bytes: 21474836480
+repair:
+  method: mini_deepseek
+  change_type: synchronization
+  intent: Keep both workers and one contribution per call. Preserve the existing shared counter and its
+    mutex.
+  allowed_files:
+  - program.c
+  final_candidates: 1

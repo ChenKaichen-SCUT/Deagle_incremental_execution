@@ -10,4 +10,5 @@
 *.lock text eol=lf
 *.patch text eol=lf -whitespace
 *.bundle binary
-*.tar.gz binary
+*.gz binary
+*.diff text eol=lf -whitespace

@@ -1,0 +1,40 @@
+schema_version: 1
+case_id: batch_total
+source_origin: Original synthetic pthreads diagnostic written for stage 2, with fixed input in harness.c.
+old_source: old/program.c
+candidate_source: candidate/program.c
+entry: main
+property:
+  file: phi.json
+  id: main.assertion.1
+  description: Two boxes of three units must contribute six units after the worker joins.
+  protected_files:
+  - harness.c
+  - phi.json
+  - gamma.json
+  original_assertion_fingerprint: c691975f24ac5192599c2b687bfb1d5010d50f9c41a235f46d8f4f5bf5b37c23
+semantics:
+  memory_model: sc
+  backend: deagle-closure
+  target_bits: 64
+  unwind: 4
+  check_unwinding: true
+  compiler_flags: []
+  preprocessor: GCC system preprocessor as invoked by the locked Deagle C front end
+  library_model: pthread and C library built into the pinned Deagle binary
+  worker_threads: 1
+  thread_bound: 'fixed by the protected harness: one create per worker, no spawn loop'
+  assumptions:
+  - One batch with two boxes; three units per box.
+  initial_state: static C initialization; main is the sole entry
+verification_config: gamma.json
+limits:
+  timeout_seconds: 300
+  memory_bytes: 21474836480
+repair:
+  method: manual
+  change_type: constant
+  intent: Restore the per-box conversion factor; preserve accumulation and the box argument.
+  allowed_files:
+  - program.c
+  final_candidates: 1

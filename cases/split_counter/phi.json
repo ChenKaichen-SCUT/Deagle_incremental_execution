@@ -1,0 +1,12 @@
+{
+  "id": "main.assertion.1",
+  "description": "Each worker contributes one unit, and the two joins must leave a total of two.",
+  "assertion": "assert(counter == 2);",
+  "source": {
+    "file": "harness.c",
+    "line": 31,
+    "function": "main"
+  },
+  "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+  "assertion_sha256": "f55ecef0df25de40c337a8173930678c07d79c2a5f393cd5877b146b4aa69f89"
+}

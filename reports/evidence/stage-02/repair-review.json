@@ -1,0 +1,21 @@
+{
+  "batch_total": {
+    "method": "manual",
+    "candidate_sha256": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "decision": "accepted_for_bounded_verification",
+    "inspection": "Only the units-per-box multiplier changes from two to three; the routine still adds boxes times that factor to the previous total. The worker, input argument, join and assertion are protected."
+  },
+  "threshold_guard": {
+    "method": "manual",
+    "candidate_sha256": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+    "decision": "accepted_for_bounded_verification",
+    "inspection": "Only the upper comparison changes from < to <=. The positive lower bound and both accumulators remain; the harness exercises below, at and above the threshold."
+  },
+  "split_counter": {
+    "method": "mini_deepseek",
+    "candidate_sha256": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+    "decision": "accepted_for_bounded_verification",
+    "model_record": "reports/evidence/stage-02/mini-20261123T092658163058Z.json",
+    "inspection": "The submitted routine increments the current shared count by one under a single acquisition of the existing mutex. Both protected workers still call the routine once. There is no constant final total, added assumption, early exit or change to either join or the assertion."
+  }
+}

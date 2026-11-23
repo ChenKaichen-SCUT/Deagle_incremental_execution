@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "case": "batch_total",
+  "property": "main.assertion.1",
+  "assertion_sha256": "c691975f24ac5192599c2b687bfb1d5010d50f9c41a235f46d8f4f5bf5b37c23",
+  "method": "manual",
+  "change_type": "constant",
+  "only_changed_file": "program.c",
+  "patch_replays_byte_for_byte": true,
+  "source_review": {
+    "method": "manual",
+    "candidate_sha256": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "decision": "accepted_for_bounded_verification",
+    "inspection": "Only the units-per-box multiplier changes from two to three; the routine still adds boxes times that factor to the previous total. The worker, input argument, join and assertion are protected."
+  },
+  "results": {
+    "old": "VIOLATION",
+    "candidate": "NO_VIOLATION_WITHIN_BOUND"
+  },
+  "files_sha256": {
+    "candidate/program.c": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "evidence/candidate/frontend.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/frontend.stdout.gz": "56b09bc6dda8334121614eb5dfe2baf7c826519a75e8e19c2ea25d5b61a54371",
+    "evidence/candidate/result.json.gz": "d7133547196637d3a79f160f31dee31288f3bf02c9e063929fa9ed63a4d01957",
+    "evidence/candidate/run.json": "b4ea5d7dbe81247c5efbd3da926a5e9aecbc45040532376eec909867a2ee5c19",
+    "evidence/candidate/syntax.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/syntax.stdout.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/verify.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/candidate/verify.stdout.gz": "154205f952ab916479959be6a1381493ac87bc880fb5f1465d99c4ebf3eb7aeb",
+    "evidence/old/cex0.json": "6bcedaac0958f29b4e397e5f98fecc755a103390a6560aaf2f58706af0f3f670",
+    "evidence/old/frontend.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/frontend.stdout.gz": "9ddeb175f78d7b4c2f6bf25b80c9b375e337bd86051da6a7f6a7da4e6b4f33a8",
+    "evidence/old/result.json.gz": "b5076425bcc9e2f25b98c5ba415eab179704123188fc98817fa69191a4d627f1",
+    "evidence/old/run.json": "f2025cdf19b95df9964f8cc7a57014da0d2fd56decb6b950cc940d05b32cb82f",
+    "evidence/old/syntax.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/syntax.stdout.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/verify.stderr.gz": "9ceffb7310338057cfe71a4ae1e2c98d2c485d81cdef906532a801f457a38d64",
+    "evidence/old/verify.stdout.gz": "b584890eac98a1404354ab69345f1fd8956becf5dec6842959d67c8d1d2ff578",
+    "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "old/program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61",
+    "patch.diff": "2d4869ed261dbf584d46838a2097e2f7364b1eed0c01f58bb4ab6ecfb63d3c2b"
+  }
+}

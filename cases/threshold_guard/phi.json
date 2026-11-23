@@ -1,0 +1,12 @@
+{
+  "id": "main.assertion.1",
+  "description": "Accept positive requests of at most three units; the three calls must accept two requests totalling four units.",
+  "assertion": "assert(accepted == 2 && units == 4);",
+  "source": {
+    "file": "harness.c",
+    "line": 24,
+    "function": "main"
+  },
+  "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+  "assertion_sha256": "c7e16aee6b2d65de45e994e0cfad248e51430a0e5de32685c68a0f560780ac01"
+}

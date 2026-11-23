@@ -1,0 +1,11 @@
+{
+  "observed_utc": "2026-11-23T09:38:49.154038+00:00",
+  "active_verification_compilation_repair_workers": [],
+  "deagle_heads": {
+    "deagle-baseline": "a159f9923722646185ba8028610b2eef2618fa72",
+    "deagle-work": "a159f9923722646185ba8028610b2eef2618fa72"
+  },
+  "server_key_file_present": false,
+  "frozen_case_count": 3,
+  "phase3_run_directory_exists": false
+}
