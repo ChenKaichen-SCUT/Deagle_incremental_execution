@@ -1,0 +1,705 @@
+{
+  "cases": {
+    "airline_reservations": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 0,
+      "definite_agreement": 3,
+      "events_reused": 0,
+      "executed_new_symex_steps": 323,
+      "fallback_reason": "synchronization_calls_changed:reserve_seat",
+      "formal_phase_matches": 3,
+      "full_result": "NO_VIOLATION_WITHIN_BOUND",
+      "full_symex_steps": 323,
+      "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+      "lemmas_exported": 31,
+      "lemmas_imported": 0,
+      "lemmas_rejected": 31,
+      "medians": {
+        "change_analysis_time": 0.011040466,
+        "full_cycle_with_measured_repair": null,
+        "full_replay_cycle_time": 0.533934055,
+        "full_time": 0.286165549,
+        "incremental_cycle_with_measured_repair": null,
+        "incremental_replay_cycle_time": 1.248098358,
+        "incremental_time": 0.744954049,
+        "lemma_validate_time": 0.01284177,
+        "old_full_time": 0.231278279,
+        "old_instrumented_time": 0.492248698,
+        "speedup": 0.38814974535254465
+      },
+      "model_path": "full_fallback",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage7_manual",
+      "patch_type": "critical_section",
+      "result_counts": {
+        "NO_VIOLATION_WITHIN_BOUND": 3
+      },
+      "reused_prefix_steps": 0,
+      "rss_median_kib": {
+        "full": 52192,
+        "incremental": 85644,
+        "old_full": 71424,
+        "old_instrumented": 84784
+      },
+      "runs": 3,
+      "speedups": [
+        0.4118354714827967,
+        0.38233185843117695,
+        0.38814974535254465
+      ],
+      "theory_context_differences": [
+        "unmapped_event_visit_or_thread"
+      ]
+    },
+    "airline_reservations_6": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 0,
+      "definite_agreement": 3,
+      "events_reused": 0,
+      "executed_new_symex_steps": 467,
+      "fallback_reason": "synchronization_calls_changed:reserve_seat",
+      "formal_phase_matches": 3,
+      "full_result": "NO_VIOLATION_WITHIN_BOUND",
+      "full_symex_steps": 467,
+      "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+      "lemmas_exported": 84,
+      "lemmas_imported": 0,
+      "lemmas_rejected": 84,
+      "medians": {
+        "change_analysis_time": 0.010832617,
+        "full_cycle_with_measured_repair": null,
+        "full_replay_cycle_time": 39.798104307,
+        "full_time": 31.469928957,
+        "incremental_cycle_with_measured_repair": null,
+        "incremental_replay_cycle_time": 33.745375162,
+        "incremental_time": 32.894382946,
+        "lemma_validate_time": 0.017251601,
+        "old_full_time": 7.815100443,
+        "old_instrumented_time": 0.854844228,
+        "speedup": 0.9437024102621647
+      },
+      "model_path": "full_fallback",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage7_manual",
+      "patch_type": "critical_section",
+      "result_counts": {
+        "NO_VIOLATION_WITHIN_BOUND": 3
+      },
+      "reused_prefix_steps": 0,
+      "rss_median_kib": {
+        "full": 93968,
+        "incremental": 108408,
+        "old_full": 138076,
+        "old_instrumented": 125940
+      },
+      "runs": 3,
+      "speedups": [
+        0.9351447801853835,
+        0.9720716136396863,
+        0.9437024102621647
+      ],
+      "theory_context_differences": [
+        "unmapped_event_visit_or_thread"
+      ]
+    },
+    "batch_retained": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 6,
+      "definite_agreement": 3,
+      "events_reused": 20,
+      "executed_new_symex_steps": 13,
+      "fallback_reason": "",
+      "formal_phase_matches": 3,
+      "full_result": "VIOLATION",
+      "full_symex_steps": 73,
+      "incremental_result": "VIOLATION",
+      "lemmas_exported": 1,
+      "lemmas_imported": 1,
+      "lemmas_rejected": 0,
+      "medians": {
+        "change_analysis_time": 0.008102818,
+        "full_cycle_with_measured_repair": null,
+        "full_replay_cycle_time": 0.175687263,
+        "full_time": 0.084098949,
+        "incremental_cycle_with_measured_repair": null,
+        "incremental_replay_cycle_time": 0.624720851,
+        "incremental_time": 0.340841386,
+        "lemma_validate_time": 0.012548731,
+        "old_full_time": 0.084146029,
+        "old_instrumented_time": 0.276620074,
+        "speedup": 0.24673925307885
+      },
+      "model_path": "incremental",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage6_manual",
+      "patch_type": "constant_retained_error",
+      "result_counts": {
+        "VIOLATION": 3
+      },
+      "reused_prefix_steps": 60,
+      "rss_median_kib": {
+        "full": 50708,
+        "incremental": 79832,
+        "old_full": 49140,
+        "old_instrumented": 65016
+      },
+      "runs": 3,
+      "speedups": [
+        0.24673925307885,
+        0.2454757711231272,
+        0.24895302360163743
+      ],
+      "theory_context_differences": []
+    },
+    "batch_total": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 6,
+      "definite_agreement": 3,
+      "events_reused": 20,
+      "executed_new_symex_steps": 13,
+      "fallback_reason": "",
+      "formal_phase_matches": 3,
+      "full_result": "NO_VIOLATION_WITHIN_BOUND",
+      "full_symex_steps": 73,
+      "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+      "lemmas_exported": 1,
+      "lemmas_imported": 1,
+      "lemmas_rejected": 0,
+      "medians": {
+        "change_analysis_time": 0.008267402,
+        "full_cycle_with_measured_repair": 9.416277635,
+        "full_replay_cycle_time": 0.178496525,
+        "full_time": 0.081195904,
+        "incremental_cycle_with_measured_repair": 9.855947723,
+        "incremental_replay_cycle_time": 0.618137104,
+        "incremental_time": 0.339524161,
+        "lemma_validate_time": 0.012507013,
+        "old_full_time": 0.085332726,
+        "old_instrumented_time": 0.27096477,
+        "speedup": 0.23891745954421195
+      },
+      "model_path": "incremental",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage6_mini_deepseek",
+      "patch_type": "constant",
+      "result_counts": {
+        "NO_VIOLATION_WITHIN_BOUND": 3
+      },
+      "reused_prefix_steps": 60,
+      "rss_median_kib": {
+        "full": 50472,
+        "incremental": 80720,
+        "old_full": 50580,
+        "old_instrumented": 64644
+      },
+      "runs": 3,
+      "speedups": [
+        0.23891745954421195,
+        0.25323533595595515,
+        0.23880589640207622
+      ],
+      "theory_context_differences": []
+    },
+    "fib_updates": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 17,
+      "definite_agreement": 3,
+      "events_reused": 31,
+      "executed_new_symex_steps": 88,
+      "fallback_reason": "",
+      "formal_phase_matches": 3,
+      "full_result": "NO_VIOLATION_WITHIN_BOUND",
+      "full_symex_steps": 183,
+      "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+      "lemmas_exported": 8,
+      "lemmas_imported": 7,
+      "lemmas_rejected": 0,
+      "medians": {
+        "change_analysis_time": 0.010629768,
+        "full_cycle_with_measured_repair": null,
+        "full_replay_cycle_time": 0.244125907,
+        "full_time": 0.11960604,
+        "incremental_cycle_with_measured_repair": null,
+        "incremental_replay_cycle_time": 0.80823468,
+        "incremental_time": 0.392385727,
+        "lemma_validate_time": 0.032807542,
+        "old_full_time": 0.100330858,
+        "old_instrumented_time": 0.391659944,
+        "speedup": 0.3048175093280087
+      },
+      "model_path": "incremental",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage7_manual",
+      "patch_type": "arithmetic_constant",
+      "result_counts": {
+        "NO_VIOLATION_WITHIN_BOUND": 3
+      },
+      "reused_prefix_steps": 95,
+      "rss_median_kib": {
+        "full": 48968,
+        "incremental": 82916,
+        "old_full": 49776,
+        "old_instrumented": 64644
+      },
+      "runs": 3,
+      "speedups": [
+        0.30334762316784414,
+        0.3048175093280087,
+        0.3078638377106775
+      ],
+      "theory_context_differences": []
+    },
+    "fib_updates_8": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 17,
+      "definite_agreement": 3,
+      "events_reused": 31,
+      "executed_new_symex_steps": 144,
+      "fallback_reason": "",
+      "formal_phase_matches": 3,
+      "full_result": "NO_VIOLATION_WITHIN_BOUND",
+      "full_symex_steps": 239,
+      "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+      "lemmas_exported": 14,
+      "lemmas_imported": 14,
+      "lemmas_rejected": 0,
+      "medians": {
+        "change_analysis_time": 0.010416994,
+        "full_cycle_with_measured_repair": null,
+        "full_replay_cycle_time": 2.652937389,
+        "full_time": 2.461028718,
+        "incremental_cycle_with_measured_repair": null,
+        "incremental_replay_cycle_time": 3.41182384,
+        "incremental_time": 2.696625189,
+        "lemma_validate_time": 0.046957529,
+        "old_full_time": 0.18412633,
+        "old_instrumented_time": 0.708469834,
+        "speedup": 0.9132224718628055
+      },
+      "model_path": "incremental",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage7_manual",
+      "patch_type": "arithmetic_constant",
+      "result_counts": {
+        "NO_VIOLATION_WITHIN_BOUND": 3
+      },
+      "reused_prefix_steps": 95,
+      "rss_median_kib": {
+        "full": 54732,
+        "incremental": 86108,
+        "old_full": 51064,
+        "old_instrumented": 60848
+      },
+      "runs": 3,
+      "speedups": [
+        0.9301120255953683,
+        0.8998113749355768,
+        0.9132224718628055
+      ],
+      "theory_context_differences": []
+    },
+    "partial_counter": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 0,
+      "definite_agreement": 3,
+      "events_reused": 0,
+      "executed_new_symex_steps": 176,
+      "fallback_reason": "synchronization_calls_changed:record_left",
+      "formal_phase_matches": 3,
+      "full_result": "VIOLATION",
+      "full_symex_steps": 176,
+      "incremental_result": "VIOLATION",
+      "lemmas_exported": 6,
+      "lemmas_imported": 0,
+      "lemmas_rejected": 6,
+      "medians": {
+        "change_analysis_time": 0.015911146,
+        "full_cycle_with_measured_repair": null,
+        "full_replay_cycle_time": 0.224452387,
+        "full_time": 0.104232536,
+        "incremental_cycle_with_measured_repair": null,
+        "incremental_replay_cycle_time": 1.010130447,
+        "incremental_time": 0.603082539,
+        "lemma_validate_time": 0.047609088,
+        "old_full_time": 0.112829361,
+        "old_instrumented_time": 0.399361728,
+        "speedup": 0.17294430824694842
+      },
+      "model_path": "full_fallback",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage3_manual",
+      "patch_type": "partial_synchronization",
+      "result_counts": {
+        "VIOLATION": 3
+      },
+      "reused_prefix_steps": 0,
+      "rss_median_kib": {
+        "full": 50132,
+        "incremental": 85084,
+        "old_full": 51156,
+        "old_instrumented": 63828
+      },
+      "runs": 3,
+      "speedups": [
+        0.17234265507395166,
+        0.17294430824694842,
+        0.17633817491061704
+      ],
+      "theory_context_differences": [
+        "context_changed:atom_bindings",
+        "context_changed:atomic_sections",
+        "context_changed:edges",
+        "context_changed:events",
+        "context_changed:guard_locations"
+      ]
+    },
+    "split_counter": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 0,
+      "definite_agreement": 3,
+      "events_reused": 0,
+      "executed_new_symex_steps": 156,
+      "fallback_reason": "synchronization_calls_changed:record_one",
+      "formal_phase_matches": 3,
+      "full_result": "NO_VIOLATION_WITHIN_BOUND",
+      "full_symex_steps": 156,
+      "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+      "lemmas_exported": 6,
+      "lemmas_imported": 0,
+      "lemmas_rejected": 6,
+      "medians": {
+        "change_analysis_time": 0.015465677,
+        "full_cycle_with_measured_repair": 12.164122268,
+        "full_replay_cycle_time": 0.218002505,
+        "full_time": 0.093907161,
+        "incremental_cycle_with_measured_repair": 12.903985695,
+        "incremental_replay_cycle_time": 1.010596003,
+        "incremental_time": 0.549435361,
+        "lemma_validate_time": 0.037894139,
+        "old_full_time": 0.111996384,
+        "old_instrumented_time": 0.396205334,
+        "speedup": 0.16965988660234266
+      },
+      "model_path": "full_fallback",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage2_mini_deepseek",
+      "patch_type": "synchronization",
+      "result_counts": {
+        "NO_VIOLATION_WITHIN_BOUND": 3
+      },
+      "reused_prefix_steps": 0,
+      "rss_median_kib": {
+        "full": 50808,
+        "incremental": 84720,
+        "old_full": 50680,
+        "old_instrumented": 63704
+      },
+      "runs": 3,
+      "speedups": [
+        0.16965988660234266,
+        0.17091575764087016,
+        0.1623530636908568
+      ],
+      "theory_context_differences": [
+        "context_changed:atom_bindings",
+        "context_changed:atomic_sections",
+        "context_changed:edges",
+        "context_changed:events",
+        "context_changed:guard_locations"
+      ]
+    },
+    "threshold_guard": {
+      "agreement_counts": {
+        "DEFINITE_AGREEMENT": 3
+      },
+      "constraints_retained": 6,
+      "definite_agreement": 3,
+      "events_reused": 22,
+      "executed_new_symex_steps": 23,
+      "fallback_reason": "",
+      "formal_phase_matches": 3,
+      "full_result": "NO_VIOLATION_WITHIN_BOUND",
+      "full_symex_steps": 84,
+      "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+      "lemmas_exported": 2,
+      "lemmas_imported": 0,
+      "lemmas_rejected": 2,
+      "medians": {
+        "change_analysis_time": 0.00858083,
+        "full_cycle_with_measured_repair": null,
+        "full_replay_cycle_time": 0.17582479,
+        "full_time": 0.083753384,
+        "incremental_cycle_with_measured_repair": null,
+        "incremental_replay_cycle_time": 0.627901495,
+        "incremental_time": 0.339987693,
+        "lemma_validate_time": 0.01571724,
+        "old_full_time": 0.084625251,
+        "old_instrumented_time": 0.281060202,
+        "speedup": 0.24629942711068264
+      },
+      "model_path": "incremental",
+      "old_result": "VIOLATION",
+      "patch_origin": "stage2_manual",
+      "patch_type": "guard",
+      "result_counts": {
+        "NO_VIOLATION_WITHIN_BOUND": 3
+      },
+      "reused_prefix_steps": 61,
+      "rss_median_kib": {
+        "full": 50220,
+        "incremental": 81040,
+        "old_full": 51232,
+        "old_instrumented": 64252
+      },
+      "runs": 3,
+      "speedups": [
+        0.24629942711068264,
+        0.24426029039702524,
+        0.25134870690745853
+      ],
+      "theory_context_differences": [
+        "context_changed:atom_bindings",
+        "context_changed:edges",
+        "context_changed:events",
+        "context_changed:guard_locations"
+      ]
+    }
+  },
+  "diagnostics": {
+    "airline_reservations": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "events": 113,
+      "extra_diagnostic_and_compare_time": 0.53353754,
+      "full_diagnostic_time": 0.265180814,
+      "full_dispatches": 323,
+      "incremental_trace_steps": 0,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "944da69bbfea0a3883bae542de11e21054124bc59049d0d9d2152269fb4beaea",
+        "goto": "5f5d27be09320e047f22cc80be5495ee399845118d30befc4c557a3557722560",
+        "raw_ssa": "7a45d8caf5e123565e1960dd5d216c45366df17265aba8ca101c496c92d775d6",
+        "sc_input": "c44da693ef84ae2be2075fc11b4a4a8ea50c4f81394791b4c8343db053089045"
+      },
+      "rf_constraints": 185,
+      "status": "COMPLETED",
+      "structure": "5ec1bf18b911ad7a5b1efc71230cb73c6a0a5dc91c392b6364b0eccf96411597"
+    },
+    "airline_reservations_6": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "events": 187,
+      "extra_diagnostic_and_compare_time": 32.149392805,
+      "full_diagnostic_time": 31.688229241,
+      "full_dispatches": 467,
+      "incremental_trace_steps": 0,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "00c95615aeb5173dfbb86817db322e9d41b8e80b36c017b90f3d2354c83d346c",
+        "goto": "9f805258fb9dd7310d8426e42909b6234ff8110396132e5c75d0d6e30c2bfb97",
+        "raw_ssa": "4a6fb4e4a06dd73408c7c847146c1ff138267e443c824345f654c8e431b8b113",
+        "sc_input": "5e1615b2fcb2b4b2c8f99fa25f17e18cd0d48037c2768ad2a3d57df56d49eda8"
+      },
+      "rf_constraints": 380,
+      "status": "COMPLETED",
+      "structure": "958b5d8ebfcdd28e9106ad1c6fe14c913f46e42635fbd98b03945a9f550432f0"
+    },
+    "batch_retained": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "VIOLATION",
+      "events": 25,
+      "extra_diagnostic_and_compare_time": 0.181624165,
+      "full_diagnostic_time": 0.092946519,
+      "full_dispatches": 73,
+      "incremental_trace_steps": 62,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "3708eef0589dae639132eb549705a6d76cfe11f253277ec72f00f7e23bb8926b",
+        "goto": "97fc4e6ca79de8c0583f566f99a04d719891f876c8c30842574b396859566583",
+        "raw_ssa": "4227666244fcf6bc63d126d2fd800e475b01e7fe8e6b493830eea6d1ac2e1ca3",
+        "sc_input": "2f56fede8d4bab2d75d8b4548edeff639b74807fcc95f9f888a410089af5300b"
+      },
+      "rf_constraints": 16,
+      "status": "COMPLETED",
+      "structure": "aa8cbb5c19ca3f914b743f8279406073717ad6d0ea9df4d24a9a3e91b0880c6e"
+    },
+    "batch_total": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "events": 25,
+      "extra_diagnostic_and_compare_time": 0.185417999,
+      "full_diagnostic_time": 0.112131095,
+      "full_dispatches": 73,
+      "incremental_trace_steps": 0,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "13867bbb18d5a6ab0bdab534e0d7a222052e30f92bc7e057440e22c555a0712a",
+        "goto": "a0628fcf3de147a6bf98b58be19cfd6d7a0a856a235367f16ee0bbe7c71ac2bc",
+        "raw_ssa": "0082b761313f5e2107a0128fcc75fde91fe7733352c7d13424060c320f62405c",
+        "sc_input": "97ca8113a88eed881fbcdd6aecd0191fa7d2e4c0aeca8dfdd5daad5b28984898"
+      },
+      "rf_constraints": 16,
+      "status": "COMPLETED",
+      "structure": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655"
+    },
+    "fib_updates": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "events": 61,
+      "extra_diagnostic_and_compare_time": 0.314465898,
+      "full_diagnostic_time": 0.147537675,
+      "full_dispatches": 183,
+      "incremental_trace_steps": 0,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "9907ef0f3e0158bfaddde49801a1f85c0f571a5fb7abd3b64d50dcaa032e0319",
+        "goto": "7911822984b48cb8ee46e059ead98544a6099e2965f6e051f5e73d284d3a8035",
+        "raw_ssa": "ecd446ed94ebb1c4e29643a2ff8a18d5b13da4555e606a04ab7b82fdbd04ba96",
+        "sc_input": "808d0dc8bc63bc6458272e644660b87497b207ee1b348fdb00307f944eff50db"
+      },
+      "rf_constraints": 119,
+      "status": "COMPLETED",
+      "structure": "2ca38869fa137b45ac8b6ac9aae064b9834fa998919eddf00522c9370ca8c218"
+    },
+    "fib_updates_8": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "events": 85,
+      "extra_diagnostic_and_compare_time": 2.878961215,
+      "full_diagnostic_time": 2.607943151,
+      "full_dispatches": 239,
+      "incremental_trace_steps": 0,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "f8f1e2a60dad5357430275b885f53a7438023a38364b8ef0c9920dce0e6297c9",
+        "goto": "7c2f402c86426bd702d70b5972a161d68518e2611f6e124042fd86c05ee7ec9c",
+        "raw_ssa": "8b004e93258954c80e319f3ae0e71811a26ea83eb32da4b3bf30a7254075c010",
+        "sc_input": "ec496fe0a1e5383987ef0d185bc8d4b77f024c463480b5b9e24710143c391912"
+      },
+      "rf_constraints": 299,
+      "status": "COMPLETED",
+      "structure": "c983339c05607e5d3252392d191f4e68618c2fad3a0066335414d3a0599b6505"
+    },
+    "partial_counter": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "VIOLATION",
+      "events": 58,
+      "extra_diagnostic_and_compare_time": 0.291186569,
+      "full_diagnostic_time": 0.121902926,
+      "full_dispatches": 176,
+      "incremental_trace_steps": 156,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "64b0be1928b933941f87a8b1ec60e988e7e0e35569d861a8fcf5cd5e29cda985",
+        "goto": "5648022f2afb79448cdd14500c999aaeab9311e63f2977a1ed15cf7e2df60622",
+        "raw_ssa": "2d2cdb1ce2aa02a6c630b4d27efdb90e01c44cef0e1d8969886574f77cb7f5e7",
+        "sc_input": "ce34597e36ec4896f59f2771373cc954ba4f162d7bf2bf7dd75bc1c85ead2438"
+      },
+      "rf_constraints": 76,
+      "status": "COMPLETED",
+      "structure": "2182dde61af9052a876a5aee9c57f7fb459bb87da52999f15fb062061e10f6ce"
+    },
+    "split_counter": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "events": 52,
+      "extra_diagnostic_and_compare_time": 0.261712472,
+      "full_diagnostic_time": 0.111965902,
+      "full_dispatches": 156,
+      "incremental_trace_steps": 0,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "719473c28b8d36d37602dacccf3643bb326534e0add5e85cf1be8434cddc7855",
+        "goto": "cb257e537a9005f8eaa11f14cbbcc58533671c399b233bf4a49ff0358c1dfa65",
+        "raw_ssa": "a3c9eae22ad76e9c31459298589c6f650a63f5b6b3974c25850f9d6a95087c4f",
+        "sc_input": "8d394171a48421006852cfc0c06d84d99517e2976da79456a836c6f9679729d2"
+      },
+      "rf_constraints": 59,
+      "status": "COMPLETED",
+      "structure": "b5e04d46497ef607748aaa676fc76350f8acd0a604bfb8d98eac47efc4ca7208"
+    },
+    "threshold_guard": {
+      "agreement": "DEFINITE_AGREEMENT",
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "events": 33,
+      "extra_diagnostic_and_compare_time": 0.181700166,
+      "full_diagnostic_time": 0.095159043,
+      "full_dispatches": 84,
+      "incremental_trace_steps": 0,
+      "model_match": true,
+      "old_result": "VIOLATION",
+      "phases": {
+        "full_model": "6f1c7868181598e84401464aad87feada9b82b589609bc2bfff956b51b71e0ab",
+        "goto": "e0f01f19d17205759f1d15b8461490f176870edf8c1f9310a3d2e0c82fd9598a",
+        "raw_ssa": "cb508065270bd0d846aba6a9e676639868b9e9936697452dd26d18940de9d492",
+        "sc_input": "cc9432ac425b7310a8bd9e0ec05ddf202e390fac67f3032eb50dcd13963aa672"
+      },
+      "rf_constraints": 29,
+      "status": "COMPLETED",
+      "structure": "c443d5d408d4a115f0529e754ef66e9a1ad91da7d5b28887a241a25b7810b36b"
+    }
+  },
+  "totals": {
+    "agreement_counts": {
+      "DEFINITE_AGREEMENT": 27
+    },
+    "api_calls": 0,
+    "distinct_pairs": 9,
+    "formal_phase_matches": 27,
+    "full_over_incremental_geomean": 0.32758246768388266,
+    "full_over_incremental_median": 0.24673925307885,
+    "hit_pairs_with_speedup": 5,
+    "hit_subset_median": 0.24673925307885,
+    "model_diagnostics_passed": 9,
+    "pairs_all_definite_agree": 9,
+    "pairs_all_lemmas_rejected": 5,
+    "pairs_bounded_pass": 7,
+    "pairs_faster": 0,
+    "pairs_model_fallback": 4,
+    "pairs_prefix_reused": 5,
+    "pairs_real_import": 4,
+    "pairs_remaining_violation": 2,
+    "pairs_with_speedup": 9,
+    "resource_and_unknown": {
+      "full_result": {
+        "ERROR": 0,
+        "INCOMPLETE_UNWINDING": 0,
+        "OOM": 0,
+        "TIMEOUT": 0,
+        "UNKNOWN": 0
+      },
+      "incremental_result": {
+        "ERROR": 0,
+        "INCOMPLETE_UNWINDING": 0,
+        "OOM": 0,
+        "TIMEOUT": 0,
+        "UNKNOWN": 0
+      }
+    },
+    "trials": 27
+  }
+}

@@ -1,0 +1,4625 @@
+[
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "batch_total",
+    "change_analysis_time": 0.008267402,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000465499,
+      "incremental_cnf_and_graph": 0.052969083
+    },
+    "config_hash": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "constraint_update_time": 0.001603631,
+    "constraints_rebuilt": 10,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.001603631
+    },
+    "events_rebuilt": 5,
+    "events_reused": 20,
+    "executed_new_symex_steps": 13,
+    "experiment_unit_sha256": "3c2c79dadc8fe1f9659ae3ebff204d7cce679626e6c4c40b125e58f8de99681c",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": 9.410529025,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000465499,
+      "Post-process": 0.000112732,
+      "Postprocess Equation": 0.00155702,
+      "Solver": 0.000239165,
+      "Symex": 0.00180674,
+      "decision procedure": 0.00211504
+    },
+    "full_replay_cycle_time": 0.17286018,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 73,
+    "full_time": 0.08111825,
+    "historical_repair": {
+      "scope": "successful Stage 6 AI adapter and freeze",
+      "seconds": 9.244975,
+      "source": "reports/evidence/stage-06/cases/ai-single-edit.json"
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": 9.854527596,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 52969083,
+      "equation_export": 5708402,
+      "event_constraints": 1603631,
+      "goal_conversion": 22720,
+      "result_output": 29700,
+      "solve": 374518,
+      "symbolic_execution": 424658,
+      "symex_cleanup": 445059
+    },
+    "incremental_replay_cycle_time": 0.616858751,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.339524161,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.39e-06,
+    "lemma_import_time": 6.66e-06,
+    "lemma_validate_time": 0.012428722,
+    "lemmas_exported": 1,
+    "lemmas_imported": 1,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "035202479a5e16e6e5d490b7b00ac91e2c83822b092689200dd1ff338745afe0",
+      "source_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+      "steps": 62
+    },
+    "old_full_time": 0.084435775,
+    "old_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.270028435,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21405716400113306
+    },
+    "patch_origin": "stage6_mini_deepseek",
+    "patch_type": "constant",
+    "peak_rss": {
+      "full": 50472,
+      "incremental": 80720,
+      "old_full": 49272,
+      "old_instrumented": 64644
+    },
+    "po_edges_reused": 18,
+    "property_hash": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+    "repeat": 1,
+    "replay_patch_time": 0.007306155,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31096,
+        "cpu": 0.082732,
+        "cpu_system": 0.03649,
+        "cpu_user": 0.046243,
+        "max_waited_child_rss_kib": 40704,
+        "rss_kib": 50472,
+        "samples": 15,
+        "wall": 0.08111825
+      },
+      "incremental": {
+        "cgroup_kib": 34108,
+        "cpu": 0.281001,
+        "cpu_system": 0.080281,
+        "cpu_user": 0.200721,
+        "max_waited_child_rss_kib": 41148,
+        "rss_kib": 80720,
+        "samples": 64,
+        "wall": 0.339524161
+      },
+      "incremental_session_max_sampled_rss_kib": 80720,
+      "old_full": {
+        "cgroup_kib": 30984,
+        "cpu": 0.085411,
+        "cpu_system": 0.036304,
+        "cpu_user": 0.049106,
+        "max_waited_child_rss_kib": 40504,
+        "rss_kib": 49272,
+        "samples": 16,
+        "wall": 0.084435775
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31644,
+        "cpu": 0.269885,
+        "cpu_system": 0.089351,
+        "cpu_user": 0.180533,
+        "max_waited_child_rss_kib": 41148,
+        "rss_kib": 64644,
+        "samples": 52,
+        "wall": 0.270028435
+      }
+    },
+    "reused_prefix_steps": 60,
+    "solve_time": {
+      "full": 0.000239165,
+      "incremental": 0.000374518
+    },
+    "speedup": 0.23891745954421195,
+    "symex_time": {
+      "full": 0.00180674,
+      "incremental": 0.000424658
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "threshold_guard",
+    "change_analysis_time": 0.008587027,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000706183,
+      "incremental_cnf_and_graph": 0.05948431
+    },
+    "config_hash": "54079a57472e939f9499b56f279bc0ba94370085b6d33b82b03a8a4554113560",
+    "constraint_update_time": 0.002168162,
+    "constraints_rebuilt": 23,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.002168162
+    },
+    "events_rebuilt": 11,
+    "events_reused": 22,
+    "executed_new_symex_steps": 23,
+    "experiment_unit_sha256": "99199d175d90b6d47e69a38db843e4e51cb45f268c18aee7c041e98c9198ac8a",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000706183,
+      "Post-process": 0.000125623,
+      "Postprocess Equation": 0.00205096,
+      "Solver": 0.000331247,
+      "Symex": 0.00206688,
+      "decision procedure": 0.0029015
+    },
+    "full_replay_cycle_time": 0.17582479,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 84,
+    "full_time": 0.083753384,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 59484310,
+      "equation_export": 6749001,
+      "event_constraints": 2168162,
+      "goal_conversion": 24581,
+      "result_output": 29720,
+      "solve": 644442,
+      "symbolic_execution": 653133,
+      "symex_cleanup": 442168
+    },
+    "incremental_replay_cycle_time": 0.623653001,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.340047011,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.18e-06,
+    "lemma_validate_time": 0.01538971,
+    "lemmas_exported": 2,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 2,
+    "model_path": "incremental",
+    "new_hash": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "e8f651f320efc65f0278fc468e51c6e6624c7346b1806deed4f8f295e1449dc4",
+      "source_hash": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+      "steps": 74
+    },
+    "old_full_time": 0.084625251,
+    "old_hash": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.276159835,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21407444400028908
+    },
+    "patch_origin": "stage2_manual",
+    "patch_type": "guard",
+    "peak_rss": {
+      "full": 50220,
+      "incremental": 81040,
+      "old_full": 51232,
+      "old_instrumented": 64252
+    },
+    "po_edges_reused": 20,
+    "property_hash": "7f1d4f10c59309179a1e1cbad357f08f1c3e1f40c42a015a1afa85d907c3ad46",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8597b2dd0c0e343b8cf2aef2b8788f26adea7ad8561d25ccfafaed37be3a8a54",
+    "repeat": 1,
+    "replay_patch_time": 0.007446155,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31052,
+        "cpu": 0.08866,
+        "cpu_system": 0.025447,
+        "cpu_user": 0.063213,
+        "max_waited_child_rss_kib": 40592,
+        "rss_kib": 50220,
+        "samples": 16,
+        "wall": 0.083753384
+      },
+      "incremental": {
+        "cgroup_kib": 34660,
+        "cpu": 0.289307,
+        "cpu_system": 0.059284,
+        "cpu_user": 0.230024,
+        "max_waited_child_rss_kib": 40484,
+        "rss_kib": 81040,
+        "samples": 64,
+        "wall": 0.340047011
+      },
+      "incremental_session_max_sampled_rss_kib": 81040,
+      "old_full": {
+        "cgroup_kib": 30996,
+        "cpu": 0.087105,
+        "cpu_system": 0.035546,
+        "cpu_user": 0.051558,
+        "max_waited_child_rss_kib": 40484,
+        "rss_kib": 51232,
+        "samples": 16,
+        "wall": 0.084625251
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31488,
+        "cpu": 0.278444,
+        "cpu_system": 0.092772,
+        "cpu_user": 0.185671,
+        "max_waited_child_rss_kib": 40484,
+        "rss_kib": 64252,
+        "samples": 53,
+        "wall": 0.276159835
+      }
+    },
+    "reused_prefix_steps": 61,
+    "solve_time": {
+      "full": 0.000331247,
+      "incremental": 0.000644442
+    },
+    "speedup": 0.24629942711068264,
+    "symex_time": {
+      "full": 0.00206688,
+      "incremental": 0.000653133
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "split_counter",
+    "change_analysis_time": 0.015262257,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00323899,
+      "incremental_cnf_and_graph": 0.09079156
+    },
+    "config_hash": "1d346cde0da4b29ab7ccdda4283f7197c555bdf1f57e6cb74eeb9ea7e98f6927",
+    "constraint_update_time": 0.003237043,
+    "constraints_rebuilt": 59,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.003237043
+    },
+    "events_rebuilt": 52,
+    "events_reused": 0,
+    "executed_new_symex_steps": 156,
+    "experiment_unit_sha256": "4462c6fc60721161dc0c58cc488757cb25dc6501fc9a777ef4fb11383deaeb28",
+    "fallback_reason": "synchronization_calls_changed:record_one",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": 12.163535151,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00323899,
+      "Post-process": 0.0004787,
+      "Postprocess Equation": 0.00324323,
+      "Solver": 0.00172592,
+      "Symex": 0.00422376,
+      "decision procedure": 0.00753164
+    },
+    "full_replay_cycle_time": 0.212520704,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 156,
+    "full_time": 0.093193767,
+    "historical_repair": {
+      "scope": "Stage 2 mini controller span",
+      "seconds": 11.958345,
+      "source": "reports/evidence/stage-02/mini-20261123T092658163058Z.json"
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": 12.899802208,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 90791560,
+      "equation_export": 11806021,
+      "event_constraints": 3237043,
+      "goal_conversion": 27951,
+      "parse_goto": 139858447,
+      "result_output": 40190,
+      "solve": 2591980,
+      "symbolic_execution": 3451547,
+      "symex_cleanup": 1067861
+    },
+    "incremental_replay_cycle_time": 0.948787761,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.549297591,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.14e-06,
+    "lemma_validate_time": 0.037661585,
+    "lemmas_exported": 6,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 6,
+    "model_path": "full_fallback",
+    "new_hash": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "4a762dc2af74e02b23c87cecc16dbaacd853635bb8f4f6518660025003408126",
+      "source_hash": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+      "steps": 166
+    },
+    "old_full_time": 0.111996384,
+    "old_hash": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.392159617,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.2140713640001195
+    },
+    "patch_origin": "stage2_mini_deepseek",
+    "patch_type": "synchronization",
+    "peak_rss": {
+      "full": 50808,
+      "incremental": 84720,
+      "old_full": 49656,
+      "old_instrumented": 63704
+    },
+    "po_edges_reused": 0,
+    "property_hash": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "94af48f287d4badca8f154fff78decb250367f449c16dd4ac3b78962f1a8dd92",
+    "repeat": 1,
+    "replay_patch_time": 0.007330553,
+    "resources": {
+      "full": {
+        "cgroup_kib": 30992,
+        "cpu": 0.096395,
+        "cpu_system": 0.036051,
+        "cpu_user": 0.060343,
+        "max_waited_child_rss_kib": 40520,
+        "rss_kib": 50808,
+        "samples": 18,
+        "wall": 0.093193767
+      },
+      "incremental": {
+        "cgroup_kib": 46416,
+        "cpu": 0.53801,
+        "cpu_system": 0.145385,
+        "cpu_user": 0.392625,
+        "max_waited_child_rss_kib": 40904,
+        "rss_kib": 84720,
+        "samples": 105,
+        "wall": 0.549297591
+      },
+      "incremental_session_max_sampled_rss_kib": 84720,
+      "old_full": {
+        "cgroup_kib": 31072,
+        "cpu": 0.113469,
+        "cpu_system": 0.027908,
+        "cpu_user": 0.085562,
+        "max_waited_child_rss_kib": 40240,
+        "rss_kib": 49656,
+        "samples": 21,
+        "wall": 0.111996384
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31628,
+        "cpu": 0.392154,
+        "cpu_system": 0.099832,
+        "cpu_user": 0.292323,
+        "max_waited_child_rss_kib": 40904,
+        "rss_kib": 63704,
+        "samples": 75,
+        "wall": 0.392159617
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.00172592,
+      "incremental": 0.00259198
+    },
+    "speedup": 0.16965988660234266,
+    "symex_time": {
+      "full": 0.00422376,
+      "incremental": 0.003451547
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "partial_counter",
+    "change_analysis_time": 0.015924321,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00546503,
+      "incremental_cnf_and_graph": 0.106559817
+    },
+    "config_hash": "e99a878ecedfabc62e9ac4d529c4b2820c6e2e60c466fc7291f36e333b5ec3b3",
+    "constraint_update_time": 0.003684272,
+    "constraints_rebuilt": 76,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.003684272
+    },
+    "events_rebuilt": 58,
+    "events_reused": 0,
+    "executed_new_symex_steps": 176,
+    "experiment_unit_sha256": "910bbbad183f742f4c16ed52c27690bd9b641c23366990850f0250596a5e81ad",
+    "fallback_reason": "synchronization_calls_changed:record_left",
+    "formal_phase_match": true,
+    "full_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "1b797d548f1c012b73755e180de1ec88f03bbf5a8382434de25bba7e1eef15b7",
+      "source_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+      "steps": 156
+    },
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00546503,
+      "Post-process": 0.000464509,
+      "Postprocess Equation": 0.00369527,
+      "Solver": 0.00244851,
+      "Symex": 0.00477866,
+      "decision procedure": 0.010758
+    },
+    "full_replay_cycle_time": 0.224452387,
+    "full_result": "VIOLATION",
+    "full_symex_steps": 176,
+    "full_time": 0.103936846,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "72362b8d7a3a5a7a7976b7d3cc478f6252cc913af20ce3f7818ef81bb027c77c",
+      "source_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+      "steps": 156
+    },
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 106559817,
+      "equation_export": 12966683,
+      "event_constraints": 3684272,
+      "goal_conversion": 29020,
+      "parse_goto": 140345257,
+      "result_output": 2062300,
+      "solve": 3690522,
+      "symbolic_execution": 3887546,
+      "symex_cleanup": 1237604
+    },
+    "incremental_replay_cycle_time": 1.010130447,
+    "incremental_result": "VIOLATION",
+    "incremental_time": 0.603082539,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.2e-06,
+    "lemma_validate_time": 0.047609088,
+    "lemmas_exported": 6,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 6,
+    "model_path": "full_fallback",
+    "new_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "95cf0d94f049df99d1a4a65a02cc330d76412c0fcc717d93c181c3c8fd28ba3c",
+      "source_hash": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+      "steps": 170
+    },
+    "old_full_time": 0.112829361,
+    "old_hash": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.399361728,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.2140376639981696
+    },
+    "patch_origin": "stage3_manual",
+    "patch_type": "partial_synchronization",
+    "peak_rss": {
+      "full": 50132,
+      "incremental": 85272,
+      "old_full": 49676,
+      "old_instrumented": 63828
+    },
+    "po_edges_reused": 0,
+    "property_hash": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "185858ef1d76dc3e94aef90ea5285cd8f0b0de81dc77f7fb7d3824e66239020e",
+    "repeat": 1,
+    "replay_patch_time": 0.00768618,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31064,
+        "cpu": 0.105423,
+        "cpu_system": 0.031348,
+        "cpu_user": 0.074076,
+        "max_waited_child_rss_kib": 40728,
+        "rss_kib": 50132,
+        "samples": 20,
+        "wall": 0.103936846
+      },
+      "incremental": {
+        "cgroup_kib": 48652,
+        "cpu": 0.568001,
+        "cpu_system": 0.157058,
+        "cpu_user": 0.410942,
+        "max_waited_child_rss_kib": 40708,
+        "rss_kib": 85272,
+        "samples": 115,
+        "wall": 0.603082539
+      },
+      "incremental_session_max_sampled_rss_kib": 85272,
+      "old_full": {
+        "cgroup_kib": 30984,
+        "cpu": 0.113499,
+        "cpu_system": 0.043141,
+        "cpu_user": 0.070358,
+        "max_waited_child_rss_kib": 40408,
+        "rss_kib": 49676,
+        "samples": 21,
+        "wall": 0.112829361
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31716,
+        "cpu": 0.398919,
+        "cpu_system": 0.104635,
+        "cpu_user": 0.294285,
+        "max_waited_child_rss_kib": 40708,
+        "rss_kib": 63828,
+        "samples": 77,
+        "wall": 0.399361728
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.00244851,
+      "incremental": 0.003690522
+    },
+    "speedup": 0.17234265507395166,
+    "symex_time": {
+      "full": 0.00477866,
+      "incremental": 0.003887546
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "batch_retained",
+    "change_analysis_time": 0.008102818,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000484959,
+      "incremental_cnf_and_graph": 0.054177736
+    },
+    "config_hash": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "constraint_update_time": 0.001612262,
+    "constraints_rebuilt": 10,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.001612262
+    },
+    "events_rebuilt": 5,
+    "events_reused": 20,
+    "executed_new_symex_steps": 13,
+    "experiment_unit_sha256": "daabb1f0e6e6c53ef39b879914cc830cde0d639845a2e0670321a3181bc80426",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "1104297697776347797ff4d7d337f5592bffcfbc1e3cc7551d6f768804f43e5a",
+      "source_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+      "steps": 62
+    },
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000484959,
+      "Post-process": 0.000113662,
+      "Postprocess Equation": 0.00152964,
+      "Solver": 0.000277415,
+      "Symex": 0.00182222,
+      "decision procedure": 0.00220192
+    },
+    "full_replay_cycle_time": 0.175040482,
+    "full_result": "VIOLATION",
+    "full_symex_steps": 73,
+    "full_time": 0.084098949,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "74a3bd9878dec3abae0c17a4764a29ddb0692db9818cd65c690e03e0d46f6bf3",
+      "source_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+      "steps": 62
+    },
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 54177736,
+      "equation_export": 5661230,
+      "event_constraints": 1612262,
+      "goal_conversion": 24591,
+      "result_output": 870097,
+      "solve": 568121,
+      "symbolic_execution": 412988,
+      "symex_cleanup": 489079
+    },
+    "incremental_replay_cycle_time": 0.624720851,
+    "incremental_result": "VIOLATION",
+    "incremental_time": 0.340841386,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.27e-06,
+    "lemma_import_time": 1.0441e-05,
+    "lemma_validate_time": 0.012616576,
+    "lemmas_exported": 1,
+    "lemmas_imported": 1,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "035202479a5e16e6e5d490b7b00ac91e2c83822b092689200dd1ff338745afe0",
+      "source_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+      "steps": 62
+    },
+    "old_full_time": 0.083682142,
+    "old_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.276620074,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21409517400024924
+    },
+    "patch_origin": "stage6_manual",
+    "patch_type": "constant_retained_error",
+    "peak_rss": {
+      "full": 47568,
+      "incremental": 79832,
+      "old_full": 49716,
+      "old_instrumented": 62228
+    },
+    "po_edges_reused": 18,
+    "property_hash": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+    "repeat": 1,
+    "replay_patch_time": 0.007259391,
+    "resources": {
+      "full": {
+        "cgroup_kib": 30952,
+        "cpu": 0.085677,
+        "cpu_system": 0.032232,
+        "cpu_user": 0.053444,
+        "max_waited_child_rss_kib": 40396,
+        "rss_kib": 47568,
+        "samples": 16,
+        "wall": 0.084098949
+      },
+      "incremental": {
+        "cgroup_kib": 33796,
+        "cpu": 0.285362,
+        "cpu_system": 0.073461,
+        "cpu_user": 0.211902,
+        "max_waited_child_rss_kib": 41016,
+        "rss_kib": 79832,
+        "samples": 65,
+        "wall": 0.340841386
+      },
+      "incremental_session_max_sampled_rss_kib": 79832,
+      "old_full": {
+        "cgroup_kib": 30952,
+        "cpu": 0.085416,
+        "cpu_system": 0.032284,
+        "cpu_user": 0.053131,
+        "max_waited_child_rss_kib": 40208,
+        "rss_kib": 49716,
+        "samples": 16,
+        "wall": 0.083682142
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31600,
+        "cpu": 0.274702,
+        "cpu_system": 0.079605,
+        "cpu_user": 0.195096,
+        "max_waited_child_rss_kib": 41016,
+        "rss_kib": 62228,
+        "samples": 53,
+        "wall": 0.276620074
+      }
+    },
+    "reused_prefix_steps": 60,
+    "solve_time": {
+      "full": 0.000277415,
+      "incremental": 0.000568121
+    },
+    "speedup": 0.24673925307885,
+    "symex_time": {
+      "full": 0.00182222,
+      "incremental": 0.000412988
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "fib_updates",
+    "change_analysis_time": 0.010629768,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00245796,
+      "incremental_cnf_and_graph": 0.093925972
+    },
+    "config_hash": "1f8084b8b172f6179cd84eb22dc072fdb1977285e92ddbd51b790e53aae687e4",
+    "constraint_update_time": 0.004128861,
+    "constraints_rebuilt": 102,
+    "constraints_retained": 17,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.004128861
+    },
+    "events_rebuilt": 30,
+    "events_reused": 31,
+    "executed_new_symex_steps": 88,
+    "experiment_unit_sha256": "fe71714b25c3bcc5c82e0f76b2b24aa3a70cdc048b3f9d0fd6c109f677d0c314",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00245796,
+      "Post-process": 0.000574911,
+      "Postprocess Equation": 0.00410571,
+      "Solver": 0.0282088,
+      "Symex": 0.00414599,
+      "decision procedure": 0.0340325
+    },
+    "full_replay_cycle_time": 0.226530087,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 183,
+    "full_time": 0.119035,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 93925972,
+      "equation_export": 14274148,
+      "event_constraints": 4128861,
+      "goal_conversion": 35411,
+      "result_output": 39280,
+      "solve": 20518080,
+      "symbolic_execution": 1802095,
+      "symex_cleanup": 886067
+    },
+    "incremental_replay_cycle_time": 0.789911693,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.392404591,
+    "input_tokens": 0,
+    "lemma_bind_time": 1.523e-05,
+    "lemma_import_time": 1.6041e-05,
+    "lemma_validate_time": 0.032707478,
+    "lemmas_exported": 8,
+    "lemmas_imported": 7,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "40"
+      },
+      "property": "main.assertion.1",
+      "sha256": "f3f944784c8ea004c7206c50c39cd09a9d43ba3290cca1c6b3c1775243981bd0",
+      "source_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+      "steps": 151
+    },
+    "old_full_time": 0.100276506,
+    "old_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.390288521,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.2140443040007085
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "arithmetic_constant",
+    "peak_rss": {
+      "full": 45444,
+      "incremental": 82916,
+      "old_full": 46456,
+      "old_instrumented": 61320
+    },
+    "po_edges_reused": 28,
+    "property_hash": "0b3d7d8205472ac045b8f0577e15ee0b60d97a202f1c4b05e5a0a08a42dfa11e",
+    "read_bundles_reused": 5,
+    "reference_cex0_sha256": "c5b66cca650b505ec341219b81a7e973a372d5eb5748344a03669a276b46f233",
+    "repeat": 1,
+    "replay_patch_time": 0.007218581,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31072,
+        "cpu": 0.121617,
+        "cpu_system": 0.039086,
+        "cpu_user": 0.082531,
+        "max_waited_child_rss_kib": 40468,
+        "rss_kib": 45444,
+        "samples": 23,
+        "wall": 0.119035
+      },
+      "incremental": {
+        "cgroup_kib": 43240,
+        "cpu": 0.360118,
+        "cpu_system": 0.063971,
+        "cpu_user": 0.296147,
+        "max_waited_child_rss_kib": 40916,
+        "rss_kib": 82916,
+        "samples": 75,
+        "wall": 0.392404591
+      },
+      "incremental_session_max_sampled_rss_kib": 82916,
+      "old_full": {
+        "cgroup_kib": 31112,
+        "cpu": 0.101395,
+        "cpu_system": 0.036112,
+        "cpu_user": 0.065282,
+        "max_waited_child_rss_kib": 40712,
+        "rss_kib": 46456,
+        "samples": 19,
+        "wall": 0.100276506
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31512,
+        "cpu": 0.393978,
+        "cpu_system": 0.085134,
+        "cpu_user": 0.308844,
+        "max_waited_child_rss_kib": 40916,
+        "rss_kib": 61320,
+        "samples": 75,
+        "wall": 0.390288521
+      }
+    },
+    "reused_prefix_steps": 95,
+    "solve_time": {
+      "full": 0.0282088,
+      "incremental": 0.02051808
+    },
+    "speedup": 0.30334762316784414,
+    "symex_time": {
+      "full": 0.00414599,
+      "incremental": 0.001802095
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "airline_reservations",
+    "change_analysis_time": 0.011040466,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.0121889,
+      "incremental_cnf_and_graph": 0.094139206
+    },
+    "config_hash": "bb21d4c6902368c39d226faa6128a057aa89122df665f1e5eacba459e92713f1",
+    "constraint_update_time": 0.006352894,
+    "constraints_rebuilt": 185,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.006352894
+    },
+    "events_rebuilt": 113,
+    "events_reused": 0,
+    "executed_new_symex_steps": 323,
+    "experiment_unit_sha256": "60af2775385ee917c4dcfb00896b838a28e595b9b940eddf6a7e99d55ad24e7f",
+    "fallback_reason": "synchronization_calls_changed:reserve_seat",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.0121889,
+      "Post-process": 0.00306265,
+      "Postprocess Equation": 0.00656185,
+      "Solver": 0.170796,
+      "Symex": 0.00965066,
+      "decision procedure": 0.187613
+    },
+    "full_replay_cycle_time": 0.524941965,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 323,
+    "full_time": 0.286165549,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 94139206,
+      "equation_export": 24839965,
+      "event_constraints": 6352894,
+      "goal_conversion": 28090,
+      "parse_goto": 140846036,
+      "result_output": 34660,
+      "solve": 119831637,
+      "symbolic_execution": 8403514,
+      "symex_cleanup": 2095131
+    },
+    "incremental_replay_cycle_time": 1.194600894,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.694854059,
+    "input_tokens": 0,
+    "lemma_bind_time": null,
+    "lemma_import_time": 1.19e-06,
+    "lemma_validate_time": 0.01284177,
+    "lemmas_exported": 31,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 31,
+    "model_path": "full_fallback",
+    "new_hash": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "4f36142d335955f8d0863ddcb08dd404a6f1963c11292479c1944366013caa9c",
+      "source_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+      "steps": 348
+    },
+    "old_full_time": 0.231278279,
+    "old_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.492248698,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21406449400092242
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "critical_section",
+    "peak_rss": {
+      "full": 52568,
+      "incremental": 85488,
+      "old_full": 71648,
+      "old_instrumented": 84836
+    },
+    "po_edges_reused": 0,
+    "property_hash": "14284f2bdad4aa5b6a8d9f153c5893ea2bd4c86de0bab77e38e08a5dae80147c",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "40c1dbaa58881ad8a23bfd9971f292cea24e5e0baa22086983795e4154ba9cfa",
+    "repeat": 1,
+    "replay_patch_time": 0.007498137,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31092,
+        "cpu": 0.289591,
+        "cpu_system": 0.031731,
+        "cpu_user": 0.25786,
+        "max_waited_child_rss_kib": 40404,
+        "rss_kib": 52568,
+        "samples": 55,
+        "wall": 0.286165549
+      },
+      "incremental": {
+        "cgroup_kib": 51216,
+        "cpu": 0.68324,
+        "cpu_system": 0.14913,
+        "cpu_user": 0.534109,
+        "max_waited_child_rss_kib": 44028,
+        "rss_kib": 85488,
+        "samples": 133,
+        "wall": 0.694854059
+      },
+      "incremental_session_max_sampled_rss_kib": 85488,
+      "old_full": {
+        "cgroup_kib": 48452,
+        "cpu": 0.233423,
+        "cpu_system": 0.047445,
+        "cpu_user": 0.185977,
+        "max_waited_child_rss_kib": 44652,
+        "rss_kib": 71648,
+        "samples": 44,
+        "wall": 0.231278279
+      },
+      "old_instrumented": {
+        "cgroup_kib": 57580,
+        "cpu": 0.492639,
+        "cpu_system": 0.131093,
+        "cpu_user": 0.361546,
+        "max_waited_child_rss_kib": 44028,
+        "rss_kib": 84836,
+        "samples": 94,
+        "wall": 0.492248698
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.170796,
+      "incremental": 0.119831637
+    },
+    "speedup": 0.4118354714827967,
+    "symex_time": {
+      "full": 0.00965066,
+      "incremental": 0.008403514
+    },
+    "theory_context_differences": [
+      "unmapped_event_visit_or_thread"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "fib_updates_8",
+    "change_analysis_time": 0.010416994,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00562176,
+      "incremental_cnf_and_graph": 0.135815129
+    },
+    "config_hash": "f9884dd280e5d841d58ef5759d23839c9a209260cd02c0dc9d13480e484f13f4",
+    "constraint_update_time": 0.006284692,
+    "constraints_rebuilt": 282,
+    "constraints_retained": 17,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.006284692
+    },
+    "events_rebuilt": 54,
+    "events_reused": 31,
+    "executed_new_symex_steps": 144,
+    "experiment_unit_sha256": "327b33cfd7a707926e83359388bbcd37d202aa9a3cd3c9f7f796404bbe4152ec",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00562176,
+      "Post-process": 0.000567581,
+      "Postprocess Equation": 0.00639206,
+      "Solver": 2.35912,
+      "Symex": 0.00503459,
+      "decision procedure": 2.36968
+    },
+    "full_replay_cycle_time": 2.652937389,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 239,
+    "full_time": 2.461028718,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 135815129,
+      "equation_export": 20155962,
+      "event_constraints": 6284692,
+      "goal_conversion": 31110,
+      "result_output": 40800,
+      "solve": 2223571028,
+      "symbolic_execution": 2766774,
+      "symex_cleanup": 933248
+    },
+    "incremental_replay_cycle_time": 3.362200889,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 2.645948714,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.748e-05,
+    "lemma_import_time": 5.1081e-05,
+    "lemma_validate_time": 0.046398295,
+    "lemmas_exported": 14,
+    "lemmas_imported": 14,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "40"
+      },
+      "property": "main.assertion.1",
+      "sha256": "c9f0b45fdf9e5eb6549759c9f40606c550dc540d38251f8d6397ded5ba3696ab",
+      "source_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+      "steps": 187
+    },
+    "old_full_time": 0.18412633,
+    "old_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.708469834,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.2140368229993328
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "arithmetic_constant",
+    "peak_rss": {
+      "full": 55592,
+      "incremental": 86108,
+      "old_full": 51064,
+      "old_instrumented": 60848
+    },
+    "po_edges_reused": 28,
+    "property_hash": "8c6ab0595538b2150f0db28c7189244a82ccff4bfd29ba849cad68b065927c1b",
+    "read_bundles_reused": 5,
+    "reference_cex0_sha256": "e68d3a7574817d643699e399df6751b7c5f914089e4349902afee9386cbdc87a",
+    "repeat": 1,
+    "replay_patch_time": 0.007782341,
+    "resources": {
+      "full": {
+        "cgroup_kib": 32304,
+        "cpu": 2.465255,
+        "cpu_system": 0.048028,
+        "cpu_user": 2.417228,
+        "max_waited_child_rss_kib": 40616,
+        "rss_kib": 55592,
+        "samples": 472,
+        "wall": 2.461028718
+      },
+      "incremental": {
+        "cgroup_kib": 55064,
+        "cpu": 2.620484,
+        "cpu_system": 0.088263,
+        "cpu_user": 2.532221,
+        "max_waited_child_rss_kib": 40952,
+        "rss_kib": 86108,
+        "samples": 509,
+        "wall": 2.645948714
+      },
+      "incremental_session_max_sampled_rss_kib": 86108,
+      "old_full": {
+        "cgroup_kib": 30928,
+        "cpu": 0.185461,
+        "cpu_system": 0.032209,
+        "cpu_user": 0.153251,
+        "max_waited_child_rss_kib": 40456,
+        "rss_kib": 51064,
+        "samples": 36,
+        "wall": 0.18412633
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31632,
+        "cpu": 0.70882,
+        "cpu_system": 0.096267,
+        "cpu_user": 0.612553,
+        "max_waited_child_rss_kib": 40952,
+        "rss_kib": 60848,
+        "samples": 136,
+        "wall": 0.708469834
+      }
+    },
+    "reused_prefix_steps": 95,
+    "solve_time": {
+      "full": 2.35912,
+      "incremental": 2.223571028
+    },
+    "speedup": 0.9301120255953683,
+    "symex_time": {
+      "full": 0.00503459,
+      "incremental": 0.002766774
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "airline_reservations_6",
+    "change_analysis_time": 0.010789608,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.0265,
+      "incremental_cnf_and_graph": 0.139210212
+    },
+    "config_hash": "bc631cb9642b4166f90511c64691c38bec69aeb804a1c0bdb93d2e316b255785",
+    "constraint_update_time": 0.010636824,
+    "constraints_rebuilt": 380,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.010636824
+    },
+    "events_rebuilt": 187,
+    "events_reused": 0,
+    "executed_new_symex_steps": 467,
+    "experiment_unit_sha256": "5f302f043cbc033b8fb12aa737d689b960fc7d799a69aa9e32511801e64a8ade",
+    "fallback_reason": "synchronization_calls_changed:reserve_seat",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.0265,
+      "Post-process": 0.00972434,
+      "Postprocess Equation": 0.0105886,
+      "Solver": 30.3766,
+      "Symex": 0.0157756,
+      "decision procedure": 30.41
+    },
+    "full_replay_cycle_time": 38.05113411,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 467,
+    "full_time": 30.528036092,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 139210212,
+      "equation_export": 41079077,
+      "event_constraints": 10636824,
+      "goal_conversion": 29151,
+      "parse_goto": 143608861,
+      "result_output": 35081,
+      "solve": 31940404154,
+      "symbolic_execution": 13466721,
+      "symex_cleanup": 3847317
+    },
+    "incremental_replay_cycle_time": 33.507288921,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 32.645251023,
+    "input_tokens": 0,
+    "lemma_bind_time": null,
+    "lemma_import_time": 1.48e-06,
+    "lemma_validate_time": 0.017033973,
+    "lemmas_exported": 84,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 84,
+    "model_path": "full_fallback",
+    "new_hash": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "a9cd28014b4454fee27d0b7cacd5a27e62b05f50f63ca0e10442a51552789b8a",
+      "source_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+      "steps": 516
+    },
+    "old_full_time": 7.515904348,
+    "old_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.854844228,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21408094899743446
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "critical_section",
+    "peak_rss": {
+      "full": 93968,
+      "incremental": 108184,
+      "old_full": 138152,
+      "old_instrumented": 125940
+    },
+    "po_edges_reused": 0,
+    "property_hash": "ae6fc0ba25f346cf0f69f9d92e6c223a37ff6aed564c27d6455416b29054ea93",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "82f1eda18cf73390b592495a36c43087d5981808b4a43565c114d3b273f4466c",
+    "repeat": 1,
+    "replay_patch_time": 0.00719367,
+    "resources": {
+      "full": {
+        "cgroup_kib": 73104,
+        "cpu": 30.527923,
+        "cpu_system": 0.05261,
+        "cpu_user": 30.475312,
+        "max_waited_child_rss_kib": 69468,
+        "rss_kib": 93968,
+        "samples": 5862,
+        "wall": 30.528036092
+      },
+      "incremental": {
+        "cgroup_kib": 92952,
+        "cpu": 32.603415,
+        "cpu_system": 0.164005,
+        "cpu_user": 32.439411,
+        "max_waited_child_rss_kib": 84208,
+        "rss_kib": 108184,
+        "samples": 6291,
+        "wall": 32.645251023
+      },
+      "incremental_session_max_sampled_rss_kib": 125940,
+      "old_full": {
+        "cgroup_kib": 115180,
+        "cpu": 7.517038,
+        "cpu_system": 0.052375,
+        "cpu_user": 7.464663,
+        "max_waited_child_rss_kib": 111148,
+        "rss_kib": 138152,
+        "samples": 1442,
+        "wall": 7.515904348
+      },
+      "old_instrumented": {
+        "cgroup_kib": 98676,
+        "cpu": 0.861336,
+        "cpu_system": 0.100193,
+        "cpu_user": 0.761143,
+        "max_waited_child_rss_kib": 84208,
+        "rss_kib": 125940,
+        "samples": 164,
+        "wall": 0.854844228
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 30.3766,
+      "incremental": 31.940404154
+    },
+    "speedup": 0.9351447801853835,
+    "symex_time": {
+      "full": 0.0157756,
+      "incremental": 0.013466721
+    },
+    "theory_context_differences": [
+      "unmapped_event_visit_or_thread"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "threshold_guard",
+    "change_analysis_time": 0.008405407,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000697334,
+      "incremental_cnf_and_graph": 0.060181393
+    },
+    "config_hash": "54079a57472e939f9499b56f279bc0ba94370085b6d33b82b03a8a4554113560",
+    "constraint_update_time": 0.002186984,
+    "constraints_rebuilt": 23,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.002186984
+    },
+    "events_rebuilt": 11,
+    "events_reused": 22,
+    "executed_new_symex_steps": 23,
+    "experiment_unit_sha256": "99199d175d90b6d47e69a38db843e4e51cb45f268c18aee7c041e98c9198ac8a",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000697334,
+      "Post-process": 0.000125722,
+      "Postprocess Equation": 0.0020577,
+      "Solver": 0.000325026,
+      "Symex": 0.0020211,
+      "decision procedure": 0.00286267
+    },
+    "full_replay_cycle_time": 0.174402647,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 84,
+    "full_time": 0.082971865,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 60181393,
+      "equation_export": 6707653,
+      "event_constraints": 2186984,
+      "goal_conversion": 28120,
+      "result_output": 30841,
+      "solve": 637763,
+      "symbolic_execution": 653513,
+      "symex_cleanup": 450559
+    },
+    "incremental_replay_cycle_time": 0.627901495,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.339686262,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.22e-06,
+    "lemma_validate_time": 0.016001117,
+    "lemmas_exported": 2,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 2,
+    "model_path": "incremental",
+    "new_hash": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "e8f651f320efc65f0278fc468e51c6e6624c7346b1806deed4f8f295e1449dc4",
+      "source_hash": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+      "steps": 74
+    },
+    "old_full_time": 0.084275751,
+    "old_hash": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.281060202,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21408396299739252
+    },
+    "patch_origin": "stage2_manual",
+    "patch_type": "guard",
+    "peak_rss": {
+      "full": 50012,
+      "incremental": 81164,
+      "old_full": 50416,
+      "old_instrumented": 61556
+    },
+    "po_edges_reused": 20,
+    "property_hash": "7f1d4f10c59309179a1e1cbad357f08f1c3e1f40c42a015a1afa85d907c3ad46",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8597b2dd0c0e343b8cf2aef2b8788f26adea7ad8561d25ccfafaed37be3a8a54",
+    "repeat": 2,
+    "replay_patch_time": 0.007155031,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31032,
+        "cpu": 0.087314,
+        "cpu_system": 0.036264,
+        "cpu_user": 0.051049,
+        "max_waited_child_rss_kib": 40468,
+        "rss_kib": 50012,
+        "samples": 15,
+        "wall": 0.082971865
+      },
+      "incremental": {
+        "cgroup_kib": 34980,
+        "cpu": 0.288845,
+        "cpu_system": 0.048328,
+        "cpu_user": 0.240518,
+        "max_waited_child_rss_kib": 40748,
+        "rss_kib": 81164,
+        "samples": 64,
+        "wall": 0.339686262
+      },
+      "incremental_session_max_sampled_rss_kib": 81164,
+      "old_full": {
+        "cgroup_kib": 31060,
+        "cpu": 0.087527,
+        "cpu_system": 0.024408,
+        "cpu_user": 0.063118,
+        "max_waited_child_rss_kib": 40508,
+        "rss_kib": 50416,
+        "samples": 16,
+        "wall": 0.084275751
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31532,
+        "cpu": 0.279783,
+        "cpu_system": 0.087568,
+        "cpu_user": 0.192215,
+        "max_waited_child_rss_kib": 40748,
+        "rss_kib": 61556,
+        "samples": 54,
+        "wall": 0.281060202
+      }
+    },
+    "reused_prefix_steps": 61,
+    "solve_time": {
+      "full": 0.000325026,
+      "incremental": 0.000637763
+    },
+    "speedup": 0.24426029039702524,
+    "symex_time": {
+      "full": 0.0020211,
+      "incremental": 0.000653513
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "split_counter",
+    "change_analysis_time": 0.015465677,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00325224,
+      "incremental_cnf_and_graph": 0.091695438
+    },
+    "config_hash": "1d346cde0da4b29ab7ccdda4283f7197c555bdf1f57e6cb74eeb9ea7e98f6927",
+    "constraint_update_time": 0.003230914,
+    "constraints_rebuilt": 59,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.003230914
+    },
+    "events_rebuilt": 52,
+    "events_reused": 0,
+    "executed_new_symex_steps": 156,
+    "experiment_unit_sha256": "4462c6fc60721161dc0c58cc488757cb25dc6501fc9a777ef4fb11383deaeb28",
+    "fallback_reason": "synchronization_calls_changed:record_one",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": 12.164122268,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00325224,
+      "Post-process": 0.0004906,
+      "Postprocess Equation": 0.00336697,
+      "Solver": 0.00173086,
+      "Symex": 0.00429737,
+      "decision procedure": 0.00771138
+    },
+    "full_replay_cycle_time": 0.270732576,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 156,
+    "full_time": 0.093907161,
+    "historical_repair": {
+      "scope": "Stage 2 mini controller span",
+      "seconds": 11.958345,
+      "source": "reports/evidence/stage-02/mini-20261123T092658163058Z.json"
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": 12.903985695,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 91695438,
+      "equation_export": 11654529,
+      "event_constraints": 3230914,
+      "goal_conversion": 27860,
+      "parse_goto": 140565726,
+      "result_output": 37980,
+      "solve": 2668643,
+      "symbolic_execution": 3393207,
+      "symex_cleanup": 1082291
+    },
+    "incremental_replay_cycle_time": 1.010596003,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.549435361,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.32e-06,
+    "lemma_validate_time": 0.038129426,
+    "lemmas_exported": 6,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 6,
+    "model_path": "full_fallback",
+    "new_hash": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "4a762dc2af74e02b23c87cecc16dbaacd853635bb8f4f6518660025003408126",
+      "source_hash": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+      "steps": 166
+    },
+    "old_full_time": 0.111870107,
+    "old_hash": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.396205334,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.2140644129976863
+    },
+    "patch_origin": "stage2_mini_deepseek",
+    "patch_type": "synchronization",
+    "peak_rss": {
+      "full": 50592,
+      "incremental": 84436,
+      "old_full": 51408,
+      "old_instrumented": 62412
+    },
+    "po_edges_reused": 0,
+    "property_hash": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "94af48f287d4badca8f154fff78decb250367f449c16dd4ac3b78962f1a8dd92",
+    "repeat": 2,
+    "replay_patch_time": 0.064955308,
+    "resources": {
+      "full": {
+        "cgroup_kib": 30940,
+        "cpu": 0.095351,
+        "cpu_system": 0.036362,
+        "cpu_user": 0.058988,
+        "max_waited_child_rss_kib": 40504,
+        "rss_kib": 50592,
+        "samples": 18,
+        "wall": 0.093907161
+      },
+      "incremental": {
+        "cgroup_kib": 46256,
+        "cpu": 0.539405,
+        "cpu_system": 0.135696,
+        "cpu_user": 0.403709,
+        "max_waited_child_rss_kib": 40732,
+        "rss_kib": 84436,
+        "samples": 105,
+        "wall": 0.549435361
+      },
+      "incremental_session_max_sampled_rss_kib": 84436,
+      "old_full": {
+        "cgroup_kib": 30944,
+        "cpu": 0.113427,
+        "cpu_system": 0.028248,
+        "cpu_user": 0.08518,
+        "max_waited_child_rss_kib": 40440,
+        "rss_kib": 51408,
+        "samples": 21,
+        "wall": 0.111870107
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31476,
+        "cpu": 0.394289,
+        "cpu_system": 0.082799,
+        "cpu_user": 0.311489,
+        "max_waited_child_rss_kib": 40732,
+        "rss_kib": 62412,
+        "samples": 76,
+        "wall": 0.396205334
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.00173086,
+      "incremental": 0.002668643
+    },
+    "speedup": 0.17091575764087016,
+    "symex_time": {
+      "full": 0.00429737,
+      "incremental": 0.003393207
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "partial_counter",
+    "change_analysis_time": 0.015462777,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00545816,
+      "incremental_cnf_and_graph": 0.106931359
+    },
+    "config_hash": "e99a878ecedfabc62e9ac4d529c4b2820c6e2e60c466fc7291f36e333b5ec3b3",
+    "constraint_update_time": 0.003724954,
+    "constraints_rebuilt": 76,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.003724954
+    },
+    "events_rebuilt": 58,
+    "events_reused": 0,
+    "executed_new_symex_steps": 176,
+    "experiment_unit_sha256": "910bbbad183f742f4c16ed52c27690bd9b641c23366990850f0250596a5e81ad",
+    "fallback_reason": "synchronization_calls_changed:record_left",
+    "formal_phase_match": true,
+    "full_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "1b797d548f1c012b73755e180de1ec88f03bbf5a8382434de25bba7e1eef15b7",
+      "source_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+      "steps": 156
+    },
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00545816,
+      "Post-process": 0.00047541,
+      "Postprocess Equation": 0.00372258,
+      "Solver": 0.00248697,
+      "Symex": 0.00472355,
+      "decision procedure": 0.0108174
+    },
+    "full_replay_cycle_time": 0.223090832,
+    "full_result": "VIOLATION",
+    "full_symex_steps": 176,
+    "full_time": 0.104232536,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "72362b8d7a3a5a7a7976b7d3cc478f6252cc913af20ce3f7818ef81bb027c77c",
+      "source_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+      "steps": 156
+    },
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 106931359,
+      "equation_export": 13033678,
+      "event_constraints": 3724954,
+      "goal_conversion": 24801,
+      "parse_goto": 139617637,
+      "result_output": 2107452,
+      "solve": 3593561,
+      "symbolic_execution": 3933609,
+      "symex_cleanup": 1204724
+    },
+    "incremental_replay_cycle_time": 1.003993901,
+    "incremental_result": "VIOLATION",
+    "incremental_time": 0.602694226,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.64e-06,
+    "lemma_validate_time": 0.047333928,
+    "lemmas_exported": 6,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 6,
+    "model_path": "full_fallback",
+    "new_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "95cf0d94f049df99d1a4a65a02cc330d76412c0fcc717d93c181c3c8fd28ba3c",
+      "source_hash": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+      "steps": 170
+    },
+    "old_full_time": 0.11148703,
+    "old_hash": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.393928409,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21408241400058614
+    },
+    "patch_origin": "stage3_manual",
+    "patch_type": "partial_synchronization",
+    "peak_rss": {
+      "full": 50848,
+      "incremental": 85084,
+      "old_full": 51156,
+      "old_instrumented": 63708
+    },
+    "po_edges_reused": 0,
+    "property_hash": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "185858ef1d76dc3e94aef90ea5285cd8f0b0de81dc77f7fb7d3824e66239020e",
+    "repeat": 2,
+    "replay_patch_time": 0.007371266,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31020,
+        "cpu": 0.105438,
+        "cpu_system": 0.032328,
+        "cpu_user": 0.073109,
+        "max_waited_child_rss_kib": 40468,
+        "rss_kib": 50848,
+        "samples": 20,
+        "wall": 0.104232536
+      },
+      "incremental": {
+        "cgroup_kib": 48096,
+        "cpu": 0.566226,
+        "cpu_system": 0.131635,
+        "cpu_user": 0.434591,
+        "max_waited_child_rss_kib": 40488,
+        "rss_kib": 85084,
+        "samples": 115,
+        "wall": 0.602694226
+      },
+      "incremental_session_max_sampled_rss_kib": 85084,
+      "old_full": {
+        "cgroup_kib": 31048,
+        "cpu": 0.11344,
+        "cpu_system": 0.031389,
+        "cpu_user": 0.08205,
+        "max_waited_child_rss_kib": 40448,
+        "rss_kib": 51156,
+        "samples": 21,
+        "wall": 0.11148703
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31620,
+        "cpu": 0.394791,
+        "cpu_system": 0.092544,
+        "cpu_user": 0.302247,
+        "max_waited_child_rss_kib": 40488,
+        "rss_kib": 63708,
+        "samples": 75,
+        "wall": 0.393928409
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.00248697,
+      "incremental": 0.003593561
+    },
+    "speedup": 0.17294430824694842,
+    "symex_time": {
+      "full": 0.00472355,
+      "incremental": 0.003933609
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "batch_retained",
+    "change_analysis_time": 0.008131501,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000470259,
+      "incremental_cnf_and_graph": 0.052812587
+    },
+    "config_hash": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "constraint_update_time": 0.001613212,
+    "constraints_rebuilt": 10,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.001613212
+    },
+    "events_rebuilt": 5,
+    "events_reused": 20,
+    "executed_new_symex_steps": 13,
+    "experiment_unit_sha256": "daabb1f0e6e6c53ef39b879914cc830cde0d639845a2e0670321a3181bc80426",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "1104297697776347797ff4d7d337f5592bffcfbc1e3cc7551d6f768804f43e5a",
+      "source_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+      "steps": 62
+    },
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000470259,
+      "Post-process": 0.000119703,
+      "Postprocess Equation": 0.00154939,
+      "Solver": 0.000285856,
+      "Symex": 0.00184928,
+      "decision procedure": 0.0021898
+    },
+    "full_replay_cycle_time": 0.175687263,
+    "full_result": "VIOLATION",
+    "full_symex_steps": 73,
+    "full_time": 0.083674979,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "74a3bd9878dec3abae0c17a4764a29ddb0692db9818cd65c690e03e0d46f6bf3",
+      "source_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+      "steps": 62
+    },
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 52812587,
+      "equation_export": 5837585,
+      "event_constraints": 1613212,
+      "goal_conversion": 22891,
+      "result_output": 844307,
+      "solve": 548781,
+      "symbolic_execution": 440229,
+      "symex_cleanup": 429398
+    },
+    "incremental_replay_cycle_time": 0.62004685,
+    "incremental_result": "VIOLATION",
+    "incremental_time": 0.340868586,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.4e-06,
+    "lemma_import_time": 9.981e-06,
+    "lemma_validate_time": 0.012304604,
+    "lemmas_exported": 1,
+    "lemmas_imported": 1,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "035202479a5e16e6e5d490b7b00ac91e2c83822b092689200dd1ff338745afe0",
+      "source_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+      "steps": 62
+    },
+    "old_full_time": 0.084363252,
+    "old_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.271529232,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21407813300174894
+    },
+    "patch_origin": "stage6_manual",
+    "patch_type": "constant_retained_error",
+    "peak_rss": {
+      "full": 50708,
+      "incremental": 80288,
+      "old_full": 49140,
+      "old_instrumented": 65016
+    },
+    "po_edges_reused": 18,
+    "property_hash": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+    "repeat": 2,
+    "replay_patch_time": 0.007649032,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31016,
+        "cpu": 0.085286,
+        "cpu_system": 0.024324,
+        "cpu_user": 0.060961,
+        "max_waited_child_rss_kib": 40652,
+        "rss_kib": 50708,
+        "samples": 16,
+        "wall": 0.083674979
+      },
+      "incremental": {
+        "cgroup_kib": 34012,
+        "cpu": 0.284626,
+        "cpu_system": 0.086929,
+        "cpu_user": 0.197696,
+        "max_waited_child_rss_kib": 41004,
+        "rss_kib": 80288,
+        "samples": 65,
+        "wall": 0.340868586
+      },
+      "incremental_session_max_sampled_rss_kib": 80288,
+      "old_full": {
+        "cgroup_kib": 31040,
+        "cpu": 0.085694,
+        "cpu_system": 0.048027,
+        "cpu_user": 0.037666,
+        "max_waited_child_rss_kib": 40420,
+        "rss_kib": 49140,
+        "samples": 16,
+        "wall": 0.084363252
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31452,
+        "cpu": 0.271389,
+        "cpu_system": 0.082495,
+        "cpu_user": 0.188895,
+        "max_waited_child_rss_kib": 41004,
+        "rss_kib": 65016,
+        "samples": 52,
+        "wall": 0.271529232
+      }
+    },
+    "reused_prefix_steps": 60,
+    "solve_time": {
+      "full": 0.000285856,
+      "incremental": 0.000548781
+    },
+    "speedup": 0.2454757711231272,
+    "symex_time": {
+      "full": 0.00184928,
+      "incremental": 0.000440229
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "fib_updates",
+    "change_analysis_time": 0.010682802,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00243637,
+      "incremental_cnf_and_graph": 0.093729708
+    },
+    "config_hash": "1f8084b8b172f6179cd84eb22dc072fdb1977285e92ddbd51b790e53aae687e4",
+    "constraint_update_time": 0.004141672,
+    "constraints_rebuilt": 102,
+    "constraints_retained": 17,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.004141672
+    },
+    "events_rebuilt": 30,
+    "events_reused": 31,
+    "executed_new_symex_steps": 88,
+    "experiment_unit_sha256": "fe71714b25c3bcc5c82e0f76b2b24aa3a70cdc048b3f9d0fd6c109f677d0c314",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00243637,
+      "Post-process": 0.000569821,
+      "Postprocess Equation": 0.00415999,
+      "Solver": 0.0280293,
+      "Symex": 0.00432703,
+      "decision procedure": 0.0339108
+    },
+    "full_replay_cycle_time": 0.244125907,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 183,
+    "full_time": 0.11960604,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 93729708,
+      "equation_export": 14127360,
+      "event_constraints": 4141672,
+      "goal_conversion": 23371,
+      "result_output": 44971,
+      "solve": 20636779,
+      "symbolic_execution": 1772905,
+      "symex_cleanup": 882237
+    },
+    "incremental_replay_cycle_time": 0.80823468,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.392385727,
+    "input_tokens": 0,
+    "lemma_bind_time": 1.5781e-05,
+    "lemma_import_time": 1.5981e-05,
+    "lemma_validate_time": 0.032938873,
+    "lemmas_exported": 8,
+    "lemmas_imported": 7,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "40"
+      },
+      "property": "main.assertion.1",
+      "sha256": "f3f944784c8ea004c7206c50c39cd09a9d43ba3290cca1c6b3c1775243981bd0",
+      "source_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+      "steps": 151
+    },
+    "old_full_time": 0.100330858,
+    "old_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.391659944,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21403091300089727
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "arithmetic_constant",
+    "peak_rss": {
+      "full": 49712,
+      "incremental": 83540,
+      "old_full": 49776,
+      "old_instrumented": 64644
+    },
+    "po_edges_reused": 28,
+    "property_hash": "0b3d7d8205472ac045b8f0577e15ee0b60d97a202f1c4b05e5a0a08a42dfa11e",
+    "read_bundles_reused": 5,
+    "reference_cex0_sha256": "c5b66cca650b505ec341219b81a7e973a372d5eb5748344a03669a276b46f233",
+    "repeat": 2,
+    "replay_patch_time": 0.024189009,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31024,
+        "cpu": 0.120878,
+        "cpu_system": 0.029531,
+        "cpu_user": 0.091347,
+        "max_waited_child_rss_kib": 40364,
+        "rss_kib": 49712,
+        "samples": 23,
+        "wall": 0.11960604
+      },
+      "incremental": {
+        "cgroup_kib": 43004,
+        "cpu": 0.359671,
+        "cpu_system": 0.065787,
+        "cpu_user": 0.293883,
+        "max_waited_child_rss_kib": 40932,
+        "rss_kib": 83540,
+        "samples": 75,
+        "wall": 0.392385727
+      },
+      "incremental_session_max_sampled_rss_kib": 83540,
+      "old_full": {
+        "cgroup_kib": 31028,
+        "cpu": 0.101701,
+        "cpu_system": 0.036143,
+        "cpu_user": 0.065559,
+        "max_waited_child_rss_kib": 40628,
+        "rss_kib": 49776,
+        "samples": 19,
+        "wall": 0.100330858
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31496,
+        "cpu": 0.394233,
+        "cpu_system": 0.099356,
+        "cpu_user": 0.294878,
+        "max_waited_child_rss_kib": 40932,
+        "rss_kib": 64644,
+        "samples": 75,
+        "wall": 0.391659944
+      }
+    },
+    "reused_prefix_steps": 95,
+    "solve_time": {
+      "full": 0.0280293,
+      "incremental": 0.020636779
+    },
+    "speedup": 0.3048175093280087,
+    "symex_time": {
+      "full": 0.00432703,
+      "incremental": 0.001772905
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "airline_reservations",
+    "change_analysis_time": 0.010941277,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.0123269,
+      "incremental_cnf_and_graph": 0.094701358
+    },
+    "config_hash": "bb21d4c6902368c39d226faa6128a057aa89122df665f1e5eacba459e92713f1",
+    "constraint_update_time": 0.006417256,
+    "constraints_rebuilt": 185,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.006417256
+    },
+    "events_rebuilt": 113,
+    "events_reused": 0,
+    "executed_new_symex_steps": 323,
+    "experiment_unit_sha256": "60af2775385ee917c4dcfb00896b838a28e595b9b940eddf6a7e99d55ad24e7f",
+    "fallback_reason": "synchronization_calls_changed:reserve_seat",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.0123269,
+      "Post-process": 0.00304534,
+      "Postprocess Equation": 0.00648371,
+      "Solver": 0.169783,
+      "Symex": 0.00967669,
+      "decision procedure": 0.186576
+    },
+    "full_replay_cycle_time": 0.560038936,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 323,
+    "full_time": 0.284819666,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 94701358,
+      "equation_export": 25004152,
+      "event_constraints": 6417256,
+      "goal_conversion": 29250,
+      "parse_goto": 140680936,
+      "result_output": 39891,
+      "solve": 121251210,
+      "symbolic_execution": 8449957,
+      "symex_cleanup": 2095542
+    },
+    "incremental_replay_cycle_time": 1.275299141,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.744954049,
+    "input_tokens": 0,
+    "lemma_bind_time": null,
+    "lemma_import_time": 1.24e-06,
+    "lemma_validate_time": 0.012829123,
+    "lemmas_exported": 31,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 31,
+    "model_path": "full_fallback",
+    "new_hash": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "4f36142d335955f8d0863ddcb08dd404a6f1963c11292479c1944366013caa9c",
+      "source_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+      "steps": 348
+    },
+    "old_full_time": 0.227674648,
+    "old_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.48280047,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21408071299811127
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "critical_section",
+    "peak_rss": {
+      "full": 51956,
+      "incremental": 85644,
+      "old_full": 71408,
+      "old_instrumented": 84488
+    },
+    "po_edges_reused": 0,
+    "property_hash": "14284f2bdad4aa5b6a8d9f153c5893ea2bd4c86de0bab77e38e08a5dae80147c",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "40c1dbaa58881ad8a23bfd9971f292cea24e5e0baa22086983795e4154ba9cfa",
+    "repeat": 2,
+    "replay_patch_time": 0.047544622,
+    "resources": {
+      "full": {
+        "cgroup_kib": 30976,
+        "cpu": 0.287605,
+        "cpu_system": 0.040007,
+        "cpu_user": 0.247598,
+        "max_waited_child_rss_kib": 40412,
+        "rss_kib": 51956,
+        "samples": 54,
+        "wall": 0.284819666
+      },
+      "incremental": {
+        "cgroup_kib": 50860,
+        "cpu": 0.685735,
+        "cpu_system": 0.153269,
+        "cpu_user": 0.532465,
+        "max_waited_child_rss_kib": 43748,
+        "rss_kib": 85644,
+        "samples": 143,
+        "wall": 0.744954049
+      },
+      "incremental_session_max_sampled_rss_kib": 85644,
+      "old_full": {
+        "cgroup_kib": 48516,
+        "cpu": 0.229707,
+        "cpu_system": 0.056277,
+        "cpu_user": 0.17343,
+        "max_waited_child_rss_kib": 44204,
+        "rss_kib": 71408,
+        "samples": 43,
+        "wall": 0.227674648
+      },
+      "old_instrumented": {
+        "cgroup_kib": 57488,
+        "cpu": 0.48426,
+        "cpu_system": 0.096901,
+        "cpu_user": 0.387359,
+        "max_waited_child_rss_kib": 43748,
+        "rss_kib": 84488,
+        "samples": 92,
+        "wall": 0.48280047
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.169783,
+      "incremental": 0.12125121
+    },
+    "speedup": 0.38233185843117695,
+    "symex_time": {
+      "full": 0.00967669,
+      "incremental": 0.008449957
+    },
+    "theory_context_differences": [
+      "unmapped_event_visit_or_thread"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "fib_updates_8",
+    "change_analysis_time": 0.010326914,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00554051,
+      "incremental_cnf_and_graph": 0.137164553
+    },
+    "config_hash": "f9884dd280e5d841d58ef5759d23839c9a209260cd02c0dc9d13480e484f13f4",
+    "constraint_update_time": 0.006337385,
+    "constraints_rebuilt": 282,
+    "constraints_retained": 17,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.006337385
+    },
+    "events_rebuilt": 54,
+    "events_reused": 31,
+    "executed_new_symex_steps": 144,
+    "experiment_unit_sha256": "327b33cfd7a707926e83359388bbcd37d202aa9a3cd3c9f7f796404bbe4152ec",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00554051,
+      "Post-process": 0.00051835,
+      "Postprocess Equation": 0.0063208,
+      "Solver": 2.32407,
+      "Symex": 0.00508748,
+      "decision procedure": 2.33458
+    },
+    "full_replay_cycle_time": 2.61668604,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 239,
+    "full_time": 2.426454019,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 137164553,
+      "equation_export": 20536147,
+      "event_constraints": 6337385,
+      "goal_conversion": 33961,
+      "result_output": 35481,
+      "solve": 2242019149,
+      "symbolic_execution": 2778815,
+      "symex_cleanup": 910168
+    },
+    "incremental_replay_cycle_time": 3.41182384,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 2.696625189,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.5181e-05,
+    "lemma_import_time": 5.0831e-05,
+    "lemma_validate_time": 0.046957529,
+    "lemmas_exported": 14,
+    "lemmas_imported": 14,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "40"
+      },
+      "property": "main.assertion.1",
+      "sha256": "c9f0b45fdf9e5eb6549759c9f40606c550dc540d38251f8d6397ded5ba3696ab",
+      "source_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+      "steps": 187
+    },
+    "old_full_time": 0.183032749,
+    "old_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.707999379,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21408730300026946
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "arithmetic_constant",
+    "peak_rss": {
+      "full": 54732,
+      "incremental": 87720,
+      "old_full": 49412,
+      "old_instrumented": 60720
+    },
+    "po_edges_reused": 28,
+    "property_hash": "8c6ab0595538b2150f0db28c7189244a82ccff4bfd29ba849cad68b065927c1b",
+    "read_bundles_reused": 5,
+    "reference_cex0_sha256": "e68d3a7574817d643699e399df6751b7c5f914089e4349902afee9386cbdc87a",
+    "repeat": 2,
+    "replay_patch_time": 0.007199272,
+    "resources": {
+      "full": {
+        "cgroup_kib": 33116,
+        "cpu": 2.430022,
+        "cpu_system": 0.036128,
+        "cpu_user": 2.393895,
+        "max_waited_child_rss_kib": 40296,
+        "rss_kib": 54732,
+        "samples": 466,
+        "wall": 2.426454019
+      },
+      "incremental": {
+        "cgroup_kib": 55116,
+        "cpu": 2.638539,
+        "cpu_system": 0.103979,
+        "cpu_user": 2.534559,
+        "max_waited_child_rss_kib": 41112,
+        "rss_kib": 87720,
+        "samples": 518,
+        "wall": 2.696625189
+      },
+      "incremental_session_max_sampled_rss_kib": 87720,
+      "old_full": {
+        "cgroup_kib": 30984,
+        "cpu": 0.185449,
+        "cpu_system": 0.039442,
+        "cpu_user": 0.146007,
+        "max_waited_child_rss_kib": 40292,
+        "rss_kib": 49412,
+        "samples": 35,
+        "wall": 0.183032749
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31672,
+        "cpu": 0.709561,
+        "cpu_system": 0.080456,
+        "cpu_user": 0.629105,
+        "max_waited_child_rss_kib": 41112,
+        "rss_kib": 60720,
+        "samples": 136,
+        "wall": 0.707999379
+      }
+    },
+    "reused_prefix_steps": 95,
+    "solve_time": {
+      "full": 2.32407,
+      "incremental": 2.242019149
+    },
+    "speedup": 0.8998113749355768,
+    "symex_time": {
+      "full": 0.00508748,
+      "incremental": 0.002778815
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "airline_reservations_6",
+    "change_analysis_time": 0.010853264,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.027007,
+      "incremental_cnf_and_graph": 0.141262133
+    },
+    "config_hash": "bc631cb9642b4166f90511c64691c38bec69aeb804a1c0bdb93d2e316b255785",
+    "constraint_update_time": 0.01060816,
+    "constraints_rebuilt": 380,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.01060816
+    },
+    "events_rebuilt": 187,
+    "events_reused": 0,
+    "executed_new_symex_steps": 467,
+    "experiment_unit_sha256": "5f302f043cbc033b8fb12aa737d689b960fc7d799a69aa9e32511801e64a8ade",
+    "fallback_reason": "synchronization_calls_changed:reserve_seat",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.027007,
+      "Post-process": 0.0098408,
+      "Postprocess Equation": 0.0112483,
+      "Solver": 31.8136,
+      "Symex": 0.0165685,
+      "decision procedure": 31.8477
+    },
+    "full_replay_cycle_time": 39.798104307,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 467,
+    "full_time": 31.97569591,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 141262133,
+      "equation_export": 38713035,
+      "event_constraints": 10608160,
+      "goal_conversion": 28171,
+      "parse_goto": 140685632,
+      "result_output": 35371,
+      "solve": 32195715558,
+      "symbolic_execution": 13445896,
+      "symex_cleanup": 3618452
+    },
+    "incremental_replay_cycle_time": 33.745375162,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 32.894382946,
+    "input_tokens": 0,
+    "lemma_bind_time": null,
+    "lemma_import_time": 1.5e-06,
+    "lemma_validate_time": 0.017251601,
+    "lemmas_exported": 84,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 84,
+    "model_path": "full_fallback",
+    "new_hash": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "a9cd28014b4454fee27d0b7cacd5a27e62b05f50f63ca0e10442a51552789b8a",
+      "source_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+      "steps": 516
+    },
+    "old_full_time": 7.815100443,
+    "old_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.843684262,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21407041299971752
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "critical_section",
+    "peak_rss": {
+      "full": 93564,
+      "incremental": 109100,
+      "old_full": 138024,
+      "old_instrumented": 125496
+    },
+    "po_edges_reused": 0,
+    "property_hash": "ae6fc0ba25f346cf0f69f9d92e6c223a37ff6aed564c27d6455416b29054ea93",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "82f1eda18cf73390b592495a36c43087d5981808b4a43565c114d3b273f4466c",
+    "repeat": 2,
+    "replay_patch_time": 0.007307954,
+    "resources": {
+      "full": {
+        "cgroup_kib": 71000,
+        "cpu": 31.976071,
+        "cpu_system": 0.064118,
+        "cpu_user": 31.911952,
+        "max_waited_child_rss_kib": 68872,
+        "rss_kib": 93564,
+        "samples": 6137,
+        "wall": 31.97569591
+      },
+      "incremental": {
+        "cgroup_kib": 93992,
+        "cpu": 32.851558,
+        "cpu_system": 0.177259,
+        "cpu_user": 32.674298,
+        "max_waited_child_rss_kib": 83976,
+        "rss_kib": 109100,
+        "samples": 6336,
+        "wall": 32.894382946
+      },
+      "incremental_session_max_sampled_rss_kib": 125496,
+      "old_full": {
+        "cgroup_kib": 115196,
+        "cpu": 7.817022,
+        "cpu_system": 0.104296,
+        "cpu_user": 7.712726,
+        "max_waited_child_rss_kib": 111088,
+        "rss_kib": 138024,
+        "samples": 1500,
+        "wall": 7.815100443
+      },
+      "old_instrumented": {
+        "cgroup_kib": 98784,
+        "cpu": 0.84803,
+        "cpu_system": 0.135425,
+        "cpu_user": 0.712605,
+        "max_waited_child_rss_kib": 83976,
+        "rss_kib": 125496,
+        "samples": 162,
+        "wall": 0.843684262
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 31.8136,
+      "incremental": 32.195715558
+    },
+    "speedup": 0.9720716136396863,
+    "symex_time": {
+      "full": 0.0165685,
+      "incremental": 0.013445896
+    },
+    "theory_context_differences": [
+      "unmapped_event_visit_or_thread"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "batch_total",
+    "change_analysis_time": 0.008136887,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000491469,
+      "incremental_cnf_and_graph": 0.05358676
+    },
+    "config_hash": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "constraint_update_time": 0.001658453,
+    "constraints_rebuilt": 10,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.001658453
+    },
+    "events_rebuilt": 5,
+    "events_reused": 20,
+    "executed_new_symex_steps": 13,
+    "experiment_unit_sha256": "3c2c79dadc8fe1f9659ae3ebff204d7cce679626e6c4c40b125e58f8de99681c",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": 9.416277635,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000491469,
+      "Post-process": 0.000121682,
+      "Postprocess Equation": 0.00153236,
+      "Solver": 0.000252684,
+      "Symex": 0.00185685,
+      "decision procedure": 0.0021454
+    },
+    "full_replay_cycle_time": 0.178496525,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 73,
+    "full_time": 0.085969909,
+    "historical_repair": {
+      "scope": "successful Stage 6 AI adapter and freeze",
+      "seconds": 9.244975,
+      "source": "reports/evidence/stage-06/cases/ai-single-edit.json"
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": 9.860945993,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 53586760,
+      "equation_export": 5545377,
+      "event_constraints": 1658453,
+      "goal_conversion": 23671,
+      "result_output": 30181,
+      "solve": 430078,
+      "symbolic_execution": 431138,
+      "symex_cleanup": 424929
+    },
+    "incremental_replay_cycle_time": 0.623164883,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.339486228,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.29e-06,
+    "lemma_import_time": 8.44e-06,
+    "lemma_validate_time": 0.012507013,
+    "lemmas_exported": 1,
+    "lemmas_imported": 1,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "035202479a5e16e6e5d490b7b00ac91e2c83822b092689200dd1ff338745afe0",
+      "source_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+      "steps": 62
+    },
+    "old_full_time": 0.085332726,
+    "old_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.276484765,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.2141167959998711
+    },
+    "patch_origin": "stage6_mini_deepseek",
+    "patch_type": "constant",
+    "peak_rss": {
+      "full": 50040,
+      "incremental": 81176,
+      "old_full": 50856,
+      "old_instrumented": 64672
+    },
+    "po_edges_reused": 18,
+    "property_hash": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+    "repeat": 2,
+    "replay_patch_time": 0.00719389,
+    "resources": {
+      "full": {
+        "cgroup_kib": 30960,
+        "cpu": 0.088755,
+        "cpu_system": 0.045103,
+        "cpu_user": 0.043651,
+        "max_waited_child_rss_kib": 40716,
+        "rss_kib": 50040,
+        "samples": 16,
+        "wall": 0.085969909
+      },
+      "incremental": {
+        "cgroup_kib": 34168,
+        "cpu": 0.286789,
+        "cpu_system": 0.051749,
+        "cpu_user": 0.23504,
+        "max_waited_child_rss_kib": 40612,
+        "rss_kib": 81176,
+        "samples": 65,
+        "wall": 0.339486228
+      },
+      "incremental_session_max_sampled_rss_kib": 81176,
+      "old_full": {
+        "cgroup_kib": 30984,
+        "cpu": 0.086211,
+        "cpu_system": 0.03513,
+        "cpu_user": 0.051081,
+        "max_waited_child_rss_kib": 40608,
+        "rss_kib": 50856,
+        "samples": 16,
+        "wall": 0.085332726
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31528,
+        "cpu": 0.278783,
+        "cpu_system": 0.104672,
+        "cpu_user": 0.174111,
+        "max_waited_child_rss_kib": 40612,
+        "rss_kib": 64672,
+        "samples": 53,
+        "wall": 0.276484765
+      }
+    },
+    "reused_prefix_steps": 60,
+    "solve_time": {
+      "full": 0.000252684,
+      "incremental": 0.000430078
+    },
+    "speedup": 0.25323533595595515,
+    "symex_time": {
+      "full": 0.00185685,
+      "incremental": 0.000431138
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "split_counter",
+    "change_analysis_time": 0.015824624,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00344579,
+      "incremental_cnf_and_graph": 0.091280766
+    },
+    "config_hash": "1d346cde0da4b29ab7ccdda4283f7197c555bdf1f57e6cb74eeb9ea7e98f6927",
+    "constraint_update_time": 0.003231492,
+    "constraints_rebuilt": 59,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.003231492
+    },
+    "events_rebuilt": 52,
+    "events_reused": 0,
+    "executed_new_symex_steps": 156,
+    "experiment_unit_sha256": "4462c6fc60721161dc0c58cc488757cb25dc6501fc9a777ef4fb11383deaeb28",
+    "fallback_reason": "synchronization_calls_changed:record_one",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": 12.1688046,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00344579,
+      "Post-process": 0.000488399,
+      "Postprocess Equation": 0.00325757,
+      "Solver": 0.00176102,
+      "Symex": 0.00442456,
+      "decision procedure": 0.00792127
+    },
+    "full_replay_cycle_time": 0.218002505,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 156,
+    "full_time": 0.097782362,
+    "historical_repair": {
+      "scope": "Stage 2 mini controller span",
+      "seconds": 11.958345,
+      "source": "reports/evidence/stage-02/mini-20261123T092658163058Z.json"
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": 12.962270538,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 91280766,
+      "equation_export": 11593653,
+      "event_constraints": 3231492,
+      "goal_conversion": 30341,
+      "parse_goto": 142469621,
+      "result_output": 38221,
+      "solve": 2689231,
+      "symbolic_execution": 3417086,
+      "symex_cleanup": 1055180
+    },
+    "incremental_replay_cycle_time": 1.011468443,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.60228221,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.33e-06,
+    "lemma_validate_time": 0.037894139,
+    "lemmas_exported": 6,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 6,
+    "model_path": "full_fallback",
+    "new_hash": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "4a762dc2af74e02b23c87cecc16dbaacd853635bb8f4f6518660025003408126",
+      "source_hash": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+      "steps": 166
+    },
+    "old_full_time": 0.112677238,
+    "old_hash": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.401643328,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21407284000088111
+    },
+    "patch_origin": "stage2_mini_deepseek",
+    "patch_type": "synchronization",
+    "peak_rss": {
+      "full": 51068,
+      "incremental": 85204,
+      "old_full": 50680,
+      "old_instrumented": 63844
+    },
+    "po_edges_reused": 0,
+    "property_hash": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "94af48f287d4badca8f154fff78decb250367f449c16dd4ac3b78962f1a8dd92",
+    "repeat": 3,
+    "replay_patch_time": 0.007542905,
+    "resources": {
+      "full": {
+        "cgroup_kib": 30956,
+        "cpu": 0.099105,
+        "cpu_system": 0.028444,
+        "cpu_user": 0.070661,
+        "max_waited_child_rss_kib": 40484,
+        "rss_kib": 51068,
+        "samples": 19,
+        "wall": 0.097782362
+      },
+      "incremental": {
+        "cgroup_kib": 46256,
+        "cpu": 0.546283,
+        "cpu_system": 0.131551,
+        "cpu_user": 0.414732,
+        "max_waited_child_rss_kib": 40896,
+        "rss_kib": 85204,
+        "samples": 115,
+        "wall": 0.60228221
+      },
+      "incremental_session_max_sampled_rss_kib": 85204,
+      "old_full": {
+        "cgroup_kib": 31024,
+        "cpu": 0.113407,
+        "cpu_system": 0.040487,
+        "cpu_user": 0.072919,
+        "max_waited_child_rss_kib": 40216,
+        "rss_kib": 50680,
+        "samples": 21,
+        "wall": 0.112677238
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31528,
+        "cpu": 0.406688,
+        "cpu_system": 0.08761,
+        "cpu_user": 0.319078,
+        "max_waited_child_rss_kib": 40896,
+        "rss_kib": 63844,
+        "samples": 76,
+        "wall": 0.401643328
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.00176102,
+      "incremental": 0.002689231
+    },
+    "speedup": 0.1623530636908568,
+    "symex_time": {
+      "full": 0.00442456,
+      "incremental": 0.003417086
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "partial_counter",
+    "change_analysis_time": 0.015911146,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.0054373,
+      "incremental_cnf_and_graph": 0.107643241
+    },
+    "config_hash": "e99a878ecedfabc62e9ac4d529c4b2820c6e2e60c466fc7291f36e333b5ec3b3",
+    "constraint_update_time": 0.003730522,
+    "constraints_rebuilt": 76,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.003730522
+    },
+    "events_rebuilt": 58,
+    "events_reused": 0,
+    "executed_new_symex_steps": 176,
+    "experiment_unit_sha256": "910bbbad183f742f4c16ed52c27690bd9b641c23366990850f0250596a5e81ad",
+    "fallback_reason": "synchronization_calls_changed:record_left",
+    "formal_phase_match": true,
+    "full_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "1b797d548f1c012b73755e180de1ec88f03bbf5a8382434de25bba7e1eef15b7",
+      "source_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+      "steps": 156
+    },
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.0054373,
+      "Post-process": 0.000468079,
+      "Postprocess Equation": 0.00368163,
+      "Solver": 0.00248435,
+      "Symex": 0.00471501,
+      "decision procedure": 0.0107546
+    },
+    "full_replay_cycle_time": 0.227549528,
+    "full_result": "VIOLATION",
+    "full_symex_steps": 176,
+    "full_time": 0.106411667,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "72362b8d7a3a5a7a7976b7d3cc478f6252cc913af20ce3f7818ef81bb027c77c",
+      "source_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+      "steps": 156
+    },
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 107643241,
+      "equation_export": 12975800,
+      "event_constraints": 3730522,
+      "goal_conversion": 27790,
+      "parse_goto": 143536392,
+      "result_output": 2120690,
+      "solve": 3675671,
+      "symbolic_execution": 3887185,
+      "symex_cleanup": 1223773
+    },
+    "incremental_replay_cycle_time": 1.025169588,
+    "incremental_result": "VIOLATION",
+    "incremental_time": 0.603452242,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.33e-06,
+    "lemma_validate_time": 0.048107606,
+    "lemmas_exported": 6,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 6,
+    "model_path": "full_fallback",
+    "new_hash": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "property": "main.assertion.1",
+      "sha256": "95cf0d94f049df99d1a4a65a02cc330d76412c0fcc717d93c181c3c8fd28ba3c",
+      "source_hash": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+      "steps": 170
+    },
+    "old_full_time": 0.113695437,
+    "old_hash": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.414274922,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21408348900149576
+    },
+    "patch_origin": "stage3_manual",
+    "patch_type": "partial_synchronization",
+    "peak_rss": {
+      "full": 49332,
+      "incremental": 84664,
+      "old_full": 51268,
+      "old_instrumented": 64820
+    },
+    "po_edges_reused": 0,
+    "property_hash": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "185858ef1d76dc3e94aef90ea5285cd8f0b0de81dc77f7fb7d3824e66239020e",
+    "repeat": 3,
+    "replay_patch_time": 0.007442424,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31040,
+        "cpu": 0.109766,
+        "cpu_system": 0.028317,
+        "cpu_user": 0.08145,
+        "max_waited_child_rss_kib": 40456,
+        "rss_kib": 49332,
+        "samples": 20,
+        "wall": 0.106411667
+      },
+      "incremental": {
+        "cgroup_kib": 48228,
+        "cpu": 0.576356,
+        "cpu_system": 0.125615,
+        "cpu_user": 0.450741,
+        "max_waited_child_rss_kib": 40764,
+        "rss_kib": 84664,
+        "samples": 115,
+        "wall": 0.603452242
+      },
+      "incremental_session_max_sampled_rss_kib": 84664,
+      "old_full": {
+        "cgroup_kib": 31004,
+        "cpu": 0.11347,
+        "cpu_system": 0.036015,
+        "cpu_user": 0.077454,
+        "max_waited_child_rss_kib": 40504,
+        "rss_kib": 51268,
+        "samples": 22,
+        "wall": 0.113695437
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31496,
+        "cpu": 0.417575,
+        "cpu_system": 0.079516,
+        "cpu_user": 0.33806,
+        "max_waited_child_rss_kib": 40764,
+        "rss_kib": 64820,
+        "samples": 79,
+        "wall": 0.414274922
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.00248435,
+      "incremental": 0.003675671
+    },
+    "speedup": 0.17633817491061704,
+    "symex_time": {
+      "full": 0.00471501,
+      "incremental": 0.003887185
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "batch_retained",
+    "change_analysis_time": 0.008057735,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000486179,
+      "incremental_cnf_and_graph": 0.053433248
+    },
+    "config_hash": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "constraint_update_time": 0.001627461,
+    "constraints_rebuilt": 10,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.001627461
+    },
+    "events_rebuilt": 5,
+    "events_reused": 20,
+    "executed_new_symex_steps": 13,
+    "experiment_unit_sha256": "daabb1f0e6e6c53ef39b879914cc830cde0d639845a2e0670321a3181bc80426",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "1104297697776347797ff4d7d337f5592bffcfbc1e3cc7551d6f768804f43e5a",
+      "source_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+      "steps": 62
+    },
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000486179,
+      "Post-process": 0.000110172,
+      "Postprocess Equation": 0.00152927,
+      "Solver": 0.000283975,
+      "Symex": 0.00190611,
+      "decision procedure": 0.00215765
+    },
+    "full_replay_cycle_time": 0.176148319,
+    "full_result": "VIOLATION",
+    "full_symex_steps": 73,
+    "full_time": 0.084838243,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "74a3bd9878dec3abae0c17a4764a29ddb0692db9818cd65c690e03e0d46f6bf3",
+      "source_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+      "steps": 62
+    },
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 53433248,
+      "equation_export": 5650259,
+      "event_constraints": 1627461,
+      "goal_conversion": 24721,
+      "result_output": 855117,
+      "solve": 592821,
+      "symbolic_execution": 420708,
+      "symex_cleanup": 436169
+    },
+    "incremental_replay_cycle_time": 0.629433741,
+    "incremental_result": "VIOLATION",
+    "incremental_time": 0.340780127,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.61e-06,
+    "lemma_import_time": 1.1811e-05,
+    "lemma_validate_time": 0.012548731,
+    "lemmas_exported": 1,
+    "lemmas_imported": 1,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "035202479a5e16e6e5d490b7b00ac91e2c83822b092689200dd1ff338745afe0",
+      "source_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+      "steps": 62
+    },
+    "old_full_time": 0.084146029,
+    "old_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.281489567,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21407444899887196
+    },
+    "patch_origin": "stage6_manual",
+    "patch_type": "constant_retained_error",
+    "peak_rss": {
+      "full": 51200,
+      "incremental": 78124,
+      "old_full": 48260,
+      "old_instrumented": 65020
+    },
+    "po_edges_reused": 18,
+    "property_hash": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+    "repeat": 3,
+    "replay_patch_time": 0.007164047,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31060,
+        "cpu": 0.086378,
+        "cpu_system": 0.032199,
+        "cpu_user": 0.054178,
+        "max_waited_child_rss_kib": 40480,
+        "rss_kib": 51200,
+        "samples": 16,
+        "wall": 0.084838243
+      },
+      "incremental": {
+        "cgroup_kib": 32668,
+        "cpu": 0.284399,
+        "cpu_system": 0.080067,
+        "cpu_user": 0.204333,
+        "max_waited_child_rss_kib": 40700,
+        "rss_kib": 78124,
+        "samples": 65,
+        "wall": 0.340780127
+      },
+      "incremental_session_max_sampled_rss_kib": 78124,
+      "old_full": {
+        "cgroup_kib": 30972,
+        "cpu": 0.085426,
+        "cpu_system": 0.020061,
+        "cpu_user": 0.065364,
+        "max_waited_child_rss_kib": 40344,
+        "rss_kib": 48260,
+        "samples": 16,
+        "wall": 0.084146029
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31504,
+        "cpu": 0.281834,
+        "cpu_system": 0.067482,
+        "cpu_user": 0.214352,
+        "max_waited_child_rss_kib": 40700,
+        "rss_kib": 65020,
+        "samples": 54,
+        "wall": 0.281489567
+      }
+    },
+    "reused_prefix_steps": 60,
+    "solve_time": {
+      "full": 0.000283975,
+      "incremental": 0.000592821
+    },
+    "speedup": 0.24895302360163743,
+    "symex_time": {
+      "full": 0.00190611,
+      "incremental": 0.000420708
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "fib_updates",
+    "change_analysis_time": 0.010440391,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00244211,
+      "incremental_cnf_and_graph": 0.094350186
+    },
+    "config_hash": "1f8084b8b172f6179cd84eb22dc072fdb1977285e92ddbd51b790e53aae687e4",
+    "constraint_update_time": 0.00412846,
+    "constraints_rebuilt": 102,
+    "constraints_retained": 17,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.00412846
+    },
+    "events_rebuilt": 30,
+    "events_reused": 31,
+    "executed_new_symex_steps": 88,
+    "experiment_unit_sha256": "fe71714b25c3bcc5c82e0f76b2b24aa3a70cdc048b3f9d0fd6c109f677d0c314",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00244211,
+      "Post-process": 0.000570691,
+      "Postprocess Equation": 0.00420034,
+      "Solver": 0.0284354,
+      "Symex": 0.00419453,
+      "decision procedure": 0.0342973
+    },
+    "full_replay_cycle_time": 0.284007005,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 183,
+    "full_time": 0.120753454,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 94350186,
+      "equation_export": 14201824,
+      "event_constraints": 4128460,
+      "goal_conversion": 23980,
+      "result_output": 50261,
+      "solve": 20552616,
+      "symbolic_execution": 1804174,
+      "symex_cleanup": 862877
+    },
+    "incremental_replay_cycle_time": 0.847955018,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.392230068,
+    "input_tokens": 0,
+    "lemma_bind_time": 1.595e-05,
+    "lemma_import_time": 1.551e-05,
+    "lemma_validate_time": 0.032807542,
+    "lemmas_exported": 8,
+    "lemmas_imported": 7,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "40"
+      },
+      "property": "main.assertion.1",
+      "sha256": "f3f944784c8ea004c7206c50c39cd09a9d43ba3290cca1c6b3c1775243981bd0",
+      "source_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+      "steps": 151
+    },
+    "old_full_time": 0.101692996,
+    "old_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.394164395,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21408145000168588
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "arithmetic_constant",
+    "peak_rss": {
+      "full": 48968,
+      "incremental": 81960,
+      "old_full": 50724,
+      "old_instrumented": 64964
+    },
+    "po_edges_reused": 28,
+    "property_hash": "0b3d7d8205472ac045b8f0577e15ee0b60d97a202f1c4b05e5a0a08a42dfa11e",
+    "read_bundles_reused": 5,
+    "reference_cex0_sha256": "c5b66cca650b505ec341219b81a7e973a372d5eb5748344a03669a276b46f233",
+    "repeat": 3,
+    "replay_patch_time": 0.061560555,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31028,
+        "cpu": 0.125438,
+        "cpu_system": 0.024187,
+        "cpu_user": 0.101251,
+        "max_waited_child_rss_kib": 40724,
+        "rss_kib": 48968,
+        "samples": 23,
+        "wall": 0.120753454
+      },
+      "incremental": {
+        "cgroup_kib": 43004,
+        "cpu": 0.365172,
+        "cpu_system": 0.073035,
+        "cpu_user": 0.292137,
+        "max_waited_child_rss_kib": 40976,
+        "rss_kib": 81960,
+        "samples": 74,
+        "wall": 0.392230068
+      },
+      "incremental_session_max_sampled_rss_kib": 81960,
+      "old_full": {
+        "cgroup_kib": 31032,
+        "cpu": 0.105443,
+        "cpu_system": 0.044293,
+        "cpu_user": 0.06115,
+        "max_waited_child_rss_kib": 40664,
+        "rss_kib": 50724,
+        "samples": 19,
+        "wall": 0.101692996
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31484,
+        "cpu": 0.391935,
+        "cpu_system": 0.081573,
+        "cpu_user": 0.310362,
+        "max_waited_child_rss_kib": 40976,
+        "rss_kib": 64964,
+        "samples": 76,
+        "wall": 0.394164395
+      }
+    },
+    "reused_prefix_steps": 95,
+    "solve_time": {
+      "full": 0.0284354,
+      "incremental": 0.020552616
+    },
+    "speedup": 0.3078638377106775,
+    "symex_time": {
+      "full": 0.00419453,
+      "incremental": 0.001804174
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "airline_reservations",
+    "change_analysis_time": 0.011342748,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.0123025,
+      "incremental_cnf_and_graph": 0.094968507
+    },
+    "config_hash": "bb21d4c6902368c39d226faa6128a057aa89122df665f1e5eacba459e92713f1",
+    "constraint_update_time": 0.006439333,
+    "constraints_rebuilt": 185,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.006439333
+    },
+    "events_rebuilt": 113,
+    "events_reused": 0,
+    "executed_new_symex_steps": 323,
+    "experiment_unit_sha256": "60af2775385ee917c4dcfb00896b838a28e595b9b940eddf6a7e99d55ad24e7f",
+    "fallback_reason": "synchronization_calls_changed:reserve_seat",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.0123025,
+      "Post-process": 0.00313453,
+      "Postprocess Equation": 0.00647079,
+      "Solver": 0.173112,
+      "Symex": 0.00957494,
+      "decision procedure": 0.189933
+    },
+    "full_replay_cycle_time": 0.533934055,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 323,
+    "full_time": 0.289393639,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 94968507,
+      "equation_export": 25583883,
+      "event_constraints": 6439333,
+      "goal_conversion": 28171,
+      "parse_goto": 143188965,
+      "result_output": 36610,
+      "solve": 120830075,
+      "symbolic_execution": 8590245,
+      "symex_cleanup": 2148452
+    },
+    "incremental_replay_cycle_time": 1.248098358,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.745572147,
+    "input_tokens": 0,
+    "lemma_bind_time": null,
+    "lemma_import_time": 1.43e-06,
+    "lemma_validate_time": 0.01302687,
+    "lemmas_exported": 31,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 31,
+    "model_path": "full_fallback",
+    "new_hash": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "4f36142d335955f8d0863ddcb08dd404a6f1963c11292479c1944366013caa9c",
+      "source_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+      "steps": 348
+    },
+    "old_full_time": 0.237085562,
+    "old_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.495071357,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21411031000025105
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "critical_section",
+    "peak_rss": {
+      "full": 52192,
+      "incremental": 86248,
+      "old_full": 71424,
+      "old_instrumented": 84784
+    },
+    "po_edges_reused": 0,
+    "property_hash": "14284f2bdad4aa5b6a8d9f153c5893ea2bd4c86de0bab77e38e08a5dae80147c",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "40c1dbaa58881ad8a23bfd9971f292cea24e5e0baa22086983795e4154ba9cfa",
+    "repeat": 3,
+    "replay_patch_time": 0.007454854,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31120,
+        "cpu": 0.294157,
+        "cpu_system": 0.032205,
+        "cpu_user": 0.261952,
+        "max_waited_child_rss_kib": 40420,
+        "rss_kib": 52192,
+        "samples": 55,
+        "wall": 0.289393639
+      },
+      "incremental": {
+        "cgroup_kib": 51124,
+        "cpu": 0.693244,
+        "cpu_system": 0.161246,
+        "cpu_user": 0.531998,
+        "max_waited_child_rss_kib": 44044,
+        "rss_kib": 86248,
+        "samples": 142,
+        "wall": 0.745572147
+      },
+      "incremental_session_max_sampled_rss_kib": 86248,
+      "old_full": {
+        "cgroup_kib": 48472,
+        "cpu": 0.237465,
+        "cpu_system": 0.060287,
+        "cpu_user": 0.177177,
+        "max_waited_child_rss_kib": 44312,
+        "rss_kib": 71424,
+        "samples": 45,
+        "wall": 0.237085562
+      },
+      "old_instrumented": {
+        "cgroup_kib": 57664,
+        "cpu": 0.49747,
+        "cpu_system": 0.125451,
+        "cpu_user": 0.372019,
+        "max_waited_child_rss_kib": 44044,
+        "rss_kib": 84784,
+        "samples": 94,
+        "wall": 0.495071357
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 0.173112,
+      "incremental": 0.120830075
+    },
+    "speedup": 0.38814974535254465,
+    "symex_time": {
+      "full": 0.00957494,
+      "incremental": 0.008590245
+    },
+    "theory_context_differences": [
+      "unmapped_event_visit_or_thread"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "fib_updates_8",
+    "change_analysis_time": 0.010630135,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.00569441,
+      "incremental_cnf_and_graph": 0.139589846
+    },
+    "config_hash": "f9884dd280e5d841d58ef5759d23839c9a209260cd02c0dc9d13480e484f13f4",
+    "constraint_update_time": 0.006639557,
+    "constraints_rebuilt": 282,
+    "constraints_retained": 17,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.006639557
+    },
+    "events_rebuilt": 54,
+    "events_reused": 31,
+    "executed_new_symex_steps": 144,
+    "experiment_unit_sha256": "327b33cfd7a707926e83359388bbcd37d202aa9a3cd3c9f7f796404bbe4152ec",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.00569441,
+      "Post-process": 0.00053967,
+      "Postprocess Equation": 0.00655487,
+      "Solver": 2.40336,
+      "Symex": 0.00522209,
+      "decision procedure": 2.41415
+    },
+    "full_replay_cycle_time": 2.700573688,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 239,
+    "full_time": 2.508075383,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 139589846,
+      "equation_export": 21483954,
+      "event_constraints": 6639557,
+      "goal_conversion": 36771,
+      "result_output": 36591,
+      "solve": 2292140068,
+      "symbolic_execution": 3051048,
+      "symex_cleanup": 1045531
+    },
+    "incremental_replay_cycle_time": 3.477944486,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 2.746401299,
+    "input_tokens": 0,
+    "lemma_bind_time": 4.063e-05,
+    "lemma_import_time": 5.2651e-05,
+    "lemma_validate_time": 0.047750869,
+    "lemmas_exported": 14,
+    "lemmas_imported": 14,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "40"
+      },
+      "property": "main.assertion.1",
+      "sha256": "c9f0b45fdf9e5eb6549759c9f40606c550dc540d38251f8d6397ded5ba3696ab",
+      "source_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+      "steps": 187
+    },
+    "old_full_time": 0.185276856,
+    "old_hash": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.724321738,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21410354000181542
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "arithmetic_constant",
+    "peak_rss": {
+      "full": 54424,
+      "incremental": 86084,
+      "old_full": 51108,
+      "old_instrumented": 65068
+    },
+    "po_edges_reused": 28,
+    "property_hash": "8c6ab0595538b2150f0db28c7189244a82ccff4bfd29ba849cad68b065927c1b",
+    "read_bundles_reused": 5,
+    "reference_cex0_sha256": "e68d3a7574817d643699e399df6751b7c5f914089e4349902afee9386cbdc87a",
+    "repeat": 3,
+    "replay_patch_time": 0.007221449,
+    "resources": {
+      "full": {
+        "cgroup_kib": 32996,
+        "cpu": 2.510335,
+        "cpu_system": 0.040363,
+        "cpu_user": 2.469972,
+        "max_waited_child_rss_kib": 40456,
+        "rss_kib": 54424,
+        "samples": 474,
+        "wall": 2.508075383
+      },
+      "incremental": {
+        "cgroup_kib": 55128,
+        "cpu": 2.702709,
+        "cpu_system": 0.071227,
+        "cpu_user": 2.631482,
+        "max_waited_child_rss_kib": 40780,
+        "rss_kib": 86084,
+        "samples": 521,
+        "wall": 2.746401299
+      },
+      "incremental_session_max_sampled_rss_kib": 86084,
+      "old_full": {
+        "cgroup_kib": 31020,
+        "cpu": 0.189469,
+        "cpu_system": 0.044287,
+        "cpu_user": 0.145182,
+        "max_waited_child_rss_kib": 40500,
+        "rss_kib": 51108,
+        "samples": 35,
+        "wall": 0.185276856
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31592,
+        "cpu": 0.72489,
+        "cpu_system": 0.104978,
+        "cpu_user": 0.619913,
+        "max_waited_child_rss_kib": 40780,
+        "rss_kib": 65068,
+        "samples": 139,
+        "wall": 0.724321738
+      }
+    },
+    "reused_prefix_steps": 95,
+    "solve_time": {
+      "full": 2.40336,
+      "incremental": 2.292140068
+    },
+    "speedup": 0.9132224718628055,
+    "symex_time": {
+      "full": 0.00522209,
+      "incremental": 0.003051048
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "airline_reservations_6",
+    "change_analysis_time": 0.010832617,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.027304,
+      "incremental_cnf_and_graph": 0.142877585
+    },
+    "config_hash": "bc631cb9642b4166f90511c64691c38bec69aeb804a1c0bdb93d2e316b255785",
+    "constraint_update_time": 0.011062232,
+    "constraints_rebuilt": 380,
+    "constraints_retained": 0,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.011062232
+    },
+    "events_rebuilt": 187,
+    "events_reused": 0,
+    "executed_new_symex_steps": 467,
+    "experiment_unit_sha256": "5f302f043cbc033b8fb12aa737d689b960fc7d799a69aa9e32511801e64a8ade",
+    "fallback_reason": "synchronization_calls_changed:reserve_seat",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.027304,
+      "Post-process": 0.00971432,
+      "Postprocess Equation": 0.0105823,
+      "Solver": 31.3192,
+      "Symex": 0.0157092,
+      "decision procedure": 31.3533
+    },
+    "full_replay_cycle_time": 40.202779094,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 467,
+    "full_time": 31.469928957,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 142877585,
+      "equation_export": 42050674,
+      "event_constraints": 11062232,
+      "goal_conversion": 29421,
+      "parse_goto": 148531143,
+      "result_output": 34441,
+      "solve": 32656124322,
+      "symbolic_execution": 13897416,
+      "symex_cleanup": 3909965
+    },
+    "incremental_replay_cycle_time": 34.251660147,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 33.347301665,
+    "input_tokens": 0,
+    "lemma_bind_time": null,
+    "lemma_import_time": 1.63e-06,
+    "lemma_validate_time": 0.017399353,
+    "lemmas_exported": 84,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 84,
+    "model_path": "full_fallback",
+    "new_hash": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "a9cd28014b4454fee27d0b7cacd5a27e62b05f50f63ca0e10442a51552789b8a",
+      "source_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+      "steps": 516
+    },
+    "old_full_time": 8.725696419,
+    "old_hash": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.897204764,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21409426900208928
+    },
+    "patch_origin": "stage7_manual",
+    "patch_type": "critical_section",
+    "peak_rss": {
+      "full": 94584,
+      "incremental": 108408,
+      "old_full": 138076,
+      "old_instrumented": 126052
+    },
+    "po_edges_reused": 0,
+    "property_hash": "ae6fc0ba25f346cf0f69f9d92e6c223a37ff6aed564c27d6455416b29054ea93",
+    "read_bundles_reused": 0,
+    "reference_cex0_sha256": "82f1eda18cf73390b592495a36c43087d5981808b4a43565c114d3b273f4466c",
+    "repeat": 3,
+    "replay_patch_time": 0.007153718,
+    "resources": {
+      "full": {
+        "cgroup_kib": 71576,
+        "cpu": 31.469914,
+        "cpu_system": 0.048789,
+        "cpu_user": 31.421126,
+        "max_waited_child_rss_kib": 69272,
+        "rss_kib": 94584,
+        "samples": 6034,
+        "wall": 31.469928957
+      },
+      "incremental": {
+        "cgroup_kib": 93500,
+        "cpu": 33.341112,
+        "cpu_system": 0.180896,
+        "cpu_user": 33.160216,
+        "max_waited_child_rss_kib": 84352,
+        "rss_kib": 108408,
+        "samples": 6387,
+        "wall": 33.347301665
+      },
+      "incremental_session_max_sampled_rss_kib": 126052,
+      "old_full": {
+        "cgroup_kib": 115380,
+        "cpu": 8.72486,
+        "cpu_system": 0.093067,
+        "cpu_user": 8.631792,
+        "max_waited_child_rss_kib": 111112,
+        "rss_kib": 138076,
+        "samples": 1675,
+        "wall": 8.725696419
+      },
+      "old_instrumented": {
+        "cgroup_kib": 98912,
+        "cpu": 0.903183,
+        "cpu_system": 0.139253,
+        "cpu_user": 0.763929,
+        "max_waited_child_rss_kib": 84352,
+        "rss_kib": 126052,
+        "samples": 172,
+        "wall": 0.897204764
+      }
+    },
+    "reused_prefix_steps": 0,
+    "solve_time": {
+      "full": 31.3192,
+      "incremental": 32.656124322
+    },
+    "speedup": 0.9437024102621647,
+    "symex_time": {
+      "full": 0.0157092,
+      "incremental": 0.013897416
+    },
+    "theory_context_differences": [
+      "unmapped_event_visit_or_thread"
+    ]
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "batch_total",
+    "change_analysis_time": 0.008413146,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000471519,
+      "incremental_cnf_and_graph": 0.053805842
+    },
+    "config_hash": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "constraint_update_time": 0.001640842,
+    "constraints_rebuilt": 10,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.001640842
+    },
+    "events_rebuilt": 5,
+    "events_reused": 20,
+    "executed_new_symex_steps": 13,
+    "experiment_unit_sha256": "3c2c79dadc8fe1f9659ae3ebff204d7cce679626e6c4c40b125e58f8de99681c",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": 9.45205571,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000471519,
+      "Post-process": 0.000114172,
+      "Postprocess Equation": 0.00155719,
+      "Solver": 0.000238345,
+      "Symex": 0.00189975,
+      "decision procedure": 0.00212646
+    },
+    "full_replay_cycle_time": 0.214245091,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 73,
+    "full_time": 0.081195904,
+    "historical_repair": {
+      "scope": "successful Stage 6 AI adapter and freeze",
+      "seconds": 9.244975,
+      "source": "reports/evidence/stage-06/cases/ai-single-edit.json"
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": 9.855947723,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 53805842,
+      "equation_export": 5744533,
+      "event_constraints": 1640842,
+      "goal_conversion": 20621,
+      "result_output": 30601,
+      "solve": 426358,
+      "symbolic_execution": 430319,
+      "symex_cleanup": 428539
+    },
+    "incremental_replay_cycle_time": 0.618137104,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.340007953,
+    "input_tokens": 0,
+    "lemma_bind_time": 3.131e-06,
+    "lemma_import_time": 8.13e-06,
+    "lemma_validate_time": 0.012565368,
+    "lemmas_exported": 1,
+    "lemmas_imported": 1,
+    "lemmas_rejected": 0,
+    "model_path": "incremental",
+    "new_hash": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "property": "main.assertion.1",
+      "sha256": "035202479a5e16e6e5d490b7b00ac91e2c83822b092689200dd1ff338745afe0",
+      "source_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+      "steps": 62
+    },
+    "old_full_time": 0.125884806,
+    "old_hash": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.27096477,
+    "old_result": "VIOLATION",
+    "order": [
+      "old_full",
+      "full",
+      "incremental"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.21411514700230327
+    },
+    "patch_origin": "stage6_mini_deepseek",
+    "patch_type": "constant",
+    "peak_rss": {
+      "full": 50572,
+      "incremental": 78412,
+      "old_full": 50580,
+      "old_instrumented": 63448
+    },
+    "po_edges_reused": 18,
+    "property_hash": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+    "repeat": 3,
+    "replay_patch_time": 0.007164381,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31044,
+        "cpu": 0.085759,
+        "cpu_system": 0.028342,
+        "cpu_user": 0.057417,
+        "max_waited_child_rss_kib": 40452,
+        "rss_kib": 50572,
+        "samples": 15,
+        "wall": 0.081195904
+      },
+      "incremental": {
+        "cgroup_kib": 32844,
+        "cpu": 0.286138,
+        "cpu_system": 0.088686,
+        "cpu_user": 0.197452,
+        "max_waited_child_rss_kib": 40628,
+        "rss_kib": 78412,
+        "samples": 65,
+        "wall": 0.340007953
+      },
+      "incremental_session_max_sampled_rss_kib": 78412,
+      "old_full": {
+        "cgroup_kib": 31020,
+        "cpu": 0.086091,
+        "cpu_system": 0.029342,
+        "cpu_user": 0.056749,
+        "max_waited_child_rss_kib": 40376,
+        "rss_kib": 50580,
+        "samples": 24,
+        "wall": 0.125884806
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31484,
+        "cpu": 0.2703,
+        "cpu_system": 0.073206,
+        "cpu_user": 0.197094,
+        "max_waited_child_rss_kib": 40628,
+        "rss_kib": 63448,
+        "samples": 52,
+        "wall": 0.27096477
+      }
+    },
+    "reused_prefix_steps": 60,
+    "solve_time": {
+      "full": 0.000238345,
+      "incremental": 0.000426358
+    },
+    "speedup": 0.23880589640207622,
+    "symex_time": {
+      "full": 0.00189975,
+      "incremental": 0.000430319
+    },
+    "theory_context_differences": []
+  },
+  {
+    "agreement_status": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "cache_io_time": null,
+    "case_id": "threshold_guard",
+    "change_analysis_time": 0.00858083,
+    "checkpoint_restore_time": null,
+    "cnf_time": {
+      "full_convert_ssa": 0.000723274,
+      "incremental_cnf_and_graph": 0.060816851
+    },
+    "config_hash": "54079a57472e939f9499b56f279bc0ba94370085b6d33b82b03a8a4554113560",
+    "constraint_update_time": 0.002168273,
+    "constraints_rebuilt": 23,
+    "constraints_retained": 6,
+    "estimated_api_cost": 0,
+    "event_model_time": {
+      "full": null,
+      "incremental": 0.002168273
+    },
+    "events_rebuilt": 11,
+    "events_reused": 22,
+    "executed_new_symex_steps": 23,
+    "experiment_unit_sha256": "99199d175d90b6d47e69a38db843e4e51cb45f268c18aee7c041e98c9198ac8a",
+    "fallback_reason": "",
+    "formal_phase_match": true,
+    "full_cex": null,
+    "full_cycle_with_measured_repair": null,
+    "full_native_messages_seconds": {
+      "Convert SSA": 0.000723274,
+      "Post-process": 0.000125763,
+      "Postprocess Equation": 0.00212196,
+      "Solver": 0.000330127,
+      "Symex": 0.00221513,
+      "decision procedure": 0.00295233
+    },
+    "full_replay_cycle_time": 0.180573266,
+    "full_result": "NO_VIOLATION_WITHIN_BOUND",
+    "full_symex_steps": 84,
+    "full_time": 0.085455467,
+    "historical_repair": {
+      "scope": "original manual authoring duration unavailable",
+      "seconds": null,
+      "source": null
+    },
+    "incremental_cex": null,
+    "incremental_cycle_with_measured_repair": null,
+    "incremental_native_phases_ns": {
+      "cnf_and_graph": 60816851,
+      "equation_export": 6890116,
+      "event_constraints": 2168273,
+      "goal_conversion": 26251,
+      "result_output": 29500,
+      "solve": 683513,
+      "symbolic_execution": 650383,
+      "symex_cleanup": 435448
+    },
+    "incremental_replay_cycle_time": 0.629479289,
+    "incremental_result": "NO_VIOLATION_WITHIN_BOUND",
+    "incremental_time": 0.339987693,
+    "input_tokens": 0,
+    "lemma_bind_time": 0.0,
+    "lemma_import_time": 1.22e-06,
+    "lemma_validate_time": 0.01571724,
+    "lemmas_exported": 2,
+    "lemmas_imported": 0,
+    "lemmas_rejected": 2,
+    "model_path": "incremental",
+    "new_hash": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+    "old_cex": {
+      "failure": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "property": "main.assertion.1",
+      "sha256": "e8f651f320efc65f0278fc468e51c6e6624c7346b1806deed4f8f295e1449dc4",
+      "source_hash": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+      "steps": 74
+    },
+    "old_full_time": 0.087769773,
+    "old_hash": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+    "old_instrumented_result": "VIOLATION",
+    "old_instrumented_time": 0.28214357,
+    "old_result": "VIOLATION",
+    "order": [
+      "incremental",
+      "old_full",
+      "full"
+    ],
+    "output_tokens": 0,
+    "parse_time": {
+      "full": null,
+      "incremental_frontend_wall": 0.214084555998852
+    },
+    "patch_origin": "stage2_manual",
+    "patch_type": "guard",
+    "peak_rss": {
+      "full": 51244,
+      "incremental": 80872,
+      "old_full": 51440,
+      "old_instrumented": 64772
+    },
+    "po_edges_reused": 20,
+    "property_hash": "7f1d4f10c59309179a1e1cbad357f08f1c3e1f40c42a015a1afa85d907c3ad46",
+    "read_bundles_reused": 2,
+    "reference_cex0_sha256": "8597b2dd0c0e343b8cf2aef2b8788f26adea7ad8561d25ccfafaed37be3a8a54",
+    "repeat": 3,
+    "replay_patch_time": 0.007348026,
+    "resources": {
+      "full": {
+        "cgroup_kib": 31104,
+        "cpu": 0.090297,
+        "cpu_system": 0.036426,
+        "cpu_user": 0.053872,
+        "max_waited_child_rss_kib": 40520,
+        "rss_kib": 51244,
+        "samples": 16,
+        "wall": 0.085455467
+      },
+      "incremental": {
+        "cgroup_kib": 34600,
+        "cpu": 0.297134,
+        "cpu_system": 0.104143,
+        "cpu_user": 0.192992,
+        "max_waited_child_rss_kib": 40632,
+        "rss_kib": 80872,
+        "samples": 65,
+        "wall": 0.339987693
+      },
+      "incremental_session_max_sampled_rss_kib": 80872,
+      "old_full": {
+        "cgroup_kib": 30976,
+        "cpu": 0.08944,
+        "cpu_system": 0.02716,
+        "cpu_user": 0.062281,
+        "max_waited_child_rss_kib": 40504,
+        "rss_kib": 51440,
+        "samples": 17,
+        "wall": 0.087769773
+      },
+      "old_instrumented": {
+        "cgroup_kib": 31512,
+        "cpu": 0.280106,
+        "cpu_system": 0.063682,
+        "cpu_user": 0.216423,
+        "max_waited_child_rss_kib": 40632,
+        "rss_kib": 64772,
+        "samples": 54,
+        "wall": 0.28214357
+      }
+    },
+    "reused_prefix_steps": 61,
+    "solve_time": {
+      "full": 0.000330127,
+      "incremental": 0.000683513
+    },
+    "speedup": 0.25134870690745853,
+    "symex_time": {
+      "full": 0.00221513,
+      "incremental": 0.000650383
+    },
+    "theory_context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ]
+  }
+]

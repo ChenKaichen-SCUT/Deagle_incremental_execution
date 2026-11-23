@@ -1,0 +1,38 @@
+{
+  "airline_reservations": {
+    "candidate_reachable_final_sold": [
+      3
+    ],
+    "capacity": 3,
+    "old_reachable_final_sold": [
+      1,
+      2,
+      3
+    ]
+  },
+  "airline_reservations_6": {
+    "candidate_reachable_final_sold": [
+      5
+    ],
+    "capacity": 5,
+    "old_reachable_final_sold": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ]
+  },
+  "fib_updates": {
+    "bound": 55,
+    "candidate_max_component": 55,
+    "old_max_component": 88,
+    "schedules": 70
+  },
+  "fib_updates_8": {
+    "bound": 2584,
+    "candidate_max_component": 2584,
+    "old_max_component": 4180,
+    "schedules": 12870
+  }
+}

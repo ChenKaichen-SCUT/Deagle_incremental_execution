@@ -1,0 +1,262 @@
+{
+  "cases": [
+    "batch_total",
+    "threshold_guard",
+    "split_counter",
+    "partial_counter",
+    "batch_retained",
+    "fib_updates",
+    "airline_reservations",
+    "fib_updates_8",
+    "airline_reservations_6"
+  ],
+  "diagnostics_in_formal_runs": false,
+  "file_cache": "Existing/warm OS caches after separate diagnostic runs. No global cache manipulation.",
+  "repetitions": 3,
+  "schedule": [
+    {
+      "case_id": "batch_total",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "threshold_guard",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "split_counter",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "partial_counter",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "batch_retained",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "fib_updates",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "airline_reservations",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "fib_updates_8",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "airline_reservations_6",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 1
+    },
+    {
+      "case_id": "threshold_guard",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "split_counter",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "partial_counter",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "batch_retained",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "fib_updates",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "airline_reservations",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "fib_updates_8",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "airline_reservations_6",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "batch_total",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 2
+    },
+    {
+      "case_id": "split_counter",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "partial_counter",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "batch_retained",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "fib_updates",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "airline_reservations",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "fib_updates_8",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "airline_reservations_6",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "batch_total",
+      "order": [
+        "old_full",
+        "full",
+        "incremental"
+      ],
+      "repeat": 3
+    },
+    {
+      "case_id": "threshold_guard",
+      "order": [
+        "incremental",
+        "old_full",
+        "full"
+      ],
+      "repeat": 3
+    }
+  ],
+  "single_active_verification": true
+}

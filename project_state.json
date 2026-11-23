@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "current_stage": 6,
-  "stage_name": "串联完整单次修复工具链",
+  "current_stage": 7,
+  "stage_name": "正确性与性能对比",
   "status": "READY_FOR_REVIEW",
-  "report": "reports/stage-06.md",
+  "report": "reports/stage-07.md",
   "environment": "reports/environment.json",
-  "last_user_approved_stage": 6,
-  "next_stage": 7,
+  "last_user_approved_stage": 7,
+  "next_stage": null,
   "next_stage_approved": false
 }

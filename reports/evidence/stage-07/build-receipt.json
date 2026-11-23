@@ -1,0 +1,38 @@
+{
+  "all_locked": true,
+  "binaries": {
+    "baseline": {
+      "commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "expected": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+      "sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3"
+    },
+    "development": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "expected": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057"
+    }
+  },
+  "build_entry_sha256": "b5e5a5337b0d5bfbd0ee1be866f23cd55374ad8211b041bfbb85582bcc81fbbb",
+  "ccache": "shared stage 1 compiler object cache",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "configuration": {
+    "deagle-baseline": {
+      "src/common": "a0564833381ceb0242554e7cb02bb2f821e0fa01e5d2eb7d2e6d9136ece08ff7",
+      "src/config.inc": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+    },
+    "deagle-stage5": {
+      "src/common": "a0564833381ceb0242554e7cb02bb2f821e0fa01e5d2eb7d2e6d9136ece08ff7",
+      "src/config.inc": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+    }
+  },
+  "exit": 0,
+  "finished_utc": "2026-11-23T14:19:18,832981904+00:00",
+  "initial_verifier_binaries": 0,
+  "log_gzip_sha256": "730d240643423351405409cc1bd8c62a37fe1daa449637be2ed46fca5c1f0252",
+  "make": "GNU Make 4.3",
+  "project_parent": "21ace3e5a45829f4507cd426f2e1fd2318cc9c65",
+  "seed_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "seed_source": "local pinned upstream Git objects, fetched into a fresh repository",
+  "started_utc": "2026-11-23T14:19:06,666153545+00:00",
+  "timing": "wall_seconds=12.16 user_seconds=11.52 sys_seconds=10.25 max_rss_kib=152292"
+}

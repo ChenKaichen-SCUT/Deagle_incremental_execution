@@ -1,0 +1,32 @@
+{
+  "workers": 2,
+  "unwind": 10,
+  "reference": "https://github.com/yinliangze/yogar-cbmc-inc/blob/6e1d4eacf3cccc6634e876e884792bac6115ba82/benchmarks/EX1/bench-origin/fib_safe-6.i",
+  "reference_sha256": "ca933e9c322081d61da01652cda9ceed61707699c680fd4ef3d92d3ccd39b362",
+  "origin": "Independently written bounded adaptation of Yogar EX1 fib_safe-6.i. Eight additions per worker instead of six, local loop indices, joins before observation, and the equivalent constant F(18). P0 injects a one-unit bias into the left update.",
+  "thread_bound": "Exactly two workers, one creation per worker; eight iterations per worker.",
+  "property": "After both joins neither component exceeds Fibonacci number F(18) = 2584.",
+  "assumptions": [
+    "Both components start at one; each addition is atomic; fixed size unsigned arithmetic has no overflow for these values."
+  ],
+  "patch_type": "arithmetic_constant",
+  "intent": "Remove the left additive bias while preserving both eight-iteration workers.",
+  "template": "fib_updates",
+  "harness_replacements": [
+    [
+      "k < 4",
+      "k < 8",
+      2
+    ],
+    [
+      "Eight atomic additions are bounded by F(10).",
+      "Sixteen atomic additions are bounded by F(18).",
+      1
+    ],
+    [
+      "55u",
+      "2584u",
+      2
+    ]
+  ]
+}

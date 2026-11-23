@@ -2,9 +2,9 @@
 
 本项目研究并发 C 程序经过一次修复后，增量构建事件顺序模型、复用有效理论约束，与独立全量 Deagle 验证同一程序和性质的结果。实施范围和每一阶段的验收条件见[执行指南](EXECUTION_GUIDE.md)。
 
-阶段 6 已完成，状态为 `READY_FOR_REVIEW`。mini-SWE-agent 根据 `batch_total` 的真实反例通过 DeepSeek 官方 API 生成了单行修复。原生执行跳过 60 步、重算 13 步，向新求解器导入 1 条旧理论子句。增量与独立全量验证均有界通过。9 次双路运行覆盖 5 个不同版本对，其中两对修复后仍有错误，两路都检出。阶段 7 等待确认。[阶段 6 报告与复现命令](reports/stage-06.md) · [AI 补丁](reports/evidence/stage-06/ai/patch.diff) · [验收记录](reports/evidence/stage-06/acceptance.json) · [项目状态](project_state.json)
+阶段 7 已完成，状态为 `READY_FOR_REVIEW`。9 个冻结版本对各重复 3 次，全量与增量在 27 次配对中结论一致。7 个候选在给定界限内通过，2 个仍有错误，两路均检出。5 个版本对实际跳过原生符号执行前缀，4 个实际导入旧理论子句。27 次候选验证中增量路径均较慢，按版本对等权计算的全量时间与增量时间之比中位数为 0.247。[阶段 7 报告](reports/stage-07.md) · [逐次测量](reports/evidence/stage-07/measurements.json) · [项目状态](project_state.json)
 
-运行 `python -B scripts/stage6/check_evidence.py` 可用标准库和 Git 离线核对完整链路，包括从模型工具调用重建补丁、核对检查点与原生子句、重新解析两路性质结果。对于配置好工具的服务器，`python3 -B -m incdeagle.cli replay-pair --case cases/batch_total/task.yaml --check-model` 可从新会话重放与这次 AI 输出字节一致的冻结版本对，API 调用为零。[阶段 5 理论子句复用](reports/stage-05.md) · [阶段 4 模型增量构建](reports/stage-04.md) · [阶段 3 全量对照](reports/stage-03.md) · [阶段 2 病例与反例](reports/stage-02.md) · [阶段 1 工具报告](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md)
+运行 `python -B scripts/stage7/check_evidence.py` 可用 Python 标准库和 Git 从原生归档重算统计，核对模型、已导入子句和反例。在配置好工具的 Linux 服务器上，运行 `python3 -B scripts/stage7/experiment.py --out runs/stage-07/reproduction` 可在新目录重做实验。实验复用冻结补丁，API 调用为零。[构建与复现步骤](reports/stage-07.md) · [阶段 6 AI 补丁与单次修复链路](reports/stage-06.md) · [阶段 5 理论子句复用](reports/stage-05.md) · [阶段 4 模型增量构建](reports/stage-04.md) · [阶段 3 全量对照](reports/stage-03.md) · [阶段 2 病例与反例](reports/stage-02.md) · [阶段 1 工具报告](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md)
 
 ## 复查环境
 

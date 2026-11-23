@@ -1,0 +1,13 @@
+{
+  "active_experiment_or_build_pids": [],
+  "checked_utc": "2026-11-23T14:27:46.065639+00:00",
+  "environment_checked_utc": "2026-11-23T13:54:10Z",
+  "frozen_cases_tree": "6d3a21f391836d5dc846b7d63123ba28d721a5dd",
+  "frozen_partial_counter_tree": "aa441a41d3a7ddadfbf86c45621b85f48ca85efc",
+  "further_work_approved": false,
+  "next_stage": null,
+  "parent_project_commit": "21ace3e5a45829f4507cd426f2e1fd2318cc9c65",
+  "seconds_from_host_probe_to_release_check": 2016.066,
+  "stage": 7,
+  "status": "READY_FOR_REVIEW"
+}

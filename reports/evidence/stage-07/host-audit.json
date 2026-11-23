@@ -1,0 +1,41 @@
+{
+  "benchmark_references": {
+    "airline_reservations": {
+      "checkout": "6e1d4eacf3cccc6634e876e884792bac6115ba82",
+      "reference": "https://github.com/yinliangze/yogar-cbmc-inc/blob/6e1d4eacf3cccc6634e876e884792bac6115ba82/benchmarks/EX1/bench-origin/airline-25.i",
+      "sha256": "a0d81069750f24e52e04bdb7efecd6d77b64aec41e058c154f75fbba11e6c11d"
+    },
+    "fib_updates": {
+      "checkout": "6e1d4eacf3cccc6634e876e884792bac6115ba82",
+      "reference": "https://github.com/yinliangze/yogar-cbmc-inc/blob/6e1d4eacf3cccc6634e876e884792bac6115ba82/benchmarks/EX1/bench-origin/fib_safe-6.i",
+      "sha256": "ca933e9c322081d61da01652cda9ceed61707699c680fd4ef3d92d3ccd39b362"
+    }
+  },
+  "cgroup": "v2",
+  "docker_service": "inactive",
+  "gcc": "11.4.0",
+  "native": {
+    "baseline": {
+      "binary": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+      "branch": "stage1-baseline",
+      "commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "source_changes": "",
+      "tree": "53d7e7c29471d96efbff747e7b4be1063f2a658d"
+    },
+    "development": {
+      "binary": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "branch": "incdeagle-stage5",
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "source_changes": "",
+      "tree": "9cc773689bd88f68e6f087f898dcbdaa23843f7e"
+    }
+  },
+  "root_cgroup_peak_file": false,
+  "sha256_of_extra_probe_archive": "b34a5b942bfd9b9ef96b854afcd145e02556d89975a71ae6f5750d069fb2a4ea",
+  "sha256_of_raw_archive": "85226a516068f39e02e98908a60282f7e9a7ab8d6b4ed9caeab46b45726ee4e1",
+  "shared_compiler_configuration": {
+    "src/common": "a0564833381ceb0242554e7cb02bb2f821e0fa01e5d2eb7d2e6d9136ece08ff7",
+    "src/config.inc": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+  },
+  "stage6_controller_files_rechecked": 13
+}

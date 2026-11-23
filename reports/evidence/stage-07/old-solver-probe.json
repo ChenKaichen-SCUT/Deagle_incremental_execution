@@ -1,0 +1,92 @@
+{
+  "baseline": {
+    "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "observer": false,
+    "old_cache_collection": false,
+    "result": {
+      "classification": "VIOLATION",
+      "native_overall": "failure",
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "unwinding_properties": {}
+    },
+    "runtime": {
+      "Convert SSA": 0.0860667,
+      "Post-process": 0.00925796,
+      "Postprocess Equation": 0.0183342,
+      "Solver": 7.08857,
+      "Symex": 0.0187199,
+      "decision procedure": 7.18333
+    },
+    "source_sha256": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "steps": 516,
+    "wall_seconds": 7.322133125
+  },
+  "enhanced_observed": {
+    "binary_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+    "observer": true,
+    "old_cache_collection": false,
+    "result": {
+      "classification": "VIOLATION",
+      "native_overall": "failure",
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "unwinding_properties": {}
+    },
+    "runtime": {
+      "Convert SSA": 0.0800767,
+      "Post-process": 0.00965191,
+      "Postprocess Equation": 0.0167266,
+      "Solver": 0.220786,
+      "Symex": 0.035401,
+      "decision procedure": 0.309399
+    },
+    "source_sha256": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "steps": 516,
+    "wall_seconds": 0.5118473
+  },
+  "enhanced_plain": {
+    "binary_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+    "observer": false,
+    "old_cache_collection": false,
+    "result": {
+      "classification": "VIOLATION",
+      "native_overall": "failure",
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "unwinding_properties": {}
+    },
+    "runtime": {
+      "Convert SSA": 0.0868558,
+      "Post-process": 0.00910532,
+      "Postprocess Equation": 0.0175997,
+      "Solver": 0.225589,
+      "Symex": 0.0186027,
+      "decision procedure": 0.321366
+    },
+    "source_sha256": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "steps": 516,
+    "wall_seconds": 0.457378552
+  }
+}

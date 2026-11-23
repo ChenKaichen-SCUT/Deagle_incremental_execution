@@ -1,0 +1,22 @@
+{
+  "workers": 6,
+  "unwind": 8,
+  "reference": "https://github.com/yinliangze/yogar-cbmc-inc/blob/6e1d4eacf3cccc6634e876e884792bac6115ba82/benchmarks/EX1/bench-origin/airline-25.i",
+  "reference_sha256": "a0d81069750f24e52e04bdb7efecd6d77b64aec41e058c154f75fbba11e6c11d",
+  "origin": "Independently written bounded reservation workload based on the stale-sale-count pattern of Yogar EX1 airline-25.i. Six agents and capacity five, one mutex protecting accesses, protected post-join exact-fill contract rather than the upstream upper bound.",
+  "thread_bound": "Exactly six agents, each makes one request; main creates all six and joins all six.",
+  "property": "After all agents finish, five seats have been sold.",
+  "assumptions": [
+    "Zero initial sales, six requests and capacity five; all agents complete one reservation attempt."
+  ],
+  "patch_type": "critical_section",
+  "intent": "Hold the booking mutex continuously across the read, capacity test and conditional write.",
+  "template": "airline_reservations",
+  "harness_replacements": [
+    [
+      "workers = 4, capacity = 3",
+      "workers = 6, capacity = 5",
+      1
+    ]
+  ]
+}
