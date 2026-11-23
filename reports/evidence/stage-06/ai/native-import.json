@@ -1,0 +1,16 @@
+{
+  "api": "satcheck_minisat2_baset::lcnf / Solver::addClause_",
+  "import_ns": 8281,
+  "rows": [
+    {
+      "assignments_after": 848,
+      "assignments_before": 780,
+      "candidate_literals": [ 1901, 1923 ],
+      "clauses_after": 2304,
+      "clauses_before": 2304,
+      "effect": "contradiction",
+      "id": 0
+    }
+  ],
+  "site": "ClosureSolver::solve_ before first search"
+}

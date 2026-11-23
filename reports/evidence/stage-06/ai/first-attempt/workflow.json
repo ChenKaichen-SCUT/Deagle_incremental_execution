@@ -1,0 +1,47 @@
+{
+  "agreement": null,
+  "baseline_started": false,
+  "case": "batch_total",
+  "elapsed_ns": 60107689824,
+  "method": "mini",
+  "model_check_requested": true,
+  "old": {
+    "classification": "VIOLATION",
+    "native_overall": "failure",
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "21"
+    },
+    "unwinding_properties": {}
+  },
+  "old_trace_steps": 62,
+  "old_warmup_seconds": 0.2342071550010587,
+  "online_reason": "RepeatedFormatError",
+  "online_service_ns": 60098801744,
+  "online_status": "REPAIR_FAILED",
+  "protected_sha256": {
+    "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "old/program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61"
+  },
+  "repair_usage": {
+    "api_calls": 6,
+    "estimated_usd_by_tariff": {
+      "off_peak": "0.007709284",
+      "peak": "0.015418568"
+    },
+    "input_tokens": 7447,
+    "model": "deepseek-v4-pro",
+    "output_tokens": 3226
+  },
+  "run_id": "20261123T133836627973Z-500e646d",
+  "schema": 1,
+  "status": "REPAIR_FAILED"
+}

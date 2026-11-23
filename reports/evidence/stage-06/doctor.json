@@ -1,0 +1,28 @@
+{
+  "native_ready": true,
+  "binaries": {
+    "development": {
+      "file": "/root/Deagle_incremental_execution/third_party/deagle-stage5/src/cbmc/deagle_exe",
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "matches_lock": true
+    },
+    "baseline": {
+      "file": "/root/Deagle_incremental_execution/third_party/deagle-baseline/src/cbmc/deagle_exe",
+      "commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+      "matches_lock": true
+    }
+  },
+  "commands": {
+    "systemd-run": "/usr/bin/systemd-run",
+    "git": "/usr/bin/git",
+    "gcc": "/usr/bin/gcc",
+    "bwrap": "/usr/bin/bwrap",
+    "setpriv": "/usr/bin/setpriv"
+  },
+  "mini_python": true,
+  "controller_key_file_exists": false,
+  "model_config": "configs/deepseek.yaml",
+  "verification_lock": "configs/stage05.lock.json"
+}

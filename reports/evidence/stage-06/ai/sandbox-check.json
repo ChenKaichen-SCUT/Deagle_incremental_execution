@@ -1,0 +1,12 @@
+{
+  "allowed_reads": 2,
+  "denied_private_or_composed_commands": 7,
+  "native_isolation_preflight": true,
+  "native_submit": true,
+  "one_line_edit_and_submit": true,
+  "outbound_content_checks": 2,
+  "provider_calls": 0,
+  "public_input_bytes": 853,
+  "public_input_sha256": "b498931c50135bd413985bd013e423edd146f29e1aca10f2e4cc8272ddfe5a7f",
+  "quoted_source_roundtrip": true
+}

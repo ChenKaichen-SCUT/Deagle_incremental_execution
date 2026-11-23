@@ -1,0 +1,34 @@
+{
+  "checkpoint_available": true,
+  "checkpoint_live_before_repair": true,
+  "checkpoint_pid": 124085,
+  "normalized_trace_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+  "old_cache_sha256": "39e14b5be5f297173b25533e098e2d19b8144580390206e25261be6d661fc0a9",
+  "old_exported": 1,
+  "old_pid": 124102,
+  "old_result": {
+    "classification": "VIOLATION",
+    "native_overall": "failure",
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "21"
+    },
+    "unwinding_properties": {}
+  },
+  "old_version": "c7b61eaa2233b68e374d7852582b32036d209d36a94c85e385a36b4146667546",
+  "old_warmup_seconds": 0.23379616199963493,
+  "protected_sha256": {
+    "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "old/program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61"
+  },
+  "raw_trace_sha256": "e9d3adff0a242e39e4eb88ad7722822cbcd9d7f990adc5ceb0271a28c931f7be",
+  "trace_steps": 62
+}

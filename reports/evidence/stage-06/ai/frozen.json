@@ -1,0 +1,35 @@
+{
+  "assertion_sha256": "c691975f24ac5192599c2b687bfb1d5010d50f9c41a235f46d8f4f5bf5b37c23",
+  "candidate_sha256": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+  "case": "batch_total",
+  "change_allowlist": [
+    "program.c"
+  ],
+  "checkpoint_live_after_repair": true,
+  "checkpoint_pid": 124085,
+  "frontend_exit": 0,
+  "frontend_target": {
+    "file": "harness.c",
+    "function": "main",
+    "line": 21
+  },
+  "goto_image_sha256": "219fbbd77c251e80fa93c513b0d6339f4baec0e4f95efae3b66cc6c0f25dcd49",
+  "metadata": {
+    "api_calls": 1,
+    "model": "deepseek-v4-pro",
+    "model_record": "repair/model.json",
+    "source": "mini_deepseek"
+  },
+  "method": "mini",
+  "old_version": "c7b61eaa2233b68e374d7852582b32036d209d36a94c85e385a36b4146667546",
+  "patch_reapplied_byte_for_byte": true,
+  "patch_sha256": "3fba8f5ec5f380ebaf7b9735edbd39ffc43f6e4d8a76c99e19640df281477e2a",
+  "protected_sha256": {
+    "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "old/program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61"
+  },
+  "repair_elapsed_ns": 9244975000
+}

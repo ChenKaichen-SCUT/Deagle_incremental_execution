@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "current_stage": 5,
-  "stage_name": "跨版本复用经审核的排序一致性理论子句",
+  "current_stage": 6,
+  "stage_name": "串联完整单次修复工具链",
   "status": "READY_FOR_REVIEW",
-  "report": "reports/stage-05.md",
+  "report": "reports/stage-06.md",
   "environment": "reports/environment.json",
-  "last_user_approved_stage": 5,
-  "next_stage": 6,
+  "last_user_approved_stage": 6,
+  "next_stage": 7,
   "next_stage_approved": false
 }

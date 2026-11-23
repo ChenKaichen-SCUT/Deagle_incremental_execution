@@ -2,9 +2,9 @@
 
 本项目研究并发 C 程序经过一次修复后，增量构建事件顺序模型、复用有效理论约束，与独立全量 Deagle 验证同一程序和性质的结果。实施范围和每一阶段的验收条件见[执行指南](EXECUTION_GUIDE.md)。
 
-阶段 5 已完成，状态为 `READY_FOR_REVIEW`。`batch_total` 修改乘数后，新求解器实际导入了一条旧排序冲突子句，候选有界通过。在同一旧程序的另一个候选上，导入后仍检出 62 步反例。条件或同步修改使理论图发生变化，三个候选共拒绝 14 条旧子句。五个候选的目标性质结论均与独立全量 Deagle 一致。阶段 6 等待确认。[阶段 5 报告与复现命令](reports/stage-05.md) · [原生导入回执](reports/evidence/stage-05/batch_total/candidate-import.json) · [五个候选的验收记录](reports/evidence/stage-05/acceptance.json) · [项目状态](project_state.json)
+阶段 6 已完成，状态为 `READY_FOR_REVIEW`。mini-SWE-agent 根据 `batch_total` 的真实反例通过 DeepSeek 官方 API 生成了单行修复。原生执行跳过 60 步、重算 13 步，向新求解器导入 1 条旧理论子句。增量与独立全量验证均有界通过。9 次双路运行覆盖 5 个不同版本对，其中两对修复后仍有错误，两路都检出。阶段 7 等待确认。[阶段 6 报告与复现命令](reports/stage-06.md) · [AI 补丁](reports/evidence/stage-06/ai/patch.diff) · [验收记录](reports/evidence/stage-06/acceptance.json) · [项目状态](project_state.json)
 
-运行 `python -B scripts/stage5/check_evidence.py` 可离线核对阶段 5 的原始冲突、带符号映射、原生导入回执、两路性质结果和独立顺序枚举。`python -B scripts/stage4/check_evidence.py` 可重放已有的模型构建证据，`python -B scripts/stage2/freeze.py` 可核对三个冻结版本对。[阶段 4 模型增量构建](reports/stage-04.md) · [阶段 3 全量对照](reports/stage-03.md) · [阶段 2 病例与反例](reports/stage-02.md) · [阶段 1 工具报告](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md)
+运行 `python -B scripts/stage6/check_evidence.py` 可用标准库和 Git 离线核对完整链路，包括从模型工具调用重建补丁、核对检查点与原生子句、重新解析两路性质结果。对于配置好工具的服务器，`python3 -B -m incdeagle.cli replay-pair --case cases/batch_total/task.yaml --check-model` 可从新会话重放与这次 AI 输出字节一致的冻结版本对，API 调用为零。[阶段 5 理论子句复用](reports/stage-05.md) · [阶段 4 模型增量构建](reports/stage-04.md) · [阶段 3 全量对照](reports/stage-03.md) · [阶段 2 病例与反例](reports/stage-02.md) · [阶段 1 工具报告](reports/stage-01.md) · [阶段 0 环境报告](reports/stage-00.md)
 
 ## 复查环境
 

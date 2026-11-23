@@ -1,0 +1,191 @@
+{
+  "agreement": "DEFINITE_AGREEMENT",
+  "baseline": {
+    "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "exit_code": 0,
+    "gamma_sha256": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "input_sha256": {
+      "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+      "program.c": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd"
+    },
+    "phi_sha256": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "result": {
+      "classification": "NO_VIOLATION_WITHIN_BOUND",
+      "native_overall": "success",
+      "properties": {
+        "main.assertion.1": "SUCCESS"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "unwinding_properties": {}
+    },
+    "wall_ns": 89161783
+  },
+  "baseline_started": true,
+  "candidate_sha256": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+  "candidate_trace_steps": 0,
+  "case": "batch_total",
+  "elapsed_ns": 990484834,
+  "fallback_reason": "",
+  "frontend_seconds": 0.21398084499742254,
+  "method": "replay",
+  "model_check_requested": true,
+  "model_match": true,
+  "model_path": "incremental",
+  "native": {
+    "changed_instruction_type": "integer_rhs",
+    "checkpoint_budget_bytes": 2147483648,
+    "checkpoint_dispatch": 60,
+    "checkpoint_fork_ns": 363058,
+    "checkpoint_raw_events": 20,
+    "checkpoint_raw_ssa_rows": 102,
+    "checkpoint_symbol_table_entries": 1,
+    "checkpoint_threads": 2,
+    "checkpoint_used": true,
+    "checkpoint_virtual_bytes_upper_bound": 28299264,
+    "executed_symex_steps": 13,
+    "exit_code": 0,
+    "fallback_reason": "",
+    "function": "record_batch",
+    "goto_nodes_checked": 72,
+    "prefix_symbol_references_resolved": 93,
+    "program_symbols_checked": 94,
+    "reused_prefix_symex_steps": 60,
+    "role": "candidate",
+    "sc_counters": {
+      "coverage_formulas_reused": 2,
+      "read_bundles_generated": 4,
+      "read_bundles_reused": 2,
+      "rf_edges_reused": 4,
+      "thread_edges_generated": 3,
+      "thread_edges_reused": 18,
+      "value_formulas_reused": 4
+    },
+    "sc_regions": [
+      {
+        "family": "rf",
+        "name": "__CPROVER_threads_exited",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "__CPROVER_next_thread_id",
+        "reused": true
+      },
+      {
+        "family": "rf",
+        "name": "shipped_units",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "main::1::worker!0@1",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "0",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "1",
+        "reused": false
+      }
+    ]
+  },
+  "new_version": "cc7e47201d22cef8844bddd568e3555911310e19c085d229aa312aaae39b37de",
+  "old": {
+    "classification": "VIOLATION",
+    "native_overall": "failure",
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "21"
+    },
+    "unwinding_properties": {}
+  },
+  "old_trace_steps": 62,
+  "old_version": "c7b61eaa2233b68e374d7852582b32036d209d36a94c85e385a36b4146667546",
+  "old_warmup_seconds": 0.2340023579999979,
+  "online": {
+    "classification": "NO_VIOLATION_WITHIN_BOUND",
+    "native_overall": "success",
+    "properties": {
+      "main.assertion.1": "SUCCESS"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "21"
+    },
+    "unwinding_properties": {}
+  },
+  "online_candidate_seconds": 0.33790696000141907,
+  "online_reason": null,
+  "online_service_ns": 718319675,
+  "online_status": "VERIFIED",
+  "protected_sha256": {
+    "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "old/program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61"
+  },
+  "repair_elapsed_ns": 36705841,
+  "repair_usage": {
+    "api_calls": 0,
+    "estimated_usd": 0,
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "run_id": "20261123T132329499852Z-f53a03e6",
+  "schema": 1,
+  "status": "COMPLETED",
+  "theory": {
+    "accepted": 1,
+    "audit_ns": 12351603,
+    "binding_ns": 3210,
+    "context_differences": [],
+    "deduplicated": 0,
+    "export_rejected": 0,
+    "exported": 1,
+    "import_ns": 8690,
+    "imported": 1,
+    "native_rows": [
+      {
+        "assignments_after": 848,
+        "assignments_before": 780,
+        "candidate_literals": [
+          1901,
+          1923
+        ],
+        "clauses_after": 2304,
+        "clauses_before": 2304,
+        "effect": "contradiction",
+        "id": 0
+      }
+    ],
+    "new_context": "859a3cb56e2c26178724f55bddcf9dbf9a2bf7dae53ca3b25c13d3a32b7dacde",
+    "new_fingerprint_ns": 5879405,
+    "no_effect": 0,
+    "not_submitted": 0,
+    "old_audit_ns": 1268615,
+    "old_context": "859a3cb56e2c26178724f55bddcf9dbf9a2bf7dae53ca3b25c13d3a32b7dacde",
+    "old_fingerprint_ns": 5885116,
+    "rejected": 0,
+    "submitted": 1,
+    "supported": 1,
+    "unique": 1,
+    "validation_rejected": 0
+  }
+}

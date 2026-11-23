@@ -1,0 +1,27 @@
+{
+  "baseline_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+  "baseline_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "candidate_limit": 1,
+  "controller": "python3 -B -m incdeagle.cli",
+  "development_commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+  "development_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+  "module_sha256": {
+    "incdeagle/cli.py": "a4cdb0f1a89154dc20eb2bd7c92c917707f78e186a60042bb990de894234ca88",
+    "incdeagle/comparison.py": "bedc98a800d26985051c5c34e7798839b25d5566c9eece808840a0e6f498bcb4",
+    "incdeagle/repair.py": "b529b42ffe9a3e9573f9b17aea4f7f4b6cdb42346907badd90a9acb9bea7ca59",
+    "incdeagle/repair_input.py": "1e0249d1cba9d20f185392ee60b5335bb4811701a503e66ed5a753f3c440e0de",
+    "incdeagle/workflow.py": "b227099bd1e6b8fdaa93e864b2ac2d0c91bb9ce4759ea49644c3a77fb1f35b54",
+    "scripts/stage4/session.py": "99829a2e85896cfdb207682f280b5d8d38949671f309ca895bcb110c86e4e08b",
+    "scripts/stage5/session.py": "ab85d5952eaba4fb9d432155dc038bed511ed3e0e80357373f49e27cb6ae4b72",
+    "scripts/stage5/verify.py": "eb9d719d2c41b9099c3e511bf4326a56eebea5396b5bb395de7fdd6484be3024",
+    "scripts/stage6/check_evidence.py": "4ee1b5c42c609396af9a9718311d2da8999445aa1ff6e23c19e552ed88d264b8",
+    "scripts/stage6/check_failures.py": "2f02a1849790645ceb60e372c4488732182376017545993cd76ae3192c2e8466",
+    "scripts/stage6/check_sandbox.py": "ff332d9dce50e6d7f4b875babfcd08b84a408ce32c7a35b40eb206dd49cf3d0d",
+    "scripts/stage6/mini_repair.py": "e880b3890eec8c4a873ff11de8d9719ea28c68078b77df6d908b410504035ea2",
+    "scripts/stage6/mini_tools.py": "db506cd480972e55a32d8b0920a883d250d5021e36093414b37dc117d53090b6"
+  },
+  "native_lock": "configs/stage05.lock.json",
+  "parent_project_commit": "51597766e19dcdf21cbddc42e06e6adf5f06e754",
+  "protocol": "old violation -> one mini or manual candidate, or frozen replay -> online -> independent full -> optional diagnostic",
+  "schema": 1
+}

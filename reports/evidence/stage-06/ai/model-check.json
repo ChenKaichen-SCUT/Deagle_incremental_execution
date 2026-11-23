@@ -1,0 +1,107 @@
+{
+  "dispatch_accounting": true,
+  "fresh_solvers": {
+    "candidate": {
+      "assignments": 0,
+      "clauses": 0,
+      "learnts": 0,
+      "pid": 124085,
+      "site": "new factory instance after generate_equation, before CNF",
+      "solves": 0,
+      "variables": 0
+    },
+    "old": {
+      "assignments": 0,
+      "clauses": 0,
+      "learnts": 0,
+      "pid": 124102,
+      "site": "new factory instance after generate_equation, before CNF",
+      "solves": 0,
+      "variables": 0
+    }
+  },
+  "full_dispatches": 73,
+  "match": true,
+  "model_digests": {
+    "full": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655",
+    "online": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655"
+  },
+  "native_executed": 13,
+  "native_imports_checked": [
+    {
+      "candidate_debug_x": [
+        1901,
+        1923
+      ],
+      "clause_sha256": "20a7b0db2d94dad961a513986e1810ccffabc78b2924d9165515b0c211939c36",
+      "clauses_after": 2304,
+      "clauses_before": 2304,
+      "cnf_numbers_differ": true,
+      "effect": "contradiction",
+      "kind": "oc-cycle",
+      "old_debug_x": [
+        1897,
+        1919
+      ],
+      "proof_rules": [
+        "static",
+        "static",
+        "static",
+        "static",
+        "transitive",
+        "transitive",
+        "static",
+        "transitive",
+        "transitive",
+        "from_read",
+        "static",
+        "static",
+        "transitive",
+        "rf",
+        "static",
+        "transitive",
+        "transitive",
+        "transitive"
+      ],
+      "semantic_clause": [
+        {
+          "atom": {
+            "kind": "rf",
+            "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+            "write": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+          },
+          "negative": true
+        },
+        {
+          "atom": {
+            "kind": "rf",
+            "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+            "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+          },
+          "negative": true
+        }
+      ]
+    }
+  ],
+  "native_skipped": 60,
+  "new_version": "cc7e47201d22cef8844bddd568e3555911310e19c085d229aa312aaae39b37de",
+  "old_version": "c7b61eaa2233b68e374d7852582b32036d209d36a94c85e385a36b4146667546",
+  "phase_digests": {
+    "full_model": {
+      "full": "13867bbb18d5a6ab0bdab534e0d7a222052e30f92bc7e057440e22c555a0712a",
+      "online": "13867bbb18d5a6ab0bdab534e0d7a222052e30f92bc7e057440e22c555a0712a"
+    },
+    "goto": {
+      "full": "a0628fcf3de147a6bf98b58be19cfd6d7a0a856a235367f16ee0bbe7c71ac2bc",
+      "online": "a0628fcf3de147a6bf98b58be19cfd6d7a0a856a235367f16ee0bbe7c71ac2bc"
+    },
+    "raw_ssa": {
+      "full": "0082b761313f5e2107a0128fcc75fde91fe7733352c7d13424060c320f62405c",
+      "online": "0082b761313f5e2107a0128fcc75fde91fe7733352c7d13424060c320f62405c"
+    },
+    "sc_input": {
+      "full": "97ca8113a88eed881fbcdd6aecd0191fa7d2e4c0aeca8dfdd5daad5b28984898",
+      "online": "97ca8113a88eed881fbcdd6aecd0191fa7d2e4c0aeca8dfdd5daad5b28984898"
+    }
+  }
+}

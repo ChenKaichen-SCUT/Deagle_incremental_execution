@@ -1,0 +1,54 @@
+{
+  "bounds": {
+    "assumptions": [
+      "One batch with two boxes; three units per box."
+    ],
+    "check_unwinding": true,
+    "memory_model": "sc",
+    "target_bits": 64,
+    "unwind": 4,
+    "worker_threads": 1
+  },
+  "counterexample": {
+    "failure": {
+      "index": 61,
+      "reason": "assertion shipped_units == 6",
+      "thread": 0
+    },
+    "last_program_assignments": [
+      {
+        "index": 53,
+        "lhs": "shipped_units",
+        "line": "3",
+        "thread": 1,
+        "value": "4"
+      }
+    ],
+    "step_count": 62
+  },
+  "harness_calls": [
+    {
+      "code": "record_batch(2);",
+      "line": 11
+    },
+    {
+      "code": "pthread_create(&worker, 0, pack, 0);",
+      "line": 18
+    },
+    {
+      "code": "pthread_join(worker, 0);",
+      "line": 19
+    }
+  ],
+  "program.c": "static void record_batch(int boxes)\n{\n    shipped_units += boxes * 2;\n}\n",
+  "property": {
+    "assertion": "assert(shipped_units == 6);",
+    "description": "Two boxes of three units must contribute six units after the worker joins.",
+    "id": "main.assertion.1",
+    "source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": 21
+    }
+  }
+}

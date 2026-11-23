@@ -1,0 +1,25 @@
+{
+  "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "exit_code": 0,
+  "gamma_sha256": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+  "input_sha256": {
+    "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "program.c": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd"
+  },
+  "phi_sha256": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+  "result": {
+    "classification": "NO_VIOLATION_WITHIN_BOUND",
+    "native_overall": "success",
+    "properties": {
+      "main.assertion.1": "SUCCESS"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "21"
+    },
+    "unwinding_properties": {}
+  },
+  "wall_ns": 89106459
+}

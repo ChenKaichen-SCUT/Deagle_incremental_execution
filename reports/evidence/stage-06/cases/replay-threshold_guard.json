@@ -1,0 +1,188 @@
+{
+  "agreement": "DEFINITE_AGREEMENT",
+  "baseline": {
+    "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "exit_code": 0,
+    "gamma_sha256": "54079a57472e939f9499b56f279bc0ba94370085b6d33b82b03a8a4554113560",
+    "input_sha256": {
+      "harness.c": "a451265be9584712bcf50d00d5c2150e7f7982110d75b774dac43437d721e5ea",
+      "program.c": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a"
+    },
+    "phi_sha256": "7f1d4f10c59309179a1e1cbad357f08f1c3e1f40c42a015a1afa85d907c3ad46",
+    "result": {
+      "classification": "NO_VIOLATION_WITHIN_BOUND",
+      "native_overall": "success",
+      "properties": {
+        "main.assertion.1": "SUCCESS"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "unwinding_properties": {}
+    },
+    "wall_ns": 90958977
+  },
+  "baseline_started": true,
+  "candidate_sha256": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+  "candidate_trace_steps": 0,
+  "case": "threshold_guard",
+  "elapsed_ns": 996738787,
+  "fallback_reason": "",
+  "frontend_seconds": 0.21402219599985983,
+  "method": "replay",
+  "model_check_requested": true,
+  "model_match": true,
+  "model_path": "incremental",
+  "native": {
+    "changed_instruction_type": "integer_guard",
+    "checkpoint_budget_bytes": 2147483648,
+    "checkpoint_dispatch": 61,
+    "checkpoint_fork_ns": 380948,
+    "checkpoint_raw_events": 22,
+    "checkpoint_raw_ssa_rows": 105,
+    "checkpoint_symbol_table_entries": 1,
+    "checkpoint_threads": 2,
+    "checkpoint_used": true,
+    "checkpoint_virtual_bytes_upper_bound": 28311552,
+    "executed_symex_steps": 23,
+    "exit_code": 0,
+    "fallback_reason": "",
+    "function": "record_request",
+    "goto_nodes_checked": 77,
+    "prefix_symbol_references_resolved": 96,
+    "program_symbols_checked": 95,
+    "reused_prefix_symex_steps": 61,
+    "role": "candidate",
+    "sc_counters": {
+      "coverage_formulas_reused": 2,
+      "read_bundles_generated": 8,
+      "read_bundles_reused": 2,
+      "rf_edges_reused": 4,
+      "thread_edges_generated": 9,
+      "thread_edges_reused": 20,
+      "value_formulas_reused": 4
+    },
+    "sc_regions": [
+      {
+        "family": "rf",
+        "name": "__CPROVER_threads_exited",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "__CPROVER_next_thread_id",
+        "reused": true
+      },
+      {
+        "family": "rf",
+        "name": "accepted",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "units",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "main::1::worker!0@1",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "0",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "1",
+        "reused": false
+      }
+    ]
+  },
+  "new_version": "94dec17164a808e41543dd475dcdcea71aa6483c83e1c7c6ceb57bc5f389f289",
+  "old": {
+    "classification": "VIOLATION",
+    "native_overall": "failure",
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "24"
+    },
+    "unwinding_properties": {}
+  },
+  "old_trace_steps": 74,
+  "old_version": "a0943ca0765aa7cc50115e042d5f9700cbb0ed400867bd9dce0ce80847c2aa2a",
+  "old_warmup_seconds": 0.2440536259964574,
+  "online": {
+    "classification": "NO_VIOLATION_WITHIN_BOUND",
+    "native_overall": "success",
+    "properties": {
+      "main.assertion.1": "SUCCESS"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "24"
+    },
+    "unwinding_properties": {}
+  },
+  "online_candidate_seconds": 0.3381789060003939,
+  "online_reason": null,
+  "online_service_ns": 707564434,
+  "online_status": "VERIFIED",
+  "protected_sha256": {
+    "gamma.json": "54079a57472e939f9499b56f279bc0ba94370085b6d33b82b03a8a4554113560",
+    "harness.c": "a451265be9584712bcf50d00d5c2150e7f7982110d75b774dac43437d721e5ea",
+    "old/program.c": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+    "phi.json": "7f1d4f10c59309179a1e1cbad357f08f1c3e1f40c42a015a1afa85d907c3ad46",
+    "task.yaml": "a874c1c418a6674ccb2c866af190347068f40fe8586cb63aeb3f35c5a78214ef"
+  },
+  "repair_elapsed_ns": 15158738,
+  "repair_usage": {
+    "api_calls": 0,
+    "estimated_usd": 0,
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "run_id": "20261123T132330561632Z-e7091d7d",
+  "schema": 1,
+  "status": "COMPLETED",
+  "theory": {
+    "accepted": 0,
+    "audit_ns": 15360662,
+    "binding_ns": 0,
+    "context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ],
+    "deduplicated": 0,
+    "export_rejected": 0,
+    "exported": 2,
+    "import_ns": 1260,
+    "imported": 0,
+    "native_rows": [],
+    "new_context": "d2d5ed291182d4342cf5a7ed1510e5d099316b345b336ff4c1fcfc5fb775ae32",
+    "new_fingerprint_ns": 7109760,
+    "no_effect": 0,
+    "not_submitted": 0,
+    "old_audit_ns": 3763094,
+    "old_context": "74d0c4f33cfec5f49c5ac5826425f6ebc7d75eb9f847119dac6a7c4bb91763f2",
+    "old_fingerprint_ns": 6652001,
+    "rejected": 2,
+    "submitted": 0,
+    "supported": 2,
+    "unique": 2,
+    "validation_rejected": 2
+  }
+}

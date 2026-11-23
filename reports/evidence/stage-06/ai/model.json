@@ -1,0 +1,73 @@
+{
+  "api_base": "https://api.deepseek.com",
+  "automatic_retries": 0,
+  "candidate_sha256": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+  "case": "batch_total",
+  "estimated_usd_by_tariff": {
+    "off_peak": "0.00117414",
+    "peak": "0.00234828"
+  },
+  "exit_status": "Submitted",
+  "finished_utc": "2026-11-23T13:42:04.355812+00:00",
+  "max_model_calls": 4,
+  "model": "deepseek-v4-pro",
+  "model_input_bytes": 853,
+  "model_input_sha256": "b498931c50135bd413985bd013e423edd146f29e1aca10f2e4cc8272ddfe5a7f",
+  "operations": [
+    {
+      "file": "candidate/program.c",
+      "operation": "write",
+      "sha256": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd"
+    },
+    {
+      "description_sha256": "762cfcab36dbe79149f41721395f923e9883c2828c1dffa2c79c9fbc645b2b39",
+      "operation": "submit"
+    }
+  ],
+  "preflight": {
+    "candidate_writable": true,
+    "host_project_absent": true,
+    "no_network_route": true,
+    "packet_read_only": true,
+    "restricted_uid": 65534,
+    "sandbox_auth_env_absent": true
+  },
+  "protected_inputs_unchanged": true,
+  "requests": [
+    {
+      "cache_hit_tokens": 0,
+      "cache_miss_tokens": 711,
+      "finish_reason": "tool_calls",
+      "input_tokens": 711,
+      "output_tokens": 356,
+      "prior_reasoning_exact": null,
+      "prior_reasoning_present": false,
+      "reasoning_present": true,
+      "reasoning_tokens": 298,
+      "response_id": "24b30002-611c-47ba-a4a6-5bc34406621b",
+      "returned_model": "deepseek-v4-pro",
+      "returned_tool_ids": [],
+      "roles": [
+        "system",
+        "user"
+      ],
+      "started_utc": "2026-11-23T13:41:57.915828+00:00",
+      "tool_calls": [
+        {
+          "arguments_bytes": 62,
+          "arguments_sha256": "cf2e6674f4c221f9a55caf24b3cd70c8e25f44194ad3023a87c8a32598d7d982",
+          "id": "call_00_CSv7Xeh58yeQLczc1ZYh5530",
+          "tool": "bash"
+        }
+      ],
+      "wire_messages_bytes": 1869,
+      "wire_messages_sha256": "5990dc1495e285995d0142b475920a57a8b7e5841f26bc913d7918134fde817c"
+    }
+  ],
+  "route": "deepseek/deepseek-v4-pro",
+  "started_utc": "2026-11-23T13:41:57.897144+00:00",
+  "submission": "Replaced line 3 in candidate/program.c.",
+  "system_prompt": "Repair the given concurrent C program. Use one native bash tool call per response.",
+  "task_instructions": "The JSON below contains the complete editable function and relevant evidence from the old program. Preserve the computation, arguments, thread work and contract. Avoid hardcoding the final total or adding assumptions. For a one-line repair, use the bash tool now with ONE command: submit-line N 'replacement C line'. N is the 1-based line number in program.c. Supply your own complete corrected line inside single quotes. This writes and submits the patch immediately. For a multiline repair, write your corrected complete C source using:\ncat > candidate/program.c <<'C_SOURCE'\n<your complete corrected source>\nC_SOURCE\nAfter a multiline write, use: submit 'brief repair description'\nOptional reads are cat candidate/program.c and cat inputs/repair-context.json.\n",
+  "timeout_seconds": 300
+}

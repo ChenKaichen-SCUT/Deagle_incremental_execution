@@ -1,0 +1,128 @@
+{
+  "agreement": "DEFINITE_AGREEMENT",
+  "baseline": {
+    "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "exit_code": 10,
+    "gamma_sha256": "e99a878ecedfabc62e9ac4d529c4b2820c6e2e60c466fc7291f36e333b5ec3b3",
+    "input_sha256": {
+      "harness.c": "3c913340b6c9c766cf66fe07fb87035353498491af371f9b7efe43daf99c545f",
+      "program.c": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf"
+    },
+    "phi_sha256": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "result": {
+      "classification": "VIOLATION",
+      "native_overall": "failure",
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "unwinding_properties": {}
+    },
+    "wall_ns": 113181634
+  },
+  "baseline_started": true,
+  "candidate_sha256": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+  "candidate_trace_steps": 156,
+  "case": "partial_counter",
+  "elapsed_ns": 1509772568,
+  "fallback_reason": "synchronization_calls_changed:record_left",
+  "frontend_seconds": 0.21401143500042963,
+  "method": "replay",
+  "model_check_requested": true,
+  "model_match": true,
+  "model_path": "full_fallback",
+  "native": {
+    "checkpoint_used": false,
+    "executed_symex_steps": 176,
+    "reused_prefix_symex_steps": 0,
+    "sc_counters": {}
+  },
+  "new_version": "24265c2130f8c6376c382996092032736a274a9c77c4c20d99a1a3a6a03785d2",
+  "old": {
+    "classification": "VIOLATION",
+    "native_overall": "failure",
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "31"
+    },
+    "unwinding_properties": {}
+  },
+  "old_trace_steps": 170,
+  "old_version": "c6ce8ca12b48b51e04e0350faddda1e6e10b754c2dc29481f400fcf4bce84763",
+  "old_warmup_seconds": 0.36099130299771787,
+  "online": {
+    "classification": "VIOLATION",
+    "native_overall": "failure",
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "31"
+    },
+    "unwinding_properties": {}
+  },
+  "online_candidate_seconds": 0.5934291310004483,
+  "online_reason": null,
+  "online_service_ns": 1087708034,
+  "online_status": "VERIFIED",
+  "protected_sha256": {
+    "gamma.json": "e99a878ecedfabc62e9ac4d529c4b2820c6e2e60c466fc7291f36e333b5ec3b3",
+    "harness.c": "3c913340b6c9c766cf66fe07fb87035353498491af371f9b7efe43daf99c545f",
+    "old/program.c": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+    "phi.json": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "task.yaml": "cf417001b76718e25a76224c35a29fc73cb63b67eae607716add5de847bc1ffe"
+  },
+  "repair_elapsed_ns": 15245649,
+  "repair_usage": {
+    "api_calls": 0,
+    "estimated_usd": 0,
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "run_id": "20261123T132333172102Z-980992e4",
+  "schema": 1,
+  "status": "COMPLETED",
+  "theory": {
+    "accepted": 0,
+    "audit_ns": 47994403,
+    "binding_ns": 0,
+    "context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ],
+    "deduplicated": 0,
+    "export_rejected": 0,
+    "exported": 6,
+    "import_ns": 1350,
+    "imported": 0,
+    "native_rows": [],
+    "new_context": "42ad8cbd78628d82fc6411cc7aca4738498745be4532e6fd0efa0d43e7cdb17d",
+    "new_fingerprint_ns": 13578847,
+    "no_effect": 0,
+    "not_submitted": 0,
+    "old_audit_ns": 35770533,
+    "old_context": "cf390e712c0e34dc0f1840a1bb795fb8da81dbec7f286944d827bed6c8297e71",
+    "old_fingerprint_ns": 14420643,
+    "rejected": 6,
+    "submitted": 0,
+    "supported": 6,
+    "unique": 6,
+    "validation_rejected": 6
+  }
+}

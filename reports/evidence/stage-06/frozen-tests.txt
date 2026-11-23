@@ -1,0 +1,23 @@
+batch_total: verified patch, source, property, configuration, counterexample and raw streams
+split_counter: verified patch, source, property, configuration, counterexample and raw streams
+threshold_guard: verified patch, source, property, configuration, counterexample and raw streams
+test_failure_needs_source_matched_trace (test_evidence.EvidenceTests) ... ok
+test_inconclusive_is_unknown (test_evidence.EvidenceTests) ... ok
+test_missing_or_duplicate_property_rejected (test_evidence.EvidenceTests) ... ok
+test_protected_harness_and_output_allowlist (test_evidence.EvidenceTests) ... ok
+test_real_trace_matches_original_document (test_evidence.EvidenceTests) ... ok
+test_recorded_verifier_flags_must_match_gamma (test_evidence.EvidenceTests) ... ok
+test_trailing_diagnostics_and_wrong_exit_rejected (test_evidence.EvidenceTests) ... ok
+test_unwind_and_unrelated_failures_do_not_become_bounded_passes (test_evidence.EvidenceTests) ... ok
+test_wrong_assertion_location_rejected (test_evidence.EvidenceTests) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 0.061s
+
+OK
+batch_retained_error: 1 exported, 0 rejected, 1 imported; VIOLATION
+batch_total: 1 exported, 0 rejected, 1 imported; NO_VIOLATION_WITHIN_BOUND
+partial_counter: 6 exported, 6 rejected, 0 imported; VIOLATION
+split_counter: 6 exported, 6 rejected, 0 imported; NO_VIOLATION_WITHIN_BOUND
+threshold_guard: 2 exported, 2 rejected, 0 imported; NO_VIOLATION_WITHIN_BOUND
+Verified 448 archived files, both property results for each pair, and the independent order enumeration.

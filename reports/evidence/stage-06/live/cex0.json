@@ -1,0 +1,1171 @@
+{
+  "assignment_indices": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    20,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    48,
+    49,
+    53,
+    57
+  ],
+  "coverage": {
+    "copied_steps": 62,
+    "missing_fields_by_step": {
+      "source": 2,
+      "thread": 0
+    },
+    "not_exported": [
+      "complete event graph",
+      "reads-from relation",
+      "complete program-order relation",
+      "SC order over all memory events"
+    ],
+    "order": "Indices follow the UI trace. Hidden and library steps are retained; raw JSON is authoritative.",
+    "steps_in_public_trace": 62,
+    "witness": "No separate GraphML requested for this case."
+  },
+  "failure": {
+    "hidden": false,
+    "index": 61,
+    "property": "main.assertion.1",
+    "reason": "assertion shipped_units == 6",
+    "source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "21"
+    },
+    "thread": 0,
+    "type": "failure"
+  },
+  "gamma": {
+    "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "deagle_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+    "entry": "main",
+    "frontend_mode": [
+      "--show-goto-functions"
+    ],
+    "harness": "harness.c",
+    "harness_sha256": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "included_source": "program.c",
+    "limits": {
+      "memory_bytes": 21474836480,
+      "timeout_seconds": 300
+    },
+    "platform": "Ubuntu 22.04 amd64 LP64, GCC 11.4, libc6-dev headers",
+    "semantics": {
+      "assumptions": [
+        "One batch with two boxes; three units per box."
+      ],
+      "backend": "deagle-closure",
+      "check_unwinding": true,
+      "compiler_flags": [],
+      "initial_state": "static C initialization; main is the sole entry",
+      "library_model": "pthread and C library built into the pinned Deagle binary",
+      "memory_model": "sc",
+      "preprocessor": "GCC system preprocessor as invoked by the locked Deagle C front end",
+      "target_bits": 64,
+      "thread_bound": "fixed by the protected harness: one create per worker, no spawn loop",
+      "unwind": 4,
+      "worker_threads": 1
+    },
+    "source_argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--64",
+      "--unwind",
+      "4",
+      "--unwinding-assertions"
+    ],
+    "target_property": "main.assertion.1",
+    "translation_unit": "harness.c",
+    "verification_output": [
+      "--trace",
+      "--json-ui"
+    ]
+  },
+  "input_sha256": {
+    "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+    "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+    "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+    "program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61"
+  },
+  "p0_sha256": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+  "property": "main.assertion.1",
+  "raw_trace": "../pair/old/result.json",
+  "raw_witness": null,
+  "schema_version": 1,
+  "step_count": 62,
+  "steps": [
+    {
+      "function": {
+        "displayName": "__CPROVER_initialize",
+        "identifier": "__CPROVER_initialize"
+      },
+      "hidden": true,
+      "index": 0,
+      "source": {},
+      "thread": 0,
+      "type": "function-call"
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 1,
+      "lhs": "__CPROVER_alloca_object",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "19"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "NULL",
+        "name": "pointer",
+        "type": "const void *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 2,
+      "lhs": "__CPROVER_dead_object",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "14"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "NULL",
+        "name": "pointer",
+        "type": "const void *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 3,
+      "lhs": "__CPROVER_deallocated",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "13"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "NULL",
+        "name": "pointer",
+        "type": "const void *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 4,
+      "lhs": "__CPROVER_malloc_is_new_array",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "16"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0",
+        "data": false,
+        "name": "boolean"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 5,
+      "lhs": "__CPROVER_max_malloc_size",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "21"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000010000000000000000000000000000000000000000000000000000000",
+        "data": "36028797018963968ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 6,
+      "lhs": "__CPROVER_memory_leak",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "17"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "NULL",
+        "name": "pointer",
+        "type": "const void *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 7,
+      "lhs": "__CPROVER_new_object",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "15"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "NULL",
+        "name": "pointer",
+        "type": "const void *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 8,
+      "lhs": "__CPROVER_next_thread_id",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "8"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 9,
+      "lhs": "__CPROVER_next_thread_key",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "11"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 10,
+      "lhs": "__CPROVER_pipe_count",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "34"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "00000000000000000000000000000000",
+        "data": "0u",
+        "name": "integer",
+        "type": "unsigned int",
+        "width": 32
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 11,
+      "lhs": "__CPROVER_rounding_mode",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "25"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "00000000000000000000000000000000",
+        "data": "0",
+        "name": "integer",
+        "type": "signed int",
+        "width": 32
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 12,
+      "lhs": "__CPROVER_thread_id",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "6"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 13,
+      "lhs": "__CPROVER_thread_key_dtors",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "10"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "name": "unknown"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 14,
+      "lhs": "__CPROVER_thread_keys",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "9"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "name": "unknown"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 15,
+      "lhs": "__CPROVER_threads_exited",
+      "source": {
+        "file": "<built-in-additions>",
+        "line": "7"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "name": "unknown"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 16,
+      "lhs": "shipped_units",
+      "source": {
+        "file": "harness.c",
+        "line": "4"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "00000000000000000000000000000000",
+        "data": "0",
+        "name": "integer",
+        "type": "signed int",
+        "width": 32
+      }
+    },
+    {
+      "function": {
+        "displayName": "__CPROVER_initialize",
+        "identifier": "__CPROVER_initialize"
+      },
+      "hidden": true,
+      "index": 17,
+      "source": {},
+      "thread": 0,
+      "type": "function-return"
+    },
+    {
+      "hidden": false,
+      "index": 18,
+      "source": {
+        "file": "harness.c",
+        "line": "15"
+      },
+      "thread": 0,
+      "type": "location-only"
+    },
+    {
+      "function": {
+        "displayName": "main",
+        "identifier": "main"
+      },
+      "hidden": false,
+      "index": 19,
+      "source": {
+        "file": "harness.c",
+        "line": "15"
+      },
+      "thread": 0,
+      "type": "function-call"
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": false,
+      "index": 20,
+      "lhs": "worker",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "17"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "hidden": false,
+      "index": 21,
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "18"
+      },
+      "thread": 0,
+      "type": "location-only"
+    },
+    {
+      "function": {
+        "displayName": "pthread_create",
+        "identifier": "pthread_create"
+      },
+      "hidden": false,
+      "index": 22,
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "18"
+      },
+      "thread": 0,
+      "type": "function-call"
+    },
+    {
+      "assignmentType": "actual-parameter",
+      "hidden": false,
+      "index": 23,
+      "lhs": "thread",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "18"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "worker!0@1",
+        "name": "pointer",
+        "type": "__CPROVER_size_t *"
+      }
+    },
+    {
+      "assignmentType": "actual-parameter",
+      "hidden": false,
+      "index": 24,
+      "lhs": "attr",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "18"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "((const pthread_attr_t *)NULL)",
+        "name": "pointer",
+        "type": "const pthread_attr_t *"
+      }
+    },
+    {
+      "assignmentType": "actual-parameter",
+      "hidden": false,
+      "index": 25,
+      "lhs": "start_routine",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "18"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "pack",
+        "name": "pointer",
+        "type": "const void * (*)(const void *)"
+      }
+    },
+    {
+      "assignmentType": "actual-parameter",
+      "hidden": false,
+      "index": 26,
+      "lhs": "arg",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "18"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "NULL",
+        "name": "pointer",
+        "type": "const void *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 27,
+      "lhs": "this_thread_id",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "27"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 28,
+      "lhs": "__CPROVER_next_thread_id",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "29"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+        "data": "1ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 29,
+      "lhs": "this_thread_id",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "29"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+        "data": "1ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 30,
+      "lhs": "worker",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "33"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+        "data": "1ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "hidden": false,
+      "index": 31,
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "39"
+      },
+      "thread": 0,
+      "type": "location-only"
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 32,
+      "lhs": "next_thread_key",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "41"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 33,
+      "lhs": "next_thread_key",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "41"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 34,
+      "lhs": "next_thread_key",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 35,
+      "lhs": "attr",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "((const pthread_attr_t *)NULL)",
+        "name": "pointer",
+        "type": "const pthread_attr_t *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 36,
+      "lhs": "thread",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "worker!0@1",
+        "name": "pointer",
+        "type": "__CPROVER_size_t *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 37,
+      "lhs": "arg",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "NULL",
+        "name": "pointer",
+        "type": "const void *"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 38,
+      "lhs": "this_thread_id",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+        "data": "1ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 39,
+      "lhs": "start_routine",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "pack",
+        "name": "pointer",
+        "type": "const void * (*)(const void *)"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 40,
+      "lhs": "__CPROVER_rounding_mode",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "00000000000000000000000000000000",
+        "data": "0",
+        "name": "integer",
+        "type": "signed int",
+        "width": 32
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 41,
+      "lhs": "__CPROVER_thread_id",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 42,
+      "lhs": "__CPROVER_thread_key_dtors",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "name": "unknown"
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 43,
+      "lhs": "__CPROVER_next_thread_key",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+        "data": "0ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 44,
+      "lhs": "__CPROVER_thread_keys",
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "48"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "name": "unknown"
+      }
+    },
+    {
+      "function": {
+        "displayName": "pthread_create",
+        "identifier": "pthread_create"
+      },
+      "hidden": true,
+      "index": 45,
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "61"
+      },
+      "thread": 0,
+      "type": "function-return"
+    },
+    {
+      "hidden": false,
+      "index": 46,
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "19"
+      },
+      "thread": 0,
+      "type": "location-only"
+    },
+    {
+      "function": {
+        "displayName": "pthread_join",
+        "identifier": "pthread_join"
+      },
+      "hidden": false,
+      "index": 47,
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "19"
+      },
+      "thread": 0,
+      "type": "function-call"
+    },
+    {
+      "assignmentType": "actual-parameter",
+      "hidden": false,
+      "index": 48,
+      "lhs": "thread",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "19"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+        "data": "1ul",
+        "name": "integer",
+        "type": "__CPROVER_size_t",
+        "width": 64
+      }
+    },
+    {
+      "assignmentType": "actual-parameter",
+      "hidden": false,
+      "index": 49,
+      "lhs": "value_ptr",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "19"
+      },
+      "thread": 0,
+      "type": "assignment",
+      "value": {
+        "data": "((const void **)NULL)",
+        "name": "pointer",
+        "type": "const void **"
+      }
+    },
+    {
+      "hidden": false,
+      "index": 50,
+      "source": {
+        "file": "<builtin-library-pthread_join>",
+        "function": "pthread_join",
+        "line": "26"
+      },
+      "thread": 0,
+      "type": "location-only"
+    },
+    {
+      "hidden": false,
+      "index": 51,
+      "source": {
+        "file": "<builtin-library-pthread_join>",
+        "function": "pthread_join",
+        "line": "27"
+      },
+      "thread": 0,
+      "type": "location-only"
+    },
+    {
+      "hidden": false,
+      "index": 52,
+      "source": {
+        "file": "<builtin-library-pthread_join>",
+        "function": "pthread_join",
+        "line": "28"
+      },
+      "thread": 0,
+      "type": "location-only"
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": false,
+      "index": 53,
+      "lhs": "shipped_units",
+      "source": {
+        "file": "program.c",
+        "function": "record_batch",
+        "line": "3"
+      },
+      "thread": 1,
+      "type": "assignment",
+      "value": {
+        "binary": "00000000000000000000000000000100",
+        "data": "4",
+        "name": "integer",
+        "type": "signed int",
+        "width": 32
+      }
+    },
+    {
+      "function": {
+        "displayName": "record_batch",
+        "identifier": "record_batch"
+      },
+      "hidden": false,
+      "index": 54,
+      "source": {
+        "file": "program.c",
+        "function": "record_batch",
+        "line": "4"
+      },
+      "thread": 1,
+      "type": "function-return"
+    },
+    {
+      "function": {
+        "displayName": "pack",
+        "identifier": "pack"
+      },
+      "hidden": false,
+      "index": 55,
+      "source": {
+        "file": "harness.c",
+        "function": "pack",
+        "line": "13"
+      },
+      "thread": 1,
+      "type": "function-return"
+    },
+    {
+      "hidden": false,
+      "index": 56,
+      "source": {
+        "file": "<builtin-library-__spawned_thread>",
+        "function": "__spawned_thread",
+        "line": "35"
+      },
+      "thread": 1,
+      "type": "location-only"
+    },
+    {
+      "assignmentType": "variable",
+      "hidden": true,
+      "index": 57,
+      "lhs": "__CPROVER_threads_exited[1l]",
+      "source": {
+        "file": "<builtin-library-__spawned_thread>",
+        "function": "__spawned_thread",
+        "line": "55"
+      },
+      "thread": 1,
+      "type": "assignment",
+      "value": {
+        "binary": "1",
+        "data": true,
+        "name": "boolean"
+      }
+    },
+    {
+      "function": {
+        "displayName": "__spawned_thread",
+        "identifier": "__spawned_thread"
+      },
+      "hidden": true,
+      "index": 58,
+      "source": {
+        "file": "<builtin-library-__spawned_thread>",
+        "function": "__spawned_thread",
+        "line": "56"
+      },
+      "thread": 1,
+      "type": "function-return"
+    },
+    {
+      "function": {
+        "displayName": "pthread_create",
+        "identifier": "pthread_create"
+      },
+      "hidden": true,
+      "index": 59,
+      "source": {
+        "file": "<builtin-library-pthread_create>",
+        "function": "pthread_create",
+        "line": "61"
+      },
+      "thread": 1,
+      "type": "function-return"
+    },
+    {
+      "function": {
+        "displayName": "pthread_join",
+        "identifier": "pthread_join"
+      },
+      "hidden": true,
+      "index": 60,
+      "source": {
+        "file": "<builtin-library-pthread_join>",
+        "function": "pthread_join",
+        "line": "32"
+      },
+      "thread": 0,
+      "type": "function-return"
+    },
+    {
+      "hidden": false,
+      "index": 61,
+      "property": "main.assertion.1",
+      "reason": "assertion shipped_units == 6",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "thread": 0,
+      "type": "failure"
+    }
+  ],
+  "thread_ids": [
+    0,
+    1
+  ]
+}

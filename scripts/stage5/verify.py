@@ -19,6 +19,15 @@ def verify(name, out, *, batch_error_probe=False):
                           session_script=ROOT/"scripts/stage5/session.py", binary=TheorySession.binary)
     pair = out/"pair"
     summary = read(pair/"theory-summary.json")
+    fresh, checks = check_native_imports(pair, summary)
+    result["theory"] = summary
+    result["fresh_solvers"] = fresh
+    result["checked_native_imports"] = checks
+    save(out/"acceptance.json",result)
+    return result
+
+
+def check_native_imports(pair, summary):
     export = read(pair/"old/theory-export.json")
     fresh = {v:read(pair/v/"fresh-solver.json") for v in ("old","candidate")}
     for state in fresh.values():
@@ -53,11 +62,7 @@ def verify(name, out, *, batch_error_probe=False):
                        "old_debug_x":old_literals,"candidate_debug_x":new_literals,
                        "cnf_numbers_differ":[x//2 for x in old_literals]!=[x//2 for x in new_literals],
                        "effect":row["effect"],"clauses_before":row["clauses_before"],"clauses_after":row["clauses_after"]})
-    result["theory"] = summary
-    result["fresh_solvers"] = fresh
-    result["checked_native_imports"] = checks
-    save(out/"acceptance.json",result)
-    return result
+    return fresh, checks
 
 
 if __name__=="__main__":

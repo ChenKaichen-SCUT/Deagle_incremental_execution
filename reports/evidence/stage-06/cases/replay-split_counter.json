@@ -1,0 +1,128 @@
+{
+  "agreement": "DEFINITE_AGREEMENT",
+  "baseline": {
+    "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "exit_code": 0,
+    "gamma_sha256": "1d346cde0da4b29ab7ccdda4283f7197c555bdf1f57e6cb74eeb9ea7e98f6927",
+    "input_sha256": {
+      "harness.c": "d4c2f4480fcec4c441123be51c7c3e81ee4407f01b87b01fb409230c7d654f1b",
+      "program.c": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865"
+    },
+    "phi_sha256": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "result": {
+      "classification": "NO_VIOLATION_WITHIN_BOUND",
+      "native_overall": "success",
+      "properties": {
+        "main.assertion.1": "SUCCESS"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "unwinding_properties": {}
+    },
+    "wall_ns": 102057065
+  },
+  "baseline_started": true,
+  "candidate_sha256": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+  "candidate_trace_steps": 0,
+  "case": "split_counter",
+  "elapsed_ns": 1465780104,
+  "fallback_reason": "synchronization_calls_changed:record_one",
+  "frontend_seconds": 0.2139997049998783,
+  "method": "replay",
+  "model_check_requested": true,
+  "model_match": true,
+  "model_path": "full_fallback",
+  "native": {
+    "checkpoint_used": false,
+    "executed_symex_steps": 156,
+    "reused_prefix_symex_steps": 0,
+    "sc_counters": {}
+  },
+  "new_version": "ce9db2520e420d827a06dfc6bcf4e98088d0acdcf42984b80523a25b8600b219",
+  "old": {
+    "classification": "VIOLATION",
+    "native_overall": "failure",
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "31"
+    },
+    "unwinding_properties": {}
+  },
+  "old_trace_steps": 166,
+  "old_version": "12f4514e7e490f0337d78cb8eeb4fc7fe21242c244a1a9a0fc7311b5e6d2c658",
+  "old_warmup_seconds": 0.35923109899886185,
+  "online": {
+    "classification": "NO_VIOLATION_WITHIN_BOUND",
+    "native_overall": "success",
+    "properties": {
+      "main.assertion.1": "SUCCESS"
+    },
+    "target": "main.assertion.1",
+    "target_source": {
+      "file": "harness.c",
+      "function": "main",
+      "line": "31"
+    },
+    "unwinding_properties": {}
+  },
+  "online_candidate_seconds": 0.5923063789996377,
+  "online_reason": null,
+  "online_service_ns": 1080246287,
+  "online_status": "VERIFIED",
+  "protected_sha256": {
+    "gamma.json": "1d346cde0da4b29ab7ccdda4283f7197c555bdf1f57e6cb74eeb9ea7e98f6927",
+    "harness.c": "d4c2f4480fcec4c441123be51c7c3e81ee4407f01b87b01fb409230c7d654f1b",
+    "old/program.c": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+    "phi.json": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+    "task.yaml": "82c93e495341826890b3a757754e6a76e59d09507237018d784720d7bb896326"
+  },
+  "repair_elapsed_ns": 15154737,
+  "repair_usage": {
+    "api_calls": 0,
+    "estimated_usd": 0,
+    "input_tokens": 0,
+    "output_tokens": 0
+  },
+  "run_id": "20261123T132331630448Z-e8f48844",
+  "schema": 1,
+  "status": "COMPLETED",
+  "theory": {
+    "accepted": 0,
+    "audit_ns": 38115750,
+    "binding_ns": 0,
+    "context_differences": [
+      "context_changed:atom_bindings",
+      "context_changed:atomic_sections",
+      "context_changed:edges",
+      "context_changed:events",
+      "context_changed:guard_locations"
+    ],
+    "deduplicated": 0,
+    "export_rejected": 0,
+    "exported": 6,
+    "import_ns": 1150,
+    "imported": 0,
+    "native_rows": [],
+    "new_context": "f01cfd75880028fd0ddbb2a65969959be03a04457c7121ed3c9299c9d3135cdd",
+    "new_fingerprint_ns": 11179549,
+    "no_effect": 0,
+    "not_submitted": 0,
+    "old_audit_ns": 35576420,
+    "old_context": "c15192c2dcd95509458087677c5b4d339fbe0f6ae4b351fc819e06fef17dc3a4",
+    "old_fingerprint_ns": 13995695,
+    "rejected": 6,
+    "submitted": 0,
+    "supported": 6,
+    "unique": 6,
+    "validation_rejected": 6
+  }
+}

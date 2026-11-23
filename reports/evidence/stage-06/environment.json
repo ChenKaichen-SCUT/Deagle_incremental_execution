@@ -1,0 +1,20 @@
+{
+  "available_memory_kib": 30449420,
+  "bwrap": "/usr/bin/bwrap",
+  "cpus_affinity": 8,
+  "disk_free": 71341162496,
+  "mini_commit": "a83fcae82d2a08f0ee0c688f9d137b3566c097f8",
+  "mini_python": "Python 3.10.12",
+  "platform": "Linux-5.15.0-186-generic-x86_64-with-glibc2.35",
+  "system_python": "3.10.12",
+  "tools": {
+    "deagle-baseline": {
+      "commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3"
+    },
+    "deagle-stage5": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057"
+    }
+  }
+}

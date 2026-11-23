@@ -33,6 +33,12 @@ class TheorySession:
 
 def run(case, out):
     session = run_pair(case, out, theory=TheorySession())
+    stats = summarize_theory(out)
+    print(case.name, session["path"], session["candidate"]["classification"], "OC",
+          *(stats[k] for k in ("exported","supported","accepted","imported")), stats["context_differences"])
+
+
+def summarize_theory(out):
     old = read(out/"old/theory-export.json")
     plan = read(out/"candidate/native-plan.json")
     audit_path = out/"candidate/theory-validation.json"
@@ -64,8 +70,7 @@ def run(case, out):
             stats["accepted"] == stats["imported"]+stats["no_effect"]+stats["not_submitted"]):
         raise ValueError("Inconsistent theory counters")
     save(out/"theory-summary.json", stats)
-    print(case.name, session["path"], session["candidate"]["classification"], "OC",
-          *(stats[k] for k in ("exported","supported","accepted","imported")), stats["context_differences"])
+    return stats
 
 
 if __name__ == "__main__":

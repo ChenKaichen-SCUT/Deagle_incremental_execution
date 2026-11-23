@@ -1,0 +1,80 @@
+{
+  "actual_runs": {
+    "malformed_source": {
+      "baseline_started": false,
+      "cli_exit": 2,
+      "reason": "Candidate Deagle frontend failed, exit 6 (program.c:3, syntax error before ';')",
+      "repair_usage": {
+        "api_calls": 0,
+        "estimated_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "status": "INVALID_PATCH"
+    },
+    "missing_credential": {
+      "baseline_started": false,
+      "cli_exit": 2,
+      "reason": "empty_controller_credential",
+      "repair_usage": {
+        "api_calls": 0,
+        "estimated_usd_by_tariff": {
+          "off_peak": "0",
+          "peak": "0"
+        },
+        "input_tokens": 0,
+        "model": "deepseek-v4-pro",
+        "output_tokens": 0
+      },
+      "status": "REPAIR_FAILED"
+    },
+    "old_not_violation": {
+      "baseline_started": false,
+      "cli_exit": 0,
+      "reason": null,
+      "repair_usage": {
+        "api_calls": 0,
+        "estimated_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "status": "OLD_NOT_VIOLATION"
+    },
+    "protected_edit": {
+      "baseline_started": false,
+      "cli_exit": 2,
+      "reason": "The patch must edit only the existing regular program.c",
+      "repair_usage": {
+        "api_calls": 0,
+        "estimated_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0
+      },
+      "status": "INVALID_PATCH"
+    },
+    "wrong_input_digest": {
+      "baseline_started": false,
+      "cli_exit": 2,
+      "reason": "approved_input_digest_mismatch",
+      "repair_usage": {
+        "api_calls": 0,
+        "estimated_usd_by_tariff": {
+          "off_peak": "0",
+          "peak": "0"
+        },
+        "input_tokens": 0,
+        "model": "deepseek-v4-pro",
+        "output_tokens": 0
+      },
+      "status": "REPAIR_FAILED"
+    }
+  },
+  "comparator_fixtures": {
+    "ERROR": "INCONCLUSIVE",
+    "INCOMPLETE_UNWINDING": "INCONCLUSIVE",
+    "OOM": "INCONCLUSIVE",
+    "TIMEOUT": "INCONCLUSIVE",
+    "UNKNOWN": "INCONCLUSIVE",
+    "contradictory": "DEFINITE_CONFLICT"
+  }
+}

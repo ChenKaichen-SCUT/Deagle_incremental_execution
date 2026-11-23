@@ -1,0 +1,15 @@
+{
+  "active_native_session_or_build_pids": [],
+  "checked_utc": "2026-11-23T13:43:40.049419+00:00",
+  "controller_stage_directory_created_utc": "2026-11-23T13:12:08.316686+00:00",
+  "frozen_case_tree": "6d3a21f391836d5dc846b7d63123ba28d721a5dd",
+  "frozen_partial_counter_tree": "aa441a41d3a7ddadfbf86c45621b85f48ca85efc",
+  "native_commits": {
+    "third_party/deagle-baseline": "a159f9923722646185ba8028610b2eef2618fa72",
+    "third_party/deagle-stage5": "0be9e2167d46c66ea12ca7f9f801063a03873625"
+  },
+  "next_stage": 7,
+  "next_stage_approved": false,
+  "seconds_to_archive_and_process_check": 1891.733,
+  "status": "READY_FOR_REVIEW"
+}

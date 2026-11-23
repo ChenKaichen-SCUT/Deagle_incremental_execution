@@ -53,7 +53,7 @@ def candidate_context(old, front, case, gamma, phi, lock, gcc, frontend_exit):
     return versions, diff
 
 
-def run_pair(case, out, *, checkpoint_bytes=None, theory=None):
+def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provider=None):
     task, gamma, phi = load_case(case)
     if int(memory_max()) != gamma["limits"]["memory_bytes"]:
         raise RuntimeError("Wrong cgroup limit")
@@ -66,8 +66,10 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None):
             shutil.copyfile(case / "harness.c", d / "harness.c")
     shutil.copyfile(ROOT / "scripts/stage3/record_gcc.py", tools / "gcc")
     (tools / "gcc").chmod(0o755)
-    for d, version in ((old, "old_source"), (front,"candidate_source"), (cand,"candidate_source")):
-        shutil.copyfile(case / task[version], d / "program.c")
+    shutil.copyfile(case / task["old_source"], old / "program.c")
+    if candidate_provider is None:
+        for d in (front, cand):
+            shutil.copyfile(case / task["candidate_source"], d / "program.c")
     shutil.copyfile(old / "program.c", working / "program.c")
     binary = theory.binary if theory else BINARY
     cmd = [str(binary), *gamma["source_argv"], *gamma["verification_output"], "harness.c"]
@@ -111,13 +113,24 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None):
         old_exit = ready.get("old_exit", original.poll())
         old_result, old_target = classify((old/"result.json").read_bytes(),old_exit,phi)
         if old_result["classification"] != "VIOLATION":
+            if candidate_provider is not None:
+                summary = {"case":case.name, "path":"old_not_violation", "old":old_result,
+                           "old_exit":old_exit, "old_warmup_wall_seconds":time.monotonic()-begin,
+                           "candidate":None, "tool":lock}
+                save(out/"session.json",summary)
+                return summary
             raise ValueError("Expected P0 target failure")
         if theory:
             old_manifest = manifest(old, case, gamma, phi, lock, gcc)
             save(old / "manifest.json", old_manifest)
             theory.capture(old, old_manifest)
         warmup_wall = time.monotonic()-begin
+        if candidate_provider is not None:
+            candidate_provider.produce(old, old_result, old_target, ready, original, warmup_wall)
         update_start = time.monotonic()
+        if candidate_provider is not None:
+            for d in (front, cand):
+                shutil.copyfile(case / task["candidate_source"], d / "program.c")
         def remaining():
             left = timeout - (time.monotonic()-update_start)
             if left <= 0: raise TimeoutError("Candidate frontend, maintenance and verification exceeded case budget")
@@ -127,6 +140,8 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None):
         compiler = start(front,INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_FRONTEND="1")
         frontend_exit = compiler.wait(timeout=remaining())
         frontend_wall=time.monotonic()-before_front
+        if candidate_provider is not None:
+            candidate_provider.admit(front, frontend_exit)
         versions, diff = candidate_context(old, front, case, gamma, phi, lock, gcc, frontend_exit)
         save(out/"source-changes.json",diff)
         reason=diff["preflight_refusal"]
