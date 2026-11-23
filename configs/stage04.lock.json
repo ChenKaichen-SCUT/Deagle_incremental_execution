@@ -1,0 +1,19 @@
+{
+  "schema": 1,
+  "parent_commit": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332",
+  "baseline_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+  "baseline_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "upstream_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "prior_toolchain": "configs/stage03.lock.json",
+  "development_commit": "3e5472e8edb93491acd6263596eea681c64c1549",
+  "development_tree": "1791c8af80b9d745700d0ddd181db5c33ed21df1",
+  "development_sha256": "cc0e91e9d698b57754c28686f3d267e2f16e6df081c924d907512b9af88583da",
+  "patch_sha256": "629d2c0bf7cf71c64c810d07206d27c4a4e288c64006d39bf5d6ddafa0f54aa8",
+  "bundle_sha256": "44ad6cae598fb061638cb2f09ec203a73e64a81be3644666a2f85d613b0e76c7",
+  "backend": "SC / Deagle Closure",
+  "native_solver_cache": false,
+  "checkpoint_mechanism": "Linux fork, immutable pre-call process image",
+  "maximum_checkpoints_in_session": 1,
+  "build_command": "bash scripts/stage4/build.sh",
+  "build_jobs": 4
+}

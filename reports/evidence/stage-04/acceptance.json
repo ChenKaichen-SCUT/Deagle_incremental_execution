@@ -1,0 +1,752 @@
+{
+  "additional_incremental_error": "batch_retained_error",
+  "cases": {
+    "batch_retained_error": {
+      "bytes_old_fragment_store": 5096,
+      "candidate": "VIOLATION",
+      "candidate_exit": 10,
+      "checkpoint_ssa_rows": 102,
+      "checkpoint_vm_bytes_upper_bound": 28246016,
+      "different_phases": [],
+      "fallback_reason": "",
+      "full_dispatches": 73,
+      "full_oracle_started_after_online": true,
+      "model_digests": {
+        "full": "aa8cbb5c19ca3f914b743f8279406073717ad6d0ea9df4d24a9a3e91b0880c6e",
+        "online": "aa8cbb5c19ca3f914b743f8279406073717ad6d0ea9df4d24a9a3e91b0880c6e"
+      },
+      "model_old_and_candidate": {
+        "candidate": {
+          "constraint_comments": {
+            "rf-some": 6,
+            "rf-val": 10
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 24,
+            "rf": 10
+          },
+          "events": 24,
+          "oc_guards": 16,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 16,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 131
+        },
+        "old": {
+          "constraint_comments": {
+            "rf-some": 6,
+            "rf-val": 10
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 24,
+            "rf": 10
+          },
+          "events": 24,
+          "oc_guards": 16,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 16,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 131
+        }
+      },
+      "native_executed": 13,
+      "native_old_and_candidate_ns": {
+        "candidate": {
+          "cnf_and_graph": 1870437,
+          "equation_export": 5806494,
+          "event_constraints": 1609872,
+          "goal_conversion": 10540,
+          "result_output": 848527,
+          "solve": 298366,
+          "symbolic_execution": 439549,
+          "symex_cleanup": 435258
+        },
+        "old": {
+          "cnf_and_graph": 1886147,
+          "equation_export": 6367695,
+          "event_constraints": 1940648,
+          "goal_conversion": 7820,
+          "parse_goto": 139160670,
+          "result_output": 829996,
+          "solve": 290056,
+          "symbolic_execution": 3389196,
+          "symex_cleanup": 476629
+        }
+      },
+      "native_skipped": 60,
+      "old": "VIOLATION",
+      "old_candidate_trace_steps": [
+        62,
+        62
+      ],
+      "old_exit": 10,
+      "path": "incremental",
+      "prefix_dispatch_trace_matches": true,
+      "prefix_symbol_bindings": 93,
+      "sc": {
+        "coverage_formulas_reused": 2,
+        "read_bundles_generated": 4,
+        "read_bundles_reused": 2,
+        "rf_edges_reused": 4,
+        "thread_edges_generated": 3,
+        "thread_edges_reused": 18,
+        "value_formulas_reused": 4
+      },
+      "seconds": {
+        "full_diagnostic": 0.08142915699863806,
+        "independent_candidate": 0.0705,
+        "independent_old": 0.1258,
+        "old_warmup": 0.21516033000079915,
+        "online_candidate": 0.25557736300106626,
+        "online_frontend": 0.21407916999669396
+      },
+      "source_mutex_changes": [],
+      "suffix_dispatch_trace_matches": true,
+      "suffix_type": "integer_rhs",
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      }
+    },
+    "batch_total": {
+      "bytes_old_fragment_store": 5087,
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "candidate_exit": 0,
+      "checkpoint_ssa_rows": 102,
+      "checkpoint_vm_bytes_upper_bound": 28246016,
+      "different_phases": [],
+      "fallback_reason": "",
+      "full_dispatches": 73,
+      "full_oracle_started_after_online": true,
+      "model_digests": {
+        "full": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655",
+        "online": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655"
+      },
+      "model_old_and_candidate": {
+        "candidate": {
+          "constraint_comments": {
+            "rf-some": 6,
+            "rf-val": 10
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 24,
+            "rf": 10
+          },
+          "events": 24,
+          "oc_guards": 16,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 16,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 131
+        },
+        "old": {
+          "constraint_comments": {
+            "rf-some": 6,
+            "rf-val": 10
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 24,
+            "rf": 10
+          },
+          "events": 24,
+          "oc_guards": 16,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 53,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 16,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 7,
+            "function_return": 9,
+            "goto": 8,
+            "location": 7,
+            "output": 1,
+            "read": 6,
+            "spawn": 1,
+            "write": 16
+          },
+          "steps": 131
+        }
+      },
+      "native_executed": 13,
+      "native_old_and_candidate_ns": {
+        "candidate": {
+          "cnf_and_graph": 1872937,
+          "equation_export": 5771193,
+          "event_constraints": 1601871,
+          "goal_conversion": 7570,
+          "result_output": 36260,
+          "solve": 247155,
+          "symbolic_execution": 441399,
+          "symex_cleanup": 495000
+        },
+        "old": {
+          "cnf_and_graph": 1968668,
+          "equation_export": 6524898,
+          "event_constraints": 1981958,
+          "goal_conversion": 9310,
+          "parse_goto": 141440434,
+          "result_output": 866067,
+          "solve": 298876,
+          "symbolic_execution": 3380846,
+          "symex_cleanup": 503319
+        }
+      },
+      "native_skipped": 60,
+      "old": "VIOLATION",
+      "old_candidate_trace_steps": [
+        62,
+        0
+      ],
+      "old_exit": 10,
+      "path": "incremental",
+      "prefix_dispatch_trace_matches": true,
+      "prefix_symbol_bindings": 93,
+      "sc": {
+        "coverage_formulas_reused": 2,
+        "read_bundles_generated": 4,
+        "read_bundles_reused": 2,
+        "rf_edges_reused": 4,
+        "thread_edges_generated": 3,
+        "thread_edges_reused": 18,
+        "value_formulas_reused": 4
+      },
+      "seconds": {
+        "full_diagnostic": 0.08052219999808585,
+        "independent_candidate": 0.0726,
+        "independent_old": 0.0724,
+        "old_warmup": 0.22066569800153957,
+        "online_candidate": 0.25551863299915567,
+        "online_frontend": 0.21410651999758556
+      },
+      "source_mutex_changes": [],
+      "suffix_dispatch_trace_matches": true,
+      "suffix_type": "integer_rhs",
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      }
+    },
+    "partial_counter": {
+      "bytes_old_fragment_store": 8263,
+      "candidate": "VIOLATION",
+      "candidate_exit": 10,
+      "checkpoint_ssa_rows": 0,
+      "checkpoint_vm_bytes_upper_bound": 28340224,
+      "different_phases": [],
+      "fallback_reason": "synchronization_calls_changed:record_left",
+      "full_dispatches": 176,
+      "full_oracle_started_after_online": true,
+      "model_digests": {
+        "full": "2182dde61af9052a876a5aee9c57f7fb459bb87da52999f15fb062061e10f6ce",
+        "online": "2182dde61af9052a876a5aee9c57f7fb459bb87da52999f15fb062061e10f6ce"
+      },
+      "model_old_and_candidate": {
+        "candidate": {
+          "constraint_comments": {
+            "rf-some": 18,
+            "rf-val": 58
+          },
+          "edge_kinds": {
+            "apo": 9,
+            "po": 56,
+            "rf": 58
+          },
+          "events": 56,
+          "oc_guards": 28,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 107,
+            "atomic_begin": 8,
+            "atomic_end": 8,
+            "constraint": 76,
+            "decl": 7,
+            "fence": 8,
+            "function_call": 19,
+            "function_return": 22,
+            "goto": 17,
+            "location": 20,
+            "output": 1,
+            "read": 18,
+            "spawn": 2,
+            "write": 28
+          },
+          "steps": 342
+        },
+        "old": {
+          "constraint_comments": {
+            "rf-some": 20,
+            "rf-val": 81
+          },
+          "edge_kinds": {
+            "apo": 11,
+            "po": 62,
+            "rf": 81
+          },
+          "events": 62,
+          "oc_guards": 30,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 114,
+            "atomic_begin": 10,
+            "atomic_end": 10,
+            "constraint": 101,
+            "decl": 8,
+            "fence": 10,
+            "function_call": 22,
+            "function_return": 25,
+            "goto": 17,
+            "location": 23,
+            "output": 1,
+            "read": 20,
+            "spawn": 2,
+            "write": 30
+          },
+          "steps": 394
+        }
+      },
+      "native_executed": 176,
+      "native_old_and_candidate_ns": {
+        "candidate": {
+          "cnf_and_graph": 7723842,
+          "equation_export": 13273241,
+          "event_constraints": 3768233,
+          "goal_conversion": 10990,
+          "parse_goto": 141858412,
+          "result_output": 1917688,
+          "solve": 2300135,
+          "symbolic_execution": 3892366,
+          "symex_cleanup": 1202814
+        },
+        "old": {
+          "cnf_and_graph": 11090128,
+          "equation_export": 15101135,
+          "event_constraints": 4874045,
+          "goal_conversion": 9530,
+          "parse_goto": 141096228,
+          "result_output": 2119482,
+          "solve": 4668722,
+          "symbolic_execution": 7009868,
+          "symex_cleanup": 1409658
+        }
+      },
+      "native_skipped": 0,
+      "old": "VIOLATION",
+      "old_candidate_trace_steps": [
+        170,
+        156
+      ],
+      "old_exit": 10,
+      "path": "full_fallback",
+      "prefix_dispatch_trace_matches": null,
+      "prefix_symbol_bindings": null,
+      "sc": {},
+      "seconds": {
+        "full_diagnostic": 0.10957163900093292,
+        "independent_candidate": 0.0914,
+        "independent_old": 0.0982,
+        "old_warmup": 0.2562466170020343,
+        "online_candidate": 0.4934802200004924,
+        "online_frontend": 0.2141759110018029
+      },
+      "source_mutex_changes": [
+        {
+          "callee": "pthread_mutex_lock",
+          "function": "record_left",
+          "new": 1,
+          "old": 0
+        },
+        {
+          "callee": "pthread_mutex_unlock",
+          "function": "record_left",
+          "new": 1,
+          "old": 0
+        }
+      ],
+      "suffix_dispatch_trace_matches": null,
+      "suffix_type": null,
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      }
+    },
+    "split_counter": {
+      "bytes_old_fragment_store": 8261,
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "candidate_exit": 0,
+      "checkpoint_ssa_rows": 0,
+      "checkpoint_vm_bytes_upper_bound": 28332032,
+      "different_phases": [],
+      "fallback_reason": "synchronization_calls_changed:record_one",
+      "full_dispatches": 156,
+      "full_oracle_started_after_online": true,
+      "model_digests": {
+        "full": "b5e04d46497ef607748aaa676fc76350f8acd0a604bfb8d98eac47efc4ca7208",
+        "online": "b5e04d46497ef607748aaa676fc76350f8acd0a604bfb8d98eac47efc4ca7208"
+      },
+      "model_old_and_candidate": {
+        "candidate": {
+          "constraint_comments": {
+            "rf-some": 16,
+            "rf-val": 43
+          },
+          "edge_kinds": {
+            "apo": 7,
+            "po": 50,
+            "rf": 43
+          },
+          "events": 50,
+          "oc_guards": 26,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 100,
+            "atomic_begin": 6,
+            "atomic_end": 6,
+            "constraint": 59,
+            "decl": 6,
+            "fence": 6,
+            "function_call": 16,
+            "function_return": 19,
+            "goto": 17,
+            "location": 17,
+            "output": 1,
+            "read": 16,
+            "spawn": 2,
+            "write": 26
+          },
+          "steps": 298
+        },
+        "old": {
+          "constraint_comments": {
+            "rf-some": 20,
+            "rf-val": 81
+          },
+          "edge_kinds": {
+            "apo": 11,
+            "po": 62,
+            "rf": 81
+          },
+          "events": 62,
+          "oc_guards": 30,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 114,
+            "atomic_begin": 10,
+            "atomic_end": 10,
+            "constraint": 101,
+            "decl": 8,
+            "fence": 10,
+            "function_call": 20,
+            "function_return": 23,
+            "goto": 17,
+            "location": 21,
+            "output": 1,
+            "read": 20,
+            "spawn": 2,
+            "write": 30
+          },
+          "steps": 388
+        }
+      },
+      "native_executed": 156,
+      "native_old_and_candidate_ns": {
+        "candidate": {
+          "cnf_and_graph": 5467517,
+          "equation_export": 11766140,
+          "event_constraints": 3242344,
+          "goal_conversion": 11511,
+          "parse_goto": 142002645,
+          "result_output": 33661,
+          "solve": 1698863,
+          "symbolic_execution": 3545240,
+          "symex_cleanup": 1102321
+        },
+        "old": {
+          "cnf_and_graph": 11239671,
+          "equation_export": 14763840,
+          "event_constraints": 4844735,
+          "goal_conversion": 13660,
+          "parse_goto": 142112488,
+          "result_output": 2080831,
+          "solve": 4647301,
+          "symbolic_execution": 6826594,
+          "symex_cleanup": 1401207
+        }
+      },
+      "native_skipped": 0,
+      "old": "VIOLATION",
+      "old_candidate_trace_steps": [
+        166,
+        0
+      ],
+      "old_exit": 10,
+      "path": "full_fallback",
+      "prefix_dispatch_trace_matches": null,
+      "prefix_symbol_bindings": null,
+      "sc": {},
+      "seconds": {
+        "full_diagnostic": 0.09822963700207765,
+        "independent_candidate": 0.0826,
+        "independent_old": 0.0963,
+        "old_warmup": 0.2565327620031894,
+        "online_candidate": 0.49235519799913163,
+        "online_frontend": 0.21407243899739115
+      },
+      "source_mutex_changes": [
+        {
+          "callee": "pthread_mutex_lock",
+          "function": "record_one",
+          "new": 1,
+          "old": 2
+        },
+        {
+          "callee": "pthread_mutex_unlock",
+          "function": "record_one",
+          "new": 1,
+          "old": 2
+        }
+      ],
+      "suffix_dispatch_trace_matches": null,
+      "suffix_type": null,
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      }
+    },
+    "threshold_guard": {
+      "bytes_old_fragment_store": 5373,
+      "candidate": "NO_VIOLATION_WITHIN_BOUND",
+      "candidate_exit": 0,
+      "checkpoint_ssa_rows": 105,
+      "checkpoint_vm_bytes_upper_bound": 28262400,
+      "different_phases": [],
+      "fallback_reason": "",
+      "full_dispatches": 84,
+      "full_oracle_started_after_online": true,
+      "model_digests": {
+        "full": "c443d5d408d4a115f0529e754ef66e9a1ad91da7d5b28887a241a25b7810b36b",
+        "online": "c443d5d408d4a115f0529e754ef66e9a1ad91da7d5b28887a241a25b7810b36b"
+      },
+      "model_old_and_candidate": {
+        "candidate": {
+          "constraint_comments": {
+            "rf-some": 10,
+            "rf-val": 19
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 38,
+            "rf": 19
+          },
+          "events": 32,
+          "oc_guards": 20,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 59,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 29,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 9,
+            "location": 11,
+            "output": 1,
+            "read": 10,
+            "spawn": 1,
+            "write": 20
+          },
+          "steps": 167
+        },
+        "old": {
+          "constraint_comments": {
+            "rf-some": 8,
+            "rf-val": 13
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 30,
+            "rf": 13
+          },
+          "events": 28,
+          "oc_guards": 18,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 57,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 21,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 10,
+            "location": 10,
+            "output": 1,
+            "read": 8,
+            "spawn": 1,
+            "write": 18
+          },
+          "steps": 153
+        }
+      },
+      "native_executed": 23,
+      "native_old_and_candidate_ns": {
+        "candidate": {
+          "cnf_and_graph": 2465559,
+          "equation_export": 7153099,
+          "event_constraints": 2182693,
+          "goal_conversion": 9080,
+          "result_output": 27781,
+          "solve": 350907,
+          "symbolic_execution": 784166,
+          "symex_cleanup": 521420
+        },
+        "old": {
+          "cnf_and_graph": 2144522,
+          "equation_export": 6877885,
+          "event_constraints": 2237714,
+          "goal_conversion": 7400,
+          "parse_goto": 141404194,
+          "result_output": 985910,
+          "solve": 295496,
+          "symbolic_execution": 3661331,
+          "symex_cleanup": 481489
+        }
+      },
+      "native_skipped": 61,
+      "old": "VIOLATION",
+      "old_candidate_trace_steps": [
+        74,
+        0
+      ],
+      "old_exit": 10,
+      "path": "incremental",
+      "prefix_dispatch_trace_matches": true,
+      "prefix_symbol_bindings": 96,
+      "sc": {
+        "coverage_formulas_reused": 2,
+        "read_bundles_generated": 8,
+        "read_bundles_reused": 2,
+        "rf_edges_reused": 4,
+        "thread_edges_generated": 9,
+        "thread_edges_reused": 20,
+        "value_formulas_reused": 4
+      },
+      "seconds": {
+        "full_diagnostic": 0.08292938700105879,
+        "independent_candidate": 0.0717,
+        "independent_old": 0.0734,
+        "old_warmup": 0.22062075799840386,
+        "online_candidate": 0.25600170100005926,
+        "online_frontend": 0.21408539999902132
+      },
+      "source_mutex_changes": [],
+      "suffix_dispatch_trace_matches": true,
+      "suffix_type": "integer_guard",
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      }
+    }
+  },
+  "deepseek_api_calls": 0,
+  "diagnostics_after_online": true,
+  "lock": "configs/stage04.lock.json",
+  "required_cases": [
+    "batch_total",
+    "threshold_guard",
+    "split_counter",
+    "partial_counter"
+  ],
+  "schema": 1
+}

@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "current_stage": 3,
-  "stage_name": "全量基线、稳定标识和可观测接口",
+  "current_stage": 4,
+  "stage_name": "从符号执行检查点增量构建事件顺序模型",
   "status": "READY_FOR_REVIEW",
-  "report": "reports/stage-03.md",
+  "report": "reports/stage-04.md",
   "environment": "reports/environment.json",
-  "last_user_approved_stage": 3,
-  "next_stage": 4,
+  "last_user_approved_stage": 4,
+  "next_stage": 5,
   "next_stage_approved": false
 }

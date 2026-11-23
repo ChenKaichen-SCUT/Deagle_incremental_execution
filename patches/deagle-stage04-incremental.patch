@@ -1,0 +1,957 @@
+diff --git a/src/analyses/local_safe_pointers.h b/src/analyses/local_safe_pointers.h
+index 497f06be..01addb53 100644
+--- a/src/analyses/local_safe_pointers.h
++++ b/src/analyses/local_safe_pointers.h
+@@ -41,6 +41,16 @@ class local_safe_pointerst
+ public:
+   void operator()(const goto_programt &goto_program);
+ 
++  // Exact typed summary consumed by the Stage 4 checkpoint dependency check.
++  irept stage4_dependencies() const
++  {
++    irept result("non-null");
++    for(const auto &entry : non_null_expressions)
++      for(const auto &expr : entry.second)
++        result.add(std::to_string(entry.first)).get_sub().push_back(expr);
++    return result;
++  }
++
+   bool is_non_null_at_program_point(
+     const exprt &expr, goto_programt::const_targett program_point);
+ 
+diff --git a/src/cbmc/cbmc_parse_options.cpp b/src/cbmc/cbmc_parse_options.cpp
+index c0c4ff5f..8d8ce962 100644
+--- a/src/cbmc/cbmc_parse_options.cpp
++++ b/src/cbmc/cbmc_parse_options.cpp
+@@ -11,6 +11,7 @@ Author: Daniel Kroening, kroening@kroening.com
+ 
+ #include "cbmc_parse_options.h"
+ #include <goto-symex/stage3_observer.h>
++#include <goto-symex/stage4_incremental.h>
+ #include <util/json_stream.h>
+ 
+ #include <cstdlib> // exit()
+@@ -567,6 +568,8 @@ int cbmc_parse_optionst::doit()
+     stage3::timing("parse_goto", parse_start, stage3::clockt::now());
+     stage3::goto_model(goto_model.get_goto_functions());
+   }
++  if(stage4::frontend(goto_model,ui_message_handler,options))
++    return CPROVER_EXIT_SUCCESS;
+ 
+   if(cmdline.isset("show-claims") || // will go away
+      cmdline.isset("show-properties")) // use this one
+@@ -717,6 +720,7 @@ int cbmc_parse_optionst::doit()
+     }
+     stage3::timing("result_output", output_start, stage3::clockt::now());
+     stage3::finish(result_to_exit_code(result));
++    stage4::finish(result_to_exit_code(result));
+     // The verifier, its equation, and its decision procedure remain in scope.
+     stage3::gate("verified", "RELEASE");
+   }
+diff --git a/src/goto-checker/multi_path_symex_only_checker.cpp b/src/goto-checker/multi_path_symex_only_checker.cpp
+index 8afda227..7adb95f7 100644
+--- a/src/goto-checker/multi_path_symex_only_checker.cpp
++++ b/src/goto-checker/multi_path_symex_only_checker.cpp
+@@ -11,6 +11,7 @@ Author: Daniel Kroening, Peter Schrammel
+ 
+ #include "multi_path_symex_only_checker.h"
+ #include <goto-symex/stage3_observer.h>
++#include <goto-symex/stage4_incremental.h>
+ 
+ #include <util/ui_message.h>
+ 
+@@ -109,7 +110,7 @@ void multi_path_symex_only_checkert::generate_equation()
+ 
+   if(stage3::enabled())
+   {
+-    stage3::timing("symbolic_execution", symex_start, stage3::clockt::now());
++    stage3::timing("symbolic_execution", stage4::suffix_start(symex_start), stage3::clockt::now());
+     stage3::equation("raw_ssa", equation);
+   }
+   const auto cleanup_start = stage3::clockt::now();
+diff --git a/src/goto-symex/Makefile b/src/goto-symex/Makefile
+index 2a24ad0e..c6fea1c5 100644
+--- a/src/goto-symex/Makefile
++++ b/src/goto-symex/Makefile
+@@ -22,6 +22,8 @@ SRC = auto_objects.cpp \
+       solver_hardness.cpp \
+       ssa_step.cpp \
+       stage3_observer.cpp \
++      stage4_incremental.cpp \
++      stage4_sc.cpp \
+       symex_assign.cpp \
+       symex_atomic_section.cpp \
+       symex_builtin_functions.cpp \
+diff --git a/src/goto-symex/memory_model.cpp b/src/goto-symex/memory_model.cpp
+index 01ffdc8f..1bb61692 100644
+--- a/src/goto-symex/memory_model.cpp
++++ b/src/goto-symex/memory_model.cpp
+@@ -11,6 +11,7 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
+ 
+ #include "memory_model.h"
+ #include "stage3_observer.h"
++#include "stage4_sc.h"
+ #include <iostream>
+ 
+ #include <util/std_expr.h>
+@@ -78,11 +79,14 @@ void memory_model_baset::read_from(symex_target_equationt &equation)
+   for(const auto &address : address_map)
+   {
+     std::map<event_it, exprt::operandst> lock_w2unlock_rf;
++    stage4_sct bucket(*this,equation);
++    if(bucket.address(id2string(address.first),address.second.reads,address.second.writes)) continue;
+     std::map<event_it, exprt::operandst> lock_w2lock_rf;
+     std::set<event_it> lock_w;
+ 
+     for(const auto &read_event : address.second.reads)
+     {
++      bucket.begin_read();
+       exprt::operandst rf_choice_symbols;
+       rf_choice_symbols.reserve(address.second.writes.size());
+ 
+@@ -131,6 +135,7 @@ void memory_model_baset::read_from(symex_target_equationt &equation)
+           "rf-some",
+           read_event->source);
+       }
++      bucket.end_read(read_event);
+     }
+ 
+     // __WP_ADD_BEGIN__ for deadlock
+diff --git a/src/goto-symex/memory_model.h b/src/goto-symex/memory_model.h
+index 6d4ee97f..3489bcce 100644
+--- a/src/goto-symex/memory_model.h
++++ b/src/goto-symex/memory_model.h
+@@ -16,6 +16,7 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
+ 
+ class memory_model_baset : public partial_order_concurrencyt
+ {
++  friend class stage4_sct;
+ public:
+   explicit memory_model_baset(const namespacet &_ns);
+   virtual ~memory_model_baset();
+diff --git a/src/goto-symex/memory_model_sc.cpp b/src/goto-symex/memory_model_sc.cpp
+index 266370bb..e137c3fc 100644
+--- a/src/goto-symex/memory_model_sc.cpp
++++ b/src/goto-symex/memory_model_sc.cpp
+@@ -10,6 +10,8 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
+ /// Memory model for partial order concurrency
+ 
+ #include "memory_model_sc.h"
++#include "stage4_sc.h"
++#include "stage4_incremental.h"
+ 
+ #include <util/std_expr.h>
+ #include <iostream>
+@@ -39,6 +41,7 @@ operator()(symex_target_equationt &equation, message_handlert &message_handler)
+     write_serialization_external(equation);
+   
+   program_order(equation);
++  stage4::save_cache();
+ 
+   if(!use_deagle && !use_zord)
+     from_read(equation);
+@@ -191,6 +194,8 @@ void memory_model_sct::program_order(
+       t_it++)
+   {
+     const event_listt &events=t_it->second;
++    stage4_sct fragment(*this,equation);
++    if(fragment.thread(t_it->first,events,apo_set)) continue;
+ 
+     // iterate over relevant events in the thread
+ 
+@@ -224,6 +229,7 @@ void memory_model_sct::program_order(
+ 
+       previous=*e_it;
+     }
++    fragment.end_thread();
+   }
+ }
+ 
+diff --git a/src/goto-symex/ssa_step.h b/src/goto-symex/ssa_step.h
+index 203088e8..9bbc504d 100644
+--- a/src/goto-symex/ssa_step.h
++++ b/src/goto-symex/ssa_step.h
+@@ -191,6 +191,8 @@ public:
+ 
+   // Diagnostic link to the originating instruction dispatch; local to this run.
+   std::size_t observer_visit = 0;
++  // Slot within this session's immutable pre-SC checkpoint; zero means newly produced.
++  std::size_t stage4_prefix_slot = 0;
+ 
+   SSA_stept(
+     const symex_targett::sourcet &_source,
+diff --git a/src/goto-symex/stage3_observer.cpp b/src/goto-symex/stage3_observer.cpp
+index b90058cd..e558b33c 100644
+--- a/src/goto-symex/stage3_observer.cpp
++++ b/src/goto-symex/stage3_observer.cpp
+@@ -18,7 +18,7 @@ namespace stage3
+ {
+ namespace
+ {
+-const char *const directory = std::getenv("INCDEAGLE_OBSERVE_DIR");
++std::string directory = std::getenv("INCDEAGLE_OBSERVE_DIR") ? std::getenv("INCDEAGLE_OBSERVE_DIR") : "";
+ json_arrayt visits;
+ std::map<const SSA_stept *, std::string> event_names;
+ std::map<std::string, long long> times;
+@@ -118,7 +118,13 @@ const char *step_kind(goto_trace_stept::typet type)
+ 
+ bool enabled()
+ {
+-  return directory != nullptr && *directory != '\0';
++  return !directory.empty();
++}
++
++void redirect(const std::string &path)
++{
++  directory=path;
++  times.clear();
+ }
+ 
+ void timing(const std::string &name, clockt::time_point start, clockt::time_point end)
+diff --git a/src/goto-symex/stage3_observer.h b/src/goto-symex/stage3_observer.h
+index 097ac175..841077d2 100644
+--- a/src/goto-symex/stage3_observer.h
++++ b/src/goto-symex/stage3_observer.h
+@@ -14,6 +14,7 @@ namespace stage3
+ {
+ using clockt = std::chrono::steady_clock;
+ bool enabled();
++void redirect(const std::string &path);
+ void timing(const std::string &name, clockt::time_point start, clockt::time_point end);
+ void goto_model(const goto_functionst &functions);
+ std::size_t visit(const goto_symex_statet &state);
+diff --git a/src/goto-symex/stage4_incremental.cpp b/src/goto-symex/stage4_incremental.cpp
+new file mode 100644
+index 00000000..9a63459f
+--- /dev/null
++++ b/src/goto-symex/stage4_incremental.cpp
+@@ -0,0 +1,443 @@
++#include "stage4_incremental.h"
++#include "stage3_observer.h"
++#include "goto_symex_state.h"
++#include "path_storage.h"
++#include "symex_target_equation.h"
++#include <analyses/dirty.h>
++#include <analyses/local_safe_pointers.h>
++#include <goto-programs/goto_model.h>
++#include <util/irep_serialization.h>
++#include <util/json.h>
++#include <util/options.h>
++#include <util/std_expr.h>
++#include <util/ui_message.h>
++#include <cstdio>
++#include <cstdlib>
++#include <fstream>
++#include <iostream>
++#include <set>
++#include <stdexcept>
++#ifdef __linux__
++#include <sys/wait.h>
++#include <unistd.h>
++#endif
++
++namespace stage4
++{
++namespace
++{
++const std::string base = std::getenv("INCDEAGLE_S4_ROOT") ? std::getenv("INCDEAGLE_S4_ROOT") : "";
++goto_modelt *live = nullptr;
++ui_message_handlert *ui = nullptr;
++bool master = false, old = false, resumed = false, attempted = false;
++std::string callee, refusal, change;
++irept fragments("cache"), baseline_image;
++std::size_t dispatched=0, prefix=0, prefix_rows=0, bound=0, mapped=0, symbols=0;
++std::size_t prefix_symbols=0, threads=0, memory=0, fork_ns=0, prefix_events=0;
++std::size_t budget=0;
++clockt::time_point resume_time;
++json_arrayt dispatch_trace, regions;
++std::map<std::string,std::size_t> counts;
++
++json_numbert num(std::size_t n) { return json_numbert(std::to_string(n)); }
++void json_file(const std::string &name, const jsont &value)
++{
++  const auto tmp=name+".tmp";
++  std::ofstream out(tmp);
++  out << value << '\n';
++  out.close();
++  if(!out || std::rename(tmp.c_str(), name.c_str()))
++    throw std::runtime_error("Cannot publish "+name);
++}
++void put(irept &a, const irept &b) { a.get_sub().push_back(b); }
++void field(irept &a,const char *name,std::size_t n) { a.set(name,std::to_string(n)); }
++
++irept symbol_image(const symbolt &s)
++{
++  irept v(s.name);
++  v.set(ID_type,s.type); v.set(ID_value,s.value); v.set("location",s.location);
++  v.set(ID_module,s.module); v.set(ID_mode,s.mode); v.set(ID_base_name,s.base_name);
++  v.set(ID_pretty_name,s.pretty_name);
++  std::string flags;
++  for(bool bit : {s.is_type,s.is_macro,s.is_exported,s.is_input,s.is_output,s.is_state_var,s.is_property,
++                  s.is_static_lifetime,s.is_thread_local,s.is_lvalue,s.is_file_local,s.is_extern,s.is_volatile,
++                  s.is_parameter,s.is_auxiliary,s.is_weak})
++    flags += bit?'1':'0';
++  v.set("flags",flags);
++  return v;
++}
++
++irept image(const goto_modelt &m)
++{
++  irept result("stage4-goto-v1");
++  auto &syms=result.add("symbols");
++  for(const auto &entry : m.symbol_table.symbols)
++    syms.set(entry.first, symbol_image(entry.second));
++  const dirtyt dirty(m.goto_functions);
++  auto &dirty_set=result.add("dirty");
++  for(const auto &id : dirty.get_dirty_ids()) dirty_set.set(id,"1");
++  auto &fs=result.add("functions");
++  for(const auto &entry : m.goto_functions.function_map)
++  {
++    auto &f=fs.add(entry.first);
++    const auto &fn=entry.second;
++    f.set("hidden",fn.is_hidden());
++    for(const auto &p : fn.parameter_identifiers) put(f.add("params"),irept(p));
++    local_safe_pointerst safe;
++    safe(fn.body);
++    f.set("safe",safe.stage4_dependencies());
++    auto &body=f.add("instructions");
++    for(const auto &i : fn.body.instructions)
++    {
++      irept row(i.to_string());
++      row.set(ID_code,i.code()); if(i.has_condition()) row.set("guard",i.condition());
++      row.set("location",i.source_location());
++      field(row,"pc",i.location_number); field(row,"loop",i.loop_number); field(row,"target",i.target_number);
++      for(const auto &l : i.labels) put(row.add("labels"),irept(l));
++      for(const auto &t : i.targets) put(row.add("targets"),irept(std::to_string(t->location_number)));
++      std::set<unsigned> incoming;
++      for(const auto &n : i.incoming_edges) incoming.insert(n->location_number);
++      for(auto n : incoming) put(row.add("incoming"),irept(std::to_string(n)));
++      put(body,row);
++    }
++  }
++  return result;
++}
++
++bool integer(const irept &v)
++{
++  return v.find(ID_type).id()==ID_signedbv || v.find(ID_type).id()==ID_unsignedbv;
++}
++
++bool pure_integer(const irept &v)
++{
++  if(!integer(v)) return false;
++  if(v.id()==ID_constant || v.id()==ID_symbol) return true;
++  if(v.id()!=ID_plus && v.id()!=ID_minus && v.id()!=ID_mult && v.id()!=ID_typecast) return false;
++  for(const auto &part:v.get_sub()) if(!pure_integer(part)) return false;
++  return true;
++}
++
++// Exactly one signed/unsigned integer literal on a pure scalar arithmetic RHS.
++bool scalar_rhs(const irept &a,const irept &b,unsigned &changes)
++{
++  if(a.full_eq(b)) return true;
++  if(a.id()!=b.id() || !integer(a) || !integer(b)) return false;
++  irept x=a,y=b;
++  if(a.id()==ID_constant)
++  {
++    x.remove(ID_value); y.remove(ID_value);
++    if(!x.full_eq(y) || a.get(ID_value)==b.get(ID_value)) return false;
++    return ++changes==1;
++  }
++  if(a.id()!=ID_plus && a.id()!=ID_minus && a.id()!=ID_mult && a.id()!=ID_typecast) return false;
++  x.get_sub().clear(); y.get_sub().clear();
++  if(!x.full_eq(y) || a.get_sub().size()!=b.get_sub().size()) return false;
++  for(std::size_t j=0;j<a.get_sub().size();++j)
++    if(!scalar_rhs(a.get_sub()[j],b.get_sub()[j],changes)) return false;
++  return true;
++}
++
++bool scalar_guard(const irept &a,const irept &b,unsigned &changes)
++{
++  if(a.full_eq(b)) return true;
++  if(a.id()!=b.id())
++  {
++    const bool pair=(a.id()==ID_lt && b.id()==ID_le) || (a.id()==ID_le && b.id()==ID_lt) ||
++                    (a.id()==ID_gt && b.id()==ID_ge) || (a.id()==ID_ge && b.id()==ID_gt);
++    if(!pair || a.get_sub().size()!=2 || !pure_integer(a.get_sub()[0]) || !pure_integer(a.get_sub()[1])) return false;
++    irept y=b; y.id(a.id());
++    return a.full_eq(y) && ++changes==1;
++  }
++  if(a.id()!=ID_not && a.id()!=ID_and && a.id()!=ID_or) return false;
++  irept x=a,y=b; x.get_sub().clear(); y.get_sub().clear();
++  if(!x.full_eq(y) || a.get_sub().size()!=b.get_sub().size()) return false;
++  for(std::size_t i=0;i<a.get_sub().size();++i)
++    if(!scalar_guard(a.get_sub()[i],b.get_sub()[i],changes)) return false;
++  return true;
++}
++
++std::string first_difference(const irept &a,const irept &b,const std::string &path)
++{
++  if(a.id()!=b.id()) return path+" ["+id2string(a.id())+" -> "+id2string(b.id())+"]";
++  if(a.get_sub().size()!=b.get_sub().size()) return path+".operand_count";
++  for(std::size_t i=0;i<a.get_sub().size();++i)
++    if(!a.get_sub()[i].full_eq(b.get_sub()[i])) return first_difference(a.get_sub()[i],b.get_sub()[i],path+"/"+std::to_string(i));
++  for(const auto &p:a.get_named_sub())
++    if(!p.second.full_eq(b.find(p.first))) return first_difference(p.second,b.find(p.first),path+"/"+id2string(p.first));
++  for(const auto &p:b.get_named_sub())
++    if(!p.second.full_eq(a.find(p.first))) return path+"/added:"+id2string(p.first);
++  return path;
++}
++
++std::string rebind(const irept &next)
++{
++  const auto &a=baseline_image, &b=next;
++  if(a.id()!=b.id()) return "frontend_schema_changed";
++  if(!a.find("dirty").full_eq(b.find("dirty"))) return "whole_program_dirty_set_changed";
++  auto declarations=a.find("symbols");
++  const auto &new_symbols=b.find("symbols");
++  const auto &new_body=new_symbols.find(callee).find(ID_value);
++  auto *function_symbol=live->symbol_table.get_writeable(callee);
++  if(!function_symbol || !function_symbol->is_function() || new_body.id()!=ID_code)
++    return "changed_function_body_unavailable";
++  // The C front end retains an AST body on the function symbol as well as the
++  // lowered CFG. All declarations, initializers and other functions still match.
++  declarations.add(callee).set(ID_value,new_body);
++  if(!declarations.full_eq(new_symbols))
++    return "symbol_type_initializer_or_declaration_changed:"+first_difference(declarations,new_symbols,"symbols");
++  const auto &af=a.find("functions").get_named_sub(), &bf=b.find("functions").get_named_sub();
++  if(af.size()!=bf.size()) return "function_set_changed";
++  goto_programt::instructiont *update=nullptr;
++  irept replacement;
++  for(const auto &pair : af)
++  {
++    auto it=bf.find(pair.first);
++    if(it==bf.end()) return "function_set_changed";
++    const auto &f=pair.second,&g=it->second;
++    const auto &xs=f.find("instructions").get_sub(),&ys=g.find("instructions").get_sub();
++    if(xs.size()!=ys.size()) return "instruction_topology_changed:"+id2string(pair.first);
++    if(!f.find("safe").full_eq(g.find("safe"))) return "safe_pointer_summary_changed:"+id2string(pair.first);
++    if(!f.find("params").full_eq(g.find("params")) || f.get("hidden")!=g.get("hidden")) return "function_abi_changed";
++    auto pos=live->goto_functions.function_map.at(pair.first).body.instructions.begin();
++    for(std::size_t i=0;i<xs.size();++i,++pos)
++    {
++      ++mapped;
++      if(xs[i].full_eq(ys[i])) continue;
++      if(id2string(pair.first)!=callee || update) return "outside_first_unentered_function_or_multiple_edits";
++      irept u=xs[i],v=ys[i];
++      u.remove(ID_code); v.remove(ID_code); u.remove("guard"); v.remove("guard");
++      if(!u.full_eq(v)) return "control_flow_or_modelled_location_changed";
++      unsigned edits=0;
++      if(pos->is_assign() && xs[i].find("guard").full_eq(ys[i].find("guard")))
++      {
++        const auto &p=xs[i].find(ID_code),&q=ys[i].find(ID_code);
++        irept x=p,y=q;
++        if(x.get_sub().size()!=2 || y.get_sub().size()!=2) return "unsupported_assignment";
++        x.get_sub().pop_back(); y.get_sub().pop_back();
++        if(!x.full_eq(y) || !pure_integer(p.get_sub()[1]) || !pure_integer(q.get_sub()[1]) ||
++           !scalar_rhs(p.get_sub()[1],q.get_sub()[1],edits) || edits!=1)
++          return "non_scalar_or_address_sensitive_assignment";
++        replacement=q; change="integer_rhs";
++      }
++      else if(pos->is_goto() && xs[i].find(ID_code).full_eq(ys[i].find(ID_code)) &&
++              scalar_guard(xs[i].find("guard"),ys[i].find("guard"),edits) && edits==1)
++      {
++        replacement=ys[i].find("guard"); change="integer_guard";
++      }
++      else return "unsupported_guard_call_or_synchronization";
++      update=&*pos;
++    }
++  }
++  if(!update) return "no_supported_semantic_edit";
++  // The candidate occupies the same audited node in this private, address-stable arena.
++  // All other instruction, source, function and symbol records matched before mutation.
++  if(change=="integer_rhs") update->code_nonconst()=static_cast<const goto_instruction_codet &>(replacement);
++  else update->condition_nonconst()=static_cast<const exprt &>(replacement);
++  function_symbol->value=static_cast<const exprt &>(new_body);
++  if(!image(*live).full_eq(next)) return "installed_candidate_image_mismatch";
++  return "";
++}
++
++std::string check_prefix_symbols(const goto_symex_statet &state,const symex_target_equationt &eq)
++{
++  const namespacet ns(state.symbol_table,live->symbol_table);
++  std::map<irep_idt,typet> named_ssa;
++  for(const auto &s:eq.SSA_steps)
++    if(s.ssa_lhs.is_not_nil())
++    {
++      named_ssa.emplace(s.ssa_lhs.get_identifier(),s.ssa_lhs.type());
++      // symex_goto constructs this Boolean pseudo-symbol outside the program
++      // symbol table. Require the actual GUARD definition in this checkpoint.
++      if(s.is_assignment() && s.assignment_type==symex_targett::assignment_typet::GUARD &&
++         s.ssa_lhs.get_original_name()==state.guard_identifier() && s.ssa_lhs.type().id()==ID_bool)
++        named_ssa.emplace(state.guard_identifier(),s.ssa_lhs.type());
++    }
++  std::set<irep_idt> verified;
++  std::function<std::string(const irept &)> check = [&](const irept &e)->std::string {
++    if(e.id()==ID_symbol)
++    {
++      const auto name=e.get(ID_identifier);
++      const auto &type=e.find(ID_type);
++      const auto &original=e.find(ID_expression);
++      const auto base_name=original.id()==ID_symbol ? original.get(ID_identifier) : name;
++      const symbolt *symbol=nullptr;
++      auto def=named_ssa.find(name);
++      const bool in_equation=def!=named_ssa.end() && def->second==type;
++      const bool in_namespace=!ns.lookup(base_name,symbol) && symbol->type==type;
++      if(!in_namespace && !in_equation) return "unresolved_or_retyped_prefix_symbol:"+id2string(name);
++      verified.insert(name);
++    }
++    for(const auto &x:e.get_sub()) { auto error=check(x);if(!error.empty()) return error; }
++    for(const auto &p:e.get_named_sub())
++    {
++      if(p.first==ID_C_source_location || p.first==ID_C_end_location || p.first==ID_expression) continue;
++      auto error=check(p.second);if(!error.empty()) return error;
++    }
++    return "";
++  };
++  for(const auto &s:eq.SSA_steps)
++  {
++    for(const exprt *e : std::initializer_list<const exprt *>{&s.guard,&s.cond_expr,&s.ssa_lhs,&s.ssa_rhs,
++        &s.ssa_full_lhs,&s.original_full_lhs})
++    { auto error=check(*e);if(!error.empty()) return error; }
++    for(const auto &e:s.ssa_function_arguments) { auto error=check(e);if(!error.empty()) return error; }
++    for(const auto &e:s.io_args) { auto error=check(e);if(!error.empty()) return error; }
++  }
++  bound=verified.size();
++  return "";
++}
++void stats(const std::string &path,int code)
++{
++  json_objectt j;
++  j["role"]=json_stringt(resumed?"candidate":"old");
++  j["checkpoint_used"]=resumed?jsont(json_truet()):jsont(json_falset());
++  j["exit_code"]=num(code); j["executed_symex_steps"]=num(dispatched);
++  j["reused_prefix_symex_steps"]=num(resumed?prefix:0); j["checkpoint_dispatch"]=num(prefix);
++  j["checkpoint_raw_ssa_rows"]=num(prefix_rows); j["checkpoint_symbol_table_entries"]=num(prefix_symbols);
++  j["checkpoint_raw_events"]=num(prefix_events);
++  j["checkpoint_threads"]=num(threads); j["checkpoint_virtual_bytes_upper_bound"]=num(memory);
++  j["checkpoint_budget_bytes"]=num(budget);
++  j["checkpoint_fork_ns"]=num(fork_ns); j["function"]=json_stringt(callee);
++  j["changed_instruction_type"]=json_stringt(change); j["goto_nodes_checked"]=num(mapped);
++  j["program_symbols_checked"]=num(symbols); j["prefix_symbol_references_resolved"]=num(bound);
++  j["fallback_reason"]=json_stringt(refusal); j["executed_dispatches"]=dispatch_trace;
++  json_objectt cs; for(const auto &p:counts) cs[p.first]=num(p.second);
++  j["sc_counters"]=std::move(cs); j["sc_regions"]=regions;
++  json_file(path,j);
++}
++}
++
++const std::string &root() { return base; }
++bool configured() { return !base.empty(); }
++bool collecting() { return old; }
++bool restoring() { return resumed; }
++irept &cache() { return fragments; }
++void count(const std::string &key,std::size_t n) { counts[key]+=n; }
++void region(const std::string &family,const std::string &name,bool reused)
++{
++  json_objectt r; r["family"]=json_stringt(family);r["name"]=json_stringt(name);
++  r["reused"]=reused?jsont(json_truet()):jsont(json_falset());regions.push_back(std::move(r));
++}
++void save_irep(const std::string &path,const irept &v)
++{
++  std::ofstream out(path,std::ios::binary);
++  irep_serializationt::ireps_containert store; irep_serializationt io(store);
++  io.reference_convert(v,out); out.close();
++  if(!out) throw std::runtime_error("Cannot write "+path);
++}
++irept load_irep(const std::string &path)
++{
++  std::ifstream in(path,std::ios::binary);
++  if(!in) throw std::runtime_error("Cannot read "+path);
++  irep_serializationt::ireps_containert store; irep_serializationt io(store);
++  irept v=io.reference_convert(in);
++  if(!in || in.peek()!=std::char_traits<char>::eof()) throw std::runtime_error("Invalid image "+path);
++  return v;
++}
++void save_cache() { if(old) save_irep(base+"/old/fragments.irep",fragments); }
++clockt::time_point suffix_start(clockt::time_point start) { return resumed?resume_time:start; }
++
++bool frontend(goto_modelt &model,ui_message_handlert &handler,const optionst &opt)
++{
++  if(!configured()) return false;
++  if(std::getenv("INCDEAGLE_S4_FRONTEND"))
++  {
++    save_irep(base+"/frontend/goto.irep",image(model));
++    return true;
++  }
++  const char *limit=std::getenv("INCDEAGLE_S4_BUDGET_BYTES");
++  if(!limit) refusal="checkpoint_budget_missing";
++  else budget=std::stoull(limit);
++  if(!budget) refusal="checkpoint_disabled_by_budget";
++  if(!opt.get_bool_option("deagle-closure") || opt.get_option("mm")!="sc" ||
++     opt.get_bool_option("refined-pointer-analysis") || opt.get_bool_option("paths") ||
++     opt.get_bool_option("concurrency-slice") || opt.get_bool_option("symex-driven-lazy-loading"))
++    refusal="unsupported_verifier_configuration";
++  live=&model; ui=&handler; master=true;
++  return false;
++}
++
++void before_step(const goto_symex_statet &state,symex_target_equationt &eq,const path_storaget &storage)
++{
++  if(!master && !old && !resumed) return;
++#ifdef __linux__
++  const auto &pc=*state.source.pc;
++  if(master && !attempted && refusal.empty() && pc.is_function_call() && pc.call_function().id()==ID_symbol)
++  {
++    const auto id=to_symbol_expr(pc.call_function()).get_identifier();
++    const auto fn=live->goto_functions.function_map.find(id);
++    bool user_fn=false;
++    if(fn!=live->goto_functions.function_map.end())
++      for(const auto &ins:fn->second.body.instructions)
++        if(ins.source_location().get_file()=="program.c") { user_fn=true; break; }
++    if(user_fn)
++    {
++      attempted=true; callee=id2string(id);
++      const auto start=clockt::now();
++      std::size_t pages=0; std::ifstream("/proc/self/statm")>>pages;
++      memory=pages*static_cast<std::size_t>(sysconf(_SC_PAGESIZE));
++      std::ifstream status("/proc/self/status");std::string line;unsigned tasks=0;
++      while(std::getline(status,line)) if(line.compare(0,8,"Threads:")==0) tasks=std::stoul(line.substr(8));
++      if(!memory || memory>budget || tasks!=1) refusal="checkpoint_budget_or_multithreaded_host";
++      else if(!storage.empty() || storage.safe_pointers.count(id)) refusal="changed_function_previously_entered_or_pending_paths";
++      else
++      {
++        baseline_image=image(*live); symbols=live->symbol_table.symbols.size();
++        prefix=dispatched; prefix_rows=eq.SSA_steps.size(); threads=state.threads.size();
++        prefix_symbols=state.symbol_table.symbols.size();
++        std::size_t slot=0;
++        for(auto &s:eq.SSA_steps)
++        {
++          s.stage4_prefix_slot=++slot;
++          if(s.is_shared_read() || s.is_shared_write() || s.is_spawn() || s.is_memory_barrier()) ++prefix_events;
++        }
++        ui->flush(0); std::cout.flush(); std::cerr.flush();
++        pages=0; std::ifstream("/proc/self/statm")>>pages;
++        memory=pages*static_cast<std::size_t>(sysconf(_SC_PAGESIZE));
++        const bool fits=memory>0 && memory<=budget;
++        const pid_t child=fits?fork():-1;
++        fork_ns=std::chrono::duration_cast<std::chrono::nanoseconds>(clockt::now()-start).count();
++        if(child<0) refusal=fits?"fork_failed":"checkpoint_budget_after_capture";
++        else if(child==0) { master=false; old=true; }
++        else
++        {
++          int result=0; if(waitpid(child,&result,0)!=child || !WIFEXITED(result)) throw std::runtime_error("Old verifier failed");
++          json_objectt ready; ready["old_exit"]=num(WEXITSTATUS(result)); ready["checkpoint_dispatch"]=num(prefix);
++          ready["old_pid"]=num(child);ready["checkpoint_pid"]=num(getpid());json_file(base+"/old_done.json",ready);
++          std::string request;
++          if(!std::getline(std::cin,request)) refusal="session_closed_before_update";
++          else if(request.compare(0,5,"FULL ")==0) refusal=request.substr(5);
++          else if(request!="APPLY") refusal="unknown_update_command";
++          else
++          {
++            refusal=rebind(load_irep(base+"/frontend/goto.irep"));
++            if(refusal.empty()) refusal=check_prefix_symbols(state,eq);
++          }
++          if(!refusal.empty()) { stats(base+"/decision.json",85); std::_Exit(85); }
++          fragments=load_irep(base+"/old/fragments.irep");
++          // Fresh physical output streams and fresh solver run. The checkpoint was taken
++          // before any SAT conversion or SC postprocessing, while all state owners lived.
++          ui->stage4_reopen_json(base+"/candidate/result.json");
++          if(!freopen((base+"/candidate/diagnostic.stdout").c_str(),"w",stdout) ||
++             !freopen((base+"/candidate/diagnostic.stderr").c_str(),"w",stderr)) throw std::runtime_error("Cannot switch diagnostics");
++          stage3::redirect(base+"/candidate");
++          master=false; resumed=true; dispatched=0;dispatch_trace=json_arrayt{};
++          stage3::goto_model(live->goto_functions);
++          resume_time=clockt::now();
++        }
++      }
++    }
++  }
++#endif
++  ++dispatched;
++  json_objectt d;d["function"]=json_stringt(state.source.function_id);d["pc"]=num(state.source.pc->location_number);
++  d["thread"]=num(state.source.thread_nr);dispatch_trace.push_back(std::move(d));
++}
++void finish(int code)
++{
++  if(!configured()) return;
++  if(master && refusal.empty()) refusal="no_eligible_function_entry";
++  stats(base+(resumed?"/candidate":"/old")+"/native-stats.json",code);
++}
++}
+diff --git a/src/goto-symex/stage4_incremental.h b/src/goto-symex/stage4_incremental.h
+new file mode 100644
+index 00000000..c8c3138f
+--- /dev/null
++++ b/src/goto-symex/stage4_incremental.h
+@@ -0,0 +1,32 @@
++#ifndef CPROVER_GOTO_SYMEX_STAGE4_INCREMENTAL_H
++#define CPROVER_GOTO_SYMEX_STAGE4_INCREMENTAL_H
++#include <util/irep.h>
++#include <chrono>
++#include <string>
++
++class goto_modelt;
++class goto_symex_statet;
++class symex_target_equationt;
++class ui_message_handlert;
++class optionst;
++class SSA_stept;
++class path_storaget;
++namespace stage4
++{
++using clockt = std::chrono::steady_clock;
++bool configured();
++bool frontend(goto_modelt &, ui_message_handlert &, const optionst &);
++void before_step(const goto_symex_statet &, symex_target_equationt &, const path_storaget &);
++void finish(int);
++clockt::time_point suffix_start(clockt::time_point full_start);
++bool collecting();
++bool restoring();
++const std::string &root();
++void save_irep(const std::string &, const irept &);
++irept load_irep(const std::string &);
++void save_cache();
++irept &cache();
++void count(const std::string &, std::size_t n=1);
++void region(const std::string &family, const std::string &name, bool reused);
++}
++#endif
+diff --git a/src/goto-symex/stage4_sc.cpp b/src/goto-symex/stage4_sc.cpp
+new file mode 100644
+index 00000000..a15889ba
+--- /dev/null
++++ b/src/goto-symex/stage4_sc.cpp
+@@ -0,0 +1,149 @@
++#include "stage4_sc.h"
++#include "stage4_incremental.h"
++#include <util/replace_expr.h>
++#include <util/std_expr.h>
++#include <stdexcept>
++
++stage4_sct::stage4_sct(memory_model_baset &m,symex_target_equationt &e)
++  :mm(m),eq(e),active((stage4::collecting() || stage4::restoring()) && m.use_deagle &&
++                      !m.enable_deadlock && !m.enable_datarace && m.assume_local_consistency)
++{
++}
++
++void stage4_sct::include(iterator e)
++{
++  const auto slot=e->stage4_prefix_slot;
++  if(!slot) { eligible=false; return; }
++  const auto name=mm.get_name(e);
++  if(!events.emplace(name,e).second || !slots.emplace(slot,e).second) { eligible=false; return; }
++  irept row("event");
++  row.set("slot",std::to_string(slot));row.set("order",std::to_string(mm.numbering.at(e)));
++  row.set("kind",std::to_string(static_cast<unsigned>(e->type)));
++  row.set("thread",std::to_string(e->source.thread_nr));row.set("fn",e->source.function_id);
++  row.set("atomic",std::to_string(e->atomic_section_id));row.set("source",e->source.pc->source_location());
++  row.set("lhs",e->ssa_lhs);row.set("guard",e->guard);
++  signature.get_sub().push_back(row);
++}
++
++bool stage4_sct::check(const std::string &family,const std::string &name)
++{
++  if(!active) return false;
++  auto &store=stage4::cache().add(family);
++  if(eligible && stage4::collecting())
++  {
++    record=&store.add(name);record->set("signature",signature);
++  }
++  else if(eligible && stage4::restoring() && store.find(name).find("signature").full_eq(signature))
++  {
++    record=&store.add(name);hit=true;
++  }
++  stage4::region(family,name,hit);
++  return hit;
++}
++
++bool stage4_sct::address(const std::string &name,const std::vector<iterator> &reads,
++                         const std::vector<iterator> &writes)
++{
++  if(!active || reads.empty()) return false;
++  for(auto e:reads) include(e);
++  for(auto e:writes) include(e);
++  if(!check("rf",name)) return false;
++  replay_reads();
++  return true;
++}
++
++void stage4_sct::begin_read()
++{
++  if(active) stage4::count("read_bundles_generated");
++  if(record && !hit) { edge_start=eq.oc_edges.size(); step_start=std::prev(eq.SSA_steps.cend()); }
++}
++
++void stage4_sct::end_read(iterator read)
++{
++  if(!record || hit) return;
++  irept bundle("read");bundle.set("read",std::to_string(read->stage4_prefix_slot));
++  for(std::size_t j=edge_start;j<eq.oc_edges.size();++j)
++  {
++    const auto &e=eq.oc_edges[j];
++    if(e.kind!="rf" || e.e2_str!=mm.get_name(read)) throw std::logic_error("Unexpected RF fragment");
++    irept choice("choice"); choice.set("old_atom",e.expr);
++    choice.set("write",std::to_string(events.at(e.e1_str)->stage4_prefix_slot));
++    bundle.add("choices").get_sub().push_back(choice);
++  }
++  for(auto s=std::next(step_start);s!=eq.SSA_steps.cend();++s)
++  {
++    if(!s->is_constraint() || (s->comment!="rf-val" && s->comment!="rf-some"))
++      throw std::logic_error("Unexpected read bundle formula");
++    irept formula(s->comment);formula.set("value",s->cond_expr);
++    bundle.add("formulas").get_sub().push_back(formula);
++  }
++  record->add("bundles").get_sub().push_back(bundle);
++}
++
++void stage4_sct::replay_reads()
++{
++  for(const auto &bundle:record->find("bundles").get_sub())
++  {
++    auto r=slots.at(bundle.get_size_t("read"));
++    replace_mapt rename;
++    for(const auto &choice:bundle.find("choices").get_sub())
++    {
++      auto w=slots.at(choice.get_size_t("write"));
++      auto atom=mm.nondet_bool_symbol("rf");
++      rename.emplace(static_cast<const exprt &>(choice.find("old_atom")),atom);
++      mm.choice_symbols.emplace(std::make_pair(r,w),atom);
++      ++mm.total_rf_val_count;
++      mm.add_oc_edge(eq,w,r,"rf",atom);
++      stage4::count("rf_edges_reused");
++    }
++    for(const auto &f:bundle.find("formulas").get_sub())
++    {
++      exprt value=static_cast<const exprt &>(f.find("value"));
++      replace_expr(rename,value);
++      eq.constraint(value,id2string(f.id()),r->source);
++      stage4::count(f.id()=="rf-some"?"coverage_formulas_reused":"value_formulas_reused");
++    }
++    stage4::count("read_bundles_reused");
++  }
++}
++
++bool stage4_sct::thread(unsigned nr,const std::vector<iterator> &seq,
++                        const std::set<std::pair<std::string,std::string>> &apo)
++{
++  if(!active) return false;
++  iterator previous=eq.SSA_steps.end();
++  for(auto e:seq)
++  {
++    include(e);
++    if(e->is_memory_barrier()) continue;
++    if(previous!=eq.SSA_steps.end())
++    {
++      const auto pair=std::make_pair(id2string(previous->ssa_lhs.get_identifier()),id2string(e->ssa_lhs.get_identifier()));
++      signature.add("external_apo_membership").get_sub().emplace_back(apo.count(pair)?"1":"0");
++    }
++    previous=e;
++  }
++  if(!check("po",std::to_string(nr))) { edge_start=eq.oc_edges.size();return false; }
++  for(const auto &edge:record->find("edges").get_sub())
++  {
++    mm.add_oc_edge(eq,slots.at(edge.get_size_t("from")),slots.at(edge.get_size_t("to")),id2string(edge.id()),
++                   static_cast<const exprt &>(edge.find("guard")));
++    stage4::count("thread_edges_reused");
++  }
++  return true;
++}
++
++void stage4_sct::end_thread()
++{
++  if(!active) return;
++  stage4::count("thread_edges_generated",eq.oc_edges.size()-edge_start);
++  if(!record || hit) return;
++  for(std::size_t i=edge_start;i<eq.oc_edges.size();++i)
++  {
++    const auto &e=eq.oc_edges[i];
++    irept edge(e.kind);edge.set("guard",e.expr);
++    edge.set("from",std::to_string(events.at(e.e1_str)->stage4_prefix_slot));
++    edge.set("to",std::to_string(events.at(e.e2_str)->stage4_prefix_slot));
++    record->add("edges").get_sub().push_back(edge);
++  }
++}
+diff --git a/src/goto-symex/stage4_sc.h b/src/goto-symex/stage4_sc.h
+new file mode 100644
+index 00000000..9fde8af1
+--- /dev/null
++++ b/src/goto-symex/stage4_sc.h
+@@ -0,0 +1,31 @@
++#ifndef CPROVER_GOTO_SYMEX_STAGE4_SC_H
++#define CPROVER_GOTO_SYMEX_STAGE4_SC_H
++#include "memory_model.h"
++#include <map>
++
++// One ephemeral view per address or per thread. Cached records own only typed
++// expressions, prefix slots and metadata. All iterators belong to the current run.
++class stage4_sct
++{
++  using iterator = partial_order_concurrencyt::event_it;
++  memory_model_baset &mm;
++  symex_target_equationt &eq;
++  bool active, eligible=true, hit=false;
++  irept *record=nullptr;
++  std::map<std::string,iterator> events;
++  std::map<std::size_t,iterator> slots;
++  std::size_t edge_start=0;
++  iterator step_start;
++  irept signature;
++  void include(iterator);
++  bool check(const std::string &,const std::string &);
++  void replay_reads();
++public:
++  stage4_sct(memory_model_baset &,symex_target_equationt &);
++  bool address(const std::string &,const std::vector<iterator> &,const std::vector<iterator> &);
++  void begin_read();
++  void end_read(iterator);
++  bool thread(unsigned,const std::vector<iterator> &,const std::set<std::pair<std::string,std::string>> &);
++  void end_thread();
++};
++#endif
+diff --git a/src/goto-symex/symex_main.cpp b/src/goto-symex/symex_main.cpp
+index 8d339613..e6c21db0 100644
+--- a/src/goto-symex/symex_main.cpp
++++ b/src/goto-symex/symex_main.cpp
+@@ -11,6 +11,7 @@ Author: Daniel Kroening, kroening@kroening.com
+ 
+ #include "goto_symex.h"
+ #include "stage3_observer.h"
++#include "stage4_incremental.h"
+ 
+ #include <memory>
+ #include <chrono>
+@@ -614,6 +615,7 @@ void goto_symext::symex_step(
+   const get_goto_functiont &get_goto_function,
+   statet &state)
+ {
++  if(stage4::configured()) stage4::before_step(state,target,path_storage);
+   // __SZH_ADD_BEGIN__
+   if(try_finding_value_set)
+     overall_value_set.make_union(state.value_set);
+diff --git a/src/util/ui_message.cpp b/src/util/ui_message.cpp
+index 6a465a6c..0dfdff98 100644
+--- a/src/util/ui_message.cpp
++++ b/src/util/ui_message.cpp
+@@ -318,6 +318,19 @@ void ui_message_handlert::json_ui_msg(
+     result["timestamp"] = json_stringt(timestamp);
+ }
+ 
++void ui_message_handlert::stage4_reopen_json(const std::string &path)
++{
++  PRECONDITION(json_output_file && get_ui()==uit::JSON_UI);
++  // The child completed the old JSON. The parent flushed before fork.
++  json_output_file->close();
++  json_stream.reset();
++  json_output_file->clear();
++  json_output_file->open(path);
++  if(!*json_output_file) throw std::runtime_error("Cannot open candidate JSON");
++  json_stream.reset(new json_stream_arrayt(out));
++  json_stream->push_back().make_object()["program"]=json_stringt("Deagle");
++}
++
+ void ui_message_handlert::flush(unsigned level)
+ {
+   switch(get_ui())
+diff --git a/src/util/ui_message.h b/src/util/ui_message.h
+index 44a3635e..12537d39 100644
+--- a/src/util/ui_message.h
++++ b/src/util/ui_message.h
+@@ -37,6 +37,7 @@ public:
+   }
+ 
+   virtual void flush(unsigned level) override;
++  void stage4_reopen_json(const std::string &path);
+ 
+   virtual json_stream_arrayt &get_json_stream()
+   {

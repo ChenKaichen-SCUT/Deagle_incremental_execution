@@ -1,0 +1,237 @@
+{
+  "baseline_matches": true,
+  "candidate": "VIOLATION",
+  "candidate_trace_steps": 156,
+  "case": "partial_counter",
+  "counts": {
+    "full": {
+      "constraint_fragments": 324,
+      "counts": {
+        "constraint_fragments": 324,
+        "full_model": {
+          "constraint_comments": {
+            "rf-some": 18,
+            "rf-val": 58
+          },
+          "edge_kinds": {
+            "apo": 9,
+            "po": 56,
+            "rf": 58
+          },
+          "events": 56,
+          "oc_guards": 28,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 107,
+            "atomic_begin": 8,
+            "atomic_end": 8,
+            "constraint": 76,
+            "decl": 7,
+            "fence": 8,
+            "function_call": 19,
+            "function_return": 22,
+            "goto": 17,
+            "location": 20,
+            "output": 1,
+            "read": 18,
+            "spawn": 2,
+            "write": 28
+          },
+          "steps": 342
+        },
+        "raw_ssa": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 58,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 107,
+            "atomic_begin": 8,
+            "atomic_end": 8,
+            "decl": 7,
+            "fence": 8,
+            "function_call": 19,
+            "function_return": 22,
+            "goto": 17,
+            "location": 20,
+            "output": 1,
+            "read": 20,
+            "spawn": 2,
+            "write": 28
+          },
+          "steps": 268
+        },
+        "sc_input": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 56,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 107,
+            "atomic_begin": 8,
+            "atomic_end": 8,
+            "decl": 7,
+            "fence": 8,
+            "function_call": 19,
+            "function_return": 22,
+            "goto": 17,
+            "location": 20,
+            "output": 1,
+            "read": 18,
+            "spawn": 2,
+            "write": 28
+          },
+          "steps": 266
+        },
+        "symbolic_instruction_dispatches": 176
+      },
+      "event_fingerprints": 56
+    },
+    "online": {
+      "constraint_fragments": 324,
+      "counts": {
+        "constraint_fragments": 324,
+        "full_model": {
+          "constraint_comments": {
+            "rf-some": 18,
+            "rf-val": 58
+          },
+          "edge_kinds": {
+            "apo": 9,
+            "po": 56,
+            "rf": 58
+          },
+          "events": 56,
+          "oc_guards": 28,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 107,
+            "atomic_begin": 8,
+            "atomic_end": 8,
+            "constraint": 76,
+            "decl": 7,
+            "fence": 8,
+            "function_call": 19,
+            "function_return": 22,
+            "goto": 17,
+            "location": 20,
+            "output": 1,
+            "read": 18,
+            "spawn": 2,
+            "write": 28
+          },
+          "steps": 342
+        },
+        "raw_ssa": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 58,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 107,
+            "atomic_begin": 8,
+            "atomic_end": 8,
+            "decl": 7,
+            "fence": 8,
+            "function_call": 19,
+            "function_return": 22,
+            "goto": 17,
+            "location": 20,
+            "output": 1,
+            "read": 20,
+            "spawn": 2,
+            "write": 28
+          },
+          "steps": 268
+        },
+        "sc_input": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 56,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 107,
+            "atomic_begin": 8,
+            "atomic_end": 8,
+            "decl": 7,
+            "fence": 8,
+            "function_call": 19,
+            "function_return": 22,
+            "goto": 17,
+            "location": 20,
+            "output": 1,
+            "read": 18,
+            "spawn": 2,
+            "write": 28
+          },
+          "steps": 266
+        },
+        "symbolic_instruction_dispatches": 176
+      },
+      "event_fingerprints": 56
+    }
+  },
+  "different_phases": [],
+  "fallback_reason": "synchronization_calls_changed:record_left",
+  "frontend_seconds": 0.2141759110018029,
+  "full_candidate_exit": 10,
+  "full_dispatches": 176,
+  "full_oracle_started_after_online": true,
+  "full_wall_seconds": 0.10957163900093292,
+  "model_digests": {
+    "full": "2182dde61af9052a876a5aee9c57f7fb459bb87da52999f15fb062061e10f6ce",
+    "online": "2182dde61af9052a876a5aee9c57f7fb459bb87da52999f15fb062061e10f6ce"
+  },
+  "native": {
+    "checkpoint_used": false,
+    "executed_symex_steps": 176,
+    "reused_prefix_symex_steps": 0,
+    "sc_counters": {}
+  },
+  "old": "VIOLATION",
+  "old_warmup_seconds": 0.2562466170020343,
+  "online_candidate_seconds": 0.4934802200004924,
+  "path": "full_fallback",
+  "phase_digests": {
+    "full_model": {
+      "full": "64b0be1928b933941f87a8b1ec60e988e7e0e35569d861a8fcf5cd5e29cda985",
+      "online": "64b0be1928b933941f87a8b1ec60e988e7e0e35569d861a8fcf5cd5e29cda985"
+    },
+    "goto": {
+      "full": "5648022f2afb79448cdd14500c999aaeab9311e63f2977a1ed15cf7e2df60622",
+      "online": "5648022f2afb79448cdd14500c999aaeab9311e63f2977a1ed15cf7e2df60622"
+    },
+    "raw_ssa": {
+      "full": "2d2cdb1ce2aa02a6c630b4d27efdb90e01c44cef0e1d8969886574f77cb7f5e7",
+      "online": "2d2cdb1ce2aa02a6c630b4d27efdb90e01c44cef0e1d8969886574f77cb7f5e7"
+    },
+    "sc_input": {
+      "full": "ce34597e36ec4896f59f2771373cc954ba4f162d7bf2bf7dd75bc1c85ead2438",
+      "online": "ce34597e36ec4896f59f2771373cc954ba4f162d7bf2bf7dd75bc1c85ead2438"
+    }
+  },
+  "prefix_dispatch_trace_matches": null,
+  "suffix_dispatch_trace_matches": null
+}

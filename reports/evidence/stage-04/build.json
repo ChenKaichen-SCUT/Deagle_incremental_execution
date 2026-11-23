@@ -1,0 +1,65 @@
+{
+  "build_jobs": 4,
+  "build_logs": {
+    "build-published.log": {
+      "sha256": "33ff0efccbe53e3298716e436d139c8e1ad7dde99799dfd02f472e8d6d0fa3b7",
+      "time_and_rss": [
+        "/root/Deagle_incremental_execution/third_party/deagle-stage4/src/cbmc/deagle_exe: OK"
+      ]
+    },
+    "bundle.log": {
+      "sha256": "97fc9d5e7955ad6326811f2abc31f5abf19b7803dbe4b48184d30ec646ecf077",
+      "time_and_rss": []
+    },
+    "deagle-stage4.log": {
+      "sha256": "de85a9e23f198f105bab2c5aff50b1fb0af56a3612d94f0d258c76184852c3a6",
+      "time_and_rss": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.63",
+        "Maximum resident set size (kbytes): 152168",
+        "Exit status: 0"
+      ]
+    },
+    "prepare-published.log": {
+      "sha256": "c208a72f363488880ae866bab21812f2b678f5718ea11c7a07a872bbb3fa6496",
+      "time_and_rss": []
+    },
+    "replay.log": {
+      "sha256": "0aeb703dfcf552e5262c9fa50d185f2313594a9b973103e85047eb62a831cf56",
+      "time_and_rss": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.14",
+        "Maximum resident set size (kbytes): 152040",
+        "Exit status: 0"
+      ]
+    }
+  },
+  "independent_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "lock": {
+    "backend": "SC / Deagle Closure",
+    "baseline_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+    "baseline_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+    "build_command": "bash scripts/stage4/build.sh",
+    "build_jobs": 4,
+    "bundle_sha256": "44ad6cae598fb061638cb2f09ec203a73e64a81be3644666a2f85d613b0e76c7",
+    "checkpoint_mechanism": "Linux fork, immutable pre-call process image",
+    "development_commit": "3e5472e8edb93491acd6263596eea681c64c1549",
+    "development_sha256": "cc0e91e9d698b57754c28686f3d267e2f16e6df081c924d907512b9af88583da",
+    "development_tree": "1791c8af80b9d745700d0ddd181db5c33ed21df1",
+    "maximum_checkpoints_in_session": 1,
+    "native_solver_cache": false,
+    "parent_commit": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332",
+    "patch_sha256": "629d2c0bf7cf71c64c810d07206d27c4a4e288c64006d39bf5d6ddafa0f54aa8",
+    "prior_toolchain": "configs/stage03.lock.json",
+    "schema": 1,
+    "upstream_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e"
+  },
+  "logs": {
+    "bundle.log": "97fc9d5e7955ad6326811f2abc31f5abf19b7803dbe4b48184d30ec646ecf077",
+    "deagle-stage4.log": "de85a9e23f198f105bab2c5aff50b1fb0af56a3612d94f0d258c76184852c3a6",
+    "replay.log": "0aeb703dfcf552e5262c9fa50d185f2313594a9b973103e85047eb62a831cf56"
+  },
+  "native_tracked_status": "",
+  "patch_replay_tree": "1791c8af80b9d745700d0ddd181db5c33ed21df1",
+  "replay_sha256": "cc0e91e9d698b57754c28686f3d267e2f16e6df081c924d907512b9af88583da",
+  "replay_tree": "1791c8af80b9d745700d0ddd181db5c33ed21df1",
+  "stage3_sha256": "a5960294056efe0bdd8242054e8a6f2e9f56801901aa7d38ccf52ba6f8360c37"
+}

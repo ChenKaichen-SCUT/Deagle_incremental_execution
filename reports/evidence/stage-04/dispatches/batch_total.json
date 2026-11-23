@@ -1,0 +1,750 @@
+{
+  "checkpoint": {
+    "checkpoint_dispatch": 60,
+    "checkpoint_pid": 96786,
+    "old_exit": 10,
+    "old_pid": 96803
+  },
+  "executed_by_restored_candidate": [
+    {
+      "function": "pack",
+      "pc": 56,
+      "thread": 1
+    },
+    {
+      "function": "record_batch",
+      "pc": 53,
+      "thread": 1
+    },
+    {
+      "function": "record_batch",
+      "pc": 54,
+      "thread": 1
+    },
+    {
+      "function": "pack",
+      "pc": 57,
+      "thread": 1
+    },
+    {
+      "function": "pack",
+      "pc": 58,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 69,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 70,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 71,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 37,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 38,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 39,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 40,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 41,
+      "thread": 1
+    }
+  ],
+  "fields": [
+    "thread",
+    "function",
+    "pc"
+  ],
+  "function": "record_batch",
+  "independent_full_candidate": [
+    {
+      "function": "__CPROVER__start",
+      "pc": 59,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 7,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 8,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 9,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 10,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 11,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 12,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 13,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 14,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 15,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 16,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 17,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 18,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 19,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 20,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 21,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 22,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 23,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER__start",
+      "pc": 60,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 0,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 1,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 24,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 25,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 26,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 27,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 28,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 29,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 30,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 32,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 33,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 34,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 35,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 38,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 39,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 40,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 41,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 2,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 42,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 43,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 44,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 45,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 46,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 47,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 48,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 50,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 51,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 52,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 3,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 4,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 5,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 6,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER__start",
+      "pc": 61,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER__start",
+      "pc": 62,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 36,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 63,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 64,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 65,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 66,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 68,
+      "thread": 1
+    },
+    {
+      "function": "pack",
+      "pc": 55,
+      "thread": 1
+    },
+    {
+      "function": "pack",
+      "pc": 56,
+      "thread": 1
+    },
+    {
+      "function": "record_batch",
+      "pc": 53,
+      "thread": 1
+    },
+    {
+      "function": "record_batch",
+      "pc": 54,
+      "thread": 1
+    },
+    {
+      "function": "pack",
+      "pc": 57,
+      "thread": 1
+    },
+    {
+      "function": "pack",
+      "pc": 58,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 69,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 70,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 71,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 37,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 38,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 39,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 40,
+      "thread": 1
+    },
+    {
+      "function": "pthread_create",
+      "pc": 41,
+      "thread": 1
+    }
+  ],
+  "old_prefix": [
+    {
+      "function": "__CPROVER__start",
+      "pc": 59,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 7,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 8,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 9,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 10,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 11,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 12,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 13,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 14,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 15,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 16,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 17,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 18,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 19,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 20,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 21,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 22,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER_initialize",
+      "pc": 23,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER__start",
+      "pc": 60,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 0,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 1,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 24,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 25,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 26,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 27,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 28,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 29,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 30,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 32,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 33,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 34,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 35,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 38,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 39,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 40,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 41,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 2,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 42,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 43,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 44,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 45,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 46,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 47,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 48,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 50,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 51,
+      "thread": 0
+    },
+    {
+      "function": "pthread_join",
+      "pc": 52,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 3,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 4,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 5,
+      "thread": 0
+    },
+    {
+      "function": "main",
+      "pc": 6,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER__start",
+      "pc": 61,
+      "thread": 0
+    },
+    {
+      "function": "__CPROVER__start",
+      "pc": 62,
+      "thread": 0
+    },
+    {
+      "function": "pthread_create",
+      "pc": 36,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 63,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 64,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 65,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 66,
+      "thread": 1
+    },
+    {
+      "function": "__spawned_thread",
+      "pc": 68,
+      "thread": 1
+    },
+    {
+      "function": "pack",
+      "pc": 55,
+      "thread": 1
+    }
+  ]
+}

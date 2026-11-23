@@ -1,0 +1,3198 @@
+[
+  {
+    "program": "CBMC 5.67.0"
+  },
+  {
+    "messageText": "Deagle version 4.2.0 (3e5472e8) 64-bit x86_64 linux",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "which contains:\nCBMC version 5.67.0 64-bit x86_64 linux",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Parsing harness.c",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Converting",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Type-checking harness",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generating GOTO Program",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Adding CPROVER library (x86_64)",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Removal of function pointers and virtual functions",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "replacing function pointer by 2 possible targets",
+    "messageType": "STATUS-MESSAGE",
+    "sourceLocation": {
+      "file": "<builtin-library-__spawned_thread>",
+      "function": "__spawned_thread",
+      "line": "34",
+      "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+    }
+  },
+  {
+    "messageText": "Generic Property Instrumentation",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Running with 8 object bits, 56 offset bits (default)",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Starting Bounded Model Checking",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Symex: 0.00956521s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Adding SC constraints",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared __CPROVER_threads_exited: 4R/3W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared __CPROVER_next_thread_id: 3R/3W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared counter: 3R/3W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared counter_mutex: 6R/7W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared main::1::left_worker!0@1: 1R/2W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared main::1::right_worker!0@1: 1R/2W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "size of program expression: 342 steps",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "no slicing due to threads",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generated 1 VCC(s), 1 remaining after simplification",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Postprocess Equation: 0.00380861s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Passing problem to propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "converting SSA",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Convert SSA: 0.00488194s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Running propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Post-processing",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Post-process: 0.000462609s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Solving with Deagle's Closure Solver",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "14197 variables, 47566 clauses",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "SAT checker: instance is SATISFIABLE",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Solver: 0.00230014s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime decision procedure: 0.0100429s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Building error trace",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "result": [
+      {
+        "description": "assertion counter == 2",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "31",
+          "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+        },
+        "status": "FAILURE",
+        "trace": [
+          {
+            "function": {
+              "displayName": "__CPROVER_initialize",
+              "identifier": "__CPROVER_initialize",
+              "sourceLocation": {
+                "file": "<built-in-additions>",
+                "line": "36",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": true,
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_alloca_object",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_dead_object",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "14",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_deallocated",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "13",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_malloc_is_new_array",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "16",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0",
+              "data": false,
+              "name": "boolean"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_max_malloc_size",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "21",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000010000000000000000000000000000000000000000000000000000000",
+              "data": "36028797018963968ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_memory_leak",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "17",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_new_object",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "15",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "8",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "11",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_pipe_count",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "34",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "unsigned int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_rounding_mode",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "25",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "6",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_key_dtors",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "10",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_keys",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "9",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_threads_exited",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "7",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "counter",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "4",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "counter_mutex",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "5",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "member": {
+                "name": "__data",
+                "value": {
+                  "members": [
+                    {
+                      "name": "__lock",
+                      "value": {
+                        "binary": "00000000000000000000000000000000",
+                        "data": "0",
+                        "name": "integer",
+                        "type": "signed int",
+                        "width": 32
+                      }
+                    },
+                    {
+                      "name": "__count",
+                      "value": {
+                        "binary": "00000000000000000000000000000000",
+                        "data": "0u",
+                        "name": "integer",
+                        "type": "unsigned int",
+                        "width": 32
+                      }
+                    },
+                    {
+                      "name": "__owner",
+                      "value": {
+                        "binary": "00000000000000000000000000000000",
+                        "data": "0",
+                        "name": "integer",
+                        "type": "signed int",
+                        "width": 32
+                      }
+                    },
+                    {
+                      "name": "__nusers",
+                      "value": {
+                        "binary": "00000000000000000000000000000000",
+                        "data": "0u",
+                        "name": "integer",
+                        "type": "unsigned int",
+                        "width": 32
+                      }
+                    },
+                    {
+                      "name": "__kind",
+                      "value": {
+                        "binary": "00000000000000000000000000000000",
+                        "data": "0",
+                        "name": "integer",
+                        "type": "signed int",
+                        "width": 32
+                      }
+                    },
+                    {
+                      "name": "__spins",
+                      "value": {
+                        "binary": "0000000000000000",
+                        "data": "0",
+                        "name": "integer",
+                        "type": "signed short int",
+                        "width": 16
+                      }
+                    },
+                    {
+                      "name": "__elision",
+                      "value": {
+                        "binary": "0000000000000000",
+                        "data": "0",
+                        "name": "integer",
+                        "type": "signed short int",
+                        "width": 16
+                      }
+                    },
+                    {
+                      "name": "__list",
+                      "value": {
+                        "members": [
+                          {
+                            "name": "__prev",
+                            "value": {
+                              "data": "((struct __pthread_internal_list *)NULL)",
+                              "name": "pointer",
+                              "type": "struct __pthread_internal_list *"
+                            }
+                          },
+                          {
+                            "name": "__next",
+                            "value": {
+                              "data": "((struct __pthread_internal_list *)NULL)",
+                              "name": "pointer",
+                              "type": "struct __pthread_internal_list *"
+                            }
+                          }
+                        ],
+                        "name": "struct"
+                      }
+                    }
+                  ],
+                  "name": "struct"
+                }
+              },
+              "name": "union"
+            }
+          },
+          {
+            "function": {
+              "displayName": "__CPROVER_initialize",
+              "identifier": "__CPROVER_initialize",
+              "sourceLocation": {
+                "file": "<built-in-additions>",
+                "line": "36",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "23",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "main",
+              "identifier": "main",
+              "sourceLocation": {
+                "file": "harness.c",
+                "line": "23",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "23",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "left_worker",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "25",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "right_worker",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "25",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000011",
+              "data": "3ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "left_worker!0@1",
+              "name": "pointer",
+              "type": "__CPROVER_size_t *"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "attr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const pthread_attr_t *)NULL)",
+              "name": "pointer",
+              "type": "const pthread_attr_t *"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "start_routine",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "left",
+              "name": "pointer",
+              "type": "const void * (*)(const void *)"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "arg",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "left_worker",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "33",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "39",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "41",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "41",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "attr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const pthread_attr_t *)NULL)",
+              "name": "pointer",
+              "type": "const pthread_attr_t *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "left_worker!0@1",
+              "name": "pointer",
+              "type": "__CPROVER_size_t *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "arg",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "start_routine",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "left",
+              "name": "pointer",
+              "type": "const void * (*)(const void *)"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_rounding_mode",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_key_dtors",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_keys",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "61",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "right_worker!0@1",
+              "name": "pointer",
+              "type": "__CPROVER_size_t *"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "attr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const pthread_attr_t *)NULL)",
+              "name": "pointer",
+              "type": "const pthread_attr_t *"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "start_routine",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "right",
+              "name": "pointer",
+              "type": "const void * (*)(const void *)"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "arg",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000010",
+              "data": "2ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000010",
+              "data": "2ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "right_worker",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "33",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000010",
+              "data": "2ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "39",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "41",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "41",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "start_routine",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "right",
+              "name": "pointer",
+              "type": "const void * (*)(const void *)"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "attr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const pthread_attr_t *)NULL)",
+              "name": "pointer",
+              "type": "const pthread_attr_t *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000010",
+              "data": "2ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "right_worker!0@1",
+              "name": "pointer",
+              "type": "__CPROVER_size_t *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "arg",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_rounding_mode",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_key_dtors",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_keys",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "61",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "28",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "pthread_join",
+              "identifier": "pthread_join",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_join>",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "28",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "28",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "value_ptr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "28",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const void **)NULL)",
+              "name": "pointer",
+              "type": "const void **"
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "28",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "byte_extract_little_endian(counter_mutex, 0l, __CPROVER_mutex_t)",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "39",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "00000001",
+              "data": "1",
+              "name": "integer",
+              "type": "__CPROVER_mutex_t",
+              "width": 8
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "42",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_lock",
+              "identifier": "pthread_mutex_lock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_lock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "47",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "snapshot",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "5",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "6",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_unlock",
+              "identifier": "pthread_mutex_unlock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_unlock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "6",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "mutex",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "6",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "data": "counter_mutex",
+              "name": "pointer",
+              "type": "pthread_mutex_t *"
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "36",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "byte_extract_little_endian(counter_mutex, 0l, __CPROVER_mutex_t)",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "43",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "00000000",
+              "data": "0",
+              "name": "integer",
+              "type": "__CPROVER_mutex_t",
+              "width": 8
+            }
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_unlock",
+              "identifier": "pthread_mutex_unlock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_unlock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "8",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_lock",
+              "identifier": "pthread_mutex_lock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_lock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "8",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "mutex",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "8",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "data": "counter_mutex",
+              "name": "pointer",
+              "type": "pthread_mutex_t *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "byte_extract_little_endian(counter_mutex, 0l, __CPROVER_mutex_t)",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "39",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 1,
+            "value": {
+              "binary": "00000001",
+              "data": "1",
+              "name": "integer",
+              "type": "__CPROVER_mutex_t",
+              "width": 8
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "42",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_lock",
+              "identifier": "pthread_mutex_lock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_lock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "47",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "counter",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_left",
+              "line": "16",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 1,
+            "value": {
+              "binary": "00000000000000000000000000000001",
+              "data": "1",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_left",
+              "line": "17",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_unlock",
+              "identifier": "pthread_mutex_unlock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_unlock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_left",
+              "line": "17",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 1
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "mutex",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_left",
+              "line": "17",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 1,
+            "value": {
+              "data": "counter_mutex",
+              "name": "pointer",
+              "type": "pthread_mutex_t *"
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "36",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 1
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "byte_extract_little_endian(counter_mutex, 0l, __CPROVER_mutex_t)",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "43",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 1,
+            "value": {
+              "binary": "00000000",
+              "data": "0",
+              "name": "integer",
+              "type": "__CPROVER_mutex_t",
+              "width": 8
+            }
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_unlock",
+              "identifier": "pthread_mutex_unlock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_unlock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "record_left",
+              "identifier": "record_left",
+              "sourceLocation": {
+                "file": "program.c",
+                "line": "13",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_left",
+              "line": "18",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "left",
+              "identifier": "left",
+              "sourceLocation": {
+                "file": "harness.c",
+                "line": "9",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "left",
+              "line": "14",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "35",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 1
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "byte_extract_little_endian(counter_mutex, 0l, __CPROVER_mutex_t)",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "39",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "00000001",
+              "data": "1",
+              "name": "integer",
+              "type": "__CPROVER_mutex_t",
+              "width": 8
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "42",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_lock",
+              "identifier": "pthread_mutex_lock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_lock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_lock>",
+              "function": "pthread_mutex_lock",
+              "line": "47",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "counter",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "9",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "00000000000000000000000000000001",
+              "data": "1",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "10",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_unlock",
+              "identifier": "pthread_mutex_unlock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_unlock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "10",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "mutex",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "10",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "data": "counter_mutex",
+              "name": "pointer",
+              "type": "pthread_mutex_t *"
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "36",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "byte_extract_little_endian(counter_mutex, 0l, __CPROVER_mutex_t)",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "43",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "00000000",
+              "data": "0",
+              "name": "integer",
+              "type": "__CPROVER_mutex_t",
+              "width": 8
+            }
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_unlock",
+              "identifier": "pthread_mutex_unlock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_unlock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_mutex_unlock>",
+              "function": "pthread_mutex_unlock",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "record_split",
+              "identifier": "record_split",
+              "sourceLocation": {
+                "file": "program.c",
+                "line": "1",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "11",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "record_right",
+              "identifier": "record_right",
+              "sourceLocation": {
+                "file": "program.c",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_right",
+              "line": "23",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "right",
+              "identifier": "right",
+              "sourceLocation": {
+                "file": "harness.c",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "right",
+              "line": "21",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "34",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "35",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_threads_exited[1l]",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "55",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 1,
+            "value": {
+              "binary": "1",
+              "data": true,
+              "name": "boolean"
+            }
+          },
+          {
+            "function": {
+              "displayName": "__spawned_thread",
+              "identifier": "__spawned_thread",
+              "sourceLocation": {
+                "file": "<builtin-library-__spawned_thread>",
+                "line": "9",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "56",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "61",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "49",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "__spawned_thread",
+              "identifier": "__spawned_thread",
+              "sourceLocation": {
+                "file": "<builtin-library-__spawned_thread>",
+                "line": "9",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "49",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "49",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000010",
+              "data": "2ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "49",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "start_routine",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "49",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "data": "right",
+              "name": "pointer",
+              "type": "const void * (*)(const void *)"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "arg",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "49",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "21",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000010",
+              "data": "2ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "22",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "34",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "right",
+              "identifier": "right",
+              "sourceLocation": {
+                "file": "harness.c",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "34",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "unused",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "34",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "right",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "record_right",
+              "identifier": "record_right",
+              "sourceLocation": {
+                "file": "program.c",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "right",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_right",
+              "line": "22",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "record_split",
+              "identifier": "record_split",
+              "sourceLocation": {
+                "file": "program.c",
+                "line": "1",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_right",
+              "line": "22",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "snapshot",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "3",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "4",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "pthread_mutex_lock",
+              "identifier": "pthread_mutex_lock",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_mutex_lock>",
+                "line": "17",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "4",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 2
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "mutex",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_split",
+              "line": "4",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "data": "counter_mutex",
+              "name": "pointer",
+              "type": "pthread_mutex_t *"
+            }
+          },
+          {
+            "function": {
+              "displayName": "pthread_join",
+              "identifier": "pthread_join",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_join>",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "32",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "pthread_join",
+              "identifier": "pthread_join",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_join>",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_threads_exited[2l]",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "55",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 2,
+            "value": {
+              "binary": "1",
+              "data": true,
+              "name": "boolean"
+            }
+          },
+          {
+            "function": {
+              "displayName": "__spawned_thread",
+              "identifier": "__spawned_thread",
+              "sourceLocation": {
+                "file": "<builtin-library-__spawned_thread>",
+                "line": "9",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "56",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "61",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 2
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000010",
+              "data": "2ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "value_ptr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const void **)NULL)",
+              "name": "pointer",
+              "type": "const void **"
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "28",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "pthread_join",
+              "identifier": "pthread_join",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_join>",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "32",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "internal": false,
+            "property": "main.assertion.1",
+            "reason": "assertion counter == 2",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "31",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/partial_counter/pair/source"
+            },
+            "stepType": "failure",
+            "thread": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messageText": "VERIFICATION FAILED",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "cProverStatus": "failure"
+  }
+]

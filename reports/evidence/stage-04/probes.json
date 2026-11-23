@@ -1,0 +1,35 @@
+{
+  "capacity": {
+    "baseline_exit": 0,
+    "inputs": {
+      "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+      "program.c": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd"
+    },
+    "native_dispatches": 73,
+    "reason": "checkpoint_budget_or_multithreaded_host",
+    "reused_prefix": 0,
+    "status": "NO_VIOLATION_WITHIN_BOUND"
+  },
+  "header": {
+    "baseline_exit": 0,
+    "inputs": {
+      "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+      "program.c": "4136b5742c03f0a443bcdbac9eab36c451554b9a9a20a5ff1d4d55b81b58edf0"
+    },
+    "native_dispatches": 73,
+    "reason": "config_headers_or_layout_changed",
+    "reused_prefix": 0,
+    "status": "NO_VIOLATION_WITHIN_BOUND"
+  },
+  "rhs_shape": {
+    "baseline_exit": 0,
+    "inputs": {
+      "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+      "program.c": "ad855353b30ae4fbe254904b5e47d780b217180ed792b8b99d3ba223087cfb44"
+    },
+    "native_dispatches": 73,
+    "reason": "non_scalar_or_address_sensitive_assignment",
+    "reused_prefix": 0,
+    "status": "NO_VIOLATION_WITHIN_BOUND"
+  }
+}

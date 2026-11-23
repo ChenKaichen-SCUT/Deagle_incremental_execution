@@ -1,0 +1,1292 @@
+[
+  {
+    "program": "Deagle"
+  },
+  {
+    "messageText": "Runtime Symex: 0.250821s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Adding SC constraints",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared __CPROVER_threads_exited: 2R/2W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared __CPROVER_next_thread_id: 1R/2W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared shipped_units: 2R/2W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Shared main::1::worker!0@1: 1R/2W",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "size of program expression: 131 steps",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "no slicing due to threads",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Generated 1 VCC(s), 1 remaining after simplification",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Postprocess Equation: 0.0016348s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Passing problem to propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "converting SSA",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Convert SSA: 0.000498899s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Running propositional reduction",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Post-processing",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Post-process: 0.000122513s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Solving with Deagle's Closure Solver",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "1204 variables, 2304 clauses",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "SAT checker: instance is SATISFIABLE",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime Solver: 0.000298366s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Runtime decision procedure: 0.00218728s",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "messageText": "Building error trace",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "result": [
+      {
+        "description": "assertion shipped_units == 6",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "21",
+          "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+        },
+        "status": "FAILURE",
+        "trace": [
+          {
+            "function": {
+              "displayName": "__CPROVER_initialize",
+              "identifier": "__CPROVER_initialize",
+              "sourceLocation": {
+                "file": "<built-in-additions>",
+                "line": "36",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": true,
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_alloca_object",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_dead_object",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "14",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_deallocated",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "13",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_malloc_is_new_array",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "16",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0",
+              "data": false,
+              "name": "boolean"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_max_malloc_size",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "21",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000010000000000000000000000000000000000000000000000000000000",
+              "data": "36028797018963968ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_memory_leak",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "17",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_new_object",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "15",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "8",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "11",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_pipe_count",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "34",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0u",
+              "name": "integer",
+              "type": "unsigned int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_rounding_mode",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "25",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "6",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_key_dtors",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "10",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_keys",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "9",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_threads_exited",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<built-in-additions>",
+              "line": "7",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "shipped_units",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "4",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "function": {
+              "displayName": "__CPROVER_initialize",
+              "identifier": "__CPROVER_initialize",
+              "sourceLocation": {
+                "file": "<built-in-additions>",
+                "line": "36",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "15",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "main",
+              "identifier": "main",
+              "sourceLocation": {
+                "file": "harness.c",
+                "line": "15",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "line": "15",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "worker",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "17",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "worker!0@1",
+              "name": "pointer",
+              "type": "__CPROVER_size_t *"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "attr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const pthread_attr_t *)NULL)",
+              "name": "pointer",
+              "type": "const pthread_attr_t *"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "start_routine",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "pack",
+              "name": "pointer",
+              "type": "const void * (*)(const void *)"
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "arg",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "18",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "29",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "worker",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "33",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "39",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "41",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "41",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "attr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const pthread_attr_t *)NULL)",
+              "name": "pointer",
+              "type": "const pthread_attr_t *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "worker!0@1",
+              "name": "pointer",
+              "type": "__CPROVER_size_t *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "arg",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "NULL",
+              "name": "pointer",
+              "type": "const void *"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "this_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "start_routine",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "pack",
+              "name": "pointer",
+              "type": "const void * (*)(const void *)"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_rounding_mode",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "00000000000000000000000000000000",
+              "data": "0",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_id",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_key_dtors",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_next_thread_key",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000000",
+              "data": "0ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_thread_keys",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "48",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "name": "unknown"
+            }
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "61",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "function": {
+              "displayName": "pthread_join",
+              "identifier": "pthread_join",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_join>",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-call",
+            "thread": 0
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "thread",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "binary": "0000000000000000000000000000000000000000000000000000000000000001",
+              "data": "1ul",
+              "name": "integer",
+              "type": "__CPROVER_size_t",
+              "width": 64
+            }
+          },
+          {
+            "assignmentType": "actual-parameter",
+            "hidden": false,
+            "internal": false,
+            "lhs": "value_ptr",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "19",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 0,
+            "value": {
+              "data": "((const void **)NULL)",
+              "name": "pointer",
+              "type": "const void **"
+            }
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "26",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "27",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "28",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 0
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": false,
+            "internal": false,
+            "lhs": "shipped_units",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_batch",
+              "line": "3",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 1,
+            "value": {
+              "binary": "00000000000000000000000000001010",
+              "data": "10",
+              "name": "integer",
+              "type": "signed int",
+              "width": 32
+            }
+          },
+          {
+            "function": {
+              "displayName": "record_batch",
+              "identifier": "record_batch",
+              "sourceLocation": {
+                "file": "program.c",
+                "line": "1",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "program.c",
+              "function": "record_batch",
+              "line": "4",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "pack",
+              "identifier": "pack",
+              "sourceLocation": {
+                "file": "harness.c",
+                "line": "8",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": false,
+            "internal": false,
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "pack",
+              "line": "13",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "hidden": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "35",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "location-only",
+            "thread": 1
+          },
+          {
+            "assignmentType": "variable",
+            "hidden": true,
+            "internal": false,
+            "lhs": "__CPROVER_threads_exited[1l]",
+            "mode": "C",
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "55",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "assignment",
+            "thread": 1,
+            "value": {
+              "binary": "1",
+              "data": true,
+              "name": "boolean"
+            }
+          },
+          {
+            "function": {
+              "displayName": "__spawned_thread",
+              "identifier": "__spawned_thread",
+              "sourceLocation": {
+                "file": "<builtin-library-__spawned_thread>",
+                "line": "9",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-__spawned_thread>",
+              "function": "__spawned_thread",
+              "line": "56",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "pthread_create",
+              "identifier": "pthread_create",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_create>",
+                "line": "20",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_create>",
+              "function": "pthread_create",
+              "line": "61",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 1
+          },
+          {
+            "function": {
+              "displayName": "pthread_join",
+              "identifier": "pthread_join",
+              "sourceLocation": {
+                "file": "<builtin-library-pthread_join>",
+                "line": "16",
+                "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+              }
+            },
+            "hidden": true,
+            "internal": false,
+            "sourceLocation": {
+              "file": "<builtin-library-pthread_join>",
+              "function": "pthread_join",
+              "line": "32",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "function-return",
+            "thread": 0
+          },
+          {
+            "hidden": false,
+            "internal": false,
+            "property": "main.assertion.1",
+            "reason": "assertion shipped_units == 6",
+            "sourceLocation": {
+              "file": "harness.c",
+              "function": "main",
+              "line": "21",
+              "workingDirectory": "/root/Deagle_incremental_execution/runs/stage-04/release/batch_retained_error/pair/source"
+            },
+            "stepType": "failure",
+            "thread": 0
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "messageText": "VERIFICATION FAILED",
+    "messageType": "STATUS-MESSAGE"
+  },
+  {
+    "cProverStatus": "failure"
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "accepted_utc": "2026-11-23T11:58:04.530137+00:00",
+    "case": "batch_total",
+    "directory": "runs/stage-04/batch-debug-1795435083359696627",
+    "path": "incremental"
+  },
+  {
+    "accepted_utc": "2026-11-23T11:59:33.035644+00:00",
+    "case": "threshold_guard",
+    "directory": "runs/stage-04/threshold-1795435171815801560",
+    "path": "incremental"
+  },
+  {
+    "accepted_utc": "2026-11-23T12:00:49.744937+00:00",
+    "case": "split_counter",
+    "directory": "runs/stage-04/sync-split_counter",
+    "path": "full_fallback"
+  },
+  {
+    "accepted_utc": "2026-11-23T12:00:51.408965+00:00",
+    "case": "partial_counter",
+    "directory": "runs/stage-04/sync-partial_counter",
+    "path": "full_fallback"
+  }
+]

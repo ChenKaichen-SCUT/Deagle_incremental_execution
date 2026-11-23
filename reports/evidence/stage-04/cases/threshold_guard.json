@@ -1,0 +1,298 @@
+{
+  "baseline_matches": true,
+  "candidate": "NO_VIOLATION_WITHIN_BOUND",
+  "candidate_trace_steps": 0,
+  "case": "threshold_guard",
+  "counts": {
+    "full": {
+      "constraint_fragments": 156,
+      "counts": {
+        "constraint_fragments": 156,
+        "full_model": {
+          "constraint_comments": {
+            "rf-some": 10,
+            "rf-val": 19
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 38,
+            "rf": 19
+          },
+          "events": 32,
+          "oc_guards": 20,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 59,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 29,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 9,
+            "location": 11,
+            "output": 1,
+            "read": 10,
+            "spawn": 1,
+            "write": 20
+          },
+          "steps": 167
+        },
+        "raw_ssa": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 33,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 59,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 9,
+            "location": 11,
+            "output": 1,
+            "read": 11,
+            "spawn": 1,
+            "write": 20
+          },
+          "steps": 139
+        },
+        "sc_input": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 32,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 59,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 9,
+            "location": 11,
+            "output": 1,
+            "read": 10,
+            "spawn": 1,
+            "write": 20
+          },
+          "steps": 138
+        },
+        "symbolic_instruction_dispatches": 84
+      },
+      "event_fingerprints": 32
+    },
+    "online": {
+      "constraint_fragments": 156,
+      "counts": {
+        "constraint_fragments": 156,
+        "full_model": {
+          "constraint_comments": {
+            "rf-some": 10,
+            "rf-val": 19
+          },
+          "edge_kinds": {
+            "apo": 1,
+            "po": 38,
+            "rf": 19
+          },
+          "events": 32,
+          "oc_guards": 20,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 59,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "constraint": 29,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 9,
+            "location": 11,
+            "output": 1,
+            "read": 10,
+            "spawn": 1,
+            "write": 20
+          },
+          "steps": 167
+        },
+        "raw_ssa": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 33,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 59,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 9,
+            "location": 11,
+            "output": 1,
+            "read": 11,
+            "spawn": 1,
+            "write": 20
+          },
+          "steps": 139
+        },
+        "sc_input": {
+          "constraint_comments": {},
+          "edge_kinds": {},
+          "events": 32,
+          "oc_guards": 0,
+          "properties": [
+            "main.assertion.1"
+          ],
+          "step_kinds": {
+            "assert": 1,
+            "assignment": 59,
+            "atomic_begin": 1,
+            "atomic_end": 1,
+            "decl": 3,
+            "fence": 1,
+            "function_call": 9,
+            "function_return": 11,
+            "goto": 9,
+            "location": 11,
+            "output": 1,
+            "read": 10,
+            "spawn": 1,
+            "write": 20
+          },
+          "steps": 138
+        },
+        "symbolic_instruction_dispatches": 84
+      },
+      "event_fingerprints": 32
+    }
+  },
+  "different_phases": [],
+  "fallback_reason": "",
+  "frontend_seconds": 0.21408539999902132,
+  "full_candidate_exit": 0,
+  "full_dispatches": 84,
+  "full_oracle_started_after_online": true,
+  "full_wall_seconds": 0.08292938700105879,
+  "model_digests": {
+    "full": "c443d5d408d4a115f0529e754ef66e9a1ad91da7d5b28887a241a25b7810b36b",
+    "online": "c443d5d408d4a115f0529e754ef66e9a1ad91da7d5b28887a241a25b7810b36b"
+  },
+  "native": {
+    "changed_instruction_type": "integer_guard",
+    "checkpoint_budget_bytes": 2147483648,
+    "checkpoint_dispatch": 61,
+    "checkpoint_fork_ns": 375137,
+    "checkpoint_raw_events": 22,
+    "checkpoint_raw_ssa_rows": 105,
+    "checkpoint_symbol_table_entries": 1,
+    "checkpoint_threads": 2,
+    "checkpoint_used": true,
+    "checkpoint_virtual_bytes_upper_bound": 28262400,
+    "executed_symex_steps": 23,
+    "exit_code": 0,
+    "fallback_reason": "",
+    "function": "record_request",
+    "goto_nodes_checked": 77,
+    "prefix_symbol_references_resolved": 96,
+    "program_symbols_checked": 95,
+    "reused_prefix_symex_steps": 61,
+    "role": "candidate",
+    "sc_counters": {
+      "coverage_formulas_reused": 2,
+      "read_bundles_generated": 8,
+      "read_bundles_reused": 2,
+      "rf_edges_reused": 4,
+      "thread_edges_generated": 9,
+      "thread_edges_reused": 20,
+      "value_formulas_reused": 4
+    },
+    "sc_regions": [
+      {
+        "family": "rf",
+        "name": "__CPROVER_threads_exited",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "__CPROVER_next_thread_id",
+        "reused": true
+      },
+      {
+        "family": "rf",
+        "name": "accepted",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "units",
+        "reused": false
+      },
+      {
+        "family": "rf",
+        "name": "main::1::worker!0@1",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "0",
+        "reused": true
+      },
+      {
+        "family": "po",
+        "name": "1",
+        "reused": false
+      }
+    ]
+  },
+  "old": "VIOLATION",
+  "old_warmup_seconds": 0.22062075799840386,
+  "online_candidate_seconds": 0.25600170100005926,
+  "path": "incremental",
+  "phase_digests": {
+    "full_model": {
+      "full": "6f1c7868181598e84401464aad87feada9b82b589609bc2bfff956b51b71e0ab",
+      "online": "6f1c7868181598e84401464aad87feada9b82b589609bc2bfff956b51b71e0ab"
+    },
+    "goto": {
+      "full": "e0f01f19d17205759f1d15b8461490f176870edf8c1f9310a3d2e0c82fd9598a",
+      "online": "e0f01f19d17205759f1d15b8461490f176870edf8c1f9310a3d2e0c82fd9598a"
+    },
+    "raw_ssa": {
+      "full": "cb508065270bd0d846aba6a9e676639868b9e9936697452dd26d18940de9d492",
+      "online": "cb508065270bd0d846aba6a9e676639868b9e9936697452dd26d18940de9d492"
+    },
+    "sc_input": {
+      "full": "cc9432ac425b7310a8bd9e0ec05ddf202e390fac67f3032eb50dcd13963aa672",
+      "online": "cc9432ac425b7310a8bd9e0ec05ddf202e390fac67f3032eb50dcd13963aa672"
+    }
+  },
+  "prefix_dispatch_trace_matches": true,
+  "suffix_dispatch_trace_matches": true
+}
