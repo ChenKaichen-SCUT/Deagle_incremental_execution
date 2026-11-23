@@ -1,0 +1,95 @@
+{
+  "diagnostic_worktrees": {
+    "baseline": {
+      "commit": "e1ea523cbfa40461e7c6fe9df25dc2d0a312b02a",
+      "parent": "a159f9923722646185ba8028610b2eef2618fa72",
+      "tree": "1cb2523c660e698157fcde0d7b17a8c46c1a0bfe",
+      "working_changes": "",
+      "binary_sha256": "a8ed64515ce3e92b2ece06785369393016e847ae028333d750dfe4a33aeb4aaa",
+      "config_inc_sha256": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+    },
+    "enhanced": {
+      "commit": "be7c8780636b8ad2417e9258e4ed4c9366cb2be8",
+      "parent": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "tree": "db37008683046af067c3ef72ef61ee5b7248f090",
+      "working_changes": "",
+      "binary_sha256": "4b7eb552662481b244937b46cfbf85b0362d4339cbe0f82fccbee6cfdc3c299b",
+      "config_inc_sha256": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+    },
+    "baseline_stream": {
+      "commit": "84e2189098152b2632f8b47363ec778544655e72",
+      "parent": "e1ea523cbfa40461e7c6fe9df25dc2d0a312b02a",
+      "tree": "aaae5ee1db1d114e8d7d86f731b4c6aa28b90ec3",
+      "working_changes": "",
+      "binary_sha256": "8fd06c161d2de0f54aabcc3c079557efb5dc1f58b1a4986da78139b6f17f9dbe",
+      "config_inc_sha256": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+    },
+    "enhanced_stream": {
+      "commit": "a2ba2f01fcc8dc83261f614039141017fb846178",
+      "parent": "be7c8780636b8ad2417e9258e4ed4c9366cb2be8",
+      "tree": "82c056f25107bdb48015e1da9a791b08c86f07bf",
+      "working_changes": "",
+      "binary_sha256": "389d2f0138720454d7ed7daaff261f526367608ff4018779a375d30f875adcfb",
+      "config_inc_sha256": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+    },
+    "baseline_model": {
+      "commit": "8919f414ce8aac02b719876527dab3482a701eac",
+      "parent": "a159f9923722646185ba8028610b2eef2618fa72",
+      "tree": "91c028d291af9cb0a23923051e4a5c53124b34e9",
+      "working_changes": "",
+      "binary_sha256": "da6b91e0246793f677beaeb02081ef67f1434cb594b567b253d8eecf7219b0a0",
+      "config_inc_sha256": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c"
+    }
+  },
+  "locked_release_blobs": {
+    "src/goto-symex/symex_start_thread.cpp": {
+      "baseline": "6be63d8c787cb1e37a69ec284484e959c2f9b5bb",
+      "enhanced": "6be63d8c787cb1e37a69ec284484e959c2f9b5bb"
+    },
+    "src/goto-symex/memory_model.cpp": {
+      "baseline": "f74ea6d0cab5b4a92a7aa26ab6af2ff1d87d1056",
+      "enhanced": "1bb61692127cf55355778caf5001738aec5ec2ca"
+    },
+    "src/goto-symex/memory_model_sc.cpp": {
+      "baseline": "266370bbbeac3e39a1aa14e4109264048d7a455c",
+      "enhanced": "e137c3fc52024a08d9d19a319d02765e6504f502"
+    },
+    "minisat-2.2.1/minisat/core/Solver.cc": {
+      "baseline": "2dcef489d40b5368a7a770ec3a2dbf27c4e7a646",
+      "enhanced": "2dcef489d40b5368a7a770ec3a2dbf27c4e7a646"
+    },
+    "minisat-2.2.1/minisat/core/Closure.cc": {
+      "baseline": "6ce5769b44bc67229485a48f5422dfe18358d5ee",
+      "enhanced": "6bc872300c28952792078b73486dff8587fbe8fa"
+    },
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": {
+      "baseline": "9e12d0002dbb6d0d6f6c363a9b866f4e52288562",
+      "enhanced": "64a54ffc7913a6be4e3fee0ea75784e123d66752"
+    },
+    "src/goto-checker/bmc_util.cpp": {
+      "baseline": "13476c39956370dab1ce6ef07c40e2b5c688bc0b",
+      "enhanced": "1b47976069d9ba2a74c74e43ebd7a50cd90037af"
+    },
+    "src/solvers/sat/satcheck_minisat2.cpp": {
+      "baseline": "0b87f95a122328b6ec2d6cd82c564002915b1f87",
+      "enhanced": "0b87f95a122328b6ec2d6cd82c564002915b1f87"
+    },
+    "src/config.inc": {
+      "baseline": "d113bca327e62af34fc0928e8e28b878fc35b395",
+      "enhanced": "d113bca327e62af34fc0928e8e28b878fc35b395"
+    }
+  },
+  "drivers": {
+    "codec": "39898609b4f0265e0a31e452953ff571d58be4d3dfd156ecbf956efd720e9058",
+    "baseline_driver": "843161e63cc6c323df6b28987cc0592f2c5ed0597e981883551a71938853ec4e",
+    "enhanced_driver": "07a5dc821fdb82883f0cc6ca314d09ee27138924ac5db0e167f8ceba7c59d57f"
+  },
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "patches": {
+    "baseline.patch": "265917291d49bff730adfb3ec25301f11aa1bacf6ba46689c983ddf2242e4aec",
+    "enhanced.patch": "7bad7870c49836b2fbc053f5a41474bd0ede4fdaee0343d7a58ad7e571823ebf",
+    "stream-baseline.patch": "b606eef2ba49605ad73c663c53bef46a25237d120048dd4eb9101e287afdd351",
+    "stream-enhanced.patch": "495aa6a5c747e0923d0c3d9ec42c23dfececc4810c0e8d52eaa217ce99bbb780",
+    "structural.patch": "a4bf30098da06c9d05eaf2dc92980313081b8f6d5b239955fd924eea642afcc2"
+  }
+}

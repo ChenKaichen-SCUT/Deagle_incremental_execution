@@ -1,0 +1,3 @@
+Recomputed 540 verification paths, 27870 phase observations, 9 ledgers
+Independent frontend rows 125 old controls 15 maintenance rows 45
+{"certificate_audits": 360, "detailed": 270, "exact_solver_cross_replays": 20, "frontend_controls": 125, "gcc_dispatch_controls": 100, "independent_F0_models": 9, "independent_F1_models": 9, "maintenance_controls": 45, "ordinary": 270, "raw_paths": 39914, "release_old_controls": 15, "retained_error_witnesses": 120, "solver_cross_replays": 20, "verified_incremental_models": 360, "verified_tables": 18}

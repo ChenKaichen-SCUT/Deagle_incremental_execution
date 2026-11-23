@@ -1,0 +1,10 @@
+case,measured_targeted_wall_ms,measured_targeted_cpu_ms,targeted_share_pct,upper_existing_prefix_and_regions,upper_if_only_encode_and_solve_remain,candidate_saving_normal_ms,extra_warmup_normal_ms,break_even_uses
+batch_total,1.358657,1.310063,1.667678,1.01696,31.630357,-259.303027,186.26716,
+threshold_guard,1.380096,1.330774,1.646409,1.01674,24.373984,-257.167146,195.580587,
+fib_updates_8,2.234546,2.157474,0.087276,1.000874,1.036952,-128.937542,534.883216,
+split_counter,0.0,0.0,0.0,1.0,10.928751,-508.274909,284.533777,
+airline_reservations_6,0.0,0.0,0.0,1.0,1.003551,-719.66827,365.827085,
+partial_counter,0.0,0.0,0.0,1.0,8.687786,-499.992399,286.162341,
+batch_retained,1.361189,1.311673,1.613698,1.016402,32.494525,-258.423361,186.91452,
+fib_updates,2.318006,2.233074,1.917025,1.019545,3.423364,-272.932537,294.244653,
+airline_reservations,0.0,0.0,0.0,1.0,1.70588,-510.028388,277.30148,

@@ -1,0 +1,404 @@
+diff --git a/minisat-2.2.1/minisat/core/ClosureSolver.cc b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+index 9e12d000..2f2e6562 100644
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.cc
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+@@ -1,3 +1,4 @@
++#include "../../../src/util/stage8_meter.h"
+ // __SZH_ADD_BEGIN__
+ 
+ #include "ClosureSolver.h"
+@@ -33,6 +34,13 @@ void ClosureSolver::init()
+ 
+ void ClosureSolver::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order)
+ {
++  s8::Scope s8_timer(s8::graph_load);
++    if(s8::state().detail){
++      std::ofstream f(s8::state().out+"/s8-graph.tsv");
++      for(const auto &e:_oc_edge_table) f<<"edge\t"<<e.first.first<<"\t"<<e.first.second<<"\t"<<e.second.second<<"\t"<<e.second.first.x<<"\n";
++      for(const auto &g:_oc_guard_map) f<<"guard\t"<<g.first<<"\t"<<g.second.x<<"\t"<<_oc_location_map.at(g.first)<<"\n";
++      for(const auto &v:_oc_result_order) f<<"order\t"<<v.first<<"\t"<<v.second<<"\n";
++    }
+     oc_edge_table = _oc_edge_table;
+     oc_guard_map = _oc_guard_map;
+     oc_location_map = _oc_location_map;
+@@ -217,6 +225,7 @@ void ClosureSolver::set_graph()
+ 
+ lbool ClosureSolver::search(int nof_conflicts)
+ {
++  s8::Scope s8_timer(s8::search);
+     assert(ok);
+     int         backtrack_level;
+     int         conflictC = 0;
+@@ -236,6 +245,7 @@ lbool ClosureSolver::search(int nof_conflicts)
+         if (confl != CRef_Undef){
+             // CONFLICT
+             conflicts++; conflictC++;
++            if(s8::state().detail && s8::state().first_conflicts<16) s8::conflict(decisionLevel(),ca[confl]);
+             if (decisionLevel() == 0) return l_False;
+ 
+             learnt_clause.clear();
+@@ -315,6 +325,7 @@ lbool ClosureSolver::search(int nof_conflicts)
+                 }
+             }
+ 
++            if(s8::state().detail && s8::state().first_decisions<32) s8::decision(decisionLevel(),next.x);
+             // Increase decision level and enqueue 'next'
+             newDecisionLevel();
+             uncheckedEnqueue(next);
+@@ -340,6 +351,7 @@ static double luby(double y, int x){
+ 
+ lbool ClosureSolver::solve_()
+ {
++  s8::first_search();
+     model.clear();
+     conflict.clear();
+     if (!ok) return l_False;
+@@ -383,6 +395,7 @@ lbool ClosureSolver::solve_()
+     else if (status == l_False && conflict.size() == 0)
+         ok = false;
+ 
++    if(s8::state().detail) std::ofstream(s8::state().out+"/s8-search.tsv")<<starts<<"\t"<<conflicts<<"\t"<<decisions<<"\t"<<propagations<<"\t"<<theory_propagation<<"\t"<<conflict_cycle<<"\n";
+     std::cout << "ClosureSolver finishes with " << conflicts << " conflicts, " << decisions << " decisions, and " << propagations << " propagations. " << theory_propagation << " theory propagations and " << conflict_cycle << " cycles included.\n";
+     std::cout << "Attempts to add co clauses: " << attempt_adding_co << ". Added co clauses: " << added_co_clauses << ". Total co pairs: " << graph.co_pairs.size() << ".\n";
+ 
+diff --git a/minisat-2.2.1/minisat/core/Solver.cc b/minisat-2.2.1/minisat/core/Solver.cc
+index 2dcef489..a7e7eaaf 100644
+--- a/minisat-2.2.1/minisat/core/Solver.cc
++++ b/minisat-2.2.1/minisat/core/Solver.cc
+@@ -1,3 +1,4 @@
++#include "../../../src/util/stage8_meter.h"
+ /***************************************************************************************[Solver.cc]
+ Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+ Copyright (c) 2007-2010, Niklas Sorensson
+@@ -117,6 +118,7 @@ void Solver::addGuard(std::string node, Lit guard) {}
+ //
+ Var Solver::newVar(lbool upol, bool dvar)
+ {
++  s8::variable(nVars(),toInt(upol),dvar);
+     int v = nVars();
+     watches  .init(mkLit(v, false));
+     watches  .init(mkLit(v, true ));
+@@ -136,6 +138,7 @@ Var Solver::newVar(lbool upol, bool dvar)
+ 
+ bool Solver::addClause_(vec<Lit>& ps)
+ {
++  s8::clause(ps);
+     assert(decisionLevel() == 0);
+     if (!ok) return false;
+ 
+diff --git a/src/ansi-c/ansi_c_language.cpp b/src/ansi-c/ansi_c_language.cpp
+index 27c81889..d59b51b8 100644
+--- a/src/ansi-c/ansi_c_language.cpp
++++ b/src/ansi-c/ansi_c_language.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module:
+@@ -40,6 +41,7 @@ bool ansi_c_languaget::preprocess(
+   const std::string &path,
+   std::ostream &outstream)
+ {
++  s8::Scope s8_timer(s8::preprocess);
+   // stdin?
+   if(path.empty())
+     return c_preprocess(instream, outstream, get_message_handler());
+@@ -60,6 +62,7 @@ bool ansi_c_languaget::parse(
+   if(preprocess(instream, path, o_preprocessed))
+     return true;
+ 
++  s8::Scope s8_parse(s8::parse);
+   std::istringstream i_preprocessed(o_preprocessed.str());
+ 
+   // parsing
+diff --git a/src/cbmc/cbmc_parse_options.cpp b/src/cbmc/cbmc_parse_options.cpp
+index ecab0db8..4085cfc2 100644
+--- a/src/cbmc/cbmc_parse_options.cpp
++++ b/src/cbmc/cbmc_parse_options.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module: CBMC Command Line Option Processing
+@@ -430,6 +431,7 @@ void cbmc_parse_optionst::get_command_line_options(optionst &options)
+ /// invoke main modules
+ int cbmc_parse_optionst::doit()
+ {
++  s8::Finish s8_finish;
+   if(cmdline.isset("version"))
+   {
+     std::cout << "4.2.0" << '\n';
+@@ -720,6 +722,7 @@ int cbmc_parse_optionst::get_goto_program(
+   const cmdlinet &cmdline,
+   ui_message_handlert &ui_message_handler)
+ {
++  s8::Scope s8_timer(s8::front);
+   messaget log{ui_message_handler};
+   if(cmdline.args.empty())
+   {
+@@ -803,6 +806,7 @@ bool cbmc_parse_optionst::process_goto_program(
+   const optionst &options,
+   messaget &log)
+ {
++  s8::Scope s8_timer(s8::goto_process);
+   // Remove inline assembler; this needs to happen before
+   // adding the library.
+   remove_asm(goto_model);
+diff --git a/src/goto-checker/bmc_util.cpp b/src/goto-checker/bmc_util.cpp
+index 13476c39..8c01433e 100644
+--- a/src/goto-checker/bmc_util.cpp
++++ b/src/goto-checker/bmc_util.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module: Bounded Model Checking Utilities
+@@ -169,6 +170,7 @@ void convert_symex_target_equation(
+   decision_proceduret &decision_procedure,
+   message_handlert &message_handler)
+ {
++  s8::Scope s8_timer(s8::ssa_convert);
+   messaget msg(message_handler);
+   msg.status() << "converting SSA" << messaget::eom;
+ 
+@@ -427,6 +429,7 @@ std::chrono::duration<double> prepare_property_decider(
+   goto_symex_property_decidert &property_decider,
+   ui_message_handlert &ui_message_handler)
+ {
++  s8::Scope s8_timer(s8::encode_graph);
+   auto solver_start = std::chrono::steady_clock::now();
+ 
+   messaget log(ui_message_handler);
+diff --git a/src/goto-programs/goto_convert_functions.cpp b/src/goto-programs/goto_convert_functions.cpp
+index 5f22f758..53d55464 100644
+--- a/src/goto-programs/goto_convert_functions.cpp
++++ b/src/goto-programs/goto_convert_functions.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /********************************************************************\
+ 
+ Module: Goto Programs with Functions
+@@ -32,6 +33,7 @@ goto_convert_functionst::~goto_convert_functionst()
+ 
+ void goto_convert_functionst::goto_convert(goto_functionst &functions)
+ {
++  s8::Scope s8_timer(s8::goto_convert);
+   // warning! hash-table iterators are not stable
+ 
+   typedef std::list<irep_idt> symbol_listt;
+diff --git a/src/goto-programs/initialize_goto_model.cpp b/src/goto-programs/initialize_goto_model.cpp
+index caf1307d..e1163ff8 100644
+--- a/src/goto-programs/initialize_goto_model.cpp
++++ b/src/goto-programs/initialize_goto_model.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module: Get a Goto Program
+@@ -108,6 +109,7 @@ void initialize_from_source_files(
+ 
+     msg.status() << "Converting" << messaget::eom;
+ 
++    s8::Scope s8_types(s8::typecheck);
+     if(language_files.typecheck(symbol_table))
+     {
+       throw invalid_input_exceptiont("CONVERSION ERROR");
+diff --git a/src/goto-symex/memory_model.cpp b/src/goto-symex/memory_model.cpp
+index f74ea6d0..55f2bb28 100644
+--- a/src/goto-symex/memory_model.cpp
++++ b/src/goto-symex/memory_model.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module: Memory model for partial order concurrency
+@@ -70,12 +71,14 @@ exprt memory_model_baset::zord_pred(irep_idt pred, event_it e1, event_it e2)
+ 
+ void memory_model_baset::read_from(symex_target_equationt &equation)
+ {
++  s8::Scope s8_timer(s8::rf);
+   // We iterate over all the reads, and
+   // make them match at least one
+   // (internal or external) write.
+ 
+   for(const auto &address : address_map)
+   {
++    s8::Scope s8_rf_key(s8::rf_selected,s8::state().detail && s8::chosen(s8::state().rf_keys,id2string(address.first)));
+     std::map<event_it, exprt::operandst> lock_w2unlock_rf;
+     std::map<event_it, exprt::operandst> lock_w2lock_rf;
+     std::set<event_it> lock_w;
+diff --git a/src/goto-symex/memory_model_sc.cpp b/src/goto-symex/memory_model_sc.cpp
+index 266370bb..6eedda50 100644
+--- a/src/goto-symex/memory_model_sc.cpp
++++ b/src/goto-symex/memory_model_sc.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module: Memory model for partial order concurrency
+@@ -17,6 +18,7 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
+ void memory_model_sct::
+ operator()(symex_target_equationt &equation, message_handlert &message_handler)
+ {
++  s8::Scope s8_timer(s8::sc);
+   std::cout << "see the equation!\n";
+   equation.output(std::cout);
+   std::cout << "finish seeing!\n";
+@@ -170,6 +172,7 @@ void memory_model_sct::thread_spawn(
+ void memory_model_sct::program_order(
+   symex_target_equationt &equation)
+ {
++  s8::Scope s8_timer(s8::po);
+   per_thread_mapt per_thread_map;
+   build_per_thread_map(equation, per_thread_map);
+ 
+@@ -191,6 +194,7 @@ void memory_model_sct::program_order(
+       t_it++)
+   {
+     const event_listt &events=t_it->second;
++    s8::Scope s8_po_key(s8::po_selected,s8::state().detail && s8::chosen(s8::state().po_keys,std::to_string(t_it->first)));
+ 
+     // iterate over relevant events in the thread
+ 
+diff --git a/src/goto-symex/partial_order_concurrency.cpp b/src/goto-symex/partial_order_concurrency.cpp
+index e3fa7319..b0ab8812 100644
+--- a/src/goto-symex/partial_order_concurrency.cpp
++++ b/src/goto-symex/partial_order_concurrency.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module: Add constraints to equation encoding partial orders on events
+@@ -75,6 +76,7 @@ void partial_order_concurrencyt::build_event_lists(
+   symex_target_equationt &equation,
+   message_handlert &message_handler)
+ {
++  s8::Scope s8_timer(s8::event_list);
+   add_init_writes(equation);
+ 
+   // a per-thread counter
+diff --git a/src/goto-symex/symex_main.cpp b/src/goto-symex/symex_main.cpp
+index b8c785dc..f9bef696 100644
+--- a/src/goto-symex/symex_main.cpp
++++ b/src/goto-symex/symex_main.cpp
+@@ -1,3 +1,4 @@
++#include "../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module: Symbolic Execution
+@@ -613,6 +614,7 @@ void goto_symext::symex_step(
+   const get_goto_functiont &get_goto_function,
+   statet &state)
+ {
++  s8::Scope s8_dispatch(s8::state().detail && s8::state().dispatch++ < s8::state().prefix ? s8::prefix_dispatch : s8::other_dispatch);
+   // __SZH_ADD_BEGIN__
+   if(try_finding_value_set)
+     overall_value_set.make_union(state.value_set);
+diff --git a/src/util/stage8_meter.h b/src/util/stage8_meter.h
+new file mode 100644
+index 00000000..c64d3df7
+--- /dev/null
++++ b/src/util/stage8_meter.h
+@@ -0,0 +1,102 @@
++// Optional Linux-only measurement for the two fixed diagnostic worktrees.
++#pragma once
++#include <array>
++#include <cstdio>
++#include <cstdlib>
++#include <cstring>
++#include <ctime>
++#include <fstream>
++#include <string>
++#include <unistd.h>
++#include <cstdint>
++
++namespace s8 {
++inline uint64_t ns(clockid_t id) {
++  timespec t{}; clock_gettime(id, &t);
++  return uint64_t(t.tv_sec)*1000000000ULL+t.tv_nsec;
++}
++#define S8_ITEMS(X) X(front) X(preprocess) X(parse) X(typecheck) X(goto_convert) X(goto_process) X(goto_json) X(irep_write) X(irep_read) X(rebind) X(prefix_symbols) X(prefix_dispatch) X(other_dispatch) X(sc) X(event_list) X(rf) X(po) X(rf_selected) X(po_selected) X(rf_replay) X(sc_check) X(sc_thread) X(encode_graph) X(ssa_convert) X(graph_load) X(search) X(lemma_prepare) X(lemma_worker) X(lemma_submit) X(conflict_record) X(observer_equation)
++#define S8_ID(k) k,
++enum Key { S8_ITEMS(S8_ID) total_keys };
++#undef S8_ID
++struct Sample {uint64_t wall=0, cpu=0, calls=0;};
++struct State {
++  std::string out, mode, rf_keys, po_keys;
++  bool detail=false, deep=false, searching=false;
++  unsigned prefix=0, dispatch=0, first_decisions=0, first_conflicts=0;
++  uint64_t born=0, cpu_born=0, inherited_cpu=0, clause_hash=14695981039346656037ULL, var_hash=14695981039346656037ULL;
++  uint64_t clauses=0, vars=0;
++  std::array<Sample,total_keys> sums{};
++  FILE *sequence=nullptr;
++  State() {
++    const char *p=std::getenv("S8_OUT");
++    if(p) out=p;
++    detail=!out.empty(); deep=detail && std::getenv("S8_STREAM");
++    p=std::getenv("S8_MODE"); if(p) mode=p;
++    p=std::getenv("S8_PREFIX"); if(p) prefix=std::strtoul(p,nullptr,10);
++    p=std::getenv("S8_RF"); if(p) rf_keys=p;
++    p=std::getenv("S8_PO"); if(p) po_keys=p;
++    if(detail) {born=ns(CLOCK_MONOTONIC); cpu_born=ns(CLOCK_PROCESS_CPUTIME_ID);}
++  }
++};
++inline State &state() { static State instance; return instance; }
++inline bool only(const char *mode) {return state().mode==mode;}
++inline bool chosen(const std::string &keys,const std::string &k) {return keys.find("|"+k+"|")!=std::string::npos;}
++struct Scope {
++  Key key; bool active; uint64_t w=0,c=0;
++  explicit Scope(Key k,bool enabled=true):key(k),active(enabled && state().detail) {
++    if(active) {w=ns(CLOCK_MONOTONIC);c=ns(CLOCK_PROCESS_CPUTIME_ID);}
++  }
++  ~Scope(){ if(active){auto &s=state().sums[key];s.cpu+=ns(CLOCK_PROCESS_CPUTIME_ID)-c;s.wall+=ns(CLOCK_MONOTONIC)-w;++s.calls;} }
++};
++inline void reset_at_command(const std::string &dir) {
++  if(!state().detail) return;
++  State fresh; fresh.out=dir; state()=fresh;
++}
++inline void flush() {
++  auto &s=state(); if(!s.detail) return;
++  const uint64_t end=ns(CLOCK_MONOTONIC),cpu_end=ns(CLOCK_PROCESS_CPUTIME_ID);
++  static const char *names[]={
++#define S8_NAME(k) #k,
++  S8_ITEMS(S8_NAME)
++#undef S8_NAME
++  };
++  std::ofstream f(s.out+"/s8-native.tsv");
++  f<<"span\t"<<s.born<<"\t"<<end<<"\t"<<s.inherited_cpu+cpu_end-s.cpu_born<<"\n";
++  for(unsigned i=0;i<total_keys;++i) {auto &v=s.sums[i];f<<names[i]<<"\t"<<v.calls<<"\t"<<v.wall<<"\t"<<v.cpu<<"\n";}
++  if(s.sequence) {std::fclose(s.sequence);s.sequence=nullptr;}
++}
++struct Finish {Finish(){(void)state();} ~Finish(){flush();}};
++inline void word(uint64_t &h, uint32_t n) { h=(h ^ n)*1099511628211ULL; }
++inline void raw(uint32_t n) {
++  State &s=state(); if(!s.deep) return;
++  if(!s.sequence) s.sequence=std::fopen((s.out+"/s8-input.bin").c_str(),"wb");
++  if(s.sequence) std::fwrite(&n,sizeof(n),1,s.sequence);
++}
++template<class Literals> inline void clause(const Literals &l) {
++  State &s=state(); if(!s.detail || s.searching) return;
++  ++s.clauses; word(s.clause_hash,l.size()); raw(0xfffffff0U);raw(l.size());
++  for(int i=0;i<l.size();++i){word(s.clause_hash,l[i].x);raw(l[i].x);}
++}
++inline void variable(int number,int polarity,bool decision) {
++  State &s=state(); if(!s.detail || s.searching) return;
++  ++s.vars; for(int x:{number,polarity,static_cast<int>(decision)})word(s.var_hash,x);
++  raw(0xfffffff1U);raw(number);raw(polarity);raw(decision);
++}
++inline void first_search() {
++  State &s=state(); if(!s.detail) return;
++  s.searching=true;
++  std::ofstream f(s.out+"/s8-sat.tsv");
++  f<<s.vars<<"\t"<<s.clauses<<"\t"<<s.var_hash<<"\t"<<s.clause_hash<<"\n";
++}
++inline void decision(int level,int literal) {
++  State &s=state(); if(!s.detail || s.first_decisions>=32)return;
++  ++s.first_decisions;std::ofstream(s.out+"/s8-trace.tsv",std::ios::app)<<"decision\t"<<level<<"\t"<<literal<<"\n";
++}
++template<class Clause> inline void conflict(int level,const Clause &c) {
++  State &s=state(); if(!s.detail || s.first_conflicts>=16)return;
++  ++s.first_conflicts;std::ofstream f(s.out+"/s8-trace.tsv",std::ios::app);f<<"conflict\t"<<level;
++  for(int i=0;i<c.size();++i)f<<"\t"<<c[i].x;
++  f<<"\n";
++}
++}

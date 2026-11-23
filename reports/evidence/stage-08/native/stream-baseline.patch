@@ -1,0 +1,45 @@
+diff --git a/minisat-2.2.1/minisat/core/ClosureSolver.cc b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+index 2f2e6562..100189df 100644
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.cc
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+@@ -34,6 +34,7 @@ void ClosureSolver::init()
+ 
+ void ClosureSolver::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order)
+ {
++  s8::raw(0xfffffff2U);
+   s8::Scope s8_timer(s8::graph_load);
+     if(s8::state().detail){
+       std::ofstream f(s8::state().out+"/s8-graph.tsv");
+@@ -351,6 +352,15 @@ static double luby(double y, int x){
+ 
+ lbool ClosureSolver::solve_()
+ {
++  if(s8::state().detail) {
++    s8::raw(0xfffffff3U);s8::raw(assumptions.size());
++    for(int i=0;i<assumptions.size();++i)s8::raw(assumptions[i].x);
++    std::ofstream config(s8::state().out+"/s8-initial.tsv");
++    config.precision(17);
++    config<<nVars()<<" "<<nClauses()<<" "<<nAssigns()<<" "<<random_seed<<" "<<random_var_freq<<" "<<var_decay<<" "<<clause_decay<<" "
++          <<phase_saving<<" "<<rnd_pol<<" "<<rnd_init_act<<" "<<ccmin_mode<<" "<<luby_restart<<" "<<restart_first<<" "<<restart_inc<<" "
++          <<learntsize_factor<<" "<<learntsize_inc<<" "<<assumptions.size()<<std::endl;
++  }
+   s8::first_search();
+     model.clear();
+     conflict.clear();
+diff --git a/src/solvers/sat/satcheck_minisat2.cpp b/src/solvers/sat/satcheck_minisat2.cpp
+index 0b87f95a..8b7d60b8 100644
+--- a/src/solvers/sat/satcheck_minisat2.cpp
++++ b/src/solvers/sat/satcheck_minisat2.cpp
+@@ -1,3 +1,4 @@
++#include "../../util/stage8_meter.h"
+ /*******************************************************************\
+ 
+ Module:
+@@ -80,6 +81,7 @@ void satcheck_minisat2_baset<T>::set_polarity(literalt a, bool value)
+   try
+   {
+     add_variables();
++    s8::raw(0xfffffff4U); s8::raw(a.var_no()); s8::raw(Minisat::toInt(value ? l_True : l_False));
+     solver->setPolarity(a.var_no(), value ? l_True : l_False);
+   }
+   catch(Minisat::OutOfMemoryException)

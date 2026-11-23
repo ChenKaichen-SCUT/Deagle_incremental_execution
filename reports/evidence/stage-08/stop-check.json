@@ -1,0 +1,27 @@
+{
+  "status_at_utc": "2026-11-23T17:56:47.084857+00:00",
+  "systemd_units": {
+    "stage8-native-build": "inactive",
+    "stage8-old-controls": "inactive",
+    "stage8-pilot": "inactive",
+    "stage8-matrix": "inactive",
+    "stage8-side": "inactive",
+    "stage8-micro": "inactive",
+    "stage8-cross-replay": "inactive",
+    "stage8-setup-controls": "inactive",
+    "stage8-archive": "inactive"
+  },
+  "active_verification_services": [],
+  "formal_paths": 540,
+  "formal_span_seconds": 3043.34146362,
+  "formal_service_seconds": 2667.738483655,
+  "scheduled_candidate_runs": 540,
+  "p0_runs": 540,
+  "protected_retained_candidate_trials": 120,
+  "raw_files": 39914,
+  "unique_contents": 19911,
+  "raw_archive_bytes": 112957087,
+  "raw_archives": 8,
+  "stage8_api_calls": 0,
+  "next_stage_approved": false
+}

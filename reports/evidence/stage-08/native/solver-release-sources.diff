@@ -1,0 +1,182 @@
+--- a/src/goto-symex/memory_model.cpp
++++ b/src/goto-symex/memory_model.cpp
+@@ -10,6 +10,8 @@
+ /// Memory model for partial order concurrency
+ 
+ #include "memory_model.h"
++#include "stage3_observer.h"
++#include "stage4_sc.h"
+ #include <iostream>
+ 
+ #include <util/std_expr.h>
+@@ -77,11 +79,14 @@
+   for(const auto &address : address_map)
+   {
+     std::map<event_it, exprt::operandst> lock_w2unlock_rf;
++    stage4_sct bucket(*this,equation);
++    if(bucket.address(id2string(address.first),address.second.reads,address.second.writes)) continue;
+     std::map<event_it, exprt::operandst> lock_w2lock_rf;
+     std::set<event_it> lock_w;
+ 
+     for(const auto &read_event : address.second.reads)
+     {
++      bucket.begin_read();
+       exprt::operandst rf_choice_symbols;
+       rf_choice_symbols.reserve(address.second.writes.size());
+ 
+@@ -130,6 +135,7 @@
+           "rf-some",
+           read_event->source);
+       }
++      bucket.end_read(read_event);
+     }
+ 
+     // __WP_ADD_BEGIN__ for deadlock
+@@ -280,6 +286,7 @@
+   std::string e_str = id2string(id(e));
+   if(e_str == "")
+     e_str = fill_name(e);
++  stage3::name_event(*e, e_str);
+   return e_str;
+ }
+ 
+--- a/src/goto-symex/memory_model_sc.cpp
++++ b/src/goto-symex/memory_model_sc.cpp
+@@ -10,6 +10,8 @@
+ /// Memory model for partial order concurrency
+ 
+ #include "memory_model_sc.h"
++#include "stage4_sc.h"
++#include "stage4_incremental.h"
+ 
+ #include <util/std_expr.h>
+ #include <iostream>
+@@ -39,6 +41,7 @@
+     write_serialization_external(equation);
+   
+   program_order(equation);
++  stage4::save_cache();
+ 
+   if(!use_deagle && !use_zord)
+     from_read(equation);
+@@ -191,6 +194,8 @@
+       t_it++)
+   {
+     const event_listt &events=t_it->second;
++    stage4_sct fragment(*this,equation);
++    if(fragment.thread(t_it->first,events,apo_set)) continue;
+ 
+     // iterate over relevant events in the thread
+ 
+@@ -224,6 +229,7 @@
+ 
+       previous=*e_it;
+     }
++    fragment.end_thread();
+   }
+ }
+ 
+--- a/minisat-2.2.1/minisat/core/Closure.cc
++++ b/minisat-2.2.1/minisat/core/Closure.cc
+@@ -502,6 +502,7 @@
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle\n";
+ 
++            conflict_origin = "self_cycle";
+             conflict_lv = edge.reason;
+             return true;
+         }
+@@ -511,6 +512,7 @@
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle due to apo\n";
+ 
++            conflict_origin = "atomic_order_cycle";
+             conflict_lv = edge.reason;
+             return true;
+         }
+@@ -557,6 +559,7 @@
+                     if(OC_VERBOSITY >= 1)
+                         std::cout << "race" << from << " " << to << " should be set false but already true\n";
+ 
++                    conflict_origin = "race";
+                     conflict_lv = conflict_reason;
+                     return true;
+                 }
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.cc
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+@@ -340,6 +340,12 @@
+ 
+ lbool ClosureSolver::solve_()
+ {
++    if(before_first_search)
++    {
++        auto prepare = std::move(before_first_search);
++        before_first_search = nullptr;
++        prepare();
++    }
+     model.clear();
+     conflict.clear();
+     if (!ok) return l_False;
+@@ -480,6 +486,7 @@
+     if(confl == CRef_Undef)
+     {
+         bool cycle = false;
++        graph.conflict_origin = "unclassified";
+ 
+         for(auto& edge: edges_to_add)
+         {
+@@ -523,6 +530,8 @@
+             for (auto l: lv)
+                 minisat_lv.push(~l);
+ 
++            if(observe_order_conflict)
++                observe_order_conflict(graph.conflict_origin, minisat_lv);
+             confl = ca.alloc(minisat_lv, true);
+         }
+         else if(!literals_to_assign.empty())//add literals propagated by unit edge
+--- a/src/goto-checker/bmc_util.cpp
++++ b/src/goto-checker/bmc_util.cpp
+@@ -10,6 +10,8 @@
+ /// Bounded Model Checking Utilities
+ 
+ #include "bmc_util.h"
++#include "theory_lemma.h"
++#include <goto-symex/stage3_observer.h>
+ 
+ #include <iostream>
+ 
+@@ -396,7 +398,9 @@
+       memory_model->enable_deadlock = true;
+     // __WP_ADD_END__
+ 
++    const auto model_start = stage3::clockt::now();
+     (*memory_model)(equation, ui_message_handler);
++    stage3::timing("event_constraints", model_start, stage3::clockt::now());
+   }
+ 
+   messaget log(ui_message_handler);
+@@ -503,6 +507,7 @@
+         oc_location_map.insert(std::make_pair(name, location));
+     }
+ 
++    prepare_order_lemma_cache(deagle_closure_solver, oc_edge_table, oc_guard_map, oc_location_map);
+     deagle_closure_solver.save_raw_graph(oc_edge_table, oc_guard_map, oc_location_map, equation.oc_result_order);
+   }
+   else if(equation.use_deagle_icd)
+@@ -562,6 +567,7 @@
+   // __SZH_ADD_END__
+ 
+   auto solver_stop = std::chrono::steady_clock::now();
++  stage3::timing("cnf_and_graph", solver_start, solver_stop);
+   return std::chrono::duration<double>(solver_stop - solver_start);
+ }
+ 
+@@ -591,6 +597,8 @@
+   decision_proceduret::resultt dec_result = property_decider.solve();
+ 
+   auto const sat_solver_stop = std::chrono::steady_clock::now();
++  stage3::timing("solve", sat_solver_start, sat_solver_stop);
++  stage3::timing("goal_conversion", solver_start, sat_solver_start);
+   std::chrono::duration<double> sat_solver_runtime =
+     std::chrono::duration<double>(sat_solver_stop - sat_solver_start);
+   log.status() << "Runtime Solver: " << sat_solver_runtime.count() << "s"

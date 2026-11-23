@@ -1,0 +1,735 @@
+{
+  "original_old_controls": [
+    {
+      "mode": "baseline",
+      "solver_ms": {
+        "median": 7258.53,
+        "min": 7230.44,
+        "max": 7338.15,
+        "q1": 7255.71,
+        "q3": 7328.32,
+        "mean": 7282.23,
+        "n": 5,
+        "outliers": []
+      },
+      "trace_steps": {
+        "median": 516,
+        "min": 516,
+        "max": 516,
+        "q1": 516.0,
+        "q3": 516.0,
+        "mean": 516.0,
+        "n": 5,
+        "outliers": []
+      },
+      "decisions": {
+        "median": 87181,
+        "min": 87181,
+        "max": 87181,
+        "q1": 87181.0,
+        "q3": 87181.0,
+        "mean": 87181.0,
+        "n": 5,
+        "outliers": []
+      },
+      "conflicts": {
+        "median": 42244,
+        "min": 42244,
+        "max": 42244,
+        "q1": 42244.0,
+        "q3": 42244.0,
+        "mean": 42244.0,
+        "n": 5,
+        "outliers": []
+      },
+      "propagations": {
+        "median": 58423777,
+        "min": 58423777,
+        "max": 58423777,
+        "q1": 58423777.0,
+        "q3": 58423777.0,
+        "mean": 58423777.0,
+        "n": 5,
+        "outliers": []
+      },
+      "theory_propagations": {
+        "median": 307192,
+        "min": 307192,
+        "max": 307192,
+        "q1": 307192.0,
+        "q3": 307192.0,
+        "mean": 307192.0,
+        "n": 5,
+        "outliers": []
+      },
+      "theory_cycles": {
+        "median": 2782,
+        "min": 2782,
+        "max": 2782,
+        "q1": 2782.0,
+        "q3": 2782.0,
+        "mean": 2782.0,
+        "n": 5,
+        "outliers": []
+      },
+      "model_variables": {
+        "median": 199090,
+        "min": 199090,
+        "max": 199090,
+        "q1": 199090.0,
+        "q3": 199090.0,
+        "mean": 199090.0,
+        "n": 5,
+        "outliers": []
+      },
+      "model_clauses": {
+        "median": 880094,
+        "min": 880094,
+        "max": 880094,
+        "q1": 880094.0,
+        "q3": 880094.0,
+        "mean": 880094.0,
+        "n": 5,
+        "outliers": []
+      }
+    },
+    {
+      "mode": "development",
+      "solver_ms": {
+        "median": 235.675,
+        "min": 231.572,
+        "max": 237.939,
+        "q1": 232.38,
+        "q3": 237.447,
+        "mean": 235.0026,
+        "n": 5,
+        "outliers": []
+      },
+      "trace_steps": {
+        "median": 516,
+        "min": 516,
+        "max": 516,
+        "q1": 516.0,
+        "q3": 516.0,
+        "mean": 516.0,
+        "n": 5,
+        "outliers": []
+      },
+      "decisions": {
+        "median": 31046,
+        "min": 31046,
+        "max": 31046,
+        "q1": 31046.0,
+        "q3": 31046.0,
+        "mean": 31046.0,
+        "n": 5,
+        "outliers": []
+      },
+      "conflicts": {
+        "median": 550,
+        "min": 550,
+        "max": 550,
+        "q1": 550.0,
+        "q3": 550.0,
+        "mean": 550.0,
+        "n": 5,
+        "outliers": []
+      },
+      "propagations": {
+        "median": 2209612,
+        "min": 2209612,
+        "max": 2209612,
+        "q1": 2209612.0,
+        "q3": 2209612.0,
+        "mean": 2209612.0,
+        "n": 5,
+        "outliers": []
+      },
+      "theory_propagations": {
+        "median": 7685,
+        "min": 7685,
+        "max": 7685,
+        "q1": 7685.0,
+        "q3": 7685.0,
+        "mean": 7685.0,
+        "n": 5,
+        "outliers": []
+      },
+      "theory_cycles": {
+        "median": 84,
+        "min": 84,
+        "max": 84,
+        "q1": 84.0,
+        "q3": 84.0,
+        "mean": 84.0,
+        "n": 5,
+        "outliers": []
+      },
+      "model_variables": {
+        "median": 199090,
+        "min": 199090,
+        "max": 199090,
+        "q1": 199090.0,
+        "q3": 199090.0,
+        "mean": 199090.0,
+        "n": 5,
+        "outliers": []
+      },
+      "model_clauses": {
+        "median": 880094,
+        "min": 880094,
+        "max": 880094,
+        "q1": 880094.0,
+        "q3": 880094.0,
+        "mean": 880094.0,
+        "n": 5,
+        "outliers": []
+      }
+    },
+    {
+      "mode": "development-observed",
+      "solver_ms": {
+        "median": 235.019,
+        "min": 229.079,
+        "max": 242.682,
+        "q1": 233.95,
+        "q3": 238.025,
+        "mean": 235.751,
+        "n": 5,
+        "outliers": []
+      },
+      "trace_steps": {
+        "median": 516,
+        "min": 516,
+        "max": 516,
+        "q1": 516.0,
+        "q3": 516.0,
+        "mean": 516.0,
+        "n": 5,
+        "outliers": []
+      },
+      "decisions": {
+        "median": 31046,
+        "min": 31046,
+        "max": 31046,
+        "q1": 31046.0,
+        "q3": 31046.0,
+        "mean": 31046.0,
+        "n": 5,
+        "outliers": []
+      },
+      "conflicts": {
+        "median": 550,
+        "min": 550,
+        "max": 550,
+        "q1": 550.0,
+        "q3": 550.0,
+        "mean": 550.0,
+        "n": 5,
+        "outliers": []
+      },
+      "propagations": {
+        "median": 2209612,
+        "min": 2209612,
+        "max": 2209612,
+        "q1": 2209612.0,
+        "q3": 2209612.0,
+        "mean": 2209612.0,
+        "n": 5,
+        "outliers": []
+      },
+      "theory_propagations": {
+        "median": 7685,
+        "min": 7685,
+        "max": 7685,
+        "q1": 7685.0,
+        "q3": 7685.0,
+        "mean": 7685.0,
+        "n": 5,
+        "outliers": []
+      },
+      "theory_cycles": {
+        "median": 84,
+        "min": 84,
+        "max": 84,
+        "q1": 84.0,
+        "q3": 84.0,
+        "mean": 84.0,
+        "n": 5,
+        "outliers": []
+      },
+      "model_variables": {
+        "median": 199090,
+        "min": 199090,
+        "max": 199090,
+        "q1": 199090.0,
+        "q3": 199090.0,
+        "mean": 199090.0,
+        "n": 5,
+        "outliers": []
+      },
+      "model_clauses": {
+        "median": 880094,
+        "min": 880094,
+        "max": 880094,
+        "q1": 880094.0,
+        "q3": 880094.0,
+        "mean": 880094.0,
+        "n": 5,
+        "outliers": []
+      }
+    }
+  ],
+  "old_inputs": {
+    "cnf_and_variables": {
+      "sha256": [
+        "120a5cca3697f044e2711c4d2e69f67541743474be1680fb6f4dfc47d0867228",
+        "d232d80fc7e6e1b33f85aabbb9bc723487da8404d69f9ee33755d930c788f996"
+      ],
+      "bytes": [
+        21312484,
+        21312484
+      ],
+      "equal": false,
+      "counts": [
+        {
+          "variable": 199091,
+          "clause": 910797
+        },
+        {
+          "variable": 199091,
+          "clause": 910797
+        }
+      ],
+      "variable_stream_sha256": [
+        "7780e87c36e4a45c2e4bfc4733f9e5c7c285e0c3b565d8350293947c4904c47b",
+        "7780e87c36e4a45c2e4bfc4733f9e5c7c285e0c3b565d8350293947c4904c47b"
+      ],
+      "first": {
+        "record_index_zero_based": 1106445,
+        "clause_counts_so_far": [
+          908095,
+          908096
+        ],
+        "left": [
+          "variable",
+          [
+            198350,
+            2,
+            1
+          ]
+        ],
+        "right": [
+          "clause",
+          [
+            396635,
+            396643,
+            396699
+          ]
+        ]
+      },
+      "signed_clauses": {
+        "different_sequence_positions": 2537,
+        "first": {
+          "index_zero_based": 908095,
+          "left": [
+            396635,
+            396645,
+            396895
+          ],
+          "right": [
+            396635,
+            396643,
+            396699
+          ]
+        },
+        "same_multiset_ordered_literals": false,
+        "same_multiset_ignoring_literal_order": false,
+        "unmatched_clauses_each_side_ignoring_literal_order": [
+          2533,
+          2533
+        ]
+      }
+    },
+    "graph_and_guard_order": {
+      "length": [
+        997,
+        997
+      ],
+      "same_order": true,
+      "same_multiset": true,
+      "first_index": null,
+      "example": null
+    },
+    "early_search": {
+      "length": [
+        48,
+        48
+      ],
+      "same_order": false,
+      "same_multiset": false,
+      "first_index": 5,
+      "example": [
+        "decision\t5\t397977",
+        "decision\t5\t398047"
+      ]
+    }
+  },
+  "printed_old_equation": {
+    "blocks": [
+      821,
+      821
+    ],
+    "row_multiset_identical": true,
+    "different_positions": 48,
+    "only_tls_initializers_differ": false,
+    "first": {
+      "position_zero_based": 57,
+      "original": "Thread 0 file <builtin-library-pthread_create> line 48 function pthread_create\nASSIGNMENT (HIDDEN)\npthread_create::thread!1@0#1 = address_of(main::1::agents!0@1[0])\nGuard: true",
+      "enhanced": "Thread 0 file <builtin-library-pthread_create> line 48 function pthread_create\nASSIGNMENT (HIDDEN)\npthread_create::arg!1@0#1 = NULL\nGuard: true"
+    }
+  },
+  "fibonacci_preimport": {
+    "cnf_and_variables": {
+      "sha256": [
+        "776955e8f945288749970766f60788096ad373b37524a5ea275b163b08288beb",
+        "776955e8f945288749970766f60788096ad373b37524a5ea275b163b08288beb"
+      ],
+      "bytes": [
+        1157252,
+        1157252
+      ],
+      "equal": true,
+      "counts": [
+        {
+          "variable": 12058,
+          "clause": 48329
+        },
+        {
+          "variable": 12058,
+          "clause": 48329
+        }
+      ],
+      "variable_stream_sha256": [
+        "57804b69a395e65d7a33b78a60c72ee64ac3c254265980a2a4f8f2a9d4f6fed3",
+        "57804b69a395e65d7a33b78a60c72ee64ac3c254265980a2a4f8f2a9d4f6fed3"
+      ],
+      "first": null,
+      "signed_clauses": {
+        "different_sequence_positions": 0,
+        "first": null,
+        "same_multiset_ordered_literals": true,
+        "same_multiset_ignoring_literal_order": true,
+        "unmatched_clauses_each_side_ignoring_literal_order": [
+          0,
+          0
+        ]
+      }
+    },
+    "graph_and_guard_order": {
+      "length": [
+        422,
+        422
+      ],
+      "same_order": true,
+      "same_multiset": true,
+      "first_index": null,
+      "example": null
+    },
+    "early_search": {
+      "length": [
+        48,
+        48
+      ],
+      "same_order": true,
+      "same_multiset": true,
+      "first_index": null,
+      "example": null
+    }
+  },
+  "cross_controls": [
+    {
+      "input": "baseline",
+      "solver": "baseline",
+      "matching_searches": 5,
+      "solver_ms": {
+        "median": 7416.377794,
+        "min": 7246.049986,
+        "max": 7511.263594,
+        "q1": 7319.168999,
+        "q3": 7494.740748,
+        "mean": 7397.520224,
+        "n": 5,
+        "outliers": []
+      },
+      "conflicts": {
+        "median": 42244,
+        "min": 42244,
+        "max": 42244,
+        "q1": 42244.0,
+        "q3": 42244.0,
+        "mean": 42244.0,
+        "n": 5,
+        "outliers": []
+      },
+      "decisions": {
+        "median": 87181,
+        "min": 87181,
+        "max": 87181,
+        "q1": 87181.0,
+        "q3": 87181.0,
+        "mean": 87181.0,
+        "n": 5,
+        "outliers": []
+      },
+      "propagations": {
+        "median": 58423777,
+        "min": 58423777,
+        "max": 58423777,
+        "q1": 58423777.0,
+        "q3": 58423777.0,
+        "mean": 58423777.0,
+        "n": 5,
+        "outliers": []
+      }
+    },
+    {
+      "input": "baseline",
+      "solver": "enhanced",
+      "matching_searches": 5,
+      "solver_ms": {
+        "median": 7509.423667,
+        "min": 7305.12834,
+        "max": 7547.051411,
+        "q1": 7416.319303,
+        "q3": 7511.257363,
+        "mean": 7457.836017,
+        "n": 5,
+        "outliers": []
+      },
+      "conflicts": {
+        "median": 42244,
+        "min": 42244,
+        "max": 42244,
+        "q1": 42244.0,
+        "q3": 42244.0,
+        "mean": 42244.0,
+        "n": 5,
+        "outliers": []
+      },
+      "decisions": {
+        "median": 87181,
+        "min": 87181,
+        "max": 87181,
+        "q1": 87181.0,
+        "q3": 87181.0,
+        "mean": 87181.0,
+        "n": 5,
+        "outliers": []
+      },
+      "propagations": {
+        "median": 58423777,
+        "min": 58423777,
+        "max": 58423777,
+        "q1": 58423777.0,
+        "q3": 58423777.0,
+        "mean": 58423777.0,
+        "n": 5,
+        "outliers": []
+      }
+    },
+    {
+      "input": "enhanced",
+      "solver": "baseline",
+      "matching_searches": 5,
+      "solver_ms": {
+        "median": 229.291848,
+        "min": 223.248702,
+        "max": 239.208908,
+        "q1": 228.207708,
+        "q3": 231.97684,
+        "mean": 230.386801,
+        "n": 5,
+        "outliers": [
+          239.208908
+        ]
+      },
+      "conflicts": {
+        "median": 550,
+        "min": 550,
+        "max": 550,
+        "q1": 550.0,
+        "q3": 550.0,
+        "mean": 550.0,
+        "n": 5,
+        "outliers": []
+      },
+      "decisions": {
+        "median": 31046,
+        "min": 31046,
+        "max": 31046,
+        "q1": 31046.0,
+        "q3": 31046.0,
+        "mean": 31046.0,
+        "n": 5,
+        "outliers": []
+      },
+      "propagations": {
+        "median": 2209612,
+        "min": 2209612,
+        "max": 2209612,
+        "q1": 2209612.0,
+        "q3": 2209612.0,
+        "mean": 2209612.0,
+        "n": 5,
+        "outliers": []
+      }
+    },
+    {
+      "input": "enhanced",
+      "solver": "enhanced",
+      "matching_searches": 5,
+      "solver_ms": {
+        "median": 231.141734,
+        "min": 225.306191,
+        "max": 241.284539,
+        "q1": 228.700764,
+        "q3": 231.935339,
+        "mean": 231.673713,
+        "n": 5,
+        "outliers": [
+          241.284539
+        ]
+      },
+      "conflicts": {
+        "median": 550,
+        "min": 550,
+        "max": 550,
+        "q1": 550.0,
+        "q3": 550.0,
+        "mean": 550.0,
+        "n": 5,
+        "outliers": []
+      },
+      "decisions": {
+        "median": 31046,
+        "min": 31046,
+        "max": 31046,
+        "q1": 31046.0,
+        "q3": 31046.0,
+        "mean": 31046.0,
+        "n": 5,
+        "outliers": []
+      },
+      "propagations": {
+        "median": 2209612,
+        "min": 2209612,
+        "max": 2209612,
+        "q1": 2209612.0,
+        "q3": 2209612.0,
+        "mean": 2209612.0,
+        "n": 5,
+        "outliers": []
+      }
+    }
+  ],
+  "replayed_inputs": {
+    "cnf_and_variables": {
+      "sha256": [
+        "90d040412da1d09c65088ee7358ecdeabbf3c3d4f4ed4b836533059df5bb682c",
+        "72491386f4cd972e102927a66997bbe0b22115874525ef7a58db2cfab84229d4"
+      ],
+      "bytes": [
+        21312496,
+        21312496
+      ],
+      "equal": false,
+      "counts": [
+        {
+          "variable": 199091,
+          "clause": 910797,
+          "graph": 1,
+          "assumptions": 1
+        },
+        {
+          "variable": 199091,
+          "clause": 910797,
+          "graph": 1,
+          "assumptions": 1
+        }
+      ],
+      "variable_stream_sha256": [
+        "7780e87c36e4a45c2e4bfc4733f9e5c7c285e0c3b565d8350293947c4904c47b",
+        "7780e87c36e4a45c2e4bfc4733f9e5c7c285e0c3b565d8350293947c4904c47b"
+      ],
+      "first": {
+        "record_index_zero_based": 1106446,
+        "clause_counts_so_far": [
+          908095,
+          908096
+        ],
+        "left": [
+          "variable",
+          [
+            198350,
+            2,
+            1
+          ]
+        ],
+        "right": [
+          "clause",
+          [
+            396635,
+            396643,
+            396699
+          ]
+        ]
+      },
+      "signed_clauses": {
+        "different_sequence_positions": 2537,
+        "first": {
+          "index_zero_based": 908095,
+          "left": [
+            396635,
+            396645,
+            396895
+          ],
+          "right": [
+            396635,
+            396643,
+            396699
+          ]
+        },
+        "same_multiset_ordered_literals": false,
+        "same_multiset_ignoring_literal_order": false,
+        "unmatched_clauses_each_side_ignoring_literal_order": [
+          2533,
+          2533
+        ]
+      }
+    },
+    "graph_and_guard_order": {
+      "length": [
+        997,
+        997
+      ],
+      "same_order": true,
+      "same_multiset": true,
+      "first_index": null,
+      "example": null
+    },
+    "early_search": {
+      "length": [
+        48,
+        48
+      ],
+      "same_order": false,
+      "same_multiset": false,
+      "first_index": 5,
+      "example": [
+        "decision\t5\t397977",
+        "decision\t5\t398047"
+      ]
+    }
+  }
+}

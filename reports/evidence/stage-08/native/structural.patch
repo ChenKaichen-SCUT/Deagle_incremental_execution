@@ -1,0 +1,221 @@
+diff --git a/src/goto-checker/multi_path_symex_only_checker.cpp b/src/goto-checker/multi_path_symex_only_checker.cpp
+index b9d41870..4956de2b 100644
+--- a/src/goto-checker/multi_path_symex_only_checker.cpp
++++ b/src/goto-checker/multi_path_symex_only_checker.cpp
+@@ -1,3 +1,4 @@
++#include "stage8_full_model.h"
+ /*******************************************************************\
+ 
+ Module: Goto Checker using Multi-Path Symbolic Execution Only
+@@ -131,6 +132,7 @@ void multi_path_symex_only_checkert::generate_equation()
+                << messaget::eom;
+ 
+   postprocess_equation(symex, equation, options, ns, ui_message_handler);
++  if(!stage8_full_model::directory.empty()) stage8_full_model::equation("full_model",equation);
+ }
+ 
+ void multi_path_symex_only_checkert::update_properties(
+diff --git a/src/goto-checker/stage8_full_model.h b/src/goto-checker/stage8_full_model.h
+new file mode 100644
+index 00000000..29ab775a
+--- /dev/null
++++ b/src/goto-checker/stage8_full_model.h
+@@ -0,0 +1,198 @@
++#include <util/json.h>
++#include <goto-symex/symex_target_equation.h>
++#include <fstream>
++#include <cstdio>
++#include <cstdlib>
++#include <unordered_map>
++namespace stage8_full_model {
++const std::string directory=std::getenv("S8_MODEL_OUT")?std::getenv("S8_MODEL_OUT"):"";
++json_numbert number(std::size_t value)
++{
++  return json_numbert(std::to_string(value));
++}
++
++jsont boolean(bool value)
++{
++  if(value)
++    return json_truet();
++  return json_falset();
++}
++
++void save(const std::string &name, const jsont &value)
++{
++  const std::string path = std::string(directory) + "/" + name + ".json";
++  const std::string temporary = path + ".tmp";
++  std::ofstream out(temporary);
++  out << value << '\n';
++  out.close();
++  if(!out || std::rename(temporary.c_str(), path.c_str()) != 0)
++    throw std::runtime_error("Cannot publish diagnostic " + name);
++}
++
++// All integer links in a pool are local to a single document.
++// Type, operators and operands are retained. Source locations are separate.
++class irep_poolt
++{
++  std::unordered_map<irept, std::size_t, irep_full_hash, irep_full_eq> ids;
++public:
++  json_arrayt rows;
++  jsont ref(const irept &value)
++  {
++    if(value.is_nil())
++      return json_nullt();
++    const auto found = ids.find(value);
++    if(found != ids.end())
++      return number(found->second);
++    json_objectt node;
++    node["id"] = json_stringt(value.id());
++    json_arrayt operands;
++    for(const auto &operand : value.get_sub())
++      operands.push_back(ref(operand));
++    if(!operands.empty())
++      node["sub"] = std::move(operands);
++    json_objectt named;
++    for(const auto &item : value.get_named_sub())
++      named[id2string(item.first)] = ref(item.second);
++    if(named.size() != 0)
++      node["named"] = std::move(named);
++    const std::size_t index = rows.size();
++    ids.emplace(value, index);
++    rows.push_back(std::move(node));
++    return number(index);
++  }
++};
++
++json_objectt place(const symex_targett::sourcet &source)
++{
++  json_objectt loc;
++  loc["function"] = json_stringt(source.function_id);
++  loc["pc"] = number(source.pc->location_number);
++  return loc;
++}
++
++const char *step_kind(goto_trace_stept::typet type)
++{
++  using T = goto_trace_stept::typet;
++  switch(type)
++  {
++  case T::NONE: return "none";
++  case T::ASSIGNMENT: return "assignment";
++  case T::ASSUME: return "assume";
++  case T::ASSERT: return "assert";
++  case T::GOTO: return "goto";
++  case T::LOCATION: return "location";
++  case T::INPUT: return "input";
++  case T::OUTPUT: return "output";
++  case T::DECL: return "decl";
++  case T::DEAD: return "dead";
++  case T::FUNCTION_CALL: return "function_call";
++  case T::FUNCTION_RETURN: return "function_return";
++  case T::CONSTRAINT: return "constraint";
++  case T::SHARED_READ: return "read";
++  case T::SHARED_WRITE: return "write";
++  case T::SPAWN: return "spawn";
++  case T::MEMORY_BARRIER: return "fence";
++  case T::ATOMIC_BEGIN: return "atomic_begin";
++  case T::ATOMIC_END: return "atomic_end";
++  }
++  throw std::logic_error("Unrecognized SSA step");
++}
++void equation(const char *name, const symex_target_equationt &model)
++{
++
++  irep_poolt pool;
++  json_arrayt rows;
++  const SSA_stept *previous = nullptr;
++  std::size_t source_group = 0;
++  for(const auto &s : model.SSA_steps)
++  {
++    json_objectt row = place(s.source);
++    // Mirror the pinned SC same_source predicate. Only group membership among
++    // shared accesses is exported as a cross-version semantic dependency.
++    if(previous == nullptr || previous->source.function_id != s.source.function_id ||
++       previous->source.thread_nr != s.source.thread_nr ||
++       previous->source.pc->source_location() != s.source.pc->source_location())
++      ++source_group;
++    previous = &s;
++    row["local_source_group"] = number(source_group);
++    row["kind"] = json_stringt(step_kind(s.type));
++    row["thread"] = number(s.source.thread_nr);
++    row["atomic_section"] = number(s.atomic_section_id);
++    row["guard"] = pool.ref(s.guard);
++    row["condition"] = pool.ref(s.cond_expr);
++    row["lhs"] = pool.ref(s.ssa_lhs);
++    row["rhs"] = pool.ref(s.ssa_rhs);
++    row["full_lhs"] = pool.ref(s.ssa_full_lhs);
++    row["original_lhs"] = pool.ref(s.original_full_lhs);
++    row["assignment_type"] = number(static_cast<unsigned>(s.assignment_type));
++    row["hidden"] = boolean(s.hidden);
++    row["ignored"] = boolean(s.ignore);
++    if(!s.comment.empty())
++      row["comment"] = json_stringt(s.comment);
++    if(s.is_assert())
++      row["property"] = json_stringt(s.get_property_id());
++    if(!s.called_function.empty())
++      row["called"] = json_stringt(s.called_function);
++    if(!s.ssa_function_arguments.empty())
++    {
++      json_arrayt args;
++      for(const auto &arg : s.ssa_function_arguments)
++        args.push_back(pool.ref(arg));
++      row["arguments"] = std::move(args);
++    }
++    if(s.type == goto_trace_stept::typet::INPUT || s.is_output())
++    {
++      json_arrayt args;
++      for(const auto &arg : s.io_args)
++        args.push_back(pool.ref(arg));
++      row["io_args"] = std::move(args);
++      row["io_id"] = json_stringt(s.io_id);
++      row["format"] = json_stringt(s.format_string);
++    }
++    if(s.ssa_lhs.is_not_nil())
++    {
++      row["local_symbol"] = json_stringt(s.ssa_lhs.get_identifier());
++      row["object"] = json_stringt(s.ssa_lhs.get_original_name());
++      row["address_l1"] = json_stringt(s.ssa_lhs.get_l1_object_identifier());
++    }
++    rows.push_back(std::move(row));
++  }
++  json_arrayt edges, births, guards;
++  for(const auto &edge : model.oc_edges)
++  {
++    json_objectt row;
++    row["kind"] = json_stringt(edge.kind);
++    row["from"] = json_stringt(edge.e1_str);
++    row["to"] = json_stringt(edge.e2_str);
++    row["guard"] = pool.ref(edge.expr);
++    edges.push_back(std::move(row));
++  }
++  for(const auto &b : model.witness_spawn_events)
++  {
++    auto row = place(b.call_site);
++    row["parent"] = number(b.creator_thread);
++    row["child"] = number(b.child_thread);
++    row["guard"] = pool.ref(b.guard);
++    births.push_back(std::move(row));
++  }
++  for(const auto &it : model.oc_guard_map)
++  {
++    json_objectt row;
++    row["local_symbol"] = json_stringt(it->ssa_lhs.get_identifier());
++    row["guard"] = pool.ref(it->guard);
++    row["solver_line"] = json_stringt(it->source.pc->source_location().get_line());
++    guards.push_back(std::move(row));
++  }
++  json_objectt out;
++  out["schema"] = number(1);
++  out["phase"] = json_stringt(name);
++  out["steps"] = std::move(rows);
++  out["oc_edges"] = std::move(edges);
++  out["oc_guards"] = std::move(guards);
++  out["thread_births"] = std::move(births);
++  out["ireps"] = std::move(pool.rows);
++  save(name, out);
++
++}
++
++}

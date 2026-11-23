@@ -1,0 +1,312 @@
+{
+  "utc": "2026-11-23T17:12:17.679929+00:00",
+  "project_stage7": "247894bf77904bb34e547b5a636b8afe8527add4",
+  "working_parent": "247894bf77904bb34e547b5a636b8afe8527add4",
+  "worktree_branch": "stage-08-diagnostics",
+  "originals": {
+    "baseline": {
+      "commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "source_tree": "53d7e7c29471d96efbff747e7b4be1063f2a658d",
+      "sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+      "dirty": ""
+    },
+    "enhanced": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "source_tree": "9cc773689bd88f68e6f087f898dcbdaa23843f7e",
+      "sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "dirty": ""
+    }
+  },
+  "frozen": {
+    "airline_reservations": {
+      "files": {
+        "candidate/program.c": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+        "gamma.json": "bb21d4c6902368c39d226faa6128a057aa89122df665f1e5eacba459e92713f1",
+        "harness.c": "634a97aa1c8e2e327b2357ac1169c2f727351b5486e72a749b3abacc09c60ee8",
+        "old/program.c": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+        "patch.diff": "68b02b3904285624bf0d56d4859e5e9683769d45b199961f0204a72bec101407",
+        "phi.json": "14284f2bdad4aa5b6a8d9f153c5893ea2bd4c86de0bab77e38e08a5dae80147c",
+        "task.yaml": "5ed5b0bf46b759108b7726af100f15dc25452213b3b203634483bfd3d399adcc"
+      },
+      "old_cex_sha256": "40c1dbaa58881ad8a23bfd9971f292cea24e5e0baa22086983795e4154ba9cfa",
+      "unwind": 6,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "6",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      }
+    },
+    "airline_reservations_6": {
+      "files": {
+        "candidate/program.c": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+        "gamma.json": "bc631cb9642b4166f90511c64691c38bec69aeb804a1c0bdb93d2e316b255785",
+        "harness.c": "44f40b42442d83b54bea1f4e3420298ad2314d4698b726421fbcf9d81e061fa2",
+        "old/program.c": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+        "patch.diff": "68b02b3904285624bf0d56d4859e5e9683769d45b199961f0204a72bec101407",
+        "phi.json": "ae6fc0ba25f346cf0f69f9d92e6c223a37ff6aed564c27d6455416b29054ea93",
+        "task.yaml": "ebba08aadccd9070dda682e8e508070c1b7e020a421742293cf3f73a5f0b9411"
+      },
+      "old_cex_sha256": "82f1eda18cf73390b592495a36c43087d5981808b4a43565c114d3b273f4466c",
+      "unwind": 8,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      }
+    },
+    "batch_retained": {
+      "files": {
+        "candidate/program.c": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+        "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+        "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+        "old/program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+        "patch.diff": "ab7476f9d7d8b60789808d66f36ecd430b97d5be4e772f8d98ce717fed1e1f7b",
+        "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+        "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61"
+      },
+      "old_cex_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+      "unwind": 4,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "timeout_seconds": 300,
+        "memory_bytes": 21474836480
+      }
+    },
+    "batch_total": {
+      "files": {
+        "candidate/program.c": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+        "gamma.json": "9e77e744f9b50d7ae3d7eb0d729775544e8e128a7c7cc66ef2970015d515dfd4",
+        "harness.c": "e25d24bc2d8de1a3f370603e69f6854aab1a7e47839ef8ae629aba6d78db2716",
+        "old/program.c": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+        "patch.diff": "3fba8f5ec5f380ebaf7b9735edbd39ffc43f6e4d8a76c99e19640df281477e2a",
+        "phi.json": "da06e085be18b387c91bbad0383916255e8af54888f7194282e2073096564e6a",
+        "task.yaml": "bbda5f4036e52130262613f1ecb384639274c11e69aa5d1e67191bb6e2887d61"
+      },
+      "old_cex_sha256": "8365cfbb2831ec6950628824138afea8114f7d450d21e9493aa82513b3e67a19",
+      "unwind": 4,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "timeout_seconds": 300,
+        "memory_bytes": 21474836480
+      }
+    },
+    "fib_updates": {
+      "files": {
+        "candidate/program.c": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+        "gamma.json": "1f8084b8b172f6179cd84eb22dc072fdb1977285e92ddbd51b790e53aae687e4",
+        "harness.c": "d29bee5779a5900cdc6dd7611f79e155fcc60ae59ad44230ac07e292722f2252",
+        "old/program.c": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+        "patch.diff": "beaa70d06d3fa8b78724cf9355a3969b8b2adc1a448652c614e412c8ba140e49",
+        "phi.json": "0b3d7d8205472ac045b8f0577e15ee0b60d97a202f1c4b05e5a0a08a42dfa11e",
+        "task.yaml": "7af35104d7385a13d17df115f40b487770ed66c0329ba4fe58b39d03ffcbb08b"
+      },
+      "old_cex_sha256": "c5b66cca650b505ec341219b81a7e973a372d5eb5748344a03669a276b46f233",
+      "unwind": 6,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "6",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      }
+    },
+    "fib_updates_8": {
+      "files": {
+        "candidate/program.c": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+        "gamma.json": "f9884dd280e5d841d58ef5759d23839c9a209260cd02c0dc9d13480e484f13f4",
+        "harness.c": "a83ec85d1a3105f26025be5de55bc9c102ae78e8cad6e2b9dbcaf0182032928a",
+        "old/program.c": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+        "patch.diff": "beaa70d06d3fa8b78724cf9355a3969b8b2adc1a448652c614e412c8ba140e49",
+        "phi.json": "8c6ab0595538b2150f0db28c7189244a82ccff4bfd29ba849cad68b065927c1b",
+        "task.yaml": "a033281a4e2247ca89720262c58424378441157f317d204f66ed4e594e3cd56c"
+      },
+      "old_cex_sha256": "e68d3a7574817d643699e399df6751b7c5f914089e4349902afee9386cbdc87a",
+      "unwind": 10,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "10",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      }
+    },
+    "partial_counter": {
+      "files": {
+        "candidate/program.c": "41a85a52eb4edfafe2bba4a4bf8984122163e4221a10a8bb2bb8d8c12f51dcbf",
+        "gamma.json": "e99a878ecedfabc62e9ac4d529c4b2820c6e2e60c466fc7291f36e333b5ec3b3",
+        "harness.c": "3c913340b6c9c766cf66fe07fb87035353498491af371f9b7efe43daf99c545f",
+        "old/program.c": "f93e270f57fa675dfaa468697e9b4853a686c104411e5c62872e92084c4228b8",
+        "patch.diff": "ac9646e92e2b9341442a0dd8bcc4e83324ab58f063fa279caf69e3a932d471a6",
+        "phi.json": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+        "task.yaml": "cf417001b76718e25a76224c35a29fc73cb63b67eae607716add5de847bc1ffe"
+      },
+      "old_cex_sha256": "185858ef1d76dc3e94aef90ea5285cd8f0b0de81dc77f7fb7d3824e66239020e",
+      "unwind": 4,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "timeout_seconds": 300,
+        "memory_bytes": 21474836480
+      }
+    },
+    "split_counter": {
+      "files": {
+        "candidate/program.c": "5df9027cf3c3f34cc30e62d83b38e40062e556fd5fdad4ae74634c46bd98b865",
+        "gamma.json": "1d346cde0da4b29ab7ccdda4283f7197c555bdf1f57e6cb74eeb9ea7e98f6927",
+        "harness.c": "d4c2f4480fcec4c441123be51c7c3e81ee4407f01b87b01fb409230c7d654f1b",
+        "old/program.c": "b67e8aec2594adbf118c8f13e321d80b93d47b90b52e5e572a0a717c8549237e",
+        "patch.diff": "f3e9fdce382ef36c73a1666c04d5c69ad256425204898b564ef3f13fe9a9bb18",
+        "phi.json": "9d1314725f75b6a889022a8edd97f0c338cd944551ada60b913b9344238efa7d",
+        "task.yaml": "82c93e495341826890b3a757754e6a76e59d09507237018d784720d7bb896326"
+      },
+      "old_cex_sha256": "94af48f287d4badca8f154fff78decb250367f449c16dd4ac3b78962f1a8dd92",
+      "unwind": 4,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "timeout_seconds": 300,
+        "memory_bytes": 21474836480
+      }
+    },
+    "threshold_guard": {
+      "files": {
+        "candidate/program.c": "7274671450902ba24ad69268bbe6416a0e310456ccd3424117d2028506edbd1a",
+        "gamma.json": "54079a57472e939f9499b56f279bc0ba94370085b6d33b82b03a8a4554113560",
+        "harness.c": "a451265be9584712bcf50d00d5c2150e7f7982110d75b774dac43437d721e5ea",
+        "old/program.c": "33c074c952376824c0c3f355de3bdb4d585bff80e245d8a28a293307e7dc5f1b",
+        "patch.diff": "4ab05641aa2147db4057514c8df33ed678ff05727a3e3881ec526a29125272f9",
+        "phi.json": "7f1d4f10c59309179a1e1cbad357f08f1c3e1f40c42a015a1afa85d907c3ad46",
+        "task.yaml": "a874c1c418a6674ccb2c866af190347068f40fe8586cb63aeb3f35c5a78214ef"
+      },
+      "old_cex_sha256": "8597b2dd0c0e343b8cf2aef2b8788f26adea7ad8561d25ccfafaed37be3a8a54",
+      "unwind": 4,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui"
+      ],
+      "limits": {
+        "timeout_seconds": 300,
+        "memory_bytes": 21474836480
+      }
+    }
+  },
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "cpu_model": "General Purpose Processor",
+  "memory_total": "MemTotal:       31498544 kB",
+  "kernel": "5.15.0-186-generic",
+  "python": "3.10.12",
+  "gcc": "11.4.0",
+  "strace": "strace -- version 5.16",
+  "disk_free_bytes": 69107249152,
+  "stage7_frozen_data_tree": "2764145d1a10d58a9f06027afc29902dd3d865f1",
+  "cgroup_version": 2,
+  "official_api_calls": 0
+}
