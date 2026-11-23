@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "current_stage": 8,
-  "stage_name": "增量 Deagle 性能开销归因与优化方向分析",
+  "current_stage": 9,
+  "stage_name": "候选前端性能优化",
   "status": "READY_FOR_REVIEW",
-  "report": "reports/stage-08.md",
+  "report": "reports/stage-09.md",
   "environment": "reports/environment.json",
-  "last_user_approved_stage": 8,
+  "last_user_approved_stage": 9,
   "next_stage": null,
   "next_stage_approved": false
 }

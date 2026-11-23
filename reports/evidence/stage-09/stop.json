@@ -1,0 +1,23 @@
+{
+  "at_utc": "2026-11-23T19:26:04.656800+00:00",
+  "units": {
+    "stage9-formal": "inactive",
+    "stage9-regression": "inactive",
+    "stage9-negative": "inactive",
+    "stage9-details": "inactive",
+    "stage9-acceptance": "inactive",
+    "stage9-release-cli": "inactive"
+  },
+  "active_verification_services": [],
+  "timed_and_regression_services": 136,
+  "service_seconds": 949.477532707,
+  "first_to_last_seconds": 976.175671866,
+  "recorded_candidate_dispatcher_pids": 170,
+  "recorded_frontend_pids": 68,
+  "candidate_dispatcher_pids_still_present": [],
+  "frontend_pids_still_present": [],
+  "memory_limit_bytes": 21474836480,
+  "timeout_seconds": 300,
+  "official_api_calls": 0,
+  "next_stage_approved": false
+}

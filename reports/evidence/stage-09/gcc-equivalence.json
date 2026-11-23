@@ -1,0 +1,242 @@
+[
+  {
+    "arguments": [
+      "-E",
+      "-",
+      "-o",
+      "-"
+    ],
+    "case": "probe-c",
+    "errors": [],
+    "exit": 0,
+    "fields": null,
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "1adb4b80d1cbc65e5bb3349d309c6f17f4503940f681e9701d1119309ef0afbc"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-x",
+      "c++",
+      "-",
+      "-o",
+      "-"
+    ],
+    "case": "probe-cxx",
+    "errors": [],
+    "exit": 0,
+    "fields": null,
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "e5286d979d1845b0bc7700f0c8a4a696e6cd898041e625612c846bc17d1f7540"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-D__CPROVER__",
+      "-m64",
+      "-std=gnu11",
+      "harness.c"
+    ],
+    "case": "harness.c",
+    "errors": [],
+    "exit": 0,
+    "fields": {
+      "argv": true,
+      "files": true,
+      "output_sha256": true,
+      "raw_argv": true,
+      "raw_output_sha256": true,
+      "returncode": true,
+      "unit": true
+    },
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "ae70d0ba4541048eb70733c4ce592a26e8a565514fff39515e5c2d947c29645b"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-D__CPROVER__",
+      "-m64",
+      "-std=gnu11",
+      "g0.c"
+    ],
+    "case": "g0.c",
+    "errors": [],
+    "exit": 0,
+    "fields": {
+      "argv": true,
+      "files": true,
+      "output_sha256": true,
+      "raw_argv": true,
+      "raw_output_sha256": true,
+      "returncode": true,
+      "unit": true
+    },
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "5e14a4ffc06069f2284537d902fb008201c4084347c56581044be57c288c80a0"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-D__CPROVER__",
+      "-m64",
+      "-std=gnu11",
+      "g1.c"
+    ],
+    "case": "g1.c",
+    "errors": [],
+    "exit": 0,
+    "fields": {
+      "argv": true,
+      "files": true,
+      "output_sha256": true,
+      "raw_argv": true,
+      "raw_output_sha256": true,
+      "returncode": true,
+      "unit": true
+    },
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "d6914727325419cf35ac8be654c0644ac3a1c3db37398feb47f5e3db5d9125e6"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-D__CPROVER__",
+      "-m64",
+      "-std=gnu11",
+      "complex.c"
+    ],
+    "case": "complex.c",
+    "errors": [],
+    "exit": 0,
+    "fields": {
+      "argv": true,
+      "files": true,
+      "output_sha256": true,
+      "raw_argv": true,
+      "raw_output_sha256": true,
+      "returncode": true,
+      "unit": true
+    },
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "02b98077a3898fa0de6b99f4807a7f7a8fb955c2406ca9256155f7b698a1b1df"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-D__CPROVER__",
+      "-m64",
+      "-std=gnu11",
+      "err.c"
+    ],
+    "case": "err.c",
+    "errors": [
+      "gcc_nonzero"
+    ],
+    "exit": 1,
+    "fields": {
+      "argv": true,
+      "files": true,
+      "output_sha256": true,
+      "raw_argv": true,
+      "raw_output_sha256": true,
+      "returncode": true,
+      "unit": true
+    },
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "c54a84213586c7053cbdd118a5a201327a86130c19c5789dbe38824bb6fb75de",
+    "stdout_sha256": "25ebb5c8bd1f1a90ee48f09ac7ac84459ec66b816748d40d4808a1fa44ec3d1a"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-D__CPROVER__",
+      "-m64",
+      "-std=gnu11",
+      "ghost.c"
+    ],
+    "case": "ghost.c",
+    "errors": [
+      "unconfirmed_line_marker"
+    ],
+    "exit": 0,
+    "fields": {
+      "argv": true,
+      "files": true,
+      "output_sha256": true,
+      "raw_argv": true,
+      "raw_output_sha256": true,
+      "returncode": true,
+      "unit": true
+    },
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "39dbcfdb93c253a968c746e1d62b9ae05c08f9724005c1eaa6162dbb7f1dc0a5"
+  },
+  {
+    "arguments": [
+      "-E",
+      "-P",
+      "complex.c"
+    ],
+    "case": "unknown-option",
+    "errors": [
+      "unrecognized_gcc_invocation"
+    ],
+    "exit": 0,
+    "fields": {
+      "argv": true,
+      "files": true,
+      "output_sha256": true,
+      "raw_argv": true,
+      "raw_output_sha256": true,
+      "returncode": true,
+      "unit": true
+    },
+    "identical": {
+      "exit": true,
+      "stderr": true,
+      "stdout": true
+    },
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stdout_sha256": "10159baf262b43a92d95db59dae1f72c645127301661e0a3ce4e38b295a97c58"
+  }
+]

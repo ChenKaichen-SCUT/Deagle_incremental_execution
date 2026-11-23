@@ -1,0 +1,24 @@
+{
+  "candidate_witnesses": 8,
+  "cases": [
+    "batch_total",
+    "threshold_guard",
+    "fib_updates_8",
+    "split_counter",
+    "airline_reservations_6",
+    "partial_counter",
+    "batch_retained",
+    "fib_updates",
+    "airline_reservations"
+  ],
+  "certificates": 68,
+  "direct_full_models": 18,
+  "formal": 100,
+  "frontend_profiles": 50,
+  "gcc_controls": 9,
+  "models": 68,
+  "negative_checks": 12,
+  "old_violations": 136,
+  "record_pairs": 68,
+  "regression": 36
+}

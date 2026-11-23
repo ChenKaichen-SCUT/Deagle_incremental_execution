@@ -1,0 +1,206 @@
+{
+  "abi": {
+    "configuration_changes": [
+      "headers_and_builtin_inputs",
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "89693456df16bd580d4271dc5083f119063462d33f8ad6acbd0c934c7c9aa146",
+      "e273b27fa37087fee97c46c32eb75acd43d6ccdafb6da99339dca510c3a9d181"
+    ],
+    "frontend_errors": [],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "config_headers_or_layout_changed",
+    "skipped": 0,
+    "test": "abi"
+  },
+  "alias": {
+    "configuration_changes": [],
+    "evidence": [
+      "54a87ba9d01e89554720d8336d3a0faaf850079281c410a69e310084af074d31",
+      "54a87ba9d01e89554720d8336d3a0faaf850079281c410a69e310084af074d31"
+    ],
+    "frontend_errors": [],
+    "imported": 1,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "incremental",
+    "reason": "",
+    "skipped": 60,
+    "test": "alias"
+  },
+  "compiler_config": {
+    "configuration_changes": [
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "aa84132778b17c2a411e7808efa2c26e36c60ea6da0f3e138505fadaef9cd456",
+      "01f8333f73cfea60f6068444ef7fdbc17aab6fc54d9412097b0f2703bf531683"
+    ],
+    "frontend_errors": [
+      "compiler_changed_during_frontend",
+      "unsupported_compiler_environment:COMPILER_PATH"
+    ],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "unconfirmed_frontend_dependencies",
+    "skipped": 0,
+    "test": "compiler_config"
+  },
+  "damaged_stream": {
+    "configuration_changes": [
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "c3c7fafafed1f6685b603c249db08393ca2fcb20477d240bf5b4b7d710f05e80",
+      "7665b9501777ddf4c5071c9e836a400f1f7909cb1b5e47209f3f074e2876aa51"
+    ],
+    "frontend_errors": [
+      "incomplete_or_modified_preprocessor_stream"
+    ],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "unconfirmed_frontend_dependencies",
+    "skipped": 0,
+    "test": "damaged_stream"
+  },
+  "gcc_error": {
+    "baseline_started": false,
+    "cli_rc": 2,
+    "gcc_exits": [
+      1,
+      0,
+      0
+    ],
+    "reason": "Candidate Deagle frontend failed, exit 6 (?:?, In file included from harness.c:6:)",
+    "status": "INVALID_PATCH",
+    "test": "gcc_error"
+  },
+  "header": {
+    "configuration_changes": [
+      "headers_and_builtin_inputs",
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "f1617df7e0b30663063b5503ad395a42343c7881b65f929ae43d9097f1780d62",
+      "3a3cc522804d3374eb1428fb0429d7148322c621ec33cee7d1f6f609074318ba"
+    ],
+    "frontend_errors": [],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "config_headers_or_layout_changed",
+    "skipped": 0,
+    "test": "header"
+  },
+  "macro_flag": {
+    "configuration_changes": [
+      "cpp_flags",
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "3b2e8a31eff95c2c77bc7ce9fbf09e472025ce87ba306fd37a5be19f497175f9",
+      "5645faf6b30dc26f53defdacb12fb3fc74066208a685cdb1cc35d262c8f10373"
+    ],
+    "frontend_errors": [],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "config_headers_or_layout_changed",
+    "skipped": 0,
+    "test": "macro_flag"
+  },
+  "missing_attachment": {
+    "configuration_changes": [
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "c92a39a61e56faf5f5be5f24779ffe2d8762fdfa50856be3bd78d35baabb0a92",
+      "41b3b91537acad8de1a38133dbf041c3aaf76173603c72305ec4684bb46be0bc"
+    ],
+    "frontend_errors": [
+      "incomplete_frontend_evidence"
+    ],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "unconfirmed_frontend_dependencies",
+    "skipped": 0,
+    "test": "missing_attachment"
+  },
+  "nested": {
+    "configuration_changes": [
+      "headers_and_builtin_inputs",
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "371cfecd3b5a4b109fc2a79a9b2fc01357ddea028d28cd9b1421fa3b73f83154",
+      "cb7b4aa217f7099ec5465647e7e3e27487b708128233770966a0d6b09734e7f8"
+    ],
+    "frontend_errors": [],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "config_headers_or_layout_changed",
+    "skipped": 0,
+    "test": "nested"
+  },
+  "resources": {
+    "child_live": false,
+    "leader_exit": -15,
+    "oom": "OOM",
+    "refused_wrong_memory_limit": true,
+    "timeout": true
+  },
+  "syntax": {
+    "baseline_started": false,
+    "cli_rc": 2,
+    "gcc_exits": [
+      0,
+      0,
+      0
+    ],
+    "reason": "Candidate Deagle frontend failed, exit 6 (program.c:3, syntax error before ';')",
+    "status": "INVALID_PATCH",
+    "test": "syntax"
+  },
+  "unknown_dependency": {
+    "configuration_changes": [
+      "frontend_dependencies_v2"
+    ],
+    "evidence": [
+      "a5b53f702776bac461339a684b33d476359a65528f952df4d08a6199f064058b",
+      "80281f26edcce57802ca3d799905bbd3c05ab15f73ff08193471fdafdbb2afae"
+    ],
+    "frontend_errors": [
+      "unconfirmed_line_marker"
+    ],
+    "imported": 0,
+    "independent_exit": 0,
+    "p0": "VIOLATION",
+    "p1": "NO_VIOLATION_WITHIN_BOUND",
+    "path": "full_fallback",
+    "reason": "unconfirmed_frontend_dependencies",
+    "skipped": 0,
+    "test": "unknown_dependency"
+  }
+}

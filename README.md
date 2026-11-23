@@ -2,6 +2,8 @@
 
 本项目研究并发 C 程序经过一次修复后，增量构建事件顺序模型、复用有效理论约束，与独立全量 Deagle 验证同一程序和性质的结果。实施范围和每一阶段的验收条件见[执行指南](EXECUTION_GUIDE.md)。
 
+阶段 9 的候选前端优化已完成，状态为 `READY_FOR_REVIEW`。五例前端中位数由约 214 ms 降至 93.6～98.2 ms，配对节省 116.0～120.5 ms。八轮 Fibonacci 的 14 条历史引理正常导入，完整 I3 在五次中仍比同版 F1 慢 8.8～22.7 ms。九个冻结版本对的模型、结论与原生复用均通过回归。[阶段 9 报告](reports/stage-09.md) · [逐次性能与资源](reports/evidence/stage-09/performance.md) · [依赖失效与回退](reports/evidence/stage-09/negative-results.json) · [离线核验入口](scripts/stage9/evidence.py)
+
 阶段 8 的性能归因已完成，状态为 `READY_FOR_REVIEW`。九个冻结版本对完成六种模式、两档观测、每档五次的 540 次正式核验。与同一增强版全量相比，完整增量候选的配对中位数慢 128.9～719.7 毫秒。八轮 Fibonacci 的 14 条旧引理使求解中位少用 217.7 毫秒，候选维护仍超过了这项收益。六线程订票旧程序的约 7 秒差距在交换完整求解输入后得以重现。建议先缩短候选前端。全部优化留待评审。[阶段 8 报告](reports/stage-08.md) · [受控消融](reports/evidence/stage-08/ablation.md) · [阶段 8 离线核验](scripts/stage8/check_evidence.py)
 
 阶段 7 已完成，状态为 `READY_FOR_REVIEW`。9 个冻结版本对各重复 3 次，全量与增量在 27 次配对中结论一致。7 个候选在给定界限内通过，2 个仍有错误，两路均检出。5 个版本对实际跳过原生符号执行前缀，4 个实际导入旧理论子句。27 次候选验证中增量路径均较慢，按版本对等权计算的全量时间与增量时间之比中位数为 0.247。[阶段 7 报告](reports/stage-07.md) · [逐次测量](reports/evidence/stage-07/measurements.json) · [项目状态](project_state.json)

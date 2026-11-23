@@ -1,0 +1,57 @@
+{
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "baseline": "edd7386f8674eb5db08593d327256ea874bf05f6",
+  "diagnostic_sha256": "4b7eb552662481b244937b46cfbf85b0362d4339cbe0f82fccbee6cfdc3c299b",
+  "disk_free": 65853501440,
+  "enhanced": "be7c8780636b8ad2417e9258e4ed4c9366cb2be8",
+  "gcc": {
+    "errors": [],
+    "identity": {
+      "cc1": [
+        "/usr/lib/gcc/x86_64-linux-gnu/11/cc1",
+        "31c2233432d9105001eea158b799f7d403dc5a1944c712283dba251f3ab8eb43"
+      ],
+      "cc1plus": [
+        "/usr/lib/gcc/x86_64-linux-gnu/11/cc1plus",
+        "283421000e15a9152de4affe89ac2e528f3e0bcf2038b245171a17d8a912ace9"
+      ],
+      "driver": [
+        "/usr/bin/x86_64-linux-gnu-gcc-11",
+        "821af3c74506283c179ca413bb33e6b528805a4dd8a5c09df125e5ad560a9e89"
+      ],
+      "environment": {
+        "LANG": "65ce8c93514741c928d27fcdbe7b0a754dfcaebcb2292111cd60305dc983f51f",
+        "LC_ALL": "6b23c0d5f35d1b11f9b683f0b0a617355deb11277d91ae091d399c655b87940d"
+      },
+      "external_specs": null,
+      "specs_sha256": "00b16f1f4319a42efb2fba891e4caf2387dc9c852ce7fc3002d30fabc4063c2a",
+      "version": "11.4.0"
+    }
+  },
+  "kernel": "5.15.0-186-generic",
+  "official_api_calls": 0,
+  "pidfd": true,
+  "profile_exe": "8ecfd8a6303e1c12e3cac1e80b63d0a8306e8f3ac3078d0a4c4aed4a29456bff",
+  "profile_source": "dc72f6f8acdc739eca1b5e7cdc511d137b3b26dc89e1d95098527a2672ce84da",
+  "python": "3.10.12",
+  "same_archived_diagnostic": true,
+  "sources": {
+    "scripts/stage4/session.py": "054c89422efe8f5e6fb8b9319487ae0f335307a9d58c91efa3288abe6d9022f8",
+    "scripts/stage9/dispatch.sh": "f87e749e0e6b17ae7e8a4c8b1535b578d9872a62ea1d74a8121d078aafb3c622",
+    "scripts/stage9/frontend.py": "e19f24c82f2ff9d333eb768a6c76842678bc08d0edec118f239cd8b7a9e92e01",
+    "scripts/stage9/provenance.py": "612a3436eb9dd777b5e63d4d116dc36f5d54adf30d8f995e85bebc146c7b2bba",
+    "scripts/stage9/reference_gcc.py": "2cc6f3eb7efc38efd8cc8d7811118e3c7a76576c21e157052a46a0213798e808"
+  },
+  "stage7": "247894bf77904bb34e547b5a636b8afe8527add4",
+  "stage7_data_tree": "2764145d1a10d58a9f06027afc29902dd3d865f1",
+  "stage8_data_tree": "e01601666c4e153ae53a6196a7583cba367bcaaf"
+}

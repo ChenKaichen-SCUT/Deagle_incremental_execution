@@ -1,0 +1,34 @@
+{
+  "batch_total": {
+    "agreement": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "binary": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "development_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "schema": 1
+    },
+    "candidate": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "case": "batch_total",
+    "exit": 0,
+    "imported": 1,
+    "model_match": true,
+    "patch": "3fba8f5ec5f380ebaf7b9735edbd39ffc43f6e4d8a76c99e19640df281477e2a",
+    "prefix": 60
+  },
+  "fib_updates_8": {
+    "agreement": "DEFINITE_AGREEMENT",
+    "api_calls": 0,
+    "binary": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "development_sha256": "8822a71be05f754b1fb5551d88561fe2cece35704d0660b753fca4920d4eb057",
+      "schema": 1
+    },
+    "candidate": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "case": "fib_updates_8",
+    "exit": 0,
+    "imported": 14,
+    "model_match": true,
+    "patch": "beaa70d06d3fa8b78724cf9355a3969b8b2adc1a448652c614e412c8ba140e49",
+    "prefix": 95
+  }
+}

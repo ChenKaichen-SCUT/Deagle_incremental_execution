@@ -1,0 +1,3 @@
+Windows; Python 3.13.12
+Recomputed 136 verifications, 50 frontend profiles, {'candidate_witnesses': 8, 'old_violations': 136, 'models': 68, 'certificates': 68, 'direct_full_models': 18, 'record_pairs': 68}
+All 13 published numerical outputs match byte-for-byte.

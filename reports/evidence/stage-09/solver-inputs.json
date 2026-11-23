@@ -1,0 +1,584 @@
+{
+  "airline_reservations": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "c3a6fa08dd7d37dfbb23a5aa807945d813935ee6d6c11f1234820ca7adf66495",
+        "before": "c3a6fa08dd7d37dfbb23a5aa807945d813935ee6d6c11f1234820ca7adf66495",
+        "bytes": 14020,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "ac04275c16f507fa898cedfa6b874b21a859379d2edc1063bfefbc7ab9086648",
+        "before": "ac04275c16f507fa898cedfa6b874b21a859379d2edc1063bfefbc7ab9086648",
+        "bytes": 2920540,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "9dde8c77c9f87da07fa65d944d5cd823bc4c9fe335decaa215460430df605be1",
+        "before": "9dde8c77c9f87da07fa65d944d5cd823bc4c9fe335decaa215460430df605be1",
+        "bytes": 54,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "ca3d8dcd7a684d1d6906b81a0dcc8a55bcb2061bde4bfa7fae2bc2fed6f52801",
+        "before": "ca3d8dcd7a684d1d6906b81a0dcc8a55bcb2061bde4bfa7fae2bc2fed6f52801",
+        "bytes": 27,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "9dd41516c0f9b9a461a92a00d97d37648e9454fbc1404c8e82fa40580b48502a",
+        "before": "9dd41516c0f9b9a461a92a00d97d37648e9454fbc1404c8e82fa40580b48502a",
+        "bytes": 1157,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "c3a6fa08dd7d37dfbb23a5aa807945d813935ee6d6c11f1234820ca7adf66495",
+        "before": "c3a6fa08dd7d37dfbb23a5aa807945d813935ee6d6c11f1234820ca7adf66495",
+        "bytes": 14020,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "ac04275c16f507fa898cedfa6b874b21a859379d2edc1063bfefbc7ab9086648",
+        "before": "ac04275c16f507fa898cedfa6b874b21a859379d2edc1063bfefbc7ab9086648",
+        "bytes": 2920540,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "9dde8c77c9f87da07fa65d944d5cd823bc4c9fe335decaa215460430df605be1",
+        "before": "9dde8c77c9f87da07fa65d944d5cd823bc4c9fe335decaa215460430df605be1",
+        "bytes": 54,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "ca3d8dcd7a684d1d6906b81a0dcc8a55bcb2061bde4bfa7fae2bc2fed6f52801",
+        "before": "ca3d8dcd7a684d1d6906b81a0dcc8a55bcb2061bde4bfa7fae2bc2fed6f52801",
+        "bytes": 27,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "9dd41516c0f9b9a461a92a00d97d37648e9454fbc1404c8e82fa40580b48502a",
+        "before": "9dd41516c0f9b9a461a92a00d97d37648e9454fbc1404c8e82fa40580b48502a",
+        "bytes": 1157,
+        "equal": true
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "021beced9d1d2b276bcc3abac67304060153127286c3b0bfd533d440692ba620",
+        "before": "021beced9d1d2b276bcc3abac67304060153127286c3b0bfd533d440692ba620",
+        "bytes": 25793,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "c5f6e9a218418204c4a939f0b06b3a394a1204a1888d4a1808632304cb80a7d4",
+        "before": "c5f6e9a218418204c4a939f0b06b3a394a1204a1888d4a1808632304cb80a7d4",
+        "bytes": 6799108,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "8023d0a75ec74711eabfb7f3afb8de8f29717525ac902488fb4678620ad8d5cb",
+        "before": "8023d0a75ec74711eabfb7f3afb8de8f29717525ac902488fb4678620ad8d5cb",
+        "bytes": 54,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "a7f2c69c83bb38cf9643eeaa02291f546271b0e12d93603300b50b6ac089f707",
+        "before": "a7f2c69c83bb38cf9643eeaa02291f546271b0e12d93603300b50b6ac089f707",
+        "bytes": 40,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "77fcb9d61cd52cf0109ebd43e72dd8f96d54dce8778d07629b10c8da171a86ab",
+        "before": "77fcb9d61cd52cf0109ebd43e72dd8f96d54dce8778d07629b10c8da171a86ab",
+        "bytes": 1362,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "021beced9d1d2b276bcc3abac67304060153127286c3b0bfd533d440692ba620",
+        "before": "021beced9d1d2b276bcc3abac67304060153127286c3b0bfd533d440692ba620",
+        "bytes": 25793,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "c5f6e9a218418204c4a939f0b06b3a394a1204a1888d4a1808632304cb80a7d4",
+        "before": "c5f6e9a218418204c4a939f0b06b3a394a1204a1888d4a1808632304cb80a7d4",
+        "bytes": 6799108,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "8023d0a75ec74711eabfb7f3afb8de8f29717525ac902488fb4678620ad8d5cb",
+        "before": "8023d0a75ec74711eabfb7f3afb8de8f29717525ac902488fb4678620ad8d5cb",
+        "bytes": 54,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "a7f2c69c83bb38cf9643eeaa02291f546271b0e12d93603300b50b6ac089f707",
+        "before": "a7f2c69c83bb38cf9643eeaa02291f546271b0e12d93603300b50b6ac089f707",
+        "bytes": 40,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "77fcb9d61cd52cf0109ebd43e72dd8f96d54dce8778d07629b10c8da171a86ab",
+        "before": "77fcb9d61cd52cf0109ebd43e72dd8f96d54dce8778d07629b10c8da171a86ab",
+        "bytes": 1362,
+        "equal": true
+      }
+    }
+  },
+  "batch_retained": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "before": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "bytes": 2567,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "7e558d34203ed6926fdf6208f90476fbf5db61dc2ed726ffcc04676695483371",
+        "before": "7e558d34203ed6926fdf6208f90476fbf5db61dc2ed726ffcc04676695483371",
+        "bytes": 68048,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "423644e8512a36476b6b80c5e034d5c9cd6acb4fe03eb5c26efb15ed770c7e79",
+        "before": "423644e8512a36476b6b80c5e034d5c9cd6acb4fe03eb5c26efb15ed770c7e79",
+        "bytes": 52,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "ca48d4722c3e0b14deff26498e795c112d66da738f2a1f0de74b3e3f1c0f1460",
+        "before": "ca48d4722c3e0b14deff26498e795c112d66da738f2a1f0de74b3e3f1c0f1460",
+        "bytes": 17,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "70b6deaf8a4206ff823ed6aaf850ca796b031304b1fc009a6ab7635f14c0d116",
+        "before": "70b6deaf8a4206ff823ed6aaf850ca796b031304b1fc009a6ab7635f14c0d116",
+        "bytes": 553,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "before": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "bytes": 2567,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "7e558d34203ed6926fdf6208f90476fbf5db61dc2ed726ffcc04676695483371",
+        "before": "7e558d34203ed6926fdf6208f90476fbf5db61dc2ed726ffcc04676695483371",
+        "bytes": 68048,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "423644e8512a36476b6b80c5e034d5c9cd6acb4fe03eb5c26efb15ed770c7e79",
+        "before": "423644e8512a36476b6b80c5e034d5c9cd6acb4fe03eb5c26efb15ed770c7e79",
+        "bytes": 52,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "32a77cc7ae10a2deae6a94909b91c582f3f7e5baa63a03fbf9d75b60e68f2a40",
+        "before": "32a77cc7ae10a2deae6a94909b91c582f3f7e5baa63a03fbf9d75b60e68f2a40",
+        "bytes": 17,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "14e41788da3eda4d9dc57ba4c575804e5dcbcd56c6c2bf524ebb3d320f2a6648",
+        "before": "14e41788da3eda4d9dc57ba4c575804e5dcbcd56c6c2bf524ebb3d320f2a6648",
+        "bytes": 531,
+        "equal": true
+      }
+    }
+  },
+  "batch_total": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "before": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "bytes": 2567,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "ae8b7927330a149f3ef1bf7dd11bc8d43eb5d7160060a651f939d3d6bfef6a1a",
+        "before": "ae8b7927330a149f3ef1bf7dd11bc8d43eb5d7160060a651f939d3d6bfef6a1a",
+        "bytes": 68048,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "80696ebbb58a43cf881d6db04a83fd3b1fa865297807dc3060504d860ca03068",
+        "before": "80696ebbb58a43cf881d6db04a83fd3b1fa865297807dc3060504d860ca03068",
+        "bytes": 51,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "fa1b861d0546055b73d50abb56e497ddb174813001a4052b2bdd4fd73c3648e3",
+        "before": "fa1b861d0546055b73d50abb56e497ddb174813001a4052b2bdd4fd73c3648e3",
+        "bytes": 16,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "2f6ab5d5637a5000755a68f341e2c31ca4fe9beffb22a32bfb3b4c3144dd8628",
+        "before": "2f6ab5d5637a5000755a68f341e2c31ca4fe9beffb22a32bfb3b4c3144dd8628",
+        "bytes": 729,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "before": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+        "bytes": 2567,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "ae8b7927330a149f3ef1bf7dd11bc8d43eb5d7160060a651f939d3d6bfef6a1a",
+        "before": "ae8b7927330a149f3ef1bf7dd11bc8d43eb5d7160060a651f939d3d6bfef6a1a",
+        "bytes": 68048,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "80696ebbb58a43cf881d6db04a83fd3b1fa865297807dc3060504d860ca03068",
+        "before": "80696ebbb58a43cf881d6db04a83fd3b1fa865297807dc3060504d860ca03068",
+        "bytes": 51,
+        "equal": true
+      }
+    }
+  },
+  "fib_updates": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "0dc38701bdbeaf74edce7a3be9e3a33d78a772af8eef71f4906eaf84179722ab",
+        "before": "0dc38701bdbeaf74edce7a3be9e3a33d78a772af8eef71f4906eaf84179722ab",
+        "bytes": 7608,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "ad857e802425353071fe050310fa1305c925b3f7398b303dfee8829009c7ff51",
+        "before": "ad857e802425353071fe050310fa1305c925b3f7398b303dfee8829009c7ff51",
+        "bytes": 497316,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "4eeecbf5cb0d6f14a28af1073ef9f1ae6c4cd1f1e1dc666ac4d208376c61c328",
+        "before": "4eeecbf5cb0d6f14a28af1073ef9f1ae6c4cd1f1e1dc666ac4d208376c61c328",
+        "bytes": 53,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "556260539f292230e456122ccd886aa1baa6473b01285d8cdd11aee2819141de",
+        "before": "556260539f292230e456122ccd886aa1baa6473b01285d8cdd11aee2819141de",
+        "bytes": 24,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "0dbbe754b044a32d2922f9cc439d664ccdf4f27661b00712cc368028ad02af4e",
+        "before": "0dbbe754b044a32d2922f9cc439d664ccdf4f27661b00712cc368028ad02af4e",
+        "bytes": 1024,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "0dc38701bdbeaf74edce7a3be9e3a33d78a772af8eef71f4906eaf84179722ab",
+        "before": "0dc38701bdbeaf74edce7a3be9e3a33d78a772af8eef71f4906eaf84179722ab",
+        "bytes": 7608,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "ad857e802425353071fe050310fa1305c925b3f7398b303dfee8829009c7ff51",
+        "before": "ad857e802425353071fe050310fa1305c925b3f7398b303dfee8829009c7ff51",
+        "bytes": 497316,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "4eeecbf5cb0d6f14a28af1073ef9f1ae6c4cd1f1e1dc666ac4d208376c61c328",
+        "before": "4eeecbf5cb0d6f14a28af1073ef9f1ae6c4cd1f1e1dc666ac4d208376c61c328",
+        "bytes": 53,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "e8c20786c5602c84e6a66aba40a64acd4ae8f7b876921740bd3a2b01861baf73",
+        "before": "e8c20786c5602c84e6a66aba40a64acd4ae8f7b876921740bd3a2b01861baf73",
+        "bytes": 24,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "0dbbe754b044a32d2922f9cc439d664ccdf4f27661b00712cc368028ad02af4e",
+        "before": "0dbbe754b044a32d2922f9cc439d664ccdf4f27661b00712cc368028ad02af4e",
+        "bytes": 1024,
+        "equal": true
+      }
+    }
+  },
+  "fib_updates_8": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+        "before": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+        "bytes": 14326,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "776955e8f945288749970766f60788096ad373b37524a5ea275b163b08288beb",
+        "before": "776955e8f945288749970766f60788096ad373b37524a5ea275b163b08288beb",
+        "bytes": 1157252,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "dcc4047980800fb00ef2fd591f48c406657dbade6d3f70db17d5af20f3986595",
+        "before": "dcc4047980800fb00ef2fd591f48c406657dbade6d3f70db17d5af20f3986595",
+        "bytes": 53,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "fc0cdb778cf944bd58971720d580191a19b5ef3aaf5b84572536fd0a4ae2b5b4",
+        "before": "fc0cdb778cf944bd58971720d580191a19b5ef3aaf5b84572536fd0a4ae2b5b4",
+        "bytes": 32,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "35d0a260cfe5ed6a65b02874262dcaab3bf58dc52170dcd6305f14c089b5a509",
+        "before": "35d0a260cfe5ed6a65b02874262dcaab3bf58dc52170dcd6305f14c089b5a509",
+        "bytes": 1023,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+        "before": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+        "bytes": 14326,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "776955e8f945288749970766f60788096ad373b37524a5ea275b163b08288beb",
+        "before": "776955e8f945288749970766f60788096ad373b37524a5ea275b163b08288beb",
+        "bytes": 1157252,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "dcc4047980800fb00ef2fd591f48c406657dbade6d3f70db17d5af20f3986595",
+        "before": "dcc4047980800fb00ef2fd591f48c406657dbade6d3f70db17d5af20f3986595",
+        "bytes": 53,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "9576192e961516973c00ccd73fe30f2b496a931aea98594072c68b5f85a3aed3",
+        "before": "9576192e961516973c00ccd73fe30f2b496a931aea98594072c68b5f85a3aed3",
+        "bytes": 32,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "35d0a260cfe5ed6a65b02874262dcaab3bf58dc52170dcd6305f14c089b5a509",
+        "before": "35d0a260cfe5ed6a65b02874262dcaab3bf58dc52170dcd6305f14c089b5a509",
+        "bytes": 1023,
+        "equal": true
+      }
+    }
+  },
+  "partial_counter": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "5db80d236465de5aa50e52392bbbd8b7233fb401d7eaa736095373d0a1c5e5ca",
+        "before": "5db80d236465de5aa50e52392bbbd8b7233fb401d7eaa736095373d0a1c5e5ca",
+        "bytes": 7345,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "686cd285cc5f082461f743866beabb585e6e5f2a06263fe1483858c6f913edf9",
+        "before": "686cd285cc5f082461f743866beabb585e6e5f2a06263fe1483858c6f913edf9",
+        "bytes": 1199844,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "952b34519c4a6ba5c1940abee25c0e8a8ae0db401f30dd747ed2cd95773648f2",
+        "before": "952b34519c4a6ba5c1940abee25c0e8a8ae0db401f30dd747ed2cd95773648f2",
+        "bytes": 53,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "9ba6368e45b3ac8583a5cd7edd3890405c1df7c5b73110b758c766a4bee53c76",
+        "before": "9ba6368e45b3ac8583a5cd7edd3890405c1df7c5b73110b758c766a4bee53c76",
+        "bytes": 21,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "e10585ea35067c2d8cc19082c506194f3735163a46743e65a79133de52d971fc",
+        "before": "e10585ea35067c2d8cc19082c506194f3735163a46743e65a79133de52d971fc",
+        "bytes": 6976,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "5db80d236465de5aa50e52392bbbd8b7233fb401d7eaa736095373d0a1c5e5ca",
+        "before": "5db80d236465de5aa50e52392bbbd8b7233fb401d7eaa736095373d0a1c5e5ca",
+        "bytes": 7345,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "686cd285cc5f082461f743866beabb585e6e5f2a06263fe1483858c6f913edf9",
+        "before": "686cd285cc5f082461f743866beabb585e6e5f2a06263fe1483858c6f913edf9",
+        "bytes": 1199844,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "952b34519c4a6ba5c1940abee25c0e8a8ae0db401f30dd747ed2cd95773648f2",
+        "before": "952b34519c4a6ba5c1940abee25c0e8a8ae0db401f30dd747ed2cd95773648f2",
+        "bytes": 53,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "9ba6368e45b3ac8583a5cd7edd3890405c1df7c5b73110b758c766a4bee53c76",
+        "before": "9ba6368e45b3ac8583a5cd7edd3890405c1df7c5b73110b758c766a4bee53c76",
+        "bytes": 21,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "e10585ea35067c2d8cc19082c506194f3735163a46743e65a79133de52d971fc",
+        "before": "e10585ea35067c2d8cc19082c506194f3735163a46743e65a79133de52d971fc",
+        "bytes": 6976,
+        "equal": true
+      }
+    }
+  },
+  "split_counter": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "c8ed5fd774713086e2931312155cfe15239bca1fd32b76b56da30f59d64fefcc",
+        "before": "c8ed5fd774713086e2931312155cfe15239bca1fd32b76b56da30f59d64fefcc",
+        "bytes": 6197,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "a825c26d61b254d3770964bf64b82fbd069eb159a3e2ce13e24db0414deab6a9",
+        "before": "a825c26d61b254d3770964bf64b82fbd069eb159a3e2ce13e24db0414deab6a9",
+        "bytes": 680608,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "346244482df698a0613c0475a017f1682e502f447b1821eae7292b06d7e6903b",
+        "before": "346244482df698a0613c0475a017f1682e502f447b1821eae7292b06d7e6903b",
+        "bytes": 52,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "ccd71b3405e4c6d85f2858b099b1723bb1ce0e0444c0486ea61dc7b19032d6e8",
+        "before": "ccd71b3405e4c6d85f2858b099b1723bb1ce0e0444c0486ea61dc7b19032d6e8",
+        "bytes": 20,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "8e0699dfa1e9e6a5f0c6eca97cb813b6ce915b1fa33a3d5a50a153a285fea842",
+        "before": "8e0699dfa1e9e6a5f0c6eca97cb813b6ce915b1fa33a3d5a50a153a285fea842",
+        "bytes": 3522,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "c8ed5fd774713086e2931312155cfe15239bca1fd32b76b56da30f59d64fefcc",
+        "before": "c8ed5fd774713086e2931312155cfe15239bca1fd32b76b56da30f59d64fefcc",
+        "bytes": 6197,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "a825c26d61b254d3770964bf64b82fbd069eb159a3e2ce13e24db0414deab6a9",
+        "before": "a825c26d61b254d3770964bf64b82fbd069eb159a3e2ce13e24db0414deab6a9",
+        "bytes": 680608,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "346244482df698a0613c0475a017f1682e502f447b1821eae7292b06d7e6903b",
+        "before": "346244482df698a0613c0475a017f1682e502f447b1821eae7292b06d7e6903b",
+        "bytes": 52,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "ccd71b3405e4c6d85f2858b099b1723bb1ce0e0444c0486ea61dc7b19032d6e8",
+        "before": "ccd71b3405e4c6d85f2858b099b1723bb1ce0e0444c0486ea61dc7b19032d6e8",
+        "bytes": 20,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "8e0699dfa1e9e6a5f0c6eca97cb813b6ce915b1fa33a3d5a50a153a285fea842",
+        "before": "8e0699dfa1e9e6a5f0c6eca97cb813b6ce915b1fa33a3d5a50a153a285fea842",
+        "bytes": 3522,
+        "equal": true
+      }
+    }
+  },
+  "threshold_guard": {
+    "F1": {
+      "s8-graph.tsv": {
+        "after": "e30ba95021f807725de8ad0e4d9cd3a8927cb523b6db754191b67a1db7eb97aa",
+        "before": "e30ba95021f807725de8ad0e4d9cd3a8927cb523b6db754191b67a1db7eb97aa",
+        "bytes": 3280,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "72d50264412cbc8943b6328481e64dfdb771bb19c4ab881fe447d5f5ac6d2f98",
+        "before": "72d50264412cbc8943b6328481e64dfdb771bb19c4ab881fe447d5f5ac6d2f98",
+        "bytes": 108348,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "d553664b3300ee504954242a593bbaf9d4d6dd953a0eb45c057d96fe9eb9ac88",
+        "before": "d553664b3300ee504954242a593bbaf9d4d6dd953a0eb45c057d96fe9eb9ac88",
+        "bytes": 51,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "f97e58d8b292520e6e03a27ecce93cbeec97f01945d57a789500db9b3d92e224",
+        "before": "f97e58d8b292520e6e03a27ecce93cbeec97f01945d57a789500db9b3d92e224",
+        "bytes": 17,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "11bbd59d5ce923d1a3f532a0fee994e810ea0a28be077013f5e2791a8bc53bce",
+        "before": "11bbd59d5ce923d1a3f532a0fee994e810ea0a28be077013f5e2791a8bc53bce",
+        "bytes": 860,
+        "equal": true
+      }
+    },
+    "I3": {
+      "s8-graph.tsv": {
+        "after": "e30ba95021f807725de8ad0e4d9cd3a8927cb523b6db754191b67a1db7eb97aa",
+        "before": "e30ba95021f807725de8ad0e4d9cd3a8927cb523b6db754191b67a1db7eb97aa",
+        "bytes": 3280,
+        "equal": true
+      },
+      "s8-input.bin": {
+        "after": "72d50264412cbc8943b6328481e64dfdb771bb19c4ab881fe447d5f5ac6d2f98",
+        "before": "72d50264412cbc8943b6328481e64dfdb771bb19c4ab881fe447d5f5ac6d2f98",
+        "bytes": 108348,
+        "equal": true
+      },
+      "s8-sat.tsv": {
+        "after": "d553664b3300ee504954242a593bbaf9d4d6dd953a0eb45c057d96fe9eb9ac88",
+        "before": "d553664b3300ee504954242a593bbaf9d4d6dd953a0eb45c057d96fe9eb9ac88",
+        "bytes": 51,
+        "equal": true
+      },
+      "s8-search.tsv": {
+        "after": "f97e58d8b292520e6e03a27ecce93cbeec97f01945d57a789500db9b3d92e224",
+        "before": "f97e58d8b292520e6e03a27ecce93cbeec97f01945d57a789500db9b3d92e224",
+        "bytes": 17,
+        "equal": true
+      },
+      "s8-trace.tsv": {
+        "after": "11bbd59d5ce923d1a3f532a0fee994e810ea0a28be077013f5e2791a8bc53bce",
+        "before": "11bbd59d5ce923d1a3f532a0fee994e810ea0a28be077013f5e2791a8bc53bce",
+        "bytes": 860,
+        "equal": true
+      }
+    }
+  }
+}

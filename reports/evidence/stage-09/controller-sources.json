@@ -1,0 +1,18 @@
+{
+  "development": {
+    "scripts/stage4/session.py": "5a8947a578cf9b321af141242b480c26e626542aa97d2241b59264013fed3223",
+    "scripts/stage9/provenance.py": "3f16261660327b87c2931d9cbbc8030e84656f324c00c8c9044054015bd57e95",
+    "scripts/stage9/frontend.py": "ab1327fb783446e2d19716572d020deddc11102849f317113ef632d45960fb21",
+    "scripts/stage9/reference_gcc.py": "cdfd6f954e9fb07a6951880a2112dac3f2adf333f28bfbb311b2560a3b691f5b",
+    "scripts/stage9/dispatch.sh": "f37332320ad484c2f2f39b658fdf17d5b6d5870dc00b7916ecc9248d5b9af472"
+  },
+  "acceptance": {
+    "scripts/stage4/session.py": "054c89422efe8f5e6fb8b9319487ae0f335307a9d58c91efa3288abe6d9022f8",
+    "scripts/stage9/provenance.py": "612a3436eb9dd777b5e63d4d116dc36f5d54adf30d8f995e85bebc146c7b2bba",
+    "scripts/stage9/frontend.py": "e19f24c82f2ff9d333eb768a6c76842678bc08d0edec118f239cd8b7a9e92e01",
+    "scripts/stage9/reference_gcc.py": "2cc6f3eb7efc38efd8cc8d7811118e3c7a76576c21e157052a46a0213798e808",
+    "scripts/stage9/dispatch.sh": "f87e749e0e6b17ae7e8a4c8b1535b578d9872a62ea1d74a8121d078aafb3c622"
+  },
+  "development_formal": 100,
+  "development_regression": 36
+}
