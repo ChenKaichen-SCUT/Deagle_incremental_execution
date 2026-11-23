@@ -1,0 +1,585 @@
+diff --git a/src/cbmc/cbmc_parse_options.cpp b/src/cbmc/cbmc_parse_options.cpp
+index ecab0db8..c0c4ff5f 100644
+--- a/src/cbmc/cbmc_parse_options.cpp
++++ b/src/cbmc/cbmc_parse_options.cpp
+@@ -10,6 +10,8 @@ Author: Daniel Kroening, kroening@kroening.com
+ /// CBMC Command Line Option Processing
+ 
+ #include "cbmc_parse_options.h"
++#include <goto-symex/stage3_observer.h>
++#include <util/json_stream.h>
+ 
+ #include <cstdlib> // exit()
+ #include <cstdio>
+@@ -554,11 +556,17 @@ int cbmc_parse_optionst::doit()
+     return CPROVER_EXIT_SUCCESS;
+   }
+ 
++  const auto parse_start = stage3::clockt::now();
+   int get_goto_program_ret =
+     get_goto_program(goto_model, options, cmdline, ui_message_handler);
+ 
+   if(get_goto_program_ret!=-1)
+     return get_goto_program_ret;
++  if(stage3::enabled())
++  {
++    stage3::timing("parse_goto", parse_start, stage3::clockt::now());
++    stage3::goto_model(goto_model.get_goto_functions());
++  }
+ 
+   if(cmdline.isset("show-claims") || // will go away
+      cmdline.isset("show-properties")) // use this one
+@@ -698,8 +706,20 @@ int cbmc_parse_optionst::doit()
+   }
+ 
+   const resultt result = (*verifier)();
++  const auto output_start = stage3::clockt::now();
+   verifier->report();
+-
++  if(stage3::enabled())
++  {
++    if(ui_message_handler.get_ui() == ui_message_handlert::uit::JSON_UI)
++    {
++      ui_message_handler.get_json_stream().close();
++      ui_message_handler.flush(0);
++    }
++    stage3::timing("result_output", output_start, stage3::clockt::now());
++    stage3::finish(result_to_exit_code(result));
++    // The verifier, its equation, and its decision procedure remain in scope.
++    stage3::gate("verified", "RELEASE");
++  }
+   return result_to_exit_code(result);
+ }
+ 
+diff --git a/src/goto-checker/bmc_util.cpp b/src/goto-checker/bmc_util.cpp
+index 13476c39..4abfb617 100644
+--- a/src/goto-checker/bmc_util.cpp
++++ b/src/goto-checker/bmc_util.cpp
+@@ -10,6 +10,7 @@ Author: Daniel Kroening, Peter Schrammel
+ /// Bounded Model Checking Utilities
+ 
+ #include "bmc_util.h"
++#include <goto-symex/stage3_observer.h>
+ 
+ #include <iostream>
+ 
+@@ -396,7 +397,9 @@ void postprocess_equation(
+       memory_model->enable_deadlock = true;
+     // __WP_ADD_END__
+ 
++    const auto model_start = stage3::clockt::now();
+     (*memory_model)(equation, ui_message_handler);
++    stage3::timing("event_constraints", model_start, stage3::clockt::now());
+   }
+ 
+   messaget log(ui_message_handler);
+@@ -562,6 +565,7 @@ std::chrono::duration<double> prepare_property_decider(
+   // __SZH_ADD_END__
+ 
+   auto solver_stop = std::chrono::steady_clock::now();
++  stage3::timing("cnf_and_graph", solver_start, solver_stop);
+   return std::chrono::duration<double>(solver_stop - solver_start);
+ }
+ 
+@@ -591,6 +595,8 @@ void run_property_decider(
+   decision_proceduret::resultt dec_result = property_decider.solve();
+ 
+   auto const sat_solver_stop = std::chrono::steady_clock::now();
++  stage3::timing("solve", sat_solver_start, sat_solver_stop);
++  stage3::timing("goal_conversion", solver_start, sat_solver_start);
+   std::chrono::duration<double> sat_solver_runtime =
+     std::chrono::duration<double>(sat_solver_stop - sat_solver_start);
+   log.status() << "Runtime Solver: " << sat_solver_runtime.count() << "s"
+diff --git a/src/goto-checker/multi_path_symex_only_checker.cpp b/src/goto-checker/multi_path_symex_only_checker.cpp
+index b9d41870..8afda227 100644
+--- a/src/goto-checker/multi_path_symex_only_checker.cpp
++++ b/src/goto-checker/multi_path_symex_only_checker.cpp
+@@ -10,6 +10,7 @@ Author: Daniel Kroening, Peter Schrammel
+ /// Goto Checker using Multi-Path Symbolic Execution only (no SAT solving)
+ 
+ #include "multi_path_symex_only_checker.h"
++#include <goto-symex/stage3_observer.h>
+ 
+ #include <util/ui_message.h>
+ 
+@@ -106,6 +107,12 @@ void multi_path_symex_only_checkert::generate_equation()
+   }
+   // __SZH_ADD_END__
+ 
++  if(stage3::enabled())
++  {
++    stage3::timing("symbolic_execution", symex_start, stage3::clockt::now());
++    stage3::equation("raw_ssa", equation);
++  }
++  const auto cleanup_start = stage3::clockt::now();
+   if(options.get_bool_option("concurrency-slice"))
+     symex.concurrency_slice();
+   else
+@@ -130,7 +137,17 @@ void multi_path_symex_only_checkert::generate_equation()
+   log.status() << "Runtime Symex: " << symex_runtime.count() << "s"
+                << messaget::eom;
+ 
++  if(stage3::enabled())
++  {
++    stage3::timing("symex_cleanup", cleanup_start, symex_stop);
++    stage3::equation("sc_input", equation);
++  }
+   postprocess_equation(symex, equation, options, ns, ui_message_handler);
++  if(stage3::enabled())
++  {
++    stage3::equation("full_model", equation);
++    stage3::gate("built", "VERIFY");
++  }
+ }
+ 
+ void multi_path_symex_only_checkert::update_properties(
+diff --git a/src/goto-symex/Makefile b/src/goto-symex/Makefile
+index 0bf480c8..2a24ad0e 100644
+--- a/src/goto-symex/Makefile
++++ b/src/goto-symex/Makefile
+@@ -21,6 +21,7 @@ SRC = auto_objects.cpp \
+       slice.cpp \
+       solver_hardness.cpp \
+       ssa_step.cpp \
++      stage3_observer.cpp \
+       symex_assign.cpp \
+       symex_atomic_section.cpp \
+       symex_builtin_functions.cpp \
+diff --git a/src/goto-symex/memory_model.cpp b/src/goto-symex/memory_model.cpp
+index f74ea6d0..01ffdc8f 100644
+--- a/src/goto-symex/memory_model.cpp
++++ b/src/goto-symex/memory_model.cpp
+@@ -10,6 +10,7 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
+ /// Memory model for partial order concurrency
+ 
+ #include "memory_model.h"
++#include "stage3_observer.h"
+ #include <iostream>
+ 
+ #include <util/std_expr.h>
+@@ -280,6 +281,7 @@ std::string memory_model_baset::get_name(event_it e)
+   std::string e_str = id2string(id(e));
+   if(e_str == "")
+     e_str = fill_name(e);
++  stage3::name_event(*e, e_str);
+   return e_str;
+ }
+ 
+diff --git a/src/goto-symex/ssa_step.h b/src/goto-symex/ssa_step.h
+index 0e46efdb..203088e8 100644
+--- a/src/goto-symex/ssa_step.h
++++ b/src/goto-symex/ssa_step.h
+@@ -189,6 +189,9 @@ public:
+   // for incremental conversion
+   bool converted = false;
+ 
++  // Diagnostic link to the originating instruction dispatch; local to this run.
++  std::size_t observer_visit = 0;
++
+   SSA_stept(
+     const symex_targett::sourcet &_source,
+     goto_trace_stept::typet _type)
+diff --git a/src/goto-symex/stage3_observer.cpp b/src/goto-symex/stage3_observer.cpp
+new file mode 100644
+index 00000000..b90058cd
+--- /dev/null
++++ b/src/goto-symex/stage3_observer.cpp
+@@ -0,0 +1,336 @@
++#include "stage3_observer.h"
++
++#include <goto-programs/goto_functions.h>
++#include <util/config.h>
++#include <util/json.h>
++#include "goto_symex_state.h"
++#include "symex_target_equation.h"
++
++#include <cstdio>
++#include <cstdlib>
++#include <fstream>
++#include <iostream>
++#include <map>
++#include <stdexcept>
++#include <unordered_map>
++
++namespace stage3
++{
++namespace
++{
++const char *const directory = std::getenv("INCDEAGLE_OBSERVE_DIR");
++json_arrayt visits;
++std::map<const SSA_stept *, std::string> event_names;
++std::map<std::string, long long> times;
++
++json_numbert number(std::size_t value)
++{
++  return json_numbert(std::to_string(value));
++}
++
++jsont boolean(bool value)
++{
++  if(value)
++    return json_truet();
++  return json_falset();
++}
++
++void save(const std::string &name, const jsont &value)
++{
++  const std::string path = std::string(directory) + "/" + name + ".json";
++  const std::string temporary = path + ".tmp";
++  std::ofstream out(temporary);
++  out << value << '\n';
++  out.close();
++  if(!out || std::rename(temporary.c_str(), path.c_str()) != 0)
++    throw std::runtime_error("Cannot publish diagnostic " + name);
++}
++
++// All integer links in a pool are local to a single document.
++// Type, operators and operands are retained. Source locations are separate.
++class irep_poolt
++{
++  std::unordered_map<irept, std::size_t, irep_full_hash, irep_full_eq> ids;
++public:
++  json_arrayt rows;
++  jsont ref(const irept &value)
++  {
++    if(value.is_nil())
++      return json_nullt();
++    const auto found = ids.find(value);
++    if(found != ids.end())
++      return number(found->second);
++    json_objectt node;
++    node["id"] = json_stringt(value.id());
++    json_arrayt operands;
++    for(const auto &operand : value.get_sub())
++      operands.push_back(ref(operand));
++    if(!operands.empty())
++      node["sub"] = std::move(operands);
++    json_objectt named;
++    for(const auto &item : value.get_named_sub())
++      named[id2string(item.first)] = ref(item.second);
++    if(named.size() != 0)
++      node["named"] = std::move(named);
++    const std::size_t index = rows.size();
++    ids.emplace(value, index);
++    rows.push_back(std::move(node));
++    return number(index);
++  }
++};
++
++json_objectt place(const symex_targett::sourcet &source)
++{
++  json_objectt loc;
++  loc["function"] = json_stringt(source.function_id);
++  loc["pc"] = number(source.pc->location_number);
++  return loc;
++}
++
++const char *step_kind(goto_trace_stept::typet type)
++{
++  using T = goto_trace_stept::typet;
++  switch(type)
++  {
++  case T::NONE: return "none";
++  case T::ASSIGNMENT: return "assignment";
++  case T::ASSUME: return "assume";
++  case T::ASSERT: return "assert";
++  case T::GOTO: return "goto";
++  case T::LOCATION: return "location";
++  case T::INPUT: return "input";
++  case T::OUTPUT: return "output";
++  case T::DECL: return "decl";
++  case T::DEAD: return "dead";
++  case T::FUNCTION_CALL: return "function_call";
++  case T::FUNCTION_RETURN: return "function_return";
++  case T::CONSTRAINT: return "constraint";
++  case T::SHARED_READ: return "read";
++  case T::SHARED_WRITE: return "write";
++  case T::SPAWN: return "spawn";
++  case T::MEMORY_BARRIER: return "fence";
++  case T::ATOMIC_BEGIN: return "atomic_begin";
++  case T::ATOMIC_END: return "atomic_end";
++  }
++  throw std::logic_error("Unrecognized SSA step");
++}
++}
++
++bool enabled()
++{
++  return directory != nullptr && *directory != '\0';
++}
++
++void timing(const std::string &name, clockt::time_point start, clockt::time_point end)
++{
++  if(enabled())
++    times[name] += std::chrono::duration_cast<std::chrono::nanoseconds>(end - start).count();
++}
++
++void goto_model(const goto_functionst &functions)
++{
++  irep_poolt pool;
++  json_arrayt rows;
++  for(const auto &fn : functions.function_map)
++    for(const auto &ins : fn.second.body.instructions)
++    {
++      const auto &loc = ins.source_location();
++      json_objectt row;
++      row["function"] = json_stringt(fn.first);
++      row["pc"] = number(ins.location_number);
++      row["kind"] = json_stringt(ins.to_string());
++      row["file"] = json_stringt(loc.get_file());
++      row["line"] = json_stringt(loc.get_line());
++      row["column"] = json_stringt(loc.get_column());
++      row["property"] = json_stringt(loc.get_property_id());
++      if(ins.is_backwards_goto())
++        row["local_loop"] = json_stringt(goto_programt::loop_id(fn.first, ins));
++      row["code"] = pool.ref(ins.code());
++      if(ins.has_condition())
++        row["condition"] = pool.ref(ins.condition());
++      json_arrayt targets;
++      for(const auto &target : ins.targets)
++        targets.push_back(number(target->location_number));
++      row["targets"] = std::move(targets);
++      rows.push_back(std::move(row));
++    }
++  const auto &c = config.ansi_c;
++  json_objectt layout;
++  layout["char_bits"] = number(c.char_width);
++  layout["short_bits"] = number(c.short_int_width);
++  layout["int_bits"] = number(c.int_width);
++  layout["long_bits"] = number(c.long_int_width);
++  layout["long_long_bits"] = number(c.long_long_int_width);
++  layout["pointer_bits"] = number(c.pointer_width);
++  layout["wchar_bits"] = number(c.wchar_t_width);
++  layout["char_unsigned"] = boolean(c.char_is_unsigned);
++  layout["alignment_bytes"] = number(c.alignment);
++  layout["endian_code"] = number(static_cast<unsigned>(c.endianness));
++  json_objectt out;
++  out["schema"] = number(1);
++  out["layout"] = std::move(layout);
++  out["instructions"] = std::move(rows);
++  out["ireps"] = std::move(pool.rows);
++  save("goto", out);
++}
++
++std::size_t visit(const goto_symex_statet &state)
++{
++  json_objectt row = place(state.source);
++  row["thread"] = number(state.source.thread_nr);
++  row["reachable_at_dispatch"] = boolean(state.reachable);
++  json_arrayt frames;
++  for(const auto &frame : state.call_stack())
++  {
++    json_objectt f;
++    f["function"] = json_stringt(frame.function_identifier);
++    // The root's saved calling PC is an end iterator. The creator of a child
++    // thread is exported from the native witness_spawn_events separately.
++    if(!frames.empty())
++      f["caller"] = place(frame.calling_location);
++    json_objectt loops;
++    for(const auto &loop : frame.loop_iterations)
++      if(loop.second.count && !loop.second.is_recursion)
++        loops[id2string(loop.first)] = number(loop.second.count);
++    f["loops"] = std::move(loops);
++    frames.push_back(std::move(f));
++  }
++  row["frames"] = std::move(frames);
++  visits.push_back(std::move(row));
++  return visits.size(); // zero means no symex dispatch (e.g. memory-model rows)
++}
++
++void name_event(const SSA_stept &step, const std::string &name)
++{
++  if(enabled())
++    event_names[&step] = name;
++}
++
++void equation(const char *name, const symex_target_equationt &model)
++{
++  const auto before = clockt::now();
++  irep_poolt pool;
++  json_arrayt rows;
++  const SSA_stept *previous = nullptr;
++  std::size_t source_group = 0;
++  for(const auto &s : model.SSA_steps)
++  {
++    json_objectt row = place(s.source);
++    // Mirror the pinned SC same_source predicate. Only group membership among
++    // shared accesses is exported as a cross-version semantic dependency.
++    if(previous == nullptr || previous->source.function_id != s.source.function_id ||
++       previous->source.thread_nr != s.source.thread_nr ||
++       previous->source.pc->source_location() != s.source.pc->source_location())
++      ++source_group;
++    previous = &s;
++    row["local_source_group"] = number(source_group);
++    row["kind"] = json_stringt(step_kind(s.type));
++    row["thread"] = number(s.source.thread_nr);
++    row["visit"] = number(s.observer_visit);
++    row["atomic_section"] = number(s.atomic_section_id);
++    row["guard"] = pool.ref(s.guard);
++    row["condition"] = pool.ref(s.cond_expr);
++    row["lhs"] = pool.ref(s.ssa_lhs);
++    row["rhs"] = pool.ref(s.ssa_rhs);
++    row["full_lhs"] = pool.ref(s.ssa_full_lhs);
++    row["original_lhs"] = pool.ref(s.original_full_lhs);
++    row["assignment_type"] = number(static_cast<unsigned>(s.assignment_type));
++    row["hidden"] = boolean(s.hidden);
++    row["ignored"] = boolean(s.ignore);
++    if(!s.comment.empty())
++      row["comment"] = json_stringt(s.comment);
++    if(s.is_assert())
++      row["property"] = json_stringt(s.get_property_id());
++    if(!s.called_function.empty())
++      row["called"] = json_stringt(s.called_function);
++    if(!s.ssa_function_arguments.empty())
++    {
++      json_arrayt args;
++      for(const auto &arg : s.ssa_function_arguments)
++        args.push_back(pool.ref(arg));
++      row["arguments"] = std::move(args);
++    }
++    if(s.type == goto_trace_stept::typet::INPUT || s.is_output())
++    {
++      json_arrayt args;
++      for(const auto &arg : s.io_args)
++        args.push_back(pool.ref(arg));
++      row["io_args"] = std::move(args);
++      row["io_id"] = json_stringt(s.io_id);
++      row["format"] = json_stringt(s.format_string);
++    }
++    if(s.ssa_lhs.is_not_nil())
++    {
++      row["local_symbol"] = json_stringt(s.ssa_lhs.get_identifier());
++      row["object"] = json_stringt(s.ssa_lhs.get_original_name());
++      row["address_l1"] = json_stringt(s.ssa_lhs.get_l1_object_identifier());
++    }
++    const auto found = event_names.find(&s);
++    if(found != event_names.end())
++      row["oc_name"] = json_stringt(found->second);
++    rows.push_back(std::move(row));
++  }
++  json_arrayt edges, births, guards;
++  for(const auto &edge : model.oc_edges)
++  {
++    json_objectt row;
++    row["kind"] = json_stringt(edge.kind);
++    row["from"] = json_stringt(edge.e1_str);
++    row["to"] = json_stringt(edge.e2_str);
++    row["guard"] = pool.ref(edge.expr);
++    edges.push_back(std::move(row));
++  }
++  for(const auto &b : model.witness_spawn_events)
++  {
++    auto row = place(b.call_site);
++    row["parent"] = number(b.creator_thread);
++    row["child"] = number(b.child_thread);
++    row["guard"] = pool.ref(b.guard);
++    births.push_back(std::move(row));
++  }
++  for(const auto &it : model.oc_guard_map)
++  {
++    json_objectt row;
++    row["local_symbol"] = json_stringt(it->ssa_lhs.get_identifier());
++    row["guard"] = pool.ref(it->guard);
++    row["solver_line"] = json_stringt(it->source.pc->source_location().get_line());
++    guards.push_back(std::move(row));
++  }
++  json_objectt out;
++  out["schema"] = number(1);
++  out["phase"] = json_stringt(name);
++  out["steps"] = std::move(rows);
++  out["oc_edges"] = std::move(edges);
++  out["oc_guards"] = std::move(guards);
++  out["thread_births"] = std::move(births);
++  out["ireps"] = std::move(pool.rows);
++  save(name, out);
++  timing("equation_export", before, clockt::now());
++}
++
++void finish(int exit_code)
++{
++  save("visits", visits);
++  json_objectt t;
++  for(const auto &entry : times)
++    t[entry.first] = json_numbert(std::to_string(entry.second));
++  json_objectt out;
++  out["schema"] = number(1);
++  out["phase_nanoseconds"] = std::move(t);
++  out["symbolic_instruction_dispatches"] = number(visits.size());
++  out["exit_code"] = number(exit_code);
++  save("metrics", out);
++}
++
++void gate(const char *state, const char *command)
++{
++  if(!std::getenv("INCDEAGLE_STAGE3_SESSION"))
++    return;
++  json_objectt status;
++  status["state"] = json_stringt(state);
++  save(state, status);
++  std::string request;
++  if(!std::getline(std::cin, request) || request != command)
++    throw std::runtime_error("Native session closed or received an unexpected command");
++}
++}
+diff --git a/src/goto-symex/stage3_observer.h b/src/goto-symex/stage3_observer.h
+new file mode 100644
+index 00000000..097ac175
+--- /dev/null
++++ b/src/goto-symex/stage3_observer.h
+@@ -0,0 +1,25 @@
++#ifndef CPROVER_GOTO_SYMEX_STAGE3_OBSERVER_H
++#define CPROVER_GOTO_SYMEX_STAGE3_OBSERVER_H
++
++#include <chrono>
++#include <cstddef>
++#include <string>
++
++class goto_functionst;
++class goto_symex_statet;
++class symex_target_equationt;
++class SSA_stept;
++
++namespace stage3
++{
++using clockt = std::chrono::steady_clock;
++bool enabled();
++void timing(const std::string &name, clockt::time_point start, clockt::time_point end);
++void goto_model(const goto_functionst &functions);
++std::size_t visit(const goto_symex_statet &state);
++void name_event(const SSA_stept &step, const std::string &name);
++void equation(const char *name, const symex_target_equationt &model);
++void finish(int exit_code);
++void gate(const char *state, const char *command);
++}
++#endif
+diff --git a/src/goto-symex/symex_main.cpp b/src/goto-symex/symex_main.cpp
+index b8c785dc..8d339613 100644
+--- a/src/goto-symex/symex_main.cpp
++++ b/src/goto-symex/symex_main.cpp
+@@ -10,6 +10,7 @@ Author: Daniel Kroening, kroening@kroening.com
+ /// Symbolic Execution
+ 
+ #include "goto_symex.h"
++#include "stage3_observer.h"
+ 
+ #include <memory>
+ #include <chrono>
+@@ -619,9 +620,18 @@ void goto_symext::symex_step(
+   // __SZH_ADD_END__
+ 
+   // Print debug statements if they've been enabled.
++  const bool observe = stage3::enabled();
++  const auto prior_size = observe ? target.SSA_steps.size() : 0;
++  const auto dispatch = observe ? stage3::visit(state) : 0;
+   print_symex_step(state);
+   execute_next_instruction(get_goto_function, state);
+   kill_instruction_local_symbols(state);
++  if(observe)
++  {
++    auto row = target.SSA_steps.rbegin();
++    for(auto size = target.SSA_steps.size(); size > prior_size; --size, ++row)
++      row->observer_visit = dispatch;
++  }
+ }
+ 
+ void goto_symext::execute_next_instruction(

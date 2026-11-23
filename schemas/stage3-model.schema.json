@@ -1,0 +1,909 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Stage 3 full-build observations and structural comparison",
+  "oneOf": [
+    {
+      "$ref": "#/definitions/manifest"
+    },
+    {
+      "$ref": "#/definitions/model"
+    },
+    {
+      "$ref": "#/definitions/delta"
+    }
+  ],
+  "definitions": {
+    "location": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "string"
+        },
+        "line": {
+          "type": "string"
+        },
+        "column": {
+          "type": "string"
+        },
+        "function": {
+          "type": "string"
+        },
+        "pc": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "file",
+        "line",
+        "column",
+        "function",
+        "pc"
+      ]
+    },
+    "source": {
+      "type": "object",
+      "properties": {
+        "descriptor": {
+          "type": "array",
+          "items": {}
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/location"
+          }
+        },
+        "unique": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "descriptor",
+        "locations",
+        "unique"
+      ]
+    },
+    "instruction": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "kind": {
+          "type": "string"
+        },
+        "locations": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/location"
+          }
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "unique": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "source",
+        "kind",
+        "locations",
+        "targets",
+        "unique"
+      ]
+    },
+    "node": {
+      "type": "object",
+      "properties": {
+        "operator": {
+          "type": "string"
+        },
+        "fields": {
+          "type": "object",
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "operands": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      },
+      "required": [
+        "operator",
+        "fields",
+        "operands"
+      ]
+    },
+    "eventKey": {
+      "type": "object",
+      "properties": {
+        "source": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "instruction": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "thread": {
+          "type": "string"
+        },
+        "calls": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "minItems": 3,
+            "maxItems": 3
+          }
+        },
+        "dispatch": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "occurrence": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "role": {
+          "enum": [
+            "read",
+            "write",
+            "spawn",
+            "fence"
+          ]
+        },
+        "object": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        }
+      },
+      "required": [
+        "source",
+        "instruction",
+        "thread",
+        "calls",
+        "dispatch",
+        "occurrence",
+        "role",
+        "object"
+      ]
+    },
+    "semantic": {
+      "type": "object",
+      "properties": {
+        "guard": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "oc_guard": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "value": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "type": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "object": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "role": {
+          "type": "string"
+        },
+        "atomic_region": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "ordering": {
+          "type": "array",
+          "items": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        },
+        "solver_line": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "sc_same_source": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      },
+      "required": [
+        "guard",
+        "oc_guard",
+        "value",
+        "type",
+        "object",
+        "role",
+        "atomic_region",
+        "ordering",
+        "solver_line",
+        "sc_same_source"
+      ]
+    },
+    "event": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "key": {
+          "$ref": "#/definitions/eventKey"
+        },
+        "semantic": {
+          "$ref": "#/definitions/semantic"
+        },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "identity_unique": {
+          "type": "boolean"
+        },
+        "comparable": {
+          "type": "boolean"
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "bucket": {
+          "anyOf": [
+            {
+              "type": "string"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "thread": {
+          "type": "string"
+        },
+        "native_step": {
+          "type": "integer",
+          "minimum": 0
+        }
+      },
+      "required": [
+        "id",
+        "key",
+        "semantic",
+        "fingerprint",
+        "identity_unique",
+        "comparable",
+        "dependencies",
+        "bucket",
+        "thread",
+        "native_step"
+      ]
+    },
+    "fragment": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "type": "string"
+        },
+        "owner": {
+          "anyOf": [
+            {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            {
+              "type": "null"
+            }
+          ]
+        },
+        "typed_expression": {
+          "type": "object",
+          "additionalProperties": {
+            "anyOf": [
+              {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              {
+                "type": "null"
+              }
+            ]
+          }
+        },
+        "semantics": {
+          "type": "object"
+        },
+        "symbols": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "dependencies": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "threads": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "buckets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fingerprint": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "comparable": {
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "kind",
+        "owner",
+        "typed_expression",
+        "semantics",
+        "symbols",
+        "dependencies",
+        "threads",
+        "buckets",
+        "fingerprint",
+        "comparable"
+      ]
+    },
+    "model": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": 1
+        },
+        "mappings": {
+          "type": "object",
+          "properties": {
+            "sources": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/source"
+              }
+            },
+            "instructions": {
+              "type": "object",
+              "additionalProperties": {
+                "$ref": "#/definitions/instruction"
+              }
+            }
+          },
+          "required": [
+            "sources",
+            "instructions"
+          ]
+        },
+        "layout": {
+          "type": "object"
+        },
+        "events": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/event"
+          }
+        },
+        "fragments": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/fragment"
+          }
+        },
+        "typed_nodes": {
+          "type": "object",
+          "additionalProperties": {
+            "$ref": "#/definitions/node"
+          }
+        },
+        "counts": {
+          "type": "object"
+        },
+        "target": {
+          "type": "string"
+        },
+        "unwinding_properties": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "structure_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "schema",
+        "mappings",
+        "layout",
+        "events",
+        "fragments",
+        "typed_nodes",
+        "counts",
+        "target",
+        "unwinding_properties",
+        "structure_sha256"
+      ]
+    },
+    "manifest": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": 1
+        },
+        "case": {
+          "type": "string"
+        },
+        "source_sha256": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "headers": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "preprocessing": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "unit": {
+                "type": "string"
+              },
+              "argv": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "output_sha256": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "unit",
+              "argv",
+              "output_sha256"
+            ]
+          }
+        },
+        "context": {
+          "type": "object",
+          "properties": {
+            "schema": {
+              "const": 1
+            },
+            "toolchain": {
+              "type": "object"
+            },
+            "preprocessor": {
+              "type": "object"
+            },
+            "cpp_flags": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              }
+            },
+            "headers_and_builtin_inputs": {
+              "type": "object",
+              "additionalProperties": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "architecture": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "layout": {
+              "type": "object"
+            },
+            "harness": {
+              "type": "string",
+              "pattern": "^[0-9a-f]{64}$"
+            },
+            "property": {
+              "type": "object"
+            },
+            "gamma": {
+              "type": "object"
+            },
+            "limits": {
+              "type": "object"
+            },
+            "backend": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "schema",
+            "toolchain",
+            "preprocessor",
+            "cpp_flags",
+            "headers_and_builtin_inputs",
+            "architecture",
+            "layout",
+            "harness",
+            "property",
+            "gamma",
+            "limits",
+            "backend"
+          ]
+        },
+        "context_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "version_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "schema",
+        "case",
+        "source_sha256",
+        "headers",
+        "preprocessing",
+        "context",
+        "context_sha256",
+        "version_sha256"
+      ]
+    },
+    "comparison": {
+      "type": "object",
+      "properties": {
+        "matched": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "rejected": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "old_only": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "new_only": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        }
+      },
+      "required": [
+        "matched",
+        "rejected",
+        "old_only",
+        "new_only"
+      ]
+    },
+    "single": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "native_step": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "native_step",
+        "reason"
+      ]
+    },
+    "delta": {
+      "type": "object",
+      "properties": {
+        "schema": {
+          "const": 1
+        },
+        "old_version": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "candidate_version": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "events_added": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/single"
+          }
+        },
+        "events_removed": {
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/single"
+          }
+        },
+        "events_retained": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[0-9a-f]{64}$"
+          }
+        },
+        "events_changed": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "id": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "old_step": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "new_step": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "reasons": {
+                "type": "array",
+                "items": {
+                  "type": "string"
+                }
+              },
+              "comparison": {
+                "enum": [
+                  "unconfirmed",
+                  "semantic_difference"
+                ]
+              }
+            },
+            "required": [
+              "id",
+              "old_step",
+              "new_step",
+              "reasons",
+              "comparison"
+            ]
+          }
+        },
+        "constraints_added": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "constraints_removed": {
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "minimum": 0
+          }
+        },
+        "constraints_retained": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "fingerprint": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              },
+              "count": {
+                "type": "integer",
+                "minimum": 1
+              }
+            },
+            "required": [
+              "fingerprint",
+              "count"
+            ]
+          }
+        },
+        "affected_threads": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "affected_address_buckets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_mapping": {
+          "type": "object",
+          "properties": {
+            "sources": {
+              "$ref": "#/definitions/comparison"
+            },
+            "instructions": {
+              "$ref": "#/definitions/comparison"
+            }
+          },
+          "required": [
+            "sources",
+            "instructions"
+          ]
+        },
+        "source_mapping_summary": {
+          "type": "object"
+        },
+        "analysis_changes": {
+          "type": "object"
+        },
+        "checkpoint_used": {
+          "const": false
+        },
+        "invalidation_reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "fallback_reason": {
+          "const": "stage3_full_only"
+        }
+      },
+      "required": [
+        "schema",
+        "old_version",
+        "candidate_version",
+        "events_added",
+        "events_removed",
+        "events_retained",
+        "events_changed",
+        "constraints_added",
+        "constraints_removed",
+        "constraints_retained",
+        "affected_threads",
+        "affected_address_buckets",
+        "source_mapping",
+        "source_mapping_summary",
+        "analysis_changes",
+        "checkpoint_used",
+        "invalidation_reasons",
+        "fallback_reason"
+      ]
+    }
+  }
+}

@@ -1,0 +1,122 @@
+{
+  "builds": {
+    "development": {
+      "commit": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332",
+      "generated_version_cpp": [
+        "const char *CBMC_VERSION=\"5.67.0\";",
+        "const char *DEAGLE_VERSION=\"4.2.0 (edd8dfc8)\";"
+      ],
+      "sha256": "a5960294056efe0bdd8242054e8a6f2e9f56801901aa7d38ccf52ba6f8360c37",
+      "tracked_status": "",
+      "tree": "a91903d9ee81997ee7bf0b01dadce8eebff88f7e",
+      "version": "4.2.0"
+    },
+    "fresh_checkout": {
+      "commit": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332",
+      "generated_version_cpp": [
+        "const char *CBMC_VERSION=\"5.67.0\";",
+        "const char *DEAGLE_VERSION=\"4.2.0 (edd8dfc8)\";"
+      ],
+      "sha256": "a5960294056efe0bdd8242054e8a6f2e9f56801901aa7d38ccf52ba6f8360c37",
+      "tracked_status": "",
+      "tree": "a91903d9ee81997ee7bf0b01dadce8eebff88f7e",
+      "version": "4.2.0"
+    },
+    "independent_baseline": {
+      "commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "generated_version_cpp": [
+        "const char *CBMC_VERSION=\"5.67.0\";",
+        "const char *DEAGLE_VERSION=\"4.2.0 (a159f992)\";"
+      ],
+      "sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+      "tracked_status": "",
+      "tree": "53d7e7c29471d96efbff747e7b4be1063f2a658d",
+      "version": "4.2.0"
+    }
+  },
+  "bundle_check": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332 refs/heads/incdeagle-work",
+  "found_build_issue": "The existing thin archive appended stage3_observer.o after 42 older objects. The fresh Makefile order places it after ssa_step.o. The compiled .o files compared equal; recreating that archive reproduces the clean binary hash.",
+  "linked_libraries": [
+    "linux-vdso.so.1",
+    "libstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6",
+    "libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6",
+    "libgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1",
+    "libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6",
+    "/lib64/ld-linux-x86-64.so.2"
+  ],
+  "logs": {
+    "bundle-verify.log": {
+      "sha256": "0eb92c78fb1e935146a98933f15535f8f1643e15c03bc7aafcb5db5eb68e342e",
+      "time_fields": []
+    },
+    "clean.log": {
+      "sha256": "eff1286f4dcc693a328da1c08df8e369f5e4dc1fd19e461b9f6e22b0001d7334",
+      "time_fields": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:03.20",
+        "Maximum resident set size (kbytes): 149420",
+        "Exit status: 0"
+      ]
+    },
+    "deterministic.log": {
+      "sha256": "a3786dbcc4d6352ee67968134b05d6bf14bdd697ac6517e2a5834c8db98466a7",
+      "time_fields": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.71",
+        "Maximum resident set size (kbytes): 151332",
+        "Exit status: 0"
+      ]
+    },
+    "final.log": {
+      "sha256": "0e9946e52b43dee02f5273d62e0d65c92bb1b7e43a86af89baf3b47193799fea",
+      "time_fields": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:34.12",
+        "Maximum resident set size (kbytes): 508112",
+        "Exit status: 0"
+      ]
+    },
+    "make.log": {
+      "sha256": "44e04f7c75ab0a4eadd9ee952ab96c6bec95e48cc49fef91245fbeed3139d5aa",
+      "time_fields": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:13.69",
+        "Maximum resident set size (kbytes): 346048",
+        "Exit status: 2"
+      ]
+    },
+    "pinned.log": {
+      "sha256": "85fbb76f90dd8799d73855f2c80dfd1f176553754471316c1b42a1cee5608cfc",
+      "time_fields": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:01.60",
+        "Maximum resident set size (kbytes): 151408",
+        "Exit status: 0"
+      ]
+    },
+    "prepare.log": {
+      "sha256": "cba911cdd946207b01899772656a69b89aa14b66e7940795b57b5ad6cdaee04b",
+      "time_fields": []
+    },
+    "qualified.log": {
+      "sha256": "31d2963c964e846411e295d3e59ab49dec80e1f098aa71d77e40b8e70b8382f4",
+      "time_fields": [
+        "Elapsed (wall clock) time (h:mm:ss or m:ss): 0:04.03",
+        "Maximum resident set size (kbytes): 326192",
+        "Exit status: 0"
+      ]
+    }
+  },
+  "observed_packages": {
+    "binutils": "2.38-4ubuntu2.12",
+    "bison": "2:3.8.2+dfsg-1ubuntu0.22.04.1",
+    "ccache": "4.5.1-1",
+    "flex": "2.6.4-8build2",
+    "g++-11": "11.4.0-1ubuntu1~22.04.3",
+    "gcc-11": "11.4.0-1ubuntu1~22.04.3",
+    "libc6-dev:amd64": "2.35-0ubuntu3.18",
+    "libc6:amd64": "2.35-0ubuntu3.18",
+    "libstdc++-11-dev:amd64": "11.4.0-1ubuntu1~22.04.3",
+    "make": "4.3-4.1build1",
+    "python3-jsonschema": "3.2.0-0ubuntu2",
+    "python3-yaml": "5.4.1-1ubuntu1"
+  },
+  "patch_replay_tree": "a91903d9ee81997ee7bf0b01dadce8eebff88f7e",
+  "schema": 1,
+  "verified_utc": "2026-11-23T11:04:41.176289+00:00"
+}

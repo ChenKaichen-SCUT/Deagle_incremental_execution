@@ -2,7 +2,8 @@
 from incdeagle.adapters.deagle import source_location
 
 
-def normalize(row, phi, gamma, hashes, trace_path):
+def normalize(row, phi, gamma, hashes, trace_path, version="old"):
+    snapshot_hash_field = {"old": "p0_sha256", "candidate": "p1_sha256"}[version]
     trace = row.get("trace")
     if not isinstance(trace, list) or not trace:
         raise ValueError("Missing counterexample for failed target")
@@ -23,7 +24,7 @@ def normalize(row, phi, gamma, hashes, trace_path):
     missing = {field: sum(s[field] is None if field == "thread" else not s[field] for s in steps)
                for field in ("thread", "source")}
     assignments = [s["index"] for s in steps if s["type"] == "assignment" and s.get("lhs") and "value" in s]
-    return {"schema_version": 1, "property": phi["id"], "failure": failures[0], "p0_sha256": hashes["program.c"],
+    return {"schema_version": 1, "property": phi["id"], "failure": failures[0], snapshot_hash_field: hashes["program.c"],
             "input_sha256": hashes, "gamma": gamma, "raw_trace": trace_path, "raw_witness": None,
             "thread_ids": sorted({s["thread"] for s in steps if s["thread"] is not None}),
             "step_count": len(steps), "steps": steps, "assignment_indices": assignments,

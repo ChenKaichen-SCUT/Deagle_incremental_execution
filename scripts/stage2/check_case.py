@@ -116,7 +116,7 @@ def check(case, version, output):
                 if version == "old" and verdict["classification"] != "VIOLATION":
                     raise ValueError("Old case requires a confirmed target violation")
                 if verdict["classification"] == "VIOLATION":
-                    cex = normalize(row, phi, gamma, inputs, r["document"])
+                    cex = normalize(row, phi, gamma, inputs, r["document"], version=version)
                     write_json(output / ("cex0.json" if version == "old" else "cex1.json"), cex)
         if any(sha256(case / k) != v for k, v in semantic_inputs.items()) or sha256(snapshot) != inputs["program.c"]:
             raise ValueError("Input changed during verification")

@@ -1,0 +1,16 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "verified_utc": "2026-11-23T11:06:01.533074+00:00",
+  "stage_started_utc": "2026-11-23T10:27:14+00:00",
+  "seconds_to_stop_check": 2327.53,
+  "active_stage_solver_or_session_pids": [],
+  "active_build_units": [],
+  "deepseek_calls": 0,
+  "next_stage": 4,
+  "next_stage_approved": false,
+  "frozen_base": "8575a115c282a3aa8da88601a0e4a8a09f06d200",
+  "frozen_cases_tree": "6d3a21f391836d5dc846b7d63123ba28d721a5dd",
+  "frozen_case_changes": [],
+  "independent_baseline_head": "a159f9923722646185ba8028610b2eef2618fa72",
+  "development_head": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332"
+}

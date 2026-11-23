@@ -1,0 +1,13 @@
+--- a/program.c
++++ b/program.c
+@@ -12,7 +12,9 @@
+ 
+ static void record_left(void)
+ {
+-    record_split();
++    pthread_mutex_lock(&counter_mutex);
++    counter += 1;
++    pthread_mutex_unlock(&counter_mutex);
+ }
+ 
+ static void record_right(void)

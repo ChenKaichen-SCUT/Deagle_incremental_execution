@@ -1,0 +1,1311 @@
+{
+  "all_native_holders_exited": true,
+  "baseline_runs": 8,
+  "cases": {
+    "batch_total": {
+      "constraints": {
+        "added": 7,
+        "removed": 7,
+        "retained": 106
+      },
+      "events": {
+        "added": 0,
+        "changed": 2,
+        "removed": 0,
+        "retained": 22
+      },
+      "mapping": {
+        "instructions": {
+          "matched": 67,
+          "new_only": 0,
+          "old_only": 0,
+          "rejected": 2
+        },
+        "sources": {
+          "matched": 65,
+          "new_only": 0,
+          "old_only": 0,
+          "rejected": 2
+        }
+      },
+      "same_delta_sha256": "c815193a6f95148b4e2536c0b4e7f73d3b3a21822141a28c1f8f0cf1e5daa652",
+      "versions": {
+        "candidate": {
+          "baseline_verify_wall_s": 0.0689,
+          "classification": "NO_VIOLATION_WITHIN_BOUND",
+          "context": "a54b8b976145312974f71bf7469a0edb5617cbd7450512388fb2bc783a03b010",
+          "counts": {
+            "constraint_fragments": 113,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 6,
+                "rf-val": 10
+              },
+              "edge_kinds": {
+                "apo": 1,
+                "po": 24,
+                "rf": 10
+              },
+              "events": 24,
+              "oc_guards": 16,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 53,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "constraint": 16,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 7,
+                "function_return": 9,
+                "goto": 8,
+                "location": 7,
+                "output": 1,
+                "read": 6,
+                "spawn": 1,
+                "write": 16
+              },
+              "steps": 131
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 25,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 53,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 7,
+                "function_return": 9,
+                "goto": 8,
+                "location": 7,
+                "output": 1,
+                "read": 7,
+                "spawn": 1,
+                "write": 16
+              },
+              "steps": 116
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 24,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 53,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 7,
+                "function_return": 9,
+                "goto": 8,
+                "location": 7,
+                "output": 1,
+                "read": 6,
+                "spawn": 1,
+                "write": 16
+              },
+              "steps": 115
+            },
+            "symbolic_instruction_dispatches": 73
+          },
+          "model_digest": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655",
+          "observer_off": {
+            "exit": 0,
+            "result": "NO_VIOLATION_WITHIN_BOUND",
+            "wall_seconds": 0.0697
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 1849076,
+            "equation_export": 5903324,
+            "event_constraints": 1598871,
+            "goal_conversion": 7760,
+            "parse_goto": 139099119,
+            "result_output": 38771,
+            "solve": 238225,
+            "symbolic_execution": 1557621,
+            "symex_cleanup": 437828
+          },
+          "repeat_model_digest": "909390b63b4960ad0bf87ef73134973764a54c9eae8b4480ad24abc3acfe6655",
+          "repeat_phase_digests": {
+            "full_model": "2c2796aa5ad55568223b8795afc56b7d2f978a0c8dc6e0f890540f6b422ad8a3",
+            "goto": "a0628fcf3de147a6bf98b58be19cfd6d7a0a856a235367f16ee0bbe7c71ac2bc",
+            "native_visits": "36baddc259a9328255d01380067d35f3dbd4511fe137e184894b9324509b0419",
+            "raw_ssa": "ce862a6dd9f7df9fe6acc52e59589f3550c2c0743dfe29981fe3ecfc9d78a125",
+            "sc_input": "e62c8dfff56be21cfd138122c30015afa6225489d2fe4dc6c77b2d6e749a6fba"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 1800005,
+            "equation_export": 5800303,
+            "event_constraints": 1593910,
+            "goal_conversion": 7390,
+            "parse_goto": 138204602,
+            "result_output": 31241,
+            "solve": 235975,
+            "symbolic_execution": 1508099,
+            "symex_cleanup": 422509
+          },
+          "same_input_phase_digests": {
+            "full_model": "2c2796aa5ad55568223b8795afc56b7d2f978a0c8dc6e0f890540f6b422ad8a3",
+            "goto": "a0628fcf3de147a6bf98b58be19cfd6d7a0a856a235367f16ee0bbe7c71ac2bc",
+            "native_visits": "36baddc259a9328255d01380067d35f3dbd4511fe137e184894b9324509b0419",
+            "raw_ssa": "ce862a6dd9f7df9fe6acc52e59589f3550c2c0743dfe29981fe3ecfc9d78a125",
+            "sc_input": "e62c8dfff56be21cfd138122c30015afa6225489d2fe4dc6c77b2d6e749a6fba"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "21"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 0,
+          "version": "01dcef12136cd09d03f22d92414216cc1bfe6f66da8885613aa5e7194fdef985"
+        },
+        "old": {
+          "baseline_verify_wall_s": 0.0717,
+          "classification": "VIOLATION",
+          "context": "a54b8b976145312974f71bf7469a0edb5617cbd7450512388fb2bc783a03b010",
+          "counts": {
+            "constraint_fragments": 113,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 6,
+                "rf-val": 10
+              },
+              "edge_kinds": {
+                "apo": 1,
+                "po": 24,
+                "rf": 10
+              },
+              "events": 24,
+              "oc_guards": 16,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 53,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "constraint": 16,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 7,
+                "function_return": 9,
+                "goto": 8,
+                "location": 7,
+                "output": 1,
+                "read": 6,
+                "spawn": 1,
+                "write": 16
+              },
+              "steps": 131
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 25,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 53,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 7,
+                "function_return": 9,
+                "goto": 8,
+                "location": 7,
+                "output": 1,
+                "read": 7,
+                "spawn": 1,
+                "write": 16
+              },
+              "steps": 116
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 24,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 53,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 7,
+                "function_return": 9,
+                "goto": 8,
+                "location": 7,
+                "output": 1,
+                "read": 6,
+                "spawn": 1,
+                "write": 16
+              },
+              "steps": 115
+            },
+            "symbolic_instruction_dispatches": 73
+          },
+          "model_digest": "9de3d21645218738134d1f908a933aa2cab22f558ade66713607ae88e8f7f3fb",
+          "observer_off": {
+            "exit": 10,
+            "result": "VIOLATION",
+            "wall_seconds": 0.0719
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 1809385,
+            "equation_export": 5984207,
+            "event_constraints": 1537950,
+            "goal_conversion": 7361,
+            "parse_goto": 139673241,
+            "result_output": 772735,
+            "solve": 276155,
+            "symbolic_execution": 1558850,
+            "symex_cleanup": 428459
+          },
+          "repeat_model_digest": "9de3d21645218738134d1f908a933aa2cab22f558ade66713607ae88e8f7f3fb",
+          "repeat_phase_digests": {
+            "full_model": "952b909528d8283babcbfe6264026a261aa8d3e9d93d416b154e1947bce72c6c",
+            "goto": "560fb5d5e97dcea2e7c0e969429b9248847676e8a5b0c275c1bbf98a16491410",
+            "native_visits": "36baddc259a9328255d01380067d35f3dbd4511fe137e184894b9324509b0419",
+            "raw_ssa": "72b2ceb72e1f297832be219d321eb0ca46773bbfcfaa3e672279771dac62d636",
+            "sc_input": "ab45139dbd4b711dbd975ab8159461c8e47717fc338c9df1d274e43d22c4ad54"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 1845676,
+            "equation_export": 5903995,
+            "event_constraints": 1542280,
+            "goal_conversion": 10310,
+            "parse_goto": 139364884,
+            "result_output": 800336,
+            "solve": 276035,
+            "symbolic_execution": 1533390,
+            "symex_cleanup": 450089
+          },
+          "same_input_phase_digests": {
+            "full_model": "952b909528d8283babcbfe6264026a261aa8d3e9d93d416b154e1947bce72c6c",
+            "goto": "560fb5d5e97dcea2e7c0e969429b9248847676e8a5b0c275c1bbf98a16491410",
+            "native_visits": "36baddc259a9328255d01380067d35f3dbd4511fe137e184894b9324509b0419",
+            "raw_ssa": "72b2ceb72e1f297832be219d321eb0ca46773bbfcfaa3e672279771dac62d636",
+            "sc_input": "ab45139dbd4b711dbd975ab8159461c8e47717fc338c9df1d274e43d22c4ad54"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "21"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 62,
+          "version": "9a9762618c2554c9cb2b9f237acaea26a776ad04a1842ea20aa24b0f32cc9f2a"
+        }
+      }
+    },
+    "partial_counter": {
+      "constraints": {
+        "added": 155,
+        "removed": 218,
+        "retained": 169
+      },
+      "events": {
+        "added": 20,
+        "changed": 13,
+        "removed": 26,
+        "retained": 23
+      },
+      "mapping": {
+        "instructions": {
+          "matched": 98,
+          "new_only": 3,
+          "old_only": 1,
+          "rejected": 4
+        },
+        "sources": {
+          "matched": 93,
+          "new_only": 3,
+          "old_only": 1,
+          "rejected": 4
+        }
+      },
+      "same_delta_sha256": "3308c57cd0fc41304dbe1663db20083bade3f863caff504bad7bf0e46ac1af92",
+      "versions": {
+        "candidate": {
+          "baseline_verify_wall_s": 0.0896,
+          "classification": "VIOLATION",
+          "context": "b77281cd278da5d1ae3440083a87c8b966c76d00a6c3440bd5ca7f6a88e56d99",
+          "counts": {
+            "constraint_fragments": 324,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 18,
+                "rf-val": 58
+              },
+              "edge_kinds": {
+                "apo": 9,
+                "po": 56,
+                "rf": 58
+              },
+              "events": 56,
+              "oc_guards": 28,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 107,
+                "atomic_begin": 8,
+                "atomic_end": 8,
+                "constraint": 76,
+                "decl": 7,
+                "fence": 8,
+                "function_call": 19,
+                "function_return": 22,
+                "goto": 17,
+                "location": 20,
+                "output": 1,
+                "read": 18,
+                "spawn": 2,
+                "write": 28
+              },
+              "steps": 342
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 58,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 107,
+                "atomic_begin": 8,
+                "atomic_end": 8,
+                "decl": 7,
+                "fence": 8,
+                "function_call": 19,
+                "function_return": 22,
+                "goto": 17,
+                "location": 20,
+                "output": 1,
+                "read": 20,
+                "spawn": 2,
+                "write": 28
+              },
+              "steps": 268
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 56,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 107,
+                "atomic_begin": 8,
+                "atomic_end": 8,
+                "decl": 7,
+                "fence": 8,
+                "function_call": 19,
+                "function_return": 22,
+                "goto": 17,
+                "location": 20,
+                "output": 1,
+                "read": 18,
+                "spawn": 2,
+                "write": 28
+              },
+              "steps": 266
+            },
+            "symbolic_instruction_dispatches": 176
+          },
+          "model_digest": "2182dde61af9052a876a5aee9c57f7fb459bb87da52999f15fb062061e10f6ce",
+          "observer_off": {
+            "exit": 10,
+            "result": "VIOLATION",
+            "wall_seconds": 0.0887
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 7613597,
+            "equation_export": 13286238,
+            "event_constraints": 3735712,
+            "goal_conversion": 12850,
+            "parse_goto": 142179549,
+            "result_output": 1950088,
+            "solve": 2298215,
+            "symbolic_execution": 3899426,
+            "symex_cleanup": 1208584
+          },
+          "repeat_model_digest": "2182dde61af9052a876a5aee9c57f7fb459bb87da52999f15fb062061e10f6ce",
+          "repeat_phase_digests": {
+            "full_model": "f2d3637fe4f9b693322af82bfea90a04dec29b55c6540d7ad0910961f144ce56",
+            "goto": "5648022f2afb79448cdd14500c999aaeab9311e63f2977a1ed15cf7e2df60622",
+            "native_visits": "3524e3bf74aaee02bcad88a10d0680d64a48e894b02b2c95a83e732dc8f3ad15",
+            "raw_ssa": "bdbf93a5e875f0f3f478fe4730c341e85f3f4fc968db2603886a65b900711000",
+            "sc_input": "cf442c842c54dc334428974fb75dca29645c482a146898eadd2fb1724ded1e86"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 7702299,
+            "equation_export": 13119554,
+            "event_constraints": 3685851,
+            "goal_conversion": 12050,
+            "parse_goto": 143290460,
+            "result_output": 1855056,
+            "solve": 2344446,
+            "symbolic_execution": 3868495,
+            "symex_cleanup": 1221923
+          },
+          "same_input_phase_digests": {
+            "full_model": "f2d3637fe4f9b693322af82bfea90a04dec29b55c6540d7ad0910961f144ce56",
+            "goto": "5648022f2afb79448cdd14500c999aaeab9311e63f2977a1ed15cf7e2df60622",
+            "native_visits": "3524e3bf74aaee02bcad88a10d0680d64a48e894b02b2c95a83e732dc8f3ad15",
+            "raw_ssa": "bdbf93a5e875f0f3f478fe4730c341e85f3f4fc968db2603886a65b900711000",
+            "sc_input": "cf442c842c54dc334428974fb75dca29645c482a146898eadd2fb1724ded1e86"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "31"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 156,
+          "version": "3b84fe45ba102f6f2403333281897db4f4abab1afe320685b58f9443f54b8c1b"
+        },
+        "old": {
+          "baseline_verify_wall_s": 0.0963,
+          "classification": "VIOLATION",
+          "context": "b77281cd278da5d1ae3440083a87c8b966c76d00a6c3440bd5ca7f6a88e56d99",
+          "counts": {
+            "constraint_fragments": 387,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 20,
+                "rf-val": 81
+              },
+              "edge_kinds": {
+                "apo": 11,
+                "po": 62,
+                "rf": 81
+              },
+              "events": 62,
+              "oc_guards": 30,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 114,
+                "atomic_begin": 10,
+                "atomic_end": 10,
+                "constraint": 101,
+                "decl": 8,
+                "fence": 10,
+                "function_call": 22,
+                "function_return": 25,
+                "goto": 17,
+                "location": 23,
+                "output": 1,
+                "read": 20,
+                "spawn": 2,
+                "write": 30
+              },
+              "steps": 394
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 64,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 114,
+                "atomic_begin": 10,
+                "atomic_end": 10,
+                "decl": 8,
+                "fence": 10,
+                "function_call": 22,
+                "function_return": 25,
+                "goto": 17,
+                "location": 23,
+                "output": 1,
+                "read": 22,
+                "spawn": 2,
+                "write": 30
+              },
+              "steps": 295
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 62,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 114,
+                "atomic_begin": 10,
+                "atomic_end": 10,
+                "decl": 8,
+                "fence": 10,
+                "function_call": 22,
+                "function_return": 25,
+                "goto": 17,
+                "location": 23,
+                "output": 1,
+                "read": 20,
+                "spawn": 2,
+                "write": 30
+              },
+              "steps": 293
+            },
+            "symbolic_instruction_dispatches": 196
+          },
+          "model_digest": "a08cf615f5d9d8e0a2a61f12457e650dd5342a786b6d5979363e6e543c972914",
+          "observer_off": {
+            "exit": 10,
+            "result": "VIOLATION",
+            "wall_seconds": 0.0969
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 10868321,
+            "equation_export": 14651665,
+            "event_constraints": 4301293,
+            "goal_conversion": 10931,
+            "parse_goto": 141137938,
+            "result_output": 2135152,
+            "solve": 4650340,
+            "symbolic_execution": 4292023,
+            "symex_cleanup": 1362766
+          },
+          "repeat_model_digest": "a08cf615f5d9d8e0a2a61f12457e650dd5342a786b6d5979363e6e543c972914",
+          "repeat_phase_digests": {
+            "full_model": "23060a1a0d5ab802e71962eddd5756b407200dd5c4f274dba8655856aa282439",
+            "goto": "ec0f29f1296672e5562f6a16918de4fd414634ce63ee41ea36348b1c2693cdd9",
+            "native_visits": "e08fccba07b9c982061bbbc4e8d5e565c42075445026a6bcc65cb4a6b8311b24",
+            "raw_ssa": "06bffcd37d21af96d360dc1bc360354142050855ea1008aebe595bc2f9914b95",
+            "sc_input": "1098071b873383830d5280b3411e699f5acb0b67463d9101eb7adb90ac3914c4"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 11331360,
+            "equation_export": 14653674,
+            "event_constraints": 4357175,
+            "goal_conversion": 13601,
+            "parse_goto": 141922784,
+            "result_output": 2089851,
+            "solve": 4722351,
+            "symbolic_execution": 4413116,
+            "symex_cleanup": 1354576
+          },
+          "same_input_phase_digests": {
+            "full_model": "23060a1a0d5ab802e71962eddd5756b407200dd5c4f274dba8655856aa282439",
+            "goto": "ec0f29f1296672e5562f6a16918de4fd414634ce63ee41ea36348b1c2693cdd9",
+            "native_visits": "e08fccba07b9c982061bbbc4e8d5e565c42075445026a6bcc65cb4a6b8311b24",
+            "raw_ssa": "06bffcd37d21af96d360dc1bc360354142050855ea1008aebe595bc2f9914b95",
+            "sc_input": "1098071b873383830d5280b3411e699f5acb0b67463d9101eb7adb90ac3914c4"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "31"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 170,
+          "version": "09960f75a01220c8261ba475226125d5cb832ec5e1dd60df65c2fcda1a6e69fe"
+        }
+      }
+    },
+    "split_counter": {
+      "constraints": {
+        "added": 112,
+        "removed": 222,
+        "retained": 165
+      },
+      "events": {
+        "added": 16,
+        "changed": 11,
+        "removed": 28,
+        "retained": 23
+      },
+      "mapping": {
+        "instructions": {
+          "matched": 91,
+          "new_only": 1,
+          "old_only": 4,
+          "rejected": 4
+        },
+        "sources": {
+          "matched": 87,
+          "new_only": 1,
+          "old_only": 3,
+          "rejected": 4
+        }
+      },
+      "same_delta_sha256": "2ab0f71eb5d13f22fec4e1438ad56eac44a782208bbedae0d7406db0e418d8c7",
+      "versions": {
+        "candidate": {
+          "baseline_verify_wall_s": 0.0805,
+          "classification": "NO_VIOLATION_WITHIN_BOUND",
+          "context": "f2a3b2b9478566664fe7d88b957c09a72817f7f188866b1ebf5a428e15f660da",
+          "counts": {
+            "constraint_fragments": 277,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 16,
+                "rf-val": 43
+              },
+              "edge_kinds": {
+                "apo": 7,
+                "po": 50,
+                "rf": 43
+              },
+              "events": 50,
+              "oc_guards": 26,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 100,
+                "atomic_begin": 6,
+                "atomic_end": 6,
+                "constraint": 59,
+                "decl": 6,
+                "fence": 6,
+                "function_call": 16,
+                "function_return": 19,
+                "goto": 17,
+                "location": 17,
+                "output": 1,
+                "read": 16,
+                "spawn": 2,
+                "write": 26
+              },
+              "steps": 298
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 52,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 100,
+                "atomic_begin": 6,
+                "atomic_end": 6,
+                "decl": 6,
+                "fence": 6,
+                "function_call": 16,
+                "function_return": 19,
+                "goto": 17,
+                "location": 17,
+                "output": 1,
+                "read": 18,
+                "spawn": 2,
+                "write": 26
+              },
+              "steps": 241
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 50,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 100,
+                "atomic_begin": 6,
+                "atomic_end": 6,
+                "decl": 6,
+                "fence": 6,
+                "function_call": 16,
+                "function_return": 19,
+                "goto": 17,
+                "location": 17,
+                "output": 1,
+                "read": 16,
+                "spawn": 2,
+                "write": 26
+              },
+              "steps": 239
+            },
+            "symbolic_instruction_dispatches": 156
+          },
+          "model_digest": "b5e04d46497ef607748aaa676fc76350f8acd0a604bfb8d98eac47efc4ca7208",
+          "observer_off": {
+            "exit": 0,
+            "result": "NO_VIOLATION_WITHIN_BOUND",
+            "wall_seconds": 0.0817
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 5342883,
+            "equation_export": 11571464,
+            "event_constraints": 3153411,
+            "goal_conversion": 9780,
+            "parse_goto": 140008977,
+            "result_output": 36861,
+            "solve": 1681383,
+            "symbolic_execution": 3418777,
+            "symex_cleanup": 1049661
+          },
+          "repeat_model_digest": "b5e04d46497ef607748aaa676fc76350f8acd0a604bfb8d98eac47efc4ca7208",
+          "repeat_phase_digests": {
+            "full_model": "505c991e1cb78ddb0033cf3d70bcda1390b505e0a2f4b43f9c382871b91a09b1",
+            "goto": "cb257e537a9005f8eaa11f14cbbcc58533671c399b233bf4a49ff0358c1dfa65",
+            "native_visits": "04e37cf87a86f66b334690c58aae495fd63bf6e54751dcbef1cd76ed73f6697e",
+            "raw_ssa": "bc947e694422236cdfec332ef071f52b4efc039b9018614b3e506760a813c00d",
+            "sc_input": "03331a961c85295677b1fbc5fde77750181e93255bcb5664cb58a7272135583c"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 5374744,
+            "equation_export": 11752877,
+            "event_constraints": 3230353,
+            "goal_conversion": 11500,
+            "parse_goto": 138603069,
+            "result_output": 32781,
+            "solve": 1682673,
+            "symbolic_execution": 3438167,
+            "symex_cleanup": 1078161
+          },
+          "same_input_phase_digests": {
+            "full_model": "505c991e1cb78ddb0033cf3d70bcda1390b505e0a2f4b43f9c382871b91a09b1",
+            "goto": "cb257e537a9005f8eaa11f14cbbcc58533671c399b233bf4a49ff0358c1dfa65",
+            "native_visits": "04e37cf87a86f66b334690c58aae495fd63bf6e54751dcbef1cd76ed73f6697e",
+            "raw_ssa": "bc947e694422236cdfec332ef071f52b4efc039b9018614b3e506760a813c00d",
+            "sc_input": "03331a961c85295677b1fbc5fde77750181e93255bcb5664cb58a7272135583c"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "31"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 0,
+          "version": "edd0e5fe2795f7548b9ff4c01e506ad65b48980ebe313d2ba99973ead8f1ad86"
+        },
+        "old": {
+          "baseline_verify_wall_s": 0.0978,
+          "classification": "VIOLATION",
+          "context": "f2a3b2b9478566664fe7d88b957c09a72817f7f188866b1ebf5a428e15f660da",
+          "counts": {
+            "constraint_fragments": 387,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 20,
+                "rf-val": 81
+              },
+              "edge_kinds": {
+                "apo": 11,
+                "po": 62,
+                "rf": 81
+              },
+              "events": 62,
+              "oc_guards": 30,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 114,
+                "atomic_begin": 10,
+                "atomic_end": 10,
+                "constraint": 101,
+                "decl": 8,
+                "fence": 10,
+                "function_call": 20,
+                "function_return": 23,
+                "goto": 17,
+                "location": 21,
+                "output": 1,
+                "read": 20,
+                "spawn": 2,
+                "write": 30
+              },
+              "steps": 388
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 64,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 114,
+                "atomic_begin": 10,
+                "atomic_end": 10,
+                "decl": 8,
+                "fence": 10,
+                "function_call": 20,
+                "function_return": 23,
+                "goto": 17,
+                "location": 21,
+                "output": 1,
+                "read": 22,
+                "spawn": 2,
+                "write": 30
+              },
+              "steps": 289
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 62,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 114,
+                "atomic_begin": 10,
+                "atomic_end": 10,
+                "decl": 8,
+                "fence": 10,
+                "function_call": 20,
+                "function_return": 23,
+                "goto": 17,
+                "location": 21,
+                "output": 1,
+                "read": 20,
+                "spawn": 2,
+                "write": 30
+              },
+              "steps": 287
+            },
+            "symbolic_instruction_dispatches": 192
+          },
+          "model_digest": "794c2fbc33577cbaf769f2df44ed8fbd739c34e6c5e8da8db1b6edaa99c39862",
+          "observer_off": {
+            "exit": 10,
+            "result": "VIOLATION",
+            "wall_seconds": 0.0992
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 10855500,
+            "equation_export": 14625043,
+            "event_constraints": 4288733,
+            "goal_conversion": 11760,
+            "parse_goto": 139617390,
+            "result_output": 2121171,
+            "solve": 4562169,
+            "symbolic_execution": 4190412,
+            "symex_cleanup": 1346026
+          },
+          "repeat_model_digest": "794c2fbc33577cbaf769f2df44ed8fbd739c34e6c5e8da8db1b6edaa99c39862",
+          "repeat_phase_digests": {
+            "full_model": "7b4075b3704818272a795affa9f47a47427cc1b1126ddab15a6e24112b7904d7",
+            "goto": "6f08be9647cf8e5784a22562c3d46a9b808f9f1e7f0644a1fa2b6acb7a5e827f",
+            "native_visits": "ae97ae4a051ee19324d785d7243260e391374cf46cc49425a4c512428918e25f",
+            "raw_ssa": "e1e3c6b5f9541fbdb7039578b65cfed3e1b6c23c741e4e9f032d3b948a072b4f",
+            "sc_input": "beb65f03727ef97b2fb859ef8177f4bb5c4dde720d467e7b962eb1741aa016e6"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 11108156,
+            "equation_export": 14652205,
+            "event_constraints": 4400115,
+            "goal_conversion": 11610,
+            "parse_goto": 142012146,
+            "result_output": 2071100,
+            "solve": 4612300,
+            "symbolic_execution": 4329134,
+            "symex_cleanup": 1366356
+          },
+          "same_input_phase_digests": {
+            "full_model": "7b4075b3704818272a795affa9f47a47427cc1b1126ddab15a6e24112b7904d7",
+            "goto": "6f08be9647cf8e5784a22562c3d46a9b808f9f1e7f0644a1fa2b6acb7a5e827f",
+            "native_visits": "ae97ae4a051ee19324d785d7243260e391374cf46cc49425a4c512428918e25f",
+            "raw_ssa": "e1e3c6b5f9541fbdb7039578b65cfed3e1b6c23c741e4e9f032d3b948a072b4f",
+            "sc_input": "beb65f03727ef97b2fb859ef8177f4bb5c4dde720d467e7b962eb1741aa016e6"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "31"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 166,
+          "version": "18865142f1b4e7a99c3423477f4fc1d33c577b1806f7cf81f5058851426b0c0f"
+        }
+      }
+    },
+    "threshold_guard": {
+      "constraints": {
+        "added": 56,
+        "removed": 33,
+        "retained": 100
+      },
+      "events": {
+        "added": 8,
+        "changed": 3,
+        "removed": 4,
+        "retained": 21
+      },
+      "mapping": {
+        "instructions": {
+          "matched": 68,
+          "new_only": 1,
+          "old_only": 1,
+          "rejected": 3
+        },
+        "sources": {
+          "matched": 67,
+          "new_only": 0,
+          "old_only": 0,
+          "rejected": 3
+        }
+      },
+      "same_delta_sha256": "2a6af1e0c3fafc88bae88f3fc6b0e0c72703ec58979613401c6dac118ca51c96",
+      "versions": {
+        "candidate": {
+          "baseline_verify_wall_s": 0.1662,
+          "classification": "NO_VIOLATION_WITHIN_BOUND",
+          "context": "e99ebeec9c69cb7a30020524d8c6e3245b74a19b420565f730ec1c0165b1f1c3",
+          "counts": {
+            "constraint_fragments": 156,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 10,
+                "rf-val": 19
+              },
+              "edge_kinds": {
+                "apo": 1,
+                "po": 38,
+                "rf": 19
+              },
+              "events": 32,
+              "oc_guards": 20,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 59,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "constraint": 29,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 9,
+                "function_return": 11,
+                "goto": 9,
+                "location": 11,
+                "output": 1,
+                "read": 10,
+                "spawn": 1,
+                "write": 20
+              },
+              "steps": 167
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 33,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 59,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 9,
+                "function_return": 11,
+                "goto": 9,
+                "location": 11,
+                "output": 1,
+                "read": 11,
+                "spawn": 1,
+                "write": 20
+              },
+              "steps": 139
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 32,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 59,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 9,
+                "function_return": 11,
+                "goto": 9,
+                "location": 11,
+                "output": 1,
+                "read": 10,
+                "spawn": 1,
+                "write": 20
+              },
+              "steps": 138
+            },
+            "symbolic_instruction_dispatches": 84
+          },
+          "model_digest": "c443d5d408d4a115f0529e754ef66e9a1ad91da7d5b28887a241a25b7810b36b",
+          "observer_off": {
+            "exit": 0,
+            "result": "NO_VIOLATION_WITHIN_BOUND",
+            "wall_seconds": 0.0703
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 2511649,
+            "equation_export": 6741112,
+            "event_constraints": 2073801,
+            "goal_conversion": 8540,
+            "parse_goto": 138467687,
+            "result_output": 36270,
+            "solve": 321297,
+            "symbolic_execution": 1807085,
+            "symex_cleanup": 470589
+          },
+          "repeat_model_digest": "c443d5d408d4a115f0529e754ef66e9a1ad91da7d5b28887a241a25b7810b36b",
+          "repeat_phase_digests": {
+            "full_model": "f8c175e74d26585f06282434fae51131b3f204fed9ddd1c45608da09a5ef3d09",
+            "goto": "e0f01f19d17205759f1d15b8461490f176870edf8c1f9310a3d2e0c82fd9598a",
+            "native_visits": "131f435a73b0f8996577c69b10fb318327024bd03400fa17b59f7f72b3c4324e",
+            "raw_ssa": "a446c475a10ecfb1a809e9357d9677366a15264de941b5432c387474b66b45c6",
+            "sc_input": "2bae40a2f7e668b4aacb4195965993bb08313c4fb670f375a37748b15b129cf1"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 2452248,
+            "equation_export": 6737811,
+            "event_constraints": 2085071,
+            "goal_conversion": 8190,
+            "parse_goto": 139084718,
+            "result_output": 33040,
+            "solve": 334227,
+            "symbolic_execution": 1760835,
+            "symex_cleanup": 445688
+          },
+          "same_input_phase_digests": {
+            "full_model": "f8c175e74d26585f06282434fae51131b3f204fed9ddd1c45608da09a5ef3d09",
+            "goto": "e0f01f19d17205759f1d15b8461490f176870edf8c1f9310a3d2e0c82fd9598a",
+            "native_visits": "131f435a73b0f8996577c69b10fb318327024bd03400fa17b59f7f72b3c4324e",
+            "raw_ssa": "a446c475a10ecfb1a809e9357d9677366a15264de941b5432c387474b66b45c6",
+            "sc_input": "2bae40a2f7e668b4aacb4195965993bb08313c4fb670f375a37748b15b129cf1"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 0,
+          "version": "dc1b117d7a67ea477a32c388500d8a370a639f76c08e6d851226eebf994e8ede"
+        },
+        "old": {
+          "baseline_verify_wall_s": 0.0725,
+          "classification": "VIOLATION",
+          "context": "e99ebeec9c69cb7a30020524d8c6e3245b74a19b420565f730ec1c0165b1f1c3",
+          "counts": {
+            "constraint_fragments": 133,
+            "full_model": {
+              "constraint_comments": {
+                "rf-some": 8,
+                "rf-val": 13
+              },
+              "edge_kinds": {
+                "apo": 1,
+                "po": 30,
+                "rf": 13
+              },
+              "events": 28,
+              "oc_guards": 18,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 57,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "constraint": 21,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 9,
+                "function_return": 11,
+                "goto": 10,
+                "location": 10,
+                "output": 1,
+                "read": 8,
+                "spawn": 1,
+                "write": 18
+              },
+              "steps": 153
+            },
+            "raw_ssa": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 29,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 57,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 9,
+                "function_return": 11,
+                "goto": 10,
+                "location": 10,
+                "output": 1,
+                "read": 9,
+                "spawn": 1,
+                "write": 18
+              },
+              "steps": 133
+            },
+            "sc_input": {
+              "constraint_comments": {},
+              "edge_kinds": {},
+              "events": 28,
+              "oc_guards": 0,
+              "properties": [
+                "main.assertion.1"
+              ],
+              "step_kinds": {
+                "assert": 1,
+                "assignment": 57,
+                "atomic_begin": 1,
+                "atomic_end": 1,
+                "decl": 3,
+                "fence": 1,
+                "function_call": 9,
+                "function_return": 11,
+                "goto": 10,
+                "location": 10,
+                "output": 1,
+                "read": 8,
+                "spawn": 1,
+                "write": 18
+              },
+              "steps": 132
+            },
+            "symbolic_instruction_dispatches": 82
+          },
+          "model_digest": "1199193400a53370f7badf3e8896ec49400a2ec1db50482ae16bb7a978add174",
+          "observer_off": {
+            "exit": 10,
+            "result": "VIOLATION",
+            "wall_seconds": 0.0712
+          },
+          "phase_nanoseconds": {
+            "cnf_and_graph": 2087830,
+            "equation_export": 6443385,
+            "event_constraints": 1811245,
+            "goal_conversion": 8771,
+            "parse_goto": 138199932,
+            "result_output": 957969,
+            "solve": 324406,
+            "symbolic_execution": 1703153,
+            "symex_cleanup": 452429
+          },
+          "repeat_model_digest": "1199193400a53370f7badf3e8896ec49400a2ec1db50482ae16bb7a978add174",
+          "repeat_phase_digests": {
+            "full_model": "602d2a44e58a35824a87a9609eafe6890f8310d7f64ed44818f38f9480ce953a",
+            "goto": "4de77ead0c339b79a93b42ef0cfb2c07630943dab3140073119abdcc87626279",
+            "native_visits": "ca9de48987a9c8678b41e563582c51cfe80eff72acfd8903993727c5c2b931bc",
+            "raw_ssa": "a15fda8bf4b08ec56ab54758543f714604524dbff2942c621a068022fd7034bd",
+            "sc_input": "7938093d063a88a6e6eaae5d7d202c618b201c8c1367bfd302acd01f66dda41d"
+          },
+          "repeat_phase_nanoseconds": {
+            "cnf_and_graph": 2099240,
+            "equation_export": 6333833,
+            "event_constraints": 1791264,
+            "goal_conversion": 7810,
+            "parse_goto": 138440516,
+            "result_output": 880537,
+            "solve": 301206,
+            "symbolic_execution": 1700012,
+            "symex_cleanup": 426998
+          },
+          "same_input_phase_digests": {
+            "full_model": "602d2a44e58a35824a87a9609eafe6890f8310d7f64ed44818f38f9480ce953a",
+            "goto": "4de77ead0c339b79a93b42ef0cfb2c07630943dab3140073119abdcc87626279",
+            "native_visits": "ca9de48987a9c8678b41e563582c51cfe80eff72acfd8903993727c5c2b931bc",
+            "raw_ssa": "a15fda8bf4b08ec56ab54758543f714604524dbff2942c621a068022fd7034bd",
+            "sc_input": "7938093d063a88a6e6eaae5d7d202c618b201c8c1367bfd302acd01f66dda41d"
+          },
+          "source": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "target": "main.assertion.1",
+          "trace_steps": 74,
+          "version": "82f1aa22a947de42c37c0956cff27c5ccd698cae4f0e7a512034c8383cba8103"
+        }
+      }
+    }
+  },
+  "deepseek_calls": 0,
+  "development_full_runs": 16,
+  "development_observer_off_runs": 8,
+  "finished_utc": "2026-11-23T11:04:41.123074+00:00",
+  "mode": "full",
+  "model_reuse": false,
+  "protocol_eof": {
+    "error": "EOFError",
+    "message": "Session input ended before VERIFY_OLD"
+  },
+  "protocol_order": {
+    "error": "ValueError",
+    "message": "Expected command BUILD_OLD"
+  },
+  "sessions": 8,
+  "started_utc": "2026-11-23T11:04:31.637687+00:00",
+  "wall_seconds": 9.4854
+}

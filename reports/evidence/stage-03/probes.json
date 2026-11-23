@@ -1,0 +1,114 @@
+{
+  "baseline_cases_written": false,
+  "duplicates": {
+    "eligible": 0,
+    "occurrences": 2,
+    "rejected_source": "0c2208b884bab2dc4c45ce21e4cd5e0cda516aab637ca587a532ed95645836db"
+  },
+  "line_shift": {
+    "event": "6df2b497111767a97d7efbeba55c6d8c6013fd47481f8d453211acd251b85efa",
+    "fingerprints": [
+      "718608589dd3c4071f9f4af777963a3073fdc74f33f05f99fbdb71b4b4e0cb52",
+      "dcdff753fe4676cb9c9594d935ad647a62091ce17d886648e1184f4a7dec68fd"
+    ],
+    "solver_lines": [
+      3,
+      4
+    ],
+    "value_unchanged": true
+  },
+  "loop": {
+    "anchored_iterations": [
+      [
+        [
+          "1e67c54ac641f2b58f770be4968ef358a2244fa8f7602f04adce9ce0fa2c9279",
+          1
+        ]
+      ],
+      [
+        [
+          "1e67c54ac641f2b58f770be4968ef358a2244fa8f7602f04adce9ce0fa2c9279",
+          2
+        ]
+      ],
+      [
+        [
+          "1e67c54ac641f2b58f770be4968ef358a2244fa8f7602f04adce9ce0fa2c9279",
+          3
+        ]
+      ]
+    ],
+    "unwinding_properties": [
+      "record_batch.unwind.0"
+    ]
+  },
+  "results": {
+    "duplicate": {
+      "classification": "VIOLATION",
+      "document_sha256": "aeb25ba1988b5d5f1f1297c29d10501fb9a2340bbfecf8942a4bd15c7d90e0b9",
+      "native_overall": "failure",
+      "process_exit": 10,
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "unwinding_properties": {}
+    },
+    "loop": {
+      "classification": "INCOMPLETE_UNWINDING",
+      "document_sha256": "771596afaa78313c6654f1e23b3268f2acb3289c652e1a9c35de10a74401dcba",
+      "native_overall": "failure",
+      "process_exit": 10,
+      "properties": {
+        "main.assertion.1": "SUCCESS",
+        "record_batch.unwind.0": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "unwinding_properties": {
+        "record_batch.unwind.0": "FAILURE"
+      }
+    },
+    "original": {
+      "classification": "VIOLATION",
+      "document_sha256": "9864e78da3978f6ae8f066680652942af4bbd24d17592c3b8e45de9e94780a00",
+      "native_overall": "failure",
+      "process_exit": 10,
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "unwinding_properties": {}
+    },
+    "shifted": {
+      "classification": "VIOLATION",
+      "document_sha256": "7f866da5421399ae6e053c9b4b2e456fce8ea09ef5376e752e3a9045326b7f6f",
+      "native_overall": "failure",
+      "process_exit": 10,
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "unwinding_properties": {}
+    }
+  }
+}

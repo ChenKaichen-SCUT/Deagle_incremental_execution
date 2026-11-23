@@ -1,0 +1,41 @@
+{
+  "schema": 1,
+  "upstream_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "compatibility_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+  "compatibility_patch_sha256": "fc3f82e530d98233e91aa37dc1b3c7eb1a2c3999cf55ba0965134eca13d71788",
+  "baseline_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "development_branch": "incdeagle-work",
+  "development_commit": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332",
+  "development_tree": "a91903d9ee81997ee7bf0b01dadce8eebff88f7e",
+  "development_sha256": "a5960294056efe0bdd8242054e8a6f2e9f56801901aa7d38ccf52ba6f8360c37",
+  "patch_sha256": "005c8ce5290e0b5850c6cac1a019eed1858cc4fc3b4b91432ee32f81cb580f0e",
+  "bundle_sha256": "8f3bdefb4743c16294f5d44bb0d77a1711dca652b14c417b871bed2c58e98b04",
+  "build": "bash scripts/stage3/build.sh",
+  "environment": "reports/evidence/stage-01/inventory.json",
+  "mode": "full",
+  "model_reuse": false,
+  "lemma_import": false,
+  "build_flags": [
+    "-std=c++11",
+    "-O2",
+    "-DSATCHECK_MINISAT2",
+    "-DHAVE_MINISAT2"
+  ],
+  "build_jobs": 4,
+  "upstream_target": "make -C src -j4 cbmc.dir",
+  "native_backend": "bundled MiniSat 2.2.1 + Deagle Closure",
+  "versions": {
+    "gcc-11": "11.4.0-1ubuntu1~22.04.3",
+    "g++-11": "11.4.0-1ubuntu1~22.04.3",
+    "libstdc++-11-dev": "11.4.0-1ubuntu1~22.04.3",
+    "make": "4.3-4.1build1",
+    "binutils": "2.38-4ubuntu2.12",
+    "bison": "2:3.8.2+dfsg-1ubuntu0.22.04.1",
+    "flex": "2.6.4-8build2",
+    "ccache": "4.5.1-1",
+    "libc6-dev": "2.35-0ubuntu3.18",
+    "libc6": "2.35-0ubuntu3.18",
+    "python3-jsonschema": "3.2.0-0ubuntu2",
+    "python3-yaml": "5.4.1-1ubuntu1"
+  }
+}

@@ -1,0 +1,450 @@
+{
+  "batch_total": {
+    "changed_address_buckets": [
+      "__CPROVER_alloca_object",
+      "__CPROVER_dead_object",
+      "__CPROVER_deallocated",
+      "__CPROVER_malloc_is_new_array",
+      "__CPROVER_max_malloc_size",
+      "__CPROVER_memory_leak",
+      "__CPROVER_new_object",
+      "__CPROVER_next_thread_id",
+      "__CPROVER_pipe_count",
+      "__CPROVER_threads_exited",
+      "main::1::worker",
+      "pthread_create::thread",
+      "pthread_join::thread",
+      "shipped_units"
+    ],
+    "identity_matched_semantic_difference": 1,
+    "identity_matched_unconfirmed": 1,
+    "property": {
+      "classification": "NO_VIOLATION_WITHIN_BOUND",
+      "native_overall": "success",
+      "properties": {
+        "main.assertion.1": "SUCCESS"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "21"
+      },
+      "trace_steps": 0,
+      "unwinding_properties": {}
+    },
+    "same_identity_write": {
+      "candidate": {
+        "event": {
+          "bucket": "shipped_units",
+          "comparable": true,
+          "dependencies": [
+            "event:17f84c2711cea9a9bb09a30ffd76cc69d54fcb7fb50f43185c3203eb20f5db17",
+            "event:454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608",
+            "event:acfa52cc1ca9c99e30943142d8a8fa535706780f47492fbe21a81c2cc25b8050"
+          ],
+          "fingerprint": "a1712e6530e5ac1da67f864f8c6ad5188ab0eb007fd3e208500dc0377f7e6006",
+          "id": "6df2b497111767a97d7efbeba55c6d8c6013fd47481f8d453211acd251b85efa",
+          "identity_unique": true,
+          "key": {
+            "calls": [
+              [
+                "pthread_create",
+                null,
+                []
+              ],
+              [
+                "__spawned_thread",
+                "8d8fb403f79bc8efa0daffd708ee478f39a39ee3e67b14f6208acf580728b2df",
+                []
+              ],
+              [
+                "pack",
+                "50cb339a04741887face55b0fefe0acc70d2325fa2a5e0f2e862f5de20abf481",
+                []
+              ],
+              [
+                "record_batch",
+                "975e1d0358524acae4fec1b36720c8b3143836746c6531ac30b5dca970b7af12",
+                []
+              ]
+            ],
+            "dispatch": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+            "instruction": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+            "object": "shipped_units",
+            "occurrence": 1,
+            "role": "write",
+            "source": "0c2208b884bab2dc4c45ce21e4cd5e0cda516aab637ca587a532ed95645836db",
+            "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+          },
+          "native_step": 105,
+          "semantic": {
+            "atomic_region": null,
+            "guard": "8237910dff8ccfa4ca3b39fca5a56b999de4dfa0978c6ab9f97ad8004c959c16",
+            "object": "shipped_units",
+            "oc_guard": "8237910dff8ccfa4ca3b39fca5a56b999de4dfa0978c6ab9f97ad8004c959c16",
+            "ordering": [
+              [
+                "in",
+                "po",
+                "17f84c2711cea9a9bb09a30ffd76cc69d54fcb7fb50f43185c3203eb20f5db17"
+              ],
+              [
+                "in",
+                "po",
+                "454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608"
+              ],
+              [
+                "out",
+                "po",
+                "acfa52cc1ca9c99e30943142d8a8fa535706780f47492fbe21a81c2cc25b8050"
+              ]
+            ],
+            "role": "write",
+            "sc_same_source": [
+              "454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608",
+              "6df2b497111767a97d7efbeba55c6d8c6013fd47481f8d453211acd251b85efa"
+            ],
+            "solver_line": 3,
+            "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f",
+            "value": "72f77ae2a345f2681863f84e0e690277385f5b12c83832d5c497685835c60921"
+          },
+          "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+        },
+        "locations": [
+          {
+            "column": "",
+            "file": "program.c",
+            "function": "record_batch",
+            "line": "3",
+            "pc": 53
+          }
+        ],
+        "rhs_dag": {
+          "07c507fa12eb5f2bd5f00d974e49c53ad4ce5c93ccbf93a64c77f296ce8e10d3": {
+            "fields": {},
+            "operands": [],
+            "operator": "6"
+          },
+          "0b963818854cf1571d7eb6dc19311d671d077adf2a8707d557a0e2a548b733a0": {
+            "fields": {},
+            "operands": [],
+            "operator": "1"
+          },
+          "18429396a0c29914e05b6e8126bd5efeae826b6460e46bda55f89b6e1f62fd89": {
+            "fields": {
+              "#base": "6f379a26755459fbe4b0e85effb688a74896e855bffde7ee1b0275743a9444a2",
+              "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f",
+              "value": "07c507fa12eb5f2bd5f00d974e49c53ad4ce5c93ccbf93a64c77f296ce8e10d3"
+            },
+            "operands": [],
+            "operator": "constant"
+          },
+          "2e6d69a2b06fba6f9a8f04cc9c16f4e1b0ba3761b571eddf279b7b37f0b8c0f6": {
+            "fields": {},
+            "operands": [],
+            "operator": "32"
+          },
+          "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f": {
+            "fields": {
+              "#c_type": "b20c6c546952417b365efe41f53592cd0d9c30890f135d1b8bc5daf0e11cacff",
+              "width": "2e6d69a2b06fba6f9a8f04cc9c16f4e1b0ba3761b571eddf279b7b37f0b8c0f6"
+            },
+            "operands": [],
+            "operator": "signedbv"
+          },
+          "5dc0ba2b39552b8bdfb24971674bd8151f7441a6c1804bf98a6cd01c2cf8863b": {
+            "fields": {
+              "#SSA_symbol": "0b963818854cf1571d7eb6dc19311d671d077adf2a8707d557a0e2a548b733a0",
+              "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f"
+            },
+            "operands": [],
+            "operator": "symbol",
+            "symbol": "event:454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608"
+          },
+          "6f379a26755459fbe4b0e85effb688a74896e855bffde7ee1b0275743a9444a2": {
+            "fields": {},
+            "operands": [],
+            "operator": "10"
+          },
+          "72f77ae2a345f2681863f84e0e690277385f5b12c83832d5c497685835c60921": {
+            "fields": {
+              "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f"
+            },
+            "operands": [
+              "5dc0ba2b39552b8bdfb24971674bd8151f7441a6c1804bf98a6cd01c2cf8863b",
+              "18429396a0c29914e05b6e8126bd5efeae826b6460e46bda55f89b6e1f62fd89"
+            ],
+            "operator": "+"
+          },
+          "b20c6c546952417b365efe41f53592cd0d9c30890f135d1b8bc5daf0e11cacff": {
+            "fields": {},
+            "operands": [],
+            "operator": "signed_int"
+          }
+        }
+      },
+      "old": {
+        "event": {
+          "bucket": "shipped_units",
+          "comparable": true,
+          "dependencies": [
+            "event:17f84c2711cea9a9bb09a30ffd76cc69d54fcb7fb50f43185c3203eb20f5db17",
+            "event:454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608",
+            "event:acfa52cc1ca9c99e30943142d8a8fa535706780f47492fbe21a81c2cc25b8050"
+          ],
+          "fingerprint": "718608589dd3c4071f9f4af777963a3073fdc74f33f05f99fbdb71b4b4e0cb52",
+          "id": "6df2b497111767a97d7efbeba55c6d8c6013fd47481f8d453211acd251b85efa",
+          "identity_unique": true,
+          "key": {
+            "calls": [
+              [
+                "pthread_create",
+                null,
+                []
+              ],
+              [
+                "__spawned_thread",
+                "8d8fb403f79bc8efa0daffd708ee478f39a39ee3e67b14f6208acf580728b2df",
+                []
+              ],
+              [
+                "pack",
+                "50cb339a04741887face55b0fefe0acc70d2325fa2a5e0f2e862f5de20abf481",
+                []
+              ],
+              [
+                "record_batch",
+                "975e1d0358524acae4fec1b36720c8b3143836746c6531ac30b5dca970b7af12",
+                []
+              ]
+            ],
+            "dispatch": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+            "instruction": "4af88314e0996363de964a62904866e084f18bc64502ea88f889c1cbe358a3de",
+            "object": "shipped_units",
+            "occurrence": 1,
+            "role": "write",
+            "source": "0c2208b884bab2dc4c45ce21e4cd5e0cda516aab637ca587a532ed95645836db",
+            "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+          },
+          "native_step": 105,
+          "semantic": {
+            "atomic_region": null,
+            "guard": "8237910dff8ccfa4ca3b39fca5a56b999de4dfa0978c6ab9f97ad8004c959c16",
+            "object": "shipped_units",
+            "oc_guard": "8237910dff8ccfa4ca3b39fca5a56b999de4dfa0978c6ab9f97ad8004c959c16",
+            "ordering": [
+              [
+                "in",
+                "po",
+                "17f84c2711cea9a9bb09a30ffd76cc69d54fcb7fb50f43185c3203eb20f5db17"
+              ],
+              [
+                "in",
+                "po",
+                "454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608"
+              ],
+              [
+                "out",
+                "po",
+                "acfa52cc1ca9c99e30943142d8a8fa535706780f47492fbe21a81c2cc25b8050"
+              ]
+            ],
+            "role": "write",
+            "sc_same_source": [
+              "454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608",
+              "6df2b497111767a97d7efbeba55c6d8c6013fd47481f8d453211acd251b85efa"
+            ],
+            "solver_line": 3,
+            "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f",
+            "value": "915d2e2846b25e35bd2fd0c1bb3e8388dd5bcc71bf6c7adbd93448de8eec7e22"
+          },
+          "thread": "175238c0d67ddeaac78fdf568a18c57ea805ed5b8839fdec048c59f2af59bdae"
+        },
+        "locations": [
+          {
+            "column": "",
+            "file": "program.c",
+            "function": "record_batch",
+            "line": "3",
+            "pc": 53
+          }
+        ],
+        "rhs_dag": {
+          "0b963818854cf1571d7eb6dc19311d671d077adf2a8707d557a0e2a548b733a0": {
+            "fields": {},
+            "operands": [],
+            "operator": "1"
+          },
+          "13eca6d839ea164cb13135f67f74a3f39c3984de6d99c759f6feae74c76d3b8f": {
+            "fields": {
+              "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f",
+              "value": "536b42499200fa5def04a60b7a119d745196f77b997a707731d19cd92a0c1741"
+            },
+            "operands": [],
+            "operator": "constant"
+          },
+          "2e6d69a2b06fba6f9a8f04cc9c16f4e1b0ba3761b571eddf279b7b37f0b8c0f6": {
+            "fields": {},
+            "operands": [],
+            "operator": "32"
+          },
+          "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f": {
+            "fields": {
+              "#c_type": "b20c6c546952417b365efe41f53592cd0d9c30890f135d1b8bc5daf0e11cacff",
+              "width": "2e6d69a2b06fba6f9a8f04cc9c16f4e1b0ba3761b571eddf279b7b37f0b8c0f6"
+            },
+            "operands": [],
+            "operator": "signedbv"
+          },
+          "536b42499200fa5def04a60b7a119d745196f77b997a707731d19cd92a0c1741": {
+            "fields": {},
+            "operands": [],
+            "operator": "4"
+          },
+          "5dc0ba2b39552b8bdfb24971674bd8151f7441a6c1804bf98a6cd01c2cf8863b": {
+            "fields": {
+              "#SSA_symbol": "0b963818854cf1571d7eb6dc19311d671d077adf2a8707d557a0e2a548b733a0",
+              "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f"
+            },
+            "operands": [],
+            "operator": "symbol",
+            "symbol": "event:454e8c86094549c38f4cb329526b968f5cd45b746d0e0f05c8e6f9ec7c06c608"
+          },
+          "915d2e2846b25e35bd2fd0c1bb3e8388dd5bcc71bf6c7adbd93448de8eec7e22": {
+            "fields": {
+              "type": "3edb2190d0dc392214f6658b09501884c256d89771fe67f3fbceeedff79c939f"
+            },
+            "operands": [
+              "5dc0ba2b39552b8bdfb24971674bd8151f7441a6c1804bf98a6cd01c2cf8863b",
+              "13eca6d839ea164cb13135f67f74a3f39c3984de6d99c759f6feae74c76d3b8f"
+            ],
+            "operator": "+"
+          },
+          "b20c6c546952417b365efe41f53592cd0d9c30890f135d1b8bc5daf0e11cacff": {
+            "fields": {},
+            "operands": [],
+            "operator": "signed_int"
+          }
+        }
+      }
+    }
+  },
+  "partial_counter": {
+    "changed_address_buckets": [
+      "__CPROVER_alloca_object",
+      "__CPROVER_dead_object",
+      "__CPROVER_deallocated",
+      "__CPROVER_malloc_is_new_array",
+      "__CPROVER_max_malloc_size",
+      "__CPROVER_memory_leak",
+      "__CPROVER_new_object",
+      "__CPROVER_next_thread_id",
+      "__CPROVER_pipe_count",
+      "__CPROVER_threads_exited",
+      "counter",
+      "counter_mutex",
+      "main::1::left_worker",
+      "main::1::right_worker",
+      "pthread_create::thread",
+      "pthread_join::thread",
+      "pthread_mutex_lock::mutex",
+      "pthread_mutex_unlock::mutex",
+      "record_split::1::snapshot"
+    ],
+    "identity_matched_semantic_difference": 4,
+    "identity_matched_unconfirmed": 9,
+    "property": {
+      "classification": "VIOLATION",
+      "native_overall": "failure",
+      "properties": {
+        "main.assertion.1": "FAILURE"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "trace_steps": 156,
+      "unwinding_properties": {}
+    }
+  },
+  "split_counter": {
+    "changed_address_buckets": [
+      "__CPROVER_alloca_object",
+      "__CPROVER_dead_object",
+      "__CPROVER_deallocated",
+      "__CPROVER_malloc_is_new_array",
+      "__CPROVER_max_malloc_size",
+      "__CPROVER_memory_leak",
+      "__CPROVER_new_object",
+      "__CPROVER_next_thread_id",
+      "__CPROVER_pipe_count",
+      "__CPROVER_threads_exited",
+      "counter",
+      "counter_mutex",
+      "main::1::left_worker",
+      "main::1::right_worker",
+      "pthread_create::thread",
+      "pthread_join::thread",
+      "pthread_mutex_lock::mutex",
+      "pthread_mutex_unlock::mutex",
+      "record_one::1::snapshot"
+    ],
+    "identity_matched_semantic_difference": 8,
+    "identity_matched_unconfirmed": 3,
+    "property": {
+      "classification": "NO_VIOLATION_WITHIN_BOUND",
+      "native_overall": "success",
+      "properties": {
+        "main.assertion.1": "SUCCESS"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "31"
+      },
+      "trace_steps": 0,
+      "unwinding_properties": {}
+    }
+  },
+  "threshold_guard": {
+    "changed_address_buckets": [
+      "__CPROVER_alloca_object",
+      "__CPROVER_dead_object",
+      "__CPROVER_deallocated",
+      "__CPROVER_malloc_is_new_array",
+      "__CPROVER_max_malloc_size",
+      "__CPROVER_memory_leak",
+      "__CPROVER_new_object",
+      "__CPROVER_next_thread_id",
+      "__CPROVER_pipe_count",
+      "__CPROVER_threads_exited",
+      "accepted",
+      "main::1::worker",
+      "pthread_create::thread",
+      "pthread_join::thread",
+      "record_request::amount",
+      "units"
+    ],
+    "identity_matched_semantic_difference": 2,
+    "identity_matched_unconfirmed": 1,
+    "property": {
+      "classification": "NO_VIOLATION_WITHIN_BOUND",
+      "native_overall": "success",
+      "properties": {
+        "main.assertion.1": "SUCCESS"
+      },
+      "target": "main.assertion.1",
+      "target_source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24"
+      },
+      "trace_steps": 0,
+      "unwinding_properties": {}
+    }
+  }
+}
