@@ -1,0 +1,28 @@
+{
+  "observed_at_utc": "2026-11-23T07:56:21+00:00",
+  "system": "Windows",
+  "project_root": "E:\\Deagle_incremental_execution",
+  "directories_present": [
+    "configs",
+    "third_party/deagle-baseline",
+    "third_party/deagle-work",
+    "third_party/damer-camc",
+    "third_party/mini-swe-agent",
+    "third_party/yogar-cbmc-inc",
+    "incdeagle",
+    "scripts",
+    "schemas",
+    "patches",
+    "cases",
+    "tests",
+    "runs",
+    "reports",
+    "reports/evidence/stage-00"
+  ],
+  "apikey_txt": {
+    "exists": true,
+    "regular_file": true,
+    "nonempty": true,
+    "readable": true
+  }
+}

@@ -1,0 +1,614 @@
+{
+  "schema_version": 1,
+  "stage": 0,
+  "started_at_utc": "2026-11-23T07:56:21.292+00:00",
+  "project_root": "/root/Deagle_incremental_execution",
+  "uid": 0,
+  "os_release": {
+    "NAME": "Ubuntu",
+    "ID": "ubuntu",
+    "PRETTY_NAME": "Ubuntu 22.04.5 LTS",
+    "VERSION_ID": "22.04",
+    "VERSION": "22.04.5 LTS (Jammy Jellyfish)",
+    "VERSION_CODENAME": "jammy",
+    "ID_LIKE": "debian",
+    "HOME_URL": "https://www.ubuntu.com/",
+    "SUPPORT_URL": "https://help.ubuntu.com/",
+    "BUG_REPORT_URL": "https://bugs.launchpad.net/ubuntu/",
+    "PRIVACY_POLICY_URL": "https://www.ubuntu.com/legal/terms-and-policies/privacy-policy",
+    "UBUNTU_CODENAME": "jammy"
+  },
+  "kernel": "5.15.0-186-generic",
+  "machine": "x86_64",
+  "resources": {
+    "cpu": {
+      "model": "General Purpose Processor",
+      "os_cpu_count": 8,
+      "affinity": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "effective_logical_cpus": 8
+    },
+    "memory": {
+      "proc_meminfo_bytes": {
+        "MemTotal": 32254509056,
+        "MemAvailable": 31332663296,
+        "SwapTotal": 0,
+        "SwapFree": 0
+      },
+      "effective_total_bytes": 32254509056,
+      "effective_available_bytes": 31332663296,
+      "rlimit_as_soft_hard_bytes": [
+        -1,
+        -1
+      ]
+    },
+    "project_filesystem": {
+      "path": "/root/Deagle_incremental_execution",
+      "total_bytes": 84424855552,
+      "available_bytes": 76154925056
+    },
+    "cgroup": {
+      "version": 2,
+      "membership": [
+        "0::/user.slice/user-0.slice/session-1.scope"
+      ],
+      "mount_root": "/",
+      "mountpoint": "/sys/fs/cgroup",
+      "ancestors_inclusive": [
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-0.slice/session-1.scope",
+          "cpu.max": null,
+          "cpuset.cpus.effective": null,
+          "memory.max": "max",
+          "memory.high": "max",
+          "memory.current": "161861632",
+          "memory.swap.max": "max",
+          "pids.max": "max"
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice/user-0.slice",
+          "cpu.max": null,
+          "cpuset.cpus.effective": null,
+          "memory.max": "max",
+          "memory.high": "max",
+          "memory.current": "165904384",
+          "memory.swap.max": "max",
+          "pids.max": "80898"
+        },
+        {
+          "path": "/sys/fs/cgroup/user.slice",
+          "cpu.max": "max 100000",
+          "cpuset.cpus.effective": "0-7",
+          "memory.max": "max",
+          "memory.high": "max",
+          "memory.current": "165928960",
+          "memory.swap.max": "max",
+          "pids.max": "max"
+        },
+        {
+          "path": "/sys/fs/cgroup",
+          "cpu.max": null,
+          "cpuset.cpus.effective": "0-7",
+          "memory.max": null,
+          "memory.high": null,
+          "memory.current": null,
+          "memory.swap.max": null,
+          "pids.max": null
+        }
+      ]
+    }
+  },
+  "commands": {
+    "architecture": {
+      "argv": [
+        "dpkg",
+        "--print-architecture"
+      ],
+      "executable": "/usr/bin/dpkg",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "amd64",
+      "stderr": "",
+      "elapsed_seconds": 0.001
+    },
+    "kernel": {
+      "argv": [
+        "uname",
+        "-smr"
+      ],
+      "executable": "/usr/bin/uname",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "Linux 5.15.0-186-generic x86_64",
+      "stderr": "",
+      "elapsed_seconds": 0.002
+    },
+    "word_bits": {
+      "argv": [
+        "getconf",
+        "LONG_BIT"
+      ],
+      "executable": "/usr/bin/getconf",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "64",
+      "stderr": "",
+      "elapsed_seconds": 0.002
+    },
+    "nproc": {
+      "argv": [
+        "nproc"
+      ],
+      "executable": "/usr/bin/nproc",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "8",
+      "stderr": "",
+      "elapsed_seconds": 0.002
+    },
+    "cpu_topology": {
+      "argv": [
+        "lscpu",
+        "-e=CPU,CORE,SOCKET,ONLINE"
+      ],
+      "executable": "/usr/bin/lscpu",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "CPU CORE SOCKET ONLINE\n  0    0      0    yes\n  1    0      0    yes\n  2    1      0    yes\n  3    1      0    yes\n  4    2      0    yes\n  5    2      0    yes\n  6    3      0    yes\n  7    3      0    yes",
+      "stderr": "",
+      "elapsed_seconds": 0.004
+    },
+    "project_disk": {
+      "argv": [
+        "df",
+        "-B1",
+        "-PT",
+        "/root/Deagle_incremental_execution"
+      ],
+      "executable": "/usr/bin/df",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "Filesystem     Type    1-blocks       Used   Available Capacity Mounted on\n/dev/vda1      ext4 84424855552 4710027264 76154925056       6% /",
+      "stderr": "",
+      "elapsed_seconds": 0.002
+    },
+    "virtualization": {
+      "argv": [
+        "systemd-detect-virt"
+      ],
+      "executable": "/usr/bin/systemd-detect-virt",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "kvm",
+      "stderr": "",
+      "elapsed_seconds": 0.003
+    },
+    "docker_service": {
+      "argv": [
+        "systemctl",
+        "is-active",
+        "docker.service"
+      ],
+      "executable": "/usr/bin/systemctl",
+      "status": "exited",
+      "exit_code": 3,
+      "stdout": "inactive",
+      "stderr": "",
+      "elapsed_seconds": 0.003
+    },
+    "docker_server": {
+      "argv": [
+        "docker",
+        "info",
+        "--format",
+        "{{.ServerVersion}}"
+      ],
+      "executable": null,
+      "status": "missing",
+      "exit_code": null
+    },
+    "pip": {
+      "argv": [
+        "python3",
+        "-m",
+        "pip",
+        "--version"
+      ],
+      "executable": "/usr/bin/python3",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "pip 22.0.2 from /usr/lib/python3/dist-packages/pip (python 3.10)",
+      "stderr": "",
+      "elapsed_seconds": 0.349
+    },
+    "compiler_target": {
+      "argv": [
+        "gcc",
+        "-dumpmachine"
+      ],
+      "executable": "/usr/bin/gcc",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "x86_64-linux-gnu",
+      "stderr": "",
+      "elapsed_seconds": 0.007
+    },
+    "git": {
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "executable": "/usr/bin/git",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "git version 2.34.1",
+      "stderr": "",
+      "elapsed_seconds": 0.014
+    },
+    "gcc": {
+      "argv": [
+        "gcc",
+        "--version"
+      ],
+      "executable": "/usr/bin/gcc",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "stderr": "",
+      "elapsed_seconds": 0.002
+    },
+    "g++": {
+      "argv": [
+        "g++",
+        "--version"
+      ],
+      "executable": "/usr/bin/g++",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0\nCopyright (C) 2021 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.",
+      "stderr": "",
+      "elapsed_seconds": 0.008
+    },
+    "make": {
+      "argv": [
+        "make",
+        "--version"
+      ],
+      "executable": "/usr/bin/make",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "GNU Make 4.3\nBuilt for x86_64-pc-linux-gnu\nCopyright (C) 1988-2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.",
+      "stderr": "",
+      "elapsed_seconds": 0.003
+    },
+    "cmake": {
+      "argv": [
+        "cmake",
+        "--version"
+      ],
+      "executable": null,
+      "status": "missing",
+      "exit_code": null
+    },
+    "flex": {
+      "argv": [
+        "flex",
+        "--version"
+      ],
+      "executable": null,
+      "status": "missing",
+      "exit_code": null
+    },
+    "bison": {
+      "argv": [
+        "bison",
+        "--version"
+      ],
+      "executable": null,
+      "status": "missing",
+      "exit_code": null
+    },
+    "python3": {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "executable": "/usr/bin/python3",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "Python 3.10.12",
+      "stderr": "",
+      "elapsed_seconds": 0.001
+    },
+    "docker": {
+      "argv": [
+        "docker",
+        "--version"
+      ],
+      "executable": null,
+      "status": "missing",
+      "exit_code": null
+    },
+    "podman": {
+      "argv": [
+        "podman",
+        "--version"
+      ],
+      "executable": null,
+      "status": "missing",
+      "exit_code": null
+    },
+    "bwrap": {
+      "argv": [
+        "bwrap",
+        "--version"
+      ],
+      "executable": null,
+      "status": "missing",
+      "exit_code": null
+    },
+    "curl": {
+      "argv": [
+        "curl",
+        "--version"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "curl 7.81.0 (x86_64-pc-linux-gnu) libcurl/7.81.0 OpenSSL/3.0.2 zlib/1.2.11 brotli/1.0.9 zstd/1.4.8 libidn2/2.3.2 libpsl/0.21.0 (+libidn2/2.3.2) libssh/0.9.6/openssl/zlib nghttp2/1.43.0 librtmp/2.3 OpenLDAP/2.5.20\nRelease-Date: 2022-01-05\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ldap ldaps mqtt pop3 pop3s rtmp rtsp scp sftp smb smbs smtp smtps telnet tftp \nFeatures: alt-svc AsynchDNS brotli GSS-API HSTS HTTP2 HTTPS-proxy IDN IPv6 Kerberos Largefile libz NTLM NTLM_WB PSL SPNEGO SSL TLS-SRP UnixSockets zstd",
+      "stderr": "",
+      "elapsed_seconds": 0.005
+    },
+    "systemd-run": {
+      "argv": [
+        "systemd-run",
+        "--version"
+      ],
+      "executable": "/usr/bin/systemd-run",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "systemd 249 (249.11-0ubuntu3.21)\n+PAM +AUDIT +SELINUX +APPARMOR +IMA +SMACK +SECCOMP +GCRYPT +GNUTLS +OPENSSL +ACL +BLKID +CURL +ELFUTILS +FIDO2 +IDN2 -IDN +IPTC +KMOD +LIBCRYPTSETUP +LIBFDISK +PCRE2 -PWQUALITY -P11KIT -QRENCODE +BZIP2 +LZ4 +XZ +ZLIB +ZSTD -XKBCOMMON +UTMP +SYSVINIT default-hierarchy=unified",
+      "stderr": "",
+      "elapsed_seconds": 0.004
+    },
+    "timeout": {
+      "argv": [
+        "timeout",
+        "--version"
+      ],
+      "executable": "/usr/bin/timeout",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "timeout (GNU coreutils) 8.32\nCopyright (C) 2020 Free Software Foundation, Inc.\nLicense GPLv3+: GNU GPL version 3 or later <https://gnu.org/licenses/gpl.html>.\nThis is free software: you are free to change and redistribute it.\nThere is NO WARRANTY, to the extent permitted by law.\n\nWritten by Padraig Brady.",
+      "stderr": "",
+      "elapsed_seconds": 0.003
+    },
+    "installed_packages": {
+      "argv": [
+        "dpkg-query",
+        "-W",
+        "-f",
+        "${binary:Package}\t${db:Status-Abbrev}\t${Version}\n",
+        "build-essential",
+        "gcc-multilib",
+        "g++-multilib",
+        "cmake",
+        "flex",
+        "bison",
+        "python3-venv",
+        "python3-pip",
+        "libgoogle-perftools-dev",
+        "libtcmalloc-minimal4"
+      ],
+      "executable": "/usr/bin/dpkg-query",
+      "status": "exited",
+      "exit_code": 1,
+      "stdout": "bison\tun \t\nbuild-essential\tii \t12.9ubuntu3\nflex\tun \t\ng++-multilib\tun \t\ngcc-multilib\tun \t\npython3-pip\tii \t22.0.2+dfsg-1ubuntu0.7\npython3-venv\tun",
+      "stderr": "dpkg-query: no packages found matching cmake\ndpkg-query: no packages found matching libgoogle-perftools-dev\ndpkg-query: no packages found matching libtcmalloc-minimal4",
+      "elapsed_seconds": 0.005
+    },
+    "apt_candidates": {
+      "argv": [
+        "apt-cache",
+        "policy",
+        "build-essential",
+        "gcc-multilib",
+        "g++-multilib",
+        "cmake",
+        "flex",
+        "bison",
+        "python3-venv",
+        "python3-pip",
+        "libgoogle-perftools-dev",
+        "libtcmalloc-minimal4"
+      ],
+      "executable": "/usr/bin/apt-cache",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "build-essential:\n  Installed: 12.9ubuntu3\n  Candidate: 12.9ubuntu3\n  Version table:\n *** 12.9ubuntu3 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages\n        100 /var/lib/dpkg/status\ngcc-multilib:\n  Installed: (none)\n  Candidate: 4:11.2.0-1ubuntu1\n  Version table:\n     4:11.2.0-1ubuntu1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages\ng++-multilib:\n  Installed: (none)\n  Candidate: 4:11.2.0-1ubuntu1\n  Version table:\n     4:11.2.0-1ubuntu1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages\ncmake:\n  Installed: (none)\n  Candidate: 3.22.1-1ubuntu1.22.04.2\n  Version table:\n     3.22.1-1ubuntu1.22.04.2 500\n        500 http://repo.huaweicloud.com/ubuntu jammy-updates/main amd64 Packages\n     3.22.1-1ubuntu1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages\nflex:\n  Installed: (none)\n  Candidate: 2.6.4-8build2\n  Version table:\n     2.6.4-8build2 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages\nbison:\n  Installed: (none)\n  Candidate: 2:3.8.2+dfsg-1build1\n  Version table:\n     2:3.8.2+dfsg-1build1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages\npython3-venv:\n  Installed: (none)\n  Candidate: 3.10.6-1~22.04.1\n  Version table:\n     3.10.6-1~22.04.1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy-updates/universe amd64 Packages\n     3.10.6-1~22.04 500\n        500 http://repo.huaweicloud.com/ubuntu jammy-security/universe amd64 Packages\n     3.10.4-0ubuntu2 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/universe amd64 Packages\npython3-pip:\n  Installed: 22.0.2+dfsg-1ubuntu0.7\n  Candidate: 22.0.2+dfsg-1ubuntu0.7\n  Version table:\n *** 22.0.2+dfsg-1ubuntu0.7 500\n        500 http://repo.huaweicloud.com/ubuntu jammy-updates/universe amd64 Packages\n        500 http://repo.huaweicloud.com/ubuntu jammy-security/universe amd64 Packages\n        100 /var/lib/dpkg/status\n     22.0.2+dfsg-1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/universe amd64 Packages\nlibgoogle-perftools-dev:\n  Installed: (none)\n  Candidate: 2.9.1-0ubuntu3\n  Version table:\n     2.9.1-0ubuntu3 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages\nlibtcmalloc-minimal4:\n  Installed: (none)\n  Candidate: 2.9.1-0ubuntu3\n  Version table:\n     2.9.1-0ubuntu3 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages",
+      "stderr": "",
+      "elapsed_seconds": 0.047
+    }
+  },
+  "docker_socket_present": false,
+  "network": {
+    "github_git_advertisement": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--max-redirs",
+        "3",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--header",
+        "Git-Protocol: version=2",
+        "https://github.com/thufv/Deagle.git/info/refs?service=git-upload-pack"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=200 type=application/x-git-upload-pack-advertisement elapsed_s=0.551097",
+      "stderr": "",
+      "elapsed_seconds": 0.558
+    },
+    "github_metadata": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--max-redirs",
+        "3",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "https://api.github.com/repos/thufv/Deagle"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=200 type=application/json; charset=utf-8 elapsed_s=0.652651",
+      "stderr": "",
+      "elapsed_seconds": 0.661
+    },
+    "github_source_archive": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--max-redirs",
+        "3",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "https://codeload.github.com/thufv/Deagle/tar.gz/HEAD"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=200 type=application/x-gzip elapsed_s=0.969931",
+      "stderr": "",
+      "elapsed_seconds": 0.976
+    },
+    "pypi": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--max-redirs",
+        "3",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "https://pypi.org/simple/pip/"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=200 type=text/html elapsed_s=1.942624",
+      "stderr": "",
+      "elapsed_seconds": 1.949
+    },
+    "deepseek_base": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--max-redirs",
+        "3",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "https://api.deepseek.com/"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=401 type=application/json elapsed_s=0.137331",
+      "stderr": "",
+      "elapsed_seconds": 0.143
+    },
+    "apt_inrelease": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--location",
+        "--max-redirs",
+        "3",
+        "--connect-timeout",
+        "5",
+        "--max-time",
+        "12",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "http://repo.huaweicloud.com/ubuntu/dists/jammy/InRelease"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=200 type=application/octet-stream elapsed_s=0.021621",
+      "stderr": "",
+      "elapsed_seconds": 0.027
+    }
+  },
+  "finished_at_utc": "2026-11-23T07:56:23.708+00:00",
+  "probe_cost": {
+    "wall_seconds": 2.416,
+    "cpu_seconds_self_and_children": 0.482,
+    "self_peak_rss_kib": 13836,
+    "largest_waited_child_peak_rss_kib": 81492
+  }
+}

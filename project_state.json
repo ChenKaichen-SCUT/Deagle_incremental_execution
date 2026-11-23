@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "current_stage": 0,
+  "stage_name": "环境探测与项目初始化",
+  "status": "READY_FOR_REVIEW",
+  "report": "reports/stage-00.md",
+  "environment": "reports/environment.json",
+  "next_stage": 1,
+  "next_stage_approved": false
+}

@@ -1,0 +1,103 @@
+{
+  "started_at_utc": "2026-11-23T08:03:24.114+00:00",
+  "finished_at_utc": "2026-11-23T08:03:41.373+00:00",
+  "requests": {
+    "github_site": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--connect-timeout",
+        "4",
+        "--max-time",
+        "8",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "https://github.com/"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 28,
+      "stdout": "http=000 type= elapsed_s=8.001304",
+      "stderr": "curl: (28) Operation timed out after 8001 milliseconds with 0 bytes received",
+      "elapsed_seconds": 8.008
+    },
+    "target_git_advertisement": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--connect-timeout",
+        "4",
+        "--max-time",
+        "8",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--header",
+        "Git-Protocol: version=2",
+        "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution.git/info/refs?service=git-upload-pack"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 28,
+      "stdout": "http=000 type= elapsed_s=8.001603",
+      "stderr": "curl: (28) Operation timed out after 8001 milliseconds with 0 bytes received",
+      "elapsed_seconds": 8.008
+    },
+    "target_github_metadata": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--connect-timeout",
+        "4",
+        "--max-time",
+        "8",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "https://api.github.com/repos/ChenKaichen-SCUT/Deagle_incremental_execution"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=200 type=application/json; charset=utf-8 elapsed_s=0.685144",
+      "stderr": "",
+      "elapsed_seconds": 0.691
+    },
+    "deagle_archive_headers": {
+      "argv": [
+        "curl",
+        "--disable",
+        "--silent",
+        "--show-error",
+        "--connect-timeout",
+        "4",
+        "--max-time",
+        "8",
+        "--output",
+        "/dev/null",
+        "--write-out",
+        "http=%{http_code} type=%{content_type} elapsed_s=%{time_total}",
+        "--head",
+        "https://codeload.github.com/thufv/Deagle/tar.gz/HEAD"
+      ],
+      "executable": "/usr/bin/curl",
+      "status": "exited",
+      "exit_code": 0,
+      "stdout": "http=200 type=application/x-gzip elapsed_s=0.546313",
+      "stderr": "",
+      "elapsed_seconds": 0.552
+    }
+  }
+}

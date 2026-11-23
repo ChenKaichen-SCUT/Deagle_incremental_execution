@@ -1,0 +1,58 @@
+{
+  "first_controller_clock_utc": "2026-11-23T07:46:47.836749+00:00",
+  "checked_at_utc": "2026-11-23T08:11:08.607+00:00",
+  "elapsed_seconds_to_acceptance": 1460.771,
+  "duration_scope": "First recorded controller time to pre-publication checks; excludes publishing and delivery.",
+  "result": "passed",
+  "checks": {
+    "guide_copy_byte_identical": true,
+    "guide_lines": 1111,
+    "guide_sha256": "cf595255f5c3f3a35ba812f9623afcb8ab74277b99660baa5dfd628bf2e86ea8",
+    "key_stat_size_and_mtime_ns_match_initial": true,
+    "key_content_read": false,
+    "git_tracked_key_paths": [],
+    "git_check_ignore_matched": [
+      "apikey.txt",
+      ".venv/bin/python",
+      "third_party/deagle-baseline/README.md",
+      "runs/example/trace.json"
+    ],
+    "credential_pattern_matches_in_checked_index_blobs": 0,
+    "directory_count_on_each_host": 15,
+    "json_yaml_python_parse_ok": true,
+    "resource_budget_matches_snapshot": true,
+    "phase_1_approved": false,
+    "git_diff_check_authored_files": "passed",
+    "git_diff_check_supplied_guide_and_copy": "The supplied bytes include one final blank line; preserved in both."
+  },
+  "server_check": {
+    "cwd": "/root/Deagle_incremental_execution",
+    "exit_code": 0,
+    "checks": [
+      "find third_party -type f -print -quit",
+      "find runs -mindepth 1 -print -quit",
+      "test ! -e .venv",
+      "pgrep -f '[p]ython3 -B scripts/(init_workspace|probe_environment)\\.py'"
+    ],
+    "stdout": "third_party_files=0 runs_entries=0 project_venv=absent active_stage_probe=0"
+  },
+  "audited_index_files_before_adding_this_record": [
+    ".gitattributes",
+    ".gitignore",
+    "EXECUTION_GUIDE.md",
+    "README.md",
+    "configs/deepseek.yaml",
+    "configs/project.yaml",
+    "configs/toolchain.lock.json",
+    "deagle_incremental_execution_guide.md",
+    "project_state.json",
+    "reports/environment.json",
+    "reports/evidence/stage-00/controller-layout.json",
+    "reports/evidence/stage-00/network-recheck.json",
+    "reports/evidence/stage-00/package-plan.json",
+    "reports/evidence/stage-00/server-layout.json",
+    "reports/stage-00.md",
+    "scripts/init_workspace.py",
+    "scripts/probe_environment.py"
+  ]
+}

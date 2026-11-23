@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "pending_stage_1",
+  "repositories": {
+    "deagle": {
+      "url": "https://github.com/thufv/Deagle",
+      "checkouts": ["third_party/deagle-baseline", "third_party/deagle-work"],
+      "commit": null
+    },
+    "damer_camc": {
+      "url": "https://github.com/shirleylee03/damer-camc",
+      "checkouts": ["third_party/damer-camc"],
+      "commit": null
+    },
+    "mini_swe_agent": {
+      "url": "https://github.com/SWE-agent/mini-swe-agent",
+      "checkouts": ["third_party/mini-swe-agent"],
+      "commit": null
+    },
+    "yogar_cbmc_inc": {
+      "url": "https://github.com/yinliangze/yogar-cbmc-inc",
+      "checkouts": ["third_party/yogar-cbmc-inc"],
+      "commit": null
+    }
+  }
+}

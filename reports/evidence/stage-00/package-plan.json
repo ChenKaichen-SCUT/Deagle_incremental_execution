@@ -1,0 +1,60 @@
+{
+  "observed_at_utc": "2026-11-23T07:59:55.040+00:00",
+  "apt_compiler_dependencies_simulation": {
+    "argv": [
+      "apt-get",
+      "-s",
+      "--no-install-recommends",
+      "install",
+      "cmake",
+      "flex",
+      "bison",
+      "python3-venv",
+      "libgoogle-perftools-dev"
+    ],
+    "executable": "/usr/bin/apt-get",
+    "status": "exited",
+    "exit_code": 0,
+    "stdout": "Reading package lists...\nBuilding dependency tree...\nReading state information...\nThe following packages were automatically installed and are no longer required:\n  eatmydata libeatmydata1 libfwupd2 libfwupdplugin5 libgcab-1.0-0 libgusb2\n  libsmbios-c2 python-babel-localedata python3-babel python3-certifi\n  python3-jinja2 python3-json-pointer python3-jsonpatch python3-jsonschema\n  python3-markupsafe python3-pyrsistent python3-requests python3-tz\n  python3-urllib3\nUse 'apt autoremove' to remove them.\nThe following additional packages will be installed:\n  cmake-data dh-elpa-helper emacsen-common libgoogle-perftools4 libjsoncpp25\n  liblzma-dev librhash0 libtcmalloc-minimal4 libunwind-dev m4 python3-pip-whl\n  python3-setuptools-whl python3.10-venv\nSuggested packages:\n  bison-doc cmake-doc ninja-build cmake-format flex-doc liblzma-doc m4-doc\nRecommended packages:\n  libfl-dev\nThe following NEW packages will be installed:\n  bison cmake cmake-data dh-elpa-helper emacsen-common flex\n  libgoogle-perftools-dev libgoogle-perftools4 libjsoncpp25 liblzma-dev\n  librhash0 libtcmalloc-minimal4 libunwind-dev m4 python3-pip-whl\n  python3-setuptools-whl python3-venv python3.10-venv\n0 upgraded, 18 newly installed, 0 to remove and 0 not upgraded.\nInst m4 (1.4.18-5ubuntu2 Ubuntu:22.04/jammy [amd64])\nInst flex (2.6.4-8build2 Ubuntu:22.04/jammy [amd64])\nInst bison (2:3.8.2+dfsg-1build1 Ubuntu:22.04/jammy [amd64])\nInst libjsoncpp25 (1.9.5-3 Ubuntu:22.04/jammy [amd64])\nInst librhash0 (1.4.2-1ubuntu1 Ubuntu:22.04/jammy [amd64])\nInst dh-elpa-helper (2.0.9ubuntu1 Ubuntu:22.04/jammy [all])\nInst emacsen-common (3.0.4 Ubuntu:22.04/jammy [all])\nInst cmake-data (3.22.1-1ubuntu1.22.04.2 Ubuntu:22.04/jammy-updates [all])\nInst cmake (3.22.1-1ubuntu1.22.04.2 Ubuntu:22.04/jammy-updates [amd64])\nInst libtcmalloc-minimal4 (2.9.1-0ubuntu3 Ubuntu:22.04/jammy [amd64])\nInst libgoogle-perftools4 (2.9.1-0ubuntu3 Ubuntu:22.04/jammy [amd64])\nInst liblzma-dev (5.2.5-2ubuntu1.1 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [amd64])\nInst libunwind-dev (1.3.2-2build2.1 Ubuntu:22.04/jammy-updates [amd64])\nInst libgoogle-perftools-dev (2.9.1-0ubuntu3 Ubuntu:22.04/jammy [amd64])\nInst python3-pip-whl (22.0.2+dfsg-1ubuntu0.7 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [all])\nInst python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.3 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [all])\nInst python3.10-venv (3.10.12-1~22.04.16 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [amd64])\nInst python3-venv (3.10.6-1~22.04.1 Ubuntu:22.04/jammy-updates [amd64])\nConf m4 (1.4.18-5ubuntu2 Ubuntu:22.04/jammy [amd64])\nConf flex (2.6.4-8build2 Ubuntu:22.04/jammy [amd64])\nConf bison (2:3.8.2+dfsg-1build1 Ubuntu:22.04/jammy [amd64])\nConf libjsoncpp25 (1.9.5-3 Ubuntu:22.04/jammy [amd64])\nConf librhash0 (1.4.2-1ubuntu1 Ubuntu:22.04/jammy [amd64])\nConf dh-elpa-helper (2.0.9ubuntu1 Ubuntu:22.04/jammy [all])\nConf emacsen-common (3.0.4 Ubuntu:22.04/jammy [all])\nConf cmake-data (3.22.1-1ubuntu1.22.04.2 Ubuntu:22.04/jammy-updates [all])\nConf cmake (3.22.1-1ubuntu1.22.04.2 Ubuntu:22.04/jammy-updates [amd64])\nConf libtcmalloc-minimal4 (2.9.1-0ubuntu3 Ubuntu:22.04/jammy [amd64])\nConf libgoogle-perftools4 (2.9.1-0ubuntu3 Ubuntu:22.04/jammy [amd64])\nConf liblzma-dev (5.2.5-2ubuntu1.1 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [amd64])\nConf libunwind-dev (1.3.2-2build2.1 Ubuntu:22.04/jammy-updates [amd64])\nConf libgoogle-perftools-dev (2.9.1-0ubuntu3 Ubuntu:22.04/jammy [amd64])\nConf python3-pip-whl (22.0.2+dfsg-1ubuntu0.7 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [all])\nConf python3-setuptools-whl (59.6.0-1.2ubuntu0.22.04.3 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [all])\nConf python3.10-venv (3.10.12-1~22.04.16 Ubuntu:22.04/jammy-updates, Ubuntu:22.04/jammy-security [amd64])\nConf python3-venv (3.10.6-1~22.04.1 Ubuntu:22.04/jammy-updates [amd64])",
+    "stderr": "",
+    "elapsed_seconds": 0.863
+  },
+  "isolation_candidates": {
+    "argv": [
+      "apt-cache",
+      "policy",
+      "docker.io",
+      "bubblewrap"
+    ],
+    "executable": "/usr/bin/apt-cache",
+    "status": "exited",
+    "exit_code": 0,
+    "stdout": "docker.io:\n  Installed: (none)\n  Candidate: 29.1.3-0ubuntu3~22.04.2\n  Version table:\n     29.1.3-0ubuntu3~22.04.2 500\n        500 http://repo.huaweicloud.com/ubuntu jammy-updates/universe amd64 Packages\n        500 http://repo.huaweicloud.com/ubuntu jammy-security/universe amd64 Packages\n     20.10.12-0ubuntu4 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/universe amd64 Packages\nbubblewrap:\n  Installed: (none)\n  Candidate: 0.6.1-1ubuntu0.1\n  Version table:\n     0.6.1-1ubuntu0.1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy-updates/main amd64 Packages\n        500 http://repo.huaweicloud.com/ubuntu jammy-security/main amd64 Packages\n     0.6.1-1 500\n        500 http://repo.huaweicloud.com/ubuntu jammy/main amd64 Packages",
+    "stderr": "",
+    "elapsed_seconds": 0.043
+  },
+  "registry_transport": {
+    "argv": [
+      "curl",
+      "--disable",
+      "--head",
+      "--silent",
+      "--show-error",
+      "--connect-timeout",
+      "4",
+      "--max-time",
+      "8",
+      "--output",
+      "/dev/null",
+      "--write-out",
+      "http=%{http_code} elapsed_s=%{time_total}",
+      "https://registry-1.docker.io/v2/"
+    ],
+    "executable": "/usr/bin/curl",
+    "status": "exited",
+    "exit_code": 28,
+    "stdout": "http=000 elapsed_s=2.201664",
+    "stderr": "curl: (28) Failed to connect to registry-1.docker.io port 443 after 2201 ms: Connection timed out",
+    "elapsed_seconds": 2.207
+  }
+}

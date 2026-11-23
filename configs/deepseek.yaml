@@ -1,0 +1,11 @@
+schema_version: 1
+status: pending_stage_1
+base_url: https://api.deepseek.com
+controller_key_file: apikey.txt
+model_id: null
+repair:
+  max_model_calls: 40
+  timeout_seconds: 1800
+  max_transient_retries: 3
+  final_candidates: 1
+  cost_limit: null

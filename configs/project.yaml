@@ -1,0 +1,22 @@
+schema_version: 1
+resource_snapshot: reports/environment.json
+
+# 阶段 0 的预算。阶段 1 部署后再验证操作系统是否实际执行这些限制。
+resources:
+  build:
+    jobs: 4
+    planning_bytes_per_job: 3221225472
+  host_reserve_bytes: 6442450944
+  verification:
+    concurrent_jobs: 1
+    timeout_seconds: 300
+    memory_bytes: 21474836480
+  checkpoints:
+    max_count: 8
+    max_total_bytes: 2147483648  # 计入单次验证的内存预算
+
+deployment_plan:
+  native_dependencies: ubuntu_apt
+  python_environment: .venv
+  repair_shell_isolation: bubblewrap
+  repair_shell_fallback: docker_with_imported_image
