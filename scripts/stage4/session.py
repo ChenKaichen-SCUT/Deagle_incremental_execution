@@ -19,6 +19,7 @@ from scripts.stage4.change_provider import changes
 from incdeagle.adapters.deagle import classify
 from incdeagle.model.compare import manifest
 from incdeagle.model.identity import file_sha, read, save
+from scripts.stage9 import frontend
 
 BINARY = ROOT / "third_party/deagle-stage4/src/cbmc/deagle_exe"
 
@@ -44,10 +45,13 @@ def candidate_context(old, front, case, gamma, phi, lock, gcc, frontend_exit):
     versions = []
     try:
         for folder in (old, front):
-            version = manifest(folder, case, gamma, phi, lock, gcc)
+            version = frontend.add_provenance(manifest(folder, case, gamma, phi, lock, gcc), folder)
             save(folder / "manifest.json", version)
             versions.append(version)
         diff = changes(old, front, versions)
+        errors = [v['context']['frontend_dependencies_v2']['errors'] for v in versions]
+        if any(errors):
+            diff.update(preflight_refusal='unconfirmed_frontend_dependencies', frontend_errors=errors)
     except (OSError, KeyError, TypeError, ValueError, IndexError) as error:
         diff = {"preflight_refusal": "frontend_dependency_check_failed", "detail": str(error)}
     return versions, diff
@@ -84,6 +88,7 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
         raise ValueError("Executable or source commit differs from the release lock")
     if theory:
         base_env.update(theory.prepare(out, lock))
+    toolchain = frontend.Toolchain()
     gcc_path = Path("/usr/bin/gcc").resolve()
     gcc = {"binary":str(gcc_path),"sha256":file_sha(gcc_path),
            "version":subprocess.check_output([gcc_path,"-dumpfullversion"],text=True).strip()}
@@ -104,7 +109,8 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
         if checkpoint_bytes is not None:
             if checkpoint_bytes<0:raise ValueError("Checkpoint budget must be nonnegative")
             limit_bytes=min(limit_bytes,checkpoint_bytes)
-        original = start(old, INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_BUDGET_BYTES=str(limit_bytes))
+        old_env = frontend.prepare(old, tools, base_env, toolchain, fast=False)
+        original = start(old, INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_BUDGET_BYTES=str(limit_bytes), **old_env)
         while not (out/"old_done.json").exists() and original.poll() is None:
             if time.monotonic()-begin >= timeout:
                 raise TimeoutError("Old build/verification exceeded case budget")
@@ -120,8 +126,9 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
                 save(out/"session.json",summary)
                 return summary
             raise ValueError("Expected P0 target failure")
+        frontend.confirm_identity(old, base_env, toolchain)
         if theory:
-            old_manifest = manifest(old, case, gamma, phi, lock, gcc)
+            old_manifest = frontend.add_provenance(manifest(old, case, gamma, phi, lock, gcc), old)
             save(old / "manifest.json", old_manifest)
             theory.capture(old, old_manifest)
         warmup_wall = time.monotonic()-begin
@@ -137,8 +144,11 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
             return left
         shutil.copyfile(cand/"program.c",working/"program.c")
         before_front = time.monotonic()
-        compiler = start(front,INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_FRONTEND="1")
-        frontend_exit = compiler.wait(timeout=remaining())
+        recorder = frontend.Candidate(front, tools, base_env, toolchain, remaining)
+        stack.callback(recorder.close)
+        compiler = start(front,INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_FRONTEND="1", **recorder.env)
+        frontend_exit = recorder.wait(compiler,remaining)
+        frontend.confirm_identity(front, base_env, toolchain, remaining)
         frontend_wall=time.monotonic()-before_front
         if candidate_provider is not None:
             candidate_provider.admit(front, frontend_exit)

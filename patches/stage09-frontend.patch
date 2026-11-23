@@ -1,0 +1,544 @@
+diff --git a/scripts/stage4/session.py b/scripts/stage4/session.py
+index 43f1767..c68c3e7 100644
+--- a/scripts/stage4/session.py
++++ b/scripts/stage4/session.py
+@@ -19,6 +19,7 @@ from scripts.stage4.change_provider import changes
+ from incdeagle.adapters.deagle import classify
+ from incdeagle.model.compare import manifest
+ from incdeagle.model.identity import file_sha, read, save
++from scripts.stage9 import frontend
+ 
+ BINARY = ROOT / "third_party/deagle-stage4/src/cbmc/deagle_exe"
+ 
+@@ -44,10 +45,13 @@ def candidate_context(old, front, case, gamma, phi, lock, gcc, frontend_exit):
+     versions = []
+     try:
+         for folder in (old, front):
+-            version = manifest(folder, case, gamma, phi, lock, gcc)
++            version = frontend.add_provenance(manifest(folder, case, gamma, phi, lock, gcc), folder)
+             save(folder / "manifest.json", version)
+             versions.append(version)
+         diff = changes(old, front, versions)
++        errors = [v['context']['frontend_dependencies_v2']['errors'] for v in versions]
++        if any(errors):
++            diff.update(preflight_refusal='unconfirmed_frontend_dependencies', frontend_errors=errors)
+     except (OSError, KeyError, TypeError, ValueError, IndexError) as error:
+         diff = {"preflight_refusal": "frontend_dependency_check_failed", "detail": str(error)}
+     return versions, diff
+@@ -84,6 +88,7 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
+         raise ValueError("Executable or source commit differs from the release lock")
+     if theory:
+         base_env.update(theory.prepare(out, lock))
++    toolchain = frontend.Toolchain()
+     gcc_path = Path("/usr/bin/gcc").resolve()
+     gcc = {"binary":str(gcc_path),"sha256":file_sha(gcc_path),
+            "version":subprocess.check_output([gcc_path,"-dumpfullversion"],text=True).strip()}
+@@ -104,7 +109,8 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
+         if checkpoint_bytes is not None:
+             if checkpoint_bytes<0:raise ValueError("Checkpoint budget must be nonnegative")
+             limit_bytes=min(limit_bytes,checkpoint_bytes)
+-        original = start(old, INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_BUDGET_BYTES=str(limit_bytes))
++        old_env = frontend.prepare(old, tools, base_env, toolchain, fast=False)
++        original = start(old, INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_BUDGET_BYTES=str(limit_bytes), **old_env)
+         while not (out/"old_done.json").exists() and original.poll() is None:
+             if time.monotonic()-begin >= timeout:
+                 raise TimeoutError("Old build/verification exceeded case budget")
+@@ -120,8 +126,9 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
+                 save(out/"session.json",summary)
+                 return summary
+             raise ValueError("Expected P0 target failure")
++        frontend.confirm_identity(old, base_env, toolchain)
+         if theory:
+-            old_manifest = manifest(old, case, gamma, phi, lock, gcc)
++            old_manifest = frontend.add_provenance(manifest(old, case, gamma, phi, lock, gcc), old)
+             save(old / "manifest.json", old_manifest)
+             theory.capture(old, old_manifest)
+         warmup_wall = time.monotonic()-begin
+@@ -137,8 +144,11 @@ def run_pair(case, out, *, checkpoint_bytes=None, theory=None, candidate_provide
+             return left
+         shutil.copyfile(cand/"program.c",working/"program.c")
+         before_front = time.monotonic()
+-        compiler = start(front,INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_FRONTEND="1")
+-        frontend_exit = compiler.wait(timeout=remaining())
++        recorder = frontend.Candidate(front, tools, base_env, toolchain, remaining)
++        stack.callback(recorder.close)
++        compiler = start(front,INCDEAGLE_S4_ROOT=str(out),INCDEAGLE_S4_FRONTEND="1", **recorder.env)
++        frontend_exit = recorder.wait(compiler,remaining)
++        frontend.confirm_identity(front, base_env, toolchain, remaining)
+         frontend_wall=time.monotonic()-before_front
+         if candidate_provider is not None:
+             candidate_provider.admit(front, frontend_exit)
+diff --git a/scripts/stage9/dispatch.sh b/scripts/stage9/dispatch.sh
+new file mode 100644
+index 0000000..5df34be
+--- /dev/null
++++ b/scripts/stage9/dispatch.sh
+@@ -0,0 +1,43 @@
++#!/bin/sh
++# The frontend controller owns this private directory and waits for this process.
++set -u
++root=$INCDEAGLE_FRONT_SPOOL
++slot="$root/c.$$"
++umask 077
++mkdir "$slot" || exit 125
++printf '%s\0' "$@" > "$slot/argv" || exit 125
++pwd -P > "$slot/cwd" || exit 125
++kind=unknown
++if { [ "$#" -eq 4 ] && [ "$1" = -E ] && [ "$2" = - ] && [ "$3" = -o ] && [ "$4" = - ]; } ||
++   { [ "$#" -eq 6 ] && [ "$1" = -E ] && [ "$2" = -x ] && [ "$3" = c++ ] && [ "$4" = - ] && [ "$5" = -o ] && [ "$6" = - ]; }; then
++    kind=probe
++else
++    previous=''
++    safe=yes
++    for arg do
++        case "$previous" in ''|-E|-m32|-m64|-std=*|-D?*|-U?*|-I?*) ;; *) safe=no ;; esac
++        previous=$arg
++    done
++    if [ "$safe" = yes ] && [ "$#" -gt 1 ] && [ "$1" = -E ] && [ -f "$previous" ]; then kind=file; fi
++fi
++printf '%s\n' "$kind" > "$slot/kind" || exit 125
++if [ "$kind" = unknown ]; then
++    exec /usr/bin/python3 "$INCDEAGLE_FRONT_MODULE/../stage3/record_gcc.py" "$@"
++fi
++if [ "$kind" = probe ]; then
++    cat > "$slot/stdin" || exit 125
++    /usr/bin/gcc "$@" < "$slot/stdin" > "$slot/stdout"
++else
++    /usr/bin/gcc -MD -MF "$slot/deps" -MT incdeagle "$@" > "$slot/stdout"
++fi
++rc=$?
++printf '%s\n' "$rc" > "$slot/status" || exit 125
++if [ "$kind" = file ]; then
++    mkfifo -m 600 "$slot/ack" || exit 125
++    exec 3<>"$slot/ack" || exit 125
++    printf '%s\n' "$$" > "$root/requests" || exit 125
++    IFS= read -r ack <&3 || exit 125
++    exec 3>&-
++fi
++cat "$slot/stdout" || exit 125
++exit "$rc"
+diff --git a/scripts/stage9/frontend.py b/scripts/stage9/frontend.py
+new file mode 100644
+index 0000000..767053b
+--- /dev/null
++++ b/scripts/stage9/frontend.py
+@@ -0,0 +1,186 @@
++"""Linux candidate frontend. GCC executes with the same cwd, standard streams and environment."""
++import errno
++import hashlib
++import math
++import os
++import select
++import shutil
++import subprocess
++import time
++from pathlib import Path
++
++from incdeagle.model.identity import digest, read, save
++from scripts.stage9 import provenance as proof
++
++MODULE=Path(__file__).resolve().parent
++ENV_KEYS=('CPATH','C_INCLUDE_PATH','CPLUS_INCLUDE_PATH','OBJC_INCLUDE_PATH','GCC_EXEC_PREFIX',
++          'COMPILER_PATH','LIBRARY_PATH','GCC_COMPARE_DEBUG','SOURCE_DATE_EPOCH','GCC_COLORS',
++          'DEPENDENCIES_OUTPUT','SUNPRO_DEPENDENCIES','LANG','LANGUAGE','LC_ALL','LC_CTYPE','LC_MESSAGES',
++          'LD_LIBRARY_PATH','LD_PRELOAD','POSIXLY_CORRECT')
++UNSUPPORTED_ENV={'GCC_EXEC_PREFIX','COMPILER_PATH','DEPENDENCIES_OUTPUT','SUNPRO_DEPENDENCIES',
++                 'LD_PRELOAD','GCC_COMPARE_DEBUG'}
++
++
++class Toolchain:
++    def __init__(self):
++        self.cache={}
++
++    def snapshot(self,env,remaining=None):
++        driver=Path('/usr/bin/gcc')
++        def query(arg):
++            timeout=min(5,remaining()) if remaining else 5
++            return subprocess.check_output([driver,arg],env=env,timeout=timeout,stderr=subprocess.PIPE).strip()
++        def binary(path):
++            real=path.resolve(strict=True)
++            key=(real,proof.stamp(real))
++            if key not in self.cache:
++                h=hashlib.sha256()
++                with real.open('rb') as f:
++                    for block in iter(lambda:f.read(1048576),b''):
++                        h.update(block)
++                value=h.hexdigest()
++                if proof.stamp(real)!=key[1]:
++                    raise ValueError('compiler_changed_while_hashing')
++                self.cache[key]=value
++            return [str(real),self.cache[key]]
++        info={'environment':{k:proof.sha(os.fsencode(env[k])) for k in ENV_KEYS if k in env}}
++        errors=['unsupported_compiler_environment:'+k for k in sorted(UNSUPPORTED_ENV & env.keys())]
++        try:
++            info['driver']=binary(driver)
++            info['version']=os.fsdecode(query('-dumpfullversion'))
++            info['specs_sha256']=proof.sha(query('-dumpspecs'))
++            for name in ('cc1','cc1plus'):
++                path=Path(os.fsdecode(query('-print-prog-name='+name)))
++                if not path.is_absolute():
++                    raise ValueError('unresolved_compiler_backend')
++                info[name]=binary(path)
++            specs=Path(os.fsdecode(query('-print-file-name=specs')))
++            info['external_specs']=binary(specs) if specs.is_absolute() else None
++        except (ValueError,OSError,subprocess.SubprocessError) as exc:
++            errors.append('unconfirmed_compiler_identity:'+type(exc).__name__)
++        return {'identity':info,'errors':errors}
++
++
++def add_provenance(manifest,directory):
++    try:
++        extra=proof.context(directory)
++    except (ValueError,OSError,KeyError,TypeError,IndexError):
++        extra={'schema':2,'errors':['incomplete_frontend_evidence']}
++    if extra['errors']:
++        # Distinct P0 and P1 refusal identities also invalidate the existing theory audit.
++        extra['ineligible_role']=directory.name
++    manifest['context']['frontend_dependencies_v2']=extra
++    manifest['context_sha256']=digest(manifest['context'])
++    manifest.pop('version_sha256',None)
++    manifest['version_sha256']=digest(manifest)
++    return manifest
++
++
++def prepare(directory,tools,env,toolchain,fast,remaining=None):
++    spool=directory/'compiler-spool'
++    spool.mkdir(mode=0o700)
++    bindir=tools/directory.name
++    bindir.mkdir()
++    wrapper=bindir/'gcc'
++    shutil.copyfile(MODULE/('dispatch.sh' if fast else 'reference_gcc.py'),wrapper)
++    wrapper.chmod(0o755)
++    identity=toolchain.snapshot(env,remaining)
++    save(directory/'compiler-identity.json',identity)
++    return dict(PATH=str(bindir)+':'+env['PATH'],INCDEAGLE_FRONT_SPOOL=str(spool),INCDEAGLE_FRONT_MODULE=str(MODULE))
++
++
++def confirm_identity(directory,env,toolchain,remaining=None):
++    path=directory/'compiler-identity.json'
++    original=read(path)
++    if original!=toolchain.snapshot(env,remaining):
++        original['errors'].append('compiler_changed_during_frontend')
++        save(path,original)
++
++
++class Candidate:
++    def __init__(self,directory,tools,env,toolchain,remaining=None):
++        self.directory=directory
++        self.spool=directory/'compiler-spool'
++        self.fast=hasattr(os,'pidfd_open')
++        self.env=prepare(directory,tools,env,toolchain,self.fast,remaining)
++        self.fd=None
++        self.processed=set()
++        self.reduce_ns=0
++        if self.fast:
++            os.mkfifo(self.spool/'requests',0o600)
++            self.fd=os.open(self.spool/'requests',os.O_RDWR|os.O_NONBLOCK|os.O_CLOEXEC)
++
++    def close(self):
++        if self.fd is not None:
++            os.close(self.fd)
++            self.fd=None
++
++    def handle(self,slot):
++        started=time.monotonic_ns()
++        args=[os.fsdecode(x) for x in (slot/'argv').read_bytes().split(b'\0')[:-1]]
++        kind=(slot/'kind').read_text().strip()
++        try:
++            if kind=='unknown':
++                record={'kind':'unknown','argv':args,'errors':['unrecognized_gcc_invocation']}
++            else:
++                raw=(slot/'stdout').read_bytes()
++                rc=int((slot/'status').read_text())
++                if kind=='probe' and tuple(args) in proof.PROBES:
++                    record=proof.probe_record(args,(slot/'stdin').read_bytes(),raw,rc)
++                elif kind=='file' and proof.flags_supported(args):
++                    cwd=Path(os.fsdecode((slot/'cwd').read_bytes().removesuffix(b'\n')))
++                    legacy,record=proof.file_record(cwd,args,raw,rc,slot/'deps')
++                    proof.emit(self.directory/'cpp.jsonl',legacy)
++                else:
++                    raise ValueError('unrecognized_gcc_invocation')
++        except (ValueError,OSError,KeyError) as exc:
++            record={'kind':'unknown','argv':args,'errors':['unconfirmed_dependency:'+type(exc).__name__]}
++        proof.emit(self.directory/'frontend-calls.jsonl',record)
++        self.processed.add(slot.name)
++        self.reduce_ns+=time.monotonic_ns()-started
++
++    def wait(self,proc,remaining):
++        if not self.fast:
++            return proc.wait(timeout=remaining())
++        poll=select.poll()
++        poll.register(self.fd,select.POLLIN)
++        try:
++            pidfd=os.pidfd_open(proc.pid)
++        except OSError as exc:
++            if exc.errno not in (errno.ENOSYS,errno.EPERM,errno.EINVAL,errno.ESRCH):
++                raise
++            pidfd=None
++        if pidfd is not None:
++            poll.register(pidfd,select.POLLIN)
++        pending=b''
++        try:
++            while proc.poll() is None:
++                timeout=max(1,math.ceil(remaining()*1000))
++                events=poll.poll(timeout if pidfd is not None else min(timeout,5))
++                if not any(fd==self.fd for fd,_ in events):
++                    continue
++                pending+=os.read(self.fd,65536)
++                while b'\n' in pending:
++                    line,pending=pending.split(b'\n',1)
++                    if not line.isdigit() or len(line)>12:
++                        raise ValueError('invalid local frontend notification')
++                    slot=self.spool/('c.'+line.decode('ascii'))
++                    self.handle(slot)
++                    ack=os.open(slot/'ack',os.O_WRONLY|os.O_NONBLOCK|os.O_CLOEXEC)
++                    try:os.write(ack,b'ok\n')
++                    finally:os.close(ack)
++            exit_observed=time.monotonic_ns()
++            rc=proc.wait()
++            reaped=time.monotonic_ns()
++            # Probe stdout and stdin survive the compiler. Process them inside the measured frontend.
++            for slot in sorted(self.spool.glob('c.*')):
++                if slot.name not in self.processed:
++                    if not (slot/'kind').exists():
++                        proof.emit(self.directory/'frontend-calls.jsonl',dict(kind='unknown',errors=['incomplete_dispatch']))
++                    else:
++                        self.handle(slot)
++            save(self.directory/'frontend-metrics.json',dict(pidfd=pidfd is not None,reducer_ns=self.reduce_ns,
++                 exit_observed_ns=exit_observed,reaped_ns=reaped,calls=len(self.processed)))
++            return rc
++        finally:
++            if pidfd is not None:os.close(pidfd)
+diff --git a/scripts/stage9/provenance.py b/scripts/stage9/provenance.py
+new file mode 100644
+index 0000000..5c6e1f0
+--- /dev/null
++++ b/scripts/stage9/provenance.py
+@@ -0,0 +1,177 @@
++"""Schema-1 GCC records and supplementary cache eligibility for the candidate frontend."""
++import hashlib
++import json
++import os
++import re
++import stat
++from collections import Counter
++from pathlib import Path
++
++PROBES = (('-E', '-', '-o', '-'), ('-E', '-x', 'c++', '-', '-o', '-'))
++MARKER = re.compile(rb'(?m)^#\s+\d+\s+"([^"\n]+)"')
++VIRTUAL = {'<command-line>', '<built-in>', '<stdin>', '<command line>'}
++BUILTIN_LINE = re.compile(rb'(?m)^\s*#\s*(?:line\s+)?\d+\s+"(<(?:built-in-additions|builtin-library(?:-[\w.$]+)?)>)"')
++
++
++def sha(data):
++    return hashlib.sha256(data).hexdigest()
++
++
++def emit(path, record):
++    with path.open('a', encoding='utf-8') as stream:
++        stream.write(json.dumps(record, ensure_ascii=True) + '\n')
++
++
++def make_paths(data):
++    # GCC -MT gives one fixed target. Decode GCC's make escaping, not shell syntax.
++    data = data.replace(b'\\\n', b' ')
++    target, sep, values = data.partition(b':')
++    if target != b'incdeagle' or not sep:
++        raise ValueError('unrecognized_dependency_rule')
++    result, token = [], bytearray()
++    i = 0
++    while i < len(values):
++        c = values[i]
++        if c == 92 and i + 1 < len(values):
++            i += 1
++            if values[i] not in b' \t#\\':
++                raise ValueError('ambiguous_make_escape')
++            token.append(values[i])
++        elif c == 36 and values[i+1:i+2] == b'$':
++            token.append(c)
++            i += 1
++        elif c in b' \t\r\n':
++            if token:
++                result.append(os.fsdecode(bytes(token)))
++                token.clear()
++        else:
++            token.append(c)
++        i += 1
++    if token:
++        result.append(os.fsdecode(bytes(token)))
++    if not result:
++        raise ValueError('empty_dependency_rule')
++    return result
++
++
++def stamp(path):
++    s = path.stat()
++    if not stat.S_ISREG(s.st_mode):
++        raise ValueError('dependency_not_regular')
++    return (s.st_dev, s.st_ino, s.st_size, s.st_mtime_ns, s.st_ctime_ns)
++
++
++def file_record(cwd, args, raw, rc, depfile):
++    """Compute the original seven schema-1 fields while temporary sources still exist."""
++    source = (cwd / args[-1]).resolve(strict=True)
++    snapshots, paths, markers = {}, {}, {}
++    errors = []
++    def content(path):
++        if path not in snapshots:
++            first = stamp(path)
++            value = sha(path.read_bytes())
++            if stamp(path) != first:
++                raise ValueError('dependency_changed_while_reading')
++            snapshots[path] = first, value
++        return snapshots[path][1]
++    unit = 'harness.c' if source == (cwd/'harness.c').resolve() else 'generated/' + content(source)
++    generated_labels=set()
++    if unit.startswith('generated/'):
++        source_bytes=source.read_bytes()
++        if 'generated/'+sha(source_bytes)!=unit:
++            raise ValueError('generated_source_changed')
++        (depfile.parent/'unit-source').write_bytes(source_bytes)
++        generated_labels=set(BUILTIN_LINE.findall(source_bytes))
++    def identify(spelling):
++        if spelling not in paths:
++            path = (cwd / spelling).resolve(strict=True)
++            name = unit if path == source else (path.name if path.parent == cwd else str(path))
++            paths[spelling] = path, name, content(path)
++        return paths[spelling]
++    def replace(match):
++        spelling = os.fsdecode(match[1])
++        if spelling in VIRTUAL or match[1] in generated_labels:
++            return match[0]
++        try:
++            _, name, value = identify(spelling)
++        except (ValueError, OSError):
++            errors.append('unconfirmed_line_marker')
++            return match[0]
++        markers[name] = value
++        return match[0].replace(match[1], os.fsencode(name))
++    stable = MARKER.sub(replace, raw)
++    evidence = {}
++    if rc == 0:
++        try:
++            for item in make_paths(depfile.read_bytes()):
++                _, name, value = identify(item)
++                evidence[name] = value
++        except (OSError,ValueError):
++            errors.append('unconfirmed_compiler_dependency')
++        if unit not in evidence or not markers.keys() <= evidence.keys():
++            errors.append('line_markers_disagree_with_compiler_dependencies')
++    else:
++        errors.append('gcc_nonzero')
++    if any(stamp(path) != before for path, (before, _) in snapshots.items()):
++        errors.append('dependency_changed_during_recording')
++    if any((cwd / spelling).resolve(strict=True) != path for spelling,(path,_,_) in paths.items()):
++        errors.append('dependency_path_changed_during_recording')
++    old = dict(unit=unit, argv=[*args[:-1],unit], raw_argv=args, files=markers, returncode=rc,
++               raw_output_sha256=sha(raw), output_sha256=sha(stable))
++    return old, dict(kind='file', unit=unit, argv=old['argv'], files=evidence,
++                     output_sha256=old['output_sha256'], raw_output_sha256=old['raw_output_sha256'],
++                     returncode=rc, errors=sorted(set(errors)))
++
++
++def probe_record(args, data, raw, rc):
++    return dict(kind='probe', argv=args, input_sha256=sha(data), output_sha256=sha(raw),
++                returncode=rc, errors=[] if rc==0 else ['gcc_nonzero'])
++
++
++def flags_supported(args):
++    return len(args)>1 and args[0]=='-E' and all(
++        a in ('-E','-m32','-m64') or a.startswith('-std=') or
++        (len(a)>2 and a[:2] in ('-D','-U','-I')) for a in args[:-1])
++
++
++def context(directory):
++    rows=[json.loads(s) for s in (directory/'frontend-calls.jsonl').read_bytes().splitlines()]
++    old=[json.loads(s) for s in (directory/'cpp.jsonl').read_bytes().splitlines()]
++    probes=[r for r in rows if r['kind']=='probe']
++    files=[r for r in rows if r['kind']=='file']
++    errors={err for r in rows for err in r['errors']}
++    if sorted(tuple(r['argv']) for r in probes)!=sorted(PROBES):
++        errors.add('incomplete_compiler_probe_set')
++    if len(old)!=len(files) or not files or len({r['unit'] for r in files})!=len(files):
++        errors.add('incomplete_translation_unit_set')
++    expected=Counter((tuple(r['raw_argv']),r['raw_output_sha256']) for r in old)
++    expected.update((tuple(r['argv']),r['output_sha256']) for r in probes)
++    observed=Counter()
++    for slot in (directory/'compiler-spool').glob('c.*'):
++        if not (slot/'stdout').is_file() or not (slot/'argv').is_file():
++            errors.add('incomplete_dispatch_artifact')
++            continue
++        argv=tuple(os.fsdecode(s) for s in (slot/'argv').read_bytes().split(b'\0')[:-1])
++        observed[argv,sha((slot/'stdout').read_bytes())]+=1
++        if argv in PROBES and not any(tuple(r['argv'])==argv and r['input_sha256']==sha((slot/'stdin').read_bytes()) for r in probes):
++            errors.add('compiler_probe_input_disagreement')
++    if expected!=observed:
++        errors.add('incomplete_or_modified_preprocessor_stream')
++    headers={}
++    for row, original in zip(files,old):
++        if (any(row[k]!=original[k] for k in ('unit','argv','output_sha256','raw_output_sha256','returncode'))
++                or any(row['files'].get(k)!=v for k,v in original['files'].items())):
++            errors.add('dependency_record_disagreement')
++        for name, digest in row['files'].items():
++            if name not in ('program.c','harness.c') and headers.setdefault(name,digest)!=digest:
++                errors.add('inconsistent_header_content')
++        for name in ('program.c','harness.c'):
++            if name in row['files'] and row['files'][name]!=sha((directory/name).read_bytes()):
++                errors.add('source_identity_changed')
++    if not any(r['unit']=='harness.c' and {'harness.c','program.c'}<=r['files'].keys() for r in files):
++        errors.add('missing_project_dependencies')
++    identity=json.loads((directory/'compiler-identity.json').read_bytes())
++    errors.update(identity.get('errors',[]))
++    return dict(schema=2, compiler=identity['identity'], probes=sorted(probes,key=lambda r:r['argv']),
++                units=sorted([r['unit'],r['argv'],sorted(r['files'])] for r in files),
++                headers=headers, errors=sorted(errors))
+diff --git a/scripts/stage9/reference_gcc.py b/scripts/stage9/reference_gcc.py
+new file mode 100644
+index 0000000..b3c5789
+--- /dev/null
++++ b/scripts/stage9/reference_gcc.py
+@@ -0,0 +1,44 @@
++#!/usr/bin/python3
++"""Acquire the old session's provenance in the ordinary per-invocation interpreter."""
++import os
++import subprocess
++import sys
++from pathlib import Path
++
++sys.path.insert(0, os.environ['INCDEAGLE_FRONT_MODULE'])
++from provenance import PROBES, emit, file_record, flags_supported, probe_record
++
++args=sys.argv[1:]
++root=Path(os.environ['INCDEAGLE_CPP_RECORD']).parent
++slot=root/'compiler-spool'/('c.'+str(os.getpid()))
++slot.mkdir(mode=0o700)
++cwd=Path.cwd()
++gcc='/usr/bin/gcc'
++if tuple(args) in PROBES:
++    data=sys.stdin.buffer.read()
++    result=subprocess.run([gcc,*args],input=data,stdout=subprocess.PIPE)
++    (slot/'stdin').write_bytes(data)
++    record=probe_record(args,data,result.stdout,result.returncode)
++elif flags_supported(args) and (cwd/args[-1]).is_file():
++    dep=slot/'deps'
++    result=subprocess.run([gcc,'-MD','-MF',str(dep),'-MT','incdeagle',*args],stdout=subprocess.PIPE)
++    try:
++        legacy,record=file_record(cwd,args,result.stdout,result.returncode,dep)
++        emit(root/'cpp.jsonl',legacy)
++    except (OSError,ValueError):
++        record=dict(kind='unknown',argv=args,errors=['unconfirmed_dependency'])
++else:
++    emit(root/'frontend-calls.jsonl',dict(kind='unknown',argv=args,errors=['unrecognized_gcc_invocation']))
++    legacy=Path(os.environ['INCDEAGLE_FRONT_MODULE']).parent/'stage3/record_gcc.py'
++    os.execv(sys.executable,[sys.executable,str(legacy),*args])
++(slot/'stdout').write_bytes(result.stdout)
++(slot/'argv').write_bytes(b''.join(os.fsencode(a)+b'\0' for a in args))
++emit(root/'frontend-calls.jsonl',record)
++sys.stdout.buffer.write(result.stdout)
++if result.returncode<0:
++    import signal
++    signo=-result.returncode
++    if signo not in (signal.SIGKILL,signal.SIGSTOP):
++        signal.signal(signo,signal.SIG_DFL)
++    os.kill(os.getpid(),signo)
++sys.exit(result.returncode)
