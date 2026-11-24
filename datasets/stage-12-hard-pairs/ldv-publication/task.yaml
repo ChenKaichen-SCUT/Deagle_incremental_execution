@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "4",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "binding": "all native properties including reach_error.assertion.1 and all unwinding assertions",
+  "case_id": "ldv-publication",
+  "description": "发布设备状态与检查属于同一原子操作，仍允许工作线程更新设备且保留退出时的 join。",
+  "limits": {
+    "memory_gib": 7,
+    "timeout_s": 660
+  },
+  "model": "ILP32",
+  "pair_kind": "trace_repair",
+  "property": "unreach-call.prp",
+  "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+  "sides": {
+    "new": {
+      "file": "new/program.i",
+      "sha256": "c5addd2ec95429591cee763b7d29f10dcc9e42b4fe1e823fd12842c07b1ed933"
+    },
+    "old": {
+      "file": "old/program.i",
+      "sha256": "fd4c3d19582748238e9ca587d159d6e8fc23db581cd4de03be73dc785992e03f"
+    }
+  }
+}

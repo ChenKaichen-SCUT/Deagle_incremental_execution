@@ -1,0 +1,62 @@
+--- old/program.c
++++ new/program.c
+@@ -18,7 +18,7 @@
+ extern void __assert_fail(const char *__assertion, const char *__file,
+       unsigned int __line, const char *__function)
+      __attribute__ ((__nothrow__ , __leaf__)) __attribute__ ((__noreturn__));
+-void reach_error() { __assert_fail("0", "parallel-ticket-5.wvr.c", 21, __extension__ __PRETTY_FUNCTION__); }
++void reach_error() { __assert_fail("0", "parallel-ticket-6.wvr.c", 21, __extension__ __PRETTY_FUNCTION__); }
+ extern int pthread_create (pthread_t *__restrict __newthread,
+       const pthread_attr_t *__restrict __attr,
+       void *(*__start_routine) (void *),
+@@ -33,7 +33,7 @@
+   if(!cond) {abort();}
+ }
+ 
+-int m1, m2, m3, m4, m5;
++int m1, m2, m3, m4, m5, m6;
+ _Atomic int s, t, x;
+ _Atomic _Bool b;
+ 
+@@ -88,8 +88,18 @@
+   return 0;
+ }
+ 
++void* thread6(void* _argptr) {
++  m6 = t++;
++
++  assume_abort_if_not( m6 <= s );
++  if (x == 1) b = 1;
++  s++;
++
++  return 0;
++}
++
+ int main() {
+-  pthread_t t1, t2, t3, t4, t5;
++  pthread_t t1, t2, t3, t4, t5, t6;
+ 
+   // initialize global variables
+   m1 = __VERIFIER_nondet_int();
+@@ -97,6 +107,7 @@
+   m3 = __VERIFIER_nondet_int();
+   m4 = __VERIFIER_nondet_int();
+   m5 = __VERIFIER_nondet_int();
++  m6 = __VERIFIER_nondet_int();
+   s  = __VERIFIER_nondet_int();
+   t  = __VERIFIER_nondet_int();
+   x  = __VERIFIER_nondet_int();
+@@ -110,11 +121,13 @@
+   pthread_create(&t3, 0, thread3, 0);
+   pthread_create(&t4, 0, thread4, 0);
+   pthread_create(&t5, 0, thread5, 0);
++  pthread_create(&t6, 0, thread6, 0);
+   pthread_join(t1, 0);
+   pthread_join(t2, 0);
+   pthread_join(t3, 0);
+   pthread_join(t4, 0);
+   pthread_join(t5, 0);
++  pthread_join(t6, 0);
+ 
+   assume_abort_if_not(b);
+   reach_error();

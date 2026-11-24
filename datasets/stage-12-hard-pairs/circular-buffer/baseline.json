@@ -1,0 +1,268 @@
+{
+  "case_id": "circular-buffer",
+  "host": "server-8core",
+  "prior_screenings": {
+    "new": [
+      {
+        "native_search_s": 13.252611856,
+        "out": "candidates/buffer-fix-b8",
+        "result": "UNSAT",
+        "wall_s": 14.100948114995845
+      }
+    ],
+    "old": [
+      {
+        "native_search_s": 0.722060248,
+        "out": "extended/buffer-b8",
+        "result": "SAT",
+        "wall_s": 2.082942455999728
+      },
+      {
+        "native_search_s": 0.694386661,
+        "out": "quick/buffer-b8",
+        "result": "SAT",
+        "wall_s": 2.003938879999623
+      }
+    ]
+  },
+  "profile": "serial cold full model and fresh native Closure; one single-core job",
+  "repeats": 1,
+  "results": {
+    "new": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 8,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 7525,
+        "decisions": 30512,
+        "graph_nodes": 481,
+        "learnt_live_end": 6982,
+        "native_original_live": 1158284,
+        "propagations": 54992087,
+        "queries": 1,
+        "theory_conflicts": 56,
+        "theory_propagations": 117813,
+        "variables": 245473
+      },
+      "exit": 0,
+      "files": {
+        "program.i": {
+          "path": "inputs/buffer-fix/i",
+          "sha256": "45d0532015299cbea6251779c55f20bc70cd28eb2933c8ada200deed7fd901e3"
+        }
+      },
+      "host": "server-8core",
+      "identity": "7dd5254c7d0ff0cd1cb59d7e7be73c96e7deb89a1904befe5973dd5ac4a6a8cf",
+      "memory_gib": 7,
+      "out": "formal/buffer-fix-b8",
+      "peak_rss_kib": 148456,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.618272888,
+          "wall_s": 0.618317856
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.025173962,
+          "wall_s": 0.037275585
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.039770313,
+          "wall_s": 0.039772304
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.109331217,
+          "wall_s": 0.109350497
+        },
+        "search": {
+          "calls": 31,
+          "cpu_s": 13.080125029,
+          "wall_s": 13.081367424
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.215352989,
+          "wall_s": 0.215358189
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "0095b715e96e824f0ae20c595d5f2c0690ca406ead97c1bdfe191bf280616e05",
+        "boundary.tsv": "286ba73959f6d65e213622b4381efafa93f2c7406731112530d391d8ebe1b5d7",
+        "full_model.json": "4671bff0fb0fa1835c814b2cd3b1bbf70760516d4583d9e31866a7afbd864c76",
+        "goto.json": "38fa787767193f9d88521ddd07a61f41379cbe9ad595a1ecb7888ce4779b0fac",
+        "metrics.json": "8bcffc4f876ee21784618ad1fa8113e0f6c4f105b59903c0093f8d5e4721605d",
+        "native-bindings.json": "046d3c07cabea97a271bfa7a24a2ab0b0ddbde52455677a9dcb138bb5a097f26",
+        "native-state.tsv": "a42b42243c1eb1b580d958afec7c41440abec2dfad1070fb334ec13f2cd04962",
+        "program.i": "45d0532015299cbea6251779c55f20bc70cd28eb2933c8ada200deed7fd901e3",
+        "raw_ssa.json": "cc52a056280ec701a74116613e7771534b75ca2cd45b176a70b992e49a93e5f7",
+        "result.json": "6483c9d6c35a98cf43e9ab8cb0de2a4fc9cc5678b5393914d3c2c6411975c5e3",
+        "s8-graph.tsv": "62636a02aa482e775cc8493c79b7d650d0c073f1bd7cf4ff52f5f3fa800debb0",
+        "s8-initial.tsv": "198350ce95b6c9af3e082827d7460e0cb865467fdceb0faa70f19b6d72f12be7",
+        "s8-input.bin": "178210b9f1dc53c959621801c32824daa778503a2f9dc4035800fbde534f6ec8",
+        "s8-native.tsv": "cfb0d0b892fa2c0e49853f5c818834a3823c855e191e4d643835651d7a89b2b3",
+        "s8-sat.tsv": "308f5aae96e765b3b96af772f9e5f8e400cc8e236b2d1dce28d61e67229a6d80",
+        "s8-search.tsv": "ebfcee69d2d4cffdabbad246cf9edf87583dd87c2aadf37d881f89d6c0e604e5",
+        "s8-trace.tsv": "bb610d02555c65b1aadd998315d403868969e29f4f9f1fa59197d91ceeffdfd3",
+        "sc_input.json": "968c5b1fb63f82808f1ffeb8a75dffe108cdfa53da3ac49f4e1c60bea62c6ebf",
+        "search.bin": "cd1ab40238f3904d904ca5c1d9b5464153109f80e31b66b60c442f1c3b77da05",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "9556782b4039bc988d76d56136820a05418a67a77f5bda90b198e8c092f9c093",
+        "visits.json": "24a945cde09b721360fffaa7da1694a647a4eb6758f09f6ed220112d105d9546"
+      },
+      "result": "UNSAT",
+      "sample": "buffer-fix",
+      "sys_s": 0.098387,
+      "timeout_s": 740,
+      "user_s": 14.019015,
+      "wall_s": 14.18481081599748,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    },
+    "old": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 8,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 343,
+        "decisions": 115443,
+        "graph_nodes": 481,
+        "learnt_live_end": 11511,
+        "native_original_live": 1157324,
+        "propagations": 1365599,
+        "queries": 1,
+        "theory_conflicts": 18,
+        "theory_propagations": 11170,
+        "variables": 245082
+      },
+      "exit": 10,
+      "files": {
+        "program.i": {
+          "path": "inputs/buffer/i",
+          "sha256": "a5ee9b9286f55973fff2cea9c449f3602c5be2a48fed2e7e6cce6beebc18d9bc"
+        }
+      },
+      "host": "server-8core",
+      "identity": "38322690d269dbb29f957df1d636cee41dd334ef44b6c2612509a023e984ca28",
+      "memory_gib": 7,
+      "out": "formal/buffer-b8",
+      "peak_rss_kib": 126128,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.611567124,
+          "wall_s": 0.611604156
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.025433733,
+          "wall_s": 0.037738324
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.039552053,
+          "wall_s": 0.039554289
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.112223984,
+          "wall_s": 0.112236693
+        },
+        "search": {
+          "calls": 3,
+          "cpu_s": 0.392809438,
+          "wall_s": 0.392837091
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.216371271,
+          "wall_s": 0.216401459
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "FAILURE"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "545ec1d4fa2d991bb8edfc1677b15611bdd257a99cd22fab44d8fccbf40a3441",
+        "boundary.tsv": "775aac7f6dd56b2296dee9821c2fd20e379a45c172a1ec4c972adc1dd6f42999",
+        "full_model.json": "1799eebeda302beca7ac1072871a9d1412389c124081c562455595bb0a3b786c",
+        "goto.json": "b583a6ec88175f3b8c4c440220d3dbea6f105ac3710be156da593fd58ca573ab",
+        "metrics.json": "31e2b0441fa10f971ca317f5ef31384fe1891ba3854a3e7003cbd8b35567db6e",
+        "native-bindings.json": "f6c670db6f1b54ec23e45c7e443fd20d08668b64f7d7c163544c4c02ea64e6fb",
+        "native-state.tsv": "1e426cb95e940af78a1ba28deebc26c61a7376fb3638cf4a91d46f2daf8c7d59",
+        "program.i": "a5ee9b9286f55973fff2cea9c449f3602c5be2a48fed2e7e6cce6beebc18d9bc",
+        "raw_ssa.json": "87cb12e53bf873d3aea3b3bb1509c4d064cd459dbca97c5f448c66a583598bfb",
+        "result.json": "f3fc460d6fe03c9c0a7f2988489abeb2ccc0ae052fca3baf6e1fa7e66350d71c",
+        "s8-graph.tsv": "fc068348e1d855331947b77a3cdf95832c1389be73153c00a26fa9eaf34d5aaa",
+        "s8-initial.tsv": "a12f6a8591d22dc762395bc2da73e069eb69310bd11e0bb799e6e139cdabbdbd",
+        "s8-input.bin": "3cc7df439c243bc69fb249a3055a4dcc5db6c59230aeb322399f1e05804f8b59",
+        "s8-native.tsv": "f2f867e3ce1cd88dd90774c62c246ca264f49e303cefbcd2892a8b3dad019a0d",
+        "s8-sat.tsv": "b630dc5c4f66829d87553957462623103e5e5431ab4ba637de2d74728b471b24",
+        "s8-search.tsv": "8dc76f6578c5a68e72b8dd44c16d3820f7641ba5e7e6c189f0330a619854a1fd",
+        "s8-trace.tsv": "b35ad266149ad6a1104d270b5aa8df80bec642f732da01a3c275b971035fc020",
+        "sc_input.json": "f2e085d7657d702c5a93d9d7604776a874c29ad05a145fe43e5b48ced13f4e37",
+        "search.bin": "bb9503b2d70bc3407144d06d54935ff2321448ec47a9f7268d23973ec21bbeac",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "e490e76542ed9d77ce30d730ab05d68c4f85f621bfe346ca7b1eafc9cff3a40d",
+        "visits.json": "571db5061c539db668d54e3822e078b6eef06d3dc0ebfcf88186d5f0c18acd18"
+      },
+      "result": "SAT",
+      "sample": "buffer",
+      "sys_s": 0.13455499999999998,
+      "timeout_s": 740,
+      "user_s": 1.304572,
+      "wall_s": 1.442913344995759,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    }
+  }
+}

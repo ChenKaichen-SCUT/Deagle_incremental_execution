@@ -1,0 +1,264 @@
+{
+  "case_id": "ldv-publication",
+  "host": "server-8core",
+  "prior_screenings": {
+    "new": [
+      {
+        "native_search_s": 0.000464689,
+        "out": "fixes/ldv-join-fix-b4",
+        "result": "UNSAT",
+        "wall_s": 0.16062321399658686
+      }
+    ],
+    "old": [
+      {
+        "native_search_s": 0.000768635,
+        "out": "candidates/ldv-join-b4",
+        "result": "SAT",
+        "wall_s": 0.16109068899822887
+      }
+    ]
+  },
+  "profile": "serial cold full model and fresh native Closure; one single-core job",
+  "repeats": 1,
+  "results": {
+    "new": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 4,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 3,
+        "decisions": 38,
+        "graph_nodes": 39,
+        "learnt_live_end": 11,
+        "native_original_live": 9728,
+        "propagations": 1347,
+        "queries": 1,
+        "theory_conflicts": 0,
+        "theory_propagations": 10,
+        "variables": 3585
+      },
+      "exit": 0,
+      "files": {
+        "program.i": {
+          "path": "inputs/ldv-join-fix/i",
+          "sha256": "c5addd2ec95429591cee763b7d29f10dcc9e42b4fe1e823fd12842c07b1ed933"
+        }
+      },
+      "host": "server-8core",
+      "identity": "5536a55c5bff4a029e809e5478a7a208bfd3ac5f0e2afecffebf13559fb7be16",
+      "memory_gib": 7,
+      "out": "formal/ldv-join-fix-b4",
+      "peak_rss_kib": 20948,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.016222114,
+          "wall_s": 0.016223216
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.042112681,
+          "wall_s": 0.054344387
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.002310705,
+          "wall_s": 0.002311835
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.002980106,
+          "wall_s": 0.002980778
+        },
+        "search": {
+          "calls": 1,
+          "cpu_s": 0.000458831,
+          "wall_s": 0.000459889
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.002377035,
+          "wall_s": 0.002378047
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "ec37041776774cdb6dc9654a313ea3dd91e798bfcf5a680694fed68f9dd993bc",
+        "boundary.tsv": "a298e903f28ce719cb13a0da54ab2e91c07b141c925b7401669614ef7c885c2d",
+        "full_model.json": "b649ecd592f9fdaf38b17eb4f3e6a85e1c4a5b13b39d4e42a0f734608fb74970",
+        "goto.json": "714446de70e062ea43a3b3d52894696daa8a7195f1cd17d2f7d92b2e4e9d3bd7",
+        "metrics.json": "fb351ac9c2762a172b697d2a56b50a00e7eefbc55d434aca05240d788a64ebc9",
+        "native-bindings.json": "a6acddf25114c7b3872cc18449066ab8e5f1d6abdde0382a650045cfe4a73da1",
+        "native-state.tsv": "d84392682640878418fa1090875d0bae633d906bd15ccd0f2260b171e40db41d",
+        "program.i": "c5addd2ec95429591cee763b7d29f10dcc9e42b4fe1e823fd12842c07b1ed933",
+        "raw_ssa.json": "14cb208784d846f872ba7a4e2e4cf880974cb4bc07e9c179401305e906c6b176",
+        "result.json": "6e9f3c7a80bc9206f3ebe325a35ab0922f5e01ae77b4a391c64f1c418ab79234",
+        "s8-graph.tsv": "7d6e8d4db5a0bdd16b8bed40bf621a40cc5591a5361fdefdc31a41943430d6ce",
+        "s8-initial.tsv": "5f1fd6663fa200a9db68440f1b841e81d8d03d65f30a88769ab137db18152c33",
+        "s8-input.bin": "b4f9755f3ca51878047213994a68ea810cd2e9acc4da4f55464b2f9b561ea20a",
+        "s8-native.tsv": "3624e887b440ce976fb42c961f1bef8ac4128da4925659ca62518d8ccca30a76",
+        "s8-sat.tsv": "df7e4d383ff9259b44af5ce0caf6699d123568450e7b033491ab7e95ea5da054",
+        "s8-search.tsv": "4771553b054bf40887b1da87dccc9d476197fe5d20e410c3b964ad2ed79b6af8",
+        "s8-trace.tsv": "2ccf165a0bdf0a99984a8a92321bd3cc64b851438d37296a854fb3c994920628",
+        "sc_input.json": "6e1863fa80b2f1fc5e7e49d0b7675941576d33d29ebb53af191d781c4d8678c3",
+        "search.bin": "0360c9961740e474a971edb7a07a78c174b2ee21ec2fd4b1e92e0541b8bc332a",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "59e3cf95bb61c750e2bf6601703653d0f771d23a2565646004a4a6c797d9e4a5",
+        "visits.json": "a41f67c7cc71d3bdefc6127d8e4b95540bc49ad90341acb0dafeed4d78ab1bb8"
+      },
+      "result": "UNSAT",
+      "sample": "ldv-join-fix",
+      "sys_s": 0.022112,
+      "timeout_s": 740,
+      "user_s": 0.08774799999999999,
+      "wall_s": 0.16065281500050332,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 498\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *pthread_mutex_init$$mutex, const pthread_mutexattr_t *mutexattr)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 505\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *pthread_mutex_lock$$mutex)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 510\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *pthread_mutex_unlock$$mutex)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_destroy\"\nold definition in module program file program.i line 501\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_destroy> line 17\nsigned int (pthread_mutex_t *pthread_mutex_destroy$$mutex)"
+      ]
+    },
+    "old": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 4,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 4,
+        "decisions": 1079,
+        "graph_nodes": 40,
+        "learnt_live_end": 13,
+        "native_original_live": 9936,
+        "propagations": 4773,
+        "queries": 1,
+        "theory_conflicts": 0,
+        "theory_propagations": 11,
+        "variables": 3638
+      },
+      "exit": 10,
+      "files": {
+        "program.i": {
+          "path": "inputs/ldv-join/i",
+          "sha256": "fd4c3d19582748238e9ca587d159d6e8fc23db581cd4de03be73dc785992e03f"
+        }
+      },
+      "host": "server-8core",
+      "identity": "18df96c289e5be73c8bfda251e622733e23565079d0ad33af8d28c93551bf568",
+      "memory_gib": 7,
+      "out": "formal/ldv-join-b4",
+      "peak_rss_kib": 20948,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.016879995,
+          "wall_s": 0.016881208
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.042179307,
+          "wall_s": 0.054538191
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.002358665,
+          "wall_s": 0.002359586
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.003122257,
+          "wall_s": 0.003122931
+        },
+        "search": {
+          "calls": 1,
+          "cpu_s": 0.000692271,
+          "wall_s": 0.000693343
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.002439935,
+          "wall_s": 0.002441028
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "FAILURE"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "8b4974ba83cabd685d74366d632729cd6f79e520953949702b853b4390b1916d",
+        "boundary.tsv": "77ceeb82c126277f48b6fa27927a23a491654f5d3c58c6d6d4731bc9747185be",
+        "full_model.json": "5260d83e2d2f336d15d3c5ae7b5124a38a205c3124e40b098af6cb7dd0e6cffe",
+        "goto.json": "7e87926dc417dd550a0eaa8ff507e77955906c4ce1996a9ff3cfb60654c07301",
+        "metrics.json": "fc62c6a76b3d05016acf666179973b7f5877a89275d5f4054eb78ae9ab74b369",
+        "native-bindings.json": "298a1d5e44ad181b9098d8d2ee384a37ac84b189894a8b14486ce8e4efe70c93",
+        "native-state.tsv": "3131c334c83e59b9a195e7b3b06b8dadbd02bf0a1aa89fd504c83a90056a0cd5",
+        "program.i": "fd4c3d19582748238e9ca587d159d6e8fc23db581cd4de03be73dc785992e03f",
+        "raw_ssa.json": "b2ff66f3d8491256392721ce88c72a167dfd265581baeefe1c250cfba9cf0c94",
+        "result.json": "8e743ffaa3ad1877d1cb0d2ff0c101d0867ad65d28603dd73bcd05f2cea3d57e",
+        "s8-graph.tsv": "70b2d27aa8953ba7f9fd2c6ce6fde8084d0b200f9bcda179de33d73df83abb76",
+        "s8-initial.tsv": "43d55227e7c0b250c6a202102123219bf07d7099542a36e6e13fbfe4637f2ecc",
+        "s8-input.bin": "e90853ce685fd0996fcd6e664b4d31b2b3e23075b699e6aff1d105fe399a487a",
+        "s8-native.tsv": "db743d4cb070955b6fb29d0c03a2e5a1010b373e272d3a843484516e4e858fc0",
+        "s8-sat.tsv": "cae395342627a2abffd543f7a29ae9195e5a2f34226075590a230355278366eb",
+        "s8-search.tsv": "b1abd2db13d9564abb90fe70db7ffccd31e5d443e5ead42bff64e0faf5ce3387",
+        "s8-trace.tsv": "a4ba82fd26fa9ea04e36a75fcb2737be4ceb09b2c0c5afeb691bb6ceeea41c8c",
+        "sc_input.json": "586eefb2ae929938d3034188820fc916b106620bebfe5cee9e588cbffce37bce",
+        "search.bin": "274e52389e71a6b5ad95e8496f9d49ff799c158707c62a5f7e4f9668b45aae61",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "d649bee06299220ea7c73fb646215cc1adbf0f94765a45b1df8087eb0eecb69f",
+        "visits.json": "3389cacfebc083fd636873246044f6abb565d2e19f56729fe3c9b9f0f51b827d"
+      },
+      "result": "SAT",
+      "sample": "ldv-join",
+      "sys_s": 0.011508,
+      "timeout_s": 740,
+      "user_s": 0.101911,
+      "wall_s": 0.16066053500253474,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 498\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *pthread_mutex_init$$mutex, const pthread_mutexattr_t *mutexattr)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 505\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *pthread_mutex_lock$$mutex)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 510\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *pthread_mutex_unlock$$mutex)",
+        "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_destroy\"\nold definition in module program file program.i line 501\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_destroy> line 17\nsigned int (pthread_mutex_t *pthread_mutex_destroy$$mutex)"
+      ]
+    }
+  }
+}

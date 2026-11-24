@@ -1,0 +1,16 @@
+--- old/program.i
++++ new/program.i
+@@ -724,9 +724,11 @@
+   int ly = y;
+   int lx = x;
+   if (!(ly == lx)) ERROR: reach_error();
+-  l = r-1;
+-  r = l;
++  __VERIFIER_atomic_release_read_lock();
+   return 0;
++}
++void __VERIFIER_atomic_release_read_lock() {
++  r = r-1;
+ }
+ int main() {
+   pthread_t t1, t2, t3, t4;

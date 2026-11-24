@@ -1,0 +1,9 @@
+historical-fib/** -text -whitespace
+calibration/*/old/** -text -whitespace
+calibration/*/new/** -text -whitespace
+calibration/*/unreach-call.prp -text -whitespace
+host/** -text
+raw/*.part -text -diff
+*.gz -text -diff
+svcomp25/*-source -text -whitespace
+svcomp25/*-yaml -text -whitespace

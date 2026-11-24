@@ -1,0 +1,16 @@
+{
+  "after_join": "worker completed before W5/R5",
+  "no_spawn": "W1/R1 then W3/R3 progress unchanged",
+  "on_successful_spawn": {
+    "P0_orders": [
+      "W6 W2 R2",
+      "W2 W6 R6",
+      "W2 R2 W6"
+    ],
+    "P1_orders": [
+      "W6 [W2 R2]",
+      "[W2 R2] W6"
+    ]
+  },
+  "repair": "Only the two adjacent main-thread atomic sections are merged; writer still executes and original assertions are preserved."
+}

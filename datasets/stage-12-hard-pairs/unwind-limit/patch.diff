@@ -1,0 +1,19 @@
+--- old/program.i
++++ new/program.i
+@@ -754,11 +754,14 @@
+ int _N;
+ atomic_int limit;
+ void *f1(void* arg) {
++    int l;
+     if(__VERIFIER_nondet_int()) {
+-        limit = _N;
++        l = _N;
+     } else {
+-        limit = _N + 1;
++        l = _N + 1;
+     }
++    if (l > _N) l = _N;
++    limit = l;
+     return 0;
+ }
+ void *f2(void* arg) {

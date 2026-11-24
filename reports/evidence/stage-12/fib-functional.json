@@ -1,0 +1,74 @@
+{
+  "fib-snapshot-10": {
+    "complete_orders": 184756,
+    "maximum": [
+      17711,
+      17711
+    ],
+    "n": 10,
+    "operator": "<=",
+    "prefixes": 705431,
+    "reference": 17711,
+    "scope": "Arithmetic and SC interleavings of source atomic updates. Each value is nondecreasing, so two distinct sampling instants also respect a componentwise bound. Does not certify C11 race freedom of P0.",
+    "strict_violation": {
+      "i": 10946,
+      "j": 17711,
+      "schedule_bits": "01010101010101010101"
+    },
+    "witness_encoding": "0=t1 updates i; 1=t2 updates j. main can sample after this prefix."
+  },
+  "fib-snapshot-11": {
+    "complete_orders": 705432,
+    "maximum": [
+      46368,
+      46368
+    ],
+    "n": 11,
+    "operator": "<=",
+    "prefixes": 2704155,
+    "reference": 46368,
+    "scope": "Arithmetic and SC interleavings of source atomic updates. Each value is nondecreasing, so two distinct sampling instants also respect a componentwise bound. Does not certify C11 race freedom of P0.",
+    "strict_violation": {
+      "i": 28657,
+      "j": 46368,
+      "schedule_bits": "0101010101010101010101"
+    },
+    "witness_encoding": "0=t1 updates i; 1=t2 updates j. main can sample after this prefix."
+  },
+  "fib-snapshot-12": {
+    "complete_orders": 2704156,
+    "maximum": [
+      121393,
+      121393
+    ],
+    "n": 12,
+    "operator": "<=",
+    "prefixes": 10400599,
+    "reference": 121393,
+    "scope": "Arithmetic and SC interleavings of source atomic updates. Each value is nondecreasing, so two distinct sampling instants also respect a componentwise bound. Does not certify C11 race freedom of P0.",
+    "strict_violation": {
+      "i": 75025,
+      "j": 121393,
+      "schedule_bits": "010101010101010101010101"
+    },
+    "witness_encoding": "0=t1 updates i; 1=t2 updates j. main can sample after this prefix."
+  },
+  "fib-strict-12": {
+    "complete_orders": 2704156,
+    "maximum": [
+      121393,
+      121393
+    ],
+    "n": 12,
+    "operator": "<",
+    "prefixes": 10400599,
+    "reference": 121393,
+    "scope": "Arithmetic and SC interleavings of source atomic updates. Each value is nondecreasing, so two distinct sampling instants also respect a componentwise bound. Does not certify C11 race freedom of P0.",
+    "strict_violation": {
+      "i": 75025,
+      "j": 121393,
+      "schedule_bits": "010101010101010101010101"
+    },
+    "witness_encoding": "0=t1 updates i; 1=t2 updates j. main can sample after this prefix."
+  }
+}

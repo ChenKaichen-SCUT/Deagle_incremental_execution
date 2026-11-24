@@ -1,0 +1,19 @@
+{
+  "B_delta": "56188 -> 81573 / 确认保留 0",
+  "P0_learnt_count": 8511,
+  "P0_program": "ticket5",
+  "P0_result": "UNSAT",
+  "P0_search_time": 0.507094473,
+  "P0_theory_conflicts": 264,
+  "P1_band": "10-30",
+  "P1_program": "ticket6",
+  "P1_result": "UNSAT",
+  "P1_search_time": 12.152422526,
+  "case_id": "ticket-5-6",
+  "model_class": "B_AND_T",
+  "pair_kind": "scale_control",
+  "reason": "论文归档的公开版本增加一个工作线程，保留票号协议和 b 的可达性性质。",
+  "source": "FM26",
+  "status": "supplement",
+  "theory_delta": "apo 24->29 / po 158->186 / rf 266->365"
+}

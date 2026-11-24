@@ -1,0 +1,5 @@
+*/old/** -text -whitespace
+*/new/** -text -whitespace
+*/patch.diff -text -whitespace
+*/unreach-call.prp -text -whitespace
+*.csv text eol=lf

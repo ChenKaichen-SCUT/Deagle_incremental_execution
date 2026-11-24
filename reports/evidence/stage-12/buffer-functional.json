@@ -1,0 +1,25 @@
+{
+  "basis": "Every critical section takes the same mutex, so each source execution projects onto an order of seven producer and seven consumer polls. Successful transactions alternate. At most seven writes, before index wrap at 10. Each payload is the ordinal of its successful send and must equal the ordinal of its successful receive.",
+  "complete_dequeue_counts": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "first_bad_sender_slots": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7
+  ],
+  "fixed_bad_schedules": 0,
+  "original_bad_schedules": 3304,
+  "schedules": 3432
+}

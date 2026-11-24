@@ -43,6 +43,14 @@ case "$action" in
     export PATH="$project/scripts/local/user-bin:$PATH"
     cd "$source_project"
     exec .venv/bin/python -B -m incdeagle.cli replay-pair --check-model --case "${1:-cases/batch_total/task.yaml}" ;;
+  hard-pair)
+    case_id=${1:-circular-buffer}
+    [[ $case_id =~ ^[a-z0-9]+(-[a-z0-9]+)*$ && -f "$project/datasets/stage-12-hard-pairs/$case_id/task.yaml" ]] || { echo 'Unknown frozen case' >&2; exit 2; }
+    mkdir -p "$jobs"
+    out=$(mktemp -d "$jobs/$case_id-XXXXXXXX")
+    echo "Local output: $out"
+    exec bash "$project/scripts/local/native-root.sh" python3 -B "$project/scripts/hard_pairs/replay.py" \
+      "$project/datasets/stage-12-hard-pairs/$case_id" "$out" "$runtime/native/src/cbmc/deagle_exe" ;;
   smoke|full)
     mkdir -p "$jobs"
     out=$(mktemp -d "$jobs/$action-XXXXXXXX")
@@ -63,5 +71,5 @@ case "$action" in
     done
     python3 -B "$project/scripts/local/verify_smoke.py" "$out"
     ;;
-  *) echo 'Expected restore, build, doctor, check, verify, replay, smoke, full or shell.' >&2; exit 2 ;;
+  *) echo 'Expected restore, build, doctor, check, verify, replay, hard-pair, smoke, full or shell.' >&2; exit 2 ;;
 esac

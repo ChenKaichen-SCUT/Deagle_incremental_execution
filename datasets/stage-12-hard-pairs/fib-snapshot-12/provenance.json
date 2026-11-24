@@ -1,0 +1,47 @@
+{
+  "artifact_doi": "10.5281/zenodo.18616443",
+  "case_id": "fib-snapshot-12",
+  "pair_kind": "upstream_sync_fix",
+  "patch_sha256": "ac89d3a31d1fc2c277d2ea03864822210e7d3eb7a43fe737b7f35f51bfacc5eb",
+  "predecessor": "ad51830bf5614c51f173527bcc534a6c7877b67a",
+  "repair_freeze": null,
+  "sides": {
+    "new": {
+      "bound": 27,
+      "expected_original": true,
+      "file": "inputs/fib-history12-1/i",
+      "id": "fib-history12-1",
+      "local_file": "new/program.i",
+      "model": "ILP32",
+      "official": null,
+      "original": "fib_safe-12.i",
+      "override": null,
+      "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+      "public_sha256": "0eedf8c014d3cafee5ea16505d00206ea0b6f8545dc9fcda06207ed56e501d59",
+      "sha256": "0eedf8c014d3cafee5ea16505d00206ea0b6f8545dc9fcda06207ed56e501d59",
+      "source": "SVBENCH_HISTORY",
+      "task": "pthread/fib_safe-12.yml",
+      "upstream_commit": "5110fee06e4466b05ac4ffab744e1f57ef498b37",
+      "yaml_sha256": "aaad5a9506fad073ae49d6319337ca8a3e44d8e8b043deebdf5f7092d05f9fc2"
+    },
+    "old": {
+      "bound": 27,
+      "expected_original": true,
+      "file": "inputs/fib-history12-0/i",
+      "id": "fib-history12-0",
+      "local_file": "old/program.i",
+      "model": "ILP32",
+      "official": null,
+      "original": "fib_safe-12.i",
+      "override": null,
+      "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+      "public_sha256": "d91b46fd69b3013c60bad92e46ce1ef1ddf2b09c97cd6d95697162ae1af201f2",
+      "sha256": "d91b46fd69b3013c60bad92e46ce1ef1ddf2b09c97cd6d95697162ae1af201f2",
+      "source": "SVBENCH_HISTORY",
+      "task": "pthread/fib_safe-12.yml",
+      "upstream_commit": "de30d1d37df637a9f45a8fcefce8816bb1372f00",
+      "yaml_sha256": "aaad5a9506fad073ae49d6319337ca8a3e44d8e8b043deebdf5f7092d05f9fc2"
+    }
+  },
+  "svcomp26_commit": "7efe28dd29576b46927b7a34e8f742bd90966a75"
+}

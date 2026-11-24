@@ -1,0 +1,53 @@
+case_id,source,pair_kind,P0_result,P1_result,P0_search_time,P1_search_time,P0_learnt_count,P0_theory_conflicts,B_delta,theory_delta,status,reason,P1_band,P0_program,P1_program,model_class
+circular-buffer,SVCOMP26,trace_repair,SAT,UNSAT,0.392837091,13.081367424,343,18,1161979 -> 1163110 / 确认保留 0,apo 31->31 / po 871->871 / rf 2227->2227,core,轮询失败也推进了载荷编号。修复让七次轮询照常执行，生产和消费各在事务成功后推进序号。,10-30,buffer,buffer-fix,B_CHANGED_T_UNRESOLVED
+ldv-publication,SVCOMP26,trace_repair,SAT,UNSAT,0.000693343,0.000459889,4,0,10044 -> 9835 / 确认保留 0,apo 5->5 / po 40->39 / rf 40->36,core,发布设备状态与检查属于同一原子操作，仍允许工作线程更新设备且保留退出时的 join。,<10,ldv-join,ldv-join-fix,B_AND_T
+unwind-limit,SVCOMP26,verified_repair,SAT,UNSAT,0.000823706,0.000800796,15,0,6031 -> 6399 / 确认保留 0,apo 3->3 / po 42->44 / rf 31->34,core,冻结修补在生产端归一化请求，保留两个线程、读者循环和原断言，功能约束沿用预实验。,<10,unwind0,unwind1,B_AND_T
+rw-acquire,SVCOMP26,residual_repair,SAT,SAT,0.005967166,0.005925115,185,13,25842 -> 25842 / 确认保留 0,apo 15->15 / po 97->97 / rf 131->131,core,冻结的第一轮修补修改读写协议，仍有调度能使原断言失败。,<10,rw0,rw1,T_WITH_IDENTICAL_BOOLEAN_STREAM
+rw-release,SVCOMP26,verified_repair,SAT,UNSAT,0.005925115,0.006520616,185,13,25842 -> 25842 / 确认保留 11,apo 15->17 / po 97->95 / rf 131->131,core,冻结的第二轮修补将读者释放操作合并为原子 RMW，保留原断言和四个线程。,<10,rw1,rw2,T_WITH_IDENTICAL_BOOLEAN_STREAM
+fib-snapshot-10,SVBENCH_HISTORY,upstream_sync_fix,UNSAT,UNSAT,18.891379022,40.862237538,69448,42,847404 -> 847406 / 确认保留 75,apo 95->96 / po 730->729 / rf 4749->4749,core,上游提交 5110fee 将原断言的两个共享读合并为一次原子快照。每个工作线程仍更新 10 次，两端保持同一数学上界。这是同一补丁的一个规模。,30-300,fib-history10-0,fib-history10-1,B_AND_T
+fib-snapshot-11,SVBENCH_HISTORY,upstream_sync_fix,UNSAT,UNSAT,32.603381577,44.507748335,108788,116,1002193 -> 1002195 / 确认保留 81,apo 103->104 / po 790->789 / rf 5561->5561,core,上游提交 5110fee 将原断言的两个共享读合并为一次原子快照。每个工作线程仍更新 11 次，两端保持同一数学上界。这是同一补丁的一个规模。,30-300,fib-history11-0,fib-history11-1,B_AND_T
+fib-snapshot-12,SVBENCH_HISTORY,upstream_sync_fix,UNSAT,UNSAT,53.273323521,75.63262892,144119,63,1171282 -> 1171284 / 确认保留 87,apo 111->112 / po 850->849 / rf 6437->6437,core,上游提交 5110fee 将原断言的两个共享读合并为一次原子快照。每个工作线程仍更新 12 次，两端保持同一数学上界。这是同一补丁的一个规模。,30-300,fib-history12-0,fib-history12-1,B_AND_T
+fib-strict-12,SVBENCH_HISTORY,upstream_sync_residual,SAT,SAT,27.62081131,28.900510921,85382,63,1171282 -> 1171322 / 确认保留 0,apo 111->112 / po 850->849 / rf 6437->6437,core,采用竞态补丁之前和上游恢复严格小于性质之后的公开版本。两端均检查 i < correct && j < correct，读快照仍可能到达上界。,10-30,fib-racy12-0,fib-racy12-1,B_AND_T
+ticket-6-7,FM26,scale_control,UNSAT,UNSAT,12.152422526,116.430969602,140777,1543,81573 -> 112792 / 确认保留 0,apo 29->34 / po 186->214 / rf 365->479,supplement,论文归档的七线程版本再增加一个工作线程，属于规模对照。,30-300,ticket6,ticket7,B_AND_T
+public-counter-queue,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,0.068137856,0.65073224,,,,,unresolved,公开逻辑修补保留断言，但数据依赖的循环存在失败的展开断言，不能冻结为通过。,,counter-queue0,counter-queue1,
+public-array-sum,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,0.240952918,1.246582961,,,,,unresolved,公开逻辑修补保留断言，但数据依赖的循环存在失败的展开断言，不能冻结为通过。,,array-sum0,array-sum1,
+public-array-sum-alt,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,0.080176219,0.439953768,,,,,unresolved,公开逻辑修补保留断言，但数据依赖的循环存在失败的展开断言，不能冻结为通过。,,array-sum-alt0,array-sum-alt1,
+public-buffer-mult,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,0.836720638,4.055616249,,,,,unresolved,公开逻辑修补保留断言，但数据依赖的循环存在失败的展开断言，不能冻结为通过。,,buffer-mult0,buffer-mult1,
+public-buffer-series,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,2.458688112,6.280613716,,,,,unresolved,公开逻辑修补保留断言，但数据依赖的循环存在失败的展开断言，不能冻结为通过。,,buffer-series0,buffer-series1,
+public-buffer-mult-alt,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,0.753971748,0.917230424,,,,,unresolved,公开逻辑修补保留断言，但数据依赖的循环存在失败的展开断言，不能冻结为通过。,,buffer-mult-alt0,buffer-mult-alt1,
+assertion-change-25_stack_longer-1,SV-Benchmarks / FM26,changed_property,UNKNOWN,UNKNOWN,3.743553879,6.642338681,,,,,excluded,公开对应文件反转了检查谓词；原版确有目标反例且无限创建线程导致展开失败。,,25_stack_longer-1,25_stack_longer-2,
+assertion-change-25_stack_longest-2,SV-Benchmarks / FM26,changed_property,UNKNOWN,UNKNOWN,9.944901811,18.814049863,,,,,excluded,公开对应文件反转了检查谓词；原版确有目标反例且无限创建线程导致展开失败。,,25_stack_longest-2,25_stack_longest-1,
+assertion-change-26_stack_cas_longer-1,SV-Benchmarks / FM26,changed_property,UNKNOWN,UNKNOWN,37.472850229,94.582323362,,,,,excluded,公开对应文件反转了检查谓词；原版确有目标反例且无限创建线程导致展开失败。,,26_stack_cas_longer-1,26_stack_cas_longer-2,
+arithmetic,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,7.248981084,4.249574833,,,,,unresolved,两个展开界限下均有失败的等待循环展开；目标真假和多次求解保留在逐次记录。,,arithmetic0,arithmetic1,
+public-stack,SV-Benchmarks / FM26,unresolved_pair,UNKNOWN,UNKNOWN,,,,,,,unresolved,公开版本锁内改用真实深度，错误条件等价；两端均在共享指针写入处安全拒绝。,,stack2,stack1,
+fm-netbsd,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,454.318973033,,,,,,unresolved,未获得所有展开义务均通过的相邻版本，长时限复核保留。,,netbsd,,
+fm-netbsd-pthread,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,4.379211973,,,,,,unresolved,未获得所有展开义务均通过的相邻版本，长时限复核保留。,,netbsd-pthread,,
+official-fib-safe10,SV-Benchmarks / FM26,unpaired_candidate,,UNSAT,,25.584848405,,,,,unresolved,单独的公开安全版本。常见对应 unsafe 文件修改断言，另列有真实改动历史的版本对。,10-30,,fib-safe10,
+official-fib-safe11,SV-Benchmarks / FM26,unpaired_candidate,,UNSAT,,55.404398417,,,,,unresolved,单独的公开安全版本。常见对应 unsafe 文件修改断言，另列有真实改动历史的版本对。,30-300,,fib-safe11,
+candidate-fm-queue_longer,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,fm-queue_longer,,
+candidate-fm-queue_longest,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,fm-queue_longest,,
+candidate-fm-queue_ok_longer,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,fm-queue_ok_longer,,
+candidate-fm-queue_ok_longest,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,fm-queue_ok_longest,,
+candidate-fm-stack_longest-1,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,fm-stack_longest-1,,
+candidate-reorder2,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,reorder2,,
+candidate-reorder5,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,reorder5,,
+candidate-steal,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,steal,,
+candidate-twostage,SV-Benchmarks / FM26,unpaired_candidate,UNKNOWN,,,,,,,,unresolved,固定后端拒绝并发共享指针写入；安全配置下无法完成建模。,,twostage,,
+fib-unsafe-intermediate,SV-Benchmarks / FM26,changed_property,,,,,,,,,excluded,上游 11e0dee8 在同步修改中把严格小于放宽为小于等于，排除这一中间版本。,,,,
+review-reorder-c11,SV-Benchmarks / FM26,source_review,,,,,,,,,excluded,10/20/30 的 YAML 仅声明数据竞争；未借用注释中的可达性性质。,,,,
+review-singleton,SV-Benchmarks / FM26,source_review,,,,,,,,,excluded,两个已发布的 .i 改变断言，不能作为同性质修复。,,,,
+review-sssc12,SV-Benchmarks / FM26,source_review,,,,,,,,,excluded,公开变体的断言与行为或输入限制不同，且主线程无限创建工作线程。,,,,
+review-triangular,SV-Benchmarks / FM26,source_review,,,,,,,,,excluded,safe/unsafe 候选改变边界判断，不能当作原性质修补。,,,,
+review-cdac-datarace,SV-Benchmarks / FM26,source_review,,,,,,,,,excluded,演示程序在不同文件中检查 ==40 与 !=40；不能当作同性质修补。,,,,
+review-circular-buffer-ok,SV-Benchmarks / FM26,source_review,,,,,,,,,excluded,公开 ok 源文件改动原检查，研究版本另用真实反例修补并保留原断言。,,,,
+archived-pthread-ext.41_FreeBSD_abd_kbd_sliced.smt,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,excluded,FM YAML 没有 unreach-call，保留原始筛选记录。,,,,
+archived-pthread-ext.42_FreeBSD_rdma_addr_sliced.smt,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,excluded,FM YAML 没有 unreach-call，保留原始筛选记录。,,,,
+archived-pthread-ext.43_NetBSD_sysmon_power_sliced_2.smt,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,excluded,FM YAML 没有 unreach-call，保留原始筛选记录。,,,,
+archived-pthread-ext.44_Solaris_space_map_sliced.smt,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,excluded,FM YAML 没有 unreach-call，保留原始筛选记录。,,,,
+archived-pthread.butterfly.smt,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,excluded,阶段 11B 严格 SC 独立顺序检查与固定原生结论存在差异，继续隔离。,,,,
+archived-pthread-theta.wsc.smt,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,excluded,阶段 11B 严格 SC 独立顺序检查与固定原生结论存在差异，继续隔离。,,,,
+prior-bounded_buffer,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,unresolved,预实验原始记录 TOOL_FAILURE；本次未取得同性质的新版本对。,,,,
+prior-elimination_backoff_stack,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,unresolved,预实验原始记录 TOOL_FAILURE；本次未取得同性质的新版本对。,,,,
+prior-safestack_relacy,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,unresolved,预实验原始记录 TIMEOUT；本次未取得同性质的新版本对。,,,,
+prior-workstealqueue_mutex-1,SV-Benchmarks / FM26,prior_source_review,,,,,,,,,unresolved,预实验原始记录 YAML_OTHER_PROPERTY；本次未取得同性质的新版本对。,,,,
+ticket-5-6,FM26,scale_control,UNSAT,UNSAT,0.507094473,12.152422526,8511,264,56188 -> 81573 / 确认保留 0,apo 24->29 / po 158->186 / rf 266->365,calibration,已在阶段 11B 发布的规模对照，本次保留独立核对。,10-30,ticket5,ticket6,B_AND_T

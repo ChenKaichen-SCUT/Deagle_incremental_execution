@@ -1,0 +1,268 @@
+{
+  "case_id": "ticket-6-7",
+  "host": "server-8core",
+  "prior_screenings": {
+    "new": [
+      {
+        "native_search_s": 172.295508227,
+        "out": "deep/ticket7-b2",
+        "result": "UNSAT",
+        "wall_s": 172.65698009700282
+      },
+      {
+        "native_search_s": 173.561489317,
+        "out": "extended/ticket7-b2",
+        "result": "UNSAT",
+        "wall_s": 173.94655126500584
+      },
+      {
+        "native_search_s": null,
+        "out": "quick/ticket7-b2",
+        "result": "TIMEOUT",
+        "wall_s": 22.03789927399339
+      }
+    ],
+    "old": [
+      {
+        "native_search_s": 18.934385872,
+        "out": "quick/ticket6-b2",
+        "result": "UNSAT",
+        "wall_s": 19.346149771001365
+      }
+    ]
+  },
+  "profile": "serial cold full model and fresh native Closure; one single-core job",
+  "repeats": 1,
+  "results": {
+    "new": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "2",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.c"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 2,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 837224,
+        "decisions": 1469992,
+        "graph_nodes": 172,
+        "learnt_live_end": 16114,
+        "native_original_live": 83682,
+        "propagations": 765523997,
+        "queries": 1,
+        "theory_conflicts": 17873,
+        "theory_propagations": 287372,
+        "variables": 30101
+      },
+      "exit": 0,
+      "files": {
+        "program.c": {
+          "path": "inputs/ticket7/c",
+          "sha256": "a23e058fd7e99c388c57a29154ab8770cf868cf3c645eba0bb26fd121678d7da"
+        }
+      },
+      "host": "server-8core",
+      "identity": "5bfa460bfc2e04829e3e8bd88fe17c2139f70c8e8a350339525ea548ad587b6c",
+      "memory_gib": 7,
+      "out": "formal/ticket7-b2",
+      "peak_rss_kib": 103732,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.111891533,
+          "wall_s": 0.111903907
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.018954811,
+          "wall_s": 0.035744645
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.010845882,
+          "wall_s": 0.010856731
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.01433499,
+          "wall_s": 0.014335749
+        },
+        "search": {
+          "calls": 1789,
+          "cpu_s": 116.417568027,
+          "wall_s": 116.430969602
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.013773299,
+          "wall_s": 0.013774778
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "ef930ef8bac8605120101093a54b93654d0442bab80d9d71c31153746c91cbd0",
+        "boundary.tsv": "34c46b925d4a84d7ac830235347aedd97afa9151641852ae6589240831760019",
+        "full_model.json": "eb8bbf0bc7bbb1dfcd4e0ff0d3d20291ce5d50706e9d79345ea9d30b55b12181",
+        "goto.json": "54f6b568ef6bdd939353b1efe071ab472053c34dd320b84519524ef79bb2299c",
+        "metrics.json": "8a49d169ec61cbb530e8ed01903fd4bcb9fc1b73a8b6e3cecc0fa2cf59503f64",
+        "native-bindings.json": "4e3b88f4e832d4e1a37e599166f026535440ebcfd7a7778ffe06ce4743062149",
+        "native-state.tsv": "379c4db9e2c386018a601900b19aae9af6015c4c7527f1c43e7d1ababe1c229b",
+        "program.c": "a23e058fd7e99c388c57a29154ab8770cf868cf3c645eba0bb26fd121678d7da",
+        "raw_ssa.json": "1b4d16ee8f75f3c920d7cd201dbf5d2f2b6ebd76da642c56991eda22d1f857d8",
+        "result.json": "703a1de1d85f4898ba36922e19875aa8553d825867366797a9708684efa3598c",
+        "s8-graph.tsv": "ede0c5c3f982aa10bc02a4773284fa55733cbb44f2bf2b690e1fd35715b9fbc3",
+        "s8-initial.tsv": "b99f9ff499d45ea85fb173a7c416062f0aa80fcdadc4b1e87d86ba365fbdfe5e",
+        "s8-input.bin": "6c69bec36f0eada34c0c3aafb07f6578454242e0113159b1c6315dd0e8558ca3",
+        "s8-native.tsv": "89b995f65f89f085e9072c597c6bae80144cde104cb912300c04e371d80ba950",
+        "s8-sat.tsv": "2b58413e7b200f7af1688e53d84acf874c2abd0138adf1555fcf6566682a27c7",
+        "s8-search.tsv": "8a173e313260160ab90cdb33cfa6003330d04fd684704c7405d441ab7165e2b5",
+        "s8-trace.tsv": "cdd84078db6aa37f5b696a5495a0387f6e9c672400b3ff29dfd86d12cc9b24d8",
+        "sc_input.json": "6291385a32b0a27963cf6ce0ecd5a3229ededd9a95a8dc42a6b3ce70cae0dfbe",
+        "search.bin": "f6f34cec295b90e92ffae2810dbdd5bc0b2e9653f4bc2094525543e1f74c798e",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "96fd9c98a0c93a7544848ecabe6e53060414596312dd559391419496181824b1",
+        "visits.json": "54c3a1b4bc67d4c9e2df5dcb3cbcee6fd6309ba607c82ca69bec0fdc6e41b693"
+      },
+      "result": "UNSAT",
+      "sample": "ticket7",
+      "sys_s": 0.314223,
+      "timeout_s": 740,
+      "user_s": 116.394882,
+      "wall_s": 116.76323006799794,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.c line 22\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    },
+    "old": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "2",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.c"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 2,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 140778,
+        "decisions": 253903,
+        "graph_nodes": 150,
+        "learnt_live_end": 32464,
+        "native_original_live": 61797,
+        "propagations": 95367742,
+        "queries": 1,
+        "theory_conflicts": 1543,
+        "theory_propagations": 43212,
+        "variables": 22425
+      },
+      "exit": 0,
+      "files": {
+        "program.c": {
+          "path": "inputs/ticket6/c",
+          "sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a"
+        }
+      },
+      "host": "server-8core",
+      "identity": "87068e06c737a93661aee38e902ba2e7c13699ab453bfd7645459ef6b4c42d11",
+      "memory_gib": 7,
+      "out": "formal/ticket6-b2",
+      "peak_rss_kib": 63744,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.09102105,
+          "wall_s": 0.091031931
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.018729399,
+          "wall_s": 0.035660363
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.00933623,
+          "wall_s": 0.009337592
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.012135045,
+          "wall_s": 0.012135956
+        },
+        "search": {
+          "calls": 381,
+          "cpu_s": 12.150991151,
+          "wall_s": 12.152422526
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.010672612,
+          "wall_s": 0.010673797
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "50d102a043affc369d279b00eff962790e3c5edba863dedea6755f949598dc8b",
+        "boundary.tsv": "cad5f0e6737fbd81f27005aebc0ba6c33eac62f11c50693b2313eb548f46d2fb",
+        "full_model.json": "2d01297aea36528db58d730e6651a9f6930f7cf1724abef1f67ea24261469c38",
+        "goto.json": "090ce36d7c3ff0680eaf77ac7b980f2dac8b169e849934be17ef3e0548e8743e",
+        "metrics.json": "d4fcdcdfd4e5d04833124b2943812dff36a1649734ba4e37d9d9d8f871fc7d47",
+        "native-bindings.json": "1bc3aaba92efd6daf4c810ebb9d00da67ffc5967433759cddf24511aba9e7584",
+        "native-state.tsv": "0c12e3f780004579ddf37ca7321976eb24dda6b7dbebbfc223ecd20f250a5ab0",
+        "program.c": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a",
+        "raw_ssa.json": "e9ec1c8e6d2e4d4c6953fa489b7f96b1d868909139e63e81329c01d27dc3098b",
+        "result.json": "ce604f27c7d7c3c7be863a10d135718b9f466b451643574e56ec5dc5f1e3acbc",
+        "s8-graph.tsv": "b9e6676091924b8636b52f727e8e50e0cd1c4250de6155d7195f7ed3f37abbdb",
+        "s8-initial.tsv": "781f6c08d3795b94678a45ab9b7b07291f9998ca59d48fc5eba3f66268e08d4a",
+        "s8-input.bin": "02221d15e346318a26ffe8c3efc54fd0d057da40120ef0eac81adcaca5959934",
+        "s8-native.tsv": "c139dbb96d2ee692654b4a84066dec865d6db424bdc4676eaa823cb379c4d0b6",
+        "s8-sat.tsv": "c29b6d607d373db87115a0f6778dd749fff55c0631a9c9d36b379e582399f8a3",
+        "s8-search.tsv": "92b6cae0ab6902709e00828e0b96dac5edde33d3aa918e54569147b3b4e3b3a8",
+        "s8-trace.tsv": "4bc502d57d89ee7313c4505b9629af3c7c784f1df724639b4fb13f57a8e408c0",
+        "sc_input.json": "710c9441ecbf0729f54e0ff9f0c38901cb03c766f20458ad1b4ac473ae987b78",
+        "search.bin": "8a5796fc23bc563d01e370a2c2396b25e1314a1b7e0e793f2a95627d4db3610f",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "a2aba53e9fd2ae840fb6feb32183746432f8d5007e4bc76177c43e9ef07fdacd",
+        "visits.json": "26abb2b96d3a5e362626ea6f239970d287042a97ea6c66aa92ce6b91878c1034"
+      },
+      "result": "UNSAT",
+      "sample": "ticket6",
+      "sys_s": 0.080575,
+      "timeout_s": 740,
+      "user_s": 12.310172,
+      "wall_s": 12.422749345001648,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.c line 22\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    }
+  }
+}

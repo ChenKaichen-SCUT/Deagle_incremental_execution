@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "2",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.c"
+  ],
+  "binding": "all native properties including reach_error.assertion.1 and all unwinding assertions",
+  "case_id": "ticket-5-6",
+  "description": "论文归档的公开版本增加一个工作线程，保留票号协议和 b 的可达性性质。",
+  "limits": {
+    "memory_gib": 7,
+    "timeout_s": 660
+  },
+  "model": "ILP32",
+  "pair_kind": "scale_control",
+  "property": "unreach-call.prp",
+  "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+  "sides": {
+    "new": {
+      "file": "new/program.c",
+      "sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a"
+    },
+    "old": {
+      "file": "old/program.c",
+      "sha256": "9c69d99d457f457373aeec8cf091a3652593de03a43f690cddfeb4bfa1e12a5f"
+    }
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "artifact_doi": "10.5281/zenodo.18616443",
+  "case_id": "ticket-5-6",
+  "pair_kind": "scale_control",
+  "patch_sha256": "e7860ee4b6da2711860d9d457a94a1799b9d6a12d4145a5b19644a37897de299",
+  "predecessor": "ad51830bf5614c51f173527bcc534a6c7877b67a",
+  "repair_freeze": null,
+  "sides": {
+    "new": {
+      "bound": 2,
+      "expected_original": true,
+      "file": "inputs/ticket6/c",
+      "id": "ticket6",
+      "local_file": "new/program.c",
+      "model": "ILP32",
+      "official": null,
+      "original": "parallel-ticket-6.wvr.c",
+      "override": null,
+      "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+      "public_sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a",
+      "sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a",
+      "source": "FM26",
+      "task": "weaver/parallel-ticket-6.wvr.yml",
+      "yaml_sha256": "f079c33d73c992c86fdbe375854f12f6e8a866905aa247aa1af1e2fcb6d77d21"
+    },
+    "old": {
+      "bound": 2,
+      "expected_original": true,
+      "file": "inputs/ticket5/c",
+      "id": "ticket5",
+      "local_file": "old/program.c",
+      "model": "ILP32",
+      "official": null,
+      "original": "parallel-ticket-5.wvr.c",
+      "override": null,
+      "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+      "public_sha256": "9c69d99d457f457373aeec8cf091a3652593de03a43f690cddfeb4bfa1e12a5f",
+      "sha256": "9c69d99d457f457373aeec8cf091a3652593de03a43f690cddfeb4bfa1e12a5f",
+      "source": "FM26",
+      "task": "weaver/parallel-ticket-5.wvr.yml",
+      "yaml_sha256": "f350272673338cb636a741bd13128baca4e3f1e7c05fca9eebf8568184987480"
+    }
+  },
+  "svcomp26_commit": "7efe28dd29576b46927b7a34e8f742bd90966a75"
+}

@@ -1,0 +1,98 @@
+{
+  "circular-buffer": {
+    "new": {
+      "argv_equal": true,
+      "checks": {
+        "s8-graph.tsv": true,
+        "s8-input.bin": true,
+        "search.bin": true
+      },
+      "host": "wsl-local",
+      "properties_equal": true,
+      "receipt_identity": "1156299bda81089b371bbcff14b6e7e13ca3371ab9d8262965336ad75fad1173",
+      "result": "UNSAT",
+      "search_s": 7.827482477,
+      "sha256": "45d0532015299cbea6251779c55f20bc70cd28eb2933c8ada200deed7fd901e3",
+      "wall_s": 8.658182570000001
+    },
+    "old": {
+      "argv_equal": true,
+      "checks": {
+        "s8-graph.tsv": true,
+        "s8-input.bin": true,
+        "search.bin": true
+      },
+      "host": "wsl-local",
+      "properties_equal": true,
+      "receipt_identity": "e7c6f7f520b5762447a2150cdc48e1d1d57f23d1f25560318ae5db0811bac7a8",
+      "result": "SAT",
+      "search_s": 0.230658713,
+      "sha256": "a5ee9b9286f55973fff2cea9c449f3602c5be2a48fed2e7e6cce6beebc18d9bc",
+      "wall_s": 1.042217772999999
+    }
+  },
+  "fib-snapshot-11": {
+    "new": {
+      "argv_equal": true,
+      "checks": {
+        "s8-graph.tsv": true,
+        "s8-input.bin": true,
+        "search.bin": true
+      },
+      "host": "wsl-local",
+      "properties_equal": true,
+      "receipt_identity": "2bfa5879434d9e2600f46c504c251c812ec09b9b7b1f9d22a162d833c33931c9",
+      "result": "UNSAT",
+      "search_s": 35.706157347,
+      "sha256": "c0e681ed69012b0e000ff579cf0a3e27385ce7ab4c28525dd10d6a37e7685181",
+      "wall_s": 36.793963414
+    },
+    "old": {
+      "argv_equal": true,
+      "checks": {
+        "s8-graph.tsv": true,
+        "s8-input.bin": true,
+        "search.bin": true
+      },
+      "host": "wsl-local",
+      "properties_equal": true,
+      "receipt_identity": "f8c20bbc87b4b30ebf3ccc322466e0925474a79a82622243a773af27358415a7",
+      "result": "UNSAT",
+      "search_s": 26.092870754,
+      "sha256": "deae7fd0ef95d67bb618281e50bfba6f50a83de212ef14f46660866b256c6152",
+      "wall_s": 27.173226962999998
+    }
+  },
+  "ldv-publication": {
+    "new": {
+      "argv_equal": true,
+      "checks": {
+        "s8-graph.tsv": true,
+        "s8-input.bin": true,
+        "search.bin": true
+      },
+      "host": "wsl-local",
+      "properties_equal": true,
+      "receipt_identity": "52007ad87dbbc6e218cf6f640719a16d0548ba3966815cb457bea5911a338a4a",
+      "result": "UNSAT",
+      "search_s": 0.000213306,
+      "sha256": "c5addd2ec95429591cee763b7d29f10dcc9e42b4fe1e823fd12842c07b1ed933",
+      "wall_s": 0.08044155799998975
+    },
+    "old": {
+      "argv_equal": true,
+      "checks": {
+        "s8-graph.tsv": true,
+        "s8-input.bin": true,
+        "search.bin": true
+      },
+      "host": "wsl-local",
+      "properties_equal": true,
+      "receipt_identity": "8063c57426dc3f1fc3398b77fe216ae43c1b8042e241cb32f088af1bab0d5965",
+      "result": "SAT",
+      "search_s": 0.000375939,
+      "sha256": "fd4c3d19582748238e9ca587d159d6e8fc23db581cd4de03be73dc785992e03f",
+      "wall_s": 0.08043075599999838
+    }
+  }
+}

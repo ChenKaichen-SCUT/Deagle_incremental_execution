@@ -1,0 +1,280 @@
+{
+  "case_id": "fib-snapshot-10",
+  "host": "server-8core",
+  "prior_screenings": {
+    "new": [
+      {
+        "native_search_s": 58.597595855,
+        "out": "history/fib-history10-1-b23",
+        "result": "UNSAT",
+        "wall_s": 59.22570253799495
+      }
+    ],
+    "old": [
+      {
+        "native_search_s": 32.227638847,
+        "out": "history/fib-history10-0-b23",
+        "result": "UNSAT",
+        "wall_s": 32.860571935001644
+      }
+    ]
+  },
+  "profile": "serial cold full model and fresh native Closure; one single-core job",
+  "repeats": 1,
+  "results": {
+    "new": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "23",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 23,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 100478,
+        "decisions": 287172,
+        "graph_nodes": 546,
+        "learnt_live_end": 13478,
+        "native_original_live": 847078,
+        "propagations": 134657149,
+        "queries": 1,
+        "theory_conflicts": 39,
+        "theory_propagations": 33984,
+        "variables": 171560
+      },
+      "exit": 0,
+      "files": {
+        "program.i": {
+          "path": "inputs/fib-history10-1/i",
+          "sha256": "2e6e2620f9c7de8b971b660eda470dbb7eacbe8f90d0dbf0c5a923f8606f9038"
+        }
+      },
+      "host": "server-8core",
+      "identity": "c41e803102bb15137f4eb432662c530898f134a28f64f8b2efb86004609cc848",
+      "memory_gib": 7,
+      "out": "formal-history/fib-history10-1-b23",
+      "peak_rss_kib": 179284,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.826120131,
+          "wall_s": 0.82617885
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.023212589,
+          "wall_s": 0.035162155
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.047344138,
+          "wall_s": 0.047346301
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.078280713,
+          "wall_s": 0.078282964
+        },
+        "search": {
+          "calls": 255,
+          "cpu_s": 40.858568244,
+          "wall_s": 40.862237538
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.167236989,
+          "wall_s": 0.167274055
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ],
+        [
+          "fib.unwind.0",
+          "SUCCESS"
+        ],
+        [
+          "t1.unwind.0",
+          "SUCCESS"
+        ],
+        [
+          "t2.unwind.0",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "7be376bfef383cf5ad416cc52926ea46219d7c6670792845d7cc2d79d73d1d49",
+        "boundary.tsv": "d1929486598e55398b8fe0f5f625790e90a830c06ef9a6d0298e29716dcf9c7f",
+        "full_model.json": "cd792b031a1cf332c9958e4449eb65cdb0cd64a2fe68d0711e8ebdaf3f8ce0cb",
+        "goto.json": "34cdac9437f3263a37936de163dafbabd9c7c979c2b8ce5ec3d4a662a6417322",
+        "metrics.json": "60ccf5bc454c0dc6ef2305dd3ce73468089070f720605fe4a23d6c2448fd3a7e",
+        "native-bindings.json": "6454a3303257e8e8c5d37b55230e4b70fdc19f831eb0691a3178e949f0d5e67b",
+        "native-state.tsv": "88d12ff7522eb68f1e64ecd8fba3a90069ebeef970c0d7097da4d59ea6d45b76",
+        "program.i": "2e6e2620f9c7de8b971b660eda470dbb7eacbe8f90d0dbf0c5a923f8606f9038",
+        "raw_ssa.json": "7e458ee46d58248129d8f36656c127561e25e8ee98560e353478893629962eb6",
+        "result.json": "c90458eb944df454a5df1ccb56d46b1c7d578a9612ebe46e01dc3e685d564a45",
+        "s8-graph.tsv": "b15384fb50c75b69119858aabae2cb7430d0ec7bee13c8d5732f1ea1e73e0eb7",
+        "s8-initial.tsv": "c902848a196c1f77ac981346d7700d6946108290ed67beeba837ddc158865d4f",
+        "s8-input.bin": "ef07dc8116aadbf5ad0ad0d6118871ddc03972cd88758a73827ee5d3f5324399",
+        "s8-native.tsv": "04efd0ec1ad425b8cb53b314415013a457854b2aeaa8474934bb4e68b142e924",
+        "s8-sat.tsv": "82179b5518944e60d02dacd04bdb44d4274ccbca0b79f199bfd755981249250c",
+        "s8-search.tsv": "12fadacfbf7f3ddc2bb090adf2adc5c967733b5f8736e2aa942b1443f0dba69f",
+        "s8-trace.tsv": "ddcc98b3f01f3ca21db4ef955fbb15610e0ae3ca866287627a4fd7722802df1b",
+        "sc_input.json": "d5b948f5bcfbb4c325a99440b7a4a2490ad2eba96693158e6a628a3896b02b2c",
+        "search.bin": "5e2583ff1c7c62a3be9c9f95a6a4f09e1cf00e5ff64ac161df782e03b8ef9c1a",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "b5816644facb7044ff0f1847b7fe3661802bd4c7f6e32c89309575d2184c1793",
+        "visits.json": "12d2a2f3c086eede157b29eb8b51b69f01ba186e7fd4e91abc5db51979b9168c"
+      },
+      "result": "UNSAT",
+      "sample": "fib-history10-1",
+      "sys_s": 0.19893999999999998,
+      "timeout_s": 740,
+      "user_s": 41.909823,
+      "wall_s": 42.140297849997296,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 403\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    },
+    "old": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "23",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 23,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 69449,
+        "decisions": 234539,
+        "graph_nodes": 546,
+        "learnt_live_end": 115685,
+        "native_original_live": 847076,
+        "propagations": 80300043,
+        "queries": 1,
+        "theory_conflicts": 42,
+        "theory_propagations": 79016,
+        "variables": 171551
+      },
+      "exit": 0,
+      "files": {
+        "program.i": {
+          "path": "inputs/fib-history10-0/i",
+          "sha256": "a48fe857d08ac3a4ba438de35e4bd3e7e5363b4267f7ed4ba2475f684ca08cd5"
+        }
+      },
+      "host": "server-8core",
+      "identity": "9b39242732303e7986bda9a770ffef1b6ae7706a0193f535401f05dd6be98b00",
+      "memory_gib": 7,
+      "out": "formal-history/fib-history10-0-b23",
+      "peak_rss_kib": 148592,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.833685527,
+          "wall_s": 0.833749498
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.023374541,
+          "wall_s": 0.035669054
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.048387811,
+          "wall_s": 0.048390221
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.079283385,
+          "wall_s": 0.079285533
+        },
+        "search": {
+          "calls": 219,
+          "cpu_s": 18.888952179,
+          "wall_s": 18.891379022
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.168557692,
+          "wall_s": 0.168562051
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ],
+        [
+          "fib.unwind.0",
+          "SUCCESS"
+        ],
+        [
+          "t1.unwind.0",
+          "SUCCESS"
+        ],
+        [
+          "t2.unwind.0",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "712ffec3d554dbb61aee5721ebd054e518c2c3ff8ad1b38bf614e4b60f69e9a7",
+        "boundary.tsv": "3d9a6170ef24b1438212427d5535c0b4385bf586cef468dc915306d5c686efd8",
+        "full_model.json": "ff3bd8662da9305135e066159cac37a91260be15d366ee4919d74ad946db61e8",
+        "goto.json": "504ee1e9aa126e3fb71eb190559b61ccbb880af2cf194ba062e4ebddf74f66c4",
+        "metrics.json": "1ddd403880d69d19b9c5e54f474bb43a806b673e56a922e428229f272e9e93d4",
+        "native-bindings.json": "26377dd3098ce5cafc929a8adb967399161263e7ab79c27e93a95ff7fa05e8a7",
+        "native-state.tsv": "e05eab670ea4b7e2827b2e9becd533ec028863dfa766141ef926ed465d650292",
+        "program.i": "a48fe857d08ac3a4ba438de35e4bd3e7e5363b4267f7ed4ba2475f684ca08cd5",
+        "raw_ssa.json": "56bbda7b2a7fa4f781423419a7cb72a7bfdaf25f1948f98735304fe55834411b",
+        "result.json": "8bf1c52b124a7975ef8368b9f13d26a16338dc64dc277dafd2826f9a7c3b03a2",
+        "s8-graph.tsv": "e81883e03c06cd88ec8984477bad3300a570fca7deed2499392996dd1b806095",
+        "s8-initial.tsv": "91ec67e9db604334ab6c930fdb4679bde764cae6418d9e0cad09ac3781e4b4b4",
+        "s8-input.bin": "141b2c29e198cff9fce213fc9fb06cb8cb5ed38b4bf0201ad6c82eda8fc5af29",
+        "s8-native.tsv": "a3fbc81f341c54c46d004fa0c832413221d01c385d7a320b7ffe7d06c3cdb3f6",
+        "s8-sat.tsv": "1fde49519937958191e875747acb19f9b738b71be5c68c70462667fe9eeef9fb",
+        "s8-search.tsv": "f4cf33eb44c5c649658c64067685942eb5ac5984aee17d1b739c69d8aee1c93b",
+        "s8-trace.tsv": "81b732f597d3bdfa38ac369ff8a82e70e5e7daa0a6c4bd2c96825971550e6058",
+        "sc_input.json": "79a704374a4f2ce66768476605ef97d4d16f7af138d9f01f7f361b6588ec002c",
+        "search.bin": "75724792f13c4585a887f0895b756df51d8102adc4790a666755d6ec8e26eabd",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "cdad205808f441d353d06ebbef4ebdf274455acf63cf5a9a0b764ece45d08f6e",
+        "visits.json": "0c2b16c5e68c4cccf4759e2371f533ae4f086cb5521a86ad6b669e31aad9b7da"
+      },
+      "result": "UNSAT",
+      "sample": "fib-history10-0",
+      "sys_s": 0.159654,
+      "timeout_s": 740,
+      "user_s": 19.990818,
+      "wall_s": 20.189649778003513,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 403\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    }
+  }
+}

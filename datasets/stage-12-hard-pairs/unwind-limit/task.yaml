@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "4",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "binding": "all native properties including reach_error.assertion.1 and all unwinding assertions",
+  "case_id": "unwind-limit",
+  "description": "冻结修补在生产端归一化请求，保留两个线程、读者循环和原断言，功能约束沿用预实验。",
+  "limits": {
+    "memory_gib": 7,
+    "timeout_s": 660
+  },
+  "model": "ILP32",
+  "pair_kind": "verified_repair",
+  "property": "unreach-call.prp",
+  "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+  "sides": {
+    "new": {
+      "file": "new/program.i",
+      "sha256": "f7eeb59361021362fbd8b18c9357e864dad8074d0e244496a6c0e115c240ab9f"
+    },
+    "old": {
+      "file": "old/program.i",
+      "sha256": "369675afdce9f24a16d648c2af0379dafe84b15f75fb11d38697f731d0b5b69e"
+    }
+  }
+}

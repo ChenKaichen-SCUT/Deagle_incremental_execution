@@ -1,0 +1,256 @@
+{
+  "case_id": "ticket-5-6",
+  "host": "server-8core",
+  "prior_screenings": {
+    "new": [
+      {
+        "native_search_s": 18.934385872,
+        "out": "quick/ticket6-b2",
+        "result": "UNSAT",
+        "wall_s": 19.346149771001365
+      }
+    ],
+    "old": [
+      {
+        "native_search_s": 0.872531223,
+        "out": "quick/ticket5-b2",
+        "result": "UNSAT",
+        "wall_s": 1.2301883390027797
+      }
+    ]
+  },
+  "profile": "serial cold full model and fresh native Closure; one single-core job",
+  "repeats": 1,
+  "results": {
+    "new": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "2",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.c"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 2,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 140778,
+        "decisions": 253903,
+        "graph_nodes": 150,
+        "learnt_live_end": 32464,
+        "native_original_live": 61797,
+        "propagations": 95367742,
+        "queries": 1,
+        "theory_conflicts": 1543,
+        "theory_propagations": 43212,
+        "variables": 22425
+      },
+      "exit": 0,
+      "files": {
+        "program.c": {
+          "path": "inputs/ticket6/c",
+          "sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a"
+        }
+      },
+      "host": "server-8core",
+      "identity": "87068e06c737a93661aee38e902ba2e7c13699ab453bfd7645459ef6b4c42d11",
+      "memory_gib": 7,
+      "out": "formal/ticket6-b2",
+      "peak_rss_kib": 63744,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.09102105,
+          "wall_s": 0.091031931
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.018729399,
+          "wall_s": 0.035660363
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.00933623,
+          "wall_s": 0.009337592
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.012135045,
+          "wall_s": 0.012135956
+        },
+        "search": {
+          "calls": 381,
+          "cpu_s": 12.150991151,
+          "wall_s": 12.152422526
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.010672612,
+          "wall_s": 0.010673797
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "50d102a043affc369d279b00eff962790e3c5edba863dedea6755f949598dc8b",
+        "boundary.tsv": "cad5f0e6737fbd81f27005aebc0ba6c33eac62f11c50693b2313eb548f46d2fb",
+        "full_model.json": "2d01297aea36528db58d730e6651a9f6930f7cf1724abef1f67ea24261469c38",
+        "goto.json": "090ce36d7c3ff0680eaf77ac7b980f2dac8b169e849934be17ef3e0548e8743e",
+        "metrics.json": "d4fcdcdfd4e5d04833124b2943812dff36a1649734ba4e37d9d9d8f871fc7d47",
+        "native-bindings.json": "1bc3aaba92efd6daf4c810ebb9d00da67ffc5967433759cddf24511aba9e7584",
+        "native-state.tsv": "0c12e3f780004579ddf37ca7321976eb24dda6b7dbebbfc223ecd20f250a5ab0",
+        "program.c": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a",
+        "raw_ssa.json": "e9ec1c8e6d2e4d4c6953fa489b7f96b1d868909139e63e81329c01d27dc3098b",
+        "result.json": "ce604f27c7d7c3c7be863a10d135718b9f466b451643574e56ec5dc5f1e3acbc",
+        "s8-graph.tsv": "b9e6676091924b8636b52f727e8e50e0cd1c4250de6155d7195f7ed3f37abbdb",
+        "s8-initial.tsv": "781f6c08d3795b94678a45ab9b7b07291f9998ca59d48fc5eba3f66268e08d4a",
+        "s8-input.bin": "02221d15e346318a26ffe8c3efc54fd0d057da40120ef0eac81adcaca5959934",
+        "s8-native.tsv": "c139dbb96d2ee692654b4a84066dec865d6db424bdc4676eaa823cb379c4d0b6",
+        "s8-sat.tsv": "c29b6d607d373db87115a0f6778dd749fff55c0631a9c9d36b379e582399f8a3",
+        "s8-search.tsv": "92b6cae0ab6902709e00828e0b96dac5edde33d3aa918e54569147b3b4e3b3a8",
+        "s8-trace.tsv": "4bc502d57d89ee7313c4505b9629af3c7c784f1df724639b4fb13f57a8e408c0",
+        "sc_input.json": "710c9441ecbf0729f54e0ff9f0c38901cb03c766f20458ad1b4ac473ae987b78",
+        "search.bin": "8a5796fc23bc563d01e370a2c2396b25e1314a1b7e0e793f2a95627d4db3610f",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "a2aba53e9fd2ae840fb6feb32183746432f8d5007e4bc76177c43e9ef07fdacd",
+        "visits.json": "26abb2b96d3a5e362626ea6f239970d287042a97ea6c66aa92ce6b91878c1034"
+      },
+      "result": "UNSAT",
+      "sample": "ticket6",
+      "sys_s": 0.080575,
+      "timeout_s": 740,
+      "user_s": 12.310172,
+      "wall_s": 12.422749345001648,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.c line 22\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    },
+    "old": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "2",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.c"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 2,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 8512,
+        "decisions": 20520,
+        "graph_nodes": 128,
+        "learnt_live_end": 4581,
+        "native_original_live": 43688,
+        "propagations": 5818453,
+        "queries": 1,
+        "theory_conflicts": 264,
+        "theory_propagations": 3452,
+        "variables": 16056
+      },
+      "exit": 0,
+      "files": {
+        "program.c": {
+          "path": "inputs/ticket5/c",
+          "sha256": "9c69d99d457f457373aeec8cf091a3652593de03a43f690cddfeb4bfa1e12a5f"
+        }
+      },
+      "host": "server-8core",
+      "identity": "a32035341a03be9576b7022c31b6ad586f92929099689d86905211ec653f4d2e",
+      "memory_gib": 7,
+      "out": "formal/ticket5-b2",
+      "peak_rss_kib": 27500,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.069686145,
+          "wall_s": 0.069688236
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.018194358,
+          "wall_s": 0.03445924
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.007731926,
+          "wall_s": 0.00773309
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.00985045,
+          "wall_s": 0.009851131
+        },
+        "search": {
+          "calls": 35,
+          "cpu_s": 0.507020696,
+          "wall_s": 0.507094473
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.007744246,
+          "wall_s": 0.00774537
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "c4dde98be323d2bb0f635d0fa87fd454f77684011f89e291fa6cc785cf5ad80b",
+        "boundary.tsv": "091b5e4739e37f641657f50a46d1680fe0e44d24234e7b305342e6684bb40ee8",
+        "full_model.json": "27fa696fa905ff53cf3a61952b9936a4bb8deb47bdff05933733aa5e9db49e45",
+        "goto.json": "b4c54fe9cb9cf50cbc40529e3e21ffb2a245aa08cda53c7519929b46ebdd2402",
+        "metrics.json": "eddc3b73315fdda68dce0b24bfa305cdff809e8b10cd0f2117a3b00804cab182",
+        "native-bindings.json": "9e8761251e2cb29c0a71203893ed26f73be5e984c4fea0da98d7fca26ea7a7cd",
+        "native-state.tsv": "f9817a93abece37c34657b69b9f7b44944d7fb83215a0ee42d7ae6640e319213",
+        "program.c": "9c69d99d457f457373aeec8cf091a3652593de03a43f690cddfeb4bfa1e12a5f",
+        "raw_ssa.json": "be7a812d43a65f5ebcd879df55f58476f8f2c3728ca3ea96c2811e038de7d6de",
+        "result.json": "f70393a5cdf68387ecf6d62a8afd23246b70eb24ce51ac0f92d69fdd81914121",
+        "s8-graph.tsv": "7969837eedc6aaa0add99b568e706b9396b5cfdbf1523aa001f80a0b97ddbce0",
+        "s8-initial.tsv": "8b3955b400c5266f8ee61ce850505e6c145c1465bf17cb871a30552466189ea5",
+        "s8-input.bin": "7b726c4c2b7be6179d46ff4e797138738b2f88dd06c135ed55a4d2a2f02b0247",
+        "s8-native.tsv": "03aff240d20e8844661b8284c27fbdb028b7bc4c21e78e95312126d86783de5d",
+        "s8-sat.tsv": "49da723c8606f2328ecae9151499bce613f49aefd4ed895c22176aebcb6bf87c",
+        "s8-search.tsv": "007d1167d3b040aac0bc1421f4a6491056fd16ef7790d799671d7a43a895fede",
+        "s8-trace.tsv": "7e0482c47a3262d4d3aea0981528854dc93d540b6157e772b91cc05a008e1c3c",
+        "sc_input.json": "12970373a034699be80571a905f8ca136e8b66bbd17b7f341241528997780085",
+        "search.bin": "48df30562e33af53ba899a10c3386a118804e6f3ca66ee35ad2a89d7a3cd8fea",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "3109ffea667b5e43d6f503de8b83b7f67ee98cd34c185ffa533a17bf14f3ee1f",
+        "visits.json": "130d00d84d17f9700df9f5c94c238fed467296e545cecb8eccf62927a48c24af"
+      },
+      "result": "UNSAT",
+      "sample": "ticket5",
+      "sys_s": 0.034045,
+      "timeout_s": 740,
+      "user_s": 0.666338,
+      "wall_s": 0.7216199459944619,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.c line 22\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    }
+  }
+}

@@ -1,0 +1,264 @@
+{
+  "case_id": "unwind-limit",
+  "host": "server-8core",
+  "prior_screenings": {
+    "new": [
+      {
+        "native_search_s": 0.001136542,
+        "out": "quick/unwind1-b4",
+        "result": "UNSAT",
+        "wall_s": 0.16063440300058573
+      }
+    ],
+    "old": [
+      {
+        "native_search_s": 0.001214634,
+        "out": "quick/unwind0-b4",
+        "result": "SAT",
+        "wall_s": 0.1608577079969109
+      }
+    ]
+  },
+  "profile": "serial cold full model and fresh native Closure; one single-core job",
+  "repeats": 1,
+  "results": {
+    "new": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 4,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 25,
+        "decisions": 472,
+        "graph_nodes": 39,
+        "learnt_live_end": 21,
+        "native_original_live": 5568,
+        "propagations": 4363,
+        "queries": 1,
+        "theory_conflicts": 0,
+        "theory_propagations": 0,
+        "variables": 2723
+      },
+      "exit": 0,
+      "files": {
+        "program.i": {
+          "path": "inputs/unwind1/i",
+          "sha256": "f7eeb59361021362fbd8b18c9357e864dad8074d0e244496a6c0e115c240ab9f"
+        }
+      },
+      "host": "server-8core",
+      "identity": "0941e380770ff7877eeff9b0d2a6e9882e94bb8f2c994175e542032f56b4cb98",
+      "memory_gib": 7,
+      "out": "formal/unwind1-b4",
+      "peak_rss_kib": 20948,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.014878011,
+          "wall_s": 0.014879049
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.023733068,
+          "wall_s": 0.035699065
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.002290675,
+          "wall_s": 0.002291634
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.002792666,
+          "wall_s": 0.002855985
+        },
+        "search": {
+          "calls": 1,
+          "cpu_s": 0.000799612,
+          "wall_s": 0.000800796
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.001403203,
+          "wall_s": 0.001404298
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "SUCCESS"
+        ],
+        [
+          "f2.unwind.0",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "877352dc2918cfc003cf7dde5eb8d670478acde0150182ac47f134ece77435d9",
+        "boundary.tsv": "09c15ecc012c3e68db4c8baebc23bfec98c03f538ddfeadb576d18d78e5bdc17",
+        "full_model.json": "b199ef1df3fd67f5f38708ab0c6f2f5e30ffa3cc8ab8004f5d00d704a9faee05",
+        "goto.json": "1ab7691fa3be5e65c5064ceb7b292ba76edfda500732bd96630ecb8ba39b6d96",
+        "metrics.json": "88a690930c443a9d123a58be6067f3b3236aed9fa076b41312bf9d5c910038db",
+        "native-bindings.json": "d5e8f4e38caf6b88189fe1063ef3c32affe00506f3a9bb9a4b365242e831359b",
+        "native-state.tsv": "5eba403e251eafc66289817b8094417cde17d010208bb089a942771b3083706e",
+        "program.i": "f7eeb59361021362fbd8b18c9357e864dad8074d0e244496a6c0e115c240ab9f",
+        "raw_ssa.json": "5fcd2728b7d767cfca02c2c4248a8f38dd765ea72e8a9a0c1a8c7ca9d2b3e443",
+        "result.json": "5e691693c627b0833a18633843c43a13dd506443cfd969c9efad68a6c896ae74",
+        "s8-graph.tsv": "19d9f00bdc6bc3c5f397503348dba4425b386a798b7df5787824f81de90789c4",
+        "s8-initial.tsv": "0a2396fbaffb32548e7baf5122a859cad3daafc780061bdae433060d2a42711b",
+        "s8-input.bin": "da439dce344b8750d730b37bee52938bf94ef4b5250bed8c3320f3515b4f1254",
+        "s8-native.tsv": "f96183bf4e28199684d555706a1c812e0de783f211de313eb0e4d50063becc4c",
+        "s8-sat.tsv": "01f1d60b9129e4a867e6328fd17c5ea8175167675d8ef4fda235fdd6b8a004d9",
+        "s8-search.tsv": "c6fc516f948a01ff031f0a064ada1ef4286b24456732341a57394929efc9c620",
+        "s8-trace.tsv": "5e8cbf33b2a2b9fd6087f4c34cb3f2ed98d60f86d420637d184706652e607f2c",
+        "sc_input.json": "769d9a45eb6bad1383a2bf65f261ed1c0eb00ecd1bcfac4df233c0d9c7e0b32f",
+        "search.bin": "4fa39d27846cbcc55d70c6ddd36a1897cd164565f925c005ec023079f55d7920",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "766d9700f66f30e57f4993990603e04e4888c67523449c791698ad264001ed3e",
+        "visits.json": "ac3a48fc3d07cdd9bfc6f2056e2316d9d98ec655427be48b9962584d6351c773"
+      },
+      "result": "UNSAT",
+      "sample": "unwind1",
+      "sys_s": 0.014372,
+      "timeout_s": 740,
+      "user_s": 0.075899,
+      "wall_s": 0.16064211499906378,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 409\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    },
+    "old": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "bound": 4,
+      "capture": true,
+      "core": 0,
+      "counters": {
+        "conflicts": 15,
+        "decisions": 975,
+        "graph_nodes": 38,
+        "learnt_live_end": 12,
+        "native_original_live": 5201,
+        "propagations": 4576,
+        "queries": 1,
+        "theory_conflicts": 0,
+        "theory_propagations": 0,
+        "variables": 2553
+      },
+      "exit": 10,
+      "files": {
+        "program.i": {
+          "path": "inputs/unwind0/i",
+          "sha256": "369675afdce9f24a16d648c2af0379dafe84b15f75fb11d38697f731d0b5b69e"
+        }
+      },
+      "host": "server-8core",
+      "identity": "1b5f0c2ef4a2bf90ea1be3438cb84cd3be52e2bec63340b2d464adab6cae30b4",
+      "memory_gib": 7,
+      "out": "formal/unwind0-b4",
+      "peak_rss_kib": 20948,
+      "phases": {
+        "encode_graph": {
+          "calls": 1,
+          "cpu_s": 0.01437363,
+          "wall_s": 0.014374669
+        },
+        "front": {
+          "calls": 1,
+          "cpu_s": 0.024118662,
+          "wall_s": 0.036151323
+        },
+        "graph_load": {
+          "calls": 1,
+          "cpu_s": 0.002311884,
+          "wall_s": 0.002312815
+        },
+        "sc": {
+          "calls": 1,
+          "cpu_s": 0.002724395,
+          "wall_s": 0.002725043
+        },
+        "search": {
+          "calls": 1,
+          "cpu_s": 0.000822662,
+          "wall_s": 0.000823706
+        },
+        "ssa_convert": {
+          "calls": 1,
+          "cpu_s": 0.001325382,
+          "wall_s": 0.001326406
+        }
+      },
+      "properties": [
+        [
+          "reach_error.assertion.1",
+          "FAILURE"
+        ],
+        [
+          "f2.unwind.0",
+          "SUCCESS"
+        ]
+      ],
+      "raw_sha256": {
+        "bits.tsv": "79994b224e58a5491f1ae5e4c666aeea71b30c73254fe3b28f592faecb65f24e",
+        "boundary.tsv": "532f0fc48c2b6faf95b7b51e43b6b0628c9e8db23c6813e0b3807a60d54f74d6",
+        "full_model.json": "d258a7b7ec0d917d2a73e727fb530cb743559b1dd2a84334d7e28ee78cfb4d03",
+        "goto.json": "2af9dd4fa1ce0000c095a5cfe5e7f8bf31381d716755ba5b18ec92936826bb4b",
+        "metrics.json": "0b7c073e227a1b2fa8a4174e59a75ec0968a98213101647aea671f04b6eeaaf5",
+        "native-bindings.json": "80dddbcf3d1c45f09e64f737c70758a9263b201907cf89247473eeb7ef399838",
+        "native-state.tsv": "4ca1f4937f85f288bc7add22dc9918cb14f688e03498a2a1245d0429003bb9fc",
+        "program.i": "369675afdce9f24a16d648c2af0379dafe84b15f75fb11d38697f731d0b5b69e",
+        "raw_ssa.json": "094ddd6581508f6ac6174e214e51a1a3206182b8ea5b90e88208423c4e24cc91",
+        "result.json": "8df8e57802d0ae56df25dec108918b9eb022f604cecbbd9b6969db1eeaac7083",
+        "s8-graph.tsv": "cabdcdd82b86f1b66c30a7bdc59f98728a10bf209aa017e5a6db971abb86d7bc",
+        "s8-initial.tsv": "59f6c60df541890d9237aa8fc05bb0c95269d0bc9b76e61c2a0a3a71e2c5d53b",
+        "s8-input.bin": "db032c46298a2244a6cad14ca49349c10a7634a9ae95312b6f9fea2ecaaff5d8",
+        "s8-native.tsv": "4632dc4bc6382b71bf5184b043f420132f6d8eeab30a158a3e35239b71dd855a",
+        "s8-sat.tsv": "dac6ddeec2ca221fcdc7b3d588b041265ec592915eda6ef33d967ba211be17c2",
+        "s8-search.tsv": "ad9cd044a9a238430ce2fc65db8b408ea225e7a6071e458c3fd5fb0649847c0c",
+        "s8-trace.tsv": "4618ba552638ec7314e2116c93391897dceded32b38d2d559c9bd59c1aa882f4",
+        "sc_input.json": "6956f50944a791f20fe87acb0e3f715ef8c44b046e368305e9083d8f87c70abd",
+        "search.bin": "6f98a141c4c422d1ae7148325366b3e14c48ff6a910f47786ff77f4829c3ea00",
+        "stderr": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "stdout": "158d2ea9066ba7eab0f2bd85db854605a33f9a5653fffa2aff20d96795b48e0b",
+        "visits.json": "53eb4feeb11f52efb98e02c73f73d41b71ff29e8103211123d9f54667bd618d4"
+      },
+      "result": "SAT",
+      "sample": "unwind0",
+      "sys_s": 0.017595,
+      "timeout_s": 740,
+      "user_s": 0.074276,
+      "wall_s": 0.16061493400047766,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 409\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ]
+    }
+  }
+}

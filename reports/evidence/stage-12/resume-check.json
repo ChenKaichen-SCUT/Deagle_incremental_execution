@@ -1,0 +1,19 @@
+{
+  "receipts_and_attempts_unchanged": {
+    "old": [
+      "ff8283741ae19a9f99cde03571f8fa318d6048154b49e4902b693c530bc1add8",
+      [
+        "try-1795534948995849708"
+      ]
+    ],
+    "new": [
+      "0a9d7eb683f1e2787717122792fc9d25c72f6f4cb66576dace334df3d3c5b090",
+      [
+        "try-1795534940316837506"
+      ]
+    ]
+  },
+  "validated_existing": 2,
+  "elapsed_s": 0.0916738510131836,
+  "host": "wsl-local"
+}

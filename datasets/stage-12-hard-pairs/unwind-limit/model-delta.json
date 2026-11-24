@@ -1,0 +1,250 @@
+{
+  "boolean": {
+    "aliases_new_only": 391,
+    "aliases_old_only": 325,
+    "binding_methods": [
+      "function-relative typed subset, complete supported signed aliases",
+      "function-relative typed subset, complete supported signed aliases"
+    ],
+    "new": {
+      "assumptions": [
+        []
+      ],
+      "clauses": 6399,
+      "graphs": 1,
+      "variables": 2723
+    },
+    "new_bound_alias_groups": 391,
+    "new_mapped_only": 0,
+    "new_unknown": 6399,
+    "old": {
+      "assumptions": [
+        []
+      ],
+      "clauses": 6031,
+      "graphs": 1,
+      "variables": 2553
+    },
+    "old_bound_alias_groups": 325,
+    "old_mapped_only": 0,
+    "old_unknown": 6031,
+    "ordered_native_stream_identical": false,
+    "original_retained_confirmed": 0,
+    "polarity_flips": 0,
+    "renumbered": 0,
+    "semantic_mapping": [],
+    "semantic_variables": 0
+  },
+  "classification": "B_AND_T",
+  "logical_monotonicity": "unproved",
+  "old_knowledge": {
+    "decision_records": 974,
+    "generated_uip": 15,
+    "live_learnts_end": 12,
+    "positive_level_conflicts": 15,
+    "previous_matching_p0_proof_inventory": [],
+    "rf_guard_decision_assignments": {
+      "guard_false": 1,
+      "guard_true": 1
+    },
+    "root_conflicts": 0,
+    "stage11c_cold_transcript_matches": []
+  },
+  "semantic_diff_sha256": "4531c8d5d304e43e6471286962a51d3cbac27b885b67e7e1afe91a284a73e3d8",
+  "theory": {
+    "access": {
+      "matched_changes": 0,
+      "new": {
+        "read": 15,
+        "spawn": 2,
+        "write": 22
+      },
+      "old": {
+        "read": 13,
+        "spawn": 2,
+        "write": 23
+      }
+    },
+    "addresses": {
+      "new": {
+        "_N": 7,
+        "__CPROVER_alloca_object": 1,
+        "__CPROVER_dead_object": 1,
+        "__CPROVER_deallocated": 1,
+        "__CPROVER_malloc_is_new_array": 1,
+        "__CPROVER_max_malloc_size": 1,
+        "__CPROVER_memory_leak": 1,
+        "__CPROVER_new_object": 1,
+        "__CPROVER_next_thread_id": 6,
+        "__CPROVER_pipe_count": 1,
+        "__CPROVER_threads_exited": 7,
+        "limit": 3,
+        "main::1::t1!0@1": 3,
+        "main::1::t2!0@1": 3,
+        "t1$17$spwnclk": 1,
+        "t1$21$spwnclk": 1
+      },
+      "old": {
+        "_N": 5,
+        "__CPROVER_alloca_object": 1,
+        "__CPROVER_dead_object": 1,
+        "__CPROVER_deallocated": 1,
+        "__CPROVER_malloc_is_new_array": 1,
+        "__CPROVER_max_malloc_size": 1,
+        "__CPROVER_memory_leak": 1,
+        "__CPROVER_new_object": 1,
+        "__CPROVER_next_thread_id": 6,
+        "__CPROVER_pipe_count": 1,
+        "__CPROVER_threads_exited": 7,
+        "limit": 4,
+        "main::1::t1!0@1": 3,
+        "main::1::t2!0@1": 3,
+        "t1$17$spwnclk": 1,
+        "t1$21$spwnclk": 1
+      }
+    },
+    "apo_components": {
+      "new_groups": 36,
+      "new_unmatched": 24,
+      "old_groups": 35,
+      "old_unmatched": 23,
+      "witnessed_merges": 0,
+      "witnessed_splits": 0
+    },
+    "certificates": [
+      false,
+      false
+    ],
+    "dynamic_reason": "cold counters aggregate theory propagation/cycles; no typed trail per enqueue; static APO/RF and address partitions are not activated orders",
+    "dynamic_rf_guard_co_breakdown": null,
+    "edges": {
+      "apo": {
+        "matched": 0,
+        "new": 3,
+        "new_only_confirmed": 0,
+        "old": 3,
+        "old_only_confirmed": 0
+      },
+      "po": {
+        "matched": 11,
+        "new": 44,
+        "new_only_confirmed": 0,
+        "old": 42,
+        "old_only_confirmed": 0
+      },
+      "rf": {
+        "matched": 0,
+        "new": 34,
+        "new_only_confirmed": 0,
+        "old": 31,
+        "old_only_confirmed": 0
+      }
+    },
+    "event_maps": [
+      {
+        "_N#1": "f2ed3b1d4450699c2b3e1ef615fbd052df3d6a35c257fea7aa6d6ea24adf1355",
+        "_N#2": "3790193f5321eddb2e11302adfe802dce39d42cecd638de161d06c9ab114e6de",
+        "_N#3": "f434c1a6f768c5413c346598259ce11231866e3717722365dc699846aadeb03c",
+        "_N#4": "5b9fd3e24688fe2c4372ee95da2b3a06d2cdbd268565bc65887cc94525ae3913",
+        "_N#6": "cc3bb7a360177bcc1e6a0d5b8d95a403c0a943190f421171744bb3f72de93253",
+        "__CPROVER_alloca_object#1": "efa698908a0d17eb1e26367d291620b98d50bdc3dcc9342dbc21e43cbfc8e64c",
+        "__CPROVER_dead_object#1": "57220e7a7ce8b0df268300d62b779d6a3e7a56de1b8872d6fa40a8203e3453ce",
+        "__CPROVER_deallocated#1": "616f9157e95ef888870b3c1775ae407f9d4ed026ccfb51e77721130094910458",
+        "__CPROVER_malloc_is_new_array#1": "740f140c835cd87bad2e7461477e0d6667b7227de074043cbc0a336aa7a0fe51",
+        "__CPROVER_max_malloc_size#1": "9615d2544f2e0588edf8ffb154e8a43b4aed2ebddf4959994c51e6214702e3a7",
+        "__CPROVER_memory_leak#1": "80916dac969b1fe6600bdca0ef4b075eac541844c59760a14ffce09bf3d1df91",
+        "__CPROVER_new_object#1": "03ee51c7fa405fc345375c0a2ed43b861b02d916c91ef1a04796b240e2304c55",
+        "__CPROVER_next_thread_id#1": "cee0142e5a1d6aa3a4e928d5c0b5835f73a7c9a3c1729495ef8960655c950566",
+        "__CPROVER_next_thread_id#2": "130baa7dcc785a416f6c16ef9b8d228c1569e9f32ac4e057970d383a771f3f9c",
+        "__CPROVER_next_thread_id#3": "b1fe582b8bef9809aba9fefe839faf8878f77dc30e3447a913011d9b69235e73",
+        "__CPROVER_next_thread_id#5": "f29985b3e3f2e80d46b293d0bffbab6b5e3e08175c058588bd0bcd0e2e981073",
+        "__CPROVER_next_thread_id#6": "e624fa655b625843b968663c49834892cdae4c43c6f5ac08c8e2902269552557",
+        "__CPROVER_next_thread_id#7": "d7a659785f14c5e600d4e5c7190af521951afc6b2b2254ee3be56dd4b36e41c3",
+        "__CPROVER_pipe_count#1": "152432573f18ae086103c1c18c50eabb77a9477b2f0fba38f330c55426312c7e",
+        "__CPROVER_threads_exited#1": "d68ce7bef064741cc9c84be88e490f2e8393944e91bb9dc1c3138f80d53d52c3",
+        "__CPROVER_threads_exited#2": "b88f1513a7fa6d29954fc40c65a9967fd53b33d84ec5f55e9fdbc1d79e4e4b8d",
+        "__CPROVER_threads_exited#3": "76bf2b895fbf95d3b1c26d70c3af3b0beef2a25314b1790185a5c0774938c4e0",
+        "__CPROVER_threads_exited#4": "e53af3f79ac5125566750597481db20e086d7498a1d5ecef42f84389f59c80c7",
+        "__CPROVER_threads_exited#5": "c94bde47cd31d2512e5434b15547004fe0cbb5e8c22e769d80b02673fc4e2f7d",
+        "__CPROVER_threads_exited#6": "467ae9a1924ae182f50345f4333ac08351f36375f09056aa3e47dc08348ef98e",
+        "__CPROVER_threads_exited#7": "a87b5b3e18d0055b47a8aba4b041508091b584d6c58aa829f66d71b268a9ec91",
+        "limit#1": "889545403ae0b0f19061aff6f7e52a27f2c7482a64e5939d9d6351190e6fc633",
+        "limit#2": "c718eb5e8715daca6795f5b9ef53c5580f476dc0ddb7d48901dcbea2aade749f",
+        "limit#3": "4503550fde28d53baafc5b8161d52232438a07ef958ab4f9d5f6ff0c3ca0c6f9",
+        "limit#4": "9e83dac10ca9663f92587dcee166eccc18ff89ce39ee8059b555ee45321f9005",
+        "main::1::t1!0@1#1": "21ca32934a04746a3b75ba7f08e15be743b939281fa2fcec9f394810a9d849d9",
+        "main::1::t1!0@1#2": "b2f33f3b9197f5802a2ef4746b530fd8cbecdeeb62eb1e4087e29e983d01c7ae",
+        "main::1::t1!0@1#4": "9b9be87fa0be2f3145f14366e7efec1a5af4d746cccf466c4ea34e02b4d3de64",
+        "main::1::t2!0@1#1": "e9704e98825db01e9467336d6b7b54b86f73fe5da863098d373eba9a4b81ff29",
+        "main::1::t2!0@1#2": "5a5e04a66c88fe85c9c802b83e29f07bc1933a2d5ed31f0c06f5f99b7e9df0ea",
+        "main::1::t2!0@1#4": "6eac2b342002f7a976fa2608300fb30d710f7db1a7a0c7e8e37f3f4c1c796232",
+        "t1$17$spwnclk": "3ab99943f0cbfb50b16f7b86e0464a2dcb4c3fb90d425ffc773deef7141cc783",
+        "t1$21$spwnclk": "19d66bb4fa4d7d4cbddeee7e90e1074994ca7bc9839c2fb40468cfbf3f7fbb2a"
+      },
+      {
+        "_N#1": "f2ed3b1d4450699c2b3e1ef615fbd052df3d6a35c257fea7aa6d6ea24adf1355",
+        "_N#2": "4ea67a3f8019de48f5a3eccb3fd9ed00c61244a7bed18b8bb6cb1956075c3ecf",
+        "_N#3": "fdb053f662c58410bbcebf0deec577d1acaaac7869f31241492b77c4f538c69e",
+        "_N#4": "055e7785b91f69db3a1dff31d206b9efa5bc75679c6b3034cfcfc84b2191397d",
+        "_N#5": "5a466c1ccafcee21a988c4ecfa49eb817c624ec1cd601a7cc1f75492c2c21414",
+        "_N#6": "588e72024ccbf0273cca03b0082b9f92bbcf607e8d721995864375e75ad88fae",
+        "_N#8": "ea8e5f0f16f7a989ca5c60f173fdfe06453a82fb0eee40d493fb0ac1a5e8be7e",
+        "__CPROVER_alloca_object#1": "efa698908a0d17eb1e26367d291620b98d50bdc3dcc9342dbc21e43cbfc8e64c",
+        "__CPROVER_dead_object#1": "57220e7a7ce8b0df268300d62b779d6a3e7a56de1b8872d6fa40a8203e3453ce",
+        "__CPROVER_deallocated#1": "616f9157e95ef888870b3c1775ae407f9d4ed026ccfb51e77721130094910458",
+        "__CPROVER_malloc_is_new_array#1": "740f140c835cd87bad2e7461477e0d6667b7227de074043cbc0a336aa7a0fe51",
+        "__CPROVER_max_malloc_size#1": "9615d2544f2e0588edf8ffb154e8a43b4aed2ebddf4959994c51e6214702e3a7",
+        "__CPROVER_memory_leak#1": "80916dac969b1fe6600bdca0ef4b075eac541844c59760a14ffce09bf3d1df91",
+        "__CPROVER_new_object#1": "03ee51c7fa405fc345375c0a2ed43b861b02d916c91ef1a04796b240e2304c55",
+        "__CPROVER_next_thread_id#1": "cee0142e5a1d6aa3a4e928d5c0b5835f73a7c9a3c1729495ef8960655c950566",
+        "__CPROVER_next_thread_id#2": "dd6e9d3fa0415de21cf7922915c9e669c7ef3776ac41feb4398bf2be211b7eb9",
+        "__CPROVER_next_thread_id#3": "345324a09728502035786347758e9cddccd416040da2a9b4b7696d995e828a8d",
+        "__CPROVER_next_thread_id#5": "5c064dcd5de3efe415ed9f92b5e8d752634f0d14cd7f8864762b0888482eeb97",
+        "__CPROVER_next_thread_id#6": "52bfff2374ef6760402882597cee6b8242008c344735f76a2a3be84991b89a74",
+        "__CPROVER_next_thread_id#7": "02000027898956efd620dc71bade8789056486b516a58794f62daa097876d673",
+        "__CPROVER_pipe_count#1": "152432573f18ae086103c1c18c50eabb77a9477b2f0fba38f330c55426312c7e",
+        "__CPROVER_threads_exited#1": "d68ce7bef064741cc9c84be88e490f2e8393944e91bb9dc1c3138f80d53d52c3",
+        "__CPROVER_threads_exited#2": "ed330ac278243b54ee1dc4c81aa3343c52e03e791815fffac53045b85596ee75",
+        "__CPROVER_threads_exited#3": "254871ba35499f5632f5ae6d3b8bb1a43b90a8c54c8a25207c6efda1f0ec4f9c",
+        "__CPROVER_threads_exited#4": "5d835408480409bf59c52727c1553d7a275a14d92cc0c2373bb7ea1458cba98f",
+        "__CPROVER_threads_exited#5": "182cb657591322fa914516e75a9df353e3d5c5f1964c31361f5b5270581fe400",
+        "__CPROVER_threads_exited#6": "f4310851385e844d4f70c6197770123a884b281488297ef2badb5fa03e0d6108",
+        "__CPROVER_threads_exited#7": "2eabb6b79f885c4890b302d01b9e2b4f712d63522c4ac4e6e3cfb0753ea5e8cf",
+        "limit#1": "889545403ae0b0f19061aff6f7e52a27f2c7482a64e5939d9d6351190e6fc633",
+        "limit#2": "2f430d4e135b8c96d7dc4b954ce4b12e5eb678531680e4e16c1aeb2ad55cbee7",
+        "limit#3": "bff847d7809e256158ede0e93ab80a438cb7434f90ba7801930f247ce8dfb98f",
+        "main::1::t1!0@1#1": "50e986f72719d90b1c8e335140fd997a07a791786ee3843b1a237be2f2e4766c",
+        "main::1::t1!0@1#2": "f8854ca0fdb39d72e30f451ef4993c18bb224d255c4e63f4b5e2e5e443a3b1cc",
+        "main::1::t1!0@1#4": "57904409cf675c8d1bafe60f747d4be5f6a89eb2a55f625afba7432cb1d98436",
+        "main::1::t2!0@1#1": "57e46975436cae19a7c061fd083b8435b7bb537d2a0df4c8c8d658f5d5694707",
+        "main::1::t2!0@1#2": "a54f590e351e956d8f42e23b087453c131219702777654df81773446341fcd10",
+        "main::1::t2!0@1#4": "9db056825dbfe102b82127f2ac0188595220a13d1975db5deed65f2ce0946fd7",
+        "t1$17$spwnclk": "4b99efed1a34e92e74b37bc69e137e3229afcf624588573e5e6300af3d129430",
+        "t1$21$spwnclk": "9ea8d699da948396b2c33d1a3379dc9728e3546e9d04a562e64e3aa6ff5bd586"
+      }
+    ],
+    "explicit_sections": {
+      "new_groups": 2,
+      "new_unmatched": 2,
+      "old_groups": 2,
+      "old_unmatched": 2,
+      "witnessed_merges": 0,
+      "witnessed_splits": 0
+    },
+    "guards": {
+      "changed": 0,
+      "comparable": 12,
+      "new": 22,
+      "old": 23
+    },
+    "matched_events": 12,
+    "new_events": 39,
+    "new_unresolved_events": 27,
+    "old_events": 38,
+    "old_unresolved_events": 26,
+    "static_ws_co_rows": [
+      0,
+      0
+    ]
+  }
+}

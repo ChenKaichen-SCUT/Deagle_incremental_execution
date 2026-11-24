@@ -1,0 +1,12 @@
+candidates/reorder2-b3 UNSUPPORTED_POINTER
+candidates/reorder5-b6 UNSUPPORTED_POINTER
+candidates/twostage-b4 UNSUPPORTED_POINTER
+candidates/stack2-b7 UNSUPPORTED_POINTER
+candidates/stack1-b7 UNSUPPORTED_POINTER
+candidates/ldv-join-b4 SAT
+candidates/steal-b8 UNSUPPORTED_POINTER
+candidates/buffer-fix-b8 UNSAT
+deep/25_stack_longest-2-b3 INCOMPLETE_UNWINDING
+deep/26_stack_cas_longer-1-b3 INCOMPLETE_UNWINDING
+deep/ticket7-b2 UNSAT
+deep/netbsd-b2 INCOMPLETE_UNWINDING

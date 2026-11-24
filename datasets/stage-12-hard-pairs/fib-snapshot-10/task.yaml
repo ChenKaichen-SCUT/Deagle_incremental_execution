@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "23",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "binding": "all native properties including reach_error.assertion.1 and all unwinding assertions",
+  "case_id": "fib-snapshot-10",
+  "description": "上游提交 5110fee 将原断言的两个共享读合并为一次原子快照。每个工作线程仍更新 10 次，两端保持同一数学上界。这是同一补丁的一个规模。",
+  "limits": {
+    "memory_gib": 7,
+    "timeout_s": 660
+  },
+  "model": "ILP32",
+  "pair_kind": "upstream_sync_fix",
+  "property": "unreach-call.prp",
+  "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+  "sides": {
+    "new": {
+      "file": "new/program.i",
+      "sha256": "2e6e2620f9c7de8b971b660eda470dbb7eacbe8f90d0dbf0c5a923f8606f9038"
+    },
+    "old": {
+      "file": "old/program.i",
+      "sha256": "a48fe857d08ac3a4ba438de35e4bd3e7e5363b4267f7ed4ba2475f684ca08cd5"
+    }
+  }
+}

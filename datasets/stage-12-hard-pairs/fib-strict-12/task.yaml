@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "27",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "binding": "all native properties including reach_error.assertion.1 and all unwinding assertions",
+  "case_id": "fib-strict-12",
+  "description": "采用竞态补丁之前和上游恢复严格小于性质之后的公开版本。两端均检查 i < correct && j < correct，读快照仍可能到达上界。",
+  "limits": {
+    "memory_gib": 7,
+    "timeout_s": 660
+  },
+  "model": "ILP32",
+  "pair_kind": "upstream_sync_residual",
+  "property": "unreach-call.prp",
+  "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+  "sides": {
+    "new": {
+      "file": "new/program.i",
+      "sha256": "0d5255e9cc8ffb776115e75fa8fa1fa6c2774a79275dfd8235c357288b00417c"
+    },
+    "old": {
+      "file": "old/program.i",
+      "sha256": "c4525591fa85ffc9750f318a48c09fdd29dc0d26cd65c6303a681f57303fc1a4"
+    }
+  }
+}

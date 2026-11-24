@@ -1,0 +1,31 @@
+{
+  "archive": "all-attempts.tar.gz",
+  "bytes": 304429243,
+  "completed_dispatches": [
+    "order-0b8f54ab6de3.txt.complete",
+    "order-20859c094683.txt.complete",
+    "order-4200ac66f558.txt.complete",
+    "order-613603d8fc5c.txt.complete",
+    "order-8ddad3727a2d.txt.complete",
+    "order-c23e06e5f959.txt.complete",
+    "order-d00b99217216.txt.complete"
+  ],
+  "local_path": "runs/hard-pairs-admin/all-attempts.tar.gz",
+  "raw_bytes_per_phase": {
+    "candidates": 3118134,
+    "deep": 235062673,
+    "extended": 181722921,
+    "fixes": 142917,
+    "formal": 194508697,
+    "formal-history": 420544492,
+    "formal-strict": 130126121,
+    "history": 4688085,
+    "isolated": 42184489,
+    "quick": 119203798,
+    "racyhistory": 2180990
+  },
+  "server_attempts": 124,
+  "sha256": "2b60a268c4e2e60fc2e3be602a44218bd70f3b9e68d187c98c6083d61e3b8fde",
+  "verified_raw_files": 1521,
+  "verified_uncompressed_raw_bytes": 1333483317
+}

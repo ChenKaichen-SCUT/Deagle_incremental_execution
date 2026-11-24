@@ -1,0 +1,11 @@
+--- old/program.i
++++ new/program.i
+@@ -1712,8 +1712,6 @@
+       pthread_create(&t1, ((void *)0), thread1, ((void *)0));
+       __VERIFIER_atomic_begin();
+       pdev = 2;
+-      __VERIFIER_atomic_end();
+-      __VERIFIER_atomic_begin();
+       ldv_assert(pdev==2);
+       __VERIFIER_atomic_end();
+       return 0;

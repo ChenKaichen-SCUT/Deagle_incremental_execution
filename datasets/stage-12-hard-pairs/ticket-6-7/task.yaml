@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "2",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.c"
+  ],
+  "binding": "all native properties including reach_error.assertion.1 and all unwinding assertions",
+  "case_id": "ticket-6-7",
+  "description": "论文归档的七线程版本再增加一个工作线程，属于规模对照。",
+  "limits": {
+    "memory_gib": 7,
+    "timeout_s": 660
+  },
+  "model": "ILP32",
+  "pair_kind": "scale_control",
+  "property": "unreach-call.prp",
+  "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+  "sides": {
+    "new": {
+      "file": "new/program.c",
+      "sha256": "a23e058fd7e99c388c57a29154ab8770cf868cf3c645eba0bb26fd121678d7da"
+    },
+    "old": {
+      "file": "old/program.c",
+      "sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a"
+    }
+  }
+}
