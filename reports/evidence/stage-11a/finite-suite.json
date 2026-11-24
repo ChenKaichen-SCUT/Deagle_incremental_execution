@@ -1,0 +1,104 @@
+{
+  "cache_counts": {
+    "branches": 16224,
+    "discarded": 15584,
+    "discarded_with_derived_parents": 3520,
+    "expired_branches": 3552,
+    "inserted": 37624,
+    "retained": 58160,
+    "retained_with_derived_parents": 15344
+  },
+  "closure_fact_set_disagreements": 0,
+  "cold_strict_orders_including_guard_and_rf": 2224,
+  "directed_updates": 6432,
+  "generator": {
+    "atomic_edge_options": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ]
+    ],
+    "events": [
+      [
+        "a",
+        "A",
+        "W",
+        "x",
+        "1",
+        "int32"
+      ],
+      [
+        "b",
+        "B",
+        "W",
+        "x",
+        "1",
+        "int32"
+      ],
+      [
+        "c",
+        "B",
+        "R",
+        "x",
+        "1",
+        "int32"
+      ],
+      [
+        "d",
+        "D",
+        "N",
+        "",
+        "1",
+        "int32"
+      ]
+    ],
+    "guard_on_a": [
+      "1",
+      "g",
+      "!g"
+    ],
+    "po": [
+      [
+        "a",
+        "b"
+      ],
+      [
+        "b",
+        "c"
+      ],
+      [
+        "c",
+        "a"
+      ],
+      [
+        "c",
+        "d"
+      ]
+    ],
+    "rf_nonempty_subsets": [
+      [
+        "init:x",
+        "c"
+      ],
+      [
+        "a",
+        "c"
+      ],
+      [
+        "b",
+        "c"
+      ]
+    ]
+  },
+  "graphs": 672,
+  "kinds": {
+    "atomic": 672,
+    "guard": 1344,
+    "order": 2688,
+    "rf": 1728
+  },
+  "model_set_disagreements": 0
+}

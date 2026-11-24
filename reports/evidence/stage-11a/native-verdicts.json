@@ -1,0 +1,62 @@
+{
+  "fixed_graph_assumptions_agree": 7,
+  "native_controls": {
+    "fm": {
+      "co_attempts": 1,
+      "co_clauses_added": 5,
+      "co_pairs": 5,
+      "result": "UNSAT"
+    },
+    "lock-p1": {
+      "co_attempts": 0,
+      "co_clauses_added": 0,
+      "co_pairs": 3,
+      "result": "SAT"
+    },
+    "lock-p2": {
+      "co_attempts": 0,
+      "co_clauses_added": 0,
+      "co_pairs": 3,
+      "result": "UNSAT"
+    },
+    "tacas": {
+      "co_attempts": 0,
+      "co_clauses_added": 0,
+      "co_pairs": 2,
+      "result": "SAT"
+    },
+    "tacas-reverse": {
+      "co_attempts": 0,
+      "co_clauses_added": 0,
+      "co_pairs": 2,
+      "result": "UNSAT"
+    }
+  },
+  "two_sat_calls": {
+    "caller_rank_vectors": [
+      [
+        0,
+        1
+      ],
+      [
+        0,
+        1
+      ]
+    ],
+    "current_sequences": [
+      [
+        "obj#1",
+        "obj#2"
+      ],
+      [
+        "obj#2",
+        "obj#1"
+      ]
+    ]
+  },
+  "unsat_calls_with_previous_shared_ranks": [
+    1,
+    4,
+    6
+  ]
+}

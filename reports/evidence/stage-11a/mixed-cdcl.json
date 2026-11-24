@@ -1,0 +1,187 @@
+{
+  "P0": {
+    "apo": [
+      [
+        "begin",
+        "end"
+      ]
+    ],
+    "events": [
+      {
+        "addr": "",
+        "guard": "1",
+        "key": "begin",
+        "op": "N",
+        "thread": "A",
+        "typ": "int32"
+      },
+      {
+        "addr": "",
+        "guard": "1",
+        "key": "end",
+        "op": "N",
+        "thread": "A",
+        "typ": "int32"
+      },
+      {
+        "addr": "",
+        "guard": "g",
+        "key": "middle",
+        "op": "N",
+        "thread": "B",
+        "typ": "int32"
+      }
+    ],
+    "name": "",
+    "po": [
+      [
+        "begin",
+        "middle"
+      ],
+      [
+        "middle",
+        "end"
+      ]
+    ],
+    "rf": []
+  },
+  "P0_theory_unit": "!g",
+  "P1": {
+    "apo": [],
+    "events": [
+      {
+        "addr": "",
+        "guard": "1",
+        "key": "begin",
+        "op": "N",
+        "thread": "A",
+        "typ": "int32"
+      },
+      {
+        "addr": "",
+        "guard": "1",
+        "key": "end",
+        "op": "N",
+        "thread": "A",
+        "typ": "int32"
+      },
+      {
+        "addr": "",
+        "guard": "g",
+        "key": "middle",
+        "op": "N",
+        "thread": "B",
+        "typ": "int32"
+      }
+    ],
+    "name": "",
+    "po": [
+      [
+        "begin",
+        "middle"
+      ],
+      [
+        "middle",
+        "end"
+      ],
+      [
+        "begin",
+        "end"
+      ]
+    ],
+    "rf": []
+  },
+  "common_cnf": [
+    [
+      "!p",
+      "g"
+    ]
+  ],
+  "resolved_clause": "!p",
+  "truth_table": [
+    {
+      "common_boolean_clause": true,
+      "g": false,
+      "learned_not_p": true,
+      "p": false,
+      "theory_witness": [
+        "begin",
+        "end"
+      ],
+      "version": "P0"
+    },
+    {
+      "common_boolean_clause": true,
+      "g": true,
+      "learned_not_p": true,
+      "p": false,
+      "theory_witness": null,
+      "version": "P0"
+    },
+    {
+      "common_boolean_clause": false,
+      "g": false,
+      "learned_not_p": false,
+      "p": true,
+      "theory_witness": [
+        "begin",
+        "end"
+      ],
+      "version": "P0"
+    },
+    {
+      "common_boolean_clause": true,
+      "g": true,
+      "learned_not_p": false,
+      "p": true,
+      "theory_witness": null,
+      "version": "P0"
+    },
+    {
+      "common_boolean_clause": true,
+      "g": false,
+      "learned_not_p": true,
+      "p": false,
+      "theory_witness": [
+        "begin",
+        "end"
+      ],
+      "version": "P1"
+    },
+    {
+      "common_boolean_clause": true,
+      "g": true,
+      "learned_not_p": true,
+      "p": false,
+      "theory_witness": [
+        "begin",
+        "middle",
+        "end"
+      ],
+      "version": "P1"
+    },
+    {
+      "common_boolean_clause": false,
+      "g": false,
+      "learned_not_p": false,
+      "p": true,
+      "theory_witness": [
+        "begin",
+        "end"
+      ],
+      "version": "P1"
+    },
+    {
+      "common_boolean_clause": true,
+      "g": true,
+      "learned_not_p": false,
+      "p": true,
+      "theory_witness": [
+        "begin",
+        "middle",
+        "end"
+      ],
+      "version": "P1"
+    }
+  ]
+}

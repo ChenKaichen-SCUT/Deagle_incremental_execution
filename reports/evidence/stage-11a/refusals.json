@@ -1,0 +1,19 @@
+{
+  "cross_thread_atomic": "atomic_crosses_threads",
+  "duplicate_event_key": "ambiguous_event_identity",
+  "forged_reverse_proof": {
+    "discarded": 1,
+    "real_premise": [
+      "po",
+      "a",
+      "b"
+    ],
+    "rejected_fact": [
+      "b",
+      "a"
+    ],
+    "surviving_orders": 1
+  },
+  "misbound_rf_address": "invalid_rf_source",
+  "unbound_order": "unbound_order_endpoint"
+}

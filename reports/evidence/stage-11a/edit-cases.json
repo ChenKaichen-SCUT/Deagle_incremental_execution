@@ -1,0 +1,2294 @@
+{
+  "addition_closes_cycle": {
+    "cache_counts": {
+      "branches": 1,
+      "expired_branches": 0,
+      "inserted": 6,
+      "retained": 3
+    },
+    "cycle_proof": [
+      {
+        "edge": [
+          "a",
+          "a"
+        ],
+        "id": 0,
+        "parents": [],
+        "premises": [
+          [
+            "event",
+            "a",
+            "A",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "b",
+            "B",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "c",
+            "B",
+            "R",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "po",
+            "a",
+            "b"
+          ],
+          [
+            "po",
+            "b",
+            "c"
+          ],
+          [
+            "po",
+            "c",
+            "a"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "a",
+            "1"
+          ]
+        ],
+        "rule": "static projection"
+      }
+    ],
+    "difference": {
+      "add": [
+        [
+          "po",
+          "c",
+          "a"
+        ]
+      ],
+      "remove": []
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "c",
+          "a"
+        ]
+      ],
+      "rf": [
+        [
+          "b",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": null,
+    "new_orders": 0,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "b",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "old_orders": 4
+  },
+  "alternate_proof_after_deletion": {
+    "cache_counts": {
+      "branches": 1,
+      "discarded": 2,
+      "expired_branches": 0,
+      "inserted": 1,
+      "retained": 3
+    },
+    "difference": {
+      "add": [],
+      "remove": [
+        [
+          "po",
+          "a",
+          "b"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "b",
+          "d"
+        ],
+        [
+          "a",
+          "c"
+        ],
+        [
+          "c",
+          "d"
+        ]
+      ],
+      "rf": []
+    },
+    "new_only_example": [
+      [],
+      [],
+      [
+        "b",
+        "a",
+        "c",
+        "d"
+      ]
+    ],
+    "new_orders": 3,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "d"
+        ],
+        [
+          "a",
+          "c"
+        ],
+        [
+          "c",
+          "d"
+        ]
+      ],
+      "rf": []
+    },
+    "old_only_example": null,
+    "old_orders": 2,
+    "proofs": [
+      [
+        {
+          "edge": [
+            "a",
+            "d"
+          ],
+          "id": 0,
+          "parents": [],
+          "premises": [
+            [
+              "event",
+              "a",
+              "A",
+              "W",
+              "x",
+              "int32",
+              "1"
+            ],
+            [
+              "event",
+              "b",
+              "B",
+              "W",
+              "x",
+              "int32",
+              "1"
+            ],
+            [
+              "event",
+              "d",
+              "D",
+              "N",
+              "",
+              "int32",
+              "1"
+            ],
+            [
+              "po",
+              "a",
+              "b"
+            ],
+            [
+              "po",
+              "b",
+              "d"
+            ],
+            [
+              "rules",
+              "finite-sc-po-rf-fr-ws-block-v1"
+            ],
+            [
+              "true",
+              "a",
+              "1"
+            ],
+            [
+              "true",
+              "d",
+              "1"
+            ]
+          ],
+          "rule": "static projection"
+        }
+      ],
+      [
+        {
+          "edge": [
+            "a",
+            "d"
+          ],
+          "id": 0,
+          "parents": [],
+          "premises": [
+            [
+              "event",
+              "a",
+              "A",
+              "W",
+              "x",
+              "int32",
+              "1"
+            ],
+            [
+              "event",
+              "c",
+              "B",
+              "N",
+              "x",
+              "int32",
+              "1"
+            ],
+            [
+              "event",
+              "d",
+              "D",
+              "N",
+              "",
+              "int32",
+              "1"
+            ],
+            [
+              "po",
+              "a",
+              "c"
+            ],
+            [
+              "po",
+              "c",
+              "d"
+            ],
+            [
+              "rules",
+              "finite-sc-po-rf-fr-ws-block-v1"
+            ],
+            [
+              "true",
+              "a",
+              "1"
+            ],
+            [
+              "true",
+              "d",
+              "1"
+            ]
+          ],
+          "rule": "static projection"
+        }
+      ]
+    ]
+  },
+  "change_operand_type_at_old_key": {
+    "cache_counts": {
+      "branches": 2,
+      "discarded": 1,
+      "expired_branches": 1,
+      "inserted": 1,
+      "retained": 2
+    },
+    "difference": {
+      "add": [
+        [
+          "event",
+          "a",
+          "A",
+          "W",
+          "x",
+          "1",
+          "uint32"
+        ]
+      ],
+      "remove": [
+        [
+          "event",
+          "a",
+          "A",
+          "W",
+          "x",
+          "1",
+          "int32"
+        ],
+        [
+          "rf",
+          "a",
+          "c"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "uint32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [],
+      "rf": [
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": null,
+    "new_orders": 16,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": [
+      [],
+      [
+        [
+          "a",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "c",
+        "b",
+        "d"
+      ]
+    ],
+    "old_orders": 24
+  },
+  "deletion_revokes_conflict": {
+    "cache_counts": {
+      "branches": 1,
+      "discarded": 6,
+      "expired_branches": 0,
+      "retained": 3
+    },
+    "cycle_proof": [
+      {
+        "edge": [
+          "a",
+          "a"
+        ],
+        "id": 0,
+        "parents": [],
+        "premises": [
+          [
+            "event",
+            "a",
+            "A",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "b",
+            "B",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "c",
+            "B",
+            "R",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "po",
+            "a",
+            "b"
+          ],
+          [
+            "po",
+            "b",
+            "c"
+          ],
+          [
+            "po",
+            "c",
+            "a"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "a",
+            "1"
+          ]
+        ],
+        "rule": "static projection"
+      }
+    ],
+    "difference": {
+      "add": [],
+      "remove": [
+        [
+          "po",
+          "c",
+          "a"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "b",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "new_orders": 4,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "c",
+          "a"
+        ]
+      ],
+      "rf": [
+        [
+          "b",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": null,
+    "old_orders": 0
+  },
+  "guard_polarity": {
+    "cache_counts": {
+      "branches": 5,
+      "discarded": 1,
+      "expired_branches": 1,
+      "inserted": 2,
+      "retained": 4
+    },
+    "difference": {
+      "add": [
+        [
+          "event",
+          "a",
+          "A",
+          "W",
+          "x",
+          "!g",
+          "int32"
+        ]
+      ],
+      "remove": [
+        [
+          "event",
+          "a",
+          "A",
+          "W",
+          "x",
+          "g",
+          "int32"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "!g",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": [
+      [
+        [
+          "g",
+          false
+        ]
+      ],
+      [
+        [
+          "a",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "c",
+        "b",
+        "d"
+      ]
+    ],
+    "new_orders": 30,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "g",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": [
+      [
+        [
+          "g",
+          false
+        ]
+      ],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "old_orders": 30
+  },
+  "guarded_out_static_midpoint": {
+    "cache_counts": {
+      "branches": 1,
+      "discarded": 1,
+      "expired_branches": 0
+    },
+    "difference": {
+      "add": [],
+      "remove": [
+        [
+          "po",
+          "a",
+          "b"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "0",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "B",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": []
+    },
+    "new_only_example": [
+      [],
+      [],
+      [
+        "c",
+        "a"
+      ]
+    ],
+    "new_orders": 2,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "0",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "B",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": []
+    },
+    "old_only_example": null,
+    "old_orders": 1
+  },
+  "merge_po_to_apo": {
+    "cache_counts": {
+      "branches": 1,
+      "discarded": 1,
+      "expired_branches": 0,
+      "inserted": 7,
+      "retained": 2
+    },
+    "difference": {
+      "add": [
+        [
+          "apo",
+          "a",
+          "b"
+        ]
+      ],
+      "remove": [
+        [
+          "po",
+          "a",
+          "b"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "C",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "c",
+          "b"
+        ]
+      ],
+      "rf": []
+    },
+    "new_only_example": null,
+    "new_orders": 0,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "C",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "a",
+          "c"
+        ],
+        [
+          "c",
+          "b"
+        ]
+      ],
+      "rf": []
+    },
+    "old_only_example": [
+      [],
+      [],
+      [
+        "a",
+        "c",
+        "b"
+      ]
+    ],
+    "old_orders": 1
+  },
+  "new_event_and_source": {
+    "cache_counts": {
+      "branches": 4,
+      "expired_branches": 0,
+      "inserted": 9,
+      "retained": 21,
+      "retained_with_derived_parents": 10
+    },
+    "difference": {
+      "add": [
+        [
+          "event",
+          "e",
+          "E",
+          "W",
+          "x",
+          "1",
+          "int32"
+        ],
+        [
+          "rf",
+          "e",
+          "c"
+        ]
+      ],
+      "remove": []
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "e",
+          "op": "W",
+          "thread": "E",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ],
+        [
+          "e",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    ],
+    "new_orders": 20,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "old_orders": 4
+  },
+  "remove_event_and_source": {
+    "cache_counts": {
+      "branches": 3,
+      "discarded": 3,
+      "discarded_with_derived_parents": 2,
+      "expired_branches": 1,
+      "retained": 21,
+      "retained_with_derived_parents": 10
+    },
+    "difference": {
+      "add": [],
+      "remove": [
+        [
+          "event",
+          "e",
+          "E",
+          "W",
+          "x",
+          "1",
+          "int32"
+        ],
+        [
+          "rf",
+          "e",
+          "c"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "new_orders": 4,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "e",
+          "op": "W",
+          "thread": "E",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ],
+        [
+          "e",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+      ]
+    ],
+    "old_orders": 20
+  },
+  "renumber_and_reorder_declarations": {
+    "cache_counts": {
+      "branches": 3,
+      "expired_branches": 0,
+      "retained": 21,
+      "retained_with_derived_parents": 10
+    },
+    "difference": {
+      "add": [],
+      "remove": []
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "rf": [
+        [
+          "init:x",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "a",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": null,
+    "new_orders": 4,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": null,
+    "old_orders": 4
+  },
+  "replace_event_identity": {
+    "cache_counts": {
+      "branches": 3,
+      "discarded": 8,
+      "discarded_with_derived_parents": 3,
+      "expired_branches": 1,
+      "inserted": 17,
+      "retained": 4,
+      "retained_with_derived_parents": 1
+    },
+    "difference": {
+      "add": [
+        [
+          "event",
+          "a_new",
+          "A",
+          "W",
+          "x",
+          "1",
+          "int32"
+        ],
+        [
+          "po",
+          "a_new",
+          "b"
+        ],
+        [
+          "rf",
+          "a_new",
+          "c"
+        ]
+      ],
+      "remove": [
+        [
+          "event",
+          "a",
+          "A",
+          "W",
+          "x",
+          "1",
+          "int32"
+        ],
+        [
+          "po",
+          "a",
+          "b"
+        ],
+        [
+          "rf",
+          "a",
+          "c"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a_new",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a_new",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a_new",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a_new",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "new_orders": 4,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "b",
+          "c"
+        ],
+        [
+          "init:x",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "old_orders": 4
+  },
+  "replace_read_from": {
+    "cache_counts": {
+      "branches": 1,
+      "expired_branches": 1,
+      "inserted": 3
+    },
+    "difference": {
+      "add": [
+        [
+          "rf",
+          "b",
+          "c"
+        ]
+      ],
+      "remove": [
+        [
+          "rf",
+          "a",
+          "c"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "b",
+          "c"
+        ]
+      ]
+    },
+    "new_only_example": [
+      [],
+      [
+        [
+          "b",
+          "c"
+        ]
+      ],
+      [
+        "a",
+        "b",
+        "c",
+        "d"
+      ]
+    ],
+    "new_orders": 4,
+    "old": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "A",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "R",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "",
+          "guard": "1",
+          "key": "d",
+          "op": "N",
+          "thread": "D",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "b",
+          "c"
+        ]
+      ],
+      "rf": [
+        [
+          "a",
+          "c"
+        ]
+      ]
+    },
+    "old_only_example": null,
+    "old_orders": 0
+  },
+  "split_apo_to_po": {
+    "cache_counts": {
+      "branches": 1,
+      "discarded": 7,
+      "discarded_with_derived_parents": 6,
+      "expired_branches": 0,
+      "inserted": 1,
+      "retained": 2
+    },
+    "difference": {
+      "add": [
+        [
+          "po",
+          "a",
+          "b"
+        ]
+      ],
+      "remove": [
+        [
+          "apo",
+          "a",
+          "b"
+        ]
+      ]
+    },
+    "new": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "C",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "b"
+        ],
+        [
+          "a",
+          "c"
+        ],
+        [
+          "c",
+          "b"
+        ]
+      ],
+      "rf": []
+    },
+    "new_only_example": [
+      [],
+      [],
+      [
+        "a",
+        "c",
+        "b"
+      ]
+    ],
+    "new_orders": 1,
+    "old": {
+      "apo": [
+        [
+          "a",
+          "b"
+        ]
+      ],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "a",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "b",
+          "op": "W",
+          "thread": "B",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "c",
+          "op": "N",
+          "thread": "C",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "a",
+          "c"
+        ],
+        [
+          "c",
+          "b"
+        ]
+      ],
+      "rf": []
+    },
+    "old_only_example": null,
+    "old_orders": 0
+  }
+}

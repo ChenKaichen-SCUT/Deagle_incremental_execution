@@ -1,0 +1,325 @@
+{
+  "P1": {
+    "assert_failure_edges": 18,
+    "enabled_edges": 1506,
+    "finished_states": 6,
+    "guard_disabled_edges": 550,
+    "lock_accounting_violations": 400,
+    "reachable_states": 853,
+    "shortest_error_witness": [
+      {
+        "before": {
+          "r": 0,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "acquire R",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 1,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "l=x",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 1,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "y=l",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 1,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "ly=y",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 1,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "lx=x",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 1,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "assert ly==lx",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 1,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "l=r-1",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 1,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "acquire R",
+        "thread": "R2"
+      },
+      {
+        "before": {
+          "r": 2,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "r=l",
+        "thread": "R1"
+      },
+      {
+        "before": {
+          "r": 0,
+          "w": 0,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "acquire W",
+        "thread": "W1"
+      },
+      {
+        "before": {
+          "r": 0,
+          "w": 1,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "l=x",
+        "thread": "R2"
+      },
+      {
+        "before": {
+          "r": 0,
+          "w": 1,
+          "x": 0,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "x=3",
+        "thread": "W1"
+      },
+      {
+        "before": {
+          "r": 0,
+          "w": 1,
+          "x": 3,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "y=l",
+        "thread": "R2"
+      },
+      {
+        "before": {
+          "r": 0,
+          "w": 1,
+          "x": 3,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "ly=y",
+        "thread": "R2"
+      },
+      {
+        "before": {
+          "r": 0,
+          "w": 1,
+          "x": 3,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          0
+        ],
+        "operation": "lx=x",
+        "thread": "R2"
+      },
+      {
+        "before": {
+          "r": 0,
+          "w": 1,
+          "x": 3,
+          "y": 0
+        },
+        "local_before_l_ly_lx": [
+          0,
+          0,
+          3
+        ],
+        "operation": "assert ly==lx",
+        "thread": "R2"
+      }
+    ],
+    "source_sha256": "dd98405c728a760da56688c8e3153ab085899b582cefa08e43058c1deb3637bf",
+    "threads": [
+      [
+        "acquire W",
+        "x=3",
+        "w=0"
+      ],
+      [
+        "acquire R",
+        "l=x",
+        "y=l",
+        "ly=y",
+        "lx=x",
+        "assert ly==lx",
+        "l=r-1",
+        "r=l"
+      ],
+      [
+        "acquire W",
+        "x=3",
+        "w=0"
+      ],
+      [
+        "acquire R",
+        "l=x",
+        "y=l",
+        "ly=y",
+        "lx=x",
+        "assert ly==lx",
+        "l=r-1",
+        "r=l"
+      ]
+    ]
+  },
+  "P2": {
+    "assert_failure_edges": 0,
+    "enabled_edges": 532,
+    "finished_states": 2,
+    "guard_disabled_edges": 304,
+    "lock_accounting_violations": 0,
+    "reachable_states": 321,
+    "shortest_error_witness": [],
+    "source_sha256": "bfce38d4c6dd8b83b0e7ccf5dd860317721211d6230963b5cb3c4897eb3546d2",
+    "threads": [
+      [
+        "acquire W",
+        "x=3",
+        "w=0"
+      ],
+      [
+        "acquire R",
+        "l=x",
+        "y=l",
+        "ly=y",
+        "lx=x",
+        "assert ly==lx",
+        "atomic r=r-1"
+      ],
+      [
+        "acquire W",
+        "x=3",
+        "w=0"
+      ],
+      [
+        "acquire R",
+        "l=x",
+        "y=l",
+        "ly=y",
+        "lx=x",
+        "assert ly==lx",
+        "atomic r=r-1"
+      ]
+    ]
+  }
+}

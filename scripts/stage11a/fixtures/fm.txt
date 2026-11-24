@@ -1,0 +1,30 @@
+write t#2
+write s#2
+write x#1
+write y#1
+write z#1
+write t#1
+write s#1
+write z#2
+write y#2
+write x#2
+po z#3 t#2
+po t#2 s#3
+po z#4 s#2
+po s#2 t#3
+po x#1 y#1
+po y#1 z#1
+po t#1 s#1
+po s#1 z#2
+po z#5 y#2
+po y#2 x#3
+po z#6 x#2
+po x#2 y#3
+rf z#1 z#3
+rf z#1 z#4
+rf z#2 z#5
+rf z#2 z#6
+rf x#1 x#3
+rf y#1 y#3
+rf s#1 s#3
+rf t#1 t#3

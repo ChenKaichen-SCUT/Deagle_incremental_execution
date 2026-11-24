@@ -1,0 +1,3869 @@
+{
+  "fm": {
+    "both_ws_choices": [
+      {
+        "cycle_proof": [
+          {
+            "edge": [
+              "ws1",
+              "wz2"
+            ],
+            "id": 0,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "ws1",
+                "wz2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "wz2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz2",
+              "rz5"
+            ],
+            "id": 1,
+            "parents": [],
+            "premises": [
+              [
+                "decl-rf",
+                "wz2",
+                "rz5"
+              ],
+              [
+                "event",
+                "rz5",
+                "4",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wz2",
+                "rz5"
+              ],
+              [
+                "true",
+                "rz5",
+                "1"
+              ],
+              [
+                "true",
+                "wz2",
+                "1"
+              ]
+            ],
+            "rule": "read from"
+          },
+          {
+            "edge": [
+              "ws1",
+              "rz5"
+            ],
+            "id": 2,
+            "parents": [
+              0,
+              1
+            ],
+            "premises": [
+              [
+                "event",
+                "rz5",
+                "4",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz5",
+                "1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rz5",
+              "rx3"
+            ],
+            "id": 3,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "rz5",
+                "4",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy2",
+                "4",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "rz5",
+                "wy2"
+              ],
+              [
+                "po",
+                "wy2",
+                "rx3"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "rz5",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "ws1",
+              "rx3"
+            ],
+            "id": 4,
+            "parents": [
+              2,
+              3
+            ],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wx1",
+              "wz2"
+            ],
+            "id": 5,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy1",
+                "2",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wx1",
+                "wy1"
+              ],
+              [
+                "po",
+                "wy1",
+                "wz1"
+              ],
+              [
+                "po",
+                "wz1",
+                "wz2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ],
+              [
+                "true",
+                "wz2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz2",
+              "rz6"
+            ],
+            "id": 6,
+            "parents": [],
+            "premises": [
+              [
+                "decl-rf",
+                "wz2",
+                "rz6"
+              ],
+              [
+                "event",
+                "rz6",
+                "5",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wz2",
+                "rz6"
+              ],
+              [
+                "true",
+                "rz6",
+                "1"
+              ],
+              [
+                "true",
+                "wz2",
+                "1"
+              ]
+            ],
+            "rule": "read from"
+          },
+          {
+            "edge": [
+              "rz6",
+              "wx2"
+            ],
+            "id": 7,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rz6",
+                "5",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx2",
+                "5",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "rz6",
+                "wx2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz6",
+                "1"
+              ],
+              [
+                "true",
+                "wx2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz2",
+              "wx2"
+            ],
+            "id": 8,
+            "parents": [
+              6,
+              7
+            ],
+            "premises": [
+              [
+                "event",
+                "wx2",
+                "5",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wx2",
+                "1"
+              ],
+              [
+                "true",
+                "wz2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wx1",
+              "wx2"
+            ],
+            "id": 9,
+            "parents": [
+              5,
+              8
+            ],
+            "premises": [
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx2",
+                "5",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ],
+              [
+                "true",
+                "wx2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rx3",
+              "wx2"
+            ],
+            "id": 10,
+            "parents": [
+              9
+            ],
+            "premises": [
+              [
+                "decl-rf",
+                "wx1",
+                "rx3"
+              ],
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx2",
+                "5",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wx1",
+                "rx3"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ],
+              [
+                "true",
+                "wx2",
+                "1"
+              ]
+            ],
+            "rule": "from read"
+          },
+          {
+            "edge": [
+              "wx2",
+              "ry3"
+            ],
+            "id": 11,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "ry3",
+                "5",
+                "R",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx2",
+                "5",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wx2",
+                "ry3"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ry3",
+                "1"
+              ],
+              [
+                "true",
+                "wx2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wy1",
+              "wz2"
+            ],
+            "id": 12,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "wy1",
+                "2",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wy1",
+                "wz1"
+              ],
+              [
+                "po",
+                "wz1",
+                "wz2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wy1",
+                "1"
+              ],
+              [
+                "true",
+                "wz2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "rz5",
+              "wy2"
+            ],
+            "id": 13,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rz5",
+                "4",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy2",
+                "4",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "rz5",
+                "wy2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz5",
+                "1"
+              ],
+              [
+                "true",
+                "wy2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz2",
+              "wy2"
+            ],
+            "id": 14,
+            "parents": [
+              1,
+              13
+            ],
+            "premises": [
+              [
+                "event",
+                "wy2",
+                "4",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wy2",
+                "1"
+              ],
+              [
+                "true",
+                "wz2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wy1",
+              "wy2"
+            ],
+            "id": 15,
+            "parents": [
+              12,
+              14
+            ],
+            "premises": [
+              [
+                "event",
+                "wy1",
+                "2",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy2",
+                "4",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wy1",
+                "1"
+              ],
+              [
+                "true",
+                "wy2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "ry3",
+              "wy2"
+            ],
+            "id": 16,
+            "parents": [
+              15
+            ],
+            "premises": [
+              [
+                "decl-rf",
+                "wy1",
+                "ry3"
+              ],
+              [
+                "event",
+                "ry3",
+                "5",
+                "R",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy1",
+                "2",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy2",
+                "4",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wy1",
+                "ry3"
+              ],
+              [
+                "true",
+                "ry3",
+                "1"
+              ],
+              [
+                "true",
+                "wy1",
+                "1"
+              ],
+              [
+                "true",
+                "wy2",
+                "1"
+              ]
+            ],
+            "rule": "from read"
+          },
+          {
+            "edge": [
+              "wy2",
+              "rx3"
+            ],
+            "id": 17,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy2",
+                "4",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wy2",
+                "rx3"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "wy2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "ry3",
+              "rx3"
+            ],
+            "id": 18,
+            "parents": [
+              16,
+              17
+            ],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ry3",
+                "5",
+                "R",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "ry3",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wx2",
+              "rx3"
+            ],
+            "id": 19,
+            "parents": [
+              11,
+              18
+            ],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx2",
+                "5",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "wx2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wx2",
+              "wx1"
+            ],
+            "id": 20,
+            "parents": [
+              19
+            ],
+            "premises": [
+              [
+                "decl-rf",
+                "wx1",
+                "rx3"
+              ],
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx2",
+                "5",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wx1",
+                "rx3"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ],
+              [
+                "true",
+                "wx2",
+                "1"
+              ]
+            ],
+            "rule": "write serialization"
+          },
+          {
+            "edge": [
+              "rx3",
+              "wx1"
+            ],
+            "id": 21,
+            "parents": [
+              10,
+              20
+            ],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wx1",
+              "wz1"
+            ],
+            "id": 22,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wy1",
+                "2",
+                "W",
+                "y",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wx1",
+                "wy1"
+              ],
+              [
+                "po",
+                "wy1",
+                "wz1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz1",
+              "rz4"
+            ],
+            "id": 23,
+            "parents": [],
+            "premises": [
+              [
+                "decl-rf",
+                "wz1",
+                "rz4"
+              ],
+              [
+                "event",
+                "rz4",
+                "1",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wz1",
+                "rz4"
+              ],
+              [
+                "true",
+                "rz4",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "read from"
+          },
+          {
+            "edge": [
+              "wx1",
+              "rz4"
+            ],
+            "id": 24,
+            "parents": [
+              22,
+              23
+            ],
+            "premises": [
+              [
+                "event",
+                "rz4",
+                "1",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz4",
+                "1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rz4",
+              "ws2"
+            ],
+            "id": 25,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rz4",
+                "1",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "rz4",
+                "ws2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz4",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wx1",
+              "ws2"
+            ],
+            "id": 26,
+            "parents": [
+              24,
+              25
+            ],
+            "premises": [
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rx3",
+              "ws2"
+            ],
+            "id": 27,
+            "parents": [
+              21,
+              26
+            ],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "ws1",
+              "ws2"
+            ],
+            "id": 28,
+            "parents": [
+              4,
+              27
+            ],
+            "premises": [
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rs3",
+              "ws2"
+            ],
+            "id": 29,
+            "parents": [
+              28
+            ],
+            "premises": [
+              [
+                "decl-rf",
+                "ws1",
+                "rs3"
+              ],
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "ws1",
+                "rs3"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "from read"
+          },
+          {
+            "edge": [
+              "ws2",
+              "rt3"
+            ],
+            "id": 30,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "ws2",
+                "rt3"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "rs3",
+              "rt3"
+            ],
+            "id": 31,
+            "parents": [
+              29,
+              30
+            ],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wt1",
+              "ws1"
+            ],
+            "id": 32,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wt1",
+                "ws1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wt1",
+              "rz5"
+            ],
+            "id": 33,
+            "parents": [
+              32,
+              2
+            ],
+            "premises": [
+              [
+                "event",
+                "rz5",
+                "4",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz5",
+                "1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wt1",
+              "rx3"
+            ],
+            "id": 34,
+            "parents": [
+              33,
+              3
+            ],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wz1",
+              "rz3"
+            ],
+            "id": 35,
+            "parents": [],
+            "premises": [
+              [
+                "decl-rf",
+                "wz1",
+                "rz3"
+              ],
+              [
+                "event",
+                "rz3",
+                "0",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wz1",
+                "rz3"
+              ],
+              [
+                "true",
+                "rz3",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "read from"
+          },
+          {
+            "edge": [
+              "wx1",
+              "rz3"
+            ],
+            "id": 36,
+            "parents": [
+              22,
+              35
+            ],
+            "premises": [
+              [
+                "event",
+                "rz3",
+                "0",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz3",
+                "1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rz3",
+              "wt2"
+            ],
+            "id": 37,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rz3",
+                "0",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "rz3",
+                "wt2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz3",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wx1",
+              "wt2"
+            ],
+            "id": 38,
+            "parents": [
+              36,
+              37
+            ],
+            "premises": [
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wx1",
+                "2",
+                "W",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ],
+              [
+                "true",
+                "wx1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rx3",
+              "wt2"
+            ],
+            "id": 39,
+            "parents": [
+              21,
+              38
+            ],
+            "premises": [
+              [
+                "event",
+                "rx3",
+                "4",
+                "R",
+                "x",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rx3",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wt1",
+              "wt2"
+            ],
+            "id": 40,
+            "parents": [
+              34,
+              39
+            ],
+            "premises": [
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rt3",
+              "wt2"
+            ],
+            "id": 41,
+            "parents": [
+              40
+            ],
+            "premises": [
+              [
+                "decl-rf",
+                "wt1",
+                "rt3"
+              ],
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wt1",
+                "rt3"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "from read"
+          },
+          {
+            "edge": [
+              "wt2",
+              "rs3"
+            ],
+            "id": 42,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wt2",
+                "rs3"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "rt3",
+              "rs3"
+            ],
+            "id": 43,
+            "parents": [
+              41,
+              42
+            ],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rs3",
+              "rs3"
+            ],
+            "id": 44,
+            "parents": [
+              31,
+              43
+            ],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          }
+        ],
+        "extra_order": [
+          "wz1",
+          "wz2"
+        ]
+      },
+      {
+        "cycle_proof": [
+          {
+            "edge": [
+              "ws1",
+              "wz1"
+            ],
+            "id": 0,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz2",
+                "3",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "ws1",
+                "wz2"
+              ],
+              [
+                "po",
+                "wz2",
+                "wz1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz1",
+              "rz4"
+            ],
+            "id": 1,
+            "parents": [],
+            "premises": [
+              [
+                "decl-rf",
+                "wz1",
+                "rz4"
+              ],
+              [
+                "event",
+                "rz4",
+                "1",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wz1",
+                "rz4"
+              ],
+              [
+                "true",
+                "rz4",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "read from"
+          },
+          {
+            "edge": [
+              "rz4",
+              "ws2"
+            ],
+            "id": 2,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rz4",
+                "1",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "rz4",
+                "ws2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz4",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz1",
+              "ws2"
+            ],
+            "id": 3,
+            "parents": [
+              1,
+              2
+            ],
+            "premises": [
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "ws1",
+              "ws2"
+            ],
+            "id": 4,
+            "parents": [
+              0,
+              3
+            ],
+            "premises": [
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rs3",
+              "ws2"
+            ],
+            "id": 5,
+            "parents": [
+              4
+            ],
+            "premises": [
+              [
+                "decl-rf",
+                "ws1",
+                "rs3"
+              ],
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "ws1",
+                "rs3"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "from read"
+          },
+          {
+            "edge": [
+              "ws2",
+              "rt3"
+            ],
+            "id": 6,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "ws2",
+                "1",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "ws2",
+                "rt3"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ],
+              [
+                "true",
+                "ws2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "rs3",
+              "rt3"
+            ],
+            "id": 7,
+            "parents": [
+              5,
+              6
+            ],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wt1",
+              "ws1"
+            ],
+            "id": 8,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wt1",
+                "ws1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz1",
+              "rz3"
+            ],
+            "id": 9,
+            "parents": [],
+            "premises": [
+              [
+                "decl-rf",
+                "wz1",
+                "rz3"
+              ],
+              [
+                "event",
+                "rz3",
+                "0",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wz1",
+                "rz3"
+              ],
+              [
+                "true",
+                "rz3",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "read from"
+          },
+          {
+            "edge": [
+              "rz3",
+              "wt2"
+            ],
+            "id": 10,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rz3",
+                "0",
+                "R",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "rz3",
+                "wt2"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rz3",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "wz1",
+              "wt2"
+            ],
+            "id": 11,
+            "parents": [
+              9,
+              10
+            ],
+            "premises": [
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wz1",
+                "2",
+                "W",
+                "z",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ],
+              [
+                "true",
+                "wz1",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "ws1",
+              "wt2"
+            ],
+            "id": 12,
+            "parents": [
+              0,
+              11
+            ],
+            "premises": [
+              [
+                "event",
+                "ws1",
+                "3",
+                "W",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "ws1",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "wt1",
+              "wt2"
+            ],
+            "id": 13,
+            "parents": [
+              8,
+              12
+            ],
+            "premises": [
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rt3",
+              "wt2"
+            ],
+            "id": 14,
+            "parents": [
+              13
+            ],
+            "premises": [
+              [
+                "decl-rf",
+                "wt1",
+                "rt3"
+              ],
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt1",
+                "3",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "select",
+                "wt1",
+                "rt3"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ],
+              [
+                "true",
+                "wt1",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "from read"
+          },
+          {
+            "edge": [
+              "wt2",
+              "rs3"
+            ],
+            "id": 15,
+            "parents": [],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "wt2",
+                "0",
+                "W",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "po",
+                "wt2",
+                "rs3"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "wt2",
+                "1"
+              ]
+            ],
+            "rule": "static projection"
+          },
+          {
+            "edge": [
+              "rt3",
+              "rs3"
+            ],
+            "id": 16,
+            "parents": [
+              14,
+              15
+            ],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "event",
+                "rt3",
+                "1",
+                "R",
+                "t",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ],
+              [
+                "true",
+                "rt3",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          },
+          {
+            "edge": [
+              "rs3",
+              "rs3"
+            ],
+            "id": 17,
+            "parents": [
+              7,
+              16
+            ],
+            "premises": [
+              [
+                "event",
+                "rs3",
+                "0",
+                "R",
+                "s",
+                "int32",
+                "1"
+              ],
+              [
+                "rules",
+                "finite-sc-po-rf-fr-ws-block-v1"
+              ],
+              [
+                "true",
+                "rs3",
+                "1"
+              ]
+            ],
+            "rule": "transitive"
+          }
+        ],
+        "extra_order": [
+          "wz2",
+          "wz1"
+        ]
+      }
+    ],
+    "input": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "z",
+          "guard": "1",
+          "key": "rz3",
+          "op": "R",
+          "thread": "0",
+          "typ": "int32"
+        },
+        {
+          "addr": "t",
+          "guard": "1",
+          "key": "wt2",
+          "op": "W",
+          "thread": "0",
+          "typ": "int32"
+        },
+        {
+          "addr": "s",
+          "guard": "1",
+          "key": "rs3",
+          "op": "R",
+          "thread": "0",
+          "typ": "int32"
+        },
+        {
+          "addr": "z",
+          "guard": "1",
+          "key": "rz4",
+          "op": "R",
+          "thread": "1",
+          "typ": "int32"
+        },
+        {
+          "addr": "s",
+          "guard": "1",
+          "key": "ws2",
+          "op": "W",
+          "thread": "1",
+          "typ": "int32"
+        },
+        {
+          "addr": "t",
+          "guard": "1",
+          "key": "rt3",
+          "op": "R",
+          "thread": "1",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "wx1",
+          "op": "W",
+          "thread": "2",
+          "typ": "int32"
+        },
+        {
+          "addr": "y",
+          "guard": "1",
+          "key": "wy1",
+          "op": "W",
+          "thread": "2",
+          "typ": "int32"
+        },
+        {
+          "addr": "z",
+          "guard": "1",
+          "key": "wz1",
+          "op": "W",
+          "thread": "2",
+          "typ": "int32"
+        },
+        {
+          "addr": "t",
+          "guard": "1",
+          "key": "wt1",
+          "op": "W",
+          "thread": "3",
+          "typ": "int32"
+        },
+        {
+          "addr": "s",
+          "guard": "1",
+          "key": "ws1",
+          "op": "W",
+          "thread": "3",
+          "typ": "int32"
+        },
+        {
+          "addr": "z",
+          "guard": "1",
+          "key": "wz2",
+          "op": "W",
+          "thread": "3",
+          "typ": "int32"
+        },
+        {
+          "addr": "z",
+          "guard": "1",
+          "key": "rz5",
+          "op": "R",
+          "thread": "4",
+          "typ": "int32"
+        },
+        {
+          "addr": "y",
+          "guard": "1",
+          "key": "wy2",
+          "op": "W",
+          "thread": "4",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "rx3",
+          "op": "R",
+          "thread": "4",
+          "typ": "int32"
+        },
+        {
+          "addr": "z",
+          "guard": "1",
+          "key": "rz6",
+          "op": "R",
+          "thread": "5",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "wx2",
+          "op": "W",
+          "thread": "5",
+          "typ": "int32"
+        },
+        {
+          "addr": "y",
+          "guard": "1",
+          "key": "ry3",
+          "op": "R",
+          "thread": "5",
+          "typ": "int32"
+        }
+      ],
+      "name": "FM 2026 Fig. 3(b)",
+      "po": [
+        [
+          "rz3",
+          "wt2"
+        ],
+        [
+          "wt2",
+          "rs3"
+        ],
+        [
+          "rz4",
+          "ws2"
+        ],
+        [
+          "ws2",
+          "rt3"
+        ],
+        [
+          "wx1",
+          "wy1"
+        ],
+        [
+          "wy1",
+          "wz1"
+        ],
+        [
+          "wt1",
+          "ws1"
+        ],
+        [
+          "ws1",
+          "wz2"
+        ],
+        [
+          "rz5",
+          "wy2"
+        ],
+        [
+          "wy2",
+          "rx3"
+        ],
+        [
+          "rz6",
+          "wx2"
+        ],
+        [
+          "wx2",
+          "ry3"
+        ]
+      ],
+      "rf": [
+        [
+          "wz1",
+          "rz3"
+        ],
+        [
+          "wz1",
+          "rz4"
+        ],
+        [
+          "wz2",
+          "rz5"
+        ],
+        [
+          "wz2",
+          "rz6"
+        ],
+        [
+          "wx1",
+          "rx3"
+        ],
+        [
+          "wy1",
+          "ry3"
+        ],
+        [
+          "ws1",
+          "rs3"
+        ],
+        [
+          "wt1",
+          "rt3"
+        ]
+      ]
+    },
+    "positive_closure_contains_cycle": false,
+    "positive_closure_pairs": 60,
+    "strict": {
+      "distinct_prefix_states": 1179,
+      "strict_order": null
+    }
+  },
+  "tacas": {
+    "example": [
+      "wx1",
+      "wy2",
+      "wy1",
+      "rx3",
+      "ry3",
+      "wx2"
+    ],
+    "input": {
+      "apo": [],
+      "events": [
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "wx1",
+          "op": "W",
+          "thread": "0",
+          "typ": "int32"
+        },
+        {
+          "addr": "y",
+          "guard": "1",
+          "key": "wy1",
+          "op": "W",
+          "thread": "0",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "rx3",
+          "op": "R",
+          "thread": "0",
+          "typ": "int32"
+        },
+        {
+          "addr": "y",
+          "guard": "1",
+          "key": "wy2",
+          "op": "W",
+          "thread": "1",
+          "typ": "int32"
+        },
+        {
+          "addr": "y",
+          "guard": "1",
+          "key": "ry3",
+          "op": "R",
+          "thread": "1",
+          "typ": "int32"
+        },
+        {
+          "addr": "x",
+          "guard": "1",
+          "key": "wx2",
+          "op": "W",
+          "thread": "1",
+          "typ": "int32"
+        }
+      ],
+      "name": "TACAS 2025 Fig. 1",
+      "po": [
+        [
+          "wx1",
+          "wy1"
+        ],
+        [
+          "wy1",
+          "rx3"
+        ],
+        [
+          "wy2",
+          "ry3"
+        ],
+        [
+          "ry3",
+          "wx2"
+        ]
+      ],
+      "rf": [
+        [
+          "wx1",
+          "rx3"
+        ],
+        [
+          "wy1",
+          "ry3"
+        ]
+      ]
+    },
+    "paper_fig3_omits_order": true,
+    "proof": [
+      {
+        "edge": [
+          "wx1",
+          "wy1"
+        ],
+        "id": 0,
+        "parents": [],
+        "premises": [
+          [
+            "event",
+            "wx1",
+            "0",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "wy1",
+            "0",
+            "W",
+            "y",
+            "int32",
+            "1"
+          ],
+          [
+            "po",
+            "wx1",
+            "wy1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "wx1",
+            "1"
+          ],
+          [
+            "true",
+            "wy1",
+            "1"
+          ]
+        ],
+        "rule": "static projection"
+      },
+      {
+        "edge": [
+          "wy1",
+          "ry3"
+        ],
+        "id": 1,
+        "parents": [],
+        "premises": [
+          [
+            "decl-rf",
+            "wy1",
+            "ry3"
+          ],
+          [
+            "event",
+            "ry3",
+            "1",
+            "R",
+            "y",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "wy1",
+            "0",
+            "W",
+            "y",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "select",
+            "wy1",
+            "ry3"
+          ],
+          [
+            "true",
+            "ry3",
+            "1"
+          ],
+          [
+            "true",
+            "wy1",
+            "1"
+          ]
+        ],
+        "rule": "read from"
+      },
+      {
+        "edge": [
+          "wx1",
+          "ry3"
+        ],
+        "id": 2,
+        "parents": [
+          0,
+          1
+        ],
+        "premises": [
+          [
+            "event",
+            "ry3",
+            "1",
+            "R",
+            "y",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "wx1",
+            "0",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "ry3",
+            "1"
+          ],
+          [
+            "true",
+            "wx1",
+            "1"
+          ]
+        ],
+        "rule": "transitive"
+      },
+      {
+        "edge": [
+          "ry3",
+          "wx2"
+        ],
+        "id": 3,
+        "parents": [],
+        "premises": [
+          [
+            "event",
+            "ry3",
+            "1",
+            "R",
+            "y",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "wx2",
+            "1",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "po",
+            "ry3",
+            "wx2"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "ry3",
+            "1"
+          ],
+          [
+            "true",
+            "wx2",
+            "1"
+          ]
+        ],
+        "rule": "static projection"
+      },
+      {
+        "edge": [
+          "wx1",
+          "wx2"
+        ],
+        "id": 4,
+        "parents": [
+          2,
+          3
+        ],
+        "premises": [
+          [
+            "event",
+            "wx1",
+            "0",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "wx2",
+            "1",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "wx1",
+            "1"
+          ],
+          [
+            "true",
+            "wx2",
+            "1"
+          ]
+        ],
+        "rule": "transitive"
+      },
+      {
+        "edge": [
+          "rx3",
+          "wx2"
+        ],
+        "id": 5,
+        "parents": [
+          4
+        ],
+        "premises": [
+          [
+            "decl-rf",
+            "wx1",
+            "rx3"
+          ],
+          [
+            "event",
+            "rx3",
+            "0",
+            "R",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "wx1",
+            "0",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "wx2",
+            "1",
+            "W",
+            "x",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "select",
+            "wx1",
+            "rx3"
+          ],
+          [
+            "true",
+            "rx3",
+            "1"
+          ],
+          [
+            "true",
+            "wx1",
+            "1"
+          ],
+          [
+            "true",
+            "wx2",
+            "1"
+          ]
+        ],
+        "rule": "from read"
+      }
+    ],
+    "required_order": [
+      "rx3",
+      "wx2"
+    ],
+    "strict_orders": 4
+  }
+}

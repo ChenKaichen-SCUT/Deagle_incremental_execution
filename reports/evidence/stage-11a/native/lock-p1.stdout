@@ -1,0 +1,3 @@
+ClosureSolver finishes with 0 conflicts, 1 decisions, and 2 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 3.
+native_lbool 0

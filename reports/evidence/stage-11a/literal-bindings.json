@@ -1,0 +1,229 @@
+{
+  "all_signs_flipped_without_definition_change": {
+    "new_decoded_definitions": {
+      "guard(A)": [
+        "gate",
+        true
+      ],
+      "guard(B)": [
+        "gate",
+        false
+      ]
+    },
+    "old_decoded_definitions": {
+      "guard(A)": [
+        "gate",
+        false
+      ],
+      "guard(B)": [
+        "gate",
+        true
+      ]
+    },
+    "same_alias_partition": true,
+    "semantic_admission": false
+  },
+  "change_semantic_RF_at_same_number": {
+    "after": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        7
+      ],
+      [
+        "RF(V,R)",
+        8
+      ]
+    ],
+    "before": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        7
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "same_semantic_bindings": false
+  },
+  "compensated_polarity": {
+    "new_decoded_definitions": {
+      "guard(A)": [
+        "gate",
+        false
+      ],
+      "guard(B)": [
+        "gate",
+        true
+      ]
+    },
+    "old_decoded_definitions": {
+      "guard(A)": [
+        "gate",
+        false
+      ],
+      "guard(B)": [
+        "gate",
+        true
+      ]
+    },
+    "same_alias_partition": true,
+    "semantic_admission": true
+  },
+  "flip_one_sign": {
+    "after": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        6
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "before": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        7
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "same_semantic_bindings": false
+  },
+  "pure_renumber": {
+    "after": [
+      [
+        "RF(W,R)",
+        34
+      ],
+      [
+        "guard(B)",
+        25
+      ],
+      [
+        "guard(A)",
+        24
+      ]
+    ],
+    "before": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        7
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "same_semantic_bindings": true
+  },
+  "replace_with_constant": {
+    "after": [
+      [
+        "guard(A)",
+        -1
+      ],
+      [
+        "guard(B)",
+        7
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "before": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        7
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "same_semantic_bindings": false
+  },
+  "same_slots_changed_definition": {
+    "new_decoded_definitions": {
+      "guard(A)": [
+        "different_gate",
+        false
+      ],
+      "guard(B)": [
+        "different_gate",
+        true
+      ]
+    },
+    "old_decoded_definitions": {
+      "guard(A)": [
+        "gate",
+        false
+      ],
+      "guard(B)": [
+        "gate",
+        true
+      ]
+    },
+    "same_alias_partition": true,
+    "semantic_admission": false
+  },
+  "split_alias": {
+    "after": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        11
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "before": [
+      [
+        "guard(A)",
+        6
+      ],
+      [
+        "guard(B)",
+        7
+      ],
+      [
+        "RF(W,R)",
+        8
+      ]
+    ],
+    "same_semantic_bindings": false
+  }
+}

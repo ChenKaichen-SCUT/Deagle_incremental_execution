@@ -1,0 +1,11 @@
+a9bfda2acf553f79cbc3864527fefff71aa6bbd8ec509eb337f4a838a9a7395e  ./minisat-2.2.1/include/minisat/core/Solver.h
+d5cb4aba6f9d8f99bca7de45e294976414382a3013519502259a69752c768694  ./minisat-2.2.1/minisat/core/Closure.cc
+41bcc1ef6cbed8b58e6ef02a70088181c2d4bea91c29ee3fc45b5d7faaa0d53f  ./minisat-2.2.1/minisat/core/Closure.h
+f33943b952fcad315c7e08c7edf5c74a152db12820b10f2cb3728289b14bb679  ./minisat-2.2.1/minisat/core/ClosureSolver.cc
+e719615241c903e15dd53f32e7f2df5519f9cd01c4bc470c5155257cce84f8b5  ./minisat-2.2.1/minisat/core/ClosureSolver.h
+4b76395d06319d3bc1d2a7ffa89edaa1fdac5be694ed50ebda17949b5fdefe51  ./minisat-2.2.1/minisat/core/ClosureTypes.h
+c0b3ebf7232b27026b44a6b2f9969f891ed8c969abb5d4e4658fc6cee4dc4ed1  ./minisat-2.2.1/minisat/core/Solver.cc
+e0601ca38ced9f287739f20aa1979346e88259ad75f8606e3fcf62ab4a07ec62  ./minisat-2.2.1/minisat/core/Solver.h
+8dba41ef98aead9df8f3654bab34b9419b9944d02629a6d4e45e53cd1ad87a8f  ./src/goto-checker/bmc_util.cpp
+cc6f7cd230fff92ca85556ede96cf6b050cb92cb443bdd3fb085f3f218071541  ./src/goto-checker/theory_lemma.cpp
+a87720f8c74cbf3ffec8770ca9d997f4b98969042d07a8b45fb86a2046351932  ./src/goto-symex/memory_model_sc.cpp

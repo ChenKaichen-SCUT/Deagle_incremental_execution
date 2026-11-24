@@ -1,0 +1,1127 @@
+{
+  "alias_groups": {
+    "added": [],
+    "removed": []
+  },
+  "apo_components": {
+    "added": [
+      [
+        "R1/release_read_count/read/r/1",
+        "R1/release_read_count/write/r/1"
+      ],
+      [
+        "R2/release_read_count/read/r/1",
+        "R2/release_read_count/write/r/1"
+      ]
+    ],
+    "removed": [
+      [
+        "R1/release_read_count/read/r/1"
+      ],
+      [
+        "R1/release_read_count/write/r/1"
+      ],
+      [
+        "R2/release_read_count/read/r/1"
+      ],
+      [
+        "R2/release_read_count/write/r/1"
+      ]
+    ]
+  },
+  "changed_atom_fields": [
+    [
+      [
+        "guard",
+        "R1/release_read_count/write/r/1"
+      ],
+      [
+        "line"
+      ]
+    ],
+    [
+      [
+        "guard",
+        "R2/release_read_count/write/r/1"
+      ],
+      [
+        "line"
+      ]
+    ],
+    [
+      [
+        "guard",
+        "main/main/write/main::1::t1/1"
+      ],
+      [
+        "line"
+      ]
+    ],
+    [
+      [
+        "guard",
+        "main/main/write/main::1::t2/1"
+      ],
+      [
+        "line"
+      ]
+    ],
+    [
+      [
+        "guard",
+        "main/main/write/main::1::t3/1"
+      ],
+      [
+        "line"
+      ]
+    ],
+    [
+      [
+        "guard",
+        "main/main/write/main::1::t4/1"
+      ],
+      [
+        "line"
+      ]
+    ]
+  ],
+  "changed_event_fields": {
+    "R1/__VERIFIER_atomic_take_read_lock/read/r/1": [
+      "frames"
+    ],
+    "R1/__VERIFIER_atomic_take_read_lock/read/w/1": [
+      "frames"
+    ],
+    "R1/__VERIFIER_atomic_take_read_lock/write/r/1": [
+      "frames"
+    ],
+    "R1/__spawned_thread/read/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "R1/__spawned_thread/write/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "R1/reader/read/x/1": [
+      "frames"
+    ],
+    "R1/reader/read/x/2": [
+      "frames"
+    ],
+    "R1/reader/read/y/1": [
+      "frames"
+    ],
+    "R1/reader/write/y/1": [
+      "frames"
+    ],
+    "R1/release_read_count/read/r/1": [
+      "site",
+      "frames",
+      "explicit_section_id"
+    ],
+    "R1/release_read_count/write/r/1": [
+      "endpoint",
+      "site",
+      "frames",
+      "explicit_section_id"
+    ],
+    "R2/__VERIFIER_atomic_take_read_lock/read/r/1": [
+      "endpoint",
+      "frames",
+      "explicit_section_id"
+    ],
+    "R2/__VERIFIER_atomic_take_read_lock/read/w/1": [
+      "frames",
+      "explicit_section_id"
+    ],
+    "R2/__VERIFIER_atomic_take_read_lock/write/r/1": [
+      "endpoint",
+      "frames",
+      "explicit_section_id"
+    ],
+    "R2/__spawned_thread/read/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "R2/__spawned_thread/write/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "R2/reader/read/x/1": [
+      "frames"
+    ],
+    "R2/reader/read/x/2": [
+      "frames"
+    ],
+    "R2/reader/read/y/1": [
+      "frames"
+    ],
+    "R2/reader/write/y/1": [
+      "frames"
+    ],
+    "R2/release_read_count/read/r/1": [
+      "endpoint",
+      "site",
+      "frames",
+      "explicit_section_id"
+    ],
+    "R2/release_read_count/write/r/1": [
+      "endpoint",
+      "site",
+      "frames",
+      "explicit_section_id"
+    ],
+    "W1/__VERIFIER_atomic_take_write_lock/read/r/1": [
+      "frames"
+    ],
+    "W1/__VERIFIER_atomic_take_write_lock/read/w/1": [
+      "frames"
+    ],
+    "W1/__VERIFIER_atomic_take_write_lock/write/w/1": [
+      "frames"
+    ],
+    "W1/__spawned_thread/read/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "W1/__spawned_thread/write/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "W1/writer/write/w/1": [
+      "frames"
+    ],
+    "W1/writer/write/x/1": [
+      "frames"
+    ],
+    "W2/__VERIFIER_atomic_take_write_lock/read/r/1": [
+      "endpoint",
+      "frames",
+      "explicit_section_id"
+    ],
+    "W2/__VERIFIER_atomic_take_write_lock/read/w/1": [
+      "frames",
+      "explicit_section_id"
+    ],
+    "W2/__VERIFIER_atomic_take_write_lock/write/w/1": [
+      "frames",
+      "explicit_section_id"
+    ],
+    "W2/__spawned_thread/read/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "W2/__spawned_thread/write/__CPROVER_threads_exited/1": [
+      "site"
+    ],
+    "W2/writer/write/w/1": [
+      "frames"
+    ],
+    "W2/writer/write/x/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_alloca_object/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_dead_object/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_deallocated/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_malloc_is_new_array/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_max_malloc_size/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_memory_leak/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_new_object/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_next_thread_id/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_pipe_count/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/__CPROVER_threads_exited/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/r/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/w/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/x/1": [
+      "frames"
+    ],
+    "main/__CPROVER_initialize/write/y/1": [
+      "frames"
+    ],
+    "main/main/read/main::1::t1/1": [
+      "site",
+      "frames"
+    ],
+    "main/main/read/main::1::t2/1": [
+      "site",
+      "frames"
+    ],
+    "main/main/read/main::1::t3/1": [
+      "site",
+      "frames"
+    ],
+    "main/main/read/main::1::t4/1": [
+      "site",
+      "frames"
+    ],
+    "main/main/write/main::1::t1/1": [
+      "site",
+      "frames"
+    ],
+    "main/main/write/main::1::t2/1": [
+      "site",
+      "frames"
+    ],
+    "main/main/write/main::1::t3/1": [
+      "site",
+      "frames"
+    ],
+    "main/main/write/main::1::t4/1": [
+      "site",
+      "frames"
+    ],
+    "main/pthread_create/read/__CPROVER_next_thread_id/1": [
+      "frames"
+    ],
+    "main/pthread_create/read/__CPROVER_next_thread_id/2": [
+      "frames"
+    ],
+    "main/pthread_create/read/__CPROVER_next_thread_id/3": [
+      "frames"
+    ],
+    "main/pthread_create/spawn/thread_birth/1": [
+      "frames"
+    ],
+    "main/pthread_create/spawn/thread_birth/2": [
+      "frames"
+    ],
+    "main/pthread_create/spawn/thread_birth/3": [
+      "frames"
+    ],
+    "main/pthread_create/spawn/thread_birth/4": [
+      "frames"
+    ],
+    "main/pthread_create/write/__CPROVER_next_thread_id/1": [
+      "frames"
+    ],
+    "main/pthread_create/write/__CPROVER_next_thread_id/2": [
+      "frames"
+    ],
+    "main/pthread_create/write/__CPROVER_next_thread_id/3": [
+      "frames"
+    ],
+    "main/pthread_create/write/__CPROVER_next_thread_id/4": [
+      "frames"
+    ],
+    "main/pthread_create/write/main::1::t1/1": [
+      "frames"
+    ],
+    "main/pthread_create/write/main::1::t2/1": [
+      "frames"
+    ],
+    "main/pthread_create/write/main::1::t3/1": [
+      "frames"
+    ],
+    "main/pthread_create/write/main::1::t4/1": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_next_thread_id/1": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_next_thread_id/2": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_next_thread_id/3": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_next_thread_id/4": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_threads_exited/1": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_threads_exited/2": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_threads_exited/3": [
+      "frames"
+    ],
+    "main/pthread_join/read/__CPROVER_threads_exited/4": [
+      "frames"
+    ]
+  },
+  "counts": [
+    {
+      "apo": 15,
+      "po": 97,
+      "rf": 131
+    },
+    {
+      "apo": 17,
+      "po": 95,
+      "rf": 131
+    }
+  ],
+  "frozen_queries": {
+    "candidate": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--property",
+        "reach_error.assertion.1",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "property": "reach_error.assertion.1",
+      "source_sha256": "bfce38d4c6dd8b83b0e7ccf5dd860317721211d6230963b5cb3c4897eb3546d2",
+      "status": "SUCCESS",
+      "trace_steps": 0
+    },
+    "old": {
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--property",
+        "reach_error.assertion.1",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "property": "reach_error.assertion.1",
+      "source_sha256": "dd98405c728a760da56688c8e3153ab085899b582cefa08e43058c1deb3637bf",
+      "status": "FAILURE",
+      "trace_steps": 212
+    }
+  },
+  "literal_values": 7879,
+  "ordered_input_sha256": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+  "projection_P1": {
+    "contradiction": null,
+    "input": {
+      "apo": [
+        [
+          "Aread",
+          "Awrite"
+        ]
+      ],
+      "events": [
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "S",
+          "op": "W",
+          "thread": "R1",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Aread",
+          "op": "R",
+          "thread": "R2",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Awrite",
+          "op": "W",
+          "thread": "R2",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Dread",
+          "op": "R",
+          "thread": "R1",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Dwrite",
+          "op": "W",
+          "thread": "R1",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "S",
+          "Dread"
+        ],
+        [
+          "S",
+          "Dwrite"
+        ],
+        [
+          "Dread",
+          "Dwrite"
+        ]
+      ],
+      "rf": [
+        [
+          "S",
+          "Aread"
+        ],
+        [
+          "S",
+          "Dread"
+        ]
+      ]
+    },
+    "keys": {
+      "R1/__VERIFIER_atomic_take_read_lock/write/r/1": "S",
+      "R1/release_read_count/read/r/1": "Dread",
+      "R1/release_read_count/write/r/1": "Dwrite",
+      "R2/__VERIFIER_atomic_take_read_lock/read/r/1": "Aread",
+      "R2/__VERIFIER_atomic_take_read_lock/write/r/1": "Awrite"
+    },
+    "orders": [
+      [
+        "S",
+        "Dread",
+        "Aread",
+        "Awrite",
+        "Dwrite"
+      ]
+    ]
+  },
+  "projection_P2_same_boolean_assignment": {
+    "contradiction": [
+      {
+        "edge": [
+          "S",
+          "Dwrite"
+        ],
+        "id": 0,
+        "parents": [],
+        "premises": [
+          [
+            "event",
+            "Dwrite",
+            "R1",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "S",
+            "R1",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "po",
+            "S",
+            "Dwrite"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "Dwrite",
+            "1"
+          ],
+          [
+            "true",
+            "S",
+            "1"
+          ]
+        ],
+        "rule": "static projection"
+      },
+      {
+        "edge": [
+          "Aread",
+          "Dwrite"
+        ],
+        "id": 1,
+        "parents": [
+          0
+        ],
+        "premises": [
+          [
+            "decl-rf",
+            "S",
+            "Aread"
+          ],
+          [
+            "event",
+            "Aread",
+            "R2",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "Dwrite",
+            "R1",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "S",
+            "R1",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "select",
+            "S",
+            "Aread"
+          ],
+          [
+            "true",
+            "Aread",
+            "1"
+          ],
+          [
+            "true",
+            "Dwrite",
+            "1"
+          ],
+          [
+            "true",
+            "S",
+            "1"
+          ]
+        ],
+        "rule": "from read"
+      },
+      {
+        "edge": [
+          "Aread",
+          "Dread"
+        ],
+        "id": 2,
+        "parents": [
+          1
+        ],
+        "premises": [
+          [
+            "block",
+            "Aread",
+            "Awrite"
+          ],
+          [
+            "block",
+            "Dread",
+            "Dwrite"
+          ],
+          [
+            "event",
+            "Aread",
+            "R2",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "Dread",
+            "R1",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "Aread",
+            "1"
+          ],
+          [
+            "true",
+            "Dread",
+            "1"
+          ]
+        ],
+        "rule": "block lift"
+      },
+      {
+        "edge": [
+          "S",
+          "Aread"
+        ],
+        "id": 3,
+        "parents": [],
+        "premises": [
+          [
+            "decl-rf",
+            "S",
+            "Aread"
+          ],
+          [
+            "event",
+            "Aread",
+            "R2",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "S",
+            "R1",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "select",
+            "S",
+            "Aread"
+          ],
+          [
+            "true",
+            "Aread",
+            "1"
+          ],
+          [
+            "true",
+            "S",
+            "1"
+          ]
+        ],
+        "rule": "read from"
+      },
+      {
+        "edge": [
+          "Aread",
+          "Awrite"
+        ],
+        "id": 4,
+        "parents": [],
+        "premises": [
+          [
+            "apo",
+            "Aread",
+            "Awrite"
+          ],
+          [
+            "event",
+            "Aread",
+            "R2",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "Awrite",
+            "R2",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "Aread",
+            "1"
+          ],
+          [
+            "true",
+            "Awrite",
+            "1"
+          ]
+        ],
+        "rule": "static projection"
+      },
+      {
+        "edge": [
+          "S",
+          "Awrite"
+        ],
+        "id": 5,
+        "parents": [
+          3,
+          4
+        ],
+        "premises": [
+          [
+            "event",
+            "Awrite",
+            "R2",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "S",
+            "R1",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "Awrite",
+            "1"
+          ],
+          [
+            "true",
+            "S",
+            "1"
+          ]
+        ],
+        "rule": "transitive"
+      },
+      {
+        "edge": [
+          "Dread",
+          "Awrite"
+        ],
+        "id": 6,
+        "parents": [
+          5
+        ],
+        "premises": [
+          [
+            "decl-rf",
+            "S",
+            "Dread"
+          ],
+          [
+            "event",
+            "Awrite",
+            "R2",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "Dread",
+            "R1",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "S",
+            "R1",
+            "W",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "select",
+            "S",
+            "Dread"
+          ],
+          [
+            "true",
+            "Awrite",
+            "1"
+          ],
+          [
+            "true",
+            "Dread",
+            "1"
+          ],
+          [
+            "true",
+            "S",
+            "1"
+          ]
+        ],
+        "rule": "from read"
+      },
+      {
+        "edge": [
+          "Dread",
+          "Aread"
+        ],
+        "id": 7,
+        "parents": [
+          6
+        ],
+        "premises": [
+          [
+            "block",
+            "Aread",
+            "Awrite"
+          ],
+          [
+            "block",
+            "Dread",
+            "Dwrite"
+          ],
+          [
+            "event",
+            "Aread",
+            "R2",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "event",
+            "Dread",
+            "R1",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "Aread",
+            "1"
+          ],
+          [
+            "true",
+            "Dread",
+            "1"
+          ]
+        ],
+        "rule": "block lift"
+      },
+      {
+        "edge": [
+          "Aread",
+          "Aread"
+        ],
+        "id": 8,
+        "parents": [
+          2,
+          7
+        ],
+        "premises": [
+          [
+            "event",
+            "Aread",
+            "R2",
+            "R",
+            "r",
+            "int32",
+            "1"
+          ],
+          [
+            "rules",
+            "finite-sc-po-rf-fr-ws-block-v1"
+          ],
+          [
+            "true",
+            "Aread",
+            "1"
+          ]
+        ],
+        "rule": "transitive"
+      }
+    ],
+    "input": {
+      "apo": [
+        [
+          "Aread",
+          "Awrite"
+        ],
+        [
+          "Dread",
+          "Dwrite"
+        ]
+      ],
+      "events": [
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "S",
+          "op": "W",
+          "thread": "R1",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Aread",
+          "op": "R",
+          "thread": "R2",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Awrite",
+          "op": "W",
+          "thread": "R2",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Dread",
+          "op": "R",
+          "thread": "R1",
+          "typ": "int32"
+        },
+        {
+          "addr": "r",
+          "guard": "1",
+          "key": "Dwrite",
+          "op": "W",
+          "thread": "R1",
+          "typ": "int32"
+        }
+      ],
+      "name": "",
+      "po": [
+        [
+          "S",
+          "Dread"
+        ],
+        [
+          "S",
+          "Dwrite"
+        ]
+      ],
+      "rf": [
+        [
+          "S",
+          "Aread"
+        ],
+        [
+          "S",
+          "Dread"
+        ]
+      ]
+    },
+    "keys": {
+      "R1/__VERIFIER_atomic_take_read_lock/write/r/1": "S",
+      "R1/release_read_count/read/r/1": "Dread",
+      "R1/release_read_count/write/r/1": "Dwrite",
+      "R2/__VERIFIER_atomic_take_read_lock/read/r/1": "Aread",
+      "R2/__VERIFIER_atomic_take_read_lock/write/r/1": "Awrite"
+    },
+    "orders": []
+  },
+  "receipts": {
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/command.json": "77ceb1e17218cce4ea909935ef2a3453699ae2299b9c1279573b9802c79a0fde",
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/full_model.json": "3c2fcb1a6ef2a8159322787e001f8bce45c55020bc4d7256016e115821ed93fd",
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/goto.json": "d513ee5d9909d566ccb05650d8e65d73742bd4200dafaf594c9456971b8a2c93",
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/native-bindings.json": "8cc86c2a7a3ce05afd85afe294819a45f3c11ebe06b1336d279773424eb71099",
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/result.json": "7d542a8404540776f0d9b805cf524db432b45374a598f6fd2ae7570675327060",
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/s8-graph.tsv": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+    "pairs/read_write_lock-2/P1-P2/1/F/candidate/visits.json": "9177cde992bea83a6ca310b771a121e55c18e0b3f2d1351c1f2c723046072b23",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/command.json": "c8b65264df3ee9756fb8cedcdaf41aa497a05266929148122451afd3dc51d1f7",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/full_model.json": "2150d3bb694e4932c080131241ff33dd7b13acc4031299dd9d44d2f7f96d5d26",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/goto.json": "78205ede0e9bd9f67b4f67ece2c8704a8e96dd71d3c250de72f0e4282389ad5a",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/native-bindings.json": "1b11bf3c256d192bce1b06179454618b247fc49906fde280c9d65e503088f4df",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/result.json": "756804ee9ca946fc99ae507968a8e291530ba4e8bbce4e6319c3ca0709d3e796",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/s8-graph.tsv": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+    "pairs/read_write_lock-2/P1-P2/1/F/old/visits.json": "1750a7d529557994b8992ca3625a7d3a4c261000408143023c81a869b2dcf38b",
+    "pairs/read_write_lock-2/P1-P2/1/S/candidate/s8-graph.tsv": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+    "pairs/read_write_lock-2/P1-P2/1/S/candidate/s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+    "pairs/read_write_lock-2/P1-P2/1/S/old/answer.txt": "8631a07155b534be2a54e324c6b01923caa5383c1131cc55917d05ca3c024bf1",
+    "pairs/read_write_lock-2/P1-P2/1/S/old/s8-graph.tsv": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+    "pairs/read_write_lock-2/P1-P2/1/S/old/s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a"
+  },
+  "semantic_edges": {
+    "added": [
+      [
+        "apo",
+        "R1/release_read_count/read/r/1",
+        "R1/release_read_count/write/r/1"
+      ],
+      [
+        "apo",
+        "R2/release_read_count/read/r/1",
+        "R2/release_read_count/write/r/1"
+      ]
+    ],
+    "removed": [
+      [
+        "po",
+        "R1/release_read_count/read/r/1",
+        "R1/release_read_count/write/r/1"
+      ],
+      [
+        "po",
+        "R2/release_read_count/read/r/1",
+        "R2/release_read_count/write/r/1"
+      ]
+    ]
+  },
+  "stable_comparison_roles": 81
+}

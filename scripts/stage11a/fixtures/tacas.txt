@@ -1,0 +1,10 @@
+write x#1
+write y#1
+write y#2
+write x#2
+po x#1 y#1
+po y#1 x#3
+po y#2 y#3
+po y#3 x#2
+rf x#1 x#3
+rf y#1 y#3

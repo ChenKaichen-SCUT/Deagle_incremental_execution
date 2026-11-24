@@ -1,0 +1,228 @@
+{
+  "clause": [
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+        "write": "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+      },
+      "negative": true
+    },
+    {
+      "atom": {
+        "kind": "rf",
+        "read": "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+        "write": "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f"
+      },
+      "negative": true
+    }
+  ],
+  "damaged_replay": false,
+  "frozen_admitted": 1,
+  "inputs": {
+    "candidate-import.json": "6f3b5ee7a290be6f6af6143ac63fe5a8ddfcbdf7477176df9df45e3ac87f15a1",
+    "candidate-validation.json": "a5c96e0f2a1874ab458ccffb933645d5ab57341e2ba4e175005ee451fc89f417",
+    "lemma-cache.json": "e54372110a263c74121c42b9af287909d9796d293690b465cccded8bdd1bf1ab",
+    "old-context.json": "9bf378f3076cfd4e46f57ec9ed243a0adb3089c4f52b35e51cb0c01afde7c6b3"
+  },
+  "line_only_replay": true,
+  "original_native_receipt": {
+    "api": "satcheck_minisat2_baset::lcnf / Solver::addClause_",
+    "import_ns": 10100,
+    "rows": [
+      {
+        "assignments_after": 848,
+        "assignments_before": 780,
+        "candidate_literals": [
+          1901,
+          1923
+        ],
+        "clauses_after": 2304,
+        "clauses_before": 2304,
+        "effect": "contradiction",
+        "id": 0
+      }
+    ],
+    "site": "ClosureSolver::solve_ before first search"
+  },
+  "original_replay": true,
+  "proof": [
+    {
+      "edge": [
+        "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+        "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+        "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9",
+        "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "92219821bb266ccf9b49a3fea51a50a706484f00cd1ce9580116c9bbc7e31f58",
+        "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "1b0e310ba655ccca364cf71a974ae140d9e0cabb5667d79d0bb41d39cc6d5ab9",
+        "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d"
+      ],
+      "rule": "transitive",
+      "uses": [
+        2,
+        3
+      ]
+    },
+    {
+      "edge": [
+        "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+        "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d"
+      ],
+      "rule": "transitive",
+      "uses": [
+        1,
+        4
+      ]
+    },
+    {
+      "edge": [
+        "85cd37102d70a47148b15ea11c38e8b3816b02bfba702d1c7df5ebef3d231c9d",
+        "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464",
+        "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+      ],
+      "rule": "transitive",
+      "uses": [
+        5,
+        6
+      ]
+    },
+    {
+      "edge": [
+        "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+        "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+      ],
+      "rule": "transitive",
+      "uses": [
+        0,
+        7
+      ]
+    },
+    {
+      "edge": [
+        "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+        "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13"
+      ],
+      "rule": "from_read",
+      "uses": [
+        8
+      ]
+    },
+    {
+      "edge": [
+        "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+        "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "7a8d1069183bba3f219f5bbc931359e32a6c219331f8bd47c920de1c123f9325",
+        "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+        "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a"
+      ],
+      "rule": "transitive",
+      "uses": [
+        10,
+        11
+      ]
+    },
+    {
+      "edge": [
+        "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a",
+        "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8"
+      ],
+      "rule": "rf",
+      "uses": []
+    },
+    {
+      "edge": [
+        "e88c63e7f2b6980b2b068bbd84131a8e2316288d2b25f89c8ca8922935520dd8",
+        "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+      ],
+      "rule": "static",
+      "uses": []
+    },
+    {
+      "edge": [
+        "a5dfbeca104f7b326fe7f881ddd9ae5ed0d65cb33d0206183c598371ebe5847a",
+        "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+      ],
+      "rule": "transitive",
+      "uses": [
+        13,
+        14
+      ]
+    },
+    {
+      "edge": [
+        "3f60b0948135c9a1b8298fbf760d02e93e5e0abd1b3e5211f0908459e87b4d13",
+        "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+      ],
+      "rule": "transitive",
+      "uses": [
+        12,
+        15
+      ]
+    },
+    {
+      "edge": [
+        "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41",
+        "5c56e7a0bb4d6d97775ea10fa9128c7f7d3fb0e9c1fbb65c3b5d4771f4a55d41"
+      ],
+      "rule": "transitive",
+      "uses": [
+        9,
+        16
+      ]
+    }
+  ],
+  "removed_static_edge": [
+    "b71724b478e2fc3bb7d7bbb8bdaef8865b288e3b4eb218297c95b889a8554a9f",
+    "1eeeb017256ec3f954446813dcc0dfe4b0daf9818bc755febde908c3863ed464"
+  ],
+  "whole_context_admission_after_line_edit": [
+    "context_changed:guard_locations"
+  ]
+}

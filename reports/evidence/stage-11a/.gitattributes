@@ -1,0 +1,5 @@
+native/** -text
+# The frozen worker terminates each event list with a space.
+native/rank/rf-direction.tsv -whitespace
+*.gz binary
+*.zip binary
