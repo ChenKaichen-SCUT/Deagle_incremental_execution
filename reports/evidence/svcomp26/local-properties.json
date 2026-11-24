@@ -1,0 +1,836 @@
+{
+  "25_stack_longer-1": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 8127843215,
+      "exit": 10,
+      "input_sha256": "22f5e9b8cea3fb6414e4865b1626afaeb55342d9f0f16512cd01a49134cc1f25",
+      "meta": {
+        "bits": 32,
+        "bound": 3,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "25_stack_longer-1.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "f722d8babd466a6ce28ca17b1d19aa234ae9a2bd9eba2ecb1fc878a32f42a181"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "25_stack_longer-1",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS"
+      }
+    },
+    "target_option_replay": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--property",
+        "reach_error.assertion.1",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 8077378376,
+      "exit": 10,
+      "input_sha256": "22f5e9b8cea3fb6414e4865b1626afaeb55342d9f0f16512cd01a49134cc1f25",
+      "meta": {
+        "bits": 32,
+        "bound": 3,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "25_stack_longer-1.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "f722d8babd466a6ce28ca17b1d19aa234ae9a2bd9eba2ecb1fc878a32f42a181"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 407\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        },
+        {
+          "level": "WARNING",
+          "message": "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 520\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)"
+        },
+        {
+          "level": "WARNING",
+          "message": "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 525\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "25_stack_longer-1",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS"
+      }
+    }
+  },
+  "25_stack_longest-2": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 22952452141,
+      "exit": 10,
+      "input_sha256": "572f30a11eb1875d022a7591921c07965188882988e15e9eab6f0a68b203b580",
+      "meta": {
+        "bits": 32,
+        "bound": 3,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "25_stack_longest-2.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "a7d3cc06ed9d6a849a38190191d46dbf6776cbd5d6803b123d9dc081f48d178f"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "25_stack_longest-2",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS"
+      }
+    },
+    "target_option_replay": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--property",
+        "reach_error.assertion.1",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 22801873283,
+      "exit": 10,
+      "input_sha256": "572f30a11eb1875d022a7591921c07965188882988e15e9eab6f0a68b203b580",
+      "meta": {
+        "bits": 32,
+        "bound": 3,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "25_stack_longest-2.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "a7d3cc06ed9d6a849a38190191d46dbf6776cbd5d6803b123d9dc081f48d178f"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 407\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        },
+        {
+          "level": "WARNING",
+          "message": "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 520\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)"
+        },
+        {
+          "level": "WARNING",
+          "message": "\nreason for conflict at #this.__data: number of members is different (6/8)\n\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  signed int __kind;\n  unsigned int __nusers;\n  union $anon0;\n}\nstruct __pthread_mutex_s {\n  signed int __lock;\n  unsigned int __count;\n  signed int __owner;\n  unsigned int __nusers;\n  signed int __kind;\n  signed short int __spins;\n  signed short int __elision;\n  __pthread_list_t __list;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 525\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "25_stack_longest-2",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "main.unwind.0": "FAILURE",
+        "push_loop.unwind.0": "SUCCESS"
+      }
+    }
+  },
+  "26_stack_cas_longer-1": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 41381332834,
+      "exit": 10,
+      "input_sha256": "f66a662852389d8ac1f64241746e843d67de7f5d7507051fb5c8e68404b785cd",
+      "meta": {
+        "bits": 32,
+        "bound": 3,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "26_stack_cas_longer-1.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "36eea5a069651e14d1985b22074ad20c73686ac2d4526522edcee138b7beb562"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "main.unwind.0": "FAILURE",
+        "push.unwind.0": "SUCCESS",
+        "push_loop.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "26_stack_cas_longer-1",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "main.unwind.0": "FAILURE",
+        "push.unwind.0": "SUCCESS",
+        "push_loop.unwind.0": "SUCCESS"
+      }
+    },
+    "target_option_replay": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--property",
+        "reach_error.assertion.1",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 41482323611,
+      "exit": 10,
+      "input_sha256": "f66a662852389d8ac1f64241746e843d67de7f5d7507051fb5c8e68404b785cd",
+      "meta": {
+        "bits": 32,
+        "bound": 3,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "26_stack_cas_longer-1.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "36eea5a069651e14d1985b22074ad20c73686ac2d4526522edcee138b7beb562"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 411\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "main.unwind.0": "FAILURE",
+        "push.unwind.0": "SUCCESS",
+        "push_loop.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "26_stack_cas_longer-1",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "main.unwind.0": "FAILURE",
+        "push.unwind.0": "SUCCESS",
+        "push_loop.unwind.0": "SUCCESS"
+      }
+    }
+  },
+  "arithmetic_prog_bad": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "5",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 3770056019,
+      "exit": 10,
+      "input_sha256": "051706a1eb405a384d7cf371ab2d9b9605b94715fa3ad16d6c2eb8e3fbb8fc38",
+      "meta": {
+        "bits": 32,
+        "bound": 5,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "arithmetic_prog_bad.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "0d7a2568a80715d936f4fb76b5a22e686a27108d0d92501fcda3ce10de69ee6f"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "reach_error.assertion.1": "FAILURE",
+        "thread1.unwind.0": "FAILURE",
+        "thread2.unwind.0": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "arithmetic_prog_bad",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "thread1.unwind.0": "FAILURE",
+        "thread2.unwind.0": "FAILURE"
+      }
+    },
+    "P1": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "5",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "INCOMPLETE_UNWINDING",
+      "elapsed_ns": 2317299232,
+      "exit": 10,
+      "input_sha256": "7ea3dca39a6c24441378a9bca1657766debabc2444b22797280a494c4e2aa486",
+      "meta": {
+        "bits": 32,
+        "bound": 5,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "arithmetic_prog_bad.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "0d7a2568a80715d936f4fb76b5a22e686a27108d0d92501fcda3ce10de69ee6f"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 516\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)"
+        },
+        {
+          "level": "WARNING",
+          "message": "\nreason for conflict at #this.__data: names of member 0 differ ($anon0/__wseq)\n\nstruct __pthread_cond_s {\n  union $anon0;\n  union $anon1;\n  unsigned int [2] __g_refs;\n  unsigned int [2] __g_size;\n  unsigned int __g1_orig_size;\n  unsigned int __wrefs;\n  unsigned int [2] __g_signals;\n}\nstruct __pthread_cond_s {\n  __atomic_wide_counter __wseq;\n  __atomic_wide_counter __g1_start;\n  unsigned int [2] __g_refs;\n  unsigned int [2] __g_size;\n  unsigned int __g1_orig_size;\n  unsigned int __wrefs;\n  unsigned int [2] __g_signals;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_cond_wait\"\nold definition in module program file program.i line 616\nsigned int (pthread_cond_t *, pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_cond_wait> line 7\nsigned int (pthread_cond_t *cond, pthread_mutex_t *mutex)"
+        },
+        {
+          "level": "WARNING",
+          "message": "\nreason for conflict at #this.__data: names of member 0 differ ($anon0/__wseq)\n\nstruct __pthread_cond_s {\n  union $anon0;\n  union $anon1;\n  unsigned int [2] __g_refs;\n  unsigned int [2] __g_size;\n  unsigned int __g1_orig_size;\n  unsigned int __wrefs;\n  unsigned int [2] __g_signals;\n}\nstruct __pthread_cond_s {\n  __atomic_wide_counter __wseq;\n  __atomic_wide_counter __g1_start;\n  unsigned int [2] __g_refs;\n  unsigned int [2] __g_size;\n  unsigned int __g1_orig_size;\n  unsigned int __wrefs;\n  unsigned int [2] __g_signals;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_cond_signal\"\nold definition in module program file program.i line 612\nsigned int (pthread_cond_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_cond_signal> line 7\nsigned int (pthread_cond_t *cond)"
+        },
+        {
+          "level": "WARNING",
+          "message": "\nreason for conflict at #this.__data: names of member 0 differ ($anon0/__wseq)\n\nstruct __pthread_cond_s {\n  union $anon0;\n  union $anon1;\n  unsigned int [2] __g_refs;\n  unsigned int [2] __g_size;\n  unsigned int __g1_orig_size;\n  unsigned int __wrefs;\n  unsigned int [2] __g_signals;\n}\nstruct __pthread_cond_s {\n  __atomic_wide_counter __wseq;\n  __atomic_wide_counter __g1_start;\n  unsigned int [2] __g_refs;\n  unsigned int [2] __g_size;\n  unsigned int __g1_orig_size;\n  unsigned int __wrefs;\n  unsigned int [2] __g_signals;\n}\nwarning: pointer parameter types differ between declaration and definition \"pthread_cond_init\"\nold definition in module program file program.i line 607\nsigned int (pthread_cond_t *, const pthread_condattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_cond_init> line 7\nsigned int (pthread_cond_t *cond, const pthread_condattr_t *attr)"
+        },
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 402\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        },
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 509\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)"
+        },
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 521\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "reach_error.assertion.1": "SUCCESS",
+        "thread1.unwind.0": "FAILURE",
+        "thread2.unwind.0": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "arithmetic_prog_bad",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "thread1.unwind.0": "FAILURE",
+        "thread2.unwind.0": "FAILURE"
+      }
+    }
+  },
+  "bounded_buffer": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "6",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "TOOL_FAILURE",
+      "detail": "incomplete result or exit mismatch",
+      "elapsed_ns": 113883904,
+      "exit": 6,
+      "input_sha256": "6780d9b269575eab8bb01b5a192a21fa771f6fcc4c495cab5abe1df10d7681d5",
+      "meta": {
+        "bits": 32,
+        "bound": 6,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "bounded_buffer.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "0104f4c892427dc990254b64dc1368113ff04b95db463aa1a5b39d77c74b1cb6"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "task": "bounded_buffer",
+      "timeout_seconds": 120
+    }
+  },
+  "elimination_backoff_stack": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "5",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "TOOL_FAILURE",
+      "detail": "incomplete result or exit mismatch",
+      "elapsed_ns": 113862274,
+      "exit": 6,
+      "input_sha256": "0a77b23de3110741cf9e339cfb9f72e965f6bc6bc082cff0044fedc6c4916cfb",
+      "meta": {
+        "bits": 32,
+        "bound": 5,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "elimination_backoff_stack.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "57f37b49fa3e285cfa4453aa95d2ff1436969740de0f47103dba112fdae31423"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "task": "elimination_backoff_stack",
+      "timeout_seconds": 120
+    }
+  },
+  "read_write_lock-2": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 264203137,
+      "exit": 10,
+      "input_sha256": "3e2f466b16db44ce2fec1aabf9e70b4ab734ef2801c32e66d10c5bcbcceb5301",
+      "meta": {
+        "bits": 32,
+        "bound": 4,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "read_write_lock-2.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "2595d014765ccf0a2c7b9169b2edce23476cbeaff6d972c45f4a820706babc7c"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "read_write_lock-2",
+      "timeout_seconds": 120,
+      "unwinding": {}
+    },
+    "P1": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 113894634,
+      "exit": 10,
+      "input_sha256": "dd98405c728a760da56688c8e3153ab085899b582cefa08e43058c1deb3637bf",
+      "meta": {
+        "bits": 32,
+        "bound": 4,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "read_write_lock-2.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "2595d014765ccf0a2c7b9169b2edce23476cbeaff6d972c45f4a820706babc7c"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 424\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "read_write_lock-2",
+      "timeout_seconds": 120,
+      "unwinding": {}
+    },
+    "P2": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "BOUNDED_PASS",
+      "elapsed_ns": 113930875,
+      "exit": 0,
+      "input_sha256": "bfce38d4c6dd8b83b0e7ccf5dd860317721211d6230963b5cb3c4897eb3546d2",
+      "meta": {
+        "bits": 32,
+        "bound": 4,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "read_write_lock-2.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "2595d014765ccf0a2c7b9169b2edce23476cbeaff6d972c45f4a820706babc7c"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "function '__VERIFIER_atomic_release_read_lock' is not declared"
+        },
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 424\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "success",
+      "property_rows": {
+        "reach_error.assertion.1": "SUCCESS"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "read_write_lock-2",
+      "timeout_seconds": 120,
+      "unwinding": {}
+    }
+  },
+  "safestack_relacy": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "5",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "TIMEOUT",
+      "detail": "Expecting ',' delimiter: line 1643 column 4 (char 53556)",
+      "elapsed_ns": 120072192998,
+      "exit": 124,
+      "input_sha256": "b633c83535f914e70104389463c7cbe8540dc62204071d69e844252eac6d5fb6",
+      "meta": {
+        "bits": 32,
+        "bound": 5,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "safestack_relacy.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "4e02d3d667cc583ac5dc9a9f1c6c7c418d84345a89b18178fe813e9728f100f3"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "task": "safestack_relacy",
+      "timeout_seconds": 120
+    }
+  },
+  "stack-2": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "7",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "TOOL_FAILURE",
+      "detail": "incomplete result or exit mismatch",
+      "elapsed_ns": 113980374,
+      "exit": 6,
+      "input_sha256": "1c5d098180a5596f0a60d3177354c69a5ee6da68b8191dc75b6c33b291ef0421",
+      "meta": {
+        "bits": 32,
+        "bound": 7,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "stack-2.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "e80190f565e8c029721d97fe43e275e5d7899b1361068bd4629eb42107db6e5d"
+      },
+      "model_warnings": [],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "task": "stack-2",
+      "timeout_seconds": 120
+    }
+  },
+  "unwind1-1": {
+    "P0": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "VIOLATION",
+      "elapsed_ns": 113859752,
+      "exit": 10,
+      "input_sha256": "369675afdce9f24a16d648c2af0379dafe84b15f75fb11d38697f731d0b5b69e",
+      "meta": {
+        "bits": 32,
+        "bound": 4,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "unwind1-1.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "6b76ed1e046ec6a20dfe462725e4df234193a9b0b6c224412858040df6b0a495"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 409\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "failure",
+      "property_rows": {
+        "f2.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "FAILURE"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "unwind1-1",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "f2.unwind.0": "SUCCESS"
+      }
+    },
+    "P1": {
+      "argv": [
+        "/root/Deagle_incremental_execution/runs/stage-10/native/src/cbmc/deagle_exe",
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "4",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "classification": "BOUNDED_PASS",
+      "elapsed_ns": 113888415,
+      "exit": 0,
+      "input_sha256": "f7eeb59361021362fbd8b18c9357e864dad8074d0e244496a6c0e115c240ab9f",
+      "meta": {
+        "bits": 32,
+        "bound": 4,
+        "data_model": "ILP32",
+        "expected": false,
+        "input": "unwind1-1.i",
+        "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+        "yaml_sha256": "6b76ed1e046ec6a20dfe462725e4df234193a9b0b6c224412858040df6b0a495"
+      },
+      "model_warnings": [],
+      "native_diagnostics": [
+        {
+          "level": "WARNING",
+          "message": "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 409\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+        }
+      ],
+      "native_sha256": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+      "overall": "success",
+      "property_rows": {
+        "f2.unwind.0": "SUCCESS",
+        "reach_error.assertion.1": "SUCCESS"
+      },
+      "target": "reach_error.assertion.1",
+      "task": "unwind1-1",
+      "timeout_seconds": 120,
+      "unwinding": {
+        "f2.unwind.0": "SUCCESS"
+      }
+    }
+  },
+  "workstealqueue_mutex-1": {
+    "P0": {
+      "classification": "YAML_OTHER_PROPERTY",
+      "task": "workstealqueue_mutex-1"
+    }
+  }
+}

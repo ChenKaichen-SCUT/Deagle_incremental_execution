@@ -1,0 +1,232 @@
+{
+  "arithmetic_prog_bad/P0-P1": {
+    "endpoint_kind_records_added": 1,
+    "endpoint_kind_records_removed": 11,
+    "first_added": [
+      [
+        "m#218",
+        "flag#3",
+        "po"
+      ]
+    ],
+    "first_removed": [
+      [
+        "total#11",
+        "total#3",
+        "rf"
+      ],
+      [
+        "total#1",
+        "total#10",
+        "rf"
+      ],
+      [
+        "total#2",
+        "total#10",
+        "rf"
+      ]
+    ],
+    "versions": [
+      {
+        "cnf_stream": "544284291d1026cbb6bb6b85a97cfa1521965aef84f80ba0b8b08420ea0fdebe",
+        "graph": "39aecc977909172a347889a3e09f830a5ac7e4d9cf3deda089266768b21718e8",
+        "guards": 110,
+        "kinds": {
+          "apo": 75,
+          "po": 356,
+          "rf": 4256
+        }
+      },
+      {
+        "cnf_stream": "4f55cf226061963b7d090e023590c233ca6df42061cc94b8957af5fbd1e0bf21",
+        "graph": "bb74b40ab3b43abbd78346d98b4ef9d945c062c49c43934f54beaffd7af7d043",
+        "guards": 109,
+        "kinds": {
+          "apo": 75,
+          "po": 352,
+          "rf": 4250
+        }
+      }
+    ]
+  },
+  "read_write_lock-2/P0-P1": {
+    "endpoint_kind_records_added": 58,
+    "endpoint_kind_records_removed": 58,
+    "first_added": [
+      [
+        "r#8",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#13",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#15",
+        "r#2",
+        "rf"
+      ]
+    ],
+    "first_removed": [
+      [
+        "r#9",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#14",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#17",
+        "r#2",
+        "rf"
+      ]
+    ],
+    "versions": [
+      {
+        "cnf_stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+        "graph": "adce2016b3de47b6c94988a2e3270bae5c244ca59dc60a104a9ed7bd3afaeb6e",
+        "guards": 42,
+        "kinds": {
+          "apo": 15,
+          "po": 97,
+          "rf": 131
+        }
+      },
+      {
+        "cnf_stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+        "graph": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+        "guards": 42,
+        "kinds": {
+          "apo": 15,
+          "po": 97,
+          "rf": 131
+        }
+      }
+    ]
+  },
+  "read_write_lock-2/P1-P2": {
+    "endpoint_kind_records_added": 32,
+    "endpoint_kind_records_removed": 32,
+    "first_added": [
+      [
+        "r#9",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#14",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#17",
+        "r#2",
+        "rf"
+      ]
+    ],
+    "first_removed": [
+      [
+        "r#8",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#13",
+        "r#2",
+        "rf"
+      ],
+      [
+        "r#15",
+        "r#2",
+        "rf"
+      ]
+    ],
+    "versions": [
+      {
+        "cnf_stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+        "graph": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+        "guards": 42,
+        "kinds": {
+          "apo": 15,
+          "po": 97,
+          "rf": 131
+        }
+      },
+      {
+        "cnf_stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+        "graph": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+        "guards": 42,
+        "kinds": {
+          "apo": 17,
+          "po": 95,
+          "rf": 131
+        }
+      }
+    ]
+  },
+  "unwind1-1/P0-P1": {
+    "endpoint_kind_records_added": 17,
+    "endpoint_kind_records_removed": 12,
+    "first_added": [
+      [
+        "_N#1",
+        "_N#5",
+        "rf"
+      ],
+      [
+        "_N#2",
+        "_N#5",
+        "rf"
+      ],
+      [
+        "_N#1",
+        "_N#8",
+        "rf"
+      ]
+    ],
+    "first_removed": [
+      [
+        "limit#1",
+        "limit#4",
+        "rf"
+      ],
+      [
+        "limit#2",
+        "limit#4",
+        "rf"
+      ],
+      [
+        "limit#3",
+        "limit#4",
+        "rf"
+      ]
+    ],
+    "versions": [
+      {
+        "cnf_stream": "db032c46298a2244a6cad14ca49349c10a7634a9ae95312b6f9fea2ecaaff5d8",
+        "graph": "cabdcdd82b86f1b66c30a7bdc59f98728a10bf209aa017e5a6db971abb86d7bc",
+        "guards": 23,
+        "kinds": {
+          "apo": 3,
+          "po": 42,
+          "rf": 31
+        }
+      },
+      {
+        "cnf_stream": "da439dce344b8750d730b37bee52938bf94ef4b5250bed8c3320f3515b4f1254",
+        "graph": "19d9f00bdc6bc3c5f397503348dba4425b386a798b7df5787824f81de90789c4",
+        "guards": 22,
+        "kinds": {
+          "apo": 3,
+          "po": 44,
+          "rf": 34
+        }
+      }
+    ]
+  }
+}

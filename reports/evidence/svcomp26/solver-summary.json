@@ -1,0 +1,318 @@
+{
+  "arithmetic_prog_bad/P0-P1": {
+    "P1_performance": {
+      "F": {
+        "conflicts": 276,
+        "decisions": 671948,
+        "peak_rss_kib": 458068,
+        "program_wall_ms": 3870.675387,
+        "propagations": 5936683,
+        "pure_search_ms": 1140.46303,
+        "solver_wall_ms": 3047.779759
+      },
+      "S": {
+        "conflicts": 276,
+        "decisions": 671948,
+        "peak_rss_kib": 457928,
+        "program_wall_ms": 3870.413722,
+        "propagations": 5936683,
+        "pure_search_ms": 1156.043243,
+        "solver_wall_ms": 3058.817794
+      }
+    },
+    "faster": 2,
+    "mechanism": {
+      "actual_disposition": "refuse_multi_query_stream",
+      "admitted_stable_variables": 0,
+      "common_eligible_p1_original_submissions": 0,
+      "learning": {
+        "active_at_end": 90884,
+        "actually_imported": 0,
+        "fully_bound": null,
+        "proved_p1_rup": null,
+        "snapshot_available": false
+      },
+      "matching_signed_groups_same_slot_before_graph_gate": 0,
+      "physical_reattach": 0,
+      "raw_graph_record_added": 4256,
+      "raw_graph_record_removed": 4267,
+      "semantic_admission": "refuse_changed_graph",
+      "semantic_graph_equal": false,
+      "versions": [
+        {
+          "clauses": 6228985,
+          "edge_guard_order": {
+            "edge": 4687,
+            "guard": 110
+          },
+          "graph_sha256": "39aecc977909172a347889a3e09f830a5ac7e4d9cf3deda089266768b21718e8",
+          "nodes": 235,
+          "postsolve_active_learnts": 90884,
+          "queries": 3,
+          "registered": 4903,
+          "registry_error": null,
+          "semantic_graph_sha256": "bb8d9a26f496c6577ac89a283178600a59f938bffb55bbee44120f28f16a06cd",
+          "variables": 1264650
+        },
+        {
+          "clauses": 6227993,
+          "edge_guard_order": {
+            "edge": 4677,
+            "guard": 109
+          },
+          "graph_sha256": "bb74b40ab3b43abbd78346d98b4ef9d945c062c49c43934f54beaffd7af7d043",
+          "nodes": 233,
+          "postsolve_active_learnts": 30938,
+          "queries": 3,
+          "registered": 4865,
+          "registry_error": null,
+          "semantic_graph_sha256": "c2830a0863b10fb7fc1decbead4c405cad781128e88276266a52e629632e4818",
+          "variables": 1264409
+        }
+      ]
+    },
+    "paired_median_ms": -18.740744000000177,
+    "paired_solver_ms": [
+      22.455297999999857,
+      -619.8895119999997,
+      -18.740744000000177
+    ]
+  },
+  "read_write_lock-2/P0-P1": {
+    "P1_performance": {
+      "F": {
+        "conflicts": 185,
+        "decisions": 3015,
+        "peak_rss_kib": 37284,
+        "program_wall_ms": 214.463456,
+        "propagations": 46044,
+        "pure_search_ms": 6.225221,
+        "solver_wall_ms": 50.959032
+      },
+      "S": {
+        "conflicts": 185,
+        "decisions": 3015,
+        "peak_rss_kib": 37284,
+        "program_wall_ms": 229.134401,
+        "propagations": 46044,
+        "pure_search_ms": 6.338964,
+        "solver_wall_ms": 112.436689
+      }
+    },
+    "faster": 0,
+    "mechanism": {
+      "actual_disposition": "refuse_changed_graph",
+      "admitted_stable_variables": 0,
+      "common_eligible_p1_original_submissions": 0,
+      "learning": {
+        "active_at_end": 383,
+        "actually_imported": 0,
+        "fully_bound": 0,
+        "proved_p1_rup": 0,
+        "snapshot_available": true
+      },
+      "matching_signed_groups_same_slot_before_graph_gate": 0,
+      "physical_reattach": 0,
+      "raw_graph_record_added": 71,
+      "raw_graph_record_removed": 71,
+      "semantic_admission": "refuse_changed_graph",
+      "semantic_graph_equal": false,
+      "versions": [
+        {
+          "clauses": 25842,
+          "edge_guard_order": {
+            "edge": 243,
+            "guard": 42
+          },
+          "graph_sha256": "adce2016b3de47b6c94988a2e3270bae5c244ca59dc60a104a9ed7bd3afaeb6e",
+          "nodes": 81,
+          "postsolve_active_learnts": 383,
+          "queries": 1,
+          "registered": 1348,
+          "registry_error": null,
+          "semantic_graph_sha256": "6398d1770a3d54b64aac8ca4ce99cbe9e03d698a01d7a1da0e8a936d31b8855b",
+          "variables": 7879
+        },
+        {
+          "clauses": 25842,
+          "edge_guard_order": {
+            "edge": 243,
+            "guard": 42
+          },
+          "graph_sha256": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+          "nodes": 81,
+          "postsolve_active_learnts": 383,
+          "queries": 1,
+          "registered": 1286,
+          "registry_error": null,
+          "semantic_graph_sha256": "20bac01d40afb525ae88c5e03af0a77329ee5e1c412a4672f64cee169778d853",
+          "variables": 7879
+        }
+      ]
+    },
+    "paired_median_ms": 61.477657,
+    "paired_solver_ms": [
+      61.477657,
+      69.609746,
+      59.93017700000001
+    ]
+  },
+  "read_write_lock-2/P1-P2": {
+    "P1_performance": {
+      "F": {
+        "conflicts": 209,
+        "decisions": 1335,
+        "peak_rss_kib": 37148,
+        "program_wall_ms": 164.308219,
+        "propagations": 53273,
+        "pure_search_ms": 6.67387,
+        "solver_wall_ms": 50.559225
+      },
+      "S": {
+        "conflicts": 209,
+        "decisions": 1335,
+        "peak_rss_kib": 37148,
+        "program_wall_ms": 222.958811,
+        "propagations": 53273,
+        "pure_search_ms": 6.624629,
+        "solver_wall_ms": 111.610084
+      }
+    },
+    "faster": 0,
+    "mechanism": {
+      "actual_disposition": "refuse_changed_graph",
+      "admitted_stable_variables": 0,
+      "common_eligible_p1_original_submissions": 0,
+      "learning": {
+        "active_at_end": 383,
+        "actually_imported": 0,
+        "fully_bound": 0,
+        "proved_p1_rup": 0,
+        "snapshot_available": true
+      },
+      "matching_signed_groups_same_slot_before_graph_gate": 0,
+      "physical_reattach": 0,
+      "raw_graph_record_added": 39,
+      "raw_graph_record_removed": 39,
+      "semantic_admission": "refuse_changed_graph",
+      "semantic_graph_equal": false,
+      "versions": [
+        {
+          "clauses": 25842,
+          "edge_guard_order": {
+            "edge": 243,
+            "guard": 42
+          },
+          "graph_sha256": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+          "nodes": 81,
+          "postsolve_active_learnts": 383,
+          "queries": 1,
+          "registered": 1286,
+          "registry_error": null,
+          "semantic_graph_sha256": "20bac01d40afb525ae88c5e03af0a77329ee5e1c412a4672f64cee169778d853",
+          "variables": 7879
+        },
+        {
+          "clauses": 25842,
+          "edge_guard_order": {
+            "edge": 243,
+            "guard": 42
+          },
+          "graph_sha256": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+          "nodes": 81,
+          "postsolve_active_learnts": 402,
+          "queries": 1,
+          "registered": 1348,
+          "registry_error": null,
+          "semantic_graph_sha256": "0e2cc7cb68489a3507c5fbdc23174de3c6c1ca7604e1681523895275a3575109",
+          "variables": 7879
+        }
+      ]
+    },
+    "paired_median_ms": 61.173902,
+    "paired_solver_ms": [
+      59.246823000000006,
+      66.306772,
+      61.173902
+    ]
+  },
+  "unwind1-1/P0-P1": {
+    "P1_performance": {
+      "F": {
+        "conflicts": 25,
+        "decisions": 472,
+        "peak_rss_kib": 37140,
+        "program_wall_ms": 114.224034,
+        "propagations": 4363,
+        "pure_search_ms": 0.929598,
+        "solver_wall_ms": 17.489681
+      },
+      "S": {
+        "conflicts": 25,
+        "decisions": 472,
+        "peak_rss_kib": 37140,
+        "program_wall_ms": 114.256845,
+        "propagations": 4363,
+        "pure_search_ms": 0.897408,
+        "solver_wall_ms": 17.339227
+      }
+    },
+    "faster": 3,
+    "mechanism": {
+      "actual_disposition": "refuse_unresolved_followup_goals",
+      "admitted_stable_variables": 0,
+      "common_eligible_p1_original_submissions": 0,
+      "learning": {
+        "active_at_end": 12,
+        "actually_imported": 0,
+        "fully_bound": null,
+        "proved_p1_rup": null,
+        "snapshot_available": false
+      },
+      "matching_signed_groups_same_slot_before_graph_gate": 0,
+      "physical_reattach": 0,
+      "raw_graph_record_added": 50,
+      "raw_graph_record_removed": 46,
+      "semantic_admission": "refuse_changed_graph",
+      "semantic_graph_equal": false,
+      "versions": [
+        {
+          "clauses": 6031,
+          "edge_guard_order": {
+            "edge": 76,
+            "guard": 23
+          },
+          "graph_sha256": "cabdcdd82b86f1b66c30a7bdc59f98728a10bf209aa017e5a6db971abb86d7bc",
+          "nodes": 38,
+          "postsolve_active_learnts": 12,
+          "queries": 1,
+          "registered": 454,
+          "registry_error": null,
+          "semantic_graph_sha256": "5ea04b23fb0edfec66784c211b3966cf6c022b17bb365f4e9c0351e24f2adcde",
+          "variables": 2553
+        },
+        {
+          "clauses": 6399,
+          "edge_guard_order": {
+            "edge": 81,
+            "guard": 22
+          },
+          "graph_sha256": "19d9f00bdc6bc3c5f397503348dba4425b386a798b7df5787824f81de90789c4",
+          "nodes": 39,
+          "postsolve_active_learnts": 21,
+          "queries": 1,
+          "registered": 552,
+          "registry_error": null,
+          "semantic_graph_sha256": "5dc3b52fdc65ed9903045ed91f711707e251955f4f98613c66603612e3f5ae3d",
+          "variables": 2723
+        }
+      ]
+    },
+    "paired_median_ms": -0.15045399999999987,
+    "paired_solver_ms": [
+      -2.3574659999999987,
+      -0.15045399999999987,
+      -0.08724399999999832
+    ]
+  }
+}

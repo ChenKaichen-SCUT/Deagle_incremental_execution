@@ -7,5 +7,12 @@
   "environment": "reports/environment.json",
   "last_user_approved_stage": 10,
   "next_stage": null,
-  "next_stage_approved": false
+  "next_stage_approved": false,
+  "svcomp26_repair_pilot": {
+    "base_commit": "dca9eb78250426fe5b2aab22aea5ef91025dd24d",
+    "branch": "svcomp26-repair-pilot",
+    "status": "READY_FOR_REVIEW",
+    "report": "reports/svcomp26-repair-pilot.md",
+    "evidence": "reports/evidence/svcomp26"
+  }
 }

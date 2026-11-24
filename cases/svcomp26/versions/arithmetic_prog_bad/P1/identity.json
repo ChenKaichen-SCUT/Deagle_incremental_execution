@@ -1,0 +1,7 @@
+{
+  "parent": "P0",
+  "parent_sha256": "051706a1eb405a384d7cf371ab2d9b9605b94715fa3ad16d6c2eb8e3fbb8fc38",
+  "patch_sha256": "e7e49b7160822de9306668540f771d074b1ba69b21fc264e74a3016b788cd822",
+  "sha256": "7ea3dca39a6c24441378a9bca1657766debabc2444b22797280a494c4e2aa486",
+  "task": "arithmetic_prog_bad"
+}

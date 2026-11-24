@@ -1,0 +1,16 @@
+./deagle ../../sv-benchmarks/c/properties/unreach-call.prp ../../sv-benchmarks/c/pthread-ext/26_stack_cas_longer-1.i --32
+
+
+--------------------------------------------------------------------------------
+
+
+./deagle_exe ../../sv-benchmarks/c/pthread-ext/26_stack_cas_longer-1.i --refined-pointer-analysis --graphml-witness error-witness.graphml  --unwind-suggest > deagle_tmp_unwind_suggest 2>&1
+['main.0', 'push.0', 'push_loop.0'] [0, 0, 0]
+timeout 5 ./deagle_exe ../../sv-benchmarks/c/pthread-ext/26_stack_cas_longer-1.i --refined-pointer-analysis --graphml-witness error-witness.graphml  > deagle_tmp_output 2>&1
+The bound of loops is not determined!
+
+Unwindset: main.0:3,push.0:3,push_loop.0:3,
+./deagle_exe ../../sv-benchmarks/c/pthread-ext/26_stack_cas_longer-1.i --refined-pointer-analysis --graphml-witness error-witness.graphml  --unwindset main.0:3,push.0:3,push_loop.0:3, > deagle_tmp_output 2>&1
+[reach_error.assertion.1] line 17 assertion 0: FAILURE
+Property: FAILURE
+FAILED

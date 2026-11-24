@@ -1,0 +1,14 @@
+./deagle ../../sv-benchmarks/c/properties/unreach-call.prp ../../sv-benchmarks/c/pthread-complex/safestack_relacy.i --32
+
+
+--------------------------------------------------------------------------------
+
+
+./deagle_exe ../../sv-benchmarks/c/pthread-complex/safestack_relacy.i --refined-pointer-analysis --graphml-witness error-witness.graphml  --unwind-suggest > deagle_tmp_unwind_suggest 2>&1
+['main.0', 'main.1', 'thread.0', 'thread.1', 'Init.0', 'Pop.0', 'Push.0'] [4, 4, 0, 3, 0, 0, 0]
+timeout 5 ./deagle_exe ../../sv-benchmarks/c/pthread-complex/safestack_relacy.i --refined-pointer-analysis --graphml-witness error-witness.graphml  > deagle_tmp_output 2>&1
+The bound of loops is not determined!
+
+Unwindset: main.0:4,main.1:4,thread.0:3,thread.1:3,Init.0:3,Pop.0:3,Push.0:3,
+./deagle_exe ../../sv-benchmarks/c/pthread-complex/safestack_relacy.i --refined-pointer-analysis --graphml-witness error-witness.graphml  --unwindset main.0:4,main.1:4,thread.0:3,thread.1:3,Init.0:3,Pop.0:3,Push.0:3, > deagle_tmp_output 2>&1
+ERROR

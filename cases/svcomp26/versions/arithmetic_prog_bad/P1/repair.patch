@@ -1,0 +1,10 @@
+--- a/program.i
++++ b/program.i
+@@ -899,7 +899,6 @@
+     pthread_cond_signal(&empty);
+     j++;
+   }
+-  total = total + j;
+   flag = 1;
+   return ((void *)0);
+ }

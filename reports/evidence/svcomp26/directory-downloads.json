@@ -1,0 +1,102 @@
+{
+  "goblint-regression": {
+    "archive_sha256": "32e3c4f2d18d8347e629f53051efb24e9ca55d246386cda75e900f85bfa52fe8",
+    "files": 501,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fgoblint-regression"
+  },
+  "ldv-linux-3.14-races": {
+    "archive_sha256": "424e607637a8ab4a30e519c60c5ece140a8fe41626b50695d66f25ed03ab5526",
+    "files": 30,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fldv-linux-3.14-races"
+  },
+  "ldv-races": {
+    "archive_sha256": "dab50dd567187981dea351a9fb7d36debaef777adb770c73bfdda4bf6f152078",
+    "files": 58,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fldv-races"
+  },
+  "libvsync": {
+    "archive_sha256": "43b08fd2d98faec45e59209ad5c74c3c62d0283604daa81568a7cc866794907c",
+    "files": 215,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Flibvsync"
+  },
+  "properties": {
+    "archive_sha256": "5b6d0eaca160a73775631e75290204073c22180015df5842074bb68ce9d2b5a4",
+    "files": 44,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fproperties"
+  },
+  "pthread": {
+    "archive_sha256": "a4c5d45fd4740420ae651fdc250f16907a3e8be9a3116e21c80b7a533075ea36",
+    "files": 187,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread"
+  },
+  "pthread-C-DAC": {
+    "archive_sha256": "00f57b7028186ee2a4ae88c89449c3dd157263b0a9674fe6034fc1286ff9a75e",
+    "files": 18,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-C-DAC"
+  },
+  "pthread-atomic": {
+    "archive_sha256": "f3c64853e16071e5e278dca0cc008f912aee9cdf777df6018932dd5c444e2d37",
+    "files": 59,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-atomic"
+  },
+  "pthread-complex": {
+    "archive_sha256": "651251c7250da40b2aaf515a8f1ec4b6d4cf23530d628fa6cf9d09383c6dc7a8",
+    "files": 24,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-complex"
+  },
+  "pthread-deagle": {
+    "archive_sha256": "d960889bb4ad399aa47006f4b21c513007ab478b7d6a93d9c5526ac5229d719f",
+    "files": 78,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-deagle"
+  },
+  "pthread-divine": {
+    "archive_sha256": "9c24ae60ae54c025508f4377310f51636c749cbb7f723e72dba685163eb6f870",
+    "files": 57,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-divine"
+  },
+  "pthread-driver-races": {
+    "archive_sha256": "d38eac7bd0d9d1c78133ce79e86cebce3c9282c34db1e49fa4e0358f41f1656d",
+    "files": 422,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-driver-races"
+  },
+  "pthread-ext": {
+    "archive_sha256": "805058dbd55c3e125f94df24e49f6e289fb56c42397956c78dd3e63dced0f851",
+    "files": 230,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-ext"
+  },
+  "pthread-lit": {
+    "archive_sha256": "1922a6582f3007181814ef4cd31ff8f7e4e9de3e5c79b02f1c2f0f40ac011b3b",
+    "files": 45,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-lit"
+  },
+  "pthread-memsafety": {
+    "archive_sha256": "f0f7e2c4ec189944815118ad700b06d9b34ea1c0cdca018a027bbd5a743b69fc",
+    "files": 11,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-memsafety"
+  },
+  "pthread-nondet": {
+    "archive_sha256": "cf5427ba4fbbaf17bac6e1cde1c768f34a323f9b97abba183a5819d3d01e6ecc",
+    "files": 21,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-nondet"
+  },
+  "pthread-race-challenges": {
+    "archive_sha256": "9fa4f4b3e341517dd682f7d525758abd61b9e3c4152afddb60ca0a2b76e03bed",
+    "files": 194,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-race-challenges"
+  },
+  "pthread-theta": {
+    "archive_sha256": "a371f02740ec465b8d001eaae1d2ad35d4ced068a4549b3ef57ade287001ec53",
+    "files": 45,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-theta"
+  },
+  "pthread-wmm": {
+    "archive_sha256": "55b339c66c83fb779c7c502bdb4ebf03f697509e32b028ced63831adaf320ed8",
+    "files": 852,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fpthread-wmm"
+  },
+  "weaver": {
+    "archive_sha256": "da6db2e737a30cb9e8f1656c468c372766267929d1a2ce5d31a51f31f40b85fd",
+    "files": 354,
+    "url": "https://gitlab.com/api/v4/projects/sosy-lab%2Fbenchmarking%2Fsv-benchmarks/repository/archive.tar.gz?sha=7efe28dd29576b46927b7a34e8f742bd90966a75&path=c%2Fweaver"
+  }
+}

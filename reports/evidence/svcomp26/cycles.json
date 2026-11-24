@@ -1,0 +1,32 @@
+{
+  "25_stack_longer-1": {
+    "ai_active_s": 46.585061646,
+    "total_active_s": 62.790283237,
+    "verification_active_s": 16.205221591
+  },
+  "25_stack_longest-2": {
+    "ai_active_s": 54.248421795,
+    "total_active_s": 100.002747219,
+    "verification_active_s": 45.754325424
+  },
+  "26_stack_cas_longer-1": {
+    "ai_active_s": 50.091064156,
+    "total_active_s": 132.95472060100002,
+    "verification_active_s": 82.863656445
+  },
+  "arithmetic_prog_bad": {
+    "ai_active_s": 16.689641249,
+    "total_active_s": 22.776996500000003,
+    "verification_active_s": 6.087355251
+  },
+  "read_write_lock-2": {
+    "ai_active_s": 93.199758779,
+    "total_active_s": 93.80573339700001,
+    "verification_active_s": 0.6059746180000001
+  },
+  "unwind1-1": {
+    "ai_active_s": 61.939751338,
+    "total_active_s": 62.281412717,
+    "verification_active_s": 0.341661379
+  }
+}

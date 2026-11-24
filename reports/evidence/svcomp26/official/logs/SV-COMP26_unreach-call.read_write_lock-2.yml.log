@@ -1,0 +1,13 @@
+./deagle ../../sv-benchmarks/c/properties/unreach-call.prp ../../sv-benchmarks/c/pthread-atomic/read_write_lock-2.i --32
+
+
+--------------------------------------------------------------------------------
+
+
+./deagle_exe ../../sv-benchmarks/c/pthread-atomic/read_write_lock-2.i --refined-pointer-analysis --graphml-witness error-witness.graphml  --unwind-suggest > deagle_tmp_unwind_suggest 2>&1
+[] []
+No loops!
+./deagle_exe ../../sv-benchmarks/c/pthread-atomic/read_write_lock-2.i --refined-pointer-analysis --graphml-witness error-witness.graphml  > deagle_tmp_output 2>&1
+[reach_error.assertion.1] line 16 assertion 0: FAILURE
+Property: FAILURE
+FAILED

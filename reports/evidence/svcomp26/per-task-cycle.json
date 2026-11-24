@@ -1,0 +1,310 @@
+{
+  "25_stack_longer-1": {
+    "P0_s": 8.127843215,
+    "active": {
+      "ai_active_s": 46.585061646,
+      "total_active_s": 62.790283237,
+      "verification_active_s": 16.205221591
+    },
+    "actual_calls": 1,
+    "ai_s": [
+      46.585061646
+    ],
+    "budget_calls": 4,
+    "calendar": {
+      "calendar_s": 1232.096955485,
+      "end_utc": "2026-11-24T06:51:30.695783+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:30:58.598828+00:00"
+    },
+    "official_cpu": "16.14825",
+    "verification_s": {}
+  },
+  "25_stack_longest-2": {
+    "P0_s": 22.952452141,
+    "active": {
+      "ai_active_s": 54.248421795,
+      "total_active_s": 100.002747219,
+      "verification_active_s": 45.754325424
+    },
+    "actual_calls": 1,
+    "ai_s": [
+      54.248421795
+    ],
+    "budget_calls": 4,
+    "calendar": {
+      "calendar_s": 1278.153735094,
+      "end_utc": "2026-11-24T06:52:24.948703+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:31:06.794968+00:00"
+    },
+    "official_cpu": "40.021514",
+    "verification_s": {}
+  },
+  "26_stack_cas_longer-1": {
+    "P0_s": 41.381332834,
+    "active": {
+      "ai_active_s": 50.091064156,
+      "total_active_s": 132.95472060100002,
+      "verification_active_s": 82.863656445
+    },
+    "actual_calls": 1,
+    "ai_s": [
+      50.091064156
+    ],
+    "budget_calls": 4,
+    "calendar": {
+      "calendar_s": 1305.230190895,
+      "end_utc": "2026-11-24T06:53:15.037552+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:31:29.807361+00:00"
+    },
+    "official_cpu": "34.403372",
+    "verification_s": {}
+  },
+  "arithmetic_prog_bad": {
+    "P0_s": 3.770056019,
+    "active": {
+      "ai_active_s": 16.689641249,
+      "total_active_s": 22.776996500000003,
+      "verification_active_s": 6.087355251
+    },
+    "actual_calls": 1,
+    "ai_s": [
+      16.689641249
+    ],
+    "budget_calls": 4,
+    "calendar": {
+      "calendar_s": 1468.912977675,
+      "end_utc": "2026-11-24T06:55:23.539738+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:30:54.626760+00:00"
+    },
+    "cycle_with_instrumented_verification": {
+      "F": {
+        "median_s": {
+          "ai_plus_programs_s": 26.133385999,
+          "complete_session_with_capture_checks_s": 14.23951988,
+          "independent_checks_plus_ai_plus_complete_sessions_s": 37.01651638,
+          "instrumented_programs_s": 9.44374475
+        },
+        "trials": [
+          {
+            "ai_plus_programs_s": 25.681758546,
+            "complete_session_with_capture_checks_s": 13.774021901,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 36.551018401,
+            "instrumented_programs_s": 8.992117297
+          },
+          {
+            "ai_plus_programs_s": 26.436385989,
+            "complete_session_with_capture_checks_s": 14.566902555,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 37.343899055,
+            "instrumented_programs_s": 9.74674474
+          },
+          {
+            "ai_plus_programs_s": 26.133385999,
+            "complete_session_with_capture_checks_s": 14.23951988,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 37.01651638,
+            "instrumented_programs_s": 9.44374475
+          }
+        ]
+      },
+      "S": {
+        "median_s": {
+          "ai_plus_programs_s": 25.682749108000003,
+          "complete_session_with_capture_checks_s": 13.786564935,
+          "independent_checks_plus_ai_plus_complete_sessions_s": 36.563561435000004,
+          "instrumented_programs_s": 8.993107859
+        },
+        "trials": [
+          {
+            "ai_plus_programs_s": 25.682228855,
+            "complete_session_with_capture_checks_s": 13.767670827,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 36.544667327,
+            "instrumented_programs_s": 8.992587606
+          },
+          {
+            "ai_plus_programs_s": 25.882190255,
+            "complete_session_with_capture_checks_s": 14.027778354,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 36.804774854,
+            "instrumented_programs_s": 9.192549006
+          },
+          {
+            "ai_plus_programs_s": 25.682749108000003,
+            "complete_session_with_capture_checks_s": 13.786564935,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 36.563561435000004,
+            "instrumented_programs_s": 8.993107859
+          }
+        ]
+      }
+    },
+    "official_cpu": "6.273308",
+    "verification_s": {
+      "P1": 2.317299232
+    }
+  },
+  "read_write_lock-2": {
+    "P0_s": 0.264203137,
+    "active": {
+      "ai_active_s": 93.199758779,
+      "total_active_s": 93.80573339700001,
+      "verification_active_s": 0.6059746180000001
+    },
+    "actual_calls": 4,
+    "ai_s": [
+      85.62479691,
+      7.574961869
+    ],
+    "budget_calls": 4,
+    "calendar": {
+      "calendar_s": 2652.624991531,
+      "end_utc": "2026-11-24T07:15:06.963746+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:30:54.338755+00:00"
+    },
+    "cycle_with_instrumented_verification": {
+      "F": {
+        "median_s": {
+          "ai_plus_programs_s": 93.957360549,
+          "complete_session_with_capture_checks_s": 0.971011877,
+          "independent_checks_plus_ai_plus_complete_sessions_s": 94.776745274,
+          "instrumented_programs_s": 0.75760177
+        },
+        "trials": [
+          {
+            "ai_plus_programs_s": 93.957360549,
+            "complete_session_with_capture_checks_s": 0.962143474,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 94.76787687100001,
+            "instrumented_programs_s": 0.75760177
+          },
+          {
+            "ai_plus_programs_s": 93.95729419000001,
+            "complete_session_with_capture_checks_s": 0.972729111,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 94.77846250800002,
+            "instrumented_programs_s": 0.757535411
+          },
+          {
+            "ai_plus_programs_s": 93.957384981,
+            "complete_session_with_capture_checks_s": 0.971011877,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 94.776745274,
+            "instrumented_programs_s": 0.757626202
+          }
+        ]
+      },
+      "S": {
+        "median_s": {
+          "ai_plus_programs_s": 94.116972297,
+          "complete_session_with_capture_checks_s": 1.292010357,
+          "independent_checks_plus_ai_plus_complete_sessions_s": 95.097743754,
+          "instrumented_programs_s": 0.917213518
+        },
+        "trials": [
+          {
+            "ai_plus_programs_s": 94.116972297,
+            "complete_session_with_capture_checks_s": 1.292010357,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 95.097743754,
+            "instrumented_programs_s": 0.917213518
+          },
+          {
+            "ai_plus_programs_s": 94.139026998,
+            "complete_session_with_capture_checks_s": 1.296550556,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 95.10228395300001,
+            "instrumented_programs_s": 0.939268219
+          },
+          {
+            "ai_plus_programs_s": 94.09349502,
+            "complete_session_with_capture_checks_s": 1.25935379,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 95.06508718700002,
+            "instrumented_programs_s": 0.893736241
+          }
+        ]
+      }
+    },
+    "official_cpu": "0.23914",
+    "verification_s": {
+      "P1": 0.113894634,
+      "P2": 0.113930875
+    }
+  },
+  "unwind1-1": {
+    "P0_s": 0.113859752,
+    "active": {
+      "ai_active_s": 61.939751338,
+      "total_active_s": 62.281412717,
+      "verification_active_s": 0.341661379
+    },
+    "actual_calls": 3,
+    "ai_s": [
+      61.939751338
+    ],
+    "budget_calls": 4,
+    "calendar": {
+      "calendar_s": 1460.300734286,
+      "end_utc": "2026-11-24T07:09:02.037565+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:44:41.736830+00:00"
+    },
+    "cycle_with_instrumented_verification": {
+      "F": {
+        "median_s": {
+          "ai_plus_programs_s": 62.168298298,
+          "complete_session_with_capture_checks_s": 0.282364998,
+          "independent_checks_plus_ai_plus_complete_sessions_s": 62.563777715,
+          "instrumented_programs_s": 0.22854696
+        },
+        "trials": [
+          {
+            "ai_plus_programs_s": 62.168222446,
+            "complete_session_with_capture_checks_s": 0.282364998,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 62.563777715,
+            "instrumented_programs_s": 0.228471108
+          },
+          {
+            "ai_plus_programs_s": 62.168308638,
+            "complete_session_with_capture_checks_s": 0.281682224,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 62.563094941,
+            "instrumented_programs_s": 0.2285573
+          },
+          {
+            "ai_plus_programs_s": 62.168298298,
+            "complete_session_with_capture_checks_s": 0.284613271,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 62.566025988,
+            "instrumented_programs_s": 0.22854696
+          }
+        ]
+      },
+      "S": {
+        "median_s": {
+          "ai_plus_programs_s": 62.168262347,
+          "complete_session_with_capture_checks_s": 0.281618174,
+          "independent_checks_plus_ai_plus_complete_sessions_s": 62.563030891000004,
+          "instrumented_programs_s": 0.228511009
+        },
+        "trials": [
+          {
+            "ai_plus_programs_s": 62.168259187000004,
+            "complete_session_with_capture_checks_s": 0.281407259,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 62.562819976,
+            "instrumented_programs_s": 0.228507849
+          },
+          {
+            "ai_plus_programs_s": 62.168277037,
+            "complete_session_with_capture_checks_s": 0.281618174,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 62.563030891000004,
+            "instrumented_programs_s": 0.228525699
+          },
+          {
+            "ai_plus_programs_s": 62.168262347,
+            "complete_session_with_capture_checks_s": 0.281873769,
+            "independent_checks_plus_ai_plus_complete_sessions_s": 62.563286486,
+            "instrumented_programs_s": 0.228511009
+          }
+        ]
+      }
+    },
+    "official_cpu": "5.208159",
+    "verification_s": {
+      "P1": 0.113888415
+    }
+  }
+}

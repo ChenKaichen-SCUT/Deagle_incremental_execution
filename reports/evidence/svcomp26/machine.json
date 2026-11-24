@@ -1,0 +1,60 @@
+{
+  "affinity": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+  ],
+  "arch": "x86_64",
+  "calendar": {
+    "25_stack_longer-1": {
+      "calendar_s": 1232.096955485,
+      "end_utc": "2026-11-24T06:51:30.695783+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:30:58.598828+00:00"
+    },
+    "25_stack_longest-2": {
+      "calendar_s": 1278.153735094,
+      "end_utc": "2026-11-24T06:52:24.948703+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:31:06.794968+00:00"
+    },
+    "26_stack_cas_longer-1": {
+      "calendar_s": 1305.230190895,
+      "end_utc": "2026-11-24T06:53:15.037552+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:31:29.807361+00:00"
+    },
+    "arithmetic_prog_bad": {
+      "calendar_s": 1468.912977675,
+      "end_utc": "2026-11-24T06:55:23.539738+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:30:54.626760+00:00"
+    },
+    "read_write_lock-2": {
+      "calendar_s": 2652.624991531,
+      "end_utc": "2026-11-24T07:15:06.963746+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:30:54.338755+00:00"
+    },
+    "unwind1-1": {
+      "calendar_s": 1460.300734286,
+      "end_utc": "2026-11-24T07:09:02.037565+00:00",
+      "scope": "from P0 input preparation to final independent property receipt or last failed generation; includes batch queue and review",
+      "start_utc": "2026-11-24T06:44:41.736830+00:00"
+    }
+  },
+  "cgroup_memory": "14999998464",
+  "deagle": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+  "disk_free_bytes": 60591878144,
+  "gcc": "11.4.0",
+  "kernel": "5.15.0-186-generic",
+  "machine_cpu": "General Purpose Processor",
+  "memtotal": "MemTotal:       31498544 kB",
+  "python": "3.10.12",
+  "worker": "c474a95f9d668619bdc138382bd59b1f070190c8197fa91071f9aca49075c204"
+}
