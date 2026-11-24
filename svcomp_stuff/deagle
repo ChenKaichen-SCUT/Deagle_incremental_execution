@@ -1,0 +1,216 @@
+#! /usr/bin/python3
+
+import sys
+import os
+import re
+import time
+
+limit_solverbound = 300
+
+def ensure_successful_unwind():
+    with open("deagle_tmp_output", "r") as output:
+        lines = output.readlines()
+        for line in lines:
+            if "Unwinding successfully" in line:
+                return True
+    return False
+
+def check_result_normality(lines):
+    return any("VERIFICATION SUCCESSFUL" in line or "VERIFICATION FAILED" in line
+               for line in lines)
+
+def get_result(remove = True):
+    result = "SUCCESS"
+    datarace = "no-data-race.prp" in property_path
+    incomplete = False
+    with open("deagle_tmp_output", "r") as output:
+        lines = output.readlines()
+        if not check_result_normality(lines):
+            return "ERROR"
+        for line in lines:
+            obj = re.match(r"\[(.*)\](.*): (.*)", line) # is a result line
+            if not obj:
+                continue
+            new_result = obj.group(3)
+            if datarace:
+                property_id = obj.group(1)
+                if "nodatarace.assertion." in property_id:
+                    if new_result == "FAILURE":
+                        result = "FAILURE"
+                    elif new_result != "SUCCESS":
+                        incomplete = True
+                    print(line, end="")
+                elif ".unwind." in property_id and new_result != "SUCCESS":
+                    incomplete = True
+                    print(line, end="")
+                continue
+            if new_result == "FAILURE" and result == "SUCCESS":
+                result = "FAILURE"
+            print(line,end="")
+    if datarace and result != "FAILURE":
+        # A failure of another property may leave race checks undecided.
+        if incomplete or any("VERIFICATION FAILED" in line for line in lines):
+            result = "UNKNOWN"
+    print("Property: %s" % result)
+    if(remove):
+        os.system("rm deagle_tmp_output")
+    return result
+
+def get_loop_info(program_path, flags):
+    cmd = "./deagle_exe %s %s --unwind-suggest > deagle_tmp_unwind_suggest 2>&1" % (program_path, flags)
+    print(cmd)
+    os.system(cmd)
+
+    loops_name = []
+    loops_limit = []
+    is_onlystatic = True
+    with open("deagle_tmp_unwind_suggest", "r") as output:
+        lines = output.readlines()
+        for i in range(len(lines)):
+            obj = re.match(r"Loop (.+):", lines[i])
+            if obj:
+                loop_name = obj.group(1)
+                loops_name.append(loop_name)
+            
+            obj = re.match(r"Suggested unwind limit: (\d+)", lines[i])
+            if obj:
+                loop_limit = int(obj.group(1))
+                loops_limit.append(loop_limit)
+                if loop_limit > limit_solverbound:
+                    # When a loop's unwind limit can be determined but is too large
+                    # We give up this verification task
+                    # (otherwise TLE, wasting too much time)
+                    print("Too large unwind limit: %d!" % loop_limit)
+                    print("UNKNOWN")
+                    sys.exit(0)
+            
+            obj = re.match(r"No suggested unwind limit", lines[i])
+            if obj:
+                loop_limit = 0
+                loops_limit.append(loop_limit)
+                is_onlystatic = False
+            
+    print(loops_name, loops_limit)
+    os.system("rm deagle_tmp_unwind_suggest")
+    return loops_name, loops_limit, is_onlystatic
+
+def generate_unwindset(loops_name, loops_limit):
+    unwindset = ""
+    for loop_name, limit in zip(loops_name, loops_limit):
+        unwindset += ("%s:%d," % (loop_name, limit))
+    return unwindset
+
+if len(sys.argv) < 2 or sys.argv[1] == "-v" or sys.argv[1] == "--version":
+    print("4.2.0")
+    sys.exit(0)
+
+if sys.argv[1] == "--witness":
+    print("Deagle is not a validator!")
+    sys.exit(0)
+
+if len(sys.argv) < 3:
+    print("Usage: ./deagle property_path program_path")
+    sys.exit(0)
+
+property_path = sys.argv[1]
+program_path = sys.argv[2]
+try:
+    os.remove("error-witness.graphml")
+except FileNotFoundError:
+    pass
+try:
+    os.remove("error-witness.yml")
+except FileNotFoundError:
+    pass
+
+data_model = sys.argv[3] if len(sys.argv) > 3 else "--32"
+if data_model not in ("--32", "--64"):
+    print("Unsupported data model: %s" % data_model)
+    sys.exit(1)
+flags = "--refined-pointer-analysis %s " % data_model
+
+if "unreach-call.prp" in property_path:
+    flags += "--yaml-witness error-witness.yml "
+elif "no-data-race.prp" in property_path:
+    flags += "--yaml-witness error-witness.yml --no-assertions --datarace "
+elif "no-overflow.prp" in property_path:
+    flags += "--yaml-witness error-witness.yml --no-assertions --signed-overflow-check --unsigned-overflow-check "
+elif "valid-memsafety.prp" in property_path:
+    flags += "--yaml-witness error-witness.yml --no-assertions --pointer-check --alloc-check --memory-leak-check"
+else:
+    print("Unknown property: %s" % property_path)
+    sys.exit(0)
+
+loops_name, loops_limit, is_onlystatic = get_loop_info(program_path, flags)
+
+def run_verification(command):
+    try:
+        os.remove("error-witness.yml")
+    except FileNotFoundError:
+        pass
+    os.system(command)
+
+if not loops_name:
+    # No loops, run deagle_exe without any loop specification!
+    print("No loops!")
+    cmd = "./deagle_exe %s %s > deagle_tmp_output 2>&1" % (program_path, flags)
+    print(cmd)
+    run_verification(cmd)
+    result = get_result()
+elif is_onlystatic:
+    # All loops are static
+    print("All loops can be statically determined!")
+    unwindset = generate_unwindset(loops_name, loops_limit)
+    cmd = "./deagle_exe %s %s --unwindset %s > deagle_tmp_output 2>&1" % (program_path, flags, unwindset)
+    print(cmd)
+    run_verification(cmd)
+    result = get_result()
+else:
+    # Try whether this verification task is solvable without giving unwind limit
+    try_cmd = "timeout 5 ./deagle_exe %s %s > deagle_tmp_output 2>&1" % (program_path, flags)
+    print(try_cmd)
+    run_verification(try_cmd)
+    try_result = get_result(False)
+    if try_result == "SUCCESS" or try_result == "FAILURE":
+        # Solvable in 5 seconds
+        print("Solved within the single try!")
+        result = try_result
+    elif ensure_successful_unwind():
+        # Not solved, but fully unwinded in 5 seconds
+        print("Not solved within the single try, but at least unwinding is successful!")
+        cmd = "./deagle_exe %s %s > deagle_tmp_output 2>&1" % (program_path, flags)
+        print(cmd)
+        run_verification(cmd)
+        result = get_result()
+        
+    else:
+        # Let undetermined loops unwind 3 times
+        print("The bound of loops is not determined!")
+        
+        undetermine_limit = 3
+        loops_limit_it = [loop_limit if loop_limit else undetermine_limit for loop_limit in loops_limit]
+        unwindset = generate_unwindset(loops_name, loops_limit_it)
+        cmd = "./deagle_exe %s %s --unwindset %s > deagle_tmp_output 2>&1" % (program_path, flags, unwindset)
+        
+        print("\nUnwindset: %s" % unwindset)
+        print(cmd)
+        run_verification(cmd)
+        result = get_result()
+
+if result == "SUCCESS":
+    try:
+        os.remove("error-witness.yml")
+    except FileNotFoundError:
+        pass
+    print("SUCCESSFUL")
+    sys.exit(0)
+elif result == "FAILURE":
+    print("FAILED")
+    sys.exit(0)
+else:
+    try:
+        os.remove("error-witness.yml")
+    except FileNotFoundError:
+        pass
+    print(result)
+    sys.exit(1)

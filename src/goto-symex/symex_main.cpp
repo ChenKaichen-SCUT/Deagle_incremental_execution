@@ -1,0 +1,1403 @@
+#include "../util/stage8_meter.h"
+/*******************************************************************\
+
+Module: Symbolic Execution
+
+Author: Daniel Kroening, kroening@kroening.com
+
+\*******************************************************************/
+
+/// \file
+/// Symbolic Execution
+
+#include "goto_symex.h"
+#include "stage3_observer.h"
+#include "stage4_incremental.h"
+
+#include <memory>
+#include <chrono>
+
+#include <pointer-analysis/value_set_dereference.h>
+
+#include <util/exception_utils.h>
+#include <util/expr_iterator.h>
+#include <util/expr_util.h>
+#include <util/format.h>
+#include <util/format_expr.h>
+#include <util/invariant.h>
+#include <util/make_unique.h>
+#include <util/mathematical_expr.h>
+#include <util/replace_symbol.h>
+#include <util/std_expr.h>
+#include <util/symbol_table.h>
+
+#include "path_storage.h"
+
+symex_configt::symex_configt(const optionst &options)
+  : max_depth(options.get_unsigned_int_option("depth")),
+    doing_path_exploration(options.is_set("paths")),
+    allow_pointer_unsoundness(
+     options.get_bool_option("allow-pointer-unsoundness")),
+    constant_propagation(options.get_bool_option("propagation")),
+    self_loops_to_assumptions(
+      options.get_bool_option("self-loops-to-assumptions")),
+    simplify_opt(options.get_bool_option("simplify")),
+    unwinding_assertions(options.get_bool_option("unwinding-assertions")),
+    partial_loops(options.get_bool_option("partial-loops")),
+    havoc_undefined_functions(
+      options.get_bool_option("havoc-undefined-functions")),
+    run_validation_checks(options.get_bool_option("validate-ssa-equation")),
+    show_symex_steps(options.get_bool_option("show-goto-symex-steps")),
+    show_points_to_sets(options.get_bool_option("show-points-to-sets")),
+    max_field_sensitivity_array_size(
+      options.is_set("no-array-field-sensitivity")
+        ? 0
+        : options.is_set("max-field-sensitivity-array-size")
+            ? options.get_unsigned_int_option(
+                "max-field-sensitivity-array-size")
+            : DEFAULT_MAX_FIELD_SENSITIVITY_ARRAY_SIZE),
+    complexity_limits_active(
+      options.get_signed_int_option("symex-complexity-limit") > 0),
+    cache_dereferences{options.get_bool_option("symex-cache-dereferences")}
+{
+}
+
+/// If 'to' is not an instruction in our currently top-most active loop,
+/// pop and re-check until we find an loop we're still active in, or empty
+/// the stack.
+static void pop_exited_loops(
+  const goto_programt::const_targett &to,
+  std::vector<framet::active_loop_infot> &active_loops)
+{
+  while(!active_loops.empty())
+  {
+    if(!active_loops.back().loop.contains(to))
+      active_loops.pop_back();
+    else
+      break;
+  }
+}
+
+void symex_transition(
+  goto_symext::statet &state,
+  goto_programt::const_targett to,
+  bool is_backwards_goto)
+{
+  if(!state.call_stack().empty())
+  {
+    // initialize the loop counter of any loop we are newly entering
+    // upon this transition; we are entering a loop if
+    // 1. the transition from state.source.pc to "to" is not a backwards goto
+    // or
+    // 2. we are arriving from an outer loop
+
+    // TODO: This should all be replaced by natural loop analysis.
+    // This is because the way we detect loops is pretty imprecise.
+
+    framet &frame = state.call_stack().top();
+    const goto_programt::instructiont &instruction=*to;
+    for(const auto &i_e : instruction.incoming_edges)
+    {
+      if(
+        i_e->is_backwards_goto() && i_e->get_target() == to &&
+        (!is_backwards_goto ||
+         state.source.pc->location_number > i_e->location_number))
+      {
+        const auto loop_id =
+          goto_programt::loop_id(state.source.function_id, *i_e);
+        auto &current_loop_info = frame.loop_iterations[loop_id];
+        current_loop_info.count = 0;
+
+        // We've found a loop, put it on the stack and say it's our current
+        // active loop.
+        if(
+          frame.loops_info && frame.loops_info->loop_map.find(to) !=
+                                frame.loops_info->loop_map.end())
+        {
+          frame.active_loops.emplace_back(frame.loops_info->loop_map[to]);
+        }
+      }
+    }
+
+    // Only do this if we have active loop analysis going.
+    if(!frame.active_loops.empty())
+    {
+      // Otherwise if we find we're transitioning out of a loop, make sure
+      // to remove any loops we're not currently iterating over.
+
+      // Match the do-while pattern.
+      if(
+        state.source.pc->is_backwards_goto() &&
+        state.source.pc->location_number < to->location_number)
+      {
+        pop_exited_loops(to, frame.active_loops);
+      }
+
+      // Match for-each or while.
+      for(const auto &incoming_edge : state.source.pc->incoming_edges)
+      {
+        if(
+          incoming_edge->is_backwards_goto() &&
+          incoming_edge->location_number < to->location_number)
+        {
+          pop_exited_loops(to, frame.active_loops);
+        }
+      }
+    }
+  }
+
+  state.source.pc=to;
+}
+
+void symex_transition(goto_symext::statet &state)
+{
+  goto_programt::const_targett next = state.source.pc;
+  ++next;
+  symex_transition(state, next, false);
+}
+
+void goto_symext::symex_assert(
+  const goto_programt::instructiont &instruction,
+  statet &state)
+{
+  exprt condition = clean_expr(instruction.condition(), state, false);
+
+  // First, push negations in and perhaps convert existential quantifiers into
+  // universals:
+  if(has_subexpr(condition, ID_exists) || has_subexpr(condition, ID_forall))
+    do_simplify(condition);
+
+  // Second, L2-rename universal quantifiers:
+  if(has_subexpr(condition, ID_forall))
+    rewrite_quantifiers(condition, state);
+
+  // now rename, enables propagation
+  exprt l2_condition = state.rename(std::move(condition), ns).get();
+
+  // now try simplifier on it
+  do_simplify(l2_condition);
+
+  std::string msg = id2string(instruction.source_location().get_comment());
+  if(msg.empty())
+    msg = "assertion";
+
+  vcc(l2_condition, msg, state);
+}
+
+void goto_symext::vcc(
+  const exprt &condition,
+  const std::string &msg,
+  statet &state)
+{
+  state.total_vccs++;
+  path_segment_vccs++;
+
+  if(condition.is_true())
+    return;
+
+  const exprt guarded_condition = state.guard.guard_expr(condition);
+
+  state.remaining_vccs++;
+  target.assertion(state.guard.as_expr(), guarded_condition, msg, state.source);
+}
+
+// __SZH_ADD_BEGIN__ : because datarace VCCs have no states
+void goto_symext::stateless_vcc(const exprt &condition, const std::string &msg, const std::string &assert_id, const symex_targett::sourcet &source)
+{
+  target.assertion(true_exprt(), condition, msg, source);
+  target.SSA_steps.back().custom_assert_id = assert_id;
+}
+// __SZH_ADD_END__
+
+void goto_symext::symex_assume(statet &state, const exprt &cond)
+{
+  exprt simplified_cond = clean_expr(cond, state, false);
+  simplified_cond = state.rename(std::move(simplified_cond), ns).get();
+  do_simplify(simplified_cond);
+
+  if(enable_deadlock && state.atomic_section_id != 0 &&
+     state.source.function_id == "pthread_mutex_lock")
+    target.lock_acquisitions.push_back(
+      {state.guard.as_expr(), simplified_cond, state.source});
+
+  // It would be better to call try_filter_value_sets after apply_condition,
+  // but it is not currently possible. See the comment at the beginning of
+  // \ref apply_goto_condition for more information.
+
+  try_filter_value_sets(
+    state, cond, state.value_set, &state.value_set, nullptr, ns);
+
+  // apply_condition must come after rename because it might change the
+  // constant propagator and the value-set and we read from those in rename
+  state.apply_condition(simplified_cond, state, ns);
+
+  symex_assume_l2(state, simplified_cond);
+}
+
+void goto_symext::symex_assume_l2(statet &state, const exprt &cond)
+{
+  if(cond.is_true())
+    return;
+
+  if(cond.is_false())
+    state.reachable = false;
+
+  // we are willing to re-write some quantified expressions
+  exprt rewritten_cond = cond;
+  if(has_subexpr(rewritten_cond, ID_exists))
+    rewrite_quantifiers(rewritten_cond, state);
+
+  if(state.threads.size() == 1 &&
+     !(enable_deadlock && state.atomic_section_id != 0 &&
+       state.source.function_id == "pthread_mutex_lock"))
+  {
+    exprt tmp = state.guard.guard_expr(rewritten_cond);
+    target.assumption(state.guard.as_expr(), tmp, state.source);
+  }
+  // symex_target_equationt::convert_assertions would fail to
+  // consider assumptions of threads that have a thread-id above that
+  // of the thread containing the assertion:
+  // T0                     T1
+  // x=0;                   assume(x==1);
+  // assert(x!=42);         x=42;
+  else
+    state.guard.add(rewritten_cond);
+
+  if(state.atomic_section_id!=0 &&
+     state.guard.is_false())
+    symex_atomic_end(state);
+}
+
+void goto_symext::rewrite_quantifiers(exprt &expr, statet &state)
+{
+  const bool is_assert = state.source.pc->is_assert();
+
+  if(
+    (is_assert && expr.id() == ID_forall) ||
+    (!is_assert && expr.id() == ID_exists))
+  {
+    // for assertions e can rewrite "forall X. P" to "P", and
+    // for assumptions we can rewrite "exists X. P" to "P"
+    // we keep the quantified variable unique by means of L2 renaming
+    auto &quant_expr = to_quantifier_expr(expr);
+    symbol_exprt tmp0 =
+      to_symbol_expr(to_ssa_expr(quant_expr.symbol()).get_original_expr());
+    symex_decl(state, tmp0);
+    instruction_local_symbols.push_back(tmp0);
+    exprt tmp = quant_expr.where();
+    rewrite_quantifiers(tmp, state);
+    quant_expr.swap(tmp);
+  }
+  else if(expr.id() == ID_or || expr.id() == ID_and)
+  {
+    for(auto &op : expr.operands())
+      rewrite_quantifiers(op, state);
+  }
+}
+
+static void
+switch_to_thread(goto_symex_statet &state, const unsigned int thread_nb)
+{
+  PRECONDITION(state.source.thread_nr < state.threads.size());
+  PRECONDITION(thread_nb < state.threads.size());
+
+  // save PC
+  state.threads[state.source.thread_nr].pc = state.source.pc;
+  state.threads[state.source.thread_nr].atomic_section_id =
+    state.atomic_section_id;
+
+  // get new PC
+  state.source.thread_nr = thread_nb;
+  state.source.pc = state.threads[thread_nb].pc;
+  state.source.function_id = state.threads[thread_nb].function_id;
+
+  state.guard = state.threads[thread_nb].guard;
+  // A thread's initial state is certainly reachable:
+  state.reachable = true;
+}
+
+void goto_symext::symex_threaded_step(
+  statet &state, const get_goto_functiont &get_goto_function)
+{
+  symex_step(get_goto_function, state);
+
+  _total_vccs = state.total_vccs;
+  _remaining_vccs = state.remaining_vccs;
+
+  if(should_pause_symex)
+    return;
+
+  // is there another thread to execute?
+  if(state.call_stack().empty() &&
+     state.source.thread_nr+1<state.threads.size())
+  {
+    unsigned t=state.source.thread_nr+1;
+#if 0
+    std::cout << "********* Now executing thread " << t << '\n';
+#endif
+    switch_to_thread(state, t);
+    symex_transition(state, state.source.pc, false);
+  }
+}
+
+void goto_symext::symex_with_state(
+  statet &state,
+  const get_goto_functiont &get_goto_function,
+  symbol_tablet &new_symbol_table)
+{
+  // __SZH_ADD_BEGIN__
+  state.symbol_table = new_symbol_table;
+  // __SZH_ADD_END__
+
+  // resets the namespace to only wrap a single symbol table, and does so upon
+  // destruction of an object of this type; instantiating the type is thus all
+  // that's needed to achieve a reset upon exiting this method
+  struct reset_namespacet
+  {
+    explicit reset_namespacet(namespacet &ns) : ns(ns)
+    {
+    }
+
+    ~reset_namespacet()
+    {
+      // Get symbol table 1, the outer symbol table from the GOTO program
+      const symbol_tablet &st = ns.get_symbol_table();
+      // Move a new namespace containing this symbol table over the top of the
+      // current one
+      ns = namespacet(st);
+    }
+
+    namespacet &ns;
+  };
+
+  // We'll be using ns during symbolic execution and it needs to know
+  // about the names minted in `state`, so make it point both to
+  // `state`'s symbol table and the symbol table of the original
+  // goto-program.
+  ns = namespacet(outer_symbol_table, state.symbol_table);
+
+  // whichever way we exit this method, reset the namespace back to a sane state
+  // as state.symbol_table might go out of scope
+  reset_namespacet reset_ns(ns);
+
+  PRECONDITION(state.call_stack().top().end_of_function->is_end_function());
+
+  symex_threaded_step(state, get_goto_function);
+  if(should_pause_symex)
+    return;
+  while(!state.call_stack().empty())
+  {
+    state.has_saved_jump_target = false;
+    state.has_saved_next_instruction = false;
+    symex_threaded_step(state, get_goto_function);
+    if(should_pause_symex)
+      return;
+  }
+
+  // Clients may need to construct a namespace with both the names in
+  // the original goto-program and the names generated during symbolic
+  // execution, so return the names generated through symbolic execution
+  // through `new_symbol_table`.
+  new_symbol_table = state.symbol_table;
+}
+
+void goto_symext::resume_symex_from_saved_state(
+  const get_goto_functiont &get_goto_function,
+  const statet &saved_state,
+  symex_target_equationt *const saved_equation,
+  symbol_tablet &new_symbol_table)
+{
+  // saved_state contains a pointer to a symex_target_equationt that is
+  // almost certainly stale. This is because equations are owned by bmcts,
+  // and we construct a new bmct for every path that we execute. We're on a
+  // new path now, so the old bmct and the equation that it owned have now
+  // been deallocated. So, construct a new state from the old one, and make
+  // its equation member point to the (valid) equation passed as an argument.
+  statet state(saved_state, saved_equation);
+
+  // Do NOT do the same initialization that `symex_with_state` does for a
+  // fresh state, as that would clobber the saved state's program counter
+  symex_with_state(
+      state,
+      get_goto_function,
+      new_symbol_table);
+}
+
+std::unique_ptr<goto_symext::statet> goto_symext::initialize_entry_point_state(
+  const get_goto_functiont &get_goto_function)
+{
+  const irep_idt entry_point_id = goto_functionst::entry_point();
+
+  const goto_functionst::goto_functiont *start_function;
+  try
+  {
+    start_function = &get_goto_function(entry_point_id);
+  }
+  catch(const std::out_of_range &)
+  {
+    throw unsupported_operation_exceptiont("the program has no entry point");
+  }
+
+  // Get our path_storage pointer because this state will live beyond
+  // this instance of goto_symext, so we can't take the reference directly.
+  auto *storage = &path_storage;
+
+  // create and prepare the state
+  auto state = util_make_unique<statet>(
+    symex_targett::sourcet(entry_point_id, start_function->body),
+    symex_config.max_field_sensitivity_array_size,
+    symex_config.simplify_opt,
+    guard_manager,
+    [storage](const irep_idt &id) { return storage->get_unique_l2_index(id); });
+
+  CHECK_RETURN(!state->threads.empty());
+  CHECK_RETURN(!state->call_stack().empty());
+
+  goto_programt::const_targett limit =
+    std::prev(start_function->body.instructions.end());
+  state->call_stack().top().end_of_function = limit;
+  state->call_stack().top().calling_location.pc =
+    state->call_stack().top().end_of_function;
+  state->call_stack().top().hidden_function = start_function->is_hidden();
+
+  state->symex_target = &target;
+
+  state->run_validation_checks = symex_config.run_validation_checks;
+
+  // initialize support analyses
+  auto emplace_safe_pointers_result =
+    path_storage.safe_pointers.emplace(entry_point_id, local_safe_pointerst{});
+  if(emplace_safe_pointers_result.second)
+    emplace_safe_pointers_result.first->second(start_function->body);
+
+  path_storage.dirty.populate_dirty_for_function(
+    entry_point_id, *start_function);
+  state->dirty = &path_storage.dirty;
+
+  // Only enable loop analysis when complexity is enabled.
+  if(symex_config.complexity_limits_active)
+  {
+    // Set initial loop analysis.
+    path_storage.add_function_loops(entry_point_id, start_function->body);
+    state->call_stack().top().loops_info =
+      path_storage.get_loop_analysis(entry_point_id);
+  }
+
+  // make the first step onto the instruction pointed to by the initial program
+  // counter
+  symex_transition(*state, state->source.pc, false);
+
+  return state;
+}
+
+void goto_symext::symex_from_entry_point_of(
+  const get_goto_functiont &get_goto_function,
+  symbol_tablet &new_symbol_table)
+{
+  auto state = initialize_entry_point_state(get_goto_function);
+
+  symex_with_state(*state, get_goto_function, new_symbol_table);
+}
+
+void goto_symext::initialize_path_storage_from_entry_point_of(
+  const get_goto_functiont &get_goto_function,
+  symbol_tablet &new_symbol_table)
+{
+  auto state = initialize_entry_point_state(get_goto_function);
+
+  path_storaget::patht entry_point_start(target, *state);
+  entry_point_start.state.saved_target = state->source.pc;
+  entry_point_start.state.has_saved_next_instruction = true;
+
+  path_storage.push(entry_point_start);
+}
+
+goto_symext::get_goto_functiont
+goto_symext::get_goto_function(abstract_goto_modelt &goto_model)
+{
+  return [&goto_model](
+           const irep_idt &id) -> const goto_functionst::goto_functiont & {
+    return goto_model.get_goto_function(id);
+  };
+}
+
+messaget::mstreamt &
+goto_symext::print_callstack_entry(const symex_targett::sourcet &source)
+{
+  log.status() << source.function_id
+               << " location number: " << source.pc->location_number;
+
+  return log.status();
+}
+
+void goto_symext::print_symex_step(statet &state)
+{
+  // If we're showing the route, begin outputting debug info, and don't print
+  // instructions we don't run.
+
+  // We also skip dead instructions as they don't add much to step-based
+  // debugging and if there's no code block at this point.
+  if(
+    !symex_config.show_symex_steps || !state.reachable ||
+    state.source.pc->type() == DEAD ||
+    (state.source.pc->code().is_nil() &&
+     state.source.pc->type() != END_FUNCTION))
+  {
+    return;
+  }
+
+  if(state.source.pc->code().is_not_nil())
+  {
+    auto guard_expression = state.guard.as_expr();
+    std::size_t size = 0;
+    for(auto it = guard_expression.depth_begin();
+        it != guard_expression.depth_end();
+        ++it)
+    {
+      size++;
+    }
+
+    log.status() << "[Guard size: " << size << "] "
+                 << format(state.source.pc->code());
+
+    if(
+      state.source.pc->source_location().is_not_nil() &&
+      !state.source.pc->source_location().get_java_bytecode_index().empty())
+    {
+      log.status()
+        << " bytecode index: "
+        << state.source.pc->source_location().get_java_bytecode_index();
+    }
+
+    log.status() << messaget::eom;
+  }
+
+  // Print the method we're returning too.
+  const auto &call_stack = state.threads[state.source.thread_nr].call_stack;
+  if(state.source.pc->type() == END_FUNCTION)
+  {
+    log.status() << messaget::eom;
+
+    if(!call_stack.empty())
+    {
+      log.status() << "Returning to: ";
+      print_callstack_entry(call_stack.back().calling_location)
+        << messaget::eom;
+    }
+
+    log.status() << messaget::eom;
+  }
+
+  // On a function call print the entire call stack.
+  if(state.source.pc->type() == FUNCTION_CALL)
+  {
+    log.status() << messaget::eom;
+
+    if(!call_stack.empty())
+    {
+      log.status() << "Call stack:" << messaget::eom;
+
+      for(auto &frame : call_stack)
+      {
+        print_callstack_entry(frame.calling_location) << messaget::eom;
+      }
+
+      print_callstack_entry(state.source) << messaget::eom;
+
+      // Add the method we're about to enter with no location number.
+      log.status() << format(state.source.pc->call_function()) << messaget::eom
+                   << messaget::eom;
+    }
+  }
+}
+
+/// do just one step
+void goto_symext::symex_step(
+  const get_goto_functiont &get_goto_function,
+  statet &state)
+{
+  if(stage4::configured()) stage4::before_step(state,target,path_storage);
+  s8::Scope s8_dispatch(s8::state().detail && s8::state().dispatch++ < s8::state().prefix ? s8::prefix_dispatch : s8::other_dispatch);
+  // __SZH_ADD_BEGIN__
+  if(try_finding_value_set)
+    overall_value_set.make_union(state.value_set);
+  // __SZH_ADD_END__
+
+  // Print debug statements if they've been enabled.
+  const bool observe = stage3::enabled();
+  const auto prior_size = observe ? target.SSA_steps.size() : 0;
+  const auto dispatch = observe ? stage3::visit(state) : 0;
+  print_symex_step(state);
+  execute_next_instruction(get_goto_function, state);
+  kill_instruction_local_symbols(state);
+  if(observe)
+  {
+    auto row = target.SSA_steps.rbegin();
+    for(auto size = target.SSA_steps.size(); size > prior_size; --size, ++row)
+      row->observer_visit = dispatch;
+  }
+}
+
+void goto_symext::execute_next_instruction(
+  const get_goto_functiont &get_goto_function,
+  statet &state)
+{
+  PRECONDITION(!state.threads.empty());
+  PRECONDITION(!state.call_stack().empty());
+
+  const goto_programt::instructiont &instruction=*state.source.pc;
+
+  if(!symex_config.doing_path_exploration)
+    merge_gotos(state);
+
+  // depth exceeded?
+  if(state.depth > symex_config.max_depth)
+  {
+    // Rule out this path:
+    symex_assume_l2(state, false_exprt());
+  }
+  state.depth++;
+
+  // actually do instruction
+  switch(instruction.type())
+  {
+  case SKIP:
+    if(state.reachable)
+      target.location(state.guard.as_expr(), state.source);
+    symex_transition(state);
+    break;
+
+  case END_FUNCTION:
+    // do even if !state.reachable to clear out frame created
+    // in symex_start_thread
+    symex_end_of_function(state);
+    symex_transition(state);
+    break;
+
+  case LOCATION:
+    if(state.reachable)
+      target.location(state.guard.as_expr(), state.source);
+    symex_transition(state);
+    break;
+
+  case GOTO:
+    if(state.reachable)
+      symex_goto(state);
+    else
+      symex_unreachable_goto(state);
+    break;
+
+  case ASSUME:
+    if(state.reachable)
+      symex_assume(state, instruction.condition());
+    symex_transition(state);
+    break;
+
+  case ASSERT:
+    if(state.reachable && !ignore_assertions)
+      symex_assert(instruction, state);
+    symex_transition(state);
+    break;
+
+  case SET_RETURN_VALUE:
+    if(state.reachable)
+      symex_set_return_value(state, instruction.return_value());
+    symex_transition(state);
+    break;
+
+  case ASSIGN:
+    if(state.reachable)
+      symex_assign(state, instruction.assign_lhs(), instruction.assign_rhs());
+
+    symex_transition(state);
+    break;
+
+  case FUNCTION_CALL:
+    if(state.reachable)
+      symex_function_call(get_goto_function, state, instruction);
+    else
+      symex_transition(state);
+    break;
+
+  case OTHER:
+    if(state.reachable)
+      symex_other(state);
+    symex_transition(state);
+    break;
+
+  case DECL:
+    if(state.reachable)
+      symex_decl(state);
+    symex_transition(state);
+    break;
+
+  case DEAD:
+    symex_dead(state);
+    symex_transition(state);
+    break;
+
+  case START_THREAD:
+    symex_start_thread(state);
+    symex_transition(state);
+    break;
+
+  case END_THREAD:
+    // behaves like assume(0);
+    if(state.reachable)
+      state.reachable = false;
+    symex_transition(state);
+    break;
+
+  case ATOMIC_BEGIN:
+    symex_atomic_begin(state);
+    symex_transition(state);
+    break;
+
+  case ATOMIC_END:
+    symex_atomic_end(state);
+    symex_transition(state);
+    break;
+
+  case CATCH:
+    symex_catch(state);
+    symex_transition(state);
+    break;
+
+  case THROW:
+    symex_throw(state);
+    symex_transition(state);
+    break;
+
+  case NO_INSTRUCTION_TYPE:
+    throw unsupported_operation_exceptiont("symex got NO_INSTRUCTION");
+
+  case INCOMPLETE_GOTO:
+    DATA_INVARIANT(false, "symex got unexpected instruction type");
+  }
+
+  complexity_violationt complexity_result =
+    complexity_module.check_complexity(state);
+  if(complexity_result != complexity_violationt::NONE)
+    complexity_module.run_transformations(complexity_result, state);
+}
+
+void goto_symext::kill_instruction_local_symbols(statet &state)
+{
+  for(const auto &symbol_expr : instruction_local_symbols)
+    symex_dead(state, symbol_expr);
+  instruction_local_symbols.clear();
+}
+
+/// Check if an expression only contains one unique symbol (possibly repeated
+/// multiple times)
+/// \param expr: The expression to examine
+/// \return If only one unique symbol occurs in \p expr then return it;
+///   otherwise return an empty optionalt
+static optionalt<symbol_exprt>
+find_unique_pointer_typed_symbol(const exprt &expr)
+{
+  optionalt<symbol_exprt> return_value;
+  for(auto it = expr.depth_cbegin(); it != expr.depth_cend(); ++it)
+  {
+    const symbol_exprt *symbol_expr = expr_try_dynamic_cast<symbol_exprt>(*it);
+    if(symbol_expr && can_cast_type<pointer_typet>(symbol_expr->type()))
+    {
+      // If we already have a potential return value, check if it is the same
+      // symbol, and return an empty optionalt if not
+      if(return_value && *symbol_expr != *return_value)
+      {
+        return {};
+      }
+      return_value = *symbol_expr;
+    }
+  }
+
+  // Either expr contains no pointer-typed symbols or it contains one unique
+  // pointer-typed symbol, possibly repeated multiple times
+  return return_value;
+}
+
+void goto_symext::try_filter_value_sets(
+  goto_symex_statet &state,
+  exprt condition,
+  const value_sett &original_value_set,
+  value_sett *jump_taken_value_set,
+  value_sett *jump_not_taken_value_set,
+  const namespacet &ns)
+{
+  condition = state.rename<L1>(std::move(condition), ns).get();
+
+  optionalt<symbol_exprt> symbol_expr =
+    find_unique_pointer_typed_symbol(condition);
+
+  if(!symbol_expr)
+  {
+    return;
+  }
+
+  const pointer_typet &symbol_type = to_pointer_type(symbol_expr->type());
+
+  const std::vector<exprt> value_set_elements =
+    original_value_set.get_value_set(*symbol_expr, ns);
+
+  std::unordered_set<exprt, irep_hash> erase_from_jump_taken_value_set;
+  std::unordered_set<exprt, irep_hash> erase_from_jump_not_taken_value_set;
+  erase_from_jump_taken_value_set.reserve(value_set_elements.size());
+  erase_from_jump_not_taken_value_set.reserve(value_set_elements.size());
+
+  // Try evaluating the condition with the symbol replaced by a pointer to each
+  // one of its possible values in turn. If that leads to a true for some
+  // value_set_element then we can delete it from the value set that will be
+  // used if the condition is false, and vice versa.
+  for(const exprt &value_set_element : value_set_elements)
+  {
+    if(
+      value_set_element.id() == ID_unknown ||
+      value_set_element.id() == ID_invalid)
+    {
+      continue;
+    }
+
+    const bool exclude_null_derefs = false;
+    if(value_set_dereferencet::should_ignore_value(
+         value_set_element, exclude_null_derefs, language_mode))
+    {
+      continue;
+    }
+
+    value_set_dereferencet::valuet value =
+      value_set_dereferencet::build_reference_to(
+        value_set_element, *symbol_expr, ns);
+
+    if(value.pointer.is_nil())
+      continue;
+
+    exprt modified_condition(condition);
+
+    address_of_aware_replace_symbolt replace_symbol{};
+    replace_symbol.insert(*symbol_expr, value.pointer);
+    replace_symbol(modified_condition);
+
+    // This do_simplify() is needed for the following reason: if `condition` is
+    // `*p == a` and we replace `p` with `&a` then we get `*&a == a`. Suppose
+    // our constant propagation knows that `a` is `1`. Without this call to
+    // do_simplify(), state.rename() turns this into `*&a == 1` (because
+    // rename() doesn't do constant propagation inside addresses), which
+    // do_simplify() turns into `a == 1`, which cannot be evaluated as true
+    // without another round of constant propagation.
+    // It would be sufficient to replace this call to do_simplify() with
+    // something that just replaces `*&x` with `x` whenever it finds it.
+    do_simplify(modified_condition);
+
+    state.record_events.push(false);
+    modified_condition = state.rename(std::move(modified_condition), ns).get();
+    state.record_events.pop();
+
+    do_simplify(modified_condition);
+
+    if(jump_taken_value_set && modified_condition.is_false())
+    {
+      erase_from_jump_taken_value_set.insert(value_set_element);
+    }
+    else if(jump_not_taken_value_set && modified_condition.is_true())
+    {
+      erase_from_jump_not_taken_value_set.insert(value_set_element);
+    }
+  }
+  if(jump_taken_value_set && !erase_from_jump_taken_value_set.empty())
+  {
+    auto entry_index = jump_taken_value_set->get_index_of_symbol(
+      symbol_expr->get_identifier(), symbol_type, "", ns);
+    jump_taken_value_set->erase_values_from_entry(
+      *entry_index, erase_from_jump_taken_value_set);
+  }
+  if(jump_not_taken_value_set && !erase_from_jump_not_taken_value_set.empty())
+  {
+    auto entry_index = jump_not_taken_value_set->get_index_of_symbol(
+      symbol_expr->get_identifier(), symbol_type, "", ns);
+    jump_not_taken_value_set->erase_values_from_entry(
+      *entry_index, erase_from_jump_not_taken_value_set);
+  }
+}
+
+// __SZH_ADD_BEGIN__
+#include <iostream>
+#include <fstream>
+
+#include <regex>
+#include <unistd.h>
+
+std::string process_filename(std::string filename)
+{
+  std::string processed;
+
+  for(char c : filename)
+  {
+    if(c == '.')
+      processed += "\\.";
+    else
+      processed += c;
+  }
+  return processed;
+}
+
+std::string basename_filename(std::string filename)
+{
+  return filename.substr(filename.rfind('/') + 1);
+}
+
+int read_goblint_result(std::set<std::string>& linenumbers, std::ifstream& in, std::string filename)
+{
+  int goblint_race_num = 0;
+
+  std::string line;
+  std::vector<std::string> lines;
+
+  while(std::getline(in, line))
+  {
+      if(!line.empty())
+          lines.push_back(line);
+  }
+
+  bool datarace = false;
+
+  int write_num = 0;
+  int read_num = 0;
+
+  std::regex pattern ("\\(" + process_filename(filename) + ":(\\d+):(\\d+)" + "\\)");
+
+  for(auto line : lines)
+  {
+      if(line.find("[Warning]") != std::string::npos) //header
+      {
+          datarace = (line.find("[Warning]") != std::string::npos);
+
+          goblint_race_num += read_num * write_num + write_num * (write_num - 1) / 2;
+          write_num = 0;
+          read_num = 0;
+      }
+      else if(datarace)
+      {
+          std::smatch match_result;
+          if(std::regex_search(line, match_result, pattern))
+              linenumbers.insert(match_result[1].str());
+
+          if(line.find("write with") != std::string::npos)
+              write_num++;
+          if(line.find("read with") != std::string::npos)
+              read_num++;
+      }
+  }
+
+  goblint_race_num += read_num * write_num + write_num * (write_num - 1) / 2;
+
+  return goblint_race_num;
+}
+
+void widen_datarace_lines(std::set<std::string>& lines)
+{
+  auto original_lines = lines;
+  for(auto line : original_lines)
+  {
+    int line_int = std::stoi(line);
+    lines.insert(std::to_string(line_int + 1));
+  }
+}
+
+void invoke_goblint(std::string filename, symex_target_equationt& equation)
+{
+  char buffer[256];
+  auto getcwd_result = getcwd(buffer, 256);
+  std::cout << "getcwd: " << getcwd_result << "\n";
+  std::string goblint_command = buffer;
+  std::string output = "goblint/goblint_output";
+  goblint_command += "/goblint/goblint ";
+  goblint_command += filename;
+  goblint_command += " | tee ";
+  goblint_command += output;
+
+
+  const auto goblint_start = std::chrono::steady_clock::now();
+
+  int res = system(goblint_command.c_str());
+  std::cout << goblint_command << ": " << res << "\n";
+
+  const auto goblint_stop = std::chrono::steady_clock::now();
+  std::chrono::duration<double> goblint_runtime = std::chrono::duration<double>(goblint_stop - goblint_start);
+  std::cout << "Runtime goblint filter: " << goblint_runtime.count() << "s\n";
+
+  std::ifstream in(output.c_str());
+
+  read_goblint_result(equation.datarace_lines, in, filename);
+  widen_datarace_lines(equation.datarace_lines);
+}
+
+void read_locksmith_result(std::set<std::string>& linenumbers, std::ifstream& in, std::string filename)
+{
+  std::string line;
+  std::vector<std::string> lines;
+
+  while(std::getline(in, line))
+  {
+      if(!line.empty())
+          lines.push_back(line);
+  }
+
+  std::string processed_filename = process_filename(basename_filename(filename));
+  std::regex pattern1 ("Warning: Possible data race:.*" + processed_filename + ":(\\d+) is not protected!");
+  std::regex pattern2 ("dereference of .*" + processed_filename + ":(\\d+) at " + processed_filename + ":(\\d+)");
+
+  for(auto line : lines)
+  {
+    std::cout << line << "\n";
+    std::smatch match_result1;
+    if(std::regex_search(line, match_result1, pattern1))
+        linenumbers.insert(match_result1[1].str());
+    std::smatch match_result2;
+    if(std::regex_search(line, match_result2, pattern2))
+        linenumbers.insert(match_result2[2].str());
+  }
+}
+
+void invoke_locksmith(std::string filename, symex_target_equationt& equation)
+{
+  char buffer[256];
+  auto getcwd_result = getcwd(buffer, 256);
+  std::cout << "getcwd: " << getcwd_result << "\n";
+  std::string locksmith_command = buffer;
+  std::string output = "locksmith/locksmith_output";
+  locksmith_command += "/locksmith/locksmith ";
+  locksmith_command += filename;
+  locksmith_command += " > ";
+  locksmith_command += output;
+  locksmith_command += " 2>&1";
+
+  const auto locksmith_start = std::chrono::steady_clock::now();
+
+  int res = system(locksmith_command.c_str());
+  std::cout << locksmith_command << ": " << res << "\n";
+
+  const auto locksmith_stop = std::chrono::steady_clock::now();
+  std::chrono::duration<double> locksmith_runtime = std::chrono::duration<double>(locksmith_stop - locksmith_start);
+  std::cout << "Runtime locksmith filter: " << locksmith_runtime.count() << "s\n";
+
+  std::ifstream in(output.c_str());
+
+  read_locksmith_result(equation.datarace_lines, in, filename);
+  widen_datarace_lines(equation.datarace_lines);
+}
+
+inline bool has_prefix(std::string str)
+{
+  return str.find("[[") != str.npos || str.find("..") != str.npos;
+}
+
+#include <util/arith_tools.h>
+
+void goto_symext::symex_datarace(std::string filename)
+{
+  target.enable_datarace = true;
+
+  if(datarace_filter == "goblint")
+  {
+    std::cout << "Handling datarace with goblint\n";
+    invoke_goblint(filename, target);
+    target.build_datarace(ns, true);
+  }
+  else if(datarace_filter == "locksmith")
+  {
+    std::cout << "Handling datarace with locksmith\n";
+    invoke_locksmith(filename, target);
+    target.build_datarace(ns, true);
+  }
+  else
+  {
+    std::cout << "Handling datarace with no aid\n";
+    target.build_datarace(ns, false);
+  }
+  
+  // There are two methods to represent arrays:
+  // Method1: arr#1
+  // Method2: arr#1[[0]], arr#1[[1]], ...
+  // In the first method, array operation is represented like arr#2 = with(arr#1, i, new_value)
+  // Here only the ith element of arr#1 and arr#2 are accessed
+  // In the second method, arr#1 = {arr#1[[[0]], arr#1[[1]], ...} and each element is respectively assigned
+  // However, accesses to some elements might be dummy
+  // (such as arr#2[[0]] = arr#1[[0]], which means the 0th element just keeps the same)
+
+  // used for Method1
+  std::map<std::string, std::pair<exprt, exprt>> byte_update_map;
+  target.build_byte_update_map(byte_update_map, ns);
+  std::map<std::string, exprt> with_map;
+  target.build_with_map(with_map, ns);
+
+  // used for Method2
+  std::map<std::string, exprt> available_cond_map;
+  target.build_available_cond_map(available_cond_map, ns);
+
+  int race_assert_id = 0;
+  for(auto& races_it : target.linenumbers_to_races)
+  {
+    auto& races = races_it.second;
+    auto& race_identifier = races_it.first;
+    const symex_targett::sourcet* race_source = NULL;
+
+    exprt::operandst same_races;
+
+    std::cout << "Races between line " << race_identifier.first_linenumber << " - line " << race_identifier.second_linenumber << ":\n";
+
+    for(auto& race : races)
+    {
+      int race_id_int = target.numbered_dataraces.size();
+      std::string race_id_str = "race" + std::to_string(race_id_int);
+      irep_idt race_id(race_id_str);
+      symbol_exprt race_var(race_id, bool_typet());
+
+      exprt::operandst conds;
+      if(race.first->guard != true_exprt())
+        conds.push_back(race.first->guard);
+      if(race.second->guard != true_exprt())
+        conds.push_back(race.second->guard);
+
+      std::string first_str = race.first->ssa_lhs.get_identifier().c_str();
+      std::string second_str = race.second->ssa_lhs.get_identifier().c_str();
+
+      // Method 1
+      if(byte_update_map.find(first_str) != byte_update_map.end() || byte_update_map.find(second_str) != byte_update_map.end())
+      {
+        exprt first_index_from = from_integer(0, signedbv_typet(32));
+        exprt first_index_to = from_integer(target.get_byte_length(race.first->ssa_lhs), signedbv_typet(32));
+        if(byte_update_map.find(first_str) != byte_update_map.end())
+        {
+          first_index_from = byte_update_map[first_str].first;
+          first_index_to = byte_update_map[first_str].second;
+        }
+        exprt second_index_from = from_integer(0, signedbv_typet(32));
+        exprt second_index_to = from_integer(target.get_byte_length(race.second->ssa_lhs), signedbv_typet(32));
+        if(byte_update_map.find(second_str) != byte_update_map.end())
+        {
+          second_index_from = byte_update_map[second_str].first;
+          second_index_to = byte_update_map[second_str].second;
+        }
+
+        and_exprt overlap(greater_than_exprt(first_index_to, second_index_from), greater_than_exprt(second_index_to, first_index_from));
+        simplify(overlap, ns);
+
+        conds.push_back(overlap);
+      }
+      else if(with_map.find(first_str) != with_map.end() && with_map.find(second_str) != with_map.end())
+      {
+        auto& first_index = with_map[first_str];
+        auto& second_index = with_map[second_str];
+
+        equal_exprt equality(first_index, second_index);
+        simplify(equality, ns);
+
+        conds.push_back(equality);
+      }
+      else // Method 2
+      {
+        auto first_cond_it = available_cond_map.find(first_str);
+        if(first_cond_it != available_cond_map.end())
+          conds.push_back(first_cond_it->second);
+        else
+        {
+          std::cout << "\t" << first_str << " " << second_str << "(hidden, because first is dummy)\n";
+          continue;
+        }
+        auto second_cond_it = available_cond_map.find(second_str);
+        if(second_cond_it != available_cond_map.end())
+          conds.push_back(second_cond_it->second);
+        else
+        {
+          std::cout << "\t" << first_str << " " << second_str << "(hidden, because second is dummy)\n";
+          continue;
+        }
+      }
+
+      // implies_exprt no_datarace(conjunction(conds), not_exprt(race_var));
+      // same_races.push_back(no_datarace);
+      same_races.push_back(not_exprt(race_var));
+
+      auto cond = conjunction(conds);
+      simplify(cond, ns);
+      if(!cond.is_true())
+        target.constraint(implies_exprt(race_var, conjunction(conds)), "rc-cond", race.first->source);
+
+      target.numbered_dataraces.push_back(race);
+      race_source = &(race.first->source);
+
+      std::cout << "\t" << first_str << " " << second_str << " with condition " << format(cond) << "\n";
+    }
+
+    if(same_races.empty())
+      continue;
+
+    auto all_race_triplets = conjunction(same_races);
+
+    std::string msg = "No data races on variable " + race_identifier.var_name;
+    msg += " between line " + race_identifier.first_linenumber;
+    msg += " and line " + race_identifier.second_linenumber;
+
+    std::string assert_id = "nodatarace.assertion." + std::to_string(race_assert_id);
+    race_assert_id++;
+
+    stateless_vcc(all_race_triplets, msg, assert_id, *race_source);
+  }
+
+}
+
+void goto_symext::symex_alloc_check()
+{
+  int alloc_assert_id = 0;
+
+  for(symex_target_equationt::event_it e_it=target.SSA_steps.begin(); e_it!=target.SSA_steps.end(); e_it++)
+  {
+    if(e_it->is_assignment())
+    {
+      auto lhs = e_it->ssa_lhs;
+      std::string lhs_name = lhs.get_identifier().c_str();
+      if(lhs_name.find("malloc::malloc_size") == std::string::npos)
+        continue;
+      
+      auto rhs = e_it->ssa_rhs;
+      if(rhs.id() != ID_mult)
+        continue;
+      
+      auto& mult_op0 = to_mult_expr(rhs).op0();
+      auto& mult_op1 = to_mult_expr(rhs).op1();
+
+      greater_than_or_equal_exprt geq_than_op0(lhs, mult_op0);
+      greater_than_or_equal_exprt geq_than_op1(lhs, mult_op1);
+      or_exprt assertion(geq_than_op0, geq_than_op1);
+      std::string msg = lhs_name + " does not overflow";
+      std::string assert_id = "alloc.assertion." + std::to_string(alloc_assert_id);
+      alloc_assert_id++;
+
+      stateless_vcc(implies_exprt(e_it->guard, assertion), msg, assert_id, e_it->source);
+    }
+  }
+
+  for(symex_target_equationt::event_it e_it=target.SSA_steps.begin(); e_it!=target.SSA_steps.end(); e_it++)
+  {
+    if(e_it->is_assignment())
+    {
+      auto lhs = e_it->ssa_lhs;
+      std::string lhs_name = lhs.get_identifier().c_str();
+
+      if(lhs_name.find("array_size") == std::string::npos)
+        continue;
+      std::cout << "find assignment to array size:\n";
+      e_it->output(std::cout);
+      auto rhs = e_it->ssa_rhs;
+      if(rhs.id() != ID_typecast)
+        continue;
+      auto& typecast_original = to_typecast_expr(rhs).operands()[0];
+      //constant_exprt million("10000000000000000000", typecast_original.type());
+      constant_exprt million("100000", typecast_original.type());
+      less_than_exprt assertion(typecast_original, million);
+      std::string msg = lhs_name + " does not exceed";
+      std::string assert_id = "alloc.assertion." + std::to_string(alloc_assert_id);
+      alloc_assert_id++;
+
+      stateless_vcc(implies_exprt(e_it->guard, assertion), msg, assert_id, e_it->source);
+    }
+  }
+}
+
+void goto_symext::concurrency_slice()
+{
+  target.concurrency_slice();
+}
+
+void goto_symext::remove_dummy_accesses()
+{
+  target.remove_dummy_accesses();
+}
+// __SZH_ADD_END__
+
+
+// __WP_ADD_BEGIN__
+// void goto_symext::backtracing_for_deadlock(std::vector<symex_target_equationt::event_it>& locks_tuples,
+//  std::map<unsigned, std::vector<symex_target_equationt::event_it>>::iterator it1, int& deadlock_assert_id) {
+//   if(locks_tuples.size() >= 2) {
+//     std::string msg = "No deadlock on ";
+//     std::string assert_id = "nodeadlock.assertion." + std::to_string(deadlock_assert_id);
+//     deadlock_assert_id++;
+
+//     exprt::operandst lock_guard_tuples;
+//     for(auto& lock : locks_tuples) {
+
+//       // lock_guard_tuples.push_back(lock->guard);
+
+//       if (lock->guard.id() == ID_and) {
+//         // std::cout << "AND_______lock->guard: " << lock->guard.pretty() << "\n";
+//         // std::cout << "AND_______lock->guard.operands().back(): " << lock->guard.operands().back().pretty() << "\n";
+//         lock_guard_tuples.push_back(lock->guard.operands().back());
+//       }
+//       else {
+//         // std::cout << "NotAND____lock->guard: " << lock->guard.pretty() << "\n";
+//         lock_guard_tuples.push_back(lock->guard);
+//       }
+      
+//       msg += "variable ";
+//       msg += id2string(lock->ssa_lhs.get_identifier());
+//       msg += " in line ";
+//       msg += lock->source.pc->source_location().get_line().c_str();
+//       msg += ",";
+//     }
+//     msg.pop_back();
+//     msg += ".";
+
+//     stateless_vcc(disjunction(lock_guard_tuples), msg, assert_id, (*locks_tuples.begin())->source);
+//   }
+
+//   if(it1 == target.per_thread_locks.end())
+//     return;
+  
+//   // std::cout << "thread_id: " << it1->first << "\n";
+
+//   it1++;
+//   if (it1 != target.per_thread_locks.end())
+//     backtracing_for_deadlock(locks_tuples, it1, deadlock_assert_id);
+//   it1--;
+
+//   for(auto it2 = it1->second.begin(); it2 != it1->second.end(); it2++) {
+//     locks_tuples.push_back(*it2);
+//     it1++;
+//     backtracing_for_deadlock(locks_tuples, it1, deadlock_assert_id);
+//     it1--;
+//     locks_tuples.pop_back();
+//   }
+// }
+
+
+void goto_symext::symex_deadlock()
+{
+  std::cout << "Handling deadlock!\n";
+  target.build_deadlock();
+
+  exprt::operandst integrity_constraint;
+  for(const auto &event_return : target.program_returns)
+    integrity_constraint.push_back(boolean_negate(event_return->guard));
+  for(const auto &event_assert : target.loop_asserts_in_critical)
+    integrity_constraint.push_back(event_assert->cond_expr);
+
+  unsigned deadlock_assert_id = 0;
+  for(const auto &acquisition : target.lock_acquisitions)
+  {
+    // Access-selection guards may be appended to shared events independently.
+    // A blocked acquisition is the prefix guard AND NOT its actual assume.
+    const and_exprt blocked(
+      acquisition.guard,
+      boolean_negate(acquisition.condition),
+      conjunction(integrity_constraint));
+    stateless_vcc(
+      boolean_negate(blocked),
+      "No deadlock on mutex acquisition",
+      "nodeadlock.assertion." + std::to_string(deadlock_assert_id++),
+      acquisition.source);
+  }
+}
+
+// __WP_ADD_END__

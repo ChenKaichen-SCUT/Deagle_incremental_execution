@@ -1,0 +1,13 @@
+let com = (co | fr | rf)
+acyclic poloc | com as uniproc
+
+empty rmw & (fre;coe)
+let implied = po & W*R & ((M * A) | (A * M))
+let comtso = (co | fr | rfe)
+
+let mfence = [M]; po; [Fmfence]; po; [M]
+let potso = ((po & ((R*M) | (W*W))) | mfence)
+
+let ghbtso = potso | comtso | implied
+
+acyclic ghbtso as tso

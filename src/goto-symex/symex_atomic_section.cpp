@@ -1,0 +1,112 @@
+/*******************************************************************\
+
+Module: Symbolic Execution
+
+Author: Daniel Kroening, kroening@kroening.com
+
+\*******************************************************************/
+
+/// \file
+/// Symbolic Execution
+
+#include "goto_symex.h"
+
+#include <util/exception_utils.h>
+
+void goto_symext::symex_atomic_begin(statet &state)
+{
+  if(!state.reachable)
+    return;
+
+  if(state.atomic_section_id != 0)
+    throw incorrect_goto_program_exceptiont(
+      "we don't support nesting of atomic sections",
+      state.source.pc->source_location());
+
+  state.atomic_section_id=++atomic_section_counter;
+  state.read_in_atomic_section.clear();
+  state.written_in_atomic_section.clear();
+  state.mutex_access_guards.clear();
+  state.read_in_atomic_section_sources.clear();
+  state.written_in_atomic_section_sources.clear();
+
+  target.atomic_begin(
+      state.guard.as_expr(),
+      atomic_section_counter,
+      state.source);
+}
+
+void goto_symext::symex_atomic_end(statet &state)
+{
+  if(!state.reachable)
+    return;
+
+  if(state.atomic_section_id == 0)
+    throw incorrect_goto_program_exceptiont(
+      "ATOMIC_END unmatched", state.source.pc->source_location());
+
+  const unsigned atomic_section_id=state.atomic_section_id;
+  state.atomic_section_id=0;
+
+  for(const auto &pair : state.read_in_atomic_section)
+  {
+    ssa_exprt r = pair.first;
+    r.set_level_2(pair.second.first);
+
+    symex_targett::sourcet source = state.source;
+    for(const auto& source_pair : state.read_in_atomic_section_sources)
+      if(source_pair.first == pair.first)
+        source = source_pair.second;
+
+    // guard is the disjunction over reads
+    PRECONDITION(!pair.second.second.empty());
+    guardt read_guard(pair.second.second.front());
+    for(std::list<guardt>::const_iterator it = ++(pair.second.second.begin());
+        it != pair.second.second.end();
+        ++it)
+      read_guard|=*it;
+    const auto selection = state.mutex_access_guards.find(pair.first);
+    if(selection != state.mutex_access_guards.end())
+      read_guard.add(disjunction(selection->second));
+    exprt read_guard_expr=read_guard.as_expr();
+    do_simplify(read_guard_expr);
+
+    target.shared_read(
+      read_guard_expr,
+      r,
+      atomic_section_id,
+      source);
+  }
+
+  for(const auto &pair : state.written_in_atomic_section)
+  {
+    ssa_exprt w = pair.first;
+    w.set_level_2(state.get_level2().latest_index(w.get_identifier()));
+
+    symex_targett::sourcet source = state.source;
+    for(const auto& source_pair : state.written_in_atomic_section_sources)
+      if(source_pair.first == pair.first)
+        source = source_pair.second;
+
+    // guard is the disjunction over writes
+    PRECONDITION(!pair.second.empty());
+    guardt write_guard(pair.second.front());
+    for(std::list<guardt>::const_iterator it = ++(pair.second.begin());
+        it != pair.second.end();
+        ++it)
+      write_guard|=*it;
+    exprt write_guard_expr=write_guard.as_expr();
+    do_simplify(write_guard_expr);
+
+    target.shared_write(
+      write_guard_expr,
+      w,
+      atomic_section_id,
+      source);
+  }
+
+  target.atomic_end(
+    state.guard.as_expr(),
+    atomic_section_id,
+    state.source);
+}

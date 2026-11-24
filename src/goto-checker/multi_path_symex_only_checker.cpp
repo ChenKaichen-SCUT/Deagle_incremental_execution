@@ -1,0 +1,167 @@
+/*******************************************************************\
+
+Module: Goto Checker using Multi-Path Symbolic Execution Only
+
+Author: Daniel Kroening, Peter Schrammel
+
+\*******************************************************************/
+
+/// \file
+/// Goto Checker using Multi-Path Symbolic Execution only (no SAT solving)
+
+#include "multi_path_symex_only_checker.h"
+#include <goto-symex/stage3_observer.h>
+#include <goto-symex/stage4_incremental.h>
+
+#include <util/ui_message.h>
+
+#include <goto-symex/show_program.h>
+#include <goto-symex/show_vcc.h>
+
+#include <chrono>
+#include <iostream>
+
+#include "bmc_util.h"
+
+multi_path_symex_only_checkert::multi_path_symex_only_checkert(
+  const optionst &options,
+  ui_message_handlert &ui_message_handler,
+  abstract_goto_modelt &goto_model)
+  : incremental_goto_checkert(options, ui_message_handler),
+    goto_model(goto_model),
+    ns(goto_model.get_symbol_table(), symex_symbol_table),
+    equation(ui_message_handler),
+    unwindset(goto_model),
+    symex(
+      ui_message_handler,
+      goto_model.get_symbol_table(),
+      equation,
+      options,
+      path_storage,
+      guard_manager,
+      unwindset)
+{
+  setup_symex(symex, ns, options, ui_message_handler);
+}
+
+incremental_goto_checkert::resultt multi_path_symex_only_checkert::
+operator()(propertiest &properties)
+{
+  generate_equation();
+
+  output_coverage_report(
+    options.get_option("symex-coverage-report"),
+    goto_model,
+    symex,
+    ui_message_handler);
+
+  if(options.get_bool_option("show-vcc"))
+  {
+    show_vcc(options, ui_message_handler, equation);
+  }
+
+  if(options.get_bool_option("program-only"))
+  {
+    show_program(ns, equation);
+  }
+
+  if(options.get_bool_option("show-byte-ops"))
+  {
+    show_byte_ops(options, ui_message_handler, ns, equation);
+  }
+
+  resultt result(resultt::progresst::DONE);
+  update_properties(properties, result.updated_properties);
+  return result;
+}
+
+void multi_path_symex_only_checkert::generate_equation()
+{
+  const auto symex_start = std::chrono::steady_clock::now();
+
+  // __WP_ADD_BEGIN__
+  if(options.get_bool_option("unwind-suggest"))
+  {
+    symex.unwind_suggest();
+    symex.show_unwind_suggest(goto_model.get_goto_functions());
+    std::exit(0);
+  }
+  // __WP_ADD_END__
+
+  // __SZH_ADD_BEGIN__
+  // if the program has threads, we need to symex twice
+  symex.try_finding_value_set = true;
+  symex.symex_from_entry_point_of(
+    goto_symext::get_goto_function(goto_model), symex_symbol_table);
+
+  std::cout << "Unwinding successfully\n";
+
+  if(options.get_bool_option("refined-pointer-analysis") && symex.target.has_threads())
+  {
+    symex.path_storage.clear();
+    symex.target.clear();
+    symex.try_finding_value_set = false;
+    symex.dynamic_counter = 0;
+
+    symex.symex_from_entry_point_of(
+      goto_symext::get_goto_function(goto_model), symex_symbol_table);
+  }
+  // __SZH_ADD_END__
+
+  if(stage3::enabled())
+  {
+    stage3::timing("symbolic_execution", stage4::suffix_start(symex_start), stage3::clockt::now());
+    stage3::equation("raw_ssa", equation);
+  }
+  const auto cleanup_start = stage3::clockt::now();
+  if(options.get_bool_option("concurrency-slice"))
+    symex.concurrency_slice();
+  else
+    symex.remove_dummy_accesses();
+
+  equation.dynamic_object_atomicity(ns);
+
+  if(symex.enable_datarace)
+    symex.symex_datarace(options.get_option("filename"));
+
+  // __WP_ADD_BEGIN__
+  if(symex.enable_deadlock)
+    symex.symex_deadlock();
+  // __WP_ADD_END__
+
+  if(symex.enable_alloc)
+    symex.symex_alloc_check();
+
+  const auto symex_stop = std::chrono::steady_clock::now();
+  std::chrono::duration<double> symex_runtime =
+    std::chrono::duration<double>(symex_stop - symex_start);
+  log.status() << "Runtime Symex: " << symex_runtime.count() << "s"
+               << messaget::eom;
+
+  if(stage3::enabled())
+  {
+    stage3::timing("symex_cleanup", cleanup_start, symex_stop);
+    stage3::equation("sc_input", equation);
+  }
+  postprocess_equation(symex, equation, options, ns, ui_message_handler);
+  if(stage3::enabled())
+  {
+    stage3::equation("full_model", equation);
+    stage3::gate("built", "VERIFY");
+  }
+}
+
+void multi_path_symex_only_checkert::update_properties(
+  propertiest &properties,
+  std::unordered_set<irep_idt> &updated_properties)
+{
+  if(options.get_bool_option("symex-driven-lazy-loading"))
+    update_properties_from_goto_model(properties, goto_model);
+
+  update_properties_status_from_symex_target_equation(
+    properties, updated_properties, equation);
+  // Since we will not symex any further we can decide the status
+  // of all properties that do not occur in the equation now.
+  // The current behavior is PASS.
+  update_status_of_not_checked_properties(properties, updated_properties);
+}
