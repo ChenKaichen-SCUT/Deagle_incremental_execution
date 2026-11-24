@@ -77,3 +77,5 @@ E 盘保存所有 124 次服务器尝试的原始归档，304,429,243 字节，�
 ~~~sh
 git log --diff-filter=A -1 --format=%H -- reports/dataset-preparation.md
 ~~~
+
+数据冻结提交为 **06510d4999c4b1030945e83a50c9ef73e3db690b**。十对源码、正式模型、计时和原始分卷均可从该提交取得。[GitHub 固定提交](https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution/commit/06510d4999c4b1030945e83a50c9ef73e3db690b)
