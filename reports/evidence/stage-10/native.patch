@@ -1,0 +1,308 @@
+diff --git a/minisat-2.2.1/minisat/core/ClosureSolver.cc b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+index 4a84f26c..af5ddd0a 100644
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.cc
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+@@ -2,6 +2,10 @@
+ // __SZH_ADD_BEGIN__
+ 
+ #include "ClosureSolver.h"
++#include "../../../src/util/stage10_telemetry.h"
++#include "../../../src/util/stage10_hooks.h"
++extern std::vector<std::string> write_order;
++namespace s10 { Take take=nullptr; Born born=nullptr; }
+ #include "GraphTypes.h"
+ 
+ #include "../../minisat/mtl/Vec.h"
+@@ -246,6 +250,7 @@ lbool ClosureSolver::search(int nof_conflicts)
+         if (confl != CRef_Undef){
+             // CONFLICT
+             conflicts++; conflictC++;
++            s10::collision(decisionLevel(),ca[confl]);
+             if(s8::state().detail && s8::state().first_conflicts<16) s8::conflict(decisionLevel(),ca[confl]);
+             if (decisionLevel() == 0) return l_False;
+ 
+@@ -326,6 +331,7 @@ lbool ClosureSolver::search(int nof_conflicts)
+                 }
+             }
+ 
++            s10::choice(decisionLevel(),next.x);
+             if(s8::state().detail && s8::state().first_decisions<32) s8::decision(decisionLevel(),next.x);
+             // Increase decision level and enqueue 'next'
+             newDecisionLevel();
+@@ -362,6 +368,11 @@ lbool ClosureSolver::solve_()
+           <<learntsize_factor<<" "<<learntsize_inc<<" "<<assumptions.size()<<std::endl;
+   }
+   s8::first_search();
++#include "../../../src/util/stage10_bridge.inc"
++  s10::start_trace();
++  struct TraceEnd { ~TraceEnd(){ s10::close_trace(); } } trace_end;
++  s10::mark("solve_start");
++#include "../../../src/util/stage10_native_stats.inc"
+     if(before_first_search)
+     {
+         auto prepare = std::move(before_first_search);
+@@ -416,6 +427,8 @@ lbool ClosureSolver::solve_()
+     std::cout << "Attempts to add co clauses: " << attempt_adding_co << ". Added co clauses: " << added_co_clauses << ". Total co pairs: " << graph.co_pairs.size() << ".\n";
+ 
+     cancelUntil(0);
++    s10::mark("solve_end");
++#include "../../../src/util/stage10_native_stats.inc"
+     return status;
+ }
+ 
+diff --git a/minisat-2.2.1/minisat/core/ClosureSolver.h b/minisat-2.2.1/minisat/core/ClosureSolver.h
+index 90b8a98b..dd8cf5f5 100644
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.h
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.h
+@@ -23,6 +23,7 @@ namespace Minisat
+ 
+ class ClosureSolver : public Solver
+ {
++    friend class Stage10Epoch;
+     closure graph;
+ 
+     oc_edge_tablet oc_edge_table;
+diff --git a/minisat-2.2.1/minisat/core/Solver.cc b/minisat-2.2.1/minisat/core/Solver.cc
+index a7e7eaaf..3cc2f709 100644
+--- a/minisat-2.2.1/minisat/core/Solver.cc
++++ b/minisat-2.2.1/minisat/core/Solver.cc
+@@ -1,4 +1,5 @@
+ #include "../../../src/util/stage8_meter.h"
++#include "../../../src/util/stage10_hooks.h"
+ /***************************************************************************************[Solver.cc]
+ Copyright (c) 2003-2006, Niklas Een, Niklas Sorensson
+ Copyright (c) 2007-2010, Niklas Sorensson
+@@ -158,7 +159,14 @@ bool Solver::addClause_(vec<Lit>& ps)
+         uncheckedEnqueue(ps[0]);
+         return ok = (propagate() == CRef_Undef);
+     }else{
+-        CRef cr = ca.alloc(ps, false);
++        CRef cr = s10::take ? s10::take(this,ps) : CRef_Undef;
++        if(cr==CRef_Undef) cr=ca.alloc(ps,false);
++        else {
++          Clause &held=ca[cr];
++          if(held.mark() || held.learnt() || held.size()!=ps.size()) throw std::runtime_error("invalid retained Clause");
++          for(int j=0;j<ps.size();++j) held[j]=ps[j];
++        }
++        if(s10::born) s10::born(this,ps,cr);
+         clauses.push(cr);
+         attachClause(cr);
+     }
+diff --git a/minisat-2.2.1/minisat/core/Solver.h b/minisat-2.2.1/minisat/core/Solver.h
+index 8e666918..5a8b69d1 100644
+--- a/minisat-2.2.1/minisat/core/Solver.h
++++ b/minisat-2.2.1/minisat/core/Solver.h
+@@ -35,6 +35,7 @@ namespace Minisat {
+ // Solver -- the main class:
+ 
+ class Solver {
++    friend class Stage10Epoch;
+ public:
+ 
+     // Constructor/Destructor:
+diff --git a/src/goto-checker/bmc_util.cpp b/src/goto-checker/bmc_util.cpp
+index 913c5651..5672aa82 100644
+--- a/src/goto-checker/bmc_util.cpp
++++ b/src/goto-checker/bmc_util.cpp
+@@ -425,6 +425,8 @@ void postprocess_equation(
+ }
+ 
+ #include <solvers/sat/satcheck_minisat2.h>
++#include <solvers/flattening/boolbv.h>
++#include "../util/stage10_telemetry.h"
+ #include <solvers/prop/prop_conv_solver.h>
+ 
+ std::chrono::duration<double> prepare_property_decider(
+@@ -433,6 +435,7 @@ std::chrono::duration<double> prepare_property_decider(
+   goto_symex_property_decidert &property_decider,
+   ui_message_handlert &ui_message_handler)
+ {
++  s10::mark("model_ready");
+   s8::Scope s8_timer(s8::encode_graph);
+   auto solver_start = std::chrono::steady_clock::now();
+ 
+@@ -510,6 +513,16 @@ std::chrono::duration<double> prepare_property_decider(
+         oc_location_map.insert(std::make_pair(name, location));
+     }
+ 
++    if(std::getenv("S10_DIR")) {
++      const auto &bv=dynamic_cast<const boolbvt&>(decision_procedure);
++      std::ofstream tab(s10::directory()+"/bits.tsv");
++      for(const auto &row:bv.get_map().get_mapping()) {
++        const auto &t=row.second.type;
++        tab<<id2string(row.first)<<"\t"<<id2string(t.id())<<"\t"<<id2string(t.get(ID_width));
++        for(const auto &l:row.second.literal_map) tab<<"\t"<<Minisat::mkLit(l.var_no(),l.sign()).x;
++        tab<<"\n";
++      }
++    }
+     prepare_order_lemma_cache(deagle_closure_solver, oc_edge_table, oc_guard_map, oc_location_map);
+     deagle_closure_solver.save_raw_graph(oc_edge_table, oc_guard_map, oc_location_map, equation.oc_result_order);
+   }
+@@ -598,6 +611,7 @@ void run_property_decider(
+   auto const sat_solver_start = std::chrono::steady_clock::now();
+ 
+   decision_proceduret::resultt dec_result = property_decider.solve();
++  s10::mark("decider_return");
+ 
+   auto const sat_solver_stop = std::chrono::steady_clock::now();
+   stage3::timing("solve", sat_solver_start, sat_solver_stop);
+diff --git a/src/goto-checker/solver_factory.cpp b/src/goto-checker/solver_factory.cpp
+index 01bed772..4c4233a3 100644
+--- a/src/goto-checker/solver_factory.cpp
++++ b/src/goto-checker/solver_factory.cpp
+@@ -131,8 +131,11 @@ void solver_factoryt::solvert::set_ofstream(std::unique_ptr<std::ofstream> p)
+   ofstream_ptr = std::move(p);
+ }
+ 
++#include "../util/stage10_telemetry.h"
+ std::unique_ptr<solver_factoryt::solvert> solver_factoryt::get_solver()
+ {
++  s10::mark("factory_begin");
++  struct End { ~End(){s10::mark("factory_end");} } end;
+   if(options.get_bool_option("dimacs"))
+     return get_dimacs();
+   if(options.is_set("external-sat-solver"))
+diff --git a/src/goto-checker/theory_lemma.cpp b/src/goto-checker/theory_lemma.cpp
+index 3cc0eb6f..7919501f 100644
+--- a/src/goto-checker/theory_lemma.cpp
++++ b/src/goto-checker/theory_lemma.cpp
+@@ -144,11 +144,12 @@ void prepare_order_lemma_cache(
+   s8::Scope s8_timer(s8::lemma_prepare);
+   const char *root=std::getenv("INCDEAGLE_S5_ROOT");
+   const char *helper=std::getenv("INCDEAGLE_S5_HELPER");
+-  if(!root || !helper) return;
++  bool capture=std::getenv("S10_DIR")!=nullptr;
++  if(!capture && (!root || !helper)) return;
+   auto start=clock_type::now();
+   const auto dir=stage3::declare_theory_snapshot();
+-  bool old=dir==std::string(root)+"/old";
+-  if(!old && dir!=std::string(root)+"/candidate") return;
++  bool old=!capture && dir==std::string(root)+"/old";
++  if(!capture && !old && dir!=std::string(root)+"/candidate") return;
+   json_objectt graph, addresses;
+   json_arrayt relations, conditions;
+   std::vector<graph_atom> slots;
+@@ -176,6 +177,7 @@ void prepare_order_lemma_cache(
+   graph["site"]=json_stringt("bmc_util before save_raw_graph/init");
+   graph["snapshot_ns"]=number(elapsed(start));
+   write_json(dir+"/native-bindings.json",graph);
++  if(capture) return;
+   auto &solver=adapter.order_solver();
+   if(old)
+   {
+diff --git a/src/solvers/sat/satcheck_minisat2.cpp b/src/solvers/sat/satcheck_minisat2.cpp
+index 8b7d60b8..97e38ccd 100644
+--- a/src/solvers/sat/satcheck_minisat2.cpp
++++ b/src/solvers/sat/satcheck_minisat2.cpp
+@@ -1,4 +1,5 @@
+ #include "../../util/stage8_meter.h"
++#include "../../util/stage10_telemetry.h"
+ /*******************************************************************\
+ 
+ Module:
+diff --git a/src/util/stage10_telemetry.h b/src/util/stage10_telemetry.h
+new file mode 100644
+index 00000000..8950f221
+--- /dev/null
++++ b/src/util/stage10_telemetry.h
+@@ -0,0 +1,40 @@
++#pragma once
++#include <chrono>
++#include <cstdint>
++#include <cstdio>
++#include <cstdlib>
++#include <fstream>
++#include <stdexcept>
++#include <string>
++#include <unistd.h>
++#include <sys/resource.h>
++
++namespace s10 {
++inline uint64_t now() {
++  return std::chrono::duration_cast<std::chrono::nanoseconds>(
++    std::chrono::steady_clock::now().time_since_epoch()).count();
++}
++inline std::string &where() { static std::string value; return value; }
++inline std::string directory() {
++  if(!where().empty()) return where();
++  const char *p=std::getenv("S10_DIR"); return p?p:"";
++}
++inline void mark(const char *name) {
++  auto dir=directory(); if(!dir.empty()) std::ofstream(dir+"/boundary.tsv",std::ios::app)<<name<<"\t"<<now()<<"\n";
++}
++inline FILE *&trace() { static FILE *value=nullptr; return value; }
++inline void start_trace() {
++  if(trace()) throw std::runtime_error("nested search trace");
++  auto dir=directory(); if(!dir.empty()) {
++    trace()=std::fopen((dir+"/search.bin").c_str(),"wb");
++    if(!trace()) throw std::runtime_error("search trace open");
++  }
++}
++inline void word(int32_t v) { if(trace() && std::fwrite(&v,4,1,trace())!=1) throw std::runtime_error("search trace write"); }
++inline void choice(int level,int lit) {if(trace()){word(1);word(level);word(lit);}}
++template<class C> inline void collision(int level,const C &c) {
++  if(trace()){word(2);word(level);word(c.size());for(int i=0;i<c.size();++i)word(c[i].x);}
++}
++inline void close_trace(){if(trace()){if(std::fclose(trace()))throw std::runtime_error("search trace close");trace()=nullptr;}}
++inline long rss_kib(){struct rusage u{};getrusage(RUSAGE_SELF,&u);return u.ru_maxrss;}
++}
+diff --git a/src/util/stage10_hooks.h b/src/util/stage10_hooks.h
+new file mode 100644
+index 00000000..b69967b0
+--- /dev/null
++++ b/src/util/stage10_hooks.h
+@@ -0,0 +1,9 @@
++#pragma once
++#include <stdexcept>
++#include "../../minisat-2.2.1/minisat/core/Solver.h"
++namespace s10 {
++using Take=Minisat::CRef(*)(Minisat::Solver*,const Minisat::vec<Minisat::Lit>&);
++using Born=void(*)(Minisat::Solver*,const Minisat::vec<Minisat::Lit>&,Minisat::CRef);
++extern Take take;
++extern Born born;
++}
+diff --git a/src/util/stage10_bridge.inc b/src/util/stage10_bridge.inc
+new file mode 100644
+index 00000000..320f8769
+--- /dev/null
++++ b/src/util/stage10_bridge.inc
+@@ -0,0 +1,26 @@
++// Included in the native ClosureSolver::solve_ after the complete goal stream has been emitted.
++if(std::getenv("S10_BRIDGE_FD")) {
++    if(before_first_search) throw std::runtime_error("unexpected historical lemma callback");
++    auto &stream=s8::state().sequence;
++    if(!stream || std::fflush(stream)) throw std::runtime_error("missing complete solver input");
++    int channel=std::stoi(std::getenv("S10_BRIDGE_FD"));
++    char byte='R';
++    if(::write(channel,&byte,1)!=1 || ::read(channel,&byte,1)!=1 || byte!='D')
++        throw std::runtime_error("native solver worker disconnected");
++    std::ifstream result(s10::directory()+"/answer.txt");
++    int rc,n;
++    if(!(result>>rc>>n) || (rc!=0 && rc!=1) || n!=nVars()) throw std::runtime_error("native reply shape");
++    model.clear();conflict.clear();
++    if(rc==0) {
++      model.growTo(nVars());int val;
++      for(int i=0;i<n;++i){if(!(result>>val)||val<0||val>2)throw std::runtime_error("bad native bit");model[i]=lbool(uint8_t(val));}
++      int count; if(!(result>>count)||count<0)throw std::runtime_error("missing event order");
++      oc_result_order->clear();
++      for(int i=0;i<count;++i){std::string node;int order;if(!(result>>node>>order))throw std::runtime_error("bad event order");(*oc_result_order)[node]=order;}
++
++      if(!(result>>count)||count<0)throw std::runtime_error("missing write order");
++      ::write_order.clear();for(int i=0;i<count;++i){std::string name;if(!(result>>name))throw std::runtime_error("bad write order");::write_order.push_back(name);}
++    }
++    std::string extra;if(result>>extra)throw std::runtime_error("excess native reply");
++    return rc==0?l_True:l_False;
++}
+diff --git a/src/util/stage10_native_stats.inc b/src/util/stage10_native_stats.inc
+new file mode 100644
+index 00000000..50855b45
+--- /dev/null
++++ b/src/util/stage10_native_stats.inc
+@@ -0,0 +1,7 @@
++if(!s10::directory().empty()) {
++  std::ofstream os(s10::directory()+"/native-state.tsv", std::ios::app);
++  os<<s10::now()<<"\t"<<reinterpret_cast<uintptr_t>(this)<<"\t"<<getpid()<<"\t"<<nVars()<<"\t"<<nClauses()
++    <<"\t"<<nLearnts()<<"\t"<<nAssigns()<<"\t"<<decisionLevel()<<"\t"<<(ok?1:0)<<"\t"<<ca.size()*sizeof(uint32_t)
++    <<"\t"<<starts<<"\t"<<decisions<<"\t"<<conflicts<<"\t"<<propagations<<"\t"<<theory_propagation<<"\t"<<conflict_cycle
++    <<"\t"<<graph.nodes.size()<<"\t"<<s10::rss_kib()<<"\n";
++}

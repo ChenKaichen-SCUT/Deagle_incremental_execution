@@ -1,0 +1,2 @@
+Verified 72 formal program solves, 12 control program solves, 1696 physical original clause reattachments and 52 counterexamples.
+All six derived outputs match the publication byte-for-byte.

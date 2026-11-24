@@ -1,0 +1,96 @@
+{
+  "baseline_project": "d02f0e1327fa748be0f76f381c3d9a1fa450e9de",
+  "binary": "b84a95d9d02e9fc48217373bf71564db1cb8ce4029644936a893aaaaef0a529e",
+  "compiler": "11.4.0",
+  "config": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c",
+  "driver": "c474a95f9d668619bdc138382bd59b1f070190c8197fa91071f9aca49075c204",
+  "inspected_parent_sources": {
+    "minisat-2.2.1/minisat/core/Closure.cc": "d5cb4aba6f9d8f99bca7de45e294976414382a3013519502259a69752c768694",
+    "minisat-2.2.1/minisat/core/Closure.h": "41bcc1ef6cbed8b58e6ef02a70088181c2d4bea91c29ee3fc45b5d7faaa0d53f",
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": "22031ab8e044e6768daa0d0b79fae2ff2d1b2ef099262da73b46e81cb3691bc9",
+    "minisat-2.2.1/minisat/core/ClosureSolver.h": "ddd89966123973323313a8a335447d367b6caa46efd26964b6553c8497673ff0",
+    "minisat-2.2.1/minisat/core/Solver.cc": "6f588ae445ac242717cc30a0554889fcf01de334fa903440d6a7ca33e2e0a974",
+    "minisat-2.2.1/minisat/core/Solver.h": "0ec0e68b568da2f5906f111d3316da7c93f52e5edda1b3e80a160d871348c228",
+    "src/goto-checker/bmc_util.cpp": "b29fd09a808849e20a1ab4a8a733e197936e958e3ba97fb144ea4c1583551730",
+    "src/goto-checker/solver_factory.cpp": "ac4a0389970aa6fcf416e0f2fdfcf56f8e2920ec543a2e941c7a2884db0cac61",
+    "src/goto-checker/theory_lemma.cpp": "c9c0afee8a5b29289efe462fde1c36313c27e5e60cb7759440a0ffd922dcba41",
+    "src/solvers/flattening/boolbv.h": "05024caf05f04e85403379f32e52b3362fdb00b57d9f956f730f9229a7dfe4a4",
+    "src/solvers/flattening/boolbv_map.cpp": "07f6a4505e91d93ceb9891b3fb350018b56af783c7239cfe34621843a1dca63d",
+    "src/solvers/flattening/boolbv_map.h": "0ea99eb6d1d03b3df9a973e859d48e6acffb5b3859a018fe0608a5732f346e49",
+    "src/solvers/sat/satcheck_minisat2.cpp": "70a685b574979e97c89340d72c7af2d631a319297bbdaac3a8fd29d3a62a8390",
+    "src/solvers/sat/satcheck_minisat2.h": "23d5dfad4f936dda34f7bb9fc3c75e333ed867f6334b53514a439e1c6532b5f6"
+  },
+  "native_parent": "a2ba2f01fcc8dc83261f614039141017fb846178",
+  "patch": "bd3534afe9f518e351a50eb055fac5608d035d99605d1ebf4d8b5066951bff16",
+  "patch_applies_exactly": true,
+  "project_sources": {
+    "archive.py": "7401c26126e13e3418aac5c2233764f7c909e05ef905ec1f5df3e0dd85c2d496",
+    "bind.py": "f436e2f58648af989f68ae55a36d485b3df41e1febbd4ff8b1886e228783dd18",
+    "bridge.inc": "67336630de3cb5ef109d20acb59159fbc77d9f13e91b41f1051513727fe9db31",
+    "build.sh": "ac3e31055ca9beb5854edf4755b4c8ed2e2251b5e6fdbf0ba6df39fed746be19",
+    "driver.cpp": "762fac3995476860d3755c412e0852572a63af607f0d00c921f710958eec63d7",
+    "epoch.hpp": "4828b325ca1e36417d23e7a72d61ed790ad18befcfe0ab297d10ed53756db94f",
+    "evidence.py": "f824a1f5e03cb161d9fe3f2a7a1627edbc031ae47ebd2c10e42d23ab6ad3efbf",
+    "experiment.py": "8c8fa6b0859ee43e7ab36c490307284ae9459f55ee6e3cd4637e91b0a54817c2",
+    "fingerprint.py": "5e3daed72fe1ae97a22bfba45e2970434fbb110b3ad41f9bb33b93c9f732092a",
+    "hooks.h": "a0a183f3b77eec8498df4f7964ef23fa011dc1b413fb314e8ec6e05dd8a699e3",
+    "input.hpp": "db4fd0a4a99c6598731194a3d1bab1ed1a107a9219380e3e7c92ac886fbd4ccc",
+    "instrument.py": "e8714c241053ac3484d15b06ef7eefcab7a52b546e038cff09060f7ec865aca9",
+    "native_stats.inc": "b2f605980803a8bae7ad59087a6a1ba6a8ae937c94c421fc7a530d734b1834ae",
+    "repeat_graph.hpp": "e746b00a96a54a0b41e8e00b4029ade69cd41c46c922d51fcd03c0d9708da7c0",
+    "reproduce.sh": "842407e33c86351d7876279e9bccfef511d56baac8c55777d47fd09c94ef4689",
+    "stop.py": "d809326652cccd138090252ab83e75abc12146cb9c9b447e44def29b739544f3",
+    "telemetry.h": "29faf23dc02667fbcda6cc590622565b40086f7fbb2feb27ea8633885dd8ed50"
+  },
+  "regenerated_all_sources": true,
+  "source_files": {
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": {
+      "git_blob": "af5ddd0a6e5622bc2ab66dc1da019979c47bcb16",
+      "sha256": "f33943b952fcad315c7e08c7edf5c74a152db12820b10f2cb3728289b14bb679"
+    },
+    "minisat-2.2.1/minisat/core/ClosureSolver.h": {
+      "git_blob": "dd8cf5f560a056cc66fc780b620c095285c9d618",
+      "sha256": "e719615241c903e15dd53f32e7f2df5519f9cd01c4bc470c5155257cce84f8b5"
+    },
+    "minisat-2.2.1/minisat/core/Solver.cc": {
+      "git_blob": "3cc2f7091de6c517e1f8e55a033e45d5aa640770",
+      "sha256": "c0b3ebf7232b27026b44a6b2f9969f891ed8c969abb5d4e4658fc6cee4dc4ed1"
+    },
+    "minisat-2.2.1/minisat/core/Solver.h": {
+      "git_blob": "5a8b69d1a0ce988373dc43003f559066c8934c37",
+      "sha256": "e0601ca38ced9f287739f20aa1979346e88259ad75f8606e3fcf62ab4a07ec62"
+    },
+    "src/goto-checker/bmc_util.cpp": {
+      "git_blob": "5672aa8208453b5a53b0ab5400ec82813b4e9e5e",
+      "sha256": "8dba41ef98aead9df8f3654bab34b9419b9944d02629a6d4e45e53cd1ad87a8f"
+    },
+    "src/goto-checker/solver_factory.cpp": {
+      "git_blob": "4c4233a378b8fb8b34a6883880f9da5de540e1fb",
+      "sha256": "dc6c35da3a38312009158327a1cca70ec1ab0e964a7ea0319eab8f166ac3f56e"
+    },
+    "src/goto-checker/theory_lemma.cpp": {
+      "git_blob": "7919501f0b7cc4122edac1397d2fd67eae787649",
+      "sha256": "cc6f7cd230fff92ca85556ede96cf6b050cb92cb443bdd3fb085f3f218071541"
+    },
+    "src/solvers/sat/satcheck_minisat2.cpp": {
+      "git_blob": "97e38ccde317b6242b8694e8e4cfee4369b66a91",
+      "sha256": "d27a85897a8432a7674bd6d764037d0cbb43b1a7620691b827dab50551a5dd53"
+    },
+    "src/util/stage10_bridge.inc": {
+      "git_blob": "320f876991693f4da7ae355324876f8126324844",
+      "sha256": "67336630de3cb5ef109d20acb59159fbc77d9f13e91b41f1051513727fe9db31"
+    },
+    "src/util/stage10_hooks.h": {
+      "git_blob": "b69967b01d6c98b4ec1d6bf32b7ec38c653a0b31",
+      "sha256": "a0a183f3b77eec8498df4f7964ef23fa011dc1b413fb314e8ec6e05dd8a699e3"
+    },
+    "src/util/stage10_native_stats.inc": {
+      "git_blob": "50855b45d85f9941853e2bbac0056ecc6f8b2205",
+      "sha256": "b2f605980803a8bae7ad59087a6a1ba6a8ae937c94c421fc7a530d734b1834ae"
+    },
+    "src/util/stage10_telemetry.h": {
+      "git_blob": "8950f2219f50d7025644a2871e0191aca4794f55",
+      "sha256": "29faf23dc02667fbcda6cc590622565b40086f7fbb2feb27ea8633885dd8ed50"
+    }
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "assumptions": [
+    "guarded\t1 0 1",
+    "root\t1 1 0"
+  ],
+  "batch_total": {
+    "candidate": "NO_VIOLATION_WITHIN_BOUND",
+    "reason": "refuse_unverified_variable_mapping",
+    "reused": 0,
+    "test": "bad-map"
+  },
+  "direction": [
+    "0\t0\t0\t1\tobj#1 obj#2 ",
+    "1\t0\t0\t1\tobj#2 obj#1 "
+  ],
+  "fib_updates_8": {
+    "candidate": "NO_VIOLATION_WITHIN_BOUND",
+    "reason": "refuse_damaged_learning",
+    "reused": 0,
+    "test": "damage-learning"
+  },
+  "split_counter": {
+    "candidate": "NO_VIOLATION_WITHIN_BOUND",
+    "reason": "refuse_changed_graph",
+    "reused": 0,
+    "test": "normal"
+  },
+  "unchanged_graph": [
+    "test\tlit\tshared\tfresh\tshared_ok\told_order_keys\tcurrent_keys\twritten_order\tfresh_order",
+    "0\t-1\t0\t0\t1\t0\t23\t23\t1",
+    "1\t1890\t1\t1\t1\t23\t23\t23\t0",
+    "2\t1891\t0\t0\t1\t23\t23\t23\t1",
+    "3\t1896\t0\t0\t1\t23\t23\t23\t1",
+    "4\t1897\t1\t1\t1\t23\t23\t23\t0",
+    "5\t1906\t0\t0\t1\t23\t23\t23\t1",
+    "6\t1907\t1\t1\t1\t23\t23\t23\t0"
+  ]
+}

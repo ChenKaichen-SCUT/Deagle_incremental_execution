@@ -1,0 +1,15 @@
+{
+  "utc": "2026-11-24T05:21:59.811561+00:00",
+  "experimental_units": {
+    "stage10-build": "inactive",
+    "stage10-pilot": "inactive",
+    "stage10-formal": "inactive",
+    "stage10-final": "inactive"
+  },
+  "formal_model_processes": 72,
+  "formal_native_solver_pids": 54,
+  "overlapping_pairs": 0,
+  "recorded_pids_still_alive": [],
+  "official_api_calls": 0,
+  "stage11_approved": false
+}

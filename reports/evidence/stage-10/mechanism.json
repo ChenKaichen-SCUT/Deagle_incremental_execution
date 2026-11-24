@@ -1,0 +1,162 @@
+{
+  "batch_retained": {
+    "candidate_source_sha256": "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a",
+    "common_numeric": 1063,
+    "different_slot": 10,
+    "first_cref_and_signed_literals": [
+      2013,
+      12,
+      551
+    ],
+    "model_pids": [
+      384907,
+      384921
+    ],
+    "new_only_numeric": 1426,
+    "object_address": 94887740134656,
+    "old_graph_nodes": 23,
+    "old_learnts_retired": 0,
+    "old_live_eligible": 66,
+    "old_only_numeric": 1419,
+    "old_roots_retired": 848,
+    "old_source_sha256": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "property": {
+      "assertion": "assert(shipped_units == 6);",
+      "assertion_sha256": "c691975f24ac5192599c2b687bfb1d5010d50f9c41a235f46d8f4f5bf5b37c23",
+      "description": "Two boxes of three units must contribute six units after the worker joins.",
+      "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+      "id": "main.assertion.1",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": 21
+      }
+    },
+    "registry_groups": [
+      234,
+      234
+    ],
+    "reused": 64,
+    "same_slot": 192,
+    "semantic_graph_sha256": "e1aaddfd0876797c9a608f842d8839e66628070ab4e1c56ee004871f5a2f17f4",
+    "solver_pid": 384906,
+    "source_options": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--64",
+      "--unwind",
+      "4",
+      "--unwinding-assertions"
+    ]
+  },
+  "batch_total": {
+    "candidate_source_sha256": "8617eb79a6d7a7e87967adf39d041a465bb708f9dba1221dcefd31c58fde78cd",
+    "common_numeric": 1063,
+    "different_slot": 10,
+    "first_cref_and_signed_literals": [
+      2013,
+      12,
+      551
+    ],
+    "model_pids": [
+      384878,
+      384892
+    ],
+    "new_only_numeric": 1426,
+    "object_address": 94150872208640,
+    "old_graph_nodes": 23,
+    "old_learnts_retired": 0,
+    "old_live_eligible": 66,
+    "old_only_numeric": 1419,
+    "old_roots_retired": 848,
+    "old_source_sha256": "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32",
+    "property": {
+      "assertion": "assert(shipped_units == 6);",
+      "assertion_sha256": "c691975f24ac5192599c2b687bfb1d5010d50f9c41a235f46d8f4f5bf5b37c23",
+      "description": "Two boxes of three units must contribute six units after the worker joins.",
+      "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+      "id": "main.assertion.1",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": 21
+      }
+    },
+    "registry_groups": [
+      234,
+      234
+    ],
+    "reused": 64,
+    "same_slot": 192,
+    "semantic_graph_sha256": "b1b991e2a20664c9c07d6ecf349e5fe68117d582deab024b5acdfc7f985912fc",
+    "solver_pid": 384877,
+    "source_options": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--64",
+      "--unwind",
+      "4",
+      "--unwinding-assertions"
+    ]
+  },
+  "fib_updates_8": {
+    "candidate_source_sha256": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+    "common_numeric": 3128,
+    "different_slot": 1472,
+    "first_cref_and_signed_literals": [
+      168,
+      311,
+      313,
+      441
+    ],
+    "model_pids": [
+      385000,
+      385014
+    ],
+    "new_only_numeric": 45201,
+    "object_address": 93960618271072,
+    "old_graph_nodes": 81,
+    "old_learnts_retired": 3450,
+    "old_live_eligible": 231,
+    "old_only_numeric": 46937,
+    "old_roots_retired": 2715,
+    "old_source_sha256": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "property": {
+      "assertion": "assert(left <= 2584u && right <= 2584u);",
+      "assertion_sha256": "3576fa603071cb93db5c683a107fa2955de28594c0152605d28ad6267733dbd8",
+      "description": "After both joins neither component exceeds Fibonacci number F(18) = 2584.",
+      "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+      "id": "main.assertion.1",
+      "source": {
+        "file": "harness.c",
+        "function": "main",
+        "line": 40
+      }
+    },
+    "registry_groups": [
+      2303,
+      2303
+    ],
+    "reused": 132,
+    "same_slot": 575,
+    "semantic_graph_sha256": "b54877f9b81950966e36b3290d684d60a2b325a2d43b13d3b1fc5dae173f9c59",
+    "solver_pid": 384999,
+    "source_options": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--64",
+      "--unwind",
+      "10",
+      "--unwinding-assertions"
+    ]
+  }
+}

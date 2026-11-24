@@ -1,11 +1,11 @@
 {
   "schema_version": 1,
-  "current_stage": 9,
-  "stage_name": "候选前端性能优化",
+  "current_stage": 10,
+  "stage_name": "原生 ClosureSolver 跨版本增量求解可行性研究",
   "status": "READY_FOR_REVIEW",
-  "report": "reports/stage-09.md",
+  "report": "reports/stage-10.md",
   "environment": "reports/environment.json",
-  "last_user_approved_stage": 9,
+  "last_user_approved_stage": 10,
   "next_stage": null,
   "next_stage_approved": false
 }

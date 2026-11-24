@@ -1,0 +1,5156 @@
+{
+  "batch_retained": {
+    "candidate": {
+      "F": {
+        "allocator_before_clauses": {
+          "max": 2304,
+          "mean": 2304.0,
+          "median": 2304,
+          "min": 2304,
+          "n": 5,
+          "outliers": [],
+          "q1": 2304.0,
+          "q3": 2304.0
+        },
+        "allocator_bytes": {
+          "max": 6244,
+          "mean": 6244.0,
+          "median": 6244,
+          "min": 6244,
+          "n": 5,
+          "outliers": [],
+          "q1": 6244.0,
+          "q3": 6244.0
+        },
+        "bind_ms": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "decisions": {
+          "max": 342,
+          "mean": 342.0,
+          "median": 342,
+          "min": 342,
+          "n": 5,
+          "outliers": [],
+          "q1": 342.0,
+          "q3": 342.0
+        },
+        "encode_graph_ms": {
+          "max": 7.589947,
+          "mean": 7.514373,
+          "median": 7.517856,
+          "min": 7.439844,
+          "n": 5,
+          "outliers": [],
+          "q1": 7.471024,
+          "q3": 7.553196
+        },
+        "factory_ms": {
+          "max": 0.086892,
+          "mean": 0.065601,
+          "median": 0.061501,
+          "min": 0.055621,
+          "n": 5,
+          "outliers": [
+            0.086892
+          ],
+          "q1": 0.059301,
+          "q3": 0.064691
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.01322,
+          "mean": 0.011344,
+          "median": 0.01086,
+          "min": 0.01013,
+          "n": 5,
+          "outliers": [
+            0.01322
+          ],
+          "q1": 0.01082,
+          "q3": 0.01169
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "input_clauses": {
+          "max": 2489,
+          "mean": 2489.0,
+          "median": 2489,
+          "min": 2489,
+          "n": 5,
+          "outliers": [],
+          "q1": 2489.0,
+          "q3": 2489.0
+        },
+        "memory_peak_kib": {
+          "max": 46656,
+          "mean": 44208.8,
+          "median": 46656,
+          "min": 37896,
+          "n": 5,
+          "outliers": [
+            37896
+          ],
+          "q1": 43180.0,
+          "q3": 46656.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 658,
+          "mean": 658.0,
+          "median": 658,
+          "min": 658,
+          "n": 5,
+          "outliers": [],
+          "q1": 658.0,
+          "q3": 658.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "search_cpu_ms": {
+          "max": 0.41352,
+          "mean": 0.405282,
+          "median": 0.40502,
+          "min": 0.39773,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.397901,
+          "q3": 0.412241
+        },
+        "search_ms": {
+          "max": 0.414678,
+          "mean": 0.406352,
+          "median": 0.406078,
+          "min": 0.398768,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.398858,
+          "q3": 0.413378
+        },
+        "solve_ms": {
+          "max": 0.49984,
+          "mean": 0.489627,
+          "median": 0.487609,
+          "min": 0.480639,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.483129,
+          "q3": 0.49692
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 8.476704,
+          "mean": 8.398951,
+          "median": 8.390622,
+          "min": 8.329701,
+          "n": 5,
+          "outliers": [],
+          "q1": 8.333452,
+          "q3": 8.464275
+        },
+        "trace_branches": {
+          "max": 341,
+          "mean": 341.0,
+          "median": 341,
+          "min": 341,
+          "n": 5,
+          "outliers": [],
+          "q1": 341.0,
+          "q3": 341.0
+        },
+        "trace_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "trace_hashes": [
+          "a043c94198c6c6b9e0297f648a7eaeb4bdb0f6f294b65f396875703a49ee41ff"
+        ],
+        "variables": {
+          "max": 1205,
+          "mean": 1205.0,
+          "median": 1205,
+          "min": 1205,
+          "n": 5,
+          "outliers": [],
+          "q1": 1205.0,
+          "q3": 1205.0
+        }
+      },
+      "S": {
+        "admitted_bindings": {
+          "max": 192,
+          "mean": 192.0,
+          "median": 192,
+          "min": 192,
+          "n": 5,
+          "outliers": [],
+          "q1": 192.0,
+          "q3": 192.0
+        },
+        "allocator_before_clauses": {
+          "max": 2304,
+          "mean": 2304.0,
+          "median": 2304,
+          "min": 2304,
+          "n": 5,
+          "outliers": [],
+          "q1": 2304.0,
+          "q3": 2304.0
+        },
+        "allocator_bytes": {
+          "max": 6244,
+          "mean": 6244.0,
+          "median": 6244,
+          "min": 6244,
+          "n": 5,
+          "outliers": [],
+          "q1": 6244.0,
+          "q3": 6244.0
+        },
+        "bind_ms": {
+          "max": 17.404447,
+          "mean": 14.747942,
+          "median": 14.158805,
+          "min": 13.770097,
+          "n": 5,
+          "outliers": [
+            17.404447
+          ],
+          "q1": 14.057252,
+          "q3": 14.349107
+        },
+        "conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "decisions": {
+          "max": 342,
+          "mean": 342.0,
+          "median": 342,
+          "min": 342,
+          "n": 5,
+          "outliers": [],
+          "q1": 342.0,
+          "q3": 342.0
+        },
+        "encode_graph_ms": {
+          "max": 7.528396,
+          "mean": 7.460306,
+          "median": 7.458804,
+          "min": 7.400793,
+          "n": 5,
+          "outliers": [],
+          "q1": 7.406533,
+          "q3": 7.507005
+        },
+        "factory_ms": {
+          "max": 0.067501,
+          "mean": 0.063141,
+          "median": 0.063081,
+          "min": 0.058872,
+          "n": 5,
+          "outliers": [
+            0.058872,
+            0.067501
+          ],
+          "q1": 0.062431,
+          "q3": 0.063821
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.01161,
+          "mean": 0.01043,
+          "median": 0.01017,
+          "min": 0.00994,
+          "n": 5,
+          "outliers": [
+            0.01161
+          ],
+          "q1": 0.010111,
+          "q3": 0.01032
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "init_switch_ms": {
+          "max": 0.156163,
+          "mean": 0.147711,
+          "median": 0.147823,
+          "min": 0.142773,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.142972,
+          "q3": 0.148823
+        },
+        "input_clauses": {
+          "max": 2489,
+          "mean": 2489.0,
+          "median": 2489,
+          "min": 2489,
+          "n": 5,
+          "outliers": [],
+          "q1": 2489.0,
+          "q3": 2489.0
+        },
+        "memory_peak_kib": {
+          "max": 46656,
+          "mean": 44050.4,
+          "median": 46656,
+          "min": 37104,
+          "n": 5,
+          "outliers": [
+            37104
+          ],
+          "q1": 43180.0,
+          "q3": 46656.0
+        },
+        "old_roots": {
+          "max": 848,
+          "mean": 848.0,
+          "median": 848,
+          "min": 848,
+          "n": 5,
+          "outliers": [],
+          "q1": 848.0,
+          "q3": 848.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 658,
+          "mean": 658.0,
+          "median": 658,
+          "min": 658,
+          "n": 5,
+          "outliers": [],
+          "q1": 658.0,
+          "q3": 658.0
+        },
+        "read_input_ms": {
+          "max": 0.814576,
+          "mean": 0.789239,
+          "median": 0.784896,
+          "min": 0.773965,
+          "n": 5,
+          "outliers": [
+            0.814576
+          ],
+          "q1": 0.779885,
+          "q3": 0.792875
+        },
+        "replay_submit_ms": {
+          "max": 1.668062,
+          "mean": 1.645822,
+          "median": 1.642662,
+          "min": 1.621021,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.639412,
+          "q3": 1.657952
+        },
+        "resident_pss_kib": {
+          "max": 2153,
+          "mean": 2144.4,
+          "median": 2149,
+          "min": 2134,
+          "n": 5,
+          "outliers": [],
+          "q1": 2137.0,
+          "q3": 2149.0
+        },
+        "resident_rss_kib": {
+          "max": 5276,
+          "mean": 5186.4,
+          "median": 5172,
+          "min": 5148,
+          "n": 5,
+          "outliers": [
+            5276
+          ],
+          "q1": 5152.0,
+          "q3": 5184.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 64,
+          "mean": 64.0,
+          "median": 64,
+          "min": 64,
+          "n": 5,
+          "outliers": [],
+          "q1": 64.0,
+          "q3": 64.0
+        },
+        "retired_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "seal_ms": {
+          "max": 3e-05,
+          "mean": 2.4e-05,
+          "median": 2e-05,
+          "min": 2e-05,
+          "n": 5,
+          "outliers": [],
+          "q1": 2e-05,
+          "q3": 3e-05
+        },
+        "seal_payload_bytes": {
+          "max": 792,
+          "mean": 792.0,
+          "median": 792,
+          "min": 792,
+          "n": 5,
+          "outliers": [],
+          "q1": 792.0,
+          "q3": 792.0
+        },
+        "search_cpu_ms": {
+          "max": 0.433991,
+          "mean": 0.408389,
+          "median": 0.406461,
+          "min": 0.395171,
+          "n": 5,
+          "outliers": [
+            0.433991
+          ],
+          "q1": 0.399811,
+          "q3": 0.406511
+        },
+        "search_ms": {
+          "max": 0.435038,
+          "mean": 0.409374,
+          "median": 0.407458,
+          "min": 0.396098,
+          "n": 5,
+          "outliers": [
+            0.435038
+          ],
+          "q1": 0.400758,
+          "q3": 0.407518
+        },
+        "solve_ms": {
+          "max": 0.5097,
+          "mean": 0.482523,
+          "median": 0.480119,
+          "min": 0.465599,
+          "n": 5,
+          "outliers": [
+            0.5097
+          ],
+          "q1": 0.471639,
+          "q3": 0.485559
+        },
+        "stable_mapped": {
+          "max": 234,
+          "mean": 234.0,
+          "median": 234,
+          "min": 234,
+          "n": 5,
+          "outliers": [],
+          "q1": 234.0,
+          "q3": 234.0
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 29.45056,
+          "mean": 26.847889,
+          "median": 26.313139,
+          "min": 25.83501,
+          "n": 5,
+          "outliers": [
+            29.45056
+          ],
+          "q1": 26.150565,
+          "q3": 26.490173
+        },
+        "trace_branches": {
+          "max": 341,
+          "mean": 341.0,
+          "median": 341,
+          "min": 341,
+          "n": 5,
+          "outliers": [],
+          "q1": 341.0,
+          "q3": 341.0
+        },
+        "trace_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "trace_hashes": [
+          "a043c94198c6c6b9e0297f648a7eaeb4bdb0f6f294b65f396875703a49ee41ff"
+        ],
+        "variables": {
+          "max": 1205,
+          "mean": 1205.0,
+          "median": 1205,
+          "min": 1205,
+          "n": 5,
+          "outliers": [],
+          "q1": 1205.0,
+          "q3": 1205.0
+        }
+      },
+      "S_minus_F_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_decisions": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_search_ms": {
+        "distribution": {
+          "max": 0.02896,
+          "mean": 0.003022,
+          "median": 0.0086,
+          "min": -0.01858,
+          "n": 5,
+          "outliers": [],
+          "q1": -0.01262,
+          "q3": 0.00875
+        },
+        "faster": 2,
+        "values": [
+          -0.01262000000000002,
+          0.028959999999999986,
+          0.008599999999999997,
+          -0.018579999999999985,
+          0.00874999999999998
+        ]
+      },
+      "S_minus_F_solve_ms": {
+        "distribution": {
+          "max": 0.022091,
+          "mean": -0.007104,
+          "median": -0.00052,
+          "min": -0.034241,
+          "n": 5,
+          "outliers": [],
+          "q1": -0.025281,
+          "q3": 0.00243
+        },
+        "faster": 3,
+        "values": [
+          -0.025280999999999998,
+          0.022091000000000027,
+          0.0024300000000000432,
+          -0.03424100000000002,
+          -0.0005199999999999649
+        ]
+      },
+      "S_minus_F_theory_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_theory_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_total_ms": {
+        "distribution": {
+          "max": 21.120859,
+          "mean": 18.448939,
+          "median": 17.922517,
+          "min": 17.358306,
+          "n": 5,
+          "outliers": [
+            21.120859
+          ],
+          "q1": 17.68629,
+          "q3": 18.156721
+        },
+        "faster": 0,
+        "values": [
+          17.358306,
+          17.68629,
+          17.922517,
+          21.120859,
+          18.156720999999997
+        ]
+      }
+    },
+    "old": {
+      "F": {
+        "allocator_before_clauses": {
+          "max": 2297,
+          "mean": 2297.0,
+          "median": 2297,
+          "min": 2297,
+          "n": 5,
+          "outliers": [],
+          "q1": 2297.0,
+          "q3": 2297.0
+        },
+        "allocator_bytes": {
+          "max": 6244,
+          "mean": 6244.0,
+          "median": 6244,
+          "min": 6244,
+          "n": 5,
+          "outliers": [],
+          "q1": 6244.0,
+          "q3": 6244.0
+        },
+        "bind_ms": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "decisions": {
+          "max": 342,
+          "mean": 342.0,
+          "median": 342,
+          "min": 342,
+          "n": 5,
+          "outliers": [],
+          "q1": 342.0,
+          "q3": 342.0
+        },
+        "encode_graph_ms": {
+          "max": 7.577596,
+          "mean": 7.483074,
+          "median": 7.483034,
+          "min": 7.387673,
+          "n": 5,
+          "outliers": [
+            7.387673
+          ],
+          "q1": 7.459704,
+          "q3": 7.507365
+        },
+        "factory_ms": {
+          "max": 0.067392,
+          "mean": 0.063577,
+          "median": 0.064111,
+          "min": 0.059651,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.060951,
+          "q3": 0.065781
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.01258,
+          "mean": 0.01132,
+          "median": 0.01148,
+          "min": 0.01039,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.01053,
+          "q3": 0.01162
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "input_clauses": {
+          "max": 2482,
+          "mean": 2482.0,
+          "median": 2482,
+          "min": 2482,
+          "n": 5,
+          "outliers": [],
+          "q1": 2482.0,
+          "q3": 2482.0
+        },
+        "memory_peak_kib": {
+          "max": 46656,
+          "mean": 44208.8,
+          "median": 46656,
+          "min": 37896,
+          "n": 5,
+          "outliers": [
+            37896
+          ],
+          "q1": 43180.0,
+          "q3": 46656.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 658,
+          "mean": 658.0,
+          "median": 658,
+          "min": 658,
+          "n": 5,
+          "outliers": [],
+          "q1": 658.0,
+          "q3": 658.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "search_cpu_ms": {
+          "max": 0.422461,
+          "mean": 0.409135,
+          "median": 0.408321,
+          "min": 0.391471,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.40187,
+          "q3": 0.421551
+        },
+        "search_ms": {
+          "max": 0.423549,
+          "mean": 0.410256,
+          "median": 0.409398,
+          "min": 0.392577,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.402978,
+          "q3": 0.422778
+        },
+        "solve_ms": {
+          "max": 0.51345,
+          "mean": 0.497192,
+          "median": 0.493799,
+          "min": 0.474909,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.49275,
+          "q3": 0.51105
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 8.497254,
+          "mean": 8.379928,
+          "median": 8.377612,
+          "min": 8.25278,
+          "n": 5,
+          "outliers": [
+            8.25278,
+            8.497254
+          ],
+          "q1": 8.365471,
+          "q3": 8.406523
+        },
+        "trace_branches": {
+          "max": 341,
+          "mean": 341.0,
+          "median": 341,
+          "min": 341,
+          "n": 5,
+          "outliers": [],
+          "q1": 341.0,
+          "q3": 341.0
+        },
+        "trace_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "trace_hashes": [
+          "e3f4d2b99d0cb6c2a2aca9108a8e5444eb55dbcdd2018e1081f499440bf02aa7"
+        ],
+        "variables": {
+          "max": 1203,
+          "mean": 1203.0,
+          "median": 1203,
+          "min": 1203,
+          "n": 5,
+          "outliers": [],
+          "q1": 1203.0,
+          "q3": 1203.0
+        }
+      },
+      "S": {
+        "admitted_bindings": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "allocator_before_clauses": {
+          "max": 2297,
+          "mean": 2297.0,
+          "median": 2297,
+          "min": 2297,
+          "n": 5,
+          "outliers": [],
+          "q1": 2297.0,
+          "q3": 2297.0
+        },
+        "allocator_bytes": {
+          "max": 36084,
+          "mean": 36084.0,
+          "median": 36084,
+          "min": 36084,
+          "n": 5,
+          "outliers": [],
+          "q1": 36084.0,
+          "q3": 36084.0
+        },
+        "bind_ms": {
+          "max": 12.844108,
+          "mean": 11.931439,
+          "median": 11.736277,
+          "min": 11.332869,
+          "n": 5,
+          "outliers": [
+            12.844108
+          ],
+          "q1": 11.649615,
+          "q3": 12.094324
+        },
+        "conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "decisions": {
+          "max": 342,
+          "mean": 342.0,
+          "median": 342,
+          "min": 342,
+          "n": 5,
+          "outliers": [],
+          "q1": 342.0,
+          "q3": 342.0
+        },
+        "encode_graph_ms": {
+          "max": 7.503635,
+          "mean": 7.452152,
+          "median": 7.466125,
+          "min": 7.394473,
+          "n": 5,
+          "outliers": [],
+          "q1": 7.411013,
+          "q3": 7.485515
+        },
+        "factory_ms": {
+          "max": 0.073702,
+          "mean": 0.065317,
+          "median": 0.063461,
+          "min": 0.061341,
+          "n": 5,
+          "outliers": [
+            0.073702
+          ],
+          "q1": 0.062791,
+          "q3": 0.065291
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.012021,
+          "mean": 0.010292,
+          "median": 0.00995,
+          "min": 0.00965,
+          "n": 5,
+          "outliers": [
+            0.00965,
+            0.012021
+          ],
+          "q1": 0.009871,
+          "q3": 0.00997
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "init_switch_ms": {
+          "max": 0.035701,
+          "mean": 0.032469,
+          "median": 0.03118,
+          "min": 0.029661,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.030801,
+          "q3": 0.035001
+        },
+        "input_clauses": {
+          "max": 2482,
+          "mean": 2482.0,
+          "median": 2482,
+          "min": 2482,
+          "n": 5,
+          "outliers": [],
+          "q1": 2482.0,
+          "q3": 2482.0
+        },
+        "memory_peak_kib": {
+          "max": 46656,
+          "mean": 44050.4,
+          "median": 46656,
+          "min": 37104,
+          "n": 5,
+          "outliers": [
+            37104
+          ],
+          "q1": 43180.0,
+          "q3": 46656.0
+        },
+        "old_roots": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 658,
+          "mean": 658.0,
+          "median": 658,
+          "min": 658,
+          "n": 5,
+          "outliers": [],
+          "q1": 658.0,
+          "q3": 658.0
+        },
+        "read_input_ms": {
+          "max": 0.884397,
+          "mean": 0.861941,
+          "median": 0.855396,
+          "min": 0.844336,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.854287,
+          "q3": 0.871287
+        },
+        "replay_submit_ms": {
+          "max": 1.881686,
+          "mean": 1.85752,
+          "median": 1.867126,
+          "min": 1.817515,
+          "n": 5,
+          "outliers": [
+            1.817515
+          ],
+          "q1": 1.852626,
+          "q3": 1.868646
+        },
+        "resident_pss_kib": {
+          "max": 1886,
+          "mean": 1872.0,
+          "median": 1874,
+          "min": 1845,
+          "n": 5,
+          "outliers": [
+            1845
+          ],
+          "q1": 1870.0,
+          "q3": 1885.0
+        },
+        "resident_rss_kib": {
+          "max": 4952,
+          "mean": 4862.4,
+          "median": 4848,
+          "min": 4824,
+          "n": 5,
+          "outliers": [
+            4952
+          ],
+          "q1": 4828.0,
+          "q3": 4860.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retired_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "seal_ms": {
+          "max": 0.082652,
+          "mean": 0.076458,
+          "median": 0.075111,
+          "min": 0.074342,
+          "n": 5,
+          "outliers": [
+            0.082652
+          ],
+          "q1": 0.074391,
+          "q3": 0.075792
+        },
+        "seal_payload_bytes": {
+          "max": 792,
+          "mean": 792.0,
+          "median": 792,
+          "min": 792,
+          "n": 5,
+          "outliers": [],
+          "q1": 792.0,
+          "q3": 792.0
+        },
+        "search_cpu_ms": {
+          "max": 0.364011,
+          "mean": 0.348858,
+          "median": 0.350851,
+          "min": 0.3363,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.33912,
+          "q3": 0.35401
+        },
+        "search_ms": {
+          "max": 0.365047,
+          "mean": 0.34985,
+          "median": 0.351847,
+          "min": 0.337266,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.340046,
+          "q3": 0.355046
+        },
+        "solve_ms": {
+          "max": 0.50702,
+          "mean": 0.452353,
+          "median": 0.440568,
+          "min": 0.428329,
+          "n": 5,
+          "outliers": [
+            0.50702
+          ],
+          "q1": 0.432499,
+          "q3": 0.453349
+        },
+        "stable_mapped": {
+          "max": 234,
+          "mean": 234.0,
+          "median": 234,
+          "min": 234,
+          "n": 5,
+          "outliers": [],
+          "q1": 234.0,
+          "q3": 234.0
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 24.669827,
+          "mean": 23.686788,
+          "median": 23.445763,
+          "min": 23.120187,
+          "n": 5,
+          "outliers": [
+            24.669827
+          ],
+          "q1": 23.418093,
+          "q3": 23.78007
+        },
+        "trace_branches": {
+          "max": 341,
+          "mean": 341.0,
+          "median": 341,
+          "min": 341,
+          "n": 5,
+          "outliers": [],
+          "q1": 341.0,
+          "q3": 341.0
+        },
+        "trace_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "trace_hashes": [
+          "e3f4d2b99d0cb6c2a2aca9108a8e5444eb55dbcdd2018e1081f499440bf02aa7"
+        ],
+        "variables": {
+          "max": 1203,
+          "mean": 1203.0,
+          "median": 1203,
+          "min": 1203,
+          "n": 5,
+          "outliers": [],
+          "q1": 1203.0,
+          "q3": 1203.0
+        }
+      },
+      "S_minus_F_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_decisions": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_search_ms": {
+        "distribution": {
+          "max": -0.02753,
+          "mean": -0.060406,
+          "median": -0.068503,
+          "min": -0.072132,
+          "n": 5,
+          "outliers": [
+            -0.02753
+          ],
+          "q1": -0.070931,
+          "q3": -0.062932
+        },
+        "faster": 5,
+        "values": [
+          -0.02753,
+          -0.06850300000000004,
+          -0.06293199999999999,
+          -0.07213199999999997,
+          -0.07093099999999997
+        ]
+      },
+      "S_minus_F_solve_ms": {
+        "distribution": {
+          "max": 0.032111,
+          "mean": -0.044839,
+          "median": -0.0613,
+          "min": -0.072882,
+          "n": 5,
+          "outliers": [
+            0.032111
+          ],
+          "q1": -0.064421,
+          "q3": -0.057701
+        },
+        "faster": 4,
+        "values": [
+          0.032111,
+          -0.057701,
+          -0.064421,
+          -0.061299999999999966,
+          -0.07288199999999995
+        ]
+      },
+      "S_minus_F_theory_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_theory_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_total_ms": {
+        "distribution": {
+          "max": 16.292215,
+          "mean": 15.30686,
+          "median": 15.052622,
+          "min": 14.867407,
+          "n": 5,
+          "outliers": [
+            16.292215
+          ],
+          "q1": 15.03924,
+          "q3": 15.282816
+        },
+        "faster": 0,
+        "values": [
+          14.867407000000002,
+          16.292215000000002,
+          15.03924,
+          15.052622,
+          15.282815999999999
+        ]
+      }
+    }
+  },
+  "batch_total": {
+    "candidate": {
+      "F": {
+        "allocator_before_clauses": {
+          "max": 2304,
+          "mean": 2304.0,
+          "median": 2304,
+          "min": 2304,
+          "n": 5,
+          "outliers": [],
+          "q1": 2304.0,
+          "q3": 2304.0
+        },
+        "allocator_bytes": {
+          "max": 6244,
+          "mean": 6244.0,
+          "median": 6244,
+          "min": 6244,
+          "n": 5,
+          "outliers": [],
+          "q1": 6244.0,
+          "q3": 6244.0
+        },
+        "bind_ms": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "conflicts": {
+          "max": 2,
+          "mean": 2.0,
+          "median": 2,
+          "min": 2,
+          "n": 5,
+          "outliers": [],
+          "q1": 2.0,
+          "q3": 2.0
+        },
+        "decisions": {
+          "max": 75,
+          "mean": 75.0,
+          "median": 75,
+          "min": 75,
+          "n": 5,
+          "outliers": [],
+          "q1": 75.0,
+          "q3": 75.0
+        },
+        "encode_graph_ms": {
+          "max": 7.708709,
+          "mean": 7.514173,
+          "median": 7.514655,
+          "min": 7.382883,
+          "n": 5,
+          "outliers": [
+            7.708709
+          ],
+          "q1": 7.433954,
+          "q3": 7.530666
+        },
+        "factory_ms": {
+          "max": 0.062191,
+          "mean": 0.058777,
+          "median": 0.058541,
+          "min": 0.055892,
+          "n": 5,
+          "outliers": [
+            0.055892,
+            0.062191
+          ],
+          "q1": 0.058171,
+          "q3": 0.059091
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.01204,
+          "mean": 0.010694,
+          "median": 0.010501,
+          "min": 0.009601,
+          "n": 5,
+          "outliers": [
+            0.01204
+          ],
+          "q1": 0.01034,
+          "q3": 0.01099
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "input_clauses": {
+          "max": 2489,
+          "mean": 2489.0,
+          "median": 2489,
+          "min": 2489,
+          "n": 5,
+          "outliers": [],
+          "q1": 2489.0,
+          "q3": 2489.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 44756.8,
+          "median": 46656,
+          "min": 35868,
+          "n": 5,
+          "outliers": [
+            35868,
+            47948
+          ],
+          "q1": 46656.0,
+          "q3": 46656.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 270,
+          "mean": 270.0,
+          "median": 270,
+          "min": 270,
+          "n": 5,
+          "outliers": [],
+          "q1": 270.0,
+          "q3": 270.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "search_cpu_ms": {
+          "max": 0.390921,
+          "mean": 0.382373,
+          "median": 0.380111,
+          "min": 0.375341,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.376421,
+          "q3": 0.389071
+        },
+        "search_ms": {
+          "max": 0.392177,
+          "mean": 0.383577,
+          "median": 0.381187,
+          "min": 0.376577,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.377568,
+          "q3": 0.390378
+        },
+        "solve_ms": {
+          "max": 0.465589,
+          "mean": 0.447707,
+          "median": 0.441919,
+          "min": 0.437508,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.441098,
+          "q3": 0.452419
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 8.531225,
+          "mean": 8.349878,
+          "median": 8.341281,
+          "min": 8.25114,
+          "n": 5,
+          "outliers": [],
+          "q1": 8.25254,
+          "q3": 8.373203
+        },
+        "trace_branches": {
+          "max": 75,
+          "mean": 75.0,
+          "median": 75,
+          "min": 75,
+          "n": 5,
+          "outliers": [],
+          "q1": 75.0,
+          "q3": 75.0
+        },
+        "trace_conflicts": {
+          "max": 2,
+          "mean": 2.0,
+          "median": 2,
+          "min": 2,
+          "n": 5,
+          "outliers": [],
+          "q1": 2.0,
+          "q3": 2.0
+        },
+        "trace_hashes": [
+          "a19e6ce6f44a3634990940ee1ae96b3ef4a8c97d63886078bcbabd732e91ad53"
+        ],
+        "variables": {
+          "max": 1205,
+          "mean": 1205.0,
+          "median": 1205,
+          "min": 1205,
+          "n": 5,
+          "outliers": [],
+          "q1": 1205.0,
+          "q3": 1205.0
+        }
+      },
+      "S": {
+        "admitted_bindings": {
+          "max": 192,
+          "mean": 192.0,
+          "median": 192,
+          "min": 192,
+          "n": 5,
+          "outliers": [],
+          "q1": 192.0,
+          "q3": 192.0
+        },
+        "allocator_before_clauses": {
+          "max": 2304,
+          "mean": 2304.0,
+          "median": 2304,
+          "min": 2304,
+          "n": 5,
+          "outliers": [],
+          "q1": 2304.0,
+          "q3": 2304.0
+        },
+        "allocator_bytes": {
+          "max": 6244,
+          "mean": 6244.0,
+          "median": 6244,
+          "min": 6244,
+          "n": 5,
+          "outliers": [],
+          "q1": 6244.0,
+          "q3": 6244.0
+        },
+        "bind_ms": {
+          "max": 16.877136,
+          "mean": 14.709098,
+          "median": 14.179184,
+          "min": 13.667224,
+          "n": 5,
+          "outliers": [
+            16.877136
+          ],
+          "q1": 14.131223,
+          "q3": 14.690724
+        },
+        "conflicts": {
+          "max": 2,
+          "mean": 2.0,
+          "median": 2,
+          "min": 2,
+          "n": 5,
+          "outliers": [],
+          "q1": 2.0,
+          "q3": 2.0
+        },
+        "decisions": {
+          "max": 75,
+          "mean": 75.0,
+          "median": 75,
+          "min": 75,
+          "n": 5,
+          "outliers": [],
+          "q1": 75.0,
+          "q3": 75.0
+        },
+        "encode_graph_ms": {
+          "max": 8.102297,
+          "mean": 7.555114,
+          "median": 7.433753,
+          "min": 7.355663,
+          "n": 5,
+          "outliers": [
+            7.355663,
+            8.102297
+          ],
+          "q1": 7.428634,
+          "q3": 7.455224
+        },
+        "factory_ms": {
+          "max": 0.062521,
+          "mean": 0.060897,
+          "median": 0.060981,
+          "min": 0.059651,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.059671,
+          "q3": 0.061661
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.01091,
+          "mean": 0.010614,
+          "median": 0.0107,
+          "min": 0.0103,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.01044,
+          "q3": 0.01072
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "init_switch_ms": {
+          "max": 0.146773,
+          "mean": 0.144459,
+          "median": 0.144163,
+          "min": 0.141913,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.142962,
+          "q3": 0.146483
+        },
+        "input_clauses": {
+          "max": 2489,
+          "mean": 2489.0,
+          "median": 2489,
+          "min": 2489,
+          "n": 5,
+          "outliers": [],
+          "q1": 2489.0,
+          "q3": 2489.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 44756.8,
+          "median": 46656,
+          "min": 35868,
+          "n": 5,
+          "outliers": [
+            35868,
+            47948
+          ],
+          "q1": 46656.0,
+          "q3": 46656.0
+        },
+        "old_roots": {
+          "max": 848,
+          "mean": 848.0,
+          "median": 848,
+          "min": 848,
+          "n": 5,
+          "outliers": [],
+          "q1": 848.0,
+          "q3": 848.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 270,
+          "mean": 270.0,
+          "median": 270,
+          "min": 270,
+          "n": 5,
+          "outliers": [],
+          "q1": 270.0,
+          "q3": 270.0
+        },
+        "read_input_ms": {
+          "max": 0.797625,
+          "mean": 0.788063,
+          "median": 0.787786,
+          "min": 0.778185,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.779105,
+          "q3": 0.797615
+        },
+        "replay_submit_ms": {
+          "max": 1.663443,
+          "mean": 1.64337,
+          "median": 1.642872,
+          "min": 1.618151,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.633972,
+          "q3": 1.658412
+        },
+        "resident_pss_kib": {
+          "max": 2160,
+          "mean": 2135.6,
+          "median": 2141,
+          "min": 2099,
+          "n": 5,
+          "outliers": [
+            2099
+          ],
+          "q1": 2131.0,
+          "q3": 2147.0
+        },
+        "resident_rss_kib": {
+          "max": 5248,
+          "mean": 5213.6,
+          "median": 5232,
+          "min": 5136,
+          "n": 5,
+          "outliers": [
+            5136
+          ],
+          "q1": 5216.0,
+          "q3": 5236.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 64,
+          "mean": 64.0,
+          "median": 64,
+          "min": 64,
+          "n": 5,
+          "outliers": [],
+          "q1": 64.0,
+          "q3": 64.0
+        },
+        "retired_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "seal_ms": {
+          "max": 3e-05,
+          "mean": 2.4e-05,
+          "median": 2e-05,
+          "min": 2e-05,
+          "n": 5,
+          "outliers": [],
+          "q1": 2e-05,
+          "q3": 3e-05
+        },
+        "seal_payload_bytes": {
+          "max": 792,
+          "mean": 792.0,
+          "median": 792,
+          "min": 792,
+          "n": 5,
+          "outliers": [],
+          "q1": 792.0,
+          "q3": 792.0
+        },
+        "search_cpu_ms": {
+          "max": 0.412891,
+          "mean": 0.400913,
+          "median": 0.406301,
+          "min": 0.379301,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.39615,
+          "q3": 0.409921
+        },
+        "search_ms": {
+          "max": 0.414078,
+          "mean": 0.402132,
+          "median": 0.407477,
+          "min": 0.380687,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.397328,
+          "q3": 0.411088
+        },
+        "solve_ms": {
+          "max": 0.467749,
+          "mean": 0.453527,
+          "median": 0.457599,
+          "min": 0.433478,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.447119,
+          "q3": 0.461689
+        },
+        "stable_mapped": {
+          "max": 234,
+          "mean": 234.0,
+          "median": 234,
+          "min": 234,
+          "n": 5,
+          "outliers": [],
+          "q1": 234.0,
+          "q3": 234.0
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 28.798358,
+          "mean": 26.721893,
+          "median": 26.525813,
+          "min": 25.588214,
+          "n": 5,
+          "outliers": [
+            28.798358
+          ],
+          "q1": 25.954162,
+          "q3": 26.742918
+        },
+        "trace_branches": {
+          "max": 75,
+          "mean": 75.0,
+          "median": 75,
+          "min": 75,
+          "n": 5,
+          "outliers": [],
+          "q1": 75.0,
+          "q3": 75.0
+        },
+        "trace_conflicts": {
+          "max": 2,
+          "mean": 2.0,
+          "median": 2,
+          "min": 2,
+          "n": 5,
+          "outliers": [],
+          "q1": 2.0,
+          "q3": 2.0
+        },
+        "trace_hashes": [
+          "a19e6ce6f44a3634990940ee1ae96b3ef4a8c97d63886078bcbabd732e91ad53"
+        ],
+        "variables": {
+          "max": 1205,
+          "mean": 1205.0,
+          "median": 1205,
+          "min": 1205,
+          "n": 5,
+          "outliers": [],
+          "q1": 1205.0,
+          "q3": 1205.0
+        }
+      },
+      "S_minus_F_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_decisions": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_search_ms": {
+        "distribution": {
+          "max": 0.03651,
+          "mean": 0.018554,
+          "median": 0.02629,
+          "min": -0.01149,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.00695,
+          "q3": 0.034511
+        },
+        "faster": 1,
+        "values": [
+          0.034511000000000014,
+          0.02628999999999998,
+          0.03650999999999999,
+          -0.01149,
+          0.006950000000000012
+        ]
+      },
+      "S_minus_F_solve_ms": {
+        "distribution": {
+          "max": 0.02583,
+          "mean": 0.00582,
+          "median": 0.016501,
+          "min": -0.032111,
+          "n": 5,
+          "outliers": [],
+          "q1": -0.0053,
+          "q3": 0.024181
+        },
+        "faster": 2,
+        "values": [
+          0.024181000000000008,
+          0.016500999999999988,
+          0.02583000000000002,
+          -0.032111,
+          -0.005300000000000027
+        ]
+      },
+      "S_minus_F_theory_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_theory_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_total_ms": {
+        "distribution": {
+          "max": 20.545818,
+          "mean": 18.372015,
+          "median": 18.184532,
+          "min": 17.056989,
+          "n": 5,
+          "outliers": [
+            20.545818
+          ],
+          "q1": 17.580959,
+          "q3": 18.491778
+        },
+        "faster": 0,
+        "values": [
+          17.056989,
+          18.184531999999997,
+          20.545818,
+          18.491778,
+          17.580959
+        ]
+      }
+    },
+    "old": {
+      "F": {
+        "allocator_before_clauses": {
+          "max": 2297,
+          "mean": 2297.0,
+          "median": 2297,
+          "min": 2297,
+          "n": 5,
+          "outliers": [],
+          "q1": 2297.0,
+          "q3": 2297.0
+        },
+        "allocator_bytes": {
+          "max": 6244,
+          "mean": 6244.0,
+          "median": 6244,
+          "min": 6244,
+          "n": 5,
+          "outliers": [],
+          "q1": 6244.0,
+          "q3": 6244.0
+        },
+        "bind_ms": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "decisions": {
+          "max": 342,
+          "mean": 342.0,
+          "median": 342,
+          "min": 342,
+          "n": 5,
+          "outliers": [],
+          "q1": 342.0,
+          "q3": 342.0
+        },
+        "encode_graph_ms": {
+          "max": 7.564747,
+          "mean": 7.496443,
+          "median": 7.555626,
+          "min": 7.334792,
+          "n": 5,
+          "outliers": [
+            7.334792
+          ],
+          "q1": 7.470515,
+          "q3": 7.556536
+        },
+        "factory_ms": {
+          "max": 0.067771,
+          "mean": 0.063671,
+          "median": 0.065221,
+          "min": 0.058951,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.059871,
+          "q3": 0.066542
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.012191,
+          "mean": 0.011472,
+          "median": 0.01164,
+          "min": 0.01014,
+          "n": 5,
+          "outliers": [
+            0.01014,
+            0.012191
+          ],
+          "q1": 0.01161,
+          "q3": 0.01178
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "input_clauses": {
+          "max": 2482,
+          "mean": 2482.0,
+          "median": 2482,
+          "min": 2482,
+          "n": 5,
+          "outliers": [],
+          "q1": 2482.0,
+          "q3": 2482.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 44456.8,
+          "median": 46656,
+          "min": 34368,
+          "n": 5,
+          "outliers": [
+            34368,
+            47948
+          ],
+          "q1": 46656.0,
+          "q3": 46656.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 658,
+          "mean": 658.0,
+          "median": 658,
+          "min": 658,
+          "n": 5,
+          "outliers": [],
+          "q1": 658.0,
+          "q3": 658.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "search_cpu_ms": {
+          "max": 0.418691,
+          "mean": 0.409877,
+          "median": 0.413651,
+          "min": 0.398411,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.400481,
+          "q3": 0.41815
+        },
+        "search_ms": {
+          "max": 0.419798,
+          "mean": 0.410988,
+          "median": 0.414798,
+          "min": 0.399497,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.401588,
+          "q3": 0.419258
+        },
+        "solve_ms": {
+          "max": 0.507059,
+          "mean": 0.495491,
+          "median": 0.49933,
+          "min": 0.481069,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.485909,
+          "q3": 0.50409
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 8.457834,
+          "mean": 8.383584,
+          "median": 8.427044,
+          "min": 8.231729,
+          "n": 5,
+          "outliers": [],
+          "q1": 8.358181,
+          "q3": 8.443133
+        },
+        "trace_branches": {
+          "max": 341,
+          "mean": 341.0,
+          "median": 341,
+          "min": 341,
+          "n": 5,
+          "outliers": [],
+          "q1": 341.0,
+          "q3": 341.0
+        },
+        "trace_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "trace_hashes": [
+          "e3f4d2b99d0cb6c2a2aca9108a8e5444eb55dbcdd2018e1081f499440bf02aa7"
+        ],
+        "variables": {
+          "max": 1203,
+          "mean": 1203.0,
+          "median": 1203,
+          "min": 1203,
+          "n": 5,
+          "outliers": [],
+          "q1": 1203.0,
+          "q3": 1203.0
+        }
+      },
+      "S": {
+        "admitted_bindings": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "allocator_before_clauses": {
+          "max": 2297,
+          "mean": 2297.0,
+          "median": 2297,
+          "min": 2297,
+          "n": 5,
+          "outliers": [],
+          "q1": 2297.0,
+          "q3": 2297.0
+        },
+        "allocator_bytes": {
+          "max": 36084,
+          "mean": 36084.0,
+          "median": 36084,
+          "min": 36084,
+          "n": 5,
+          "outliers": [],
+          "q1": 36084.0,
+          "q3": 36084.0
+        },
+        "bind_ms": {
+          "max": 12.822178,
+          "mean": 11.910572,
+          "median": 11.861719,
+          "min": 11.37914,
+          "n": 5,
+          "outliers": [],
+          "q1": 11.467632,
+          "q3": 12.022192
+        },
+        "conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "decisions": {
+          "max": 342,
+          "mean": 342.0,
+          "median": 342,
+          "min": 342,
+          "n": 5,
+          "outliers": [],
+          "q1": 342.0,
+          "q3": 342.0
+        },
+        "encode_graph_ms": {
+          "max": 7.509316,
+          "mean": 7.465714,
+          "median": 7.464554,
+          "min": 7.410743,
+          "n": 5,
+          "outliers": [],
+          "q1": 7.450715,
+          "q3": 7.493244
+        },
+        "factory_ms": {
+          "max": 0.071731,
+          "mean": 0.063343,
+          "median": 0.062451,
+          "min": 0.058171,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.058392,
+          "q3": 0.065972
+        },
+        "full_dispatches": {
+          "max": 73,
+          "mean": 73.0,
+          "median": 73,
+          "min": 73,
+          "n": 5,
+          "outliers": [],
+          "q1": 73.0,
+          "q3": 73.0
+        },
+        "goal_encode_ms": {
+          "max": 0.0117,
+          "mean": 0.010668,
+          "median": 0.01075,
+          "min": 0.009611,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.00979,
+          "q3": 0.01149
+        },
+        "graph_nodes": {
+          "max": 23,
+          "mean": 23.0,
+          "median": 23,
+          "min": 23,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.0,
+          "q3": 23.0
+        },
+        "init_switch_ms": {
+          "max": 0.037251,
+          "mean": 0.032428,
+          "median": 0.0302,
+          "min": 0.02976,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.029861,
+          "q3": 0.03507
+        },
+        "input_clauses": {
+          "max": 2482,
+          "mean": 2482.0,
+          "median": 2482,
+          "min": 2482,
+          "n": 5,
+          "outliers": [],
+          "q1": 2482.0,
+          "q3": 2482.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 44756.8,
+          "median": 46656,
+          "min": 35868,
+          "n": 5,
+          "outliers": [
+            35868,
+            47948
+          ],
+          "q1": 46656.0,
+          "q3": 46656.0
+        },
+        "old_roots": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "postsolve_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "propagations": {
+          "max": 658,
+          "mean": 658.0,
+          "median": 658,
+          "min": 658,
+          "n": 5,
+          "outliers": [],
+          "q1": 658.0,
+          "q3": 658.0
+        },
+        "read_input_ms": {
+          "max": 1.227204,
+          "mean": 0.928668,
+          "median": 0.850287,
+          "min": 0.843827,
+          "n": 5,
+          "outliers": [
+            1.227204
+          ],
+          "q1": 0.844326,
+          "q3": 0.877697
+        },
+        "replay_submit_ms": {
+          "max": 2.261324,
+          "mean": 1.929128,
+          "median": 1.846796,
+          "min": 1.809405,
+          "n": 5,
+          "outliers": [
+            2.261324
+          ],
+          "q1": 1.830706,
+          "q3": 1.897407
+        },
+        "resident_pss_kib": {
+          "max": 1914,
+          "mean": 1883.6,
+          "median": 1894,
+          "min": 1833,
+          "n": 5,
+          "outliers": [
+            1833
+          ],
+          "q1": 1881.0,
+          "q3": 1896.0
+        },
+        "resident_rss_kib": {
+          "max": 5004,
+          "mean": 4944.0,
+          "median": 4988,
+          "min": 4828,
+          "n": 5,
+          "outliers": [],
+          "q1": 4908.0,
+          "q3": 4992.0
+        },
+        "restarts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retired_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "seal_ms": {
+          "max": 0.107212,
+          "mean": 0.083332,
+          "median": 0.076032,
+          "min": 0.072872,
+          "n": 5,
+          "outliers": [
+            0.107212
+          ],
+          "q1": 0.073882,
+          "q3": 0.086662
+        },
+        "seal_payload_bytes": {
+          "max": 792,
+          "mean": 792.0,
+          "median": 792,
+          "min": 792,
+          "n": 5,
+          "outliers": [],
+          "q1": 792.0,
+          "q3": 792.0
+        },
+        "search_cpu_ms": {
+          "max": 0.346371,
+          "mean": 0.339549,
+          "median": 0.33859,
+          "min": 0.331941,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.33612,
+          "q3": 0.344721
+        },
+        "search_ms": {
+          "max": 0.347407,
+          "mean": 0.340541,
+          "median": 0.339556,
+          "min": 0.332897,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.337147,
+          "q3": 0.345697
+        },
+        "solve_ms": {
+          "max": 0.439519,
+          "mean": 0.432011,
+          "median": 0.430169,
+          "min": 0.422138,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.429598,
+          "q3": 0.438629
+        },
+        "stable_mapped": {
+          "max": 234,
+          "mean": 234.0,
+          "median": 234,
+          "min": 234,
+          "n": 5,
+          "outliers": [],
+          "q1": 234.0,
+          "q3": 234.0
+        },
+        "starts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "theory_propagations": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "total_ms": {
+          "max": 24.628427,
+          "mean": 23.826181,
+          "median": 23.846031,
+          "min": 23.123267,
+          "n": 5,
+          "outliers": [],
+          "q1": 23.130096,
+          "q3": 24.403083
+        },
+        "trace_branches": {
+          "max": 341,
+          "mean": 341.0,
+          "median": 341,
+          "min": 341,
+          "n": 5,
+          "outliers": [],
+          "q1": 341.0,
+          "q3": 341.0
+        },
+        "trace_conflicts": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1,
+          "min": 1,
+          "n": 5,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "trace_hashes": [
+          "e3f4d2b99d0cb6c2a2aca9108a8e5444eb55dbcdd2018e1081f499440bf02aa7"
+        ],
+        "variables": {
+          "max": 1203,
+          "mean": 1203.0,
+          "median": 1203,
+          "min": 1203,
+          "n": 5,
+          "outliers": [],
+          "q1": 1203.0,
+          "q3": 1203.0
+        }
+      },
+      "S_minus_F_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_decisions": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_search_ms": {
+        "distribution": {
+          "max": -0.05209,
+          "mean": -0.070447,
+          "median": -0.077651,
+          "min": -0.086361,
+          "n": 5,
+          "outliers": [],
+          "q1": -0.080242,
+          "q3": -0.055891
+        },
+        "faster": 5,
+        "values": [
+          -0.08636100000000002,
+          -0.055891000000000024,
+          -0.07765100000000003,
+          -0.05208999999999997,
+          -0.08024199999999998
+        ]
+      },
+      "S_minus_F_solve_ms": {
+        "distribution": {
+          "max": -0.04244,
+          "mean": -0.063481,
+          "median": -0.069732,
+          "min": -0.084921,
+          "n": 5,
+          "outliers": [],
+          "q1": -0.073921,
+          "q3": -0.04639
+        },
+        "faster": 5,
+        "values": [
+          -0.08492100000000002,
+          -0.04638999999999999,
+          -0.06973200000000002,
+          -0.04244000000000003,
+          -0.07392100000000001
+        ]
+      },
+      "S_minus_F_theory_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_theory_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0,
+          "min": 0,
+          "n": 5,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_total_ms": {
+        "distribution": {
+          "max": 16.201383,
+          "mean": 15.442597,
+          "median": 15.48785,
+          "min": 14.672262,
+          "n": 5,
+          "outliers": [],
+          "q1": 14.891538,
+          "q3": 15.95995
+        },
+        "faster": 0,
+        "values": [
+          14.891537999999999,
+          15.95995,
+          15.48785,
+          16.201383,
+          14.672262000000002
+        ]
+      }
+    }
+  },
+  "fib_updates_8": {
+    "candidate": {
+      "F": {
+        "allocator_before_clauses": {
+          "max": 46627,
+          "mean": 46627.0,
+          "median": 46627.0,
+          "min": 46627,
+          "n": 8,
+          "outliers": [],
+          "q1": 46627.0,
+          "q3": 46627.0
+        },
+        "allocator_bytes": {
+          "max": 7822596,
+          "mean": 7822596.0,
+          "median": 7822596.0,
+          "min": 7822596,
+          "n": 8,
+          "outliers": [],
+          "q1": 7822596.0,
+          "q3": 7822596.0
+        },
+        "bind_ms": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "conflicts": {
+          "max": 23391,
+          "mean": 23391.0,
+          "median": 23391.0,
+          "min": 23391,
+          "n": 8,
+          "outliers": [],
+          "q1": 23391.0,
+          "q3": 23391.0
+        },
+        "decisions": {
+          "max": 64162,
+          "mean": 64162.0,
+          "median": 64162.0,
+          "min": 64162,
+          "n": 8,
+          "outliers": [],
+          "q1": 64162.0,
+          "q3": 64162.0
+        },
+        "encode_graph_ms": {
+          "max": 60.168093,
+          "mean": 59.211275,
+          "median": 59.409779,
+          "min": 58.052153,
+          "n": 8,
+          "outliers": [],
+          "q1": 58.83079,
+          "q3": 59.529149
+        },
+        "factory_ms": {
+          "max": 0.075821,
+          "mean": 0.064101,
+          "median": 0.063937,
+          "min": 0.059531,
+          "n": 8,
+          "outliers": [
+            0.075821
+          ],
+          "q1": 0.060094,
+          "q3": 0.064654
+        },
+        "full_dispatches": {
+          "max": 239,
+          "mean": 239.0,
+          "median": 239.0,
+          "min": 239,
+          "n": 8,
+          "outliers": [],
+          "q1": 239.0,
+          "q3": 239.0
+        },
+        "goal_encode_ms": {
+          "max": 0.02072,
+          "mean": 0.017492,
+          "median": 0.017631,
+          "min": 0.015161,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.015998,
+          "q3": 0.018415
+        },
+        "graph_nodes": {
+          "max": 81,
+          "mean": 81.0,
+          "median": 81.0,
+          "min": 81,
+          "n": 8,
+          "outliers": [],
+          "q1": 81.0,
+          "q3": 81.0
+        },
+        "input_clauses": {
+          "max": 48329,
+          "mean": 48329.0,
+          "median": 48329.0,
+          "min": 48329,
+          "n": 8,
+          "outliers": [],
+          "q1": 48329.0,
+          "q3": 48329.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 45970.5,
+          "median": 47302.0,
+          "min": 39480,
+          "n": 8,
+          "outliers": [
+            39480
+          ],
+          "q1": 45787.0,
+          "q3": 47948.0
+        },
+        "postsolve_learnts": {
+          "max": 31432,
+          "mean": 31432.0,
+          "median": 31432.0,
+          "min": 31432,
+          "n": 8,
+          "outliers": [],
+          "q1": 31432.0,
+          "q3": 31432.0
+        },
+        "propagations": {
+          "max": 28462067,
+          "mean": 28462067.0,
+          "median": 28462067.0,
+          "min": 28462067,
+          "n": 8,
+          "outliers": [],
+          "q1": 28462067.0,
+          "q3": 28462067.0
+        },
+        "restarts": {
+          "max": 84,
+          "mean": 84.0,
+          "median": 84.0,
+          "min": 84,
+          "n": 8,
+          "outliers": [],
+          "q1": 84.0,
+          "q3": 84.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1,
+          "n": 8,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "search_cpu_ms": {
+          "max": 2449.819063,
+          "mean": 2433.296855,
+          "median": 2431.879051,
+          "min": 2418.132926,
+          "n": 8,
+          "outliers": [],
+          "q1": 2428.297251,
+          "q3": 2439.548187
+        },
+        "search_ms": {
+          "max": 2450.094077,
+          "mean": 2433.533767,
+          "median": 2432.076084,
+          "min": 2418.311203,
+          "n": 8,
+          "outliers": [],
+          "q1": 2428.568059,
+          "q3": 2439.766664
+        },
+        "solve_ms": {
+          "max": 2450.275281,
+          "mean": 2433.719113,
+          "median": 2432.261392,
+          "min": 2418.490846,
+          "n": 8,
+          "outliers": [],
+          "q1": 2428.745854,
+          "q3": 2439.963703
+        },
+        "starts": {
+          "max": 85,
+          "mean": 85.0,
+          "median": 85.0,
+          "min": 85,
+          "n": 8,
+          "outliers": [],
+          "q1": 85.0,
+          "q3": 85.0
+        },
+        "theory_conflicts": {
+          "max": 17,
+          "mean": 17.0,
+          "median": 17.0,
+          "min": 17,
+          "n": 8,
+          "outliers": [],
+          "q1": 17.0,
+          "q3": 17.0
+        },
+        "theory_propagations": {
+          "max": 8215,
+          "mean": 8215.0,
+          "median": 8215.0,
+          "min": 8215,
+          "n": 8,
+          "outliers": [],
+          "q1": 8215.0,
+          "q3": 8215.0
+        },
+        "total_ms": {
+          "max": 2510.831672,
+          "mean": 2493.960057,
+          "median": 2492.730961,
+          "min": 2477.513577,
+          "n": 8,
+          "outliers": [],
+          "q1": 2488.584627,
+          "q3": 2501.008228
+        },
+        "trace_branches": {
+          "max": 64162,
+          "mean": 64162.0,
+          "median": 64162.0,
+          "min": 64162,
+          "n": 8,
+          "outliers": [],
+          "q1": 64162.0,
+          "q3": 64162.0
+        },
+        "trace_conflicts": {
+          "max": 23391,
+          "mean": 23391.0,
+          "median": 23391.0,
+          "min": 23391,
+          "n": 8,
+          "outliers": [],
+          "q1": 23391.0,
+          "q3": 23391.0
+        },
+        "trace_hashes": [
+          "59543bcad007a287f4173706f09a9d71c88f44a7fcd61dcc19d90fadfb0a5ae7"
+        ],
+        "variables": {
+          "max": 12058,
+          "mean": 12058.0,
+          "median": 12058.0,
+          "min": 12058,
+          "n": 8,
+          "outliers": [],
+          "q1": 12058.0,
+          "q3": 12058.0
+        }
+      },
+      "S": {
+        "admitted_bindings": {
+          "max": 575,
+          "mean": 575.0,
+          "median": 575.0,
+          "min": 575,
+          "n": 8,
+          "outliers": [],
+          "q1": 575.0,
+          "q3": 575.0
+        },
+        "allocator_before_clauses": {
+          "max": 46627,
+          "mean": 46627.0,
+          "median": 46627.0,
+          "min": 46627,
+          "n": 8,
+          "outliers": [],
+          "q1": 46627.0,
+          "q3": 46627.0
+        },
+        "allocator_bytes": {
+          "max": 8785216,
+          "mean": 8785216.0,
+          "median": 8785216.0,
+          "min": 8785216,
+          "n": 8,
+          "outliers": [],
+          "q1": 8785216.0,
+          "q3": 8785216.0
+        },
+        "bind_ms": {
+          "max": 76.99459,
+          "mean": 73.196438,
+          "median": 72.447461,
+          "min": 70.716033,
+          "n": 8,
+          "outliers": [],
+          "q1": 71.239638,
+          "q3": 75.081895
+        },
+        "conflicts": {
+          "max": 23391,
+          "mean": 23391.0,
+          "median": 23391.0,
+          "min": 23391,
+          "n": 8,
+          "outliers": [],
+          "q1": 23391.0,
+          "q3": 23391.0
+        },
+        "decisions": {
+          "max": 64162,
+          "mean": 64162.0,
+          "median": 64162.0,
+          "min": 64162,
+          "n": 8,
+          "outliers": [],
+          "q1": 64162.0,
+          "q3": 64162.0
+        },
+        "encode_graph_ms": {
+          "max": 60.132217,
+          "mean": 59.149251,
+          "median": 59.103243,
+          "min": 58.40489,
+          "n": 8,
+          "outliers": [
+            58.40489,
+            60.132217
+          ],
+          "q1": 58.93275,
+          "q3": 59.258887
+        },
+        "factory_ms": {
+          "max": 0.072501,
+          "mean": 0.062591,
+          "median": 0.061011,
+          "min": 0.059101,
+          "n": 8,
+          "outliers": [
+            0.072501
+          ],
+          "q1": 0.060341,
+          "q3": 0.063021
+        },
+        "full_dispatches": {
+          "max": 239,
+          "mean": 239.0,
+          "median": 239.0,
+          "min": 239,
+          "n": 8,
+          "outliers": [],
+          "q1": 239.0,
+          "q3": 239.0
+        },
+        "goal_encode_ms": {
+          "max": 0.02136,
+          "mean": 0.017354,
+          "median": 0.017155,
+          "min": 0.01482,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.016016,
+          "q3": 0.01819
+        },
+        "graph_nodes": {
+          "max": 81,
+          "mean": 81.0,
+          "median": 81.0,
+          "min": 81,
+          "n": 8,
+          "outliers": [],
+          "q1": 81.0,
+          "q3": 81.0
+        },
+        "init_switch_ms": {
+          "max": 2.242213,
+          "mean": 2.179337,
+          "median": 2.172302,
+          "min": 2.146221,
+          "n": 8,
+          "outliers": [
+            2.242213
+          ],
+          "q1": 2.159257,
+          "q3": 2.18801
+        },
+        "input_clauses": {
+          "max": 48329,
+          "mean": 48329.0,
+          "median": 48329.0,
+          "min": 48329,
+          "n": 8,
+          "outliers": [],
+          "q1": 48329.0,
+          "q3": 48329.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 46004.0,
+          "median": 46656.0,
+          "min": 39748,
+          "n": 8,
+          "outliers": [
+            39748
+          ],
+          "q1": 46110.0,
+          "q3": 47948.0
+        },
+        "old_roots": {
+          "max": 2715,
+          "mean": 2715.0,
+          "median": 2715.0,
+          "min": 2715,
+          "n": 8,
+          "outliers": [],
+          "q1": 2715.0,
+          "q3": 2715.0
+        },
+        "postsolve_learnts": {
+          "max": 31432,
+          "mean": 31432.0,
+          "median": 31432.0,
+          "min": 31432,
+          "n": 8,
+          "outliers": [],
+          "q1": 31432.0,
+          "q3": 31432.0
+        },
+        "propagations": {
+          "max": 28462067,
+          "mean": 28462067.0,
+          "median": 28462067.0,
+          "min": 28462067,
+          "n": 8,
+          "outliers": [],
+          "q1": 28462067.0,
+          "q3": 28462067.0
+        },
+        "read_input_ms": {
+          "max": 12.37212,
+          "mean": 12.049397,
+          "median": 12.011658,
+          "min": 11.87593,
+          "n": 8,
+          "outliers": [
+            12.37212
+          ],
+          "q1": 11.950481,
+          "q3": 12.115299
+        },
+        "replay_submit_ms": {
+          "max": 9.475493,
+          "mean": 9.093203,
+          "median": 9.055754,
+          "min": 8.971034,
+          "n": 8,
+          "outliers": [
+            8.971034,
+            9.475493
+          ],
+          "q1": 9.034743,
+          "q3": 9.067456
+        },
+        "resident_pss_kib": {
+          "max": 23517,
+          "mean": 23432.125,
+          "median": 23413.0,
+          "min": 23371,
+          "n": 8,
+          "outliers": [
+            23517
+          ],
+          "q1": 23409.75,
+          "q3": 23445.5
+        },
+        "resident_rss_kib": {
+          "max": 26620,
+          "mean": 26540.0,
+          "median": 26568.0,
+          "min": 26408,
+          "n": 8,
+          "outliers": [],
+          "q1": 26479.0,
+          "q3": 26608.0
+        },
+        "restarts": {
+          "max": 84,
+          "mean": 84.0,
+          "median": 84.0,
+          "min": 84,
+          "n": 8,
+          "outliers": [],
+          "q1": 84.0,
+          "q3": 84.0
+        },
+        "retained": {
+          "max": 132,
+          "mean": 132.0,
+          "median": 132.0,
+          "min": 132,
+          "n": 8,
+          "outliers": [],
+          "q1": 132.0,
+          "q3": 132.0
+        },
+        "retired_learnts": {
+          "max": 3450,
+          "mean": 3450.0,
+          "median": 3450.0,
+          "min": 3450,
+          "n": 8,
+          "outliers": [],
+          "q1": 3450.0,
+          "q3": 3450.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1,
+          "n": 8,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "seal_ms": {
+          "max": 3e-05,
+          "mean": 2.4e-05,
+          "median": 2e-05,
+          "min": 2e-05,
+          "n": 8,
+          "outliers": [],
+          "q1": 2e-05,
+          "q3": 3e-05
+        },
+        "seal_payload_bytes": {
+          "max": 266588,
+          "mean": 266588.0,
+          "median": 266588.0,
+          "min": 266588,
+          "n": 8,
+          "outliers": [],
+          "q1": 266588.0,
+          "q3": 266588.0
+        },
+        "search_cpu_ms": {
+          "max": 2535.442772,
+          "mean": 2475.529733,
+          "median": 2471.324903,
+          "min": 2453.577171,
+          "n": 8,
+          "outliers": [
+            2535.442772
+          ],
+          "q1": 2460.409791,
+          "q3": 2475.793456
+        },
+        "search_ms": {
+          "max": 2535.650223,
+          "mean": 2475.739837,
+          "median": 2471.581582,
+          "min": 2453.748609,
+          "n": 8,
+          "outliers": [
+            2535.650223
+          ],
+          "q1": 2460.610228,
+          "q3": 2476.006589
+        },
+        "solve_ms": {
+          "max": 2535.811225,
+          "mean": 2475.901825,
+          "median": 2471.74335,
+          "min": 2453.907992,
+          "n": 8,
+          "outliers": [
+            2535.811225
+          ],
+          "q1": 2460.772536,
+          "q3": 2476.168821
+        },
+        "stable_mapped": {
+          "max": 2303,
+          "mean": 2303.0,
+          "median": 2303.0,
+          "min": 2303,
+          "n": 8,
+          "outliers": [],
+          "q1": 2303.0,
+          "q3": 2303.0
+        },
+        "starts": {
+          "max": 85,
+          "mean": 85.0,
+          "median": 85.0,
+          "min": 85,
+          "n": 8,
+          "outliers": [],
+          "q1": 85.0,
+          "q3": 85.0
+        },
+        "theory_conflicts": {
+          "max": 17,
+          "mean": 17.0,
+          "median": 17.0,
+          "min": 17,
+          "n": 8,
+          "outliers": [],
+          "q1": 17.0,
+          "q3": 17.0
+        },
+        "theory_propagations": {
+          "max": 8215,
+          "mean": 8215.0,
+          "median": 8215.0,
+          "min": 8215,
+          "n": 8,
+          "outliers": [],
+          "q1": 8215.0,
+          "q3": 8215.0
+        },
+        "total_ms": {
+          "max": 2693.804691,
+          "mean": 2635.587365,
+          "median": 2629.675161,
+          "min": 2613.723023,
+          "n": 8,
+          "outliers": [
+            2693.804691
+          ],
+          "q1": 2620.727787,
+          "q3": 2638.776997
+        },
+        "trace_branches": {
+          "max": 64162,
+          "mean": 64162.0,
+          "median": 64162.0,
+          "min": 64162,
+          "n": 8,
+          "outliers": [],
+          "q1": 64162.0,
+          "q3": 64162.0
+        },
+        "trace_conflicts": {
+          "max": 23391,
+          "mean": 23391.0,
+          "median": 23391.0,
+          "min": 23391,
+          "n": 8,
+          "outliers": [],
+          "q1": 23391.0,
+          "q3": 23391.0
+        },
+        "trace_hashes": [
+          "59543bcad007a287f4173706f09a9d71c88f44a7fcd61dcc19d90fadfb0a5ae7"
+        ],
+        "variables": {
+          "max": 12058,
+          "mean": 12058.0,
+          "median": 12058.0,
+          "min": 12058,
+          "n": 8,
+          "outliers": [],
+          "q1": 12058.0,
+          "q3": 12058.0
+        }
+      },
+      "S_minus_F_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_decisions": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_search_ms": {
+        "distribution": {
+          "max": 85.556146,
+          "mean": 42.20607,
+          "median": 41.784932,
+          "min": 12.33904,
+          "n": 8,
+          "outliers": [
+            12.33904,
+            85.556146
+          ],
+          "q1": 34.14615,
+          "q3": 44.423327
+        },
+        "faster": 0,
+        "values": [
+          41.970030999999835,
+          85.5561459999999,
+          35.22987199999989,
+          46.241321999999855,
+          41.59983299999976,
+          12.339040000000296,
+          43.81732899999997,
+          30.89498500000036
+        ]
+      },
+      "S_minus_F_solve_ms": {
+        "distribution": {
+          "max": 85.535944,
+          "mean": 42.182712,
+          "median": 41.778272,
+          "min": 12.294199,
+          "n": 8,
+          "outliers": [
+            12.294199,
+            85.535944
+          ],
+          "q1": 34.125615,
+          "q3": 44.390591
+        },
+        "faster": 0,
+        "values": [
+          41.96189099999992,
+          85.53594399999974,
+          35.21605200000022,
+          46.22579399999995,
+          41.59465399999999,
+          12.294198999999935,
+          43.77885600000036,
+          30.854303000000073
+        ]
+      },
+      "S_minus_F_theory_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_theory_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_total_ms": {
+        "distribution": {
+          "max": 182.973019,
+          "mean": 141.627308,
+          "median": 141.573103,
+          "min": 111.408436,
+          "n": 8,
+          "outliers": [
+            182.973019
+          ],
+          "q1": 131.510941,
+          "q3": 146.346119
+        },
+        "faster": 0,
+        "values": [
+          144.08213699999988,
+          182.97301900000002,
+          132.81437899999992,
+          149.92145900000014,
+          139.0640699999999,
+          111.40843600000017,
+          145.15433900000016,
+          127.6006269999998
+        ]
+      }
+    },
+    "old": {
+      "F": {
+        "allocator_before_clauses": {
+          "max": 48363,
+          "mean": 48363.0,
+          "median": 48363.0,
+          "min": 48363,
+          "n": 8,
+          "outliers": [],
+          "q1": 48363.0,
+          "q3": 48363.0
+        },
+        "allocator_bytes": {
+          "max": 964220,
+          "mean": 964220.0,
+          "median": 964220.0,
+          "min": 964220,
+          "n": 8,
+          "outliers": [],
+          "q1": 964220.0,
+          "q3": 964220.0
+        },
+        "bind_ms": {
+          "max": 0.0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0.0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "conflicts": {
+          "max": 879,
+          "mean": 879.0,
+          "median": 879.0,
+          "min": 879,
+          "n": 8,
+          "outliers": [],
+          "q1": 879.0,
+          "q3": 879.0
+        },
+        "decisions": {
+          "max": 5595,
+          "mean": 5595.0,
+          "median": 5595.0,
+          "min": 5595,
+          "n": 8,
+          "outliers": [],
+          "q1": 5595.0,
+          "q3": 5595.0
+        },
+        "encode_graph_ms": {
+          "max": 60.260866,
+          "mean": 59.650633,
+          "median": 59.593127,
+          "min": 59.271117,
+          "n": 8,
+          "outliers": [],
+          "q1": 59.319255,
+          "q3": 59.896824
+        },
+        "factory_ms": {
+          "max": 0.074171,
+          "mean": 0.06412,
+          "median": 0.062837,
+          "min": 0.059691,
+          "n": 8,
+          "outliers": [
+            0.074171
+          ],
+          "q1": 0.061794,
+          "q3": 0.064983
+        },
+        "full_dispatches": {
+          "max": 239,
+          "mean": 239.0,
+          "median": 239.0,
+          "min": 239,
+          "n": 8,
+          "outliers": [],
+          "q1": 239.0,
+          "q3": 239.0
+        },
+        "goal_encode_ms": {
+          "max": 0.01941,
+          "mean": 0.017673,
+          "median": 0.017416,
+          "min": 0.016221,
+          "n": 8,
+          "outliers": [
+            0.01941
+          ],
+          "q1": 0.017298,
+          "q3": 0.018078
+        },
+        "graph_nodes": {
+          "max": 81,
+          "mean": 81.0,
+          "median": 81.0,
+          "min": 81,
+          "n": 8,
+          "outliers": [],
+          "q1": 81.0,
+          "q3": 81.0
+        },
+        "input_clauses": {
+          "max": 50065,
+          "mean": 50065.0,
+          "median": 50065.0,
+          "min": 50065,
+          "n": 8,
+          "outliers": [],
+          "q1": 50065.0,
+          "q3": 50065.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 45772.5,
+          "median": 47302.0,
+          "min": 37896,
+          "n": 8,
+          "outliers": [
+            37896
+          ],
+          "q1": 45787.0,
+          "q3": 47948.0
+        },
+        "postsolve_learnts": {
+          "max": 3450,
+          "mean": 3450.0,
+          "median": 3450.0,
+          "min": 3450,
+          "n": 8,
+          "outliers": [],
+          "q1": 3450.0,
+          "q3": 3450.0
+        },
+        "propagations": {
+          "max": 1125922,
+          "mean": 1125922.0,
+          "median": 1125922.0,
+          "min": 1125922,
+          "n": 8,
+          "outliers": [],
+          "q1": 1125922.0,
+          "q3": 1125922.0
+        },
+        "restarts": {
+          "max": 6,
+          "mean": 6.0,
+          "median": 6.0,
+          "min": 6,
+          "n": 8,
+          "outliers": [],
+          "q1": 6.0,
+          "q3": 6.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1,
+          "n": 8,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "search_cpu_ms": {
+          "max": 67.862202,
+          "mean": 67.309769,
+          "median": 67.256835,
+          "min": 66.96404,
+          "n": 8,
+          "outliers": [
+            67.862202
+          ],
+          "q1": 67.146615,
+          "q3": 67.370105
+        },
+        "search_ms": {
+          "max": 67.872233,
+          "mean": 67.323968,
+          "median": 67.277897,
+          "min": 66.973206,
+          "n": 8,
+          "outliers": [
+            67.872233
+          ],
+          "q1": 67.159902,
+          "q3": 67.379356
+        },
+        "solve_ms": {
+          "max": 68.263311,
+          "mean": 67.713083,
+          "median": 67.66673,
+          "min": 67.363003,
+          "n": 8,
+          "outliers": [
+            68.263311
+          ],
+          "q1": 67.541612,
+          "q3": 67.768624
+        },
+        "starts": {
+          "max": 7,
+          "mean": 7.0,
+          "median": 7.0,
+          "min": 7,
+          "n": 8,
+          "outliers": [],
+          "q1": 7.0,
+          "q3": 7.0
+        },
+        "theory_conflicts": {
+          "max": 14,
+          "mean": 14.0,
+          "median": 14.0,
+          "min": 14,
+          "n": 8,
+          "outliers": [],
+          "q1": 14.0,
+          "q3": 14.0
+        },
+        "theory_propagations": {
+          "max": 2623,
+          "mean": 2623.0,
+          "median": 2623.0,
+          "min": 2623,
+          "n": 8,
+          "outliers": [],
+          "q1": 2623.0,
+          "q3": 2623.0
+        },
+        "total_ms": {
+          "max": 129.181199,
+          "mean": 128.431028,
+          "median": 128.334933,
+          "min": 127.885034,
+          "n": 8,
+          "outliers": [],
+          "q1": 128.049383,
+          "q3": 128.769233
+        },
+        "trace_branches": {
+          "max": 5594,
+          "mean": 5594.0,
+          "median": 5594.0,
+          "min": 5594,
+          "n": 8,
+          "outliers": [],
+          "q1": 5594.0,
+          "q3": 5594.0
+        },
+        "trace_conflicts": {
+          "max": 879,
+          "mean": 879.0,
+          "median": 879.0,
+          "min": 879,
+          "n": 8,
+          "outliers": [],
+          "q1": 879.0,
+          "q3": 879.0
+        },
+        "trace_hashes": [
+          "99589fb6cba9c7d71450a0bca13a0d4f1c31aa925fae9fa4c2dbf8d1878c815a"
+        ],
+        "variables": {
+          "max": 12554,
+          "mean": 12554.0,
+          "median": 12554.0,
+          "min": 12554,
+          "n": 8,
+          "outliers": [],
+          "q1": 12554.0,
+          "q3": 12554.0
+        }
+      },
+      "S": {
+        "admitted_bindings": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "allocator_before_clauses": {
+          "max": 48363,
+          "mean": 48363.0,
+          "median": 48363.0,
+          "min": 48363,
+          "n": 8,
+          "outliers": [],
+          "q1": 48363.0,
+          "q3": 48363.0
+        },
+        "allocator_bytes": {
+          "max": 964220,
+          "mean": 964220.0,
+          "median": 964220.0,
+          "min": 964220,
+          "n": 8,
+          "outliers": [],
+          "q1": 964220.0,
+          "q3": 964220.0
+        },
+        "bind_ms": {
+          "max": 53.960987,
+          "mean": 51.446816,
+          "median": 51.39018,
+          "min": 48.745973,
+          "n": 8,
+          "outliers": [],
+          "q1": 49.500848,
+          "q3": 53.462409
+        },
+        "conflicts": {
+          "max": 879,
+          "mean": 879.0,
+          "median": 879.0,
+          "min": 879,
+          "n": 8,
+          "outliers": [],
+          "q1": 879.0,
+          "q3": 879.0
+        },
+        "decisions": {
+          "max": 5595,
+          "mean": 5595.0,
+          "median": 5595.0,
+          "min": 5595,
+          "n": 8,
+          "outliers": [],
+          "q1": 5595.0,
+          "q3": 5595.0
+        },
+        "encode_graph_ms": {
+          "max": 60.903449,
+          "mean": 59.639101,
+          "median": 59.681839,
+          "min": 58.895913,
+          "n": 8,
+          "outliers": [],
+          "q1": 59.039067,
+          "q3": 59.909504
+        },
+        "factory_ms": {
+          "max": 0.073892,
+          "mean": 0.063289,
+          "median": 0.062401,
+          "min": 0.059281,
+          "n": 8,
+          "outliers": [
+            0.073892
+          ],
+          "q1": 0.060651,
+          "q3": 0.063669
+        },
+        "full_dispatches": {
+          "max": 239,
+          "mean": 239.0,
+          "median": 239.0,
+          "min": 239,
+          "n": 8,
+          "outliers": [],
+          "q1": 239.0,
+          "q3": 239.0
+        },
+        "goal_encode_ms": {
+          "max": 0.02081,
+          "mean": 0.01796,
+          "median": 0.01782,
+          "min": 0.015541,
+          "n": 8,
+          "outliers": [
+            0.02081
+          ],
+          "q1": 0.017213,
+          "q3": 0.018376
+        },
+        "graph_nodes": {
+          "max": 81,
+          "mean": 81.0,
+          "median": 81.0,
+          "min": 81,
+          "n": 8,
+          "outliers": [],
+          "q1": 81.0,
+          "q3": 81.0
+        },
+        "init_switch_ms": {
+          "max": 0.119222,
+          "mean": 0.102221,
+          "median": 0.099447,
+          "min": 0.096732,
+          "n": 8,
+          "outliers": [
+            0.119222
+          ],
+          "q1": 0.097587,
+          "q3": 0.102205
+        },
+        "input_clauses": {
+          "max": 50065,
+          "mean": 50065.0,
+          "median": 50065.0,
+          "min": 50065,
+          "n": 8,
+          "outliers": [],
+          "q1": 50065.0,
+          "q3": 50065.0
+        },
+        "memory_peak_kib": {
+          "max": 47948,
+          "mean": 46004.0,
+          "median": 46656.0,
+          "min": 39748,
+          "n": 8,
+          "outliers": [
+            39748
+          ],
+          "q1": 46110.0,
+          "q3": 47948.0
+        },
+        "old_roots": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "postsolve_learnts": {
+          "max": 3450,
+          "mean": 3450.0,
+          "median": 3450.0,
+          "min": 3450,
+          "n": 8,
+          "outliers": [],
+          "q1": 3450.0,
+          "q3": 3450.0
+        },
+        "propagations": {
+          "max": 1125922,
+          "mean": 1125922.0,
+          "median": 1125922.0,
+          "min": 1125922,
+          "n": 8,
+          "outliers": [],
+          "q1": 1125922.0,
+          "q3": 1125922.0
+        },
+        "read_input_ms": {
+          "max": 14.334668,
+          "mean": 14.105173,
+          "median": 14.178465,
+          "min": 13.520942,
+          "n": 8,
+          "outliers": [
+            13.520942
+          ],
+          "q1": 14.093152,
+          "q3": 14.230258
+        },
+        "replay_submit_ms": {
+          "max": 12.230787,
+          "mean": 12.120852,
+          "median": 12.112614,
+          "min": 11.997223,
+          "n": 8,
+          "outliers": [],
+          "q1": 12.072866,
+          "q3": 12.186454
+        },
+        "resident_pss_kib": {
+          "max": 10371,
+          "mean": 10294.125,
+          "median": 10271.5,
+          "min": 10233,
+          "n": 8,
+          "outliers": [],
+          "q1": 10264.5,
+          "q3": 10337.5
+        },
+        "resident_rss_kib": {
+          "max": 13436,
+          "mean": 13356.0,
+          "median": 13412.0,
+          "min": 13208,
+          "n": 8,
+          "outliers": [],
+          "q1": 13279.0,
+          "q3": 13422.0
+        },
+        "restarts": {
+          "max": 6,
+          "mean": 6.0,
+          "median": 6.0,
+          "min": 6,
+          "n": 8,
+          "outliers": [],
+          "q1": 6.0,
+          "q3": 6.0
+        },
+        "retained": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "retired_learnts": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "sc_calls": {
+          "max": 1,
+          "mean": 1.0,
+          "median": 1.0,
+          "min": 1,
+          "n": 8,
+          "outliers": [],
+          "q1": 1.0,
+          "q3": 1.0
+        },
+        "seal_ms": {
+          "max": 0.872817,
+          "mean": 0.832703,
+          "median": 0.825866,
+          "min": 0.809566,
+          "n": 8,
+          "outliers": [
+            0.872817
+          ],
+          "q1": 0.822028,
+          "q3": 0.839839
+        },
+        "seal_payload_bytes": {
+          "max": 266588,
+          "mean": 266588.0,
+          "median": 266588.0,
+          "min": 266588,
+          "n": 8,
+          "outliers": [],
+          "q1": 266588.0,
+          "q3": 266588.0
+        },
+        "search_cpu_ms": {
+          "max": 68.290772,
+          "mean": 67.957549,
+          "median": 68.034467,
+          "min": 67.688241,
+          "n": 8,
+          "outliers": [],
+          "q1": 67.713483,
+          "q3": 68.075194
+        },
+        "search_ms": {
+          "max": 68.299481,
+          "mean": 67.968287,
+          "median": 68.049656,
+          "min": 67.697339,
+          "n": 8,
+          "outliers": [],
+          "q1": 67.72275,
+          "q3": 68.084751
+        },
+        "solve_ms": {
+          "max": 68.69592,
+          "mean": 68.371943,
+          "median": 68.454492,
+          "min": 68.107977,
+          "n": 8,
+          "outliers": [],
+          "q1": 68.126038,
+          "q3": 68.490449
+        },
+        "stable_mapped": {
+          "max": 2303,
+          "mean": 2303.0,
+          "median": 2303.0,
+          "min": 2303,
+          "n": 8,
+          "outliers": [],
+          "q1": 2303.0,
+          "q3": 2303.0
+        },
+        "starts": {
+          "max": 7,
+          "mean": 7.0,
+          "median": 7.0,
+          "min": 7,
+          "n": 8,
+          "outliers": [],
+          "q1": 7.0,
+          "q3": 7.0
+        },
+        "theory_conflicts": {
+          "max": 14,
+          "mean": 14.0,
+          "median": 14.0,
+          "min": 14,
+          "n": 8,
+          "outliers": [],
+          "q1": 14.0,
+          "q3": 14.0
+        },
+        "theory_propagations": {
+          "max": 2623,
+          "mean": 2623.0,
+          "median": 2623.0,
+          "min": 2623,
+          "n": 8,
+          "outliers": [],
+          "q1": 2623.0,
+          "q3": 2623.0
+        },
+        "total_ms": {
+          "max": 212.915438,
+          "mean": 210.318095,
+          "median": 210.41117,
+          "min": 207.590386,
+          "n": 8,
+          "outliers": [],
+          "q1": 208.387949,
+          "q3": 212.200364
+        },
+        "trace_branches": {
+          "max": 5594,
+          "mean": 5594.0,
+          "median": 5594.0,
+          "min": 5594,
+          "n": 8,
+          "outliers": [],
+          "q1": 5594.0,
+          "q3": 5594.0
+        },
+        "trace_conflicts": {
+          "max": 879,
+          "mean": 879.0,
+          "median": 879.0,
+          "min": 879,
+          "n": 8,
+          "outliers": [],
+          "q1": 879.0,
+          "q3": 879.0
+        },
+        "trace_hashes": [
+          "99589fb6cba9c7d71450a0bca13a0d4f1c31aa925fae9fa4c2dbf8d1878c815a"
+        ],
+        "variables": {
+          "max": 12554,
+          "mean": 12554.0,
+          "median": 12554.0,
+          "min": 12554,
+          "n": 8,
+          "outliers": [],
+          "q1": 12554.0,
+          "q3": 12554.0
+        }
+      },
+      "S_minus_F_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_decisions": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_search_ms": {
+        "distribution": {
+          "max": 1.127991,
+          "mean": 0.644319,
+          "median": 0.659362,
+          "min": 0.129932,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.337017,
+          "q3": 0.967172
+        },
+        "faster": 0,
+        "values": [
+          0.45304799999999545,
+          1.0671099999999996,
+          1.1279909999999944,
+          0.1299319999999966,
+          0.9338589999999982,
+          0.38556699999999466,
+          0.8656759999999935,
+          0.19136900000000878
+        ]
+      },
+      "S_minus_F_solve_ms": {
+        "distribution": {
+          "max": 1.149163,
+          "mean": 0.65886,
+          "median": 0.675402,
+          "min": 0.137292,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.353997,
+          "q3": 0.970836
+        },
+        "faster": 0,
+        "values": [
+          0.4794780000000003,
+          1.106790999999987,
+          1.1491630000000015,
+          0.1372920000000022,
+          0.9255179999999967,
+          0.4073370000000125,
+          0.8713269999999937,
+          0.19397800000000132
+        ]
+      },
+      "S_minus_F_theory_conflicts": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_theory_propagations": {
+        "distribution": {
+          "max": 0,
+          "mean": 0.0,
+          "median": 0.0,
+          "min": 0,
+          "n": 8,
+          "outliers": [],
+          "q1": 0.0,
+          "q3": 0.0
+        },
+        "faster": 0,
+        "values": [
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      },
+      "S_minus_F_total_ms": {
+        "distribution": {
+          "max": 85.030404,
+          "mean": 81.887067,
+          "median": 81.979248,
+          "min": 78.56551,
+          "n": 8,
+          "outliers": [],
+          "q1": 80.190116,
+          "q3": 83.444667
+        },
+        "faster": 0,
+        "values": [
+          79.799015,
+          83.178019,
+          84.24460999999998,
+          78.56550999999999,
+          85.03040399999999,
+          80.320483,
+          80.790322,
+          83.16817400000002
+        ]
+      }
+    }
+  }
+}

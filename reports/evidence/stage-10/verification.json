@@ -1,0 +1,8 @@
+{
+  "complete_models": 84,
+  "control_program_solves": 12,
+  "formal_program_solves": 72,
+  "ordinary_pairs": 18,
+  "reused_native_clauses": 1696,
+  "witnesses": 52
+}
