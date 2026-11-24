@@ -1,0 +1,13 @@
+{
+  "objects": 250,
+  "pack_sha256": "5a09c6482a99298175667e66dfd7220f7835a98c3d534362cd7c80c92548a6b4",
+  "refs": {
+    "mini-swe-agent": {
+      "commit": "a83fcae82d2a08f0ee0c688f9d137b3566c097f8",
+      "tree": "665df42f5761252b83d9a30e1b82f76f1f17f828"
+    }
+  },
+  "shallow": [
+    "a83fcae82d2a08f0ee0c688f9d137b3566c097f8"
+  ]
+}

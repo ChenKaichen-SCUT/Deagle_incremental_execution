@@ -1,0 +1,9 @@
+#!/bin/sh
+# The 32 MiB refusal uses the same process to parse the proof and report MemoryError.
+# Stabilize CPython allocations for that negative control on Jammy/WSL.
+if [ "${1-}" = '-B' ]; then
+  case "${2-}" in
+    */scripts/stage11c/negative.py) export PYTHONMALLOC=malloc PYTHONHASHSEED=0 ;;
+  esac
+fi
+exec /usr/bin/python3 "$@"

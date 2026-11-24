@@ -1,0 +1,13 @@
+{
+  "objects": 1655,
+  "pack_sha256": "0a0daee2a0d700b4712966b20f819c5ace035b30fa980f657ad4d55f7ce1980e",
+  "refs": {
+    "damer-camc": {
+      "commit": "c005ebbde3672fff77c6d91da2f91d1daa45d746",
+      "tree": "c6579e4823686d94a48b5482f05171ac9a0b7c1b"
+    }
+  },
+  "shallow": [
+    "c005ebbde3672fff77c6d91da2f91d1daa45d746"
+  ]
+}

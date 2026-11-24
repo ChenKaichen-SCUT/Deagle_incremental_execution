@@ -11,5 +11,11 @@
 *.lock text eol=lf
 *.patch text eol=lf -whitespace
 *.bundle binary
+*.pack binary
 *.gz binary
 *.diff text eol=lf -whitespace
+deagle-local.cmd text eol=crlf
+scripts/local/control-bin/python3 text eol=lf
+scripts/local/user-bin/systemd-run text eol=lf
+runtime/local/*.zip binary
+runtime/local/licenses/Deagle-CBMC.txt -text -whitespace

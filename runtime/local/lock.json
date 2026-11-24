@@ -1,0 +1,67 @@
+{
+  "local_cache": {
+    "mini-wheels.tar": {
+      "bytes": 172892160,
+      "sha256": "e1e95b4f8c60f22a6aef950efee99562e88fc845844506d6e656ec43e09a78a9"
+    },
+    "tool-sources.tar.gz": {
+      "bytes": 79158931,
+      "sha256": "3e2d97979dec43b4ddbc3f769bae08e3ab559ffdb73215fff53f0ae3cbbf3838"
+    }
+  },
+  "project_commit": "7d2d08ecbf6e643d3537131489ab6ba23c327c52",
+  "public": {
+    "damer-camc/refs.json": {
+      "bytes": 334,
+      "sha256": "0a214c61d4c0cfd31e72bafe5f1875fb224b72f35567e39713c359e5472c253b"
+    },
+    "damer-camc/source.pack": {
+      "bytes": 23701565,
+      "sha256": "0a0daee2a0d700b4712966b20f819c5ace035b30fa980f657ad4d55f7ce1980e"
+    },
+    "deagle-refs.json": {
+      "bytes": 896,
+      "sha256": "fb9469993acc9b24aacded32d7856f9a37862a98699dd4a06f76c93f91451cad"
+    },
+    "deagle-stages.pack": {
+      "bytes": 7541107,
+      "sha256": "c9da8a92385c7fe33d3bfc43c4837ba5d82b8b2e6bcd040fba72b11ec9cdadfc"
+    },
+    "historical-overlays.json": {
+      "bytes": 5193,
+      "sha256": "f597f39cf6d81c2cb22b5227ccf7f1001a540a71fb4fb57c14897644f8eb5ced"
+    },
+    "historical-overlays.zip": {
+      "bytes": 46050,
+      "sha256": "dd9a5fdb547d370a38a422cf3545be966019bc0ce8b02770c673747f2e59dda4"
+    },
+    "legacy-tools.tar.gz": {
+      "bytes": 31281763,
+      "sha256": "80fffad96d5ed7cebb558b3ac331b5a0701d70ccdf51df62fb8f171118564eac"
+    },
+    "mini-swe-agent/refs.json": {
+      "bytes": 337,
+      "sha256": "6e3fceebae7920d4ad8c6a04c6b02a86fa11e7cdd7d3b6aae1573b6a089fd159"
+    },
+    "mini-swe-agent/source.pack": {
+      "bytes": 791273,
+      "sha256": "5a09c6482a99298175667e66dfd7220f7835a98c3d534362cd7c80c92548a6b4"
+    },
+    "stage10-prebuilt.tar.gz": {
+      "bytes": 13010387,
+      "sha256": "297b8b8a979714b99993ca26b1efa9eb442fcb9ea43851b44337491b4d17f8ef"
+    },
+    "stage11c-binaries.tar.gz": {
+      "bytes": 922563,
+      "sha256": "3a798870c703712d20fe57b2cb36f5fb4e7d0c726f24ded071f31dcfa420d129"
+    },
+    "thin-members.json": {
+      "bytes": 29890,
+      "sha256": "9a2b1df9f8c23a7aebc35f823be4b7b10c5b277679be60d92da241b658bfc63c"
+    },
+    "thin-members.tar.gz": {
+      "bytes": 5439161,
+      "sha256": "e1209e1da9cd20e2fba515f40ee7edbfd02484035431bc691155b536fce620d7"
+    }
+  }
+}

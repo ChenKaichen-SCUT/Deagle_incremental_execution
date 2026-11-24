@@ -1,0 +1,29 @@
+{
+  "objects": 22864,
+  "pack_sha256": "c9da8a92385c7fe33d3bfc43c4837ba5d82b8b2e6bcd040fba72b11ec9cdadfc",
+  "refs": {
+    "baseline": {
+      "commit": "a159f9923722646185ba8028610b2eef2618fa72",
+      "tree": "53d7e7c29471d96efbff747e7b4be1063f2a658d"
+    },
+    "native": {
+      "commit": "a2ba2f01fcc8dc83261f614039141017fb846178",
+      "tree": "82c056f25107bdb48015e1da9a791b08c86f07bf"
+    },
+    "stage03": {
+      "commit": "edd8dfc84e22cc2c51eae3aa9201ae2688b5a332",
+      "tree": "a91903d9ee81997ee7bf0b01dadce8eebff88f7e"
+    },
+    "stage04": {
+      "commit": "3e5472e8edb93491acd6263596eea681c64c1549",
+      "tree": "1791c8af80b9d745700d0ddd181db5c33ed21df1"
+    },
+    "stage05": {
+      "commit": "0be9e2167d46c66ea12ca7f9f801063a03873625",
+      "tree": "9cc773689bd88f68e6f087f898dcbdaa23843f7e"
+    }
+  },
+  "shallow": [
+    "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e"
+  ]
+}

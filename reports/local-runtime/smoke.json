@@ -1,0 +1,321 @@
+{
+  "frozen_project": "7d2d08ecbf6e643d3537131489ab6ba23c327c52",
+  "pairs": [
+    {
+      "case": "fib_updates_8",
+      "mode": "stock",
+      "sides": [
+        {
+          "exit": 10,
+          "graph": "266ad7f1eaf6493025f20278cda3d2c631a9a7ab8fdaaf89c575061994d5176a",
+          "properties": [
+            [
+              "main.assertion.1",
+              "FAILURE",
+              187
+            ]
+          ],
+          "search_trace": "99589fb6cba9c7d71450a0bca13a0d4f1c31aa925fae9fa4c2dbf8d1878c815a",
+          "stream": "9b779d904a03d10ac2ca7617de28b18648bfc7033e94358f2bf7a6e151cbea90"
+        },
+        {
+          "exit": 0,
+          "graph": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+          "properties": [
+            [
+              "main.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "59543bcad007a287f4173706f09a9d71c88f44a7fcd61dcc19d90fadfb0a5ae7",
+          "stream": "69a9a497c56d8d20c32824248429ca3254ce75b523866182538ec987e3bbec1f"
+        }
+      ]
+    },
+    {
+      "case": "fib_updates_8",
+      "mode": "F",
+      "sides": [
+        {
+          "exit": 10,
+          "graph": "266ad7f1eaf6493025f20278cda3d2c631a9a7ab8fdaaf89c575061994d5176a",
+          "properties": [
+            [
+              "main.assertion.1",
+              "FAILURE",
+              187
+            ]
+          ],
+          "search_trace": "99589fb6cba9c7d71450a0bca13a0d4f1c31aa925fae9fa4c2dbf8d1878c815a",
+          "stream": "9b779d904a03d10ac2ca7617de28b18648bfc7033e94358f2bf7a6e151cbea90"
+        },
+        {
+          "exit": 0,
+          "graph": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+          "properties": [
+            [
+              "main.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "59543bcad007a287f4173706f09a9d71c88f44a7fcd61dcc19d90fadfb0a5ae7",
+          "stream": "69a9a497c56d8d20c32824248429ca3254ce75b523866182538ec987e3bbec1f"
+        }
+      ]
+    },
+    {
+      "case": "fib_updates_8",
+      "mode": "TC",
+      "sides": [
+        {
+          "exit": 10,
+          "graph": "266ad7f1eaf6493025f20278cda3d2c631a9a7ab8fdaaf89c575061994d5176a",
+          "properties": [
+            [
+              "main.assertion.1",
+              "FAILURE",
+              187
+            ]
+          ],
+          "search_trace": "99589fb6cba9c7d71450a0bca13a0d4f1c31aa925fae9fa4c2dbf8d1878c815a",
+          "stream": "9b779d904a03d10ac2ca7617de28b18648bfc7033e94358f2bf7a6e151cbea90"
+        },
+        {
+          "approved.tsv": "600b0f80c99c73a0d971d9af91c3bccf10486d506842875691c187a0e8882fbe",
+          "exit": 0,
+          "graph": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+          "mixed_hit_ids": [
+            "c165"
+          ],
+          "mixed_import_ids": [
+            "c165"
+          ],
+          "properties": [
+            [
+              "main.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "8a15cd143c3e734128e91a32caac5b57d82773b98764be63204e0381f48b0996",
+          "stream": "69a9a497c56d8d20c32824248429ca3254ce75b523866182538ec987e3bbec1f",
+          "worker/use.tsv": "28059aeb0b43c3a813e2a83558b1fc5ef77c8c0819b07395ecdc44b3a663a024"
+        }
+      ]
+    },
+    {
+      "case": "lock12",
+      "mode": "stock",
+      "sides": [
+        {
+          "exit": 10,
+          "graph": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "FAILURE",
+              212
+            ]
+          ],
+          "search_trace": "c8a6cb2827f3b404f2b49b6f38ee7d4857a248841953811d0797e306610e5038",
+          "stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a"
+        },
+        {
+          "exit": 0,
+          "graph": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "2e61c895f59906f7d66a53af8138eae3feefaf8abc7dda78fec874718152a20b",
+          "stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a"
+        }
+      ]
+    },
+    {
+      "case": "lock12",
+      "mode": "F",
+      "sides": [
+        {
+          "exit": 10,
+          "graph": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "FAILURE",
+              212
+            ]
+          ],
+          "search_trace": "c8a6cb2827f3b404f2b49b6f38ee7d4857a248841953811d0797e306610e5038",
+          "stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a"
+        },
+        {
+          "exit": 0,
+          "graph": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "2e61c895f59906f7d66a53af8138eae3feefaf8abc7dda78fec874718152a20b",
+          "stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a"
+        }
+      ]
+    },
+    {
+      "case": "lock12",
+      "mode": "TC",
+      "sides": [
+        {
+          "exit": 10,
+          "graph": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "FAILURE",
+              212
+            ]
+          ],
+          "search_trace": "c8a6cb2827f3b404f2b49b6f38ee7d4857a248841953811d0797e306610e5038",
+          "stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a"
+        },
+        {
+          "approved.tsv": "97cdf7e908ed41837f95f419b783d2f6b7d97282b3a98dfeac9c9c59c43474d6",
+          "exit": 0,
+          "graph": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+          "mixed_hit_ids": [
+            "c11",
+            "c14",
+            "c5",
+            "c6",
+            "c8"
+          ],
+          "mixed_import_ids": [
+            "c11",
+            "c14",
+            "c5",
+            "c6",
+            "c8"
+          ],
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "f4071355c66c5bb44e24cbc4bc7cd1b9878d60accce2b2ed1c180810e020489b",
+          "stream": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+          "worker/use.tsv": "930523991ea730cb785d5115e5981d4514cbbb6daa19f96c5f7bc0972bb25986"
+        }
+      ]
+    },
+    {
+      "case": "ticket56-reviewed",
+      "mode": "stock",
+      "sides": [
+        {
+          "exit": 0,
+          "graph": "7969837eedc6aaa0add99b568e706b9396b5cfdbf1523aa001f80a0b97ddbce0",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "48df30562e33af53ba899a10c3386a118804e6f3ca66ee35ad2a89d7a3cd8fea",
+          "stream": "7b726c4c2b7be6179d46ff4e797138738b2f88dd06c135ed55a4d2a2f02b0247"
+        },
+        {
+          "exit": 0,
+          "graph": "b9e6676091924b8636b52f727e8e50e0cd1c4250de6155d7195f7ed3f37abbdb",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "8a5796fc23bc563d01e370a2c2396b25e1314a1b7e0e793f2a95627d4db3610f",
+          "stream": "02221d15e346318a26ffe8c3efc54fd0d057da40120ef0eac81adcaca5959934"
+        }
+      ]
+    },
+    {
+      "case": "ticket56-reviewed",
+      "mode": "F",
+      "sides": [
+        {
+          "exit": 0,
+          "graph": "7969837eedc6aaa0add99b568e706b9396b5cfdbf1523aa001f80a0b97ddbce0",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "48df30562e33af53ba899a10c3386a118804e6f3ca66ee35ad2a89d7a3cd8fea",
+          "stream": "7b726c4c2b7be6179d46ff4e797138738b2f88dd06c135ed55a4d2a2f02b0247"
+        },
+        {
+          "exit": 0,
+          "graph": "b9e6676091924b8636b52f727e8e50e0cd1c4250de6155d7195f7ed3f37abbdb",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "8a5796fc23bc563d01e370a2c2396b25e1314a1b7e0e793f2a95627d4db3610f",
+          "stream": "02221d15e346318a26ffe8c3efc54fd0d057da40120ef0eac81adcaca5959934"
+        }
+      ]
+    },
+    {
+      "case": "ticket56-reviewed",
+      "mode": "TC",
+      "sides": [
+        {
+          "exit": 0,
+          "graph": "7969837eedc6aaa0add99b568e706b9396b5cfdbf1523aa001f80a0b97ddbce0",
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "48df30562e33af53ba899a10c3386a118804e6f3ca66ee35ad2a89d7a3cd8fea",
+          "stream": "7b726c4c2b7be6179d46ff4e797138738b2f88dd06c135ed55a4d2a2f02b0247"
+        },
+        {
+          "approved.tsv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "exit": 0,
+          "graph": "b9e6676091924b8636b52f727e8e50e0cd1c4250de6155d7195f7ed3f37abbdb",
+          "mixed_hit_ids": [],
+          "mixed_import_ids": [],
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ],
+          "search_trace": "8a5796fc23bc563d01e370a2c2396b25e1314a1b7e0e793f2a95627d4db3610f",
+          "stream": "02221d15e346318a26ffe8c3efc54fd0d057da40120ef0eac81adcaca5959934",
+          "worker/use.tsv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      ]
+    }
+  ]
+}

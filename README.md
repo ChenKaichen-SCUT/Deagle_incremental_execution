@@ -2,6 +2,8 @@
 
 本项目研究并发 C 程序经过一次修复后，增量构建事件顺序模型、复用有效理论约束，与独立全量 Deagle 验证同一程序和性质的结果。实施范围和每一阶段的验收条件见[执行指南](EXECUTION_GUIDE.md)。
 
+阶段 11C 的本地运行环境已迁移至 Windows WSL2。克隆 `local-runtime-11c` 分支后，可以用 `deagle-local.cmd` 验证 C 程序、重跑完整实验或离线审核冻结证据。[本机运行与重装指南](docs/local-runtime.md) · [可直接浏览和编译的原生源码](https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution/tree/74e652ea7b76ec4e5d3fd5db40cf95784dbf600d) · [阶段 11C 研究报告](reports/stage-11c.md)
+
 阶段 10 已完成原生 ClosureSolver 跨版本可行性实验，状态为 `READY_FOR_REVIEW`。在两版均独立完整建模的条件下，同一求解器对象在三个候选中实际重挂 64、64 和 132 个原始子句。18 组配对的搜索轨迹与独立新建求解器一致，持久路径的候选求解侧总时间分别多用 18.18、17.92 和 141.57 ms。残错候选仍违反原断言。[阶段 10 报告](reports/stage-10.md) · [原生复用证据](reports/evidence/stage-10/mechanism.json) · [配对性能](reports/evidence/stage-10/performance.md) · [离线核验](scripts/stage10/evidence.py)
 
 阶段 9 的候选前端优化已完成，状态为 `READY_FOR_REVIEW`。五例前端中位数由约 214 ms 降至 93.6～98.2 ms，配对节省 116.0～120.5 ms。八轮 Fibonacci 的 14 条历史引理正常导入，完整 I3 在五次中仍比同版 F1 慢 8.8～22.7 ms。九个冻结版本对的模型、结论与原生复用均通过回归。[阶段 9 报告](reports/stage-09.md) · [逐次性能与资源](reports/evidence/stage-09/performance.md) · [依赖失效与回退](reports/evidence/stage-09/negative-results.json) · [离线核验入口](scripts/stage9/evidence.py)

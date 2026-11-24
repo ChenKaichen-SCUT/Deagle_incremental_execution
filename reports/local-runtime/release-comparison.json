@@ -1,0 +1,21 @@
+{
+  "answer_exports_differing_only_within_equal_ranks": 35,
+  "canonical_model_documents": 24,
+  "f0_comparisons": 42,
+  "fields": [
+    "argv",
+    "source",
+    "stream",
+    "graph",
+    "phases",
+    "exit",
+    "properties",
+    "search_trace"
+  ],
+  "matching_explicit_sc_witnesses": 4,
+  "matching_multiquery_versions": 2,
+  "matching_native_artifact_hashes": 910,
+  "relabelled_event_tables": 210,
+  "version_executions": 216,
+  "version_pairs": 108
+}
