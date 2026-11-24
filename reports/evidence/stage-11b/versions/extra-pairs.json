@@ -1,0 +1,24 @@
+[
+  {
+    "kind": "actual attempted repair: stale availability flag after last successful pop",
+    "name": "stack",
+    "new_sha256": "dd700868aaf87ab74725117fc57a05c456b42cfc3d50104894ae49fca204f326",
+    "old_sha256": "529fe0895c01c52d9b18b51c32204a307faf547c0c07b22bc1a431308affcf90",
+    "patch_sha256": "005d23046091cf5084a10e40159536261cdacb3f037fa692f965a57c533b3954",
+    "source": [
+      "benchmarks\\pthread\\stack_longest-1.i",
+      "manual availability update under the held mutex"
+    ]
+  },
+  {
+    "kind": "published family size change; property already holds; excluded from repair rates",
+    "name": "ticket",
+    "new_sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a",
+    "old_sha256": "9c69d99d457f457373aeec8cf091a3652593de03a43f690cddfeb4bfa1e12a5f",
+    "patch_sha256": "7440bd6a20497371447a4f07e6dc2eed118e384fe1efb2ddf8d3826e438dcc62",
+    "source": [
+      "benchmarks/weaver/parallel-ticket-5.wvr.c",
+      "benchmarks/weaver/parallel-ticket-6.wvr.c"
+    ]
+  }
+]

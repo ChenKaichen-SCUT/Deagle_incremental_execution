@@ -1,0 +1,15 @@
+*.i -text
+*.c -text
+*.txt -text
+*.csv -text
+*.tsv -text
+# Preserve the original artifact's CRLF and benchmark source whitespace.
+panel/*.csv -whitespace
+versions/*.i -whitespace
+*.diff -text
+*.json -text
+*.patch -text
+*.md text eol=lf
+*.zip binary
+*.gz binary
+*.part binary

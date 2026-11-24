@@ -1,0 +1,220 @@
+{
+  "RUP_controls": "0 1 \nremoved premise and unproved theory unit both rejected\n",
+  "boolean_controls": "guarded\t1 0 1\nroot\t1 1 0\n",
+  "finite": {
+    "cases": [
+      "alternative only",
+      "base",
+      "empty body",
+      "event removed",
+      "guard off",
+      "merge",
+      "replace RF",
+      "rooted cycle",
+      "selected CO",
+      "split and remove",
+      "unrooted cycle"
+    ],
+    "source": "controls/finite/finite.json",
+    "updates_with_affected": 204,
+    "updates_with_clean_derived": 217,
+    "versions": 228
+  },
+  "forced_rejection": {
+    "altered_verdict": {
+      "basis": "independent stock current version",
+      "errors": [
+        "exit"
+      ],
+      "native_exit": 0,
+      "path": "FULL_REBUILD",
+      "strict": "UNESTABLISHED"
+    },
+    "missing_strict_certificate": {
+      "basis": "strict completion unavailable",
+      "native_exit": 0,
+      "path": "FULL_REBUILD",
+      "strict": "UNESTABLISHED"
+    }
+  },
+  "independent_build": {
+    "binary": "255925882836289d88b2e7d09988153acc58b8d676cc446d7652d4b9ad2b12a5",
+    "original_binary": "72390a877e74d59c5c804a7a7415c1fd327139383a6b1875206c042614c0e5da",
+    "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+    "results": [
+      {
+        "answer_sha256": "d363b8ef102bc53441b27ed0fb7fe5b533dd11ebb1afb0eab5e58f129655892a",
+        "originals": "0",
+        "sat_code": "0",
+        "search_sha256": "c8a6cb2827f3b404f2b49b6f38ee7d4857a248841953811d0797e306610e5038",
+        "side": "old",
+        "used_derived": "0"
+      },
+      {
+        "answer_sha256": "0eef7686168090e7cf279086b89b982e0fab97d96f18b5a9700dff9217b2b8cd",
+        "originals": "11",
+        "sat_code": "1",
+        "search_sha256": "2e61c895f59906f7d66a53af8138eae3feefaf8abc7dda78fec874718152a20b",
+        "side": "new",
+        "used_derived": "972"
+      }
+    ]
+  },
+  "negative": [
+    {
+      "accepted_candidate": true,
+      "case": "missing_events",
+      "graph_reason": "unverified_events",
+      "originals": 0,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "stock_exit": 0,
+      "used": 0,
+      "worker_admission": "refuse_registry",
+      "worker_exit": 0
+    },
+    {
+      "accepted_candidate": true,
+      "case": "duplicate_event_semantics",
+      "graph_reason": "unconfirmed_event_bijection",
+      "originals": 0,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "stock_exit": 0,
+      "used": 0,
+      "worker_admission": "refuse_registry",
+      "worker_exit": 0
+    },
+    {
+      "accepted_candidate": false,
+      "case": "noninjective_variable_binding",
+      "graph_reason": null,
+      "originals": 0,
+      "protocol": "STAGE10_DONE 0\n",
+      "stock_exit": 0,
+      "used": 0,
+      "worker_admission": null,
+      "worker_exit": 2
+    },
+    {
+      "accepted_candidate": true,
+      "case": "tampered_cdcl",
+      "graph_reason": "admitted",
+      "originals": 0,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "stock_exit": 0,
+      "used": 0,
+      "worker_admission": "refuse_damaged_learning",
+      "worker_exit": 0
+    },
+    {
+      "accepted_candidate": false,
+      "case": "truncated_assumption_stream",
+      "graph_reason": null,
+      "originals": 0,
+      "protocol": "STAGE10_DONE 0\n",
+      "stock_exit": 0,
+      "used": 0,
+      "worker_admission": null,
+      "worker_exit": 2
+    },
+    {
+      "case": "signed_slot_swap",
+      "mapping": {
+        "0": 3,
+        "1": 0
+      },
+      "originals": 1,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "verified_p1_original_and_current_assumption": true
+    },
+    {
+      "case": "withdraw_unit_after_root_UNSAT",
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "same_object": true,
+      "sat_codes": [
+        1,
+        0
+      ]
+    },
+    {
+      "case": "missing_retained_order",
+      "reason": "root closure disagrees with independent quotient search",
+      "verdict": "FULL_REBUILD"
+    },
+    {
+      "answer_header": [
+        "1",
+        "7879"
+      ],
+      "case": "new_UNSAT_after_old_SAT",
+      "stale_ranks_exported": 0
+    }
+  ],
+  "rank_assumptions": "test\tlit\tshared\tfresh\tshared_ok\told_order_keys\tcurrent_keys\twritten_order\tfresh_order\n0\t-1\t0\t0\t1\t0\t23\t23\t1\n1\t1890\t1\t1\t1\t23\t23\t23\t0\n2\t1891\t0\t0\t1\t23\t23\t23\t1\n3\t1896\t0\t0\t1\t23\t23\t23\t1\n4\t1897\t1\t1\t1\t23\t23\t23\t0\n5\t1906\t0\t0\t1\t23\t23\t23\t1\n6\t1907\t1\t1\t1\t23\t23\t23\t0\n",
+  "rank_reversal": "0\t0\t0\t1\tobj#1 obj#2 \n1\t0\t0\t1\tobj#2 obj#1 \n",
+  "stack_function": {
+    "False": [
+      [
+        "push",
+        1,
+        true,
+        "completed"
+      ],
+      [
+        "consumer",
+        0,
+        true,
+        "completed"
+      ],
+      [
+        "consumer",
+        0,
+        true,
+        "original assertion violation"
+      ],
+      [
+        "push",
+        1,
+        true,
+        "completed"
+      ],
+      [
+        "consumer",
+        0,
+        true,
+        "completed"
+      ]
+    ],
+    "True": [
+      [
+        "push",
+        1,
+        true,
+        "completed"
+      ],
+      [
+        "consumer",
+        0,
+        false,
+        "completed"
+      ],
+      [
+        "consumer",
+        0,
+        false,
+        "empty: consumer continues"
+      ],
+      [
+        "push",
+        1,
+        true,
+        "completed"
+      ],
+      [
+        "consumer",
+        0,
+        false,
+        "completed"
+      ]
+    ]
+  }
+}

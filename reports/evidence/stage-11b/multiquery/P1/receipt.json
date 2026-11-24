@@ -1,0 +1,62 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "5",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "classification": "INCOMPLETE_UNWINDING",
+  "code": 10,
+  "disposition": "stock multi-query only; incomplete unrolling; no repair success",
+  "max_address_space": 4294967296,
+  "output_sha256": "a44923ba5272f86401e9ffab04a63beb93a43d49f7cba4f71cb15d8c48cb5e14",
+  "properties": [
+    [
+      "reach_error.assertion.1",
+      "SUCCESS"
+    ],
+    [
+      "thread1.unwind.0",
+      "FAILURE"
+    ],
+    [
+      "thread2.unwind.0",
+      "FAILURE"
+    ]
+  ],
+  "source_sha256": "7ea3dca39a6c24441378a9bca1657766debabc2444b22797280a494c4e2aa486",
+  "stream": {
+    "clauses": 6227993,
+    "literal_occurrences": 18637040,
+    "queries": [
+      {
+        "assumptions": [],
+        "clauses": 6227993,
+        "variables": 1264409
+      },
+      {
+        "assumptions": [],
+        "clauses": 6227993,
+        "variables": 1264409
+      },
+      {
+        "assumptions": [],
+        "clauses": 6227993,
+        "variables": 1264409
+      }
+    ],
+    "variables": 1264409
+  },
+  "stream_sha256": "4f55cf226061963b7d090e023590c233ca6df42061cc94b8957af5fbd1e0bf21",
+  "strict_sc": "UNASSESSED",
+  "timeout_s": 180,
+  "wall_ns": 3670745134
+}

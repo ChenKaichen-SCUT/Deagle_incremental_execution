@@ -1,0 +1,1064 @@
+bench,runtime
+weaver.chl-array-int-subst.wvr.smt,0.24302172660827637
+weaver.popl20-figure1-alt.wvr.smt,0.14583992958068848
+weaver.chl-nzb-file-trans.wvr.smt,0.12555599212646484
+weaver.popl20-more-array-sum-alt.wvr.smt,0.17947697639465332
+weaver.chl-file-item-trans.wvr.smt,0.2259211540222168
+weaver.unroll-cond-4.wvr.smt,0.28674936294555664
+weaver.popl20-prod-cons-eq.wvr-oob.smt,CBMC Exception
+weaver.popl20-more-buffer-mult.wvr.smt,CBMC Exception
+weaver.popl20-more-buffer-series3.wvr.smt,CBMC Exception
+weaver.popl20-commit-2.wvr.smt,CBMC Exception
+weaver.popl20-send-receive-alt.wvr.smt,CBMC Exception
+weaver.popl20-bad-buffer-mult-alt2.wvr.smt,0.2589545249938965
+weaver.popl20-three-array-sum.wvr.smt,0.15902280807495117
+weaver.clever.wvr.smt,0.164337158203125
+weaver.popl20-two-queue.wvr.smt,CBMC Exception
+weaver.parallel-misc-2-unrolled-atomic.wvr.smt,0.20621800422668457
+weaver.fibonacci.wvr.smt,0.150068998336792
+weaver.chl-exp-term-subst.wvr.smt,0.24923133850097656
+weaver.parallel-min-max-1.wvr.smt,0.1599745750427246
+weaver.test-easy10.wvr.smt,0.15442800521850586
+weaver.popl20-more-parray-copy.wvr.smt,CBMC Exception
+weaver.popl20-commit-1.wvr.smt,CBMC Exception
+weaver.chl-chromosome-opt-symm.wvr.smt,0.12435269355773926
+weaver.chl-chromosome-subst.wvr.smt,0.12321138381958008
+weaver.popl20-bad-threaded-sum-2.wvr.smt,0.1435105800628662
+weaver.popl20-min-max-inc.wvr.smt,CBMC Exception
+weaver.popl20-proofs-counter-add-4-semi-Q67.wvr.smt,0.17675447463989258
+weaver.bench-exp3x3.wvr.smt,0.264911413192749
+weaver.popl20-more-nonblocking-counter-alt2.wvr.smt,0.1575641632080078
+weaver.test-easy11.wvr.smt,0.14092445373535156
+weaver.chl-node-trans.wvr.smt,0.23726773262023926
+weaver.bench-exp2x4.wvr.smt,0.22426080703735352
+weaver.parallel-barrier-loop.wvr.smt,0.36322617530822754
+weaver.chl-poker-hand-symm.wvr.smt,CBMC Exception
+weaver.unroll-cond-5.wvr.smt,0.37801027297973633
+weaver.security.wvr.smt,0.16284561157226562
+weaver.chl-time-subst.wvr.smt,0.3205432891845703
+weaver.spaghetti.wvr.smt,0.2362053394317627
+weaver.popl20-figure3.wvr.smt,0.14544343948364258
+weaver.parallel-lamport.wvr.smt,0.14690756797790527
+weaver.chl-node-subst.wvr.smt,0.23375272750854492
+weaver.popl20-nonblocking-cntr-alt.wvr.smt,0.15694594383239746
+weaver.popl20-mult-4.wvr.smt,0.2667851448059082
+weaver.chl-sre-symm.wvr.smt,0.14849042892456055
+weaver.parallel-misc-4.wvr.smt,0.22637462615966797
+weaver.popl20-mult-equiv.wvr.smt,0.15981483459472656
+weaver.popl20-figure1.wvr.smt,0.15166878700256348
+weaver.popl20-bad-buffer-mult-alt.wvr.smt,0.26026439666748047
+weaver.bench-exp2x6.wvr.smt,0.2359635829925537
+weaver.popl20-more-buffer-series.wvr.smt,CBMC Exception
+weaver.parallel-parallel-sum-equiv.wvr.smt,0.25708961486816406
+weaver.array-eq-trans.wvr.smt,0.24155688285827637
+weaver.popl20-prod-cons-eq.wvr.smt,CBMC Exception
+weaver.parallel-parallel-sum-1-dsl.wvr.smt,0.3038959503173828
+weaver.parallel-misc-3-extended.wvr.smt,0.2774076461791992
+weaver.chl-file-item-symm.wvr.smt,0.19779229164123535
+weaver.popl20-bad-dot-product.wvr.smt,CBMC Exception
+weaver.parallel-misc-2.wvr.smt,0.16176509857177734
+weaver.chl-collitem-trans.wvr.smt,0.391294002532959
+weaver.test-easy1.wvr.smt,0.1404283046722412
+weaver.popl20-more-sorted.wvr.smt,0.14664149284362793
+weaver.parallel-ticket-8.wvr.smt,5.344706773757935
+weaver.popl20-more-sum-array-hom.wvr.smt,0.14897990226745605
+weaver.parallel-misc-5.wvr.smt,0.16279196739196777
+weaver.parallel-bakery-4.wvr.smt,0.4443943500518799
+weaver.unroll-4.wvr.smt,0.21727538108825684
+weaver.parallel-bakery-2.wvr.smt,0.15674924850463867
+weaver.chl-poker-hand-subst.wvr.smt,CBMC Exception
+weaver.chl-exp-term-symm.wvr.smt,0.1678459644317627
+weaver.chl-name-comparator-subst.wvr.smt,0.12451553344726562
+weaver.popl20-bad-commit-2.wvr-bad.smt,CBMC Exception
+weaver.bench-exp3x3-opt.wvr.smt,0.2461528778076172
+weaver.test-hard1.wvr.smt,0.2311534881591797
+weaver.popl20-threaded-sum-3.wvr.smt,0.22144317626953125
+weaver.popl20-more-queue-add-3-nl.wvr.smt,CBMC Exception
+weaver.parallel-bakery-3.wvr.smt,0.2792680263519287
+weaver.popl20-bad-counter-queue2.wvr.smt,0.20694541931152344
+weaver.loop-tiling-eq.wvr.smt,CBMC Exception
+weaver.bench-exp2x3.wvr.smt,0.15020394325256348
+weaver.popl20-more-max-array.wvr.smt,0.14908862113952637
+weaver.chl-match-symm.wvr.smt,0.47835421562194824
+weaver.popl20-difference-det.wvr.smt,0.16014504432678223
+weaver.chl-match-subst.wvr.smt,0.35014915466308594
+weaver.parallel-ticket-3.wvr.smt,0.1577146053314209
+weaver.popl20-more-min-array-hom.wvr.smt,0.16109132766723633
+weaver.popl20-more-min-le-max.wvr.smt,0.14900898933410645
+weaver.chl-array-int-symm.wvr.smt,0.15222620964050293
+weaver.bench-exp1x3.wvr.smt,0.15323686599731445
+weaver.parallel-bluetooth.wvr.smt,0.15458273887634277
+weaver.chl-word-trans.wvr.smt,0.2276163101196289
+weaver.popl20-bad-ring-nondet.wvr.smt,0.2309868335723877
+weaver.parallel-ticket-6.wvr.smt,0.6377348899841309
+weaver.popl20-min-max-inc-dec.wvr.smt,CBMC Exception
+weaver.chl-array-int-trans.wvr.smt,0.23596572875976562
+weaver.bench-exp2x9.wvr.smt,0.3394033908843994
+weaver.popl20-more-mts.wvr.smt,0.23604822158813477
+weaver.unroll-cond-3.wvr.smt,0.21640610694885254
+weaver.array-eq-symm.wvr.smt,0.15752816200256348
+weaver.popl20-three-array-max.wvr.smt,0.21784448623657227
+weaver.popl20-min-max-dec.wvr.smt,CBMC Exception
+weaver.chl-time-trans.wvr.smt,0.20223069190979004
+weaver.parallel-parallel-sum-1.wvr.smt,0.2647666931152344
+weaver.test-easy8.wvr.smt,0.14586281776428223
+weaver.popl20-prod-cons3.wvr.smt,CBMC Exception
+weaver.mult-comm.wvr.smt,0.14124727249145508
+weaver.popl20-three-array-min.wvr.smt,0.22132349014282227
+weaver.popl20-horseshoe.wvr.smt,CBMC Exception
+weaver.popl20-counter-fun.wvr.smt,CBMC Exception
+weaver.test-context1.wvr.smt,CBMC Exception
+weaver.chl-simpl-str-trans.wvr.smt,0.16205811500549316
+weaver.chl-collitem-subst.wvr.smt,0.36831116676330566
+weaver.popl20-more-min-array.wvr.smt,0.16091513633728027
+weaver.chl-simpl-str-subst.wvr.smt,0.22206521034240723
+weaver.popl20-bad-commit-1.wvr-bad.smt,CBMC Exception
+weaver.popl20-send-receive.wvr.smt,CBMC Exception
+weaver.chl-time-symm.wvr.smt,0.1975083351135254
+weaver.popl20-channel-sum.wvr.smt,CBMC Exception
+weaver.parallel-parallel-sum-2.wvr.smt,0.44126081466674805
+weaver.parallel-barrier.wvr.smt,0.2993011474609375
+weaver.popl20-more-array-sum2.wvr.smt,0.2338242530822754
+weaver.parallel-ticket-2.wvr.smt,0.17575287818908691
+weaver.chl-name-comparator-trans.wvr.smt,0.12459969520568848
+weaver.popl20-more-max-array-hom.wvr.smt,0.15552330017089844
+weaver.unroll-cond-2.wvr.smt,0.14801645278930664
+weaver.chl-node-symm.wvr.smt,0.154343843460083
+weaver.popl20-prod-cons.wvr.smt,CBMC Exception
+weaver.popl20-more-inc-subseq.wvr.smt,CBMC Exception
+weaver.popl20-bad-counter-queue.wvr.smt,0.15451264381408691
+weaver.popl20-more-multiply-verify.wvr.smt,CBMC Exception
+weaver.popl20-bad-dot-product-alt.wvr.smt,0.26851558685302734
+weaver.popl20-queue-add-3.wvr.smt,CBMC Exception
+weaver.popl20-more-array-sum.wvr.smt,0.24272441864013672
+weaver.popl20-more-vector-add.wvr.smt,CBMC Exception
+weaver.popl20-more-queue-add-2-nl.wvr.smt,CBMC Exception
+weaver.popl20-bad-buffer-mult-alt3.wvr.smt,0.27475643157958984
+weaver.chl-nzb-file-symm.wvr.smt,0.12540674209594727
+weaver.test-easy6.wvr.smt,0.14455056190490723
+weaver.chl-chromosome-symm.wvr.smt,0.12569880485534668
+weaver.chl-word-symm.wvr.smt,0.15598630905151367
+weaver.chl-nzb-file-subst.wvr.smt,0.18970918655395508
+weaver.unroll-3.wvr.smt,0.21098542213439941
+weaver.test-semi1.wvr.smt,0.14422273635864258
+weaver.popl20-bad-three-array-sum-alt.wvr.smt,0.22958588600158691
+weaver.chl-sre-subst.wvr.smt,0.138047456741333
+weaver.chl-file-item-subst.wvr.smt,0.2266225814819336
+weaver.parallel-ticket-4.wvr.smt,0.18068671226501465
+weaver.chl-chromosome-trans.wvr.smt,0.12771940231323242
+weaver.popl20-counter-determinism.wvr.smt,0.14691829681396484
+weaver.parallel-misc-1.wvr.smt,0.26981663703918457
+weaver.popl20-simple-queue.wvr.smt,CBMC Exception
+weaver.parallel-ticket-7.wvr.smt,0.5827465057373047
+weaver.popl20-more-dec-subseq.wvr.smt,CBMC Exception
+weaver.chl-name-comparator-symm.wvr.smt,0.12727713584899902
+weaver.mult-flipped-dist.wvr.smt,0.14947962760925293
+weaver.chl-sre-trans.wvr.smt,0.1571035385131836
+weaver.parallel-simple-equiv.wvr.smt,0.14172697067260742
+weaver.unroll-2.wvr.smt,0.15266919136047363
+weaver.unroll-5.wvr.smt,0.2254626750946045
+weaver.chl-poker-hand-trans.wvr.smt,CBMC Exception
+weaver.chl-match-trans.wvr.smt,0.2985243797302246
+weaver.parallel-misc-2-unrolled.wvr.smt,0.16935062408447266
+weaver.test-easy7.wvr.smt,0.14664220809936523
+weaver.popl20-more-buffer-mult2.wvr.smt,CBMC Exception
+weaver.popl20-bad-ring.wvr.smt,0.21965694427490234
+weaver.parallel-misc-3.wvr.smt,0.15632963180541992
+weaver.popl20-nonblocking-cntr.wvr.smt,0.1559453010559082
+weaver.popl20-simple-array-sum.wvr.smt,0.21753835678100586
+weaver.mult-dist.wvr.smt,0.1481945514678955
+weaver.chl-word-subst.wvr.smt,0.22934365272521973
+weaver.chl-collitem-symm.wvr.smt,0.29807138442993164
+weaver.parallel-ticket-5.wvr.smt,0.27651071548461914
+weaver.popl20-more-buffer-series2.wvr.smt,CBMC Exception
+weaver.popl20-more-buffer-mult3.wvr.smt,CBMC Exception
+weaver.popl20-more-array-sum-alt2.wvr.smt,0.17318081855773926
+weaver.chl-simpl-str-symm.wvr.smt,0.1659717559814453
+weaver.popl20-queue-add-2.wvr.smt,CBMC Exception
+pthread-memsafety.fillarray.smt,Exception
+pthread-memsafety.list1.smt,0.13118481636047363
+pthread-memsafety.fillarray1.smt,Exception
+pthread-theta.unwind3-1.smt,0.13958477973937988
+pthread-theta.unwind3-nondet.smt,0.20518851280212402
+pthread-theta.exponential-64.smt,0.1281731128692627
+pthread-theta.unwind1-nondet.smt,0.13866424560546875
+pthread-theta.wsc.smt,0.2136373519897461
+pthread-theta.unwind3-100.smt,0.14535856246948242
+pthread-theta.unwind2-nondet.smt,0.13961052894592285
+pthread-theta.unwind2-100.smt,0.1383516788482666
+pthread-theta.exponential-4.smt,0.1329188346862793
+pthread-theta.unwind1-1.smt,0.13641357421875
+pthread-theta.exponential-nondet.smt,0.14086151123046875
+pthread-theta.unwind2-1.smt,0.13489532470703125
+pthread-theta.unwind1-100.smt,0.1325836181640625
+libvsync.bounded_mpmc_check_empty.smt,CBMC Exception
+libvsync.rec_ticketlock.smt,0.634063720703125
+libvsync.mcslock.smt,0.5223004817962646
+libvsync.clhlock.smt,0.22810125350952148
+libvsync.caslock.smt,0.30544090270996094
+libvsync.bounded_spsc.smt,0.22862648963928223
+libvsync.twalock.smt,0.7477359771728516
+libvsync.ttaslock.smt,0.3100309371948242
+libvsync.arraylock.smt,Exception
+libvsync.semaphore.smt,0.5950193405151367
+libvsync.cnalock.smt,1.4213175773620605
+libvsync.ticketlock.smt,0.3620951175689697
+libvsync.rec_spinlock.smt,0.5266563892364502
+libvsync.rec_mcslock.smt,0.6148185729980469
+libvsync.hemlock.smt,1.1045310497283936
+libvsync.hmcslock.smt,CBMC Exception
+libvsync.bounded_mpmc_check_full.smt,Exception
+libvsync.hclhlock.smt,0.22605109214782715
+libvsync.rwlock.smt,0.6983246803283691
+pthread.fib_safe-6.smt,0.13875961303710938
+pthread.queue_longest.smt,208.39887070655823
+pthread.fib_safe-7-racy.smt,0.14352011680603027
+pthread.stack_longest-1.smt,39.91188883781433
+pthread.fib_safe-11.smt,0.1535627841949463
+pthread.queue_ok_longest.smt,318.7832429409027
+pthread.triangular-longer-1.smt,0.13836932182312012
+pthread.butterfly.smt,2.0312891006469727
+pthread.stack_longest-2.smt,1.0392844676971436
+pthread.sync01.smt,0.20940756797790527
+pthread.fib_safe-12-racy.smt,0.1483783721923828
+pthread.reorder_5-race.smt,0.25591015815734863
+pthread.fib_unsafe-10.smt,0.14650297164916992
+pthread.singleton_with-uninit-problems-b.smt,0.1791694164276123
+pthread.reorder_2-race.smt,0.253922700881958
+pthread.reorder_5-2.smt,0.2528066635131836
+pthread.fib_safe-6-racy.smt,0.15513396263122559
+pthread.indexer.smt,0.17947030067443848
+pthread.twostage_3-2.smt,0.23641562461853027
+pthread.queue_ok_longer.smt,102.91145324707031
+pthread.singleton.smt,0.12415885925292969
+pthread.fib_unsafe-10-racy.smt,0.14564895629882812
+pthread.fib_safe-5.smt,0.13692784309387207
+pthread.reorder_2-2.smt,0.2586808204650879
+pthread.stateful01-2.smt,0.21055865287780762
+pthread.singleton_with-uninit-problems.smt,0.12469005584716797
+pthread.fib_safe-7.smt,0.14024734497070312
+pthread.bigshot_p.smt,Exception
+pthread.sigma.smt,0.12335419654846191
+pthread.fib_unsafe-6.smt,0.14229631423950195
+pthread.fib_safe-5-racy.smt,0.14438533782958984
+pthread.fib_unsafe-12.smt,0.15046238899230957
+pthread.triangular-longest-1.smt,0.13162994384765625
+pthread.fib_unsafe-5-racy.smt,0.14546418190002441
+pthread.fib_unsafe-6-racy.smt,0.13702130317687988
+pthread.fib_safe-10.smt,0.1386125087738037
+pthread.fib_unsafe-11.smt,0.14428186416625977
+pthread.triangular-1.smt,0.13605141639709473
+pthread.bigshot_s.smt,0.12443757057189941
+pthread.fib_unsafe-12-racy.smt,0.14202165603637695
+pthread.reorder_2.smt,0.2618999481201172
+pthread.singleton-b.smt,0.12357783317565918
+pthread.fib_unsafe-5.smt,0.14877915382385254
+pthread.twostage_3.smt,0.2292947769165039
+pthread.stack_longer-2.smt,0.40627336502075195
+pthread.triangular-longer-2.smt,0.1328902244567871
+pthread.fib_safe-10-racy.smt,0.20467448234558105
+pthread.stack_longer-1.smt,4.4665632247924805
+pthread.stack-2.smt,0.23229193687438965
+pthread.queue_ok.smt,0.8999991416931152
+pthread.stateful01-1.smt,0.20968174934387207
+pthread.queue.smt,1.3972067832946777
+pthread.queue_longer.smt,82.78345394134521
+pthread.fib_unsafe-11-racy.smt,0.1401078701019287
+pthread.triangular-longest-2.smt,0.14733457565307617
+pthread.twostage_3-race.smt,0.22942399978637695
+pthread.fib_unsafe-7-racy.smt,0.14344215393066406
+pthread.stack-1.smt,0.2274329662322998
+pthread.bigshot_s2.smt,0.12482738494873047
+pthread.fib_safe-12.smt,0.20830893516540527
+pthread.fib_unsafe-7.smt,0.14171981811523438
+pthread.lazy01.smt,0.15701842308044434
+pthread.reorder_5.smt,0.24925804138183594
+pthread.fib_safe-11-racy.smt,0.14168238639831543
+pthread.triangular-2.smt,0.1322636604309082
+pthread-ext.48_ticket_lock_low_contention_vs.smt,0.21638083457946777
+pthread-ext.26_stack_cas_longer-1.smt,0.43834733963012695
+pthread-ext.01_inc.smt,0.14658212661743164
+pthread-ext.45_monabsex1_vs-b.smt,0.19781827926635742
+pthread-ext.04_incdec_cas-race.smt,0.2069110870361328
+pthread-ext.26_stack_cas_longest-1.smt,0.3788328170776367
+pthread-ext.48_ticket_lock_low_contention_vs-b.smt,0.14963746070861816
+pthread-ext.39_rand_lock_p0_vs-b.smt,0.13485193252563477
+pthread-ext.11_fmaxsymopt.smt,0.12319350242614746
+pthread-ext.30_Function_Pointer3_vs.smt,0.13799238204956055
+pthread-ext.25_stack-race.smt,0.596278190612793
+pthread-ext.43_NetBSD_sysmon_power_sliced-pthread.smt,75.3305184841156
+pthread-ext.31_simple_loop5_vs.smt,0.2570667266845703
+pthread-ext.39_rand_lock_p0_vs.smt,0.1508481502532959
+pthread-ext.25_stack_longest-2-race.smt,0.5990242958068848
+pthread-ext.26_stack_cas_longest-2-race.smt,0.38723182678222656
+pthread-ext.09_fmaxsym.smt,0.12938714027404785
+pthread-ext.25_stack.smt,0.7591145038604736
+pthread-ext.03_incdec.smt,0.5309913158416748
+pthread-ext.26_stack_cas_longest-1-race.smt,0.38298773765563965
+pthread-ext.17_szymanski.smt,0.24613451957702637
+pthread-ext.25_stack_longer-2.smt,0.7067396640777588
+pthread-ext.11_fmaxsymopt-zero.smt,0.14699578285217285
+pthread-ext.40_barrier_vf-b.smt,0.19866085052490234
+pthread-ext.25_stack_longer-1.smt,0.84153151512146
+pthread-ext.35_double_lock_p3_vs.smt,0.23447346687316895
+pthread-ext.14_spin2003.smt,0.13141870498657227
+pthread-ext.26_stack_cas.smt,0.389789342880249
+pthread-ext.06_ticket.smt,0.21762633323669434
+pthread-ext.33_double_lock_p1_vs.smt,0.20780396461486816
+pthread-ext.43_NetBSD_sysmon_power_sliced.smt,109.58905744552612
+pthread-ext.09_fmaxsym-race.smt,0.12493276596069336
+pthread-ext.36_stack_cas_p0_vs_concur.smt,0.21708345413208008
+pthread-ext.04_incdec_cas.smt,0.2082514762878418
+pthread-ext.12_fmaxsymopt_cas.smt,0.1924433708190918
+pthread-ext.11_fmaxsymopt-race.smt,0.12250781059265137
+pthread-ext.02_inc_cas.smt,0.13663840293884277
+pthread-ext.26_stack_cas_longer-2.smt,0.4500088691711426
+pthread-ext.25_stack_longest-1-race.smt,0.5961942672729492
+pthread-ext.26_stack_cas_longer-2-race.smt,0.4459340572357178
+pthread-ext.34_double_lock_p2_vs.smt,0.20421624183654785
+pthread-ext.08_rand_cas-race.smt,0.21398663520812988
+pthread-ext.46_monabsex2_vs-b.smt,0.13243865966796875
+pthread-ext.01b_inc.smt,0.20098567008972168
+pthread-ext.36_stack_cas_p0_vs_concur-race.smt,0.20867109298706055
+pthread-ext.42_FreeBSD_rdma_addr_sliced.smt,97.1872889995575
+pthread-ext.29_conditionals_vs.smt,0.14029359817504883
+pthread-ext.18_read_write_lock.smt,0.1472034454345703
+pthread-ext.25_stack_longer-2-race.smt,0.5973825454711914
+pthread-ext.26_stack_cas_longer-1-race.smt,0.3765883445739746
+pthread-ext.25_stack_longest-2.smt,0.8139257431030273
+pthread-ext.44_Solaris_space_map_sliced.smt,13.826213598251343
+pthread-ext.37_stack_lock_p0_vs_concur.smt,0.3735513687133789
+pthread-ext.40_barrier_vf.smt,0.13266515731811523
+pthread-ext.25_stack_longest-1.smt,0.7580165863037109
+pthread-ext.07_rand.smt,0.20620083808898926
+pthread-ext.09_fmaxsym-zero.smt,0.1432173252105713
+pthread-ext.05_tas.smt,0.2165086269378662
+pthread-ext.25_stack_longer-1-race.smt,0.6009266376495361
+pthread-ext.23_lu-fig2.fixed.smt,0.13927793502807617
+pthread-ext.38_rand_cas_vs_concur.smt,0.19886136054992676
+pthread-ext.45_monabsex1_vs.smt,0.1300363540649414
+pthread-ext.10_fmaxsym_cas.smt,0.2431507110595703
+pthread-ext.48_ticket_lock_low_contention_vs-pthread.smt,0.13784122467041016
+pthread-ext.37_stack_lock_p0_vs_concur-race.smt,0.13445615768432617
+pthread-ext.28_buggy_simple_loop1_vf.smt,0.13658785820007324
+pthread-ext.46_monabsex2_vs.smt,0.1360156536102295
+pthread-ext.13_unverif.smt,0.21972084045410156
+pthread-ext.47_ticket_lock_hc_backoff_vs.smt,0.21255874633789062
+pthread-ext.27_Boop_simple_vf.smt,0.2012796401977539
+pthread-ext.26_stack_cas_longest-2.smt,0.44219040870666504
+pthread-ext.08_rand_cas.smt,0.21390247344970703
+pthread-ext.32_pthread5_vs.smt,0.20911598205566406
+pthread-ext.26_stack_cas-race.smt,0.438340425491333
+pthread-ext.41_FreeBSD_abd_kbd_sliced.smt,66.41092276573181
+pthread-ext.43_NetBSD_sysmon_power_sliced_2.smt,109.06997060775757
+goblint-regression.28-race_reach_87-lists_racefree-deref.smt,0.12220954895019531
+goblint-regression.04-mutex_27-base_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_74-tricky_address1_racefree.smt,0.18590116500854492
+goblint-regression.09-regions_20-arrayloop2_rc.smt,CBMC Exception
+goblint-regression.13-privatized_40-traces-ex-6_true.smt,CBMC Exception
+goblint-regression.04-mutex_47-fun_write.smt,CBMC Exception
+goblint-regression.04-mutex_36-trylock_nr.smt,0.34734511375427246
+goblint-regression.36-apron_21-traces-cluster-based_true.smt,CBMC Exception
+goblint-regression.28-race_reach_83-list2_racing1.smt,0.17848777770996094
+goblint-regression.04-mutex_04-munge_nr.smt,CBMC Exception
+goblint-regression.06-symbeq_06-tricky_address1.smt,CBMC Exception
+goblint-regression.28-race_reach_20-callback_racefree.smt,0.14954662322998047
+goblint-regression.36-apron_22-traces-write-centered-vs-meet-mutex_true.smt,CBMC Exception
+goblint-regression.04-mutex_25-single_acc.smt,CBMC Exception
+goblint-regression.36-apron_22-traces-write-centered-vs-meet-mutex_true_no-overflow.smt,CBMC Exception
+goblint-regression.13-privatized_46-refine-protected1_true.smt,CBMC Exception
+goblint-regression.13-privatized_35-traces-ex-2_true.smt,CBMC Exception
+goblint-regression.03-practical_15-exit_problems.smt,CBMC Exception
+goblint-regression.04-mutex_55-pt_rwlock_rr.smt,CBMC Exception
+goblint-regression.13-privatized_44-traces-mine2_true.smt,CBMC Exception
+goblint-regression.06-symbeq_11-equ_nr.smt,CBMC Exception
+goblint-regression.09-regions_22-nocollapse.smt,CBMC Exception
+goblint-regression.13-privatized_41-traces-ex-7_unknown_1_neg.smt,CBMC Exception
+goblint-regression.28-race_reach_86-lists_racing.smt,0.18072891235351562
+goblint-regression.04-mutex_02-simple_nr.smt,CBMC Exception
+goblint-regression.02-base_24-malloc_races.smt,CBMC Exception
+goblint-regression.13-privatized_25-struct_nr_true.smt,CBMC Exception
+goblint-regression.09-regions_26-alloc_region_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_22-deref_read_racefree.smt,0.211622953414917
+goblint-regression.13-privatized_42-traces-ex-mini_true.smt,CBMC Exception
+goblint-regression.05-lval_ls_11-fldsense_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_71-funloop_racing.smt,0.12234282493591309
+goblint-regression.13-privatized_03-priv_inv.smt,CBMC Exception
+goblint-regression.28-race_reach_75-tricky_address2_racefree.smt,0.17957067489624023
+goblint-regression.04-mutex_43-thread_create_nr.smt,CBMC Exception
+goblint-regression.04-mutex_50-funptr_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_06-cond_racing1.smt,0.299227237701416
+goblint-regression.03-practical_08-nonterm1.smt,CBMC Exception
+goblint-regression.28-race_reach_87-lists_racefree.smt,0.178544282913208
+goblint-regression.28-race_reach_21-deref_read_racing.smt,0.20808982849121094
+goblint-regression.28-race_reach_51-mutexptr_racefree.smt,0.21401286125183105
+goblint-regression.28-race_reach_91-arrayloop2_racefree.smt,0.17769432067871094
+goblint-regression.13-privatized_18-first-reads_unknown_1_pos.smt,CBMC Exception
+goblint-regression.04-mutex_06-ps_rc.smt,CBMC Exception
+goblint-regression.09-regions_19-nested_nr.smt,CBMC Exception
+goblint-regression.09-regions_11-arraylist_nr.smt,CBMC Exception
+goblint-regression.13-privatized_18-first-reads_unknown_2_pos.smt,CBMC Exception
+goblint-regression.10-synch_02-thread_nonunique.smt,CBMC Exception
+goblint-regression.04-mutex_17a-ps_add1_nr.smt,CBMC Exception
+goblint-regression.28-race_reach_61-invariant_racing.smt,0.31073641777038574
+goblint-regression.28-race_reach_09-ptrmunge_racing.smt,0.23690366744995117
+goblint-regression.28-race_reach_05-lockfuns_racefree.smt,0.21395254135131836
+goblint-regression.04-mutex_54-pt_rwlock_ww.smt,CBMC Exception
+goblint-regression.09-regions_01-list_rc.smt,CBMC Exception
+goblint-regression.06-symbeq_07-tricky_address2.smt,CBMC Exception
+goblint-regression.13-privatized_69-refine-protected-loop-interval_true.smt,CBMC Exception
+goblint-regression.04-mutex_16-ps_add1_rc.smt,CBMC Exception
+goblint-regression.04-mutex_42-trylock_2mutex.smt,CBMC Exception
+goblint-regression.28-race_reach_84-list2_racing2.smt,0.18516016006469727
+goblint-regression.13-privatized_68-pfscan_protected_loop_minimal_interval_true.smt,CBMC Exception
+goblint-regression.36-apron_41-threadenter-no-locals_unknown_1_pos.smt,CBMC Exception
+goblint-regression.36-apron_17-traces-rpb-litmus_unknown_1_pos.smt,CBMC Exception
+goblint-regression.28-race_reach_79-equ_racefree-overflow.smt,0.30834341049194336
+goblint-regression.06-symbeq_08-tricky_address3.smt,CBMC Exception
+goblint-regression.13-privatized_47-refine-protected2_true.smt,CBMC Exception
+goblint-regression.13-privatized_58-singlethreaded-lock_true.smt,CBMC Exception
+goblint-regression.09-regions_16-arrayloop_rc.smt,0.18640708923339844
+goblint-regression.13-privatized_32-traces-mine-vs-oplus-vs-meet_true.smt,CBMC Exception
+goblint-regression.13-privatized_33-traces-v-matters_true.smt,CBMC Exception
+goblint-regression.13-privatized_04-priv_multi_true.smt,0.6886475086212158
+goblint-regression.13-privatized_67-pthread_cond_wait_true.smt,0.20267510414123535
+goblint-regression.02-base_26-malloc_struct.smt,CBMC Exception
+goblint-regression.36-apron_41-threadenter-no-locals_unknown_1_neg.smt,CBMC Exception
+goblint-regression.13-privatized_57-singlethreaded-unlock_true.smt,CBMC Exception
+goblint-regression.13-privatized_20-publish-regression_true.smt,CBMC Exception
+goblint-regression.13-privatized_29-multiple-protecting2-vesal_true.smt,CBMC Exception
+goblint-regression.05-lval_ls_03-fld_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_92-evilcollapse_racing.smt,0.1780376434326172
+goblint-regression.28-race_reach_60-invariant_racefree.smt,0.2392289638519287
+goblint-regression.13-privatized_34-traces-minepp-L-needs-to-be-um_true.smt,CBMC Exception
+goblint-regression.09-regions_24-evilcollapse_nr.smt,CBMC Exception
+goblint-regression.06-symbeq_23-idxsense_nr.smt,CBMC Exception
+goblint-regression.28-race_reach_77-tricky_address4_racing.smt,0.18599319458007812
+goblint-regression.28-race_reach_10-ptrmunge_racefree.smt,0.24046850204467773
+goblint-regression.04-mutex_41-pt_rwlock.smt,CBMC Exception
+goblint-regression.04-mutex_01-simple_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_94-alloc_region_racing.smt,0.286975622177124
+goblint-regression.28-race_reach_23-sound_unlock_racing.smt,0.2691323757171631
+goblint-regression.28-race_reach_79-equ_racefree.smt,0.31125640869140625
+goblint-regression.09-regions_18-nested_rc.smt,CBMC Exception
+goblint-regression.09-regions_11-arraylist_nr-deref.smt,CBMC Exception
+goblint-regression.06-symbeq_04-funloop_hard1.smt,CBMC Exception
+goblint-regression.02-base_25-malloc_race_cp.smt,CBMC Exception
+goblint-regression.04-mutex_46a-escape_nr.smt,CBMC Exception
+goblint-regression.36-apron_11-traces-max-simple_true.smt,CBMC Exception
+goblint-regression.28-race_reach_78-equ_racing.smt,0.28672337532043457
+goblint-regression.13-privatized_01-priv_nr_true.smt,CBMC Exception
+goblint-regression.09-regions_06-ptra_nr.smt,0.1366569995880127
+goblint-regression.36-apron_17-traces-rpb-litmus_unknown_1_neg.smt,CBMC Exception
+goblint-regression.05-lval_ls_09-idxsense_rc.smt,CBMC Exception
+goblint-regression.13-privatized_66-mine-W-init_true.smt,CBMC Exception
+goblint-regression.04-mutex_24-sound_lock.smt,CBMC Exception
+goblint-regression.28-race_reach_41-trylock_racefree.smt,0.207841157913208
+goblint-regression.09-regions_02-list_nr.smt,CBMC Exception
+goblint-regression.09-regions_13-arraycollapse_nr-deref.smt,CBMC Exception
+goblint-regression.09-regions_09-arraylist-deref.smt,CBMC Exception
+goblint-regression.04-mutex_23-sound_unlock.smt,CBMC Exception
+goblint-regression.06-symbeq_15-list_entry_nr.smt,Exception
+goblint-regression.28-race_reach_40-trylock_racing.smt,0.21903038024902344
+goblint-regression.28-race_reach_27-funptr_racing.smt,0.3935995101928711
+goblint-regression.28-race_reach_42-trylock2_racefree.smt,0.3868398666381836
+goblint-regression.13-privatized_19-publish-precision_unknown_1_neg.smt,CBMC Exception
+goblint-regression.04-mutex_35-trylock_rc.smt,0.2570953369140625
+goblint-regression.28-race_reach_36-indirect_racefree.smt,0.20976996421813965
+goblint-regression.09-regions_10-arraylist_rc.smt,CBMC Exception
+goblint-regression.13-privatized_67-pthread_cond_wait_unknown_1_pos.smt,0.20438742637634277
+goblint-regression.13-privatized_19-publish-precision_true.smt,CBMC Exception
+goblint-regression.04-mutex_36-trylock_nr-overflow.smt,0.24445199966430664
+goblint-regression.05-lval_ls_15-fldunknown_access.smt,CBMC Exception
+goblint-regression.05-lval_ls_07-glob_fld_rc.smt,CBMC Exception
+goblint-regression.00-sanity_09-include.smt,CBMC Exception
+goblint-regression.28-race_reach_45-escape_racing.smt,0.14811944961547852
+goblint-regression.13-privatized_41-traces-ex-7_unknown_1_pos.smt,CBMC Exception
+goblint-regression.13-privatized_19-publish-precision_unknown_2_neg.smt,CBMC Exception
+goblint-regression.13-privatized_52-refine-protected-loop2-small_true.smt,CBMC Exception
+goblint-regression.09-regions_03-list2_rc.smt,CBMC Exception
+goblint-regression.13-privatized_27-multiple-protecting2_true.smt,CBMC Exception
+goblint-regression.04-mutex_51-mutex_ptr.smt,CBMC Exception
+goblint-regression.36-apron_16-traces-unprot2_true.smt,CBMC Exception
+goblint-regression.06-symbeq_10-equ_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_85-list2_racefree.smt,0.17886590957641602
+goblint-regression.13-privatized_30-traces-oplus-vs-meet_true.smt,CBMC Exception
+goblint-regression.28-race_reach_46-escape_racefree.smt,0.20843100547790527
+goblint-regression.04-mutex_15-funarg_nr.smt,CBMC Exception
+goblint-regression.05-lval_ls_04-fld_nr.smt,CBMC Exception
+goblint-regression.09-regions_28-list2alloc.smt,CBMC Exception
+goblint-regression.28-race_reach_82-list_racefree.smt,0.12286925315856934
+goblint-regression.04-mutex_21-sound_base.smt,CBMC Exception
+goblint-regression.13-privatized_18-first-reads_unknown_1_neg.smt,CBMC Exception
+goblint-regression.09-regions_04-list2_nr.smt,CBMC Exception
+goblint-regression.09-regions_12-arraycollapse_rc-deref.smt,CBMC Exception
+goblint-regression.04-mutex_19-call_by_ptr_rc.smt,CBMC Exception
+goblint-regression.13-privatized_24-multiple-protecting_true.smt,CBMC Exception
+goblint-regression.05-lval_ls_08-glob_fld_2_rc.smt,CBMC Exception
+goblint-regression.09-regions_23-evilcollapse_rc.smt,CBMC Exception
+goblint-regression.04-mutex_12-ptr_nr.smt,CBMC Exception
+goblint-regression.28-race_reach_93-evilcollapse_racefree.smt,0.17883586883544922
+goblint-regression.28-race_reach_73-funloop_hard_racefree.smt,0.18225526809692383
+goblint-regression.06-symbeq_02-funloop_norace.smt,CBMC Exception
+goblint-regression.28-race_reach_03-munge_racing.smt,0.23369479179382324
+goblint-regression.10-synch_03-two_unique.smt,CBMC Exception
+goblint-regression.28-race_reach_04-munge_racefree.smt,0.24128413200378418
+goblint-regression.28-race_reach_08-cond_racefree.smt,0.25296592712402344
+goblint-regression.28-race_reach_72-funloop_hard_racing.smt,0.17928814888000488
+goblint-regression.04-mutex_10-ptrmunge_nr.smt,CBMC Exception
+goblint-regression.04-mutex_45-escape_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_12-ptr_racefree.smt,0.20506787300109863
+goblint-regression.06-symbeq_14-list_entry_rc.smt,Exception
+goblint-regression.04-mutex_28-base_nr.smt,CBMC Exception
+goblint-regression.09-regions_09-arraylist.smt,CBMC Exception
+goblint-regression.28-race_reach_07-cond_racing2.smt,0.259474515914917
+goblint-regression.13-privatized_19-publish-precision_unknown_2_pos.smt,CBMC Exception
+goblint-regression.28-race_reach_61-invariant_racing-2.smt,0.22228145599365234
+goblint-regression.05-lval_ls_14-idxunknown_access.smt,CBMC Exception
+goblint-regression.04-mutex_03-munge_rc.smt,CBMC Exception
+goblint-regression.04-mutex_14-funarg_rc.smt,CBMC Exception
+goblint-regression.04-mutex_17-ps_add1_nr.smt,CBMC Exception
+goblint-regression.13-privatized_18-first-reads_unknown_2_neg.smt,CBMC Exception
+goblint-regression.13-privatized_31-traces-mine-vs-mutex_true.smt,CBMC Exception
+goblint-regression.09-regions_13-arraycollapse_nr.smt,CBMC Exception
+goblint-regression.05-lval_ls_02-idx_nr.smt,CBMC Exception
+goblint-regression.09-regions_12-arraycollapse_rc.smt,CBMC Exception
+goblint-regression.13-privatized_18-first-reads_true.smt,CBMC Exception
+goblint-regression.04-mutex_09-ptrmunge_rc.smt,CBMC Exception
+goblint-regression.06-symbeq_09-tricky_address4.smt,CBMC Exception
+goblint-regression.28-race_reach_37-indirect_racing.smt,0.20839738845825195
+goblint-regression.04-mutex_05-lockfuns.smt,CBMC Exception
+goblint-regression.13-privatized_36-traces-ex-3_true.smt,CBMC Exception
+goblint-regression.05-lval_ls_01-idx_rc.smt,CBMC Exception
+goblint-regression.28-race_reach_28-funptr_racefree.smt,0.21458911895751953
+goblint-regression.06-symbeq_03-funloop_simple.smt,CBMC Exception
+goblint-regression.09-regions_17-arrayloop_nr.smt,0.12373566627502441
+goblint-regression.05-lval_ls_13-idxunknown_lock.smt,CBMC Exception
+goblint-regression.28-race_reach_76-tricky_address3_racefree.smt,0.18103957176208496
+goblint-regression.06-symbeq_13-equ_proc_nr.smt,CBMC Exception
+goblint-regression.06-symbeq_11a-equ_nr.smt,CBMC Exception
+goblint-regression.13-privatized_38-traces-ex-4-switch_true.smt,CBMC Exception
+goblint-regression.09-regions_05-ptra_rc.smt,0.19866013526916504
+goblint-regression.04-mutex_37-indirect_rc.smt,CBMC Exception
+goblint-regression.04-mutex_11-ptr_rc.smt,CBMC Exception
+goblint-regression.04-mutex_20-stdfun_rc.smt,CBMC Exception
+goblint-regression.13-privatized_67-pthread_cond_wait_unknown_1_neg.smt,0.20704078674316406
+goblint-regression.28-race_reach_01-simple_racing.smt,0.21004486083984375
+goblint-regression.04-mutex_07-ps_nr.smt,CBMC Exception
+goblint-regression.28-race_reach_90-arrayloop2_racing.smt,0.17889928817749023
+goblint-regression.09-regions_21-arrayloop2_nr.smt,CBMC Exception
+goblint-regression.28-race_reach_92-evilcollapse_racing-deref.smt,0.19066786766052246
+goblint-regression.04-mutex_22-deref_read.smt,CBMC Exception
+goblint-regression.28-race_reach_86-lists_racing-deref.smt,0.17926430702209473
+goblint-regression.05-lval_ls_05-glob_idx_rc.smt,CBMC Exception
+goblint-regression.13-privatized_19-publish-precision_unknown_1_pos.smt,CBMC Exception
+goblint-regression.28-race_reach_11-ptr_racing.smt,0.21915173530578613
+goblint-regression.05-lval_ls_12-fldsense_nr.smt,CBMC Exception
+goblint-regression.28-race_reach_24-sound_lock_racing.smt,0.25766730308532715
+goblint-regression.13-privatized_37-traces-ex-4_true.smt,CBMC Exception
+goblint-regression.10-synch_01-thread_unique.smt,CBMC Exception
+goblint-regression.13-privatized_45-traces-per-global-and-current-lock-mine-incomparable_true.smt,CBMC Exception
+goblint-regression.28-race_reach_81-list_racing.smt,0.1228024959564209
+goblint-regression.06-symbeq_05-funloop_hard2.smt,CBMC Exception
+goblint-regression.04-mutex_38-indexing_malloc.smt,CBMC Exception
+goblint-regression.28-race_reach_19-callback_racing.smt,0.20482873916625977
+goblint-regression.28-race_reach_78-equ_racing-overflow.smt,0.3220369815826416
+goblint-regression.05-lval_ls_16-idxunknown_unlock.smt,CBMC Exception
+goblint-regression.04-mutex_44-malloc_sound.smt,CBMC Exception
+goblint-regression.04-mutex_46-escape_nr.smt,CBMC Exception
+goblint-regression.09-regions_19-nested_nr-deref.smt,CBMC Exception
+goblint-regression.28-race_reach_02-simple_racefree.smt,0.20971941947937012
+goblint-regression.28-race_reach_70-funloop_racefree.smt,0.12305283546447754
+goblint-regression.04-mutex_18-glob_guards.smt,CBMC Exception
+goblint-regression.03-practical_07-nonterm.smt,CBMC Exception
+pthread-wmm.mix036_power.opt_rmo.opt.smt,0.23155546188354492
+pthread-wmm.safe031_power.opt_pso.opt_rmo.opt.smt,0.23030471801757812
+pthread-wmm.mix032.opt.smt,0.20988821983337402
+pthread-wmm.safe027_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.14301848411560059
+pthread-wmm.safe020_rmo.smt,0.2151350975036621
+pthread-wmm.safe005_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.21725034713745117
+pthread-wmm.rfi002_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.2280869483947754
+pthread-wmm.safe019_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.22038507461547852
+pthread-wmm.safe022_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.21175265312194824
+pthread-wmm.rfi000_power.oepc_pso.oepc_rmo.oepc.smt,0.22564029693603516
+pthread-wmm.mix057_power.opt_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.23980474472045898
+pthread-wmm.safe007_pso.oepc_pso.opt_tso.oepc_tso.opt-thin001_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.13278841972351074
+pthread-wmm.safe025_power.smt,0.24738001823425293
+pthread-wmm.safe029_tso.smt,0.14855051040649414
+pthread-wmm.mix014_tso.oepc.smt,0.2957141399383545
+pthread-wmm.safe004_tso.smt,0.14055895805358887
+pthread-wmm.safe019_power.oepc.smt,0.2261509895324707
+pthread-wmm.safe014_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.13987183570861816
+pthread-wmm.safe014_rmo.oepc.smt,0.21971797943115234
+pthread-wmm.rfi009_power.oepc.smt,0.20522403717041016
+pthread-wmm.safe017_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.20987629890441895
+pthread-wmm.mix017.oepc.smt,0.23549389839172363
+pthread-wmm.safe003_power.opt.smt,0.2227940559387207
+pthread-wmm.rfi001_power.opt_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.14305543899536133
+pthread-wmm.mix017_pso.opt_tso.opt.smt,0.21004939079284668
+pthread-wmm.safe022_tso.smt,0.14498329162597656
+pthread-wmm.safe009_power.opt.smt,0.2266836166381836
+pthread-wmm.mix033.opt.smt,0.20648574829101562
+pthread-wmm.mix008_power.oepc_pso.oepc_rmo.oepc.smt,0.22417473793029785
+pthread-wmm.mix001.oepc.smt,0.22185564041137695
+pthread-wmm.safe012_rmo.oepc.smt,0.20038056373596191
+pthread-wmm.mix006_power.oepc_pso.oepc_rmo.oepc.smt,0.22584891319274902
+pthread-wmm.safe013_tso.smt,0.2168130874633789
+pthread-wmm.safe033_tso.smt,0.13041114807128906
+pthread-wmm.mix025_pso.opt_rmo.opt.smt,0.21631264686584473
+pthread-wmm.safe033_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.19533562660217285
+pthread-wmm.safe020_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.13712072372436523
+pthread-wmm.mix042.oepc.smt,0.21509408950805664
+pthread-wmm.safe019_rmo.oepc.smt,0.2373950481414795
+pthread-wmm.mix026.oepc.smt,0.22761249542236328
+pthread-wmm.safe007_power.opt-thin001_power.opt.smt,0.21744418144226074
+pthread-wmm.mix010.oepc.smt,0.23911786079406738
+pthread-wmm.mix026_pso.opt_rmo.opt.smt,0.22118735313415527
+pthread-wmm.thin002_power.opt.smt,0.22666096687316895
+pthread-wmm.mix043.oepc.smt,0.23129987716674805
+pthread-wmm.mix035_pso.opt_tso.opt.smt,0.20012187957763672
+pthread-wmm.safe001_rmo.oepc.smt,0.22092509269714355
+pthread-wmm.mix018_tso.oepc.smt,0.2462022304534912
+pthread-wmm.mix030_tso.smt,0.23180770874023438
+pthread-wmm.mix030_power.oepc_pso.oepc_rmo.oepc.smt,0.2896847724914551
+pthread-wmm.mix014_power.oepc_pso.oepc_rmo.oepc.smt,0.2607738971710205
+pthread-wmm.safe001_power.opt_pso.oepc_pso.opt_rmo.opt.smt,0.21325445175170898
+pthread-wmm.mix022_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.2048053741455078
+pthread-wmm.safe028_rmo.smt,0.20699214935302734
+pthread-wmm.thin002_power.oepc.smt,0.20972299575805664
+pthread-wmm.mix028_tso.smt,0.22569489479064941
+pthread-wmm.safe029_power.oepc_pso.oepc_rmo.oepc.smt,0.15527105331420898
+pthread-wmm.thin002_rmo.smt,0.20680856704711914
+pthread-wmm.mix016.oepc.smt,0.21813035011291504
+pthread-wmm.safe006_rmo.oepc_rmo.opt-thin000_rmo.oepc_rmo.opt.smt,0.1414506435394287
+pthread-wmm.mix017_power.opt_rmo.opt.smt,0.22220253944396973
+pthread-wmm.mix051_pso.opt_rmo.opt_tso.opt.smt,0.17490100860595703
+pthread-wmm.mix027_power.opt_pso.opt_rmo.opt.smt,0.23218870162963867
+pthread-wmm.mix005_power.oepc_pso.oepc_rmo.oepc.smt,0.2394416332244873
+pthread-wmm.safe004_power.oepc_pso.oepc_rmo.oepc.smt,0.23000121116638184
+pthread-wmm.safe034_tso.smt,0.13785171508789062
+pthread-wmm.mix027_tso.smt,0.23035931587219238
+pthread-wmm.mix054_power.oepc_power.opt_pso.oepc_rmo.oepc.smt,0.2036604881286621
+pthread-wmm.mix035.oepc.smt,0.21981549263000488
+pthread-wmm.mix012_pso.opt_tso.opt.smt,0.20041680335998535
+pthread-wmm.safe003_tso.smt,0.13174700736999512
+pthread-wmm.mix024_power.oepc_pso.oepc_rmo.oepc_tso.oepc_tso.opt.smt,0.21470117568969727
+pthread-wmm.mix004.oepc.smt,0.24002528190612793
+pthread-wmm.safe003_power.oepc_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.2496178150177002
+pthread-wmm.mix007.opt.smt,0.218780517578125
+pthread-wmm.mix052_pso.opt_rmo.opt_tso.opt.smt,0.19870328903198242
+pthread-wmm.mix004.opt.smt,0.22398781776428223
+pthread-wmm.safe021_power.opt_pso.opt.smt,0.20468950271606445
+pthread-wmm.mix008.opt.smt,0.20554304122924805
+pthread-wmm.safe016_power.opt.smt,0.24880146980285645
+pthread-wmm.safe006_power.opt-thin000_power.opt.smt,0.19938063621520996
+pthread-wmm.safe018_rmo.oepc.smt,0.21758413314819336
+pthread-wmm.mix038.opt.smt,0.19870281219482422
+pthread-wmm.mix039.oepc.smt,0.23393535614013672
+pthread-wmm.mix013.opt.smt,0.21965765953063965
+pthread-wmm.safe030_tso.smt,0.1355457305908203
+pthread-wmm.safe037.smt,0.13641571998596191
+pthread-wmm.mix036.oepc.smt,0.2581796646118164
+pthread-wmm.safe028_power.smt,0.2375340461730957
+pthread-wmm.mix051_tso.oepc.smt,0.23133039474487305
+pthread-wmm.safe029_power.opt_pso.opt_rmo.opt.smt,0.14144682884216309
+pthread-wmm.mix002.oepc.smt,0.23534131050109863
+pthread-wmm.mix055_power.oepc_pso.oepc_rmo.oepc.smt,0.23060894012451172
+pthread-wmm.mix057_power.oepc_pso.oepc_rmo.oepc.smt,0.251664400100708
+pthread-wmm.mix019_power.oepc_pso.oepc_rmo.oepc.smt,0.2163693904876709
+pthread-wmm.safe015_power.opt.smt,0.20861482620239258
+pthread-wmm.safe035_power.smt,0.49039673805236816
+pthread-wmm.mix041_power.oepc_pso.oepc_rmo.oepc.smt,0.21760129928588867
+pthread-wmm.safe025_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.20016980171203613
+pthread-wmm.mix023_tso.smt,0.3631913661956787
+pthread-wmm.safe018_power.opt.smt,0.2141435146331787
+pthread-wmm.mix011.opt.smt,0.20666766166687012
+pthread-wmm.mix028_power.opt_pso.opt_rmo.opt.smt,0.2073197364807129
+pthread-wmm.safe008_power.oepc_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.21127796173095703
+pthread-wmm.safe000_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.1329481601715088
+pthread-wmm.safe016_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.20454692840576172
+pthread-wmm.safe032_tso.smt,0.19640064239501953
+pthread-wmm.mix025_power.oepc_power.opt_pso.oepc_rmo.oepc_tso.oepc_tso.opt.smt,0.2354297637939453
+pthread-wmm.safe008_power.opt.smt,0.2241363525390625
+pthread-wmm.safe007_rmo.oepc_rmo.opt-thin001_rmo.oepc_rmo.opt.smt,0.15325117111206055
+pthread-wmm.safe018_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.20271944999694824
+pthread-wmm.safe021_power.oepc_pso.oepc_rmo.oepc_rmo.opt.smt,0.21398282051086426
+pthread-wmm.safe030_power.oepc_pso.oepc_rmo.oepc.smt,0.2089366912841797
+pthread-wmm.mix048_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt_tso.oepc_tso.opt-podwr000_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt_tso.oepc_tso.opt.smt,0.19638609886169434
+pthread-wmm.safe024_tso.smt,0.13461685180664062
+pthread-wmm.mix015.opt.smt,0.21615886688232422
+pthread-wmm.rfi009_rmo.oepc.smt,0.2070157527923584
+pthread-wmm.safe000_rmo.smt,0.2143549919128418
+pthread-wmm.mix023_power.opt_pso.opt_rmo.opt.smt,0.22656488418579102
+pthread-wmm.safe031_power.oepc_pso.oepc_rmo.oepc.smt,0.21883368492126465
+pthread-wmm.safe023_tso.smt,0.14009475708007812
+pthread-wmm.safe012_pso.oepc_pso.opt_rmo.opt.smt,0.23560214042663574
+pthread-wmm.mix037_tso.oepc.smt,0.21311306953430176
+pthread-wmm.safe026_tso.smt,0.1942145824432373
+pthread-wmm.mix000.oepc.smt,0.21158504486083984
+pthread-wmm.mix003_power.opt_pso.opt_rmo.opt_tso.opt.smt,0.20131945610046387
+pthread-wmm.rfi010.smt,0.2157306671142578
+pthread-wmm.mix050.smt,0.22674250602722168
+pthread-wmm.mix007.oepc.smt,0.23030686378479004
+pthread-wmm.safe009_power.oepc.smt,0.23450493812561035
+pthread-wmm.mix008_tso.oepc.smt,0.2503964900970459
+pthread-wmm.safe014_power.opt.smt,0.21654915809631348
+pthread-wmm.safe019_power.opt.smt,0.2490530014038086
+pthread-wmm.safe014_power.oepc.smt,0.20745110511779785
+pthread-wmm.mix055_tso.oepc.smt,0.23571181297302246
+pthread-wmm.mix029_power.opt_pso.opt_rmo.opt.smt,0.21213793754577637
+pthread-wmm.safe028_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.1456742286682129
+pthread-wmm.mix041_power.opt_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.22144198417663574
+pthread-wmm.safe001_tso.smt,0.20139384269714355
+pthread-wmm.mix052_tso.oepc.smt,0.216782808303833
+pthread-wmm.mix037_power.oepc_pso.oepc_rmo.oepc.smt,0.23282623291015625
+pthread-wmm.mix034_power.oepc_power.opt_pso.oepc_rmo.oepc_rmo.opt_tso.oepc.smt,0.20508718490600586
+pthread-wmm.mix054_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.20321011543273926
+pthread-wmm.rfi001_power.oepc_pso.oepc_rmo.oepc.smt,0.20341253280639648
+pthread-wmm.mix020.opt.smt,0.2149498462677002
+pthread-wmm.mix047_power.oepc_pso.oepc_rmo.oepc.smt,0.22163057327270508
+pthread-wmm.mix022_tso.smt,0.21314644813537598
+pthread-wmm.rfi003_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.20353174209594727
+pthread-wmm.mix030_power.opt_pso.opt_rmo.opt.smt,0.22333955764770508
+pthread-wmm.safe016_rmo.oepc.smt,0.21542024612426758
+pthread-wmm.safe015_rmo.smt,0.2076413631439209
+pthread-wmm.safe015_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.14209914207458496
+pthread-wmm.safe010_tso.smt,0.13061928749084473
+pthread-wmm.mix016_pso.opt_tso.opt.smt,0.21146512031555176
+pthread-wmm.mix040_tso.oepc.smt,0.22017598152160645
+pthread-wmm.safe014_rmo.opt.smt,0.20903229713439941
+pthread-wmm.safe009_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.13456296920776367
+pthread-wmm.mix053.opt.smt,0.20667719841003418
+pthread-wmm.mix020.oepc.smt,0.21294021606445312
+pthread-wmm.mix036_pso.opt_tso.opt.smt,0.22394680976867676
+pthread-wmm.safe008_tso.smt,0.19995832443237305
+pthread-wmm.safe032_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.3186640739440918
+pthread-wmm.safe024_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.21402764320373535
+pthread-wmm.mix016_power.opt_rmo.opt.smt,0.19960379600524902
+pthread-wmm.mix053_power.oepc_pso.oepc_rmo.oepc.smt,0.23977136611938477
+pthread-wmm.mix034_pso.opt_tso.opt.smt,0.15286993980407715
+pthread-wmm.safe002_tso.smt,0.20601153373718262
+pthread-wmm.safe005_tso.smt,0.1340162754058838
+pthread-wmm.mix044.opt.smt,0.23441290855407715
+pthread-wmm.mix005.opt.smt,0.21733689308166504
+pthread-wmm.rfi008.opt.smt,0.2058272361755371
+pthread-wmm.mix035_power.opt_rmo.opt.smt,0.20929861068725586
+pthread-wmm.mix028_power.oepc_pso.oepc_rmo.oepc.smt,0.22837042808532715
+pthread-wmm.mix009.oepc.smt,0.2057335376739502
+pthread-wmm.mix045_power.oepc_pso.oepc_rmo.oepc.smt,0.20703363418579102
+pthread-wmm.safe001_power.oepc.smt,0.22334814071655273
+pthread-wmm.safe019_rmo.opt.smt,0.23818516731262207
+pthread-wmm.safe011_tso.smt,0.1383838653564453
+pthread-wmm.rfi008.oepc.smt,0.2109088897705078
+pthread-wmm.mix006_tso.oepc.smt,0.23221111297607422
+pthread-wmm.mix011_tso.oepc.smt,0.22014665603637695
+pthread-wmm.mix006.opt.smt,0.2161252498626709
+pthread-wmm.rfi006_power.opt.smt,0.21331429481506348
+pthread-wmm.safe021_tso.smt,0.1429882049560547
+pthread-wmm.mix053_tso.oepc.smt,0.21385574340820312
+pthread-wmm.mix024_power.opt_pso.opt_rmo.opt.smt,0.2390749454498291
+pthread-wmm.mix044_power.oepc_pso.oepc_rmo.oepc.smt,0.22879719734191895
+pthread-wmm.safe013_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.20525503158569336
+pthread-wmm.mix010.opt.smt,0.20223259925842285
+pthread-wmm.mix018_power.oepc_pso.oepc_rmo.oepc.smt,0.21425533294677734
+pthread-wmm.safe010_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.21197891235351562
+pthread-wmm.mix019.opt.smt,0.22472596168518066
+pthread-wmm.safe015_power.oepc.smt,0.2643604278564453
+pthread-wmm.mix021_tso.oepc.smt,0.22462940216064453
+pthread-wmm.mix040_power.oepc_pso.oepc_rmo.oepc.smt,0.24349117279052734
+pthread-wmm.safe011_power.oepc_pso.oepc_rmo.oepc_rmo.opt.smt,0.2118222713470459
+pthread-wmm.safe023_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.28486180305480957
+pthread-wmm.mix032.oepc.smt,0.2175300121307373
+pthread-wmm.rfi006_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.21185708045959473
+pthread-wmm.mix026_power.opt_tso.opt.smt,0.22262287139892578
+pthread-wmm.safe012_tso.smt,0.21540522575378418
+pthread-wmm.mix033_power.oepc_pso.oepc_rmo.oepc.smt,0.20662593841552734
+pthread-wmm.safe030_power.opt_pso.opt_rmo.opt.smt,0.21789145469665527
+pthread-wmm.safe027_power.opt.smt,0.23667359352111816
+pthread-wmm.mix045_power.opt_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.20705151557922363
+pthread-wmm.mix044_tso.oepc.smt,0.23810052871704102
+pthread-wmm.rfi000_tso.smt,0.22995996475219727
+pthread-wmm.safe027_rmo.smt,0.22162103652954102
+pthread-wmm.safe006_pso.oepc_pso.opt_tso.oepc_tso.opt-thin000_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.1471254825592041
+pthread-wmm.rfi000_power.opt_pso.opt_rmo.opt.smt,0.19743657112121582
+pthread-wmm.rfi005.smt,0.20375823974609375
+pthread-wmm.safe009_rmo.oepc.smt,0.2125403881072998
+pthread-wmm.safe025_rmo.smt,0.2162322998046875
+pthread-wmm.mix013.oepc.smt,0.23559045791625977
+pthread-wmm.mix002.opt.smt,0.21224308013916016
+pthread-wmm.safe006_power.oepc-thin000_power.oepc.smt,0.1979687213897705
+pthread-wmm.safe026_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.2095184326171875
+pthread-wmm.mix021.opt.smt,0.21311187744140625
+pthread-wmm.mix021_power.oepc_pso.oepc_rmo.oepc.smt,0.22204995155334473
+pthread-wmm.mix005_tso.oepc.smt,0.23790812492370605
+pthread-wmm.mix027_power.oepc_pso.oepc_rmo.oepc.smt,0.24652504920959473
+pthread-wmm.mix029_power.oepc_pso.oepc_rmo.oepc_tso.oepc_tso.opt.smt,0.22839641571044922
+pthread-wmm.thin002_pso.oepc_pso.opt_tso.oepc_tso.opt.smt,0.13747191429138184
+pthread-wmm.safe034_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.19705462455749512
+pthread-wmm.rfi004.smt,0.14533019065856934
+pthread-wmm.mix003.oepc.smt,0.21002697944641113
+pthread-wmm.safe016_power.oepc.smt,0.21409249305725098
+pthread-wmm.mix056_power.oepc_pso.oepc_rmo.oepc.smt,0.20114445686340332
+pthread-wmm.mix031.oepc.smt,0.14879822731018066
+pthread-wmm.safe018_rmo.opt.smt,0.2215576171875
+pthread-wmm.safe027_power.oepc.smt,0.22562432289123535
+pthread-wmm.safe011_power.opt_pso.opt.smt,0.2129971981048584
+pthread-wmm.safe002_power.oepc.smt,0.2096567153930664
+pthread-wmm.mix011_power.oepc_pso.oepc_rmo.oepc.smt,0.20794320106506348
+pthread-wmm.mix043.opt.smt,0.23109793663024902
+pthread-wmm.safe007_power.oepc-thin001_power.oepc.smt,0.19971680641174316
+pthread-wmm.mix015.oepc.smt,0.21709251403808594
+pthread-wmm.rfi003_tso.smt,0.21207642555236816
+pthread-wmm.mix019_tso.oepc.smt,0.21995854377746582
+pthread-wmm.safe012_power.opt.smt,0.21772336959838867
+pthread-wmm.safe000_power.opt.smt,0.2192528247833252
+pthread-wmm.mix046.opt.smt,0.22711181640625
+pthread-wmm.mix040.opt.smt,0.23016595840454102
+pthread-wmm.mix037.opt.smt,0.2489633560180664
+pthread-wmm.safe009_rmo.opt.smt,0.21340465545654297
+pthread-wmm.mix055.opt.smt,0.22927641868591309
+pthread-wmm.mix033_tso.oepc.smt,0.22232532501220703
+pthread-wmm.rfi007_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt.smt,0.1426844596862793
+pthread-wmm.safe000_power.oepc.smt,0.21318864822387695
+pthread-wmm.mix001.opt.smt,0.2079012393951416
+pthread-wmm.rfi007_tso.smt,0.20963311195373535
+pthread-wmm.rfi006_rmo.smt,0.21386146545410156
+pthread-wmm.mix014.opt.smt,0.21422243118286133
+pthread-wmm.mix042.opt.smt,0.21792936325073242
+pthread-wmm.mix023_power.oepc_pso.oepc_rmo.oepc.smt,0.21602225303649902
+pthread-wmm.safe035_pso.oepc_pso.opt_rmo.oepc_rmo.opt_tso.oepc_tso.opt.smt,0.13491582870483398
+pthread-wmm.safe012_power.oepc.smt,0.20861411094665527
+pthread-wmm.rfi002_tso.smt,0.2305433750152588
+pthread-wmm.mix009.opt.smt,0.20439648628234863
+pthread-wmm.mix038_power.oepc_pso.oepc_rmo.oepc.smt,0.20542168617248535
+pthread-wmm.mix000.opt.smt,0.20650696754455566
+pthread-wmm.mix056_power.opt_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.2043449878692627
+pthread-wmm.safe020_power.smt,0.2449631690979004
+pthread-wmm.safe018_power.oepc.smt,0.20120501518249512
+pthread-wmm.safe016_rmo.opt.smt,0.2664906978607178
+pthread-wmm.mix012_power.oepc_power.opt_pso.oepc_rmo.oepc_rmo.opt_tso.oepc.smt,0.15079402923583984
+pthread-wmm.safe017_tso.smt,0.20465660095214844
+pthread-wmm.safe004_power.opt_pso.opt_rmo.opt.smt,0.2053847312927246
+pthread-wmm.mix018.opt.smt,0.21917271614074707
+pthread-wmm.mix038_tso.oepc.smt,0.2069244384765625
+pthread-wmm.mix031.opt.smt,0.14802980422973633
+pthread-wmm.rfi009_power.opt_pso.oepc_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.2048497200012207
+pthread-wmm.safe031_tso.smt,0.13479876518249512
+pthread-wmm.mix047_power.opt_pso.opt_rmo.opt_tso.oepc_tso.opt.smt,0.24412107467651367
+pthread-wmm.rfi006_power.oepc.smt,0.2234361171722412
+pthread-wmm.safe002_rmo.oepc.smt,0.21738123893737793
+pthread-wmm.safe002_power.opt_pso.oepc_pso.opt_rmo.opt.smt,0.20267271995544434
+pthread-wmm.mix052_power.oepc_power.opt_pso.oepc_rmo.oepc.smt,0.20458221435546875
+pthread-wmm.mix046.oepc.smt,0.2197880744934082
+pthread-wmm.mix049_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt_tso.oepc_tso.opt-podwr001_power.oepc_power.opt_pso.oepc_pso.opt_rmo.oepc_rmo.opt_tso.oepc_tso.opt.smt,0.21526169776916504
+pthread-wmm.safe036.smt,0.13202571868896484
+pthread-wmm.mix039.opt.smt,0.24427056312561035
+pthread-wmm.mix051_power.oepc_power.opt_pso.oepc_rmo.oepc.smt,0.24880361557006836
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_change_pc8736x_gpio_set-set_ovfl.smt,0.2807040214538574
+pthread-driver-races.char_generic_nvram_nvram_llseek_write_nvram.smt,Exception
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_configure_pc8736x_gpio_set.smt,0.2793445587158203
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_change_pc8736x_gpio_current-race.smt,0.2815425395965576
+pthread-driver-races.char_generic_nvram_read_nvram_nvram_unlocked_ioctl.smt,Exception
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_get_pc8736x_gpio_set-set_ovfl.smt,0.2778916358947754
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_current_pc8736x_gpio_set.smt,0.2834033966064453
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_open_pc8736x_gpio_configure.smt,0.27922558784484863
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_change_pc8736x_gpio_current.smt,0.28375840187072754
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_change_pc8736x_gpio_configure.smt,0.27671170234680176
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_open_pc8736x_gpio_change.smt,0.28774404525756836
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_change_pc8736x_gpio_get.smt,0.283130407333374
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_change_pc8736x_gpio_set-race.smt,0.2759559154510498
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_open_pc8736x_gpio_set.smt,0.27797484397888184
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_configure_pc8736x_gpio_current.smt,0.2795076370239258
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_open_pc8736x_gpio_get.smt,0.28234171867370605
+pthread-driver-races.char_generic_nvram_read_nvram_write_nvram-race.smt,Exception
+pthread-driver-races.char_generic_nvram_nvram_llseek_nvram_unlocked_ioctl.smt,Exception
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_open_pc8736x_gpio_set-set_ovfl.smt,0.27402424812316895
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_configure_pc8736x_gpio_get.smt,0.27884697914123535
+pthread-driver-races.char_generic_nvram_nvram_unlocked_ioctl_write_nvram.smt,Exception
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_current_pc8736x_gpio_set-race.smt,0.2783348560333252
+pthread-driver-races.char_generic_nvram_nvram_llseek_read_nvram.smt,Exception
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_current_pc8736x_gpio_get.smt,0.2802393436431885
+pthread-driver-races.char_generic_nvram_read_nvram_write_nvram.smt,Exception
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_change_pc8736x_gpio_set.smt,0.27983999252319336
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_configure_pc8736x_gpio_set-set_ovfl.smt,0.27933478355407715
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_open_pc8736x_gpio_current.smt,0.27459263801574707
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_current_pc8736x_gpio_set-set_ovfl.smt,0.2796292304992676
+pthread-driver-races.char_pc8736x_gpio_pc8736x_gpio_get_pc8736x_gpio_set.smt,0.2828340530395508
+pthread-complex.elimination_backoff_stack.smt,TO
+pthread-complex.bounded_buffer.smt,0.1880054473876953
+pthread-complex.safestack_relacy.smt,0.18038558959960938
+pthread-complex.workstealqueue_mutex-1.smt,0.17843842506408691
+pthread-complex.workstealqueue_mutex-2.smt,0.18344521522521973
+pthread-complex.elimination_backoff_stack-race.smt,TO
+pthread-divine.divinefifo_1w1r.smt,1.5362255573272705
+pthread-divine.condvar.smt,0.14939212799072266
+pthread-divine.tls_destructor_worker.smt,0.1343986988067627
+pthread-divine.condvar_spurious_wakeup.smt,0.13831114768981934
+pthread-divine.ring_2w1r-2.smt,0.312969446182251
+pthread-divine.one_time_barrier_3t.smt,0.12325572967529297
+pthread-divine.one_time_barrier_2t.smt,0.12385940551757812
+pthread-divine.divinefifo-bug_1w1r.smt,1.203484296798706
+pthread-divine.barrier_2t.smt,0.12251114845275879
+pthread-divine.ring_1w1r-1.smt,0.2658193111419678
+pthread-divine.one_time_barrier_twice_3t.smt,0.12445378303527832
+pthread-divine.ring_1w1r-2.smt,0.1785571575164795
+pthread-divine.barrier_3t.smt,0.12672638893127441
+pthread-divine.tls_basic.smt,0.18887710571289062
+pthread-divine.ring_2w1r-1.smt,0.30583953857421875
+pthread-divine.one_time_barrier_twice_2t.smt,0.1228799819946289
+pthread-deagle.floating_read-10.smt,0.1425790786743164
+pthread-deagle.floating_read-15.smt,0.13622736930847168
+pthread-deagle.reorder_c11_bad-20.smt,0.23904204368591309
+pthread-deagle.airline-15.smt,0.1360156536102295
+pthread-deagle.circular_buffer_bad.smt,0.24196934700012207
+pthread-deagle.arithmetic_prog_bad.smt,0.22911334037780762
+pthread-deagle.reorder_c11_good-40.smt,0.2340247631072998
+pthread-deagle.floating_read-20.smt,0.1370105743408203
+pthread-deagle.reorder_c11_bad-10.smt,0.23836469650268555
+pthread-deagle.floating_read-25.smt,0.14121031761169434
+pthread-deagle.airline-10.smt,0.1303272247314453
+pthread-deagle.airline-25.smt,0.13203692436218262
+pthread-deagle.reorder_c11_bad-40.smt,0.23417210578918457
+pthread-deagle.floating_read-5.smt,0.15833377838134766
+pthread-deagle.reorder_c11_good-20.smt,0.23254919052124023
+pthread-deagle.reorder_c11_good-10.smt,0.22884440422058105
+pthread-deagle.reorder_c11_bad-30.smt,0.2305011749267578
+pthread-deagle.reorder_c11_good-30.smt,0.24056506156921387
+pthread-deagle.reorder_c11_good-50.smt,0.23586511611938477
+pthread-deagle.airline-20.smt,0.13251900672912598
+pthread-deagle.arithmetic_prog_ok.smt,0.23108887672424316
+pthread-deagle.circular_buffer_ok.smt,0.24326610565185547
+pthread-deagle.reorder_c11_bad-50.smt,0.23456835746765137
+pthread-deagle.airline-5.smt,0.1350703239440918
+pthread-lit.sssc12_variant.smt,0.1357576847076416
+pthread-lit.fkp2013-2.smt,0.13807964324951172
+pthread-lit.fk2012.smt,2.3761086463928223
+pthread-lit.fkp2013-1.smt,0.1384754180908203
+pthread-lit.qw2004_variant.smt,0.20140790939331055
+pthread-lit.sssc12-2.smt,0.20545005798339844
+pthread-lit.fkp2014.smt,0.19253802299499512
+pthread-lit.sssc12.smt,0.13943862915039062
+pthread-lit.qw2004-2b.smt,0.14053678512573242
+pthread-lit.fkp2013_variant-1.smt,0.13883018493652344
+pthread-lit.fkp2013_variant-2.smt,0.13317275047302246
+pthread-lit.qw2004-2.smt,0.13784241676330566
+pthread-lit.sssc12_variant-2.smt,0.20208048820495605
+pthread-lit.qw2004-1.smt,0.1989445686340332
+ldv-linux-3.14-races.linux-3.14--drivers--net--irda--w83977af_ir.ko.cil.smt,Exception
+ldv-linux-3.14-races.linux-3.14--drivers--usb--misc--adutux.ko.cil.smt,Exception
+ldv-linux-3.14-races.linux-3.14--drivers--spi--spi-tegra20-slink.ko.cil.smt,CBMC Exception
+ldv-linux-3.14-races.linux-3.14--drivers--net--irda--nsc-ircc.ko.cil.smt,Exception
+ldv-linux-3.14-races.linux-3.14--drivers--media--platform--marvell-ccic--cafe_ccic.ko.cil-2.smt,Exception
+ldv-linux-3.14-races.linux-3.14--drivers--media--platform--marvell-ccic--cafe_ccic.ko.cil-1.smt,Exception
+pthread-atomic.dekker-b.smt,0.17160868644714355
+pthread-atomic.lamport-b.smt,0.22242379188537598
+pthread-atomic.read_write_lock-1b.smt,0.2201085090637207
+pthread-atomic.dekker.smt,0.1399548053741455
+pthread-atomic.dekker-b-unfair.smt,0.19913601875305176
+pthread-atomic.read_write_lock-1.smt,0.2230215072631836
+pthread-atomic.szymanski-b.smt,0.15002679824829102
+pthread-atomic.read_write_lock-2.smt,0.19835591316223145
+pthread-atomic.time_var_mutex.smt,0.2033679485321045
+pthread-atomic.dekker-unfair.smt,0.1359570026397705
+pthread-atomic.qrcu-1.smt,0.22327232360839844
+pthread-atomic.gcd-2.smt,0.1925039291381836
+pthread-atomic.scull.smt,0.19906353950500488
+pthread-atomic.szymanski.smt,0.14482712745666504
+pthread-atomic.peterson.smt,0.1513056755065918
+pthread-atomic.peterson-b.smt,0.19099187850952148
+pthread-atomic.qrcu-2.smt,0.2195756435394287
+pthread-atomic.read_write_lock-2b.smt,0.14868950843811035
+pthread-atomic.lamport.smt,0.22708415985107422
+pthread-nondet.nondet-array-2.smt,0.2153487205505371
+pthread-nondet.nondet-array-1.smt,0.22040319442749023
+pthread-nondet.nondet-loop-bound-variant-2.smt,0.13463711738586426
+pthread-nondet.nondet-loop-bound-1.smt,0.20622706413269043
+pthread-nondet.nondet-loop-bound-2.smt,0.13196706771850586
+pthread-nondet.nondet-loop-bound-variant-1.smt,0.14298129081726074
+pthread-race-challenges.per-thread-index-inc.smt,0.12406396865844727
+pthread-race-challenges.thread-join-binomial-race.smt,0.17897486686706543
+pthread-race-challenges.thread-local-value.smt,0.12388300895690918
+pthread-race-challenges.semaphore-posix-race.smt,0.12385416030883789
+pthread-race-challenges.thread-join-counter-inner-race-3.smt,0.6698315143585205
+pthread-race-challenges.per-thread-array-join-counter-race-2.smt,0.12419581413269043
+pthread-race-challenges.per-thread-index-bitmask.smt,0.1235511302947998
+pthread-race-challenges.per-thread-struct-in-array-race.smt,0.12315225601196289
+pthread-race-challenges.thread-local-pthread-value-cond.smt,0.1234433650970459
+pthread-race-challenges.per-thread-struct.smt,0.12540936470031738
+pthread-race-challenges.per-thread-index-bitmask-race-2.smt,0.1236577033996582
+pthread-race-challenges.thread-join-counter-inner-2.smt,0.3083620071411133
+pthread-race-challenges.semaphore-posix.smt,0.12340831756591797
+pthread-race-challenges.per-thread-array-ptr.smt,0.182206392288208
+pthread-race-challenges.per-thread-index-bitmask-race.smt,0.17883658409118652
+pthread-race-challenges.per-thread-array-index-race-2.smt,0.12365412712097168
+pthread-race-challenges.per-thread-array-join-counter-race.smt,0.12327241897583008
+pthread-race-challenges.thread-join-array-const-race.smt,0.13046050071716309
+pthread-race-challenges.thread-join-counter-inner-race-2.smt,0.6746923923492432
+pthread-race-challenges.thread-join-counter-inner-3.smt,0.5030243396759033
+pthread-race-challenges.atomic-gcc.smt,0.12330961227416992
+pthread-race-challenges.per-thread-array-join-counter.smt,0.12334823608398438
+pthread-race-challenges.thread-join-binomial.smt,0.1232151985168457
+pthread-race-challenges.per-thread-index-inc-race.smt,0.1875910758972168
+pthread-race-challenges.thread-join-counter-inner.smt,0.665621280670166
+pthread-race-challenges.thread-join-array-dynamic-race-3.smt,0.12442851066589355
+pthread-race-challenges.thread-join-counter-outer-race.smt,0.1307234764099121
+pthread-race-challenges.thread-join-counter-inner-race-5.smt,0.23473763465881348
+pthread-race-challenges.thread-join-array-dynamic.smt,0.12336230278015137
+pthread-race-challenges.thread-local-value-dynamic.smt,0.12430953979492188
+pthread-race-challenges.per-thread-index-inc-race-2.smt,0.12369108200073242
+pthread-race-challenges.per-thread-index-bitmask-race-3.smt,0.12816143035888672
+pthread-race-challenges.per-thread-struct-race.smt,0.1236114501953125
+pthread-race-challenges.per-thread-array-ptr-race.smt,0.12323188781738281
+pthread-race-challenges.thread-local-value-cond.smt,0.17921805381774902
+pthread-race-challenges.value-barrier-race.smt,0.12386393547058105
+pthread-race-challenges.thread-join-counter-inner-race.smt,0.40672731399536133
+pthread-race-challenges.thread-join-array-const.smt,0.13820528984069824
+pthread-race-challenges.per-thread-struct-in-array.smt,0.12316346168518066
+pthread-race-challenges.thread-join-counter-outer-race-2.smt,0.2187788486480713
+pthread-race-challenges.thread-join-counter-outer.smt,0.2242429256439209
+pthread-race-challenges.thread-join-counter-inner-race-4.smt,0.6097540855407715
+pthread-race-challenges.per-thread-array-join-counter-2.smt,0.12282443046569824
+pthread-race-challenges.per-thread-array-init-race.smt,0.12378048896789551
+pthread-race-challenges.per-thread-array-join-counter-race-4.smt,0.12583374977111816
+pthread-race-challenges.value-barrier.smt,0.12467288970947266
+pthread-race-challenges.thread-join-array-const-race-3.smt,0.12964200973510742
+pthread-race-challenges.thread-join-array-const-race-2.smt,0.12766337394714355
+pthread-race-challenges.thread-join-array-dynamic-race-2.smt,0.12519359588623047
+pthread-race-challenges.per-thread-array-index.smt,0.12403750419616699
+pthread-race-challenges.thread-join-binomial-race-3.smt,0.12317776679992676
+pthread-race-challenges.per-thread-array-index-race.smt,0.12847614288330078
+pthread-race-challenges.thread-join-array-dynamic-race.smt,0.1262507438659668
+pthread-race-challenges.per-thread-struct-tid.smt,0.12348294258117676
+pthread-race-challenges.thread-join-counter-outer-race-4.smt,0.22058320045471191
+pthread-race-challenges.semaphore-posix-race-2.smt,0.1247715950012207
+pthread-race-challenges.per-thread-struct-tid-join.smt,0.17969322204589844
+pthread-race-challenges.thread-join-counter-outer-race-3.smt,0.21921038627624512
+pthread-race-challenges.thread-join-binomial-race-2.smt,0.12333106994628906
+pthread-race-challenges.per-thread-array-init.smt,0.12407255172729492
+pthread-race-challenges.per-thread-array-join-counter-race-3.smt,0.12566351890563965
+pthread-race-challenges.thread-local-pthread-value.smt,0.12378907203674316
+pthread-race-challenges.thread-local-value-race.smt,0.12405776977539062
+ldv-races.race-4_1-thread_local_vars.smt,0.26468873023986816
+ldv-races.race-1_3b-join.smt,0.20057964324951172
+ldv-races.race-2_5b-container_of.smt,0.31128907203674316
+ldv-races.race-3_2-container_of-global.smt,3.7566089630126953
+ldv-races.race-2_4-container_of.smt,0.3264598846435547
+ldv-races.race-3_1-container_of-global.smt,0.24068069458007812
+ldv-races.race-2_2b-container_of.smt,9.526702165603638
+ldv-races.race-1_2b-join.smt,0.22185039520263672
+ldv-races.race-1_1-join.smt,0.20334982872009277
+ldv-races.race-2_3-container_of.smt,0.3353538513183594
+ldv-races.race-2_2-container_of.smt,4.400839805603027
+ldv-races.race-1_3-join.smt,0.19759416580200195
+ldv-races.race-1_2-join.smt,0.19778180122375488
+ldv-races.race-2_4b-container_of.smt,0.33963966369628906
+ldv-races.race-2_1-container_of.smt,0.23537921905517578
+ldv-races.race-4_2-thread_local_vars.smt,0.2693052291870117
+ldv-races.race-2_5-container_of.smt,0.3535795211791992
+ldv-races.race-3_2b-container_of-global.smt,0.8467860221862793
+ldv-races.race-2_3b-container_of.smt,0.2764158248901367
+pthread-C-DAC.pthread-demo-datarace-2.smt,0.12999463081359863
+pthread-C-DAC.pthread-numerical-integration.smt,Exception
+pthread-C-DAC.pthread-demo-datarace-3.smt,0.18865346908569336
+pthread-C-DAC.pthread-demo-datarace-1.smt,0.2033078670501709
+pthread-C-DAC.pthread-finding-k-matches.smt,0.18176674842834473

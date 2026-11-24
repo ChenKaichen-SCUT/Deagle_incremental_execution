@@ -1,0 +1,15 @@
+{
+  "sha256": "8f12fe945f05828ab139c7e1286b5377b263669a443abf46059e7acd6c9c37b0",
+  "parts": [
+    {
+      "file": "objects-001.part",
+      "bytes": 8388608,
+      "sha256": "1aacd2ce4d8b66b840c9e109c75bf15f8cb3c55ad38f4555bcf90bd00de83e8b"
+    },
+    {
+      "file": "objects-002.part",
+      "bytes": 5293936,
+      "sha256": "1ca801d9a4dd091fdb5539820d400726b385b2973ab885ec9f4b7a2749369dd8"
+    }
+  ]
+}

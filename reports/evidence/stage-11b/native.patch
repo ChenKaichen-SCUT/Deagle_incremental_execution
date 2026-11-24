@@ -1,0 +1,248 @@
+--- a/minisat-2.2.1/minisat/core/Closure.cc
++++ b/minisat-2.2.1/minisat/core/Closure.cc
+@@ -21,6 +21,7 @@
+ 
+ #define PROPAGATE_INTENSITY 1 //-1: nothing; 0: only rf; 1: and ws, fr
+ 
++#include "native_root.hpp"
+ using namespace Minisat;
+ 
+ literal_vector empty_lv;
+@@ -641,7 +642,16 @@
+             }
+ #endif // (PROPAGATE_INTENSITY >= 0)
+ 
+-        if(need_closure)
++        int cached = -1;
++        if(need_closure && kind==OC_PO && reason.empty())
++            cached=oc11::session().join(*this,from_rep,to_rep,
++                [this](int a,int b){return has_edge(a,b);},
++                [this](int a,int b){
++                    closure_edget inferred(a,b,OC_NA,empty_lv);
++                    return activate_directed_edge(inferred,false);
++                });
++        if(cached==1)return true;
++        if(need_closure && cached<0)
+         {
+             auto back_edges = nodes[from_rep].in;
+             back_edges.push_back(closure_edget(from_rep, from_rep, OC_NA, empty_lv));
+--- a/minisat-2.2.1/minisat/core/ClosureSolver.cc
++++ b/minisat-2.2.1/minisat/core/ClosureSolver.cc
+@@ -16,6 +16,7 @@
+ 
+ const int OC_VERBOSITY = 0;
+ 
++#include "native_root.hpp"
+ using namespace Minisat;
+ 
+ literal_vector closure_empty_reason;
+@@ -149,6 +150,9 @@
+         graph.init_reasonable_edge(u, v, OC_RF, l);
+     }
+ 
++    auto &stage11 = oc11::session();
++    stage11.prepare(graph,po_table,apo_table,!race_table.empty());
++    stage11.static_po=stage11.enabled;
+     for(auto pair: po_table)
+     {
+         int u = graph.get_node(pair.first.first);
+@@ -164,6 +168,7 @@
+         }
+     }
+ 
++    stage11.static_po=false;
+     // for(auto pair: ws_table)
+     // {
+     //     int u = graph.get_node(pair.first.first);
+@@ -526,7 +531,7 @@
+ 
+         for(auto& edge: edges_to_add)
+         {
+-            cycle = graph.activate_edge(edge.from, edge.to, edge.kind, edge.reason);
++            {if(edge.kind==OC_RF)++oc11::session().rf; cycle = graph.activate_edge(edge.from, edge.to, edge.kind, edge.reason);}
+ 
+             if(decisionLevel() == 0 && edge.kind == OC_RF)
+             {
+@@ -541,7 +546,7 @@
+         {
+             for(auto& n: guards_to_light)
+             {
+-                cycle = graph.light_guard(n);
++                {++oc11::session().guard; cycle = graph.light_guard(n);}
+                 if(cycle)
+                     break;
+             }
+@@ -612,14 +617,14 @@
+         trail_lim.shrink(trail_lim.size() - level);
+ 
+         //Our new operation
+-        graph.pop_scope(level);
++        {++oc11::session().pop; graph.pop_scope(level);}
+     }
+ }
+ 
+ void ClosureSolver::newDecisionLevel()
+ {
+     trail_lim.push(trail.size());
+-    graph.push_scope();
++    {++oc11::session().push; graph.push_scope();}
+ }
+ 
+ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
+@@ -829,6 +834,7 @@
+         if(OC_VERBOSITY >= 1)
+             std::cout << "adding co between nodes " << node1 << " " << node2 << "\n";
+ 
++        ++oc11::session().co;
+         Var var12 = newVar(), var21 = newVar();
+         Lit lit12 = mkLit(var12), lit21 = mkLit(var21);
+         Lit guard_lit1 = graph.nodes[node1].guard;
+--- a/scripts/stage10/driver.cpp
++++ b/scripts/stage10/driver.cpp
+@@ -1,5 +1,6 @@
+ // Long-lived worker for two independently built models. Only native Clause objects can be reused.
+ #include "epoch.hpp"
++#include "native_root.hpp"
+ #include <memory>
+ #include <iomanip>
+ 
+@@ -9,9 +10,10 @@
+ struct Plan {
+   std::string disposition;
+   std::set<int> vars;
++  std::map<int,int> mapping;
+   explicit Plan(const std::string &dir){
+     std::ifstream in(dir+"/plan.txt");require(bool(in>>disposition),"missing admission decision");
+-    int v;while(in>>v){require(v>=0 && vars.insert(v).second,"invalid or duplicated bound variable");}
++    int v,raw;while(in>>v){require(bool(in>>raw) && v>=0 && raw>=0 && vars.insert(raw/2).second && mapping.emplace(v,raw).second,"invalid signed bijection");}
+     require(in.eof(),"malformed plan");
+   }
+ };
+@@ -69,25 +71,30 @@
+       std::string verdict=plan.disposition;
+       if(phase && test=="damage-learning")epoch->corrupt_for_test();
+       if(phase && !epoch->intact())verdict="refuse_damaged_learning";
+-      bool keep=phase && verdict=="keep";
++      bool keep=phase && verdict=="keep" && (test=="S" || test=="GS" || test=="damage-learning");
++      oc11::session().open(dir,phase && verdict!="refuse_damaged_learning" && (test=="G" || test=="GS"));
++      ::write_order.clear();
+       int retired=phase?epoch->old_learnts:0,roots=phase?epoch->old_roots:0,prior_nodes=phase?epoch->old_nodes:0;
+       auto old_address=reinterpret_cast<uintptr_t>(solver.get());
+       if(!keep){
+         std::unique_ptr<ClosureSolver> replacement(new ClosureSolver());
+         epoch.reset();solver=std::move(replacement);epoch.reset(new Stage10Epoch(*solver));++generation;
+-        if(!phase)epoch->register_old(plan.vars);
+-      }else epoch->switch_version(plan.vars,*input);
++        if(!phase && (test=="S" || test=="GS" || test=="damage-learning"))epoch->register_old(plan.vars);
++      }else epoch->switch_version(plan.vars,*input,plan.mapping);
+       auto initialized=s10::now();
+       vec<Lit> goals;
+       auto before_submission=solver->propagations;
+       auto cleared_roots=solver->nAssigns(),cleared_learnts=solver->nLearnts(),cleared_nodes=epoch->nodes();
+       require(!cleared_roots && !cleared_learnts && !cleared_nodes && solver->okay(),"unclean candidate epoch");
+       deliver(*solver,*epoch,*input,goals);
++      auto original_end=s10::now();
++      if(keep)epoch->restore_learning(*input,dir);
+       auto loaded=s10::now();int submitted=solver->nClauses();
+       auto starts=solver->starts,dec=solver->decisions,conf=solver->conflicts,prop=solver->propagations;
+       int cycles=epoch->cycles(),theory=epoch->theory();
+       int rc=toInt(solver->solveLimited(goals));auto solved=s10::now();
+       if(!phase)epoch->seal();
++      oc11::session().report();
+       auto sealed=s10::now();
+       s8::flush();
+       write_answer(dir,*solver,*input,rc);
+@@ -97,6 +104,9 @@
+       metric(f,"parse_ns",parsed-start);metric(f,"init_switch_ns",initialized-parsed);metric(f,"submit_ns",loaded-initialized);
+       metric(f,"search_ns",solved-loaded);metric(f,"retain_ns",sealed-solved);metric(f,"reply_ns",s10::now()-sealed);
+       metric(f,"input_variables",input->variables);metric(f,"input_clauses",input->clauses);metric(f,"active_before_solve",submitted);
++      metric(f,"rup_ns",loaded-original_end);metric(f,"rup_proved",epoch->proved);
++      metric(f,"rup_unmapped",epoch->unmapped);metric(f,"rup_unproved",epoch->refused);
++      metric(f,"rup_unchecked",epoch->unchecked);metric(f,"rup_work",epoch->rup_work);
+       metric(f,"sat_code",rc);metric(f,"peak_rss_kib",s10::rss_kib());metric(f,"arena_bytes",epoch->arena_bytes());
+       std::ifstream smaps("/proc/self/smaps_rollup");
+       for(std::string row;std::getline(smaps,row);){
+--- a/scripts/stage10/epoch.hpp
++++ b/scripts/stage10/epoch.hpp
+@@ -5,6 +5,7 @@
+ #include "util/stage8_meter.h"
+ #include <limits>
+ #include <new>
++#include "rup.hpp"
+ 
+ extern std::vector<std::string> write_order;
+ 
+@@ -15,6 +16,7 @@
+   const double initial_seed,initial_gc;
+   std::set<int> eligible;
+   std::map<CRef,Key> original;
++  std::map<int,int> rebind;
+   std::map<Key,std::vector<CRef>> available;
+   std::vector<int> learnt_seal;
+   static Stage10Epoch *&current(){static Stage10Epoch *value=nullptr;return value;}
+@@ -38,7 +40,8 @@
+     auto it=e.available.find(k);if(it==e.available.end() || it->second.empty())return CRef_Undef;
+     CRef cr=it->second.back();it->second.pop_back();
+     auto &physical=e.s.ca[cr];
+-    session10::require(!physical.mark() && !physical.learnt() && session10::key(physical)==k,"retained Clause differs before actual attach");
++    session10::require(!physical.mark() && !physical.learnt() && session10::key(physical)==e.original.at(cr) && physical.size()==ps.size(),"retained Clause differs before actual attach");
++    for(int i=0;i<ps.size();++i)physical[i]=ps[i];
+     e.used.emplace_back(cr,k);
+     return cr;
+   }
+@@ -87,11 +90,33 @@
+     if(!s.nLearnts())throw std::runtime_error("test needs non-empty native CDCL database");
+     auto &c=s.ca[s.learnts[0]];c[0]=~c[0];
+   }
++  size_t proved=0,unmapped=0,refused=0,unchecked=0,rup_work=0;
++  void restore_learning(const session10::Input &next,const std::string &dir){
++    std::vector<Key> formula;
++    for(const auto &op:next.ops)if(op.tag==session10::ClauseOp)formula.push_back(op.payload);
++    std::ofstream cert(dir+"/worker/rup.tsv");
++    for(size_t i=0;i<learnt_seal.size();){
++      int cr=learnt_seal.at(i++),n=learnt_seal.at(i++);Key key;
++      for(int j=0;j<n;++j){
++        int lit=learnt_seal.at(i++);auto target=rebind.find(lit/2);
++        if(target!=rebind.end())key.push_back(target->second^(lit&1));
++      }
++      if(int(key.size())!=n){++unmapped;continue;}
++      if(key.size()>12 || proved+refused>=32 || rup_work>=300000){++unchecked;continue;}
++      std::vector<size_t> proof;
++      if(!oc11::rup(next.variables,formula,key,proof,rup_work,300000)){++refused;continue;}
++      vec<Lit> clause;for(int x:key)clause.push(session10::literal(x));
++      s.addClause_(clause);++proved;cert<<cr;
++      for(int x:key)cert<<" "<<x;
++      cert<<" |";for(auto p:proof)cert<<" "<<p;cert<<"\n";
++    }
++  }
+   int cycles() const{return s.conflict_cycle;}
+   int theory() const{return s.theory_propagation;}
+   int nodes() const{return s.graph.nodes.size();}
+   size_t arena_bytes() const{return size_t(s.ca.size())*sizeof(uint32_t);}
+-  void switch_version(const std::set<int> &confirmed,const session10::Input &next){
++  void switch_version(const std::set<int> &confirmed,const session10::Input &next,const std::map<int,int> &mapping){
++    rebind=mapping;
+     session10::require(intact(),"damaged learnt seal");
+     eligible=confirmed;
+     std::set<Key> candidates;
+@@ -100,10 +125,18 @@
+     }
+     for(int i=0;i<s.clauses.size();++i){
+       CRef cr=s.clauses[i];auto it=original.find(cr);
+-      if(it==original.end() || !candidates.count(it->second))continue;
++      if(it==original.end())continue;
++      Key remapped;
++      for(int lit:it->second){
++        auto target=rebind.find(lit/2);
++        if(target==rebind.end()){remapped.clear();break;}
++        remapped.push_back(target->second^(lit&1));
++      }
++      std::sort(remapped.begin(),remapped.end());
++      if(remapped.empty() || !candidates.count(remapped))continue;
+       const Clause &c=s.ca[cr];
+       session10::require(!c.learnt() && !c.mark() && session10::key(c)==it->second,"original allocator provenance changed");
+-      available[it->second].push_back(cr);++surviving;
++      available[remapped].push_back(cr);++surviving;
+     }
+     // No active references survive this boundary. Only admitted, unattached CRefs still have owners.
+     s.watches.clear();s.clauses.clear();s.learnts.clear();s.trail.clear();s.trail_lim.clear();s.qhead=0;

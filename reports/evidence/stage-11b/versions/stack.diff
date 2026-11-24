@@ -1,0 +1,10 @@
+--- stack-old.i
++++ stack-new.i
+@@ -1010,6 +1010,7 @@
+     {
+       if (!(pop(arr)!=(-2)))
+         error();
++      flag = !stack_empty();
+     }
+     pthread_mutex_unlock(&m);
+   }

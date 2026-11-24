@@ -1,0 +1,575 @@
+{
+  "audit_worker_sha256": "598058d07dc0794b006f9e622f25698f0315129794b246484eecd5e70b4770e3",
+  "cases": {
+    "batch_retained": {
+      "consumed": 196,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "replayed": [
+        {
+          "audit_answer": "06eeb1d12c819cfbacf7aad9d894911a4b491fa7638b9f394e44bdc3275eec1b",
+          "complete_answer_matches": [
+            "1/GS/old",
+            "2/GS/old",
+            "3/GS/old",
+            "4/GS/old",
+            "5/GS/old"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "e930b56593a2101d30620e33502c5bbb1a829676064ea2e51518a5fd949c70da",
+            "plan.txt": "d480ab478faf5308cd0ac63627fb8add11e1ed8f8b79dc7438c4caddaf9cbc15",
+            "s8-graph.tsv": "514ffa7111975ee8fca072b628bb4d9b4f397d24fd887c0dd9bb375932facc5d",
+            "s8-input.bin": "9496d561e7e94856dba8240383c3270f2a74936d3d65a44b16fc2c6f44a92181",
+            "worker/closure.tsv": "4d399068043c7c042732b09c0f653adc6dba3df44472b92ba6abfd67303e7b60",
+            "worker/search.bin": "e3f4d2b99d0cb6c2a2aca9108a8e5444eb55dbcdd2018e1081f499440bf02aa7"
+          },
+          "measured_GS_variants": {
+            "06eeb1d12c819cfbacf7aad9d894911a4b491fa7638b9f394e44bdc3275eec1b": [
+              "1/GS/old",
+              "2/GS/old",
+              "3/GS/old",
+              "4/GS/old",
+              "5/GS/old"
+            ]
+          },
+          "round1_answer": "06eeb1d12c819cfbacf7aad9d894911a4b491fa7638b9f394e44bdc3275eec1b",
+          "strict_witness": {
+            "events": 23,
+            "status": "EXPLICIT_SC_ORDER"
+          },
+          "within_rank_changes": []
+        },
+        {
+          "audit_answer": "e157ae68f6266d83ecaffbebf035053f417f1df7b8113cef6e47bd222bebde2c",
+          "complete_answer_matches": [
+            "1/GS/new",
+            "2/GS/new",
+            "3/GS/new",
+            "4/GS/new",
+            "5/GS/new"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "e930b56593a2101d30620e33502c5bbb1a829676064ea2e51518a5fd949c70da",
+            "plan.txt": "5c82ce8267f9eaa85be1b3e2506a3858fa4e74d04e7717ba6410adfbb6b74c54",
+            "s8-graph.tsv": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+            "s8-input.bin": "ca0ad79713d470c164bcfcc4e459e5dc8f6f1de455212963f928a10f5bd29871",
+            "worker/closure.tsv": "fd359c9b141fd6ebc97c624b81c1fc46edfcedb088483bed882cd1bcd6e9125f",
+            "worker/search.bin": "a043c94198c6c6b9e0297f648a7eaeb4bdb0f6f294b65f396875703a49ee41ff"
+          },
+          "measured_GS_variants": {
+            "e157ae68f6266d83ecaffbebf035053f417f1df7b8113cef6e47bd222bebde2c": [
+              "1/GS/new",
+              "2/GS/new",
+              "3/GS/new",
+              "4/GS/new",
+              "5/GS/new"
+            ]
+          },
+          "round1_answer": "e157ae68f6266d83ecaffbebf035053f417f1df7b8113cef6e47bd222bebde2c",
+          "strict_witness": {
+            "events": 23,
+            "status": "EXPLICIT_SC_ORDER"
+          },
+          "within_rank_changes": []
+        }
+      ]
+    },
+    "fib_updates_8": {
+      "consumed": 722,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "replayed": [
+        {
+          "audit_answer": "54a69122ec69fc577c951a9668f33fdd21b819a45f564ed2b0ee1b6b5de22a9a",
+          "complete_answer_matches": [
+            "2/GS/old",
+            "4/GS/old"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "cd7e45ccb3d703ae32c2fa1fafe1786860b7bb1b11da72997d630925a83fa3ac",
+            "plan.txt": "9b8f94f146aecdeb28dd3849e6515e775e22caa95db93e815cfdfcc424f47daa",
+            "s8-graph.tsv": "266ad7f1eaf6493025f20278cda3d2c631a9a7ab8fdaaf89c575061994d5176a",
+            "s8-input.bin": "9b779d904a03d10ac2ca7617de28b18648bfc7033e94358f2bf7a6e151cbea90",
+            "worker/closure.tsv": "319bddb297b72f80ef07243fa3f0187987f19b1b9b6032db4356f2072e277cc8",
+            "worker/search.bin": "99589fb6cba9c7d71450a0bca13a0d4f1c31aa925fae9fa4c2dbf8d1878c815a"
+          },
+          "measured_GS_variants": {
+            "32ebba496afc9dae3bda24016205c6cff12c6abd7c4201a6c94ffb00c23042e5": [
+              "1/GS/old",
+              "3/GS/old",
+              "5/GS/old"
+            ],
+            "54a69122ec69fc577c951a9668f33fdd21b819a45f564ed2b0ee1b6b5de22a9a": [
+              "2/GS/old",
+              "4/GS/old"
+            ]
+          },
+          "round1_answer": "32ebba496afc9dae3bda24016205c6cff12c6abd7c4201a6c94ffb00c23042e5",
+          "strict_witness": {
+            "events": 81,
+            "status": "EXPLICIT_SC_ORDER"
+          },
+          "within_rank_changes": [
+            {
+              "audit": "left#3",
+              "index": 23,
+              "rank": 22,
+              "round1": "left#5"
+            },
+            {
+              "audit": "left#5",
+              "index": 24,
+              "rank": 22,
+              "round1": "right#3"
+            },
+            {
+              "audit": "right#3",
+              "index": 25,
+              "rank": 22,
+              "round1": "left#3"
+            },
+            {
+              "audit": "left#6",
+              "index": 32,
+              "rank": 25,
+              "round1": "left#8"
+            },
+            {
+              "audit": "left#8",
+              "index": 33,
+              "rank": 25,
+              "round1": "right#5"
+            },
+            {
+              "audit": "right#5",
+              "index": 34,
+              "rank": 25,
+              "round1": "left#6"
+            },
+            {
+              "audit": "left#9",
+              "index": 38,
+              "rank": 27,
+              "round1": "left#11"
+            },
+            {
+              "audit": "left#11",
+              "index": 39,
+              "rank": 27,
+              "round1": "right#7"
+            },
+            {
+              "audit": "right#7",
+              "index": 40,
+              "rank": 27,
+              "round1": "left#9"
+            }
+          ]
+        },
+        {
+          "audit_answer": "d60a256d1b548953744913852982049db0a61bea83ece599d2bbc7b806bbfcf8",
+          "complete_answer_matches": [
+            "1/GS/new",
+            "2/GS/new",
+            "3/GS/new",
+            "4/GS/new",
+            "5/GS/new"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "cd7e45ccb3d703ae32c2fa1fafe1786860b7bb1b11da72997d630925a83fa3ac",
+            "plan.txt": "1952edcdfdede082a27ea112f813dfbd62c213d83f77f1f841bf493c06bf217c",
+            "s8-graph.tsv": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+            "s8-input.bin": "69a9a497c56d8d20c32824248429ca3254ce75b523866182538ec987e3bbec1f",
+            "worker/closure.tsv": "df7181ed036702674262ee7529978e442ea9f57396e3effeec36e521a3845d68",
+            "worker/search.bin": "59543bcad007a287f4173706f09a9d71c88f44a7fcd61dcc19d90fadfb0a5ae7"
+          },
+          "measured_GS_variants": {
+            "d60a256d1b548953744913852982049db0a61bea83ece599d2bbc7b806bbfcf8": [
+              "1/GS/new",
+              "2/GS/new",
+              "3/GS/new",
+              "4/GS/new",
+              "5/GS/new"
+            ]
+          },
+          "round1_answer": "d60a256d1b548953744913852982049db0a61bea83ece599d2bbc7b806bbfcf8",
+          "strict_witness": null,
+          "within_rank_changes": []
+        }
+      ]
+    },
+    "lock01": {
+      "consumed": 0,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "replayed": [
+        {
+          "audit_answer": "b3739669cd18dc1b7951cb2e34a48eda6b1941ae57f0e6a541d3c4500353a3ce",
+          "complete_answer_matches": [
+            "2/GS/old",
+            "3/GS/old",
+            "4/GS/old",
+            "5/GS/old"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "bb2af9acf9329220c82c0d10fdc2e76d533dbd42066faec2781aad141c48911e",
+            "plan.txt": "e08d156640bdf3442d5705ea5ecd52f361f1074f1fa190995398986ae73266a1",
+            "s8-graph.tsv": "adce2016b3de47b6c94988a2e3270bae5c244ca59dc60a104a9ed7bd3afaeb6e",
+            "s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+            "worker/closure.tsv": "ac2bd142371829e40e3da6c0c747122c528bfd74ece8eb1ad4f13ce8d86d528b",
+            "worker/search.bin": "c8a6cb2827f3b404f2b49b6f38ee7d4857a248841953811d0797e306610e5038"
+          },
+          "measured_GS_variants": {
+            "9ac9244d57a7033c480c3c4da912a301a59639a6be62a6f82ca0518547aa4796": [
+              "1/GS/old"
+            ],
+            "b3739669cd18dc1b7951cb2e34a48eda6b1941ae57f0e6a541d3c4500353a3ce": [
+              "2/GS/old",
+              "3/GS/old",
+              "4/GS/old",
+              "5/GS/old"
+            ]
+          },
+          "round1_answer": "9ac9244d57a7033c480c3c4da912a301a59639a6be62a6f82ca0518547aa4796",
+          "strict_witness": {
+            "events": 67,
+            "status": "EXPLICIT_SC_ORDER"
+          },
+          "within_rank_changes": [
+            {
+              "audit": "r#6",
+              "index": 45,
+              "rank": 42,
+              "round1": "w#6"
+            },
+            {
+              "audit": "w#6",
+              "index": 46,
+              "rank": 42,
+              "round1": "r#4"
+            },
+            {
+              "audit": "r#4",
+              "index": 47,
+              "rank": 42,
+              "round1": "r#6"
+            },
+            {
+              "audit": "r#14",
+              "index": 53,
+              "rank": 48,
+              "round1": "w#12"
+            },
+            {
+              "audit": "w#12",
+              "index": 54,
+              "rank": 48,
+              "round1": "r#12"
+            },
+            {
+              "audit": "r#12",
+              "index": 55,
+              "rank": 48,
+              "round1": "r#14"
+            },
+            {
+              "audit": "w#4",
+              "index": 56,
+              "rank": 49,
+              "round1": "w#2"
+            },
+            {
+              "audit": "w#2",
+              "index": 57,
+              "rank": 49,
+              "round1": "r#2"
+            },
+            {
+              "audit": "r#2",
+              "index": 58,
+              "rank": 49,
+              "round1": "w#4"
+            },
+            {
+              "audit": "w#10",
+              "index": 60,
+              "rank": 51,
+              "round1": "w#8"
+            },
+            {
+              "audit": "w#8",
+              "index": 61,
+              "rank": 51,
+              "round1": "r#10"
+            },
+            {
+              "audit": "r#10",
+              "index": 62,
+              "rank": 51,
+              "round1": "w#10"
+            }
+          ]
+        },
+        {
+          "audit_answer": "d363b8ef102bc53441b27ed0fb7fe5b533dd11ebb1afb0eab5e58f129655892a",
+          "complete_answer_matches": [
+            "2/GS/new",
+            "3/GS/new",
+            "4/GS/new",
+            "5/GS/new"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "863ad4d3dc6f64dc7a77a3938b0d18b081a13272106b30338bc96624fa578ded",
+            "plan.txt": "5cf0537e31ebc2684001c9e7f1efffa42abc187a06ebcaf0ed568b3aa34636a8",
+            "s8-graph.tsv": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+            "s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+            "worker/closure.tsv": "0d548a98c8d2b18327170cd03b0b049bc6168e592c2af12c0d355f03e75abad0",
+            "worker/search.bin": "c8a6cb2827f3b404f2b49b6f38ee7d4857a248841953811d0797e306610e5038"
+          },
+          "measured_GS_variants": {
+            "8631a07155b534be2a54e324c6b01923caa5383c1131cc55917d05ca3c024bf1": [
+              "1/GS/new"
+            ],
+            "d363b8ef102bc53441b27ed0fb7fe5b533dd11ebb1afb0eab5e58f129655892a": [
+              "2/GS/new",
+              "3/GS/new",
+              "4/GS/new",
+              "5/GS/new"
+            ]
+          },
+          "round1_answer": "8631a07155b534be2a54e324c6b01923caa5383c1131cc55917d05ca3c024bf1",
+          "strict_witness": {
+            "events": 67,
+            "status": "EXPLICIT_SC_ORDER"
+          },
+          "within_rank_changes": [
+            {
+              "audit": "r#6",
+              "index": 45,
+              "rank": 42,
+              "round1": "w#6"
+            },
+            {
+              "audit": "w#6",
+              "index": 46,
+              "rank": 42,
+              "round1": "r#4"
+            },
+            {
+              "audit": "r#4",
+              "index": 47,
+              "rank": 42,
+              "round1": "r#6"
+            },
+            {
+              "audit": "r#13",
+              "index": 53,
+              "rank": 48,
+              "round1": "w#12"
+            },
+            {
+              "audit": "w#12",
+              "index": 54,
+              "rank": 48,
+              "round1": "r#11"
+            },
+            {
+              "audit": "r#11",
+              "index": 55,
+              "rank": 48,
+              "round1": "r#13"
+            },
+            {
+              "audit": "w#4",
+              "index": 56,
+              "rank": 49,
+              "round1": "w#2"
+            },
+            {
+              "audit": "w#2",
+              "index": 57,
+              "rank": 49,
+              "round1": "r#2"
+            },
+            {
+              "audit": "r#2",
+              "index": 58,
+              "rank": 49,
+              "round1": "w#4"
+            },
+            {
+              "audit": "w#10",
+              "index": 60,
+              "rank": 51,
+              "round1": "w#8"
+            },
+            {
+              "audit": "w#8",
+              "index": 61,
+              "rank": 51,
+              "round1": "r#9"
+            },
+            {
+              "audit": "r#9",
+              "index": 62,
+              "rank": 51,
+              "round1": "w#10"
+            }
+          ]
+        }
+      ]
+    },
+    "lock12": {
+      "consumed": 972,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "replayed": [
+        {
+          "audit_answer": "d363b8ef102bc53441b27ed0fb7fe5b533dd11ebb1afb0eab5e58f129655892a",
+          "complete_answer_matches": [
+            "1/GS/old",
+            "3/GS/old"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "137c167bdcc0fb830ca3d294d4ad9ff4f61d1c33b403ad547634270c64d345e9",
+            "plan.txt": "6b3fab2e2c4464462149fa0dccb66e4edbffb307ff05b6126be972dbf23a5de5",
+            "s8-graph.tsv": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+            "s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+            "worker/closure.tsv": "7cf3bec3bdf585063a7e64d0af425329895e847f2d5faafad36d7d268f0d17f9",
+            "worker/search.bin": "c8a6cb2827f3b404f2b49b6f38ee7d4857a248841953811d0797e306610e5038"
+          },
+          "measured_GS_variants": {
+            "8631a07155b534be2a54e324c6b01923caa5383c1131cc55917d05ca3c024bf1": [
+              "2/GS/old",
+              "4/GS/old",
+              "5/GS/old"
+            ],
+            "d363b8ef102bc53441b27ed0fb7fe5b533dd11ebb1afb0eab5e58f129655892a": [
+              "1/GS/old",
+              "3/GS/old"
+            ]
+          },
+          "round1_answer": "d363b8ef102bc53441b27ed0fb7fe5b533dd11ebb1afb0eab5e58f129655892a",
+          "strict_witness": {
+            "events": 67,
+            "status": "EXPLICIT_SC_ORDER"
+          },
+          "within_rank_changes": []
+        },
+        {
+          "audit_answer": "0eef7686168090e7cf279086b89b982e0fab97d96f18b5a9700dff9217b2b8cd",
+          "complete_answer_matches": [
+            "1/GS/new",
+            "2/GS/new",
+            "3/GS/new",
+            "4/GS/new",
+            "5/GS/new"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "de895a9c0c8963a259ff933d72ee46b6f152087c18d1e317dd19429ff0494702",
+            "plan.txt": "6861972b04f92ff75e6832770577972ab25e2f07a714e4642aa7bc1fa4b66f8c",
+            "s8-graph.tsv": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+            "s8-input.bin": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+            "worker/closure.tsv": "16a2438ea600791604348b5d4a60cdfb8bdda31e0ac8e2988cc096e95e0ad588",
+            "worker/search.bin": "2e61c895f59906f7d66a53af8138eae3feefaf8abc7dda78fec874718152a20b"
+          },
+          "measured_GS_variants": {
+            "0eef7686168090e7cf279086b89b982e0fab97d96f18b5a9700dff9217b2b8cd": [
+              "1/GS/new",
+              "2/GS/new",
+              "3/GS/new",
+              "4/GS/new",
+              "5/GS/new"
+            ]
+          },
+          "round1_answer": "0eef7686168090e7cf279086b89b982e0fab97d96f18b5a9700dff9217b2b8cd",
+          "strict_witness": null,
+          "within_rank_changes": []
+        }
+      ]
+    },
+    "ticket56-reviewed": {
+      "consumed": 75,
+      "protocol": "STAGE10_DONE 0\nSTAGE10_DONE 1\n",
+      "replayed": [
+        {
+          "audit_answer": "9c786cd57e60246d9e6277514c79d7e3c63a185f598b50ca72b1575a44d2113b",
+          "complete_answer_matches": [
+            "1/GS/old",
+            "2/GS/old",
+            "3/GS/old",
+            "4/GS/old",
+            "5/GS/old"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "7f14bd04eb0b4d2b2542c533f7edd0a06b1f76c3acc05a44e67ddf7ced825e9e",
+            "plan.txt": "7daaf0d680ab34669877b0dda4ebf3c98a661d30bcb24e51ce4c225b2deb04c6",
+            "s8-graph.tsv": "7969837eedc6aaa0add99b568e706b9396b5cfdbf1523aa001f80a0b97ddbce0",
+            "s8-input.bin": "7b726c4c2b7be6179d46ff4e797138738b2f88dd06c135ed55a4d2a2f02b0247",
+            "worker/closure.tsv": "5740f51d7cb8c24c82bcb6a68800971dd8f23a4337d7645472a1f7075b81e444",
+            "worker/search.bin": "48df30562e33af53ba899a10c3386a118804e6f3ca66ee35ad2a89d7a3cd8fea"
+          },
+          "measured_GS_variants": {
+            "9c786cd57e60246d9e6277514c79d7e3c63a185f598b50ca72b1575a44d2113b": [
+              "1/GS/old",
+              "2/GS/old",
+              "3/GS/old",
+              "4/GS/old",
+              "5/GS/old"
+            ]
+          },
+          "round1_answer": "9c786cd57e60246d9e6277514c79d7e3c63a185f598b50ca72b1575a44d2113b",
+          "strict_witness": null,
+          "within_rank_changes": []
+        },
+        {
+          "audit_answer": "92e1091828aeb45cf272cf10f443e0d59eed165def9f51a97d9273b181bc02b7",
+          "complete_answer_matches": [
+            "1/GS/new",
+            "2/GS/new",
+            "3/GS/new",
+            "4/GS/new",
+            "5/GS/new"
+          ],
+          "equal_boolean_assignment": true,
+          "equal_rank_map": true,
+          "hashes": {
+            "events.tsv": "a56a50d35c59320b0c12d3b27adb5e717fc2e5d00a39ee43c45c216f41163b0b",
+            "plan.txt": "5cf0537e31ebc2684001c9e7f1efffa42abc187a06ebcaf0ed568b3aa34636a8",
+            "s8-graph.tsv": "b9e6676091924b8636b52f727e8e50e0cd1c4250de6155d7195f7ed3f37abbdb",
+            "s8-input.bin": "02221d15e346318a26ffe8c3efc54fd0d057da40120ef0eac81adcaca5959934",
+            "worker/closure.tsv": "2abb52dbf63a1a1e8df16b1274c9afe435db31d95134306edcdba362c6c14bd9",
+            "worker/search.bin": "8a5796fc23bc563d01e370a2c2396b25e1314a1b7e0e793f2a95627d4db3610f"
+          },
+          "measured_GS_variants": {
+            "92e1091828aeb45cf272cf10f443e0d59eed165def9f51a97d9273b181bc02b7": [
+              "1/GS/new",
+              "2/GS/new",
+              "3/GS/new",
+              "4/GS/new",
+              "5/GS/new"
+            ]
+          },
+          "round1_answer": "92e1091828aeb45cf272cf10f443e0d59eed165def9f51a97d9273b181bc02b7",
+          "strict_witness": null,
+          "within_rank_changes": []
+        }
+      ]
+    }
+  },
+  "proof_bytes_sha256": "979b7de1a540eb38d626be9c2d42c226089e8495d26938a46e29c78ecb51883a"
+}

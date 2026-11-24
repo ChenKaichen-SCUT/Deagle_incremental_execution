@@ -1,0 +1,1260 @@
+{
+  "3e2f466b16db44ce2fec1aabf9e70b4ab734ef2801c32e66d10c5bcbcceb5301-9ac9244d57a7033c480c3c4da912a301a59639a6be62a6f82ca0518547aa4796": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "r#1",
+      "w#1",
+      "x#1",
+      "y#1",
+      "main::1::t1!0@1#1",
+      "main::1::t2!0@1#1",
+      "main::1::t3!0@1#1",
+      "main::1::t4!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::t1!0@1#2",
+      "t1$20$spwnclk",
+      "__CPROVER_next_thread_id#3",
+      "__CPROVER_next_thread_id#5",
+      "main::1::t2!0@1#2",
+      "t1$24$spwnclk",
+      "__CPROVER_next_thread_id#6",
+      "__CPROVER_next_thread_id#8",
+      "main::1::t3!0@1#2",
+      "t1$28$spwnclk",
+      "__CPROVER_next_thread_id#9",
+      "__CPROVER_next_thread_id#11",
+      "main::1::t4!0@1#2",
+      "t1$32$spwnclk",
+      "main::1::t1!0@1#4",
+      "__CPROVER_next_thread_id#12",
+      "__CPROVER_threads_exited#2",
+      "r#4",
+      "w#6",
+      "r#6",
+      "x#3",
+      "y#2",
+      "y#3",
+      "x#5",
+      "r#7",
+      "r#12",
+      "w#12",
+      "r#14",
+      "r#2",
+      "w#2",
+      "r#9",
+      "r#10",
+      "w#8",
+      "w#10",
+      "x#8",
+      "x#7",
+      "w#11",
+      "y#5",
+      "y#6",
+      "x#10",
+      "r#15",
+      "r#17",
+      "__CPROVER_threads_exited#12",
+      "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#10",
+      "__CPROVER_threads_exited#11",
+      "__CPROVER_threads_exited#8",
+      "__CPROVER_threads_exited#9"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#12": "__CPROVER_next_thread_id#11",
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_next_thread_id#6": "__CPROVER_next_thread_id#5",
+      "__CPROVER_next_thread_id#9": "__CPROVER_next_thread_id#8",
+      "__CPROVER_threads_exited#10": "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#12": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#8": "__CPROVER_threads_exited#11",
+      "main::1::t1!0@1#4": "main::1::t1!0@1#2",
+      "r#10": "r#9",
+      "r#12": "r#6",
+      "r#15": "r#9",
+      "r#2": "r#14",
+      "r#4": "r#1",
+      "r#7": "r#6",
+      "w#12": "w#1",
+      "w#2": "w#1",
+      "w#6": "w#1",
+      "w#8": "w#1",
+      "x#10": "x#7",
+      "x#3": "x#1",
+      "x#5": "x#1",
+      "x#8": "x#1",
+      "y#3": "y#2",
+      "y#6": "y#5"
+    },
+    "states": 67,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2",
+        "__CPROVER_next_thread_id#5",
+        "__CPROVER_next_thread_id#8",
+        "__CPROVER_next_thread_id#11"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#13",
+        "__CPROVER_threads_exited#11",
+        "__CPROVER_threads_exited#9"
+      ],
+      "main::1::t1!0@1": [
+        "main::1::t1!0@1#1",
+        "main::1::t1!0@1#2"
+      ],
+      "main::1::t2!0@1": [
+        "main::1::t2!0@1#1",
+        "main::1::t2!0@1#2"
+      ],
+      "main::1::t3!0@1": [
+        "main::1::t3!0@1#1",
+        "main::1::t3!0@1#2"
+      ],
+      "main::1::t4!0@1": [
+        "main::1::t4!0@1#1",
+        "main::1::t4!0@1#2"
+      ],
+      "r": [
+        "r#1",
+        "r#6",
+        "r#14",
+        "r#9",
+        "r#17"
+      ],
+      "w": [
+        "w#1",
+        "w#10",
+        "w#11"
+      ],
+      "x": [
+        "x#1",
+        "x#7"
+      ],
+      "y": [
+        "y#1",
+        "y#2",
+        "y#5"
+      ]
+    }
+  },
+  "3e2f466b16db44ce2fec1aabf9e70b4ab734ef2801c32e66d10c5bcbcceb5301-b3739669cd18dc1b7951cb2e34a48eda6b1941ae57f0e6a541d3c4500353a3ce": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "r#1",
+      "w#1",
+      "x#1",
+      "y#1",
+      "main::1::t1!0@1#1",
+      "main::1::t2!0@1#1",
+      "main::1::t3!0@1#1",
+      "main::1::t4!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::t1!0@1#2",
+      "t1$20$spwnclk",
+      "__CPROVER_next_thread_id#3",
+      "__CPROVER_next_thread_id#5",
+      "main::1::t2!0@1#2",
+      "t1$24$spwnclk",
+      "__CPROVER_next_thread_id#6",
+      "__CPROVER_next_thread_id#8",
+      "main::1::t3!0@1#2",
+      "t1$28$spwnclk",
+      "__CPROVER_next_thread_id#9",
+      "__CPROVER_next_thread_id#11",
+      "main::1::t4!0@1#2",
+      "t1$32$spwnclk",
+      "main::1::t1!0@1#4",
+      "__CPROVER_next_thread_id#12",
+      "__CPROVER_threads_exited#2",
+      "r#4",
+      "w#6",
+      "r#6",
+      "x#3",
+      "y#2",
+      "y#3",
+      "x#5",
+      "r#7",
+      "r#12",
+      "w#12",
+      "r#14",
+      "r#2",
+      "w#2",
+      "r#9",
+      "r#10",
+      "w#8",
+      "w#10",
+      "x#8",
+      "x#7",
+      "w#11",
+      "y#5",
+      "y#6",
+      "x#10",
+      "r#15",
+      "r#17",
+      "__CPROVER_threads_exited#12",
+      "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#10",
+      "__CPROVER_threads_exited#11",
+      "__CPROVER_threads_exited#8",
+      "__CPROVER_threads_exited#9"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#12": "__CPROVER_next_thread_id#11",
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_next_thread_id#6": "__CPROVER_next_thread_id#5",
+      "__CPROVER_next_thread_id#9": "__CPROVER_next_thread_id#8",
+      "__CPROVER_threads_exited#10": "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#12": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#8": "__CPROVER_threads_exited#11",
+      "main::1::t1!0@1#4": "main::1::t1!0@1#2",
+      "r#10": "r#9",
+      "r#12": "r#6",
+      "r#15": "r#9",
+      "r#2": "r#14",
+      "r#4": "r#1",
+      "r#7": "r#6",
+      "w#12": "w#1",
+      "w#2": "w#1",
+      "w#6": "w#1",
+      "w#8": "w#1",
+      "x#10": "x#7",
+      "x#3": "x#1",
+      "x#5": "x#1",
+      "x#8": "x#1",
+      "y#3": "y#2",
+      "y#6": "y#5"
+    },
+    "states": 67,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2",
+        "__CPROVER_next_thread_id#5",
+        "__CPROVER_next_thread_id#8",
+        "__CPROVER_next_thread_id#11"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#13",
+        "__CPROVER_threads_exited#11",
+        "__CPROVER_threads_exited#9"
+      ],
+      "main::1::t1!0@1": [
+        "main::1::t1!0@1#1",
+        "main::1::t1!0@1#2"
+      ],
+      "main::1::t2!0@1": [
+        "main::1::t2!0@1#1",
+        "main::1::t2!0@1#2"
+      ],
+      "main::1::t3!0@1": [
+        "main::1::t3!0@1#1",
+        "main::1::t3!0@1#2"
+      ],
+      "main::1::t4!0@1": [
+        "main::1::t4!0@1#1",
+        "main::1::t4!0@1#2"
+      ],
+      "r": [
+        "r#1",
+        "r#6",
+        "r#14",
+        "r#9",
+        "r#17"
+      ],
+      "w": [
+        "w#1",
+        "w#10",
+        "w#11"
+      ],
+      "x": [
+        "x#1",
+        "x#7"
+      ],
+      "y": [
+        "y#1",
+        "y#2",
+        "y#5"
+      ]
+    }
+  },
+  "4e5fc97b2bbda41156c087f77e50845a1a629795bd5e6ad9ef683831c3568d32-06eeb1d12c819cfbacf7aad9d894911a4b491fa7638b9f394e44bdc3275eec1b": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "shipped_units#1",
+      "main::1::worker!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::worker!0@1#2",
+      "t1$14$spwnclk",
+      "main::1::worker!0@1#4",
+      "__CPROVER_next_thread_id#3",
+      "shipped_units#3",
+      "shipped_units#4",
+      "__CPROVER_threads_exited#3",
+      "__CPROVER_threads_exited#4",
+      "__CPROVER_threads_exited#2",
+      "shipped_units#2"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#4",
+      "__CPROVER_threads_exited#3": "__CPROVER_threads_exited#1",
+      "main::1::worker!0@1#4": "main::1::worker!0@1#2",
+      "shipped_units#2": "shipped_units#4",
+      "shipped_units#3": "shipped_units#1"
+    },
+    "states": 23,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#4"
+      ],
+      "main::1::worker!0@1": [
+        "main::1::worker!0@1#1",
+        "main::1::worker!0@1#2"
+      ],
+      "shipped_units": [
+        "shipped_units#1",
+        "shipped_units#4"
+      ]
+    }
+  },
+  "785ec41b81e5cb0a63a87423571b5f5586261c30a2ca1792040e32e956d6da1a-e157ae68f6266d83ecaffbebf035053f417f1df7b8113cef6e47bd222bebde2c": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "shipped_units#1",
+      "main::1::worker!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::worker!0@1#2",
+      "t1$14$spwnclk",
+      "main::1::worker!0@1#4",
+      "__CPROVER_next_thread_id#3",
+      "shipped_units#3",
+      "shipped_units#4",
+      "__CPROVER_threads_exited#3",
+      "__CPROVER_threads_exited#4",
+      "__CPROVER_threads_exited#2",
+      "shipped_units#2"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#4",
+      "__CPROVER_threads_exited#3": "__CPROVER_threads_exited#1",
+      "main::1::worker!0@1#4": "main::1::worker!0@1#2",
+      "shipped_units#2": "shipped_units#4",
+      "shipped_units#3": "shipped_units#1"
+    },
+    "states": 23,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#4"
+      ],
+      "main::1::worker!0@1": [
+        "main::1::worker!0@1#1",
+        "main::1::worker!0@1#2"
+      ],
+      "shipped_units": [
+        "shipped_units#1",
+        "shipped_units#4"
+      ]
+    }
+  },
+  "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f-32ebba496afc9dae3bda24016205c6cff12c6abd7c4201a6c94ffb00c23042e5": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "left#1",
+      "right#1",
+      "main::1::a!0@1#1",
+      "main::1::b!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::a!0@1#2",
+      "t1$16$spwnclk",
+      "__CPROVER_next_thread_id#3",
+      "__CPROVER_next_thread_id#5",
+      "main::1::b!0@1#2",
+      "t1$20$spwnclk",
+      "main::1::a!0@1#4",
+      "__CPROVER_next_thread_id#6",
+      "right#3",
+      "left#3",
+      "left#5",
+      "left#27",
+      "right#19",
+      "right#21",
+      "left#29",
+      "right#22",
+      "right#24",
+      "right#5",
+      "left#6",
+      "left#8",
+      "left#31",
+      "right#25",
+      "right#27",
+      "right#7",
+      "left#9",
+      "left#11",
+      "left#33",
+      "right#28",
+      "right#30",
+      "right#9",
+      "left#12",
+      "left#14",
+      "left#35",
+      "right#31",
+      "right#33",
+      "right#11",
+      "left#15",
+      "left#17",
+      "right#13",
+      "left#18",
+      "left#20",
+      "left#37",
+      "right#34",
+      "right#36",
+      "left#39",
+      "right#37",
+      "right#39",
+      "left#41",
+      "right#40",
+      "right#42",
+      "right#15",
+      "left#21",
+      "left#23",
+      "right#17",
+      "left#24",
+      "left#26",
+      "__CPROVER_threads_exited#6",
+      "__CPROVER_threads_exited#7",
+      "__CPROVER_threads_exited#4",
+      "__CPROVER_threads_exited#5",
+      "__CPROVER_threads_exited#2",
+      "main::1::b!0@1#4",
+      "__CPROVER_next_thread_id#7",
+      "__CPROVER_threads_exited#3",
+      "left#2",
+      "right#2"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_next_thread_id#6": "__CPROVER_next_thread_id#5",
+      "__CPROVER_next_thread_id#7": "__CPROVER_next_thread_id#5",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#5",
+      "__CPROVER_threads_exited#3": "__CPROVER_threads_exited#5",
+      "__CPROVER_threads_exited#4": "__CPROVER_threads_exited#7",
+      "__CPROVER_threads_exited#6": "__CPROVER_threads_exited#1",
+      "left#12": "left#11",
+      "left#15": "left#14",
+      "left#18": "left#17",
+      "left#2": "left#26",
+      "left#21": "left#20",
+      "left#24": "left#23",
+      "left#27": "left#5",
+      "left#29": "left#5",
+      "left#3": "left#1",
+      "left#31": "left#8",
+      "left#33": "left#11",
+      "left#35": "left#14",
+      "left#37": "left#20",
+      "left#39": "left#20",
+      "left#41": "left#20",
+      "left#6": "left#5",
+      "left#9": "left#8",
+      "main::1::a!0@1#4": "main::1::a!0@1#2",
+      "main::1::b!0@1#4": "main::1::b!0@1#2",
+      "right#11": "right#33",
+      "right#13": "right#33",
+      "right#15": "right#42",
+      "right#17": "right#42",
+      "right#19": "right#1",
+      "right#2": "right#42",
+      "right#22": "right#21",
+      "right#25": "right#24",
+      "right#28": "right#27",
+      "right#3": "right#1",
+      "right#31": "right#30",
+      "right#34": "right#33",
+      "right#37": "right#36",
+      "right#40": "right#39",
+      "right#5": "right#24",
+      "right#7": "right#27",
+      "right#9": "right#30"
+    },
+    "states": 81,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2",
+        "__CPROVER_next_thread_id#5"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#7",
+        "__CPROVER_threads_exited#5"
+      ],
+      "left": [
+        "left#1",
+        "left#5",
+        "left#8",
+        "left#11",
+        "left#14",
+        "left#17",
+        "left#20",
+        "left#23",
+        "left#26"
+      ],
+      "main::1::a!0@1": [
+        "main::1::a!0@1#1",
+        "main::1::a!0@1#2"
+      ],
+      "main::1::b!0@1": [
+        "main::1::b!0@1#1",
+        "main::1::b!0@1#2"
+      ],
+      "right": [
+        "right#1",
+        "right#21",
+        "right#24",
+        "right#27",
+        "right#30",
+        "right#33",
+        "right#36",
+        "right#39",
+        "right#42"
+      ]
+    }
+  },
+  "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f-54a69122ec69fc577c951a9668f33fdd21b819a45f564ed2b0ee1b6b5de22a9a": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "left#1",
+      "right#1",
+      "main::1::a!0@1#1",
+      "main::1::b!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::a!0@1#2",
+      "t1$16$spwnclk",
+      "__CPROVER_next_thread_id#3",
+      "__CPROVER_next_thread_id#5",
+      "main::1::b!0@1#2",
+      "t1$20$spwnclk",
+      "main::1::a!0@1#4",
+      "__CPROVER_next_thread_id#6",
+      "right#3",
+      "left#3",
+      "left#5",
+      "left#27",
+      "right#19",
+      "right#21",
+      "left#29",
+      "right#22",
+      "right#24",
+      "right#5",
+      "left#6",
+      "left#8",
+      "left#31",
+      "right#25",
+      "right#27",
+      "right#7",
+      "left#9",
+      "left#11",
+      "left#33",
+      "right#28",
+      "right#30",
+      "right#9",
+      "left#12",
+      "left#14",
+      "left#35",
+      "right#31",
+      "right#33",
+      "right#11",
+      "left#15",
+      "left#17",
+      "right#13",
+      "left#18",
+      "left#20",
+      "left#37",
+      "right#34",
+      "right#36",
+      "left#39",
+      "right#37",
+      "right#39",
+      "left#41",
+      "right#40",
+      "right#42",
+      "right#15",
+      "left#21",
+      "left#23",
+      "right#17",
+      "left#24",
+      "left#26",
+      "__CPROVER_threads_exited#6",
+      "__CPROVER_threads_exited#7",
+      "__CPROVER_threads_exited#4",
+      "__CPROVER_threads_exited#5",
+      "__CPROVER_threads_exited#2",
+      "main::1::b!0@1#4",
+      "__CPROVER_next_thread_id#7",
+      "__CPROVER_threads_exited#3",
+      "left#2",
+      "right#2"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_next_thread_id#6": "__CPROVER_next_thread_id#5",
+      "__CPROVER_next_thread_id#7": "__CPROVER_next_thread_id#5",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#5",
+      "__CPROVER_threads_exited#3": "__CPROVER_threads_exited#5",
+      "__CPROVER_threads_exited#4": "__CPROVER_threads_exited#7",
+      "__CPROVER_threads_exited#6": "__CPROVER_threads_exited#1",
+      "left#12": "left#11",
+      "left#15": "left#14",
+      "left#18": "left#17",
+      "left#2": "left#26",
+      "left#21": "left#20",
+      "left#24": "left#23",
+      "left#27": "left#5",
+      "left#29": "left#5",
+      "left#3": "left#1",
+      "left#31": "left#8",
+      "left#33": "left#11",
+      "left#35": "left#14",
+      "left#37": "left#20",
+      "left#39": "left#20",
+      "left#41": "left#20",
+      "left#6": "left#5",
+      "left#9": "left#8",
+      "main::1::a!0@1#4": "main::1::a!0@1#2",
+      "main::1::b!0@1#4": "main::1::b!0@1#2",
+      "right#11": "right#33",
+      "right#13": "right#33",
+      "right#15": "right#42",
+      "right#17": "right#42",
+      "right#19": "right#1",
+      "right#2": "right#42",
+      "right#22": "right#21",
+      "right#25": "right#24",
+      "right#28": "right#27",
+      "right#3": "right#1",
+      "right#31": "right#30",
+      "right#34": "right#33",
+      "right#37": "right#36",
+      "right#40": "right#39",
+      "right#5": "right#24",
+      "right#7": "right#27",
+      "right#9": "right#30"
+    },
+    "states": 81,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2",
+        "__CPROVER_next_thread_id#5"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#7",
+        "__CPROVER_threads_exited#5"
+      ],
+      "left": [
+        "left#1",
+        "left#5",
+        "left#8",
+        "left#11",
+        "left#14",
+        "left#17",
+        "left#20",
+        "left#23",
+        "left#26"
+      ],
+      "main::1::a!0@1": [
+        "main::1::a!0@1#1",
+        "main::1::a!0@1#2"
+      ],
+      "main::1::b!0@1": [
+        "main::1::b!0@1#1",
+        "main::1::b!0@1#2"
+      ],
+      "right": [
+        "right#1",
+        "right#21",
+        "right#24",
+        "right#27",
+        "right#30",
+        "right#33",
+        "right#36",
+        "right#39",
+        "right#42"
+      ]
+    }
+  },
+  "dd98405c728a760da56688c8e3153ab085899b582cefa08e43058c1deb3637bf-8631a07155b534be2a54e324c6b01923caa5383c1131cc55917d05ca3c024bf1": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "r#1",
+      "w#1",
+      "x#1",
+      "y#1",
+      "main::1::t1!0@1#1",
+      "main::1::t2!0@1#1",
+      "main::1::t3!0@1#1",
+      "main::1::t4!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::t1!0@1#2",
+      "t1$20$spwnclk",
+      "__CPROVER_next_thread_id#3",
+      "__CPROVER_next_thread_id#5",
+      "main::1::t2!0@1#2",
+      "t1$24$spwnclk",
+      "__CPROVER_next_thread_id#6",
+      "__CPROVER_next_thread_id#8",
+      "main::1::t3!0@1#2",
+      "t1$28$spwnclk",
+      "__CPROVER_next_thread_id#9",
+      "__CPROVER_next_thread_id#11",
+      "main::1::t4!0@1#2",
+      "t1$32$spwnclk",
+      "main::1::t1!0@1#4",
+      "__CPROVER_next_thread_id#12",
+      "__CPROVER_threads_exited#2",
+      "r#4",
+      "w#6",
+      "r#6",
+      "x#3",
+      "y#2",
+      "y#3",
+      "x#4",
+      "r#7",
+      "r#11",
+      "w#12",
+      "r#13",
+      "r#2",
+      "w#2",
+      "r#8",
+      "r#9",
+      "w#8",
+      "w#10",
+      "x#6",
+      "x#5",
+      "w#11",
+      "y#4",
+      "y#5",
+      "x#7",
+      "r#14",
+      "r#15",
+      "__CPROVER_threads_exited#12",
+      "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#10",
+      "__CPROVER_threads_exited#11",
+      "__CPROVER_threads_exited#8",
+      "__CPROVER_threads_exited#9"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#12": "__CPROVER_next_thread_id#11",
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_next_thread_id#6": "__CPROVER_next_thread_id#5",
+      "__CPROVER_next_thread_id#9": "__CPROVER_next_thread_id#8",
+      "__CPROVER_threads_exited#10": "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#12": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#8": "__CPROVER_threads_exited#11",
+      "main::1::t1!0@1#4": "main::1::t1!0@1#2",
+      "r#11": "r#6",
+      "r#14": "r#8",
+      "r#2": "r#13",
+      "r#4": "r#1",
+      "r#7": "r#6",
+      "r#9": "r#8",
+      "w#12": "w#1",
+      "w#2": "w#1",
+      "w#6": "w#1",
+      "w#8": "w#1",
+      "x#3": "x#1",
+      "x#4": "x#1",
+      "x#6": "x#1",
+      "x#7": "x#5",
+      "y#3": "y#2",
+      "y#5": "y#4"
+    },
+    "states": 67,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2",
+        "__CPROVER_next_thread_id#5",
+        "__CPROVER_next_thread_id#8",
+        "__CPROVER_next_thread_id#11"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#13",
+        "__CPROVER_threads_exited#11",
+        "__CPROVER_threads_exited#9"
+      ],
+      "main::1::t1!0@1": [
+        "main::1::t1!0@1#1",
+        "main::1::t1!0@1#2"
+      ],
+      "main::1::t2!0@1": [
+        "main::1::t2!0@1#1",
+        "main::1::t2!0@1#2"
+      ],
+      "main::1::t3!0@1": [
+        "main::1::t3!0@1#1",
+        "main::1::t3!0@1#2"
+      ],
+      "main::1::t4!0@1": [
+        "main::1::t4!0@1#1",
+        "main::1::t4!0@1#2"
+      ],
+      "r": [
+        "r#1",
+        "r#6",
+        "r#13",
+        "r#8",
+        "r#15"
+      ],
+      "w": [
+        "w#1",
+        "w#10",
+        "w#11"
+      ],
+      "x": [
+        "x#1",
+        "x#5"
+      ],
+      "y": [
+        "y#1",
+        "y#2",
+        "y#4"
+      ]
+    }
+  },
+  "dd98405c728a760da56688c8e3153ab085899b582cefa08e43058c1deb3637bf-d363b8ef102bc53441b27ed0fb7fe5b533dd11ebb1afb0eab5e58f129655892a": {
+    "order": [
+      "__CPROVER_alloca_object#1",
+      "__CPROVER_dead_object#1",
+      "__CPROVER_deallocated#1",
+      "__CPROVER_malloc_is_new_array#1",
+      "__CPROVER_max_malloc_size#1",
+      "__CPROVER_memory_leak#1",
+      "__CPROVER_new_object#1",
+      "__CPROVER_next_thread_id#1",
+      "__CPROVER_pipe_count#1",
+      "__CPROVER_threads_exited#1",
+      "r#1",
+      "w#1",
+      "x#1",
+      "y#1",
+      "main::1::t1!0@1#1",
+      "main::1::t2!0@1#1",
+      "main::1::t3!0@1#1",
+      "main::1::t4!0@1#1",
+      "__CPROVER_next_thread_id#2",
+      "main::1::t1!0@1#2",
+      "t1$20$spwnclk",
+      "__CPROVER_next_thread_id#3",
+      "__CPROVER_next_thread_id#5",
+      "main::1::t2!0@1#2",
+      "t1$24$spwnclk",
+      "__CPROVER_next_thread_id#6",
+      "__CPROVER_next_thread_id#8",
+      "main::1::t3!0@1#2",
+      "t1$28$spwnclk",
+      "__CPROVER_next_thread_id#9",
+      "__CPROVER_next_thread_id#11",
+      "main::1::t4!0@1#2",
+      "t1$32$spwnclk",
+      "main::1::t1!0@1#4",
+      "__CPROVER_next_thread_id#12",
+      "__CPROVER_threads_exited#2",
+      "r#4",
+      "w#6",
+      "r#6",
+      "x#3",
+      "y#2",
+      "y#3",
+      "x#4",
+      "r#7",
+      "r#11",
+      "w#12",
+      "r#13",
+      "r#2",
+      "w#2",
+      "r#8",
+      "r#9",
+      "w#8",
+      "w#10",
+      "x#6",
+      "x#5",
+      "w#11",
+      "y#4",
+      "y#5",
+      "x#7",
+      "r#14",
+      "r#15",
+      "__CPROVER_threads_exited#12",
+      "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#10",
+      "__CPROVER_threads_exited#11",
+      "__CPROVER_threads_exited#8",
+      "__CPROVER_threads_exited#9"
+    ],
+    "rf": {
+      "__CPROVER_next_thread_id#12": "__CPROVER_next_thread_id#11",
+      "__CPROVER_next_thread_id#3": "__CPROVER_next_thread_id#2",
+      "__CPROVER_next_thread_id#6": "__CPROVER_next_thread_id#5",
+      "__CPROVER_next_thread_id#9": "__CPROVER_next_thread_id#8",
+      "__CPROVER_threads_exited#10": "__CPROVER_threads_exited#13",
+      "__CPROVER_threads_exited#12": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#2": "__CPROVER_threads_exited#1",
+      "__CPROVER_threads_exited#8": "__CPROVER_threads_exited#11",
+      "main::1::t1!0@1#4": "main::1::t1!0@1#2",
+      "r#11": "r#6",
+      "r#14": "r#8",
+      "r#2": "r#13",
+      "r#4": "r#1",
+      "r#7": "r#6",
+      "r#9": "r#8",
+      "w#12": "w#1",
+      "w#2": "w#1",
+      "w#6": "w#1",
+      "w#8": "w#1",
+      "x#3": "x#1",
+      "x#4": "x#1",
+      "x#6": "x#1",
+      "x#7": "x#5",
+      "y#3": "y#2",
+      "y#5": "y#4"
+    },
+    "states": 67,
+    "status": "EXPLICIT_SC_ORDER",
+    "ws": {
+      "__CPROVER_alloca_object": [
+        "__CPROVER_alloca_object#1"
+      ],
+      "__CPROVER_dead_object": [
+        "__CPROVER_dead_object#1"
+      ],
+      "__CPROVER_deallocated": [
+        "__CPROVER_deallocated#1"
+      ],
+      "__CPROVER_malloc_is_new_array": [
+        "__CPROVER_malloc_is_new_array#1"
+      ],
+      "__CPROVER_max_malloc_size": [
+        "__CPROVER_max_malloc_size#1"
+      ],
+      "__CPROVER_memory_leak": [
+        "__CPROVER_memory_leak#1"
+      ],
+      "__CPROVER_new_object": [
+        "__CPROVER_new_object#1"
+      ],
+      "__CPROVER_next_thread_id": [
+        "__CPROVER_next_thread_id#1",
+        "__CPROVER_next_thread_id#2",
+        "__CPROVER_next_thread_id#5",
+        "__CPROVER_next_thread_id#8",
+        "__CPROVER_next_thread_id#11"
+      ],
+      "__CPROVER_pipe_count": [
+        "__CPROVER_pipe_count#1"
+      ],
+      "__CPROVER_threads_exited": [
+        "__CPROVER_threads_exited#1",
+        "__CPROVER_threads_exited#13",
+        "__CPROVER_threads_exited#11",
+        "__CPROVER_threads_exited#9"
+      ],
+      "main::1::t1!0@1": [
+        "main::1::t1!0@1#1",
+        "main::1::t1!0@1#2"
+      ],
+      "main::1::t2!0@1": [
+        "main::1::t2!0@1#1",
+        "main::1::t2!0@1#2"
+      ],
+      "main::1::t3!0@1": [
+        "main::1::t3!0@1#1",
+        "main::1::t3!0@1#2"
+      ],
+      "main::1::t4!0@1": [
+        "main::1::t4!0@1#1",
+        "main::1::t4!0@1#2"
+      ],
+      "r": [
+        "r#1",
+        "r#6",
+        "r#13",
+        "r#8",
+        "r#15"
+      ],
+      "w": [
+        "w#1",
+        "w#10",
+        "w#11"
+      ],
+      "x": [
+        "x#1",
+        "x#5"
+      ],
+      "y": [
+        "y#1",
+        "y#2",
+        "y#4"
+      ]
+    }
+  }
+}

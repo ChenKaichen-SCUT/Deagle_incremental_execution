@@ -1,0 +1,419 @@
+[
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "5",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "arithmetic_prog_bad.i"
+    ],
+    "artifact_kind": "incomplete-control",
+    "classification": "INCOMPLETE_UNWINDING",
+    "code": 10,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "325594b59d60264dd6b18e2767ce0321156b0e1325d8ec7c95c4643c4d47d0a3",
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "FAILURE"
+      ],
+      [
+        "thread1.unwind.0",
+        "FAILURE"
+      ],
+      [
+        "thread2.unwind.0",
+        "FAILURE"
+      ]
+    ],
+    "source_sha256": "051706a1eb405a384d7cf371ab2d9b9605b94715fa3ad16d6c2eb8e3fbb8fc38",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread-deagle.arithmetic_prog_bad.smt",
+    "timeout_s": 60,
+    "wall_ns": 3420221964
+  },
+  {
+    "artifact_kind": "hard-single",
+    "classification": "EXCLUDED_YAML_NO_UNREACH_CALL",
+    "data_model": "ILP32",
+    "source_sha256": "a7b1b4de6077c19ce6e7b3206b7aec935b2c49ded10f81f01daddf9a689038c1",
+    "task": "pthread-ext.41_FreeBSD_abd_kbd_sliced.smt"
+  },
+  {
+    "artifact_kind": "hard-single",
+    "classification": "EXCLUDED_YAML_NO_UNREACH_CALL",
+    "data_model": "ILP32",
+    "source_sha256": "adac70a9b891a5462c4bee71a2751021c9d437d73a002d25ad244a8f2ad465c8",
+    "task": "pthread-ext.42_FreeBSD_rdma_addr_sliced.smt"
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "43_NetBSD_sysmon_power_sliced-pthread.i"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "INCOMPLETE_UNWINDING",
+    "code": 10,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "7051eaad736d8608eb4b17c623bd6f53685b08d4f9fded8c4ce6fc021b4c1f50",
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "SUCCESS"
+      ],
+      [
+        "main.unwind.0",
+        "FAILURE"
+      ],
+      [
+        "sysmonread_power.unwind.0",
+        "FAILURE"
+      ],
+      [
+        "sysmonread_power.unwind.1",
+        "FAILURE"
+      ],
+      [
+        "thr1.unwind.0",
+        "FAILURE"
+      ]
+    ],
+    "source_sha256": "8389c73a3873efed3be614e3a02a2457c4db9f1b1dfabf64c87229b49920fe65",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread-ext.43_NetBSD_sysmon_power_sliced-pthread.smt",
+    "timeout_s": 60,
+    "wall_ns": 5323130049
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "43_NetBSD_sysmon_power_sliced.i"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "TIME_LIMIT",
+    "code": -9,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "12b1482dd84de38d5dad22d0083ab0ec5ff41c35d1034da53cbafe51e3c437bf",
+    "properties": [],
+    "source_sha256": "0cc2344d8bedffb786f66d288e651407abc416f1e22d065ca4595f05e214f2a3",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread-ext.43_NetBSD_sysmon_power_sliced.smt",
+    "timeout_s": 60,
+    "wall_ns": 60009602543
+  },
+  {
+    "artifact_kind": "hard-single",
+    "classification": "EXCLUDED_YAML_NO_UNREACH_CALL",
+    "data_model": "ILP32",
+    "source_sha256": "58b504e0f9c99c4dab9903d0572a1a6fc9dccc97093dedf55f23b393d189b988",
+    "task": "pthread-ext.43_NetBSD_sysmon_power_sliced_2.smt"
+  },
+  {
+    "artifact_kind": "hard-single",
+    "classification": "EXCLUDED_YAML_NO_UNREACH_CALL",
+    "data_model": "ILP32",
+    "source_sha256": "33c040d0fbd9b1f189d3917c569371e7923ba6ef4820715ff1ef4976213f5b31",
+    "task": "pthread-ext.44_Solaris_space_map_sliced.smt"
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "wsc.rewrite.i"
+    ],
+    "artifact_kind": "weak-control",
+    "classification": "BOUNDED_PASS",
+    "code": 0,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "a40332a0664957cdd8c29a9280a2521c19012417d25fcb113c0cf944e329530f",
+    "properties": [
+      [
+        "main.assertion.1",
+        "SUCCESS"
+      ],
+      [
+        "reach_error.assertion.1",
+        "SUCCESS"
+      ]
+    ],
+    "source_sha256": "a890e22dd0fd4e9222fa77dcd9bfdccdad1d211f5c8a08460220cf10526dceee",
+    "strict_sc": "QUARANTINE_NATIVE; SEE independent full write orders",
+    "task": "pthread-theta.wsc.smt",
+    "timeout_s": 60,
+    "wall_ns": 114742725
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "butterfly.i"
+    ],
+    "artifact_kind": "weak-control",
+    "classification": "BOUNDED_PASS",
+    "code": 0,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "49eb982e982a68e85c3491c186c921447e344cd36702a84fd1302222b2d0e790",
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "SUCCESS"
+      ]
+    ],
+    "source_sha256": "09af681f1eafc093cc175698e1c11da4bfd74a552772eb695e0956765376568c",
+    "strict_sc": "QUARANTINE_NATIVE; SEE independent full write orders",
+    "task": "pthread.butterfly.smt",
+    "timeout_s": 60,
+    "wall_ns": 415534289
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "queue_longer.i"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "UNINTERPRETABLE",
+    "code": 6,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "6a75c01448903eb9212c411116a068b6441e490f0a69ee05f7d4540047a8c1b1",
+    "properties": [],
+    "source_sha256": "9f874a9872f93f025fac23ebed37f94a1f3b80bd0133ea4d7e298577c4fec427",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread.queue_longer.smt",
+    "timeout_s": 60,
+    "wall_ns": 114952718
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "queue_longest.i"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "UNINTERPRETABLE",
+    "code": 6,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "8e34dff7eebe909553f448087709fcb3d951ee9b00d91d29c4b6c7ad381c340f",
+    "properties": [],
+    "source_sha256": "5fb3c623242420f3b3352ce2377df781fcc1efd56f82dd0011f9620e127821b3",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread.queue_longest.smt",
+    "timeout_s": 60,
+    "wall_ns": 114915106
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "queue_ok_longer.i"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "UNINTERPRETABLE",
+    "code": 6,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "22386a0c5d93a655b0dde35df88c2e79640c76b31d7023f7dac24bef26f0d6a9",
+    "properties": [],
+    "source_sha256": "f58af1aa15d4bec1241042c84c595fb9585ff7c461dd0b44f9fde0638838779a",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread.queue_ok_longer.smt",
+    "timeout_s": 60,
+    "wall_ns": 114876435
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "queue_ok_longest.i"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "UNINTERPRETABLE",
+    "code": 6,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "7ed17d977b61a650cae26baee944bdaf0986d4b474147f8a6f4be4f9710c159f",
+    "properties": [],
+    "source_sha256": "0e9bc4a9a6dcd238ac18925269a0bd7c8c54c2dafb57744151e37b58cf6eab8d",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread.queue_ok_longest.smt",
+    "timeout_s": 60,
+    "wall_ns": 114909526
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "stack_longest-1.i"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "UNINTERPRETABLE",
+    "code": 6,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "ae4c3fe9bc722e726dea807acb9280f8333e98af460467f752cf8c6acced8071",
+    "properties": [],
+    "source_sha256": "529fe0895c01c52d9b18b51c32204a307faf547c0c07b22bc1a431308affcf90",
+    "strict_sc": "UNASSESSED",
+    "task": "pthread.stack_longest-1.smt",
+    "timeout_s": 60,
+    "wall_ns": 114918326
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "parallel-ticket-6.wvr.c"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "BOUNDED_PASS",
+    "code": 0,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "b2870b1c8f14628eb2e12607b9846ec82227e715faf38771473744ef767a0617",
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "SUCCESS"
+      ]
+    ],
+    "source_sha256": "0f41c28130c65bb66e6565b71877e71077746007ac43c6aef3ce3b863878a53a",
+    "strict_sc": "UNASSESSED",
+    "task": "weaver.parallel-ticket-6.wvr.smt",
+    "timeout_s": 60,
+    "wall_ns": 12233952599
+  },
+  {
+    "argv": [
+      "--function",
+      "main",
+      "--deagle-closure",
+      "--mm",
+      "sc",
+      "--32",
+      "--unwind",
+      "2",
+      "--unwinding-assertions",
+      "--trace",
+      "--json-ui",
+      "parallel-ticket-7.wvr.c"
+    ],
+    "artifact_kind": "hard-single",
+    "classification": "TIME_LIMIT",
+    "code": -9,
+    "data_model": "ILP32",
+    "max_address_space": 4294967296,
+    "output_sha256": "349d9646faa66a4eaf26c71a6c7fc74211ee33fa40f9b74d974cd5e11401d9a3",
+    "properties": [],
+    "source_sha256": "a23e058fd7e99c388c57a29154ab8770cf868cf3c645eba0bb26fd121678d7da",
+    "strict_sc": "UNASSESSED",
+    "task": "weaver.parallel-ticket-7.wvr.smt",
+    "timeout_s": 60,
+    "wall_ns": 60006520952
+  }
+]

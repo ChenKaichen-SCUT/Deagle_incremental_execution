@@ -1,0 +1,2242 @@
+{
+  "cases": {
+    "batch_retained": {
+      "modes": {
+        "F": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 23,
+            "affected_instances": 0,
+            "arena_bytes": 6244,
+            "before_bridge_ms": 75.995846,
+            "bind_ms": 18.863457,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.03406199999999959,
+            "children_user_s": 0.1362309999999951,
+            "cnf_graph_ms": 7.46208,
+            "conflicts": 1,
+            "controller_cpu_ms": 67.291761,
+            "controller_with_gate_ms": 243.080682,
+            "decisions": 342,
+            "deleted": 0,
+            "derive_ms": 1.173212,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 1330,
+            "guard_activations": 0,
+            "init_switch_ms": 0.572491,
+            "p0_wall_ms": 104.270099,
+            "p1_wall_ms": 104.253639,
+            "pair_application_ms": 208.523738,
+            "pair_controller_ms": 239.626917,
+            "parse_ms": 0.839385,
+            "peak_rss_kib": 37752,
+            "pop": 2,
+            "postcheck_ms": 3.535337,
+            "propagations": 658,
+            "push": 341,
+            "recovered": 0,
+            "resident_Pss_kib": 2500,
+            "retract_ms": 0.00264,
+            "rf_activations": 2,
+            "root_prepare_ms": 1.199303,
+            "rule_checks": 2265,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 0.386327,
+            "search_trace_equals_stock": 1,
+            "starts": 1,
+            "submit_ms": 2.998457,
+            "theory_conflicts": 1,
+            "theory_propagations": 0,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "G": {
+          "median": {
+            "K_derived": 196,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 0,
+            "affected_instances": 0,
+            "arena_bytes": 6244,
+            "before_bridge_ms": 74.528398,
+            "bind_ms": 18.916077,
+            "cached_joins": 23,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 249,
+            "children_system_s": 0.04027600000000042,
+            "children_user_s": 0.13113099999999633,
+            "cnf_graph_ms": 7.472881,
+            "conflicts": 1,
+            "controller_cpu_ms": 70.773836,
+            "controller_with_gate_ms": 241.520852,
+            "decisions": 342,
+            "deleted": 0,
+            "derive_ms": 0.00103,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 1330,
+            "guard_activations": 0,
+            "init_switch_ms": 0.103532,
+            "p0_wall_ms": 105.035124,
+            "p1_wall_ms": 102.575398,
+            "pair_application_ms": 208.404597,
+            "pair_controller_ms": 237.961445,
+            "parse_ms": 0.825125,
+            "peak_rss_kib": 37752,
+            "pop": 2,
+            "postcheck_ms": 3.771941,
+            "propagations": 658,
+            "push": 341,
+            "recovered": 0,
+            "resident_Pss_kib": 2550,
+            "retract_ms": 0.040701,
+            "rf_activations": 2,
+            "root_prepare_ms": 0.066211,
+            "rule_checks": 0,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 0.379017,
+            "search_trace_equals_stock": 1,
+            "starts": 1,
+            "submit_ms": 1.954817,
+            "theory_conflicts": 1,
+            "theory_propagations": 0,
+            "used_derived": 196
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 2.496416,
+              "positive": 3,
+              "range": [
+                -1.803214,
+                3.941214
+              ],
+              "values": [
+                -0.924278,
+                3.941214,
+                2.496416,
+                3.535657,
+                -1.803214
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 1.251042,
+              "positive": 3,
+              "range": [
+                -2.251473,
+                6.184736
+              ],
+              "values": [
+                -2.251473,
+                6.184736,
+                1.251042,
+                -1.651221,
+                1.937997
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.00586,
+              "positive": 4,
+              "range": [
+                -0.00402,
+                0.024421
+              ],
+              "values": [
+                0.00304,
+                0.024421,
+                -0.00402,
+                0.00586,
+                0.01191
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "GS": {
+          "median": {
+            "K_derived": 196,
+            "O": 0,
+            "actually_reattached": 66,
+            "added": 0,
+            "affected_instances": 0,
+            "arena_bytes": 6244,
+            "before_bridge_ms": 75.418985,
+            "bind_ms": 19.04913,
+            "cached_joins": 23,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 249,
+            "children_system_s": 0.0450569999999999,
+            "children_user_s": 0.1280009999999976,
+            "cnf_graph_ms": 7.43481,
+            "conflicts": 1,
+            "controller_cpu_ms": 69.837697,
+            "controller_with_gate_ms": 239.982304,
+            "decisions": 342,
+            "deleted": 0,
+            "derive_ms": 0.00112,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 1330,
+            "guard_activations": 0,
+            "init_switch_ms": 0.181093,
+            "p0_wall_ms": 102.317983,
+            "p1_wall_ms": 102.909414,
+            "pair_application_ms": 204.930341,
+            "pair_controller_ms": 236.575469,
+            "parse_ms": 0.831756,
+            "peak_rss_kib": 37752,
+            "pop": 2,
+            "postcheck_ms": 3.609368,
+            "propagations": 658,
+            "push": 341,
+            "recovered": 0,
+            "resident_Pss_kib": 2726,
+            "retract_ms": 0.040511,
+            "rf_activations": 2,
+            "root_prepare_ms": 0.065501,
+            "rule_checks": 0,
+            "rup_ms": 0.170513,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 0.409208,
+            "search_trace_equals_stock": 1,
+            "starts": 1,
+            "submit_ms": 2.199781,
+            "theory_conflicts": 1,
+            "theory_propagations": 0,
+            "used_derived": 196
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 1.344225,
+              "positive": 3,
+              "range": [
+                -5.181958,
+                4.17773
+              ],
+              "values": [
+                -5.181958,
+                1.344225,
+                2.64926,
+                4.17773,
+                -0.110772
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 3.593397,
+              "positive": 4,
+              "range": [
+                -55.0565,
+                6.993173
+              ],
+              "values": [
+                -55.0565,
+                3.593397,
+                0.469188,
+                6.993173,
+                6.34758
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -0.02259,
+              "positive": 0,
+              "range": [
+                -0.02729,
+                -0.00722
+              ],
+              "values": [
+                -0.00722,
+                -0.02259,
+                -0.023211,
+                -0.02729,
+                -0.018221
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "S": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 66,
+            "added": 23,
+            "affected_instances": 0,
+            "arena_bytes": 6244,
+            "before_bridge_ms": 75.923175,
+            "bind_ms": 18.834066,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.04777300000000029,
+            "children_user_s": 0.1255299999999977,
+            "cnf_graph_ms": 7.451331,
+            "conflicts": 1,
+            "controller_cpu_ms": 68.111952,
+            "controller_with_gate_ms": 242.005142,
+            "decisions": 342,
+            "deleted": 0,
+            "derive_ms": 1.136881,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 1330,
+            "guard_activations": 0,
+            "init_switch_ms": 0.642502,
+            "p0_wall_ms": 102.480866,
+            "p1_wall_ms": 104.584196,
+            "pair_application_ms": 206.232936,
+            "pair_controller_ms": 238.417384,
+            "parse_ms": 0.841526,
+            "peak_rss_kib": 37752,
+            "pop": 2,
+            "postcheck_ms": 3.503886,
+            "propagations": 658,
+            "push": 341,
+            "recovered": 0,
+            "resident_Pss_kib": 2666,
+            "retract_ms": 0.00265,
+            "rf_activations": 2,
+            "root_prepare_ms": 1.162882,
+            "rule_checks": 2265,
+            "rup_ms": 0.173174,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 0.403288,
+            "search_trace_equals_stock": 1,
+            "starts": 1,
+            "submit_ms": 3.226941,
+            "theory_conflicts": 1,
+            "theory_propagations": 0,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -0.410887,
+              "positive": 2,
+              "range": [
+                -4.413044,
+                0.800646
+              ],
+              "values": [
+                -4.413044,
+                0.501569,
+                -0.964769,
+                -0.410887,
+                0.800646
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 1.962558,
+              "positive": 3,
+              "range": [
+                -9.311407,
+                6.946102
+              ],
+              "values": [
+                -9.311407,
+                2.290802,
+                -0.916319,
+                1.962558,
+                6.946102
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -0.018411,
+              "positive": 0,
+              "range": [
+                -0.03166,
+                -0.00214
+              ],
+              "values": [
+                -0.03166,
+                -0.00214,
+                -0.0189,
+                -0.018411,
+                -0.009361
+              ]
+            }
+          },
+          "repetitions": 5
+        }
+      },
+      "stock": [
+        {
+          "cnf": "9496d561e7e94856dba8240383c3270f2a74936d3d65a44b16fc2c6f44a92181",
+          "graph": "514ffa7111975ee8fca072b628bb4d9b4f397d24fd887c0dd9bb375932facc5d",
+          "program_ms": 113.994273,
+          "properties": [
+            [
+              "main.assertion.1",
+              "FAILURE",
+              62
+            ]
+          ]
+        },
+        {
+          "cnf": "ca0ad79713d470c164bcfcc4e459e5dc8f6f1de455212963f928a10f5bd29871",
+          "graph": "7844dd7732666a36824c97e2ce2e975ca04d59ba8644cbb2db7e11244b30519c",
+          "program_ms": 114.037495,
+          "properties": [
+            [
+              "main.assertion.1",
+              "FAILURE",
+              62
+            ]
+          ]
+        }
+      ]
+    },
+    "fib_updates_8": {
+      "modes": {
+        "F": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 61,
+            "affected_instances": 0,
+            "arena_bytes": 7822596,
+            "before_bridge_ms": 153.888347,
+            "bind_ms": 80.726982,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.09191100000000008,
+            "children_user_s": 2.8717339999999965,
+            "cnf_graph_ms": 59.605451,
+            "conflicts": 23391,
+            "controller_cpu_ms": 248.710997,
+            "controller_with_gate_ms": 3202.295085,
+            "decisions": 64162,
+            "deleted": 0,
+            "derive_ms": 7.118869,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 7710,
+            "guard_activations": 0,
+            "init_switch_ms": 4.178421,
+            "p0_wall_ms": 346.374556,
+            "p1_wall_ms": 2760.99492,
+            "pair_application_ms": 3105.641932,
+            "pair_controller_ms": 3194.454242,
+            "parse_ms": 12.82428,
+            "peak_rss_kib": 37752,
+            "pop": 23474,
+            "postcheck_ms": 8.036816,
+            "propagations": 28462067,
+            "push": 64162,
+            "recovered": 0,
+            "resident_Pss_kib": 28606,
+            "retract_ms": 0.00477,
+            "rf_activations": 20818,
+            "root_prepare_ms": 7.214611,
+            "rule_checks": 12715,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 2483.822561,
+            "search_trace_equals_stock": 1,
+            "starts": 85,
+            "submit_ms": 16.275297,
+            "theory_conflicts": 17,
+            "theory_propagations": 8215,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "G": {
+          "median": {
+            "K_derived": 722,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 0,
+            "affected_instances": 0,
+            "arena_bytes": 7822596,
+            "before_bridge_ms": 153.829595,
+            "bind_ms": 81.016378,
+            "cached_joins": 61,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 1079,
+            "children_system_s": 0.07724700000000007,
+            "children_user_s": 2.886877,
+            "cnf_graph_ms": 59.914657,
+            "conflicts": 23391,
+            "controller_cpu_ms": 248.417008,
+            "controller_with_gate_ms": 3201.262344,
+            "decisions": 64162,
+            "deleted": 0,
+            "derive_ms": 0.0017,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 7710,
+            "guard_activations": 0,
+            "init_switch_ms": 1.315425,
+            "p0_wall_ms": 344.278385,
+            "p1_wall_ms": 2756.119735,
+            "pair_application_ms": 3105.02588,
+            "pair_controller_ms": 3193.132616,
+            "parse_ms": 12.789559,
+            "peak_rss_kib": 37752,
+            "pop": 23474,
+            "postcheck_ms": 8.368362,
+            "propagations": 28462067,
+            "push": 64162,
+            "recovered": 0,
+            "resident_Pss_kib": 28828,
+            "retract_ms": 0.142152,
+            "rf_activations": 20818,
+            "root_prepare_ms": 0.235415,
+            "rule_checks": 0,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 2486.347973,
+            "search_trace_equals_stock": 1,
+            "starts": 85,
+            "submit_ms": 9.512505,
+            "theory_conflicts": 17,
+            "theory_propagations": 8215,
+            "used_derived": 722
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -11.051465,
+              "positive": 2,
+              "range": [
+                -37.46196,
+                21.810084
+              ],
+              "values": [
+                -15.581433,
+                21.810084,
+                19.028941,
+                -37.46196,
+                -11.051465
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -1.170943,
+              "positive": 2,
+              "range": [
+                -27.435915,
+                22.959306
+              ],
+              "values": [
+                -20.193293,
+                22.959306,
+                18.627733,
+                -27.435915,
+                -1.170943
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -19.746196,
+              "positive": 2,
+              "range": [
+                -48.757362,
+                17.425868
+              ],
+              "values": [
+                -21.950505,
+                17.425868,
+                11.549737,
+                -48.757362,
+                -19.746196
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "GS": {
+          "median": {
+            "K_derived": 722,
+            "O": 0,
+            "actually_reattached": 199,
+            "added": 0,
+            "affected_instances": 0,
+            "arena_bytes": 8783664,
+            "before_bridge_ms": 154.0255,
+            "bind_ms": 80.08084,
+            "cached_joins": 61,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 1079,
+            "children_system_s": 0.10052700000000003,
+            "children_user_s": 2.8721649999999954,
+            "cnf_graph_ms": 60.10604,
+            "conflicts": 23391,
+            "controller_cpu_ms": 246.155036,
+            "controller_with_gate_ms": 3218.388059,
+            "decisions": 64162,
+            "deleted": 0,
+            "derive_ms": 0.00162,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 7710,
+            "guard_activations": 0,
+            "init_switch_ms": 3.356535,
+            "p0_wall_ms": 350.095558,
+            "p1_wall_ms": 2768.16651,
+            "pair_application_ms": 3123.255375,
+            "pair_controller_ms": 3210.332922,
+            "parse_ms": 12.611355,
+            "peak_rss_kib": 37752,
+            "pop": 23474,
+            "postcheck_ms": 8.140399,
+            "propagations": 28462067,
+            "push": 64162,
+            "recovered": 0,
+            "resident_Pss_kib": 27209,
+            "retract_ms": 0.138243,
+            "rf_activations": 20818,
+            "root_prepare_ms": 0.233265,
+            "rule_checks": 0,
+            "rup_ms": 5.109489,
+            "rup_proved": 0,
+            "rup_unchecked": 2797,
+            "rup_unmapped": 651,
+            "rup_unproved": 2,
+            "search_ms": 2490.204407,
+            "search_trace_equals_stock": 1,
+            "starts": 85,
+            "submit_ms": 16.795447,
+            "theory_conflicts": 17,
+            "theory_propagations": 8215,
+            "used_derived": 722
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -2.770224,
+              "positive": 2,
+              "range": [
+                -43.091019,
+                25.572278
+              ],
+              "values": [
+                6.916175,
+                -7.17159,
+                -2.770224,
+                25.572278,
+                -43.091019
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -6.491226,
+              "positive": 1,
+              "range": [
+                -38.118252,
+                31.661577
+              ],
+              "values": [
+                -2.251323,
+                -18.068362,
+                -6.491226,
+                31.661577,
+                -38.118252
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -2.233054,
+              "positive": 2,
+              "range": [
+                -37.984907,
+                16.945429
+              ],
+              "values": [
+                4.892044,
+                -6.381846,
+                -2.233054,
+                16.945429,
+                -37.984907
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "S": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 199,
+            "added": 61,
+            "affected_instances": 0,
+            "arena_bytes": 8783664,
+            "before_bridge_ms": 155.381306,
+            "bind_ms": 78.099761,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.088063,
+            "children_user_s": 2.892218999999999,
+            "cnf_graph_ms": 60.331085,
+            "conflicts": 23391,
+            "controller_cpu_ms": 245.017719,
+            "controller_with_gate_ms": 3217.873067,
+            "decisions": 64162,
+            "deleted": 0,
+            "derive_ms": 7.15562,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 7710,
+            "guard_activations": 0,
+            "init_switch_ms": 6.370844,
+            "p0_wall_ms": 349.128369,
+            "p1_wall_ms": 2774.562465,
+            "pair_application_ms": 3121.296268,
+            "pair_controller_ms": 3209.622657,
+            "parse_ms": 12.792299,
+            "peak_rss_kib": 37752,
+            "pop": 23474,
+            "postcheck_ms": 8.25041,
+            "propagations": 28462067,
+            "push": 64162,
+            "recovered": 0,
+            "resident_Pss_kib": 26962,
+            "retract_ms": 0.00484,
+            "rf_activations": 20818,
+            "root_prepare_ms": 7.253451,
+            "rule_checks": 12715,
+            "rup_ms": 5.027217,
+            "rup_proved": 0,
+            "rup_unchecked": 2797,
+            "rup_unmapped": 651,
+            "rup_unproved": 2,
+            "search_ms": 2488.715667,
+            "search_trace_equals_stock": 1,
+            "starts": 85,
+            "submit_ms": 23.684211,
+            "theory_conflicts": 17,
+            "theory_propagations": 8215,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -4.784954,
+              "positive": 2,
+              "range": [
+                -29.529435,
+                12.536543
+              ],
+              "values": [
+                -29.529435,
+                12.536543,
+                -8.292912,
+                8.905513,
+                -4.784954
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -0.44376,
+              "positive": 2,
+              "range": [
+                -35.845678,
+                14.640954
+              ],
+              "values": [
+                -35.845678,
+                14.640954,
+                -11.046725,
+                12.286358,
+                -0.44376
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 7.361126,
+              "positive": 4,
+              "range": [
+                -17.48716,
+                20.614779
+              ],
+              "values": [
+                -17.48716,
+                20.614779,
+                5.278984,
+                8.207079,
+                7.361126
+              ]
+            }
+          },
+          "repetitions": 5
+        }
+      },
+      "stock": [
+        {
+          "cnf": "9b779d904a03d10ac2ca7617de28b18648bfc7033e94358f2bf7a6e151cbea90",
+          "graph": "266ad7f1eaf6493025f20278cda3d2c631a9a7ab8fdaaf89c575061994d5176a",
+          "program_ms": 264.150627,
+          "properties": [
+            [
+              "main.assertion.1",
+              "FAILURE",
+              187
+            ]
+          ]
+        },
+        {
+          "cnf": "69a9a497c56d8d20c32824248429ca3254ce75b523866182538ec987e3bbec1f",
+          "graph": "3c83033fd513dbd272eb66fc093775933a86d3a61619336f984a4eea3e0ed409",
+          "program_ms": 2617.822888,
+          "properties": [
+            [
+              "main.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "lock01": {
+      "modes": {
+        "F": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 85,
+            "affected_instances": 0,
+            "arena_bytes": 273880,
+            "before_bridge_ms": 138.594808,
+            "bind_ms": 81.849246,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.057103000000000126,
+            "children_user_s": 0.3593570000000028,
+            "cnf_graph_ms": 39.754221,
+            "conflicts": 185,
+            "controller_cpu_ms": 258.51831,
+            "controller_with_gate_ms": 675.529392,
+            "decisions": 3015,
+            "deleted": 0,
+            "derive_ms": 21.960295,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 21332,
+            "guard_activations": 200,
+            "init_switch_ms": 9.121122,
+            "p0_wall_ms": 278.678655,
+            "p1_wall_ms": 282.66373,
+            "pair_application_ms": 563.024417,
+            "pair_controller_ms": 662.107878,
+            "parse_ms": 7.207206,
+            "peak_rss_kib": 37752,
+            "pop": 187,
+            "postcheck_ms": 13.570806,
+            "propagations": 46044,
+            "push": 3014,
+            "recovered": 0,
+            "resident_Pss_kib": 16905,
+            "retract_ms": 0.00613,
+            "rf_activations": 277,
+            "root_prepare_ms": 22.071338,
+            "rule_checks": 35641,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 5.944822,
+            "search_trace_equals_stock": 1,
+            "starts": 2,
+            "submit_ms": 30.101508,
+            "theory_conflicts": 13,
+            "theory_propagations": 198,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "G": {
+          "median": {
+            "K_derived": 0,
+            "O": 1553,
+            "actually_reattached": 0,
+            "added": 85,
+            "affected_instances": 21332,
+            "arena_bytes": 273880,
+            "before_bridge_ms": 137.748182,
+            "bind_ms": 79.130715,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.05612400000000006,
+            "children_user_s": 0.3898659999999978,
+            "cnf_graph_ms": 39.823942,
+            "conflicts": 185,
+            "controller_cpu_ms": 255.726344,
+            "controller_with_gate_ms": 702.697965,
+            "decisions": 3015,
+            "deleted": 85,
+            "derive_ms": 26.189885,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 21332,
+            "guard_activations": 200,
+            "init_switch_ms": 0.52481,
+            "p0_wall_ms": 276.124227,
+            "p1_wall_ms": 310.117309,
+            "pair_application_ms": 585.229286,
+            "pair_controller_ms": 689.370673,
+            "parse_ms": 7.172785,
+            "peak_rss_kib": 37752,
+            "pop": 187,
+            "postcheck_ms": 13.769071,
+            "propagations": 46044,
+            "push": 3014,
+            "recovered": 0,
+            "resident_Pss_kib": 17867,
+            "retract_ms": 28.59043,
+            "rf_activations": 277,
+            "root_prepare_ms": 56.577029,
+            "rule_checks": 35641,
+            "rup_ms": 4e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 5.962922,
+            "search_trace_equals_stock": 1,
+            "starts": 2,
+            "submit_ms": 65.121501,
+            "theory_conflicts": 13,
+            "theory_propagations": 198,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -23.180718,
+              "positive": 0,
+              "range": [
+                -31.689867,
+                -8.859737
+              ],
+              "values": [
+                -31.689867,
+                -23.180718,
+                -27.453579,
+                -8.859737,
+                -22.893283
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -22.349253,
+              "positive": 0,
+              "range": [
+                -38.038816,
+                -6.061944
+              ],
+              "values": [
+                -38.038816,
+                -22.595456,
+                -22.204869,
+                -6.061944,
+                -22.349253
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -0.03782,
+              "positive": 2,
+              "range": [
+                -0.413389,
+                0.087522
+              ],
+              "values": [
+                -0.03782,
+                0.087522,
+                0.080622,
+                -0.083631,
+                -0.413389
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "GS": {
+          "median": {
+            "K_derived": 0,
+            "O": 1553,
+            "actually_reattached": 0,
+            "added": 85,
+            "affected_instances": 21332,
+            "arena_bytes": 273880,
+            "before_bridge_ms": 136.850436,
+            "bind_ms": 80.732066,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.0496019999999997,
+            "children_user_s": 0.4023830000000004,
+            "cnf_graph_ms": 39.507696,
+            "conflicts": 185,
+            "controller_cpu_ms": 256.439564,
+            "controller_with_gate_ms": 703.026991,
+            "decisions": 3015,
+            "deleted": 85,
+            "derive_ms": 25.581403,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 21332,
+            "guard_activations": 200,
+            "init_switch_ms": 0.633212,
+            "p0_wall_ms": 280.915587,
+            "p1_wall_ms": 307.862306,
+            "pair_application_ms": 588.777893,
+            "pair_controller_ms": 689.533646,
+            "parse_ms": 7.110445,
+            "peak_rss_kib": 37752,
+            "pop": 187,
+            "postcheck_ms": 13.899123,
+            "propagations": 46044,
+            "push": 3014,
+            "recovered": 0,
+            "resident_Pss_kib": 17876,
+            "retract_ms": 28.05128,
+            "rf_activations": 277,
+            "root_prepare_ms": 55.04402,
+            "rule_checks": 35641,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 5.875401,
+            "search_trace_equals_stock": 1,
+            "starts": 2,
+            "submit_ms": 63.52558,
+            "theory_conflicts": 13,
+            "theory_propagations": 198,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -24.403551,
+              "positive": 0,
+              "range": [
+                -37.138971,
+                -12.965475
+              ],
+              "values": [
+                -28.528408,
+                -12.965475,
+                -37.138971,
+                -15.808588,
+                -24.403551
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -20.396735,
+              "positive": 0,
+              "range": [
+                -53.410178,
+                -14.205058
+              ],
+              "values": [
+                -37.737182,
+                -14.205058,
+                -53.410178,
+                -17.802155,
+                -20.396735
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.068281,
+              "positive": 4,
+              "range": [
+                -0.154842,
+                0.098192
+              ],
+              "values": [
+                -0.154842,
+                0.098192,
+                0.059022,
+                0.074631,
+                0.068281
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "S": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 85,
+            "affected_instances": 0,
+            "arena_bytes": 273880,
+            "before_bridge_ms": 137.317844,
+            "bind_ms": 80.093432,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.05086799999999991,
+            "children_user_s": 0.36493199999999604,
+            "cnf_graph_ms": 39.688341,
+            "conflicts": 185,
+            "controller_cpu_ms": 255.843353,
+            "controller_with_gate_ms": 679.505127,
+            "decisions": 3015,
+            "deleted": 0,
+            "derive_ms": 22.170119,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 21332,
+            "guard_activations": 200,
+            "init_switch_ms": 9.291656,
+            "p0_wall_ms": 280.801985,
+            "p1_wall_ms": 283.418044,
+            "pair_application_ms": 564.220029,
+            "pair_controller_ms": 665.626545,
+            "parse_ms": 7.149185,
+            "peak_rss_kib": 37752,
+            "pop": 187,
+            "postcheck_ms": 13.627777,
+            "propagations": 46044,
+            "push": 3014,
+            "recovered": 0,
+            "resident_Pss_kib": 16594,
+            "retract_ms": 0.00636,
+            "rf_activations": 277,
+            "root_prepare_ms": 22.276871,
+            "rule_checks": 35641,
+            "rup_ms": 4e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 5.991744,
+            "search_trace_equals_stock": 1,
+            "starts": 2,
+            "submit_ms": 30.285813,
+            "theory_conflicts": 13,
+            "theory_propagations": 198,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 3.357593,
+              "positive": 3,
+              "range": [
+                -3.792281,
+                9.044721
+              ],
+              "values": [
+                -3.792281,
+                3.535907,
+                -0.754314,
+                9.044721,
+                3.357593
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -1.195612,
+              "positive": 2,
+              "range": [
+                -12.081817,
+                12.988737
+              ],
+              "values": [
+                -12.081817,
+                1.916196,
+                -1.195612,
+                12.988737,
+                -8.015313
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -0.049921,
+              "positive": 1,
+              "range": [
+                -0.280865,
+                0.045371
+              ],
+              "values": [
+                -0.066642,
+                -0.049921,
+                0.045371,
+                -0.280865,
+                -0.025971
+              ]
+            }
+          },
+          "repetitions": 5
+        }
+      },
+      "stock": [
+        {
+          "cnf": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+          "graph": "adce2016b3de47b6c94988a2e3270bae5c244ca59dc60a104a9ed7bd3afaeb6e",
+          "program_ms": 164.007168,
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "FAILURE",
+              212
+            ]
+          ]
+        },
+        {
+          "cnf": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+          "graph": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+          "program_ms": 164.09741,
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "FAILURE",
+              212
+            ]
+          ]
+        }
+      ]
+    },
+    "lock12": {
+      "modes": {
+        "F": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 81,
+            "affected_instances": 0,
+            "arena_bytes": 276892,
+            "before_bridge_ms": 137.851416,
+            "bind_ms": 78.460289,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.050359,
+            "children_user_s": 0.3576600000000001,
+            "cnf_graph_ms": 39.597822,
+            "conflicts": 209,
+            "controller_cpu_ms": 249.403059,
+            "controller_with_gate_ms": 654.893882,
+            "decisions": 1335,
+            "deleted": 0,
+            "derive_ms": 20.660862,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 20201,
+            "guard_activations": 264,
+            "init_switch_ms": 9.24073,
+            "p0_wall_ms": 274.817635,
+            "p1_wall_ms": 277.180132,
+            "pair_application_ms": 553.71121,
+            "pair_controller_ms": 647.870835,
+            "parse_ms": 7.19626,
+            "peak_rss_kib": 35824,
+            "pop": 210,
+            "postcheck_ms": 7.060957,
+            "propagations": 53273,
+            "push": 1335,
+            "recovered": 0,
+            "resident_Pss_kib": 16914,
+            "retract_ms": 0.005921,
+            "rf_activations": 350,
+            "root_prepare_ms": 20.762105,
+            "rule_checks": 33798,
+            "rup_ms": 5e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 6.597009,
+            "search_trace_equals_stock": 1,
+            "starts": 3,
+            "submit_ms": 28.654078,
+            "theory_conflicts": 18,
+            "theory_propagations": 209,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "G": {
+          "median": {
+            "K_derived": 1282,
+            "O": 198,
+            "actually_reattached": 0,
+            "added": 6,
+            "affected_instances": 3197,
+            "arena_bytes": 276892,
+            "before_bridge_ms": 137.242844,
+            "bind_ms": 78.145873,
+            "cached_joins": 73,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 1405,
+            "children_system_s": 0.04904100000000011,
+            "children_user_s": 0.33639999999999937,
+            "cnf_graph_ms": 39.430698,
+            "conflicts": 209,
+            "controller_cpu_ms": 251.039815,
+            "controller_with_gate_ms": 633.323732,
+            "decisions": 1335,
+            "deleted": 10,
+            "derive_ms": 2.644401,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 20201,
+            "guard_activations": 264,
+            "init_switch_ms": 0.51962,
+            "p0_wall_ms": 279.388704,
+            "p1_wall_ms": 254.659262,
+            "pair_application_ms": 533.795632,
+            "pair_controller_ms": 626.178173,
+            "parse_ms": 7.124279,
+            "peak_rss_kib": 35824,
+            "pop": 210,
+            "postcheck_ms": 7.018926,
+            "propagations": 53273,
+            "push": 1335,
+            "recovered": 64,
+            "resident_Pss_kib": 16804,
+            "retract_ms": 4.224282,
+            "rf_activations": 350,
+            "root_prepare_ms": 7.060927,
+            "rule_checks": 2671,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 6.515278,
+            "search_trace_equals_stock": 1,
+            "starts": 3,
+            "submit_ms": 15.330988,
+            "theory_conflicts": 18,
+            "theory_propagations": 209,
+            "used_derived": 972
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 23.447917,
+              "positive": 5,
+              "range": [
+                16.722397,
+                25.379495
+              ],
+              "values": [
+                24.266292,
+                25.379495,
+                16.722397,
+                17.068833,
+                23.447917
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 19.435757,
+              "positive": 5,
+              "range": [
+                5.949117,
+                31.581686
+              ],
+              "values": [
+                19.435757,
+                28.596888,
+                5.949117,
+                11.104097,
+                31.581686
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.081731,
+              "positive": 4,
+              "range": [
+                -0.196263,
+                0.263655
+              ],
+              "values": [
+                0.081731,
+                0.109282,
+                0.02135,
+                -0.196263,
+                0.263655
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "GS": {
+          "median": {
+            "K_derived": 1282,
+            "O": 198,
+            "actually_reattached": 11,
+            "added": 6,
+            "affected_instances": 3197,
+            "arena_bytes": 702784,
+            "before_bridge_ms": 138.326755,
+            "bind_ms": 79.101592,
+            "cached_joins": 73,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 1405,
+            "children_system_s": 0.0525469999999999,
+            "children_user_s": 0.3394950000000003,
+            "cnf_graph_ms": 40.04751,
+            "conflicts": 209,
+            "controller_cpu_ms": 254.146569,
+            "controller_with_gate_ms": 639.386919,
+            "decisions": 1335,
+            "deleted": 10,
+            "derive_ms": 2.661502,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 20201,
+            "guard_activations": 264,
+            "init_switch_ms": 0.933048,
+            "p0_wall_ms": 277.799774,
+            "p1_wall_ms": 259.787272,
+            "pair_application_ms": 537.587046,
+            "pair_controller_ms": 632.877522,
+            "parse_ms": 7.17769,
+            "peak_rss_kib": 35824,
+            "pop": 210,
+            "postcheck_ms": 6.841953,
+            "propagations": 53273,
+            "push": 1335,
+            "recovered": 64,
+            "resident_Pss_kib": 17692,
+            "retract_ms": 4.259043,
+            "rf_activations": 350,
+            "root_prepare_ms": 7.118318,
+            "rule_checks": 2671,
+            "rup_ms": 2.639471,
+            "rup_proved": 0,
+            "rup_unchecked": 225,
+            "rup_unmapped": 155,
+            "rup_unproved": 3,
+            "search_ms": 6.404245,
+            "search_trace_equals_stock": 1,
+            "starts": 3,
+            "submit_ms": 18.253235,
+            "theory_conflicts": 18,
+            "theory_propagations": 209,
+            "used_derived": 972
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 17.39286,
+              "positive": 5,
+              "range": [
+                10.623526,
+                25.626889
+              ],
+              "values": [
+                18.384698,
+                25.626889,
+                17.39286,
+                14.513144,
+                10.623526
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 15.362202,
+              "positive": 4,
+              "range": [
+                -0.716325,
+                27.349252
+              ],
+              "values": [
+                17.410647,
+                27.349252,
+                13.254739,
+                15.362202,
+                -0.716325
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.164963,
+              "positive": 4,
+              "range": [
+                -0.04115,
+                0.466439
+              ],
+              "values": [
+                -0.04115,
+                0.256966,
+                0.059101,
+                0.164963,
+                0.466439
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "S": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 11,
+            "added": 81,
+            "affected_instances": 0,
+            "arena_bytes": 702784,
+            "before_bridge_ms": 137.491119,
+            "bind_ms": 82.555338,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.05557799999999999,
+            "children_user_s": 0.3561440000000001,
+            "cnf_graph_ms": 39.409478,
+            "conflicts": 209,
+            "controller_cpu_ms": 256.103234,
+            "controller_with_gate_ms": 665.278103,
+            "decisions": 1335,
+            "deleted": 0,
+            "derive_ms": 20.51986,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 20201,
+            "guard_activations": 264,
+            "init_switch_ms": 9.426313,
+            "p0_wall_ms": 278.545007,
+            "p1_wall_ms": 284.679777,
+            "pair_application_ms": 563.311947,
+            "pair_controller_ms": 658.392219,
+            "parse_ms": 7.118179,
+            "peak_rss_kib": 35824,
+            "pop": 210,
+            "postcheck_ms": 7.056378,
+            "propagations": 53273,
+            "push": 1335,
+            "recovered": 0,
+            "resident_Pss_kib": 17698,
+            "retract_ms": 0.00613,
+            "rf_activations": 350,
+            "root_prepare_ms": 20.618092,
+            "rule_checks": 33798,
+            "rup_ms": 2.652611,
+            "rup_proved": 0,
+            "rup_unchecked": 225,
+            "rup_unmapped": 155,
+            "rup_unproved": 3,
+            "search_ms": 6.476906,
+            "search_trace_equals_stock": 1,
+            "starts": 3,
+            "submit_ms": 31.375552,
+            "theory_conflicts": 18,
+            "theory_propagations": 209,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -7.404405,
+              "positive": 1,
+              "range": [
+                -13.39363,
+                6.280593
+              ],
+              "values": [
+                -6.006557,
+                6.280593,
+                -7.991795,
+                -13.39363,
+                -7.404405
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -9.600737,
+              "positive": 1,
+              "range": [
+                -15.738176,
+                8.843063
+              ],
+              "values": [
+                -8.826823,
+                8.843063,
+                -15.738176,
+                -11.921,
+                -9.600737
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.051442,
+              "positive": 4,
+              "range": [
+                -0.154483,
+                0.438929
+              ],
+              "values": [
+                0.051442,
+                0.248095,
+                -0.154483,
+                0.027931,
+                0.438929
+              ]
+            }
+          },
+          "repetitions": 5
+        }
+      },
+      "stock": [
+        {
+          "cnf": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+          "graph": "b56179815668ed6478e0de8101e7d9bd67bd98531339b04836ebaa4efc1b7c90",
+          "program_ms": 164.078257,
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "FAILURE",
+              212
+            ]
+          ]
+        },
+        {
+          "cnf": "1c72c2fb6613d75f15542426200c38e898cc1786bf7e27c64855442ef3879b4a",
+          "graph": "845de5ac2e5ad7faa14ce47ff55e9680763919204f99e1112dad647f39643060",
+          "program_ms": 164.002866,
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ]
+        }
+      ]
+    },
+    "ticket56-reviewed": {
+      "modes": {
+        "F": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 162,
+            "affected_instances": 0,
+            "arena_bytes": 3412476,
+            "before_bridge_ms": 222.740673,
+            "bind_ms": 141.236318,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.15412300000000023,
+            "children_user_s": 13.63684900000004,
+            "cnf_graph_ms": 91.2807,
+            "conflicts": 140778,
+            "controller_cpu_ms": 448.513683,
+            "controller_with_gate_ms": 14146.337063,
+            "decisions": 253903,
+            "deleted": 0,
+            "derive_ms": 182.225527,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 121752,
+            "guard_activations": 69190,
+            "init_switch_ms": 60.63716,
+            "p0_wall_ms": 1002.675687,
+            "p1_wall_ms": 12979.803402,
+            "pair_application_ms": 13975.503603,
+            "pair_controller_ms": 14145.754332,
+            "parse_ms": 20.802475,
+            "peak_rss_kib": 100236,
+            "pop": 141157,
+            "postcheck_ms": 0.600832,
+            "propagations": 95367742,
+            "push": 253903,
+            "recovered": 0,
+            "resident_Pss_kib": 83699,
+            "retract_ms": 0.01026,
+            "rf_activations": 170187,
+            "root_prepare_ms": 182.450371,
+            "rule_checks": 208274,
+            "rup_ms": 4e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 12314.246262,
+            "search_trace_equals_stock": 1,
+            "starts": 381,
+            "submit_ms": 201.949132,
+            "theory_conflicts": 1543,
+            "theory_propagations": 43212,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 0.0,
+              "positive": 0,
+              "range": [
+                0.0,
+                0.0
+              ],
+              "values": [
+                0.0,
+                0.0,
+                0.0,
+                0.0,
+                0.0
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "G": {
+          "median": {
+            "K_derived": 75,
+            "O": 3731,
+            "actually_reattached": 0,
+            "added": 132,
+            "affected_instances": 82449,
+            "arena_bytes": 3412476,
+            "before_bridge_ms": 223.327212,
+            "bind_ms": 147.124287,
+            "cached_joins": 0,
+            "cached_rows": 75,
+            "cartesian_pairs_bypassed": 75,
+            "children_system_s": 0.16318399999999933,
+            "children_user_s": 13.697114999999997,
+            "cnf_graph_ms": 90.797397,
+            "conflicts": 140778,
+            "controller_cpu_ms": 442.437701,
+            "controller_with_gate_ms": 14233.066914,
+            "decisions": 253903,
+            "deleted": 108,
+            "derive_ms": 206.59112,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 121752,
+            "guard_activations": 69190,
+            "init_switch_ms": 1.727014,
+            "p0_wall_ms": 988.651617,
+            "p1_wall_ms": 13066.861224,
+            "pair_application_ms": 14047.358933,
+            "pair_controller_ms": 14232.484003,
+            "parse_ms": 20.631112,
+            "peak_rss_kib": 93988,
+            "pop": 141157,
+            "postcheck_ms": 0.623442,
+            "propagations": 95367742,
+            "push": 253903,
+            "recovered": 0,
+            "resident_Pss_kib": 90901,
+            "retract_ms": 133.391021,
+            "rf_activations": 170187,
+            "root_prepare_ms": 349.587832,
+            "rule_checks": 206719,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 12289.771802,
+            "search_trace_equals_stock": 1,
+            "starts": 381,
+            "submit_ms": 371.095051,
+            "theory_conflicts": 1543,
+            "theory_propagations": 43212,
+            "used_derived": 75
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -110.054564,
+              "positive": 0,
+              "range": [
+                -217.896181,
+                -44.53575
+              ],
+              "values": [
+                -135.346252,
+                -110.054564,
+                -44.53575,
+                -78.011301,
+                -217.896181
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -93.292915,
+              "positive": 0,
+              "range": [
+                -207.736127,
+                -33.674909
+              ],
+              "values": [
+                -121.751587,
+                -93.292915,
+                -33.674909,
+                -71.85533,
+                -207.736127
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -4.009614,
+              "positive": 2,
+              "range": [
+                -70.926693,
+                64.00878
+              ],
+              "values": [
+                -22.00921,
+                -4.009614,
+                64.00878,
+                34.538854,
+                -70.926693
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "GS": {
+          "median": {
+            "K_derived": 75,
+            "O": 3731,
+            "actually_reattached": 0,
+            "added": 132,
+            "affected_instances": 82449,
+            "arena_bytes": 3412476,
+            "before_bridge_ms": 224.400276,
+            "bind_ms": 149.82587,
+            "cached_joins": 0,
+            "cached_rows": 75,
+            "cartesian_pairs_bypassed": 75,
+            "children_system_s": 0.15334499999999984,
+            "children_user_s": 13.721972999999991,
+            "cnf_graph_ms": 90.997384,
+            "conflicts": 140778,
+            "controller_cpu_ms": 449.670188,
+            "controller_with_gate_ms": 14243.59876,
+            "decisions": 253903,
+            "deleted": 108,
+            "derive_ms": 208.641006,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 121752,
+            "guard_activations": 69190,
+            "init_switch_ms": 1.792135,
+            "p0_wall_ms": 993.794053,
+            "p1_wall_ms": 13060.196746,
+            "pair_application_ms": 14053.990799,
+            "pair_controller_ms": 14242.983558,
+            "parse_ms": 21.41254,
+            "peak_rss_kib": 93988,
+            "pop": 141157,
+            "postcheck_ms": 0.580761,
+            "propagations": 95367742,
+            "push": 253903,
+            "recovered": 0,
+            "resident_Pss_kib": 90899,
+            "retract_ms": 135.471908,
+            "rf_activations": 170187,
+            "root_prepare_ms": 353.979212,
+            "rule_checks": 206719,
+            "rup_ms": 3e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 12293.38653,
+            "search_trace_equals_stock": 1,
+            "starts": 381,
+            "submit_ms": 376.3594,
+            "theory_conflicts": 1543,
+            "theory_propagations": 43212,
+            "used_derived": 75
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -124.768884,
+              "positive": 0,
+              "range": [
+                -145.177898,
+                -16.714302
+              ],
+              "values": [
+                -88.980666,
+                -16.714302,
+                -143.66938,
+                -124.768884,
+                -145.177898
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -111.853791,
+              "positive": 0,
+              "range": [
+                -144.859475,
+                -14.476804
+              ],
+              "values": [
+                -68.390059,
+                -14.476804,
+                -111.853791,
+                -144.859475,
+                -117.460292
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": 11.489925,
+              "positive": 3,
+              "range": [
+                -41.295559,
+                119.131378
+              ],
+              "values": [
+                11.489925,
+                119.131378,
+                -41.295559,
+                18.522722,
+                -26.269841
+              ]
+            }
+          },
+          "repetitions": 5
+        },
+        "S": {
+          "median": {
+            "K_derived": 0,
+            "O": 0,
+            "actually_reattached": 0,
+            "added": 162,
+            "affected_instances": 0,
+            "arena_bytes": 3412476,
+            "before_bridge_ms": 228.779707,
+            "bind_ms": 152.93709,
+            "cached_joins": 0,
+            "cached_rows": 0,
+            "cartesian_pairs_bypassed": 0,
+            "children_system_s": 0.14292899999999964,
+            "children_user_s": 13.631597,
+            "cnf_graph_ms": 91.865758,
+            "conflicts": 140778,
+            "controller_cpu_ms": 448.634295,
+            "controller_with_gate_ms": 14143.312822,
+            "decisions": 253903,
+            "deleted": 0,
+            "derive_ms": 192.132188,
+            "dynamic_co_pairs": 0,
+            "fired_instances": 121752,
+            "guard_activations": 69190,
+            "init_switch_ms": 64.956563,
+            "p0_wall_ms": 982.575191,
+            "p1_wall_ms": 12971.479582,
+            "pair_application_ms": 13957.864115,
+            "pair_controller_ms": 14142.659219,
+            "parse_ms": 20.849283,
+            "peak_rss_kib": 100268,
+            "pop": 141157,
+            "postcheck_ms": 0.605101,
+            "propagations": 95367742,
+            "push": 253903,
+            "recovered": 0,
+            "resident_Pss_kib": 83725,
+            "retract_ms": 0.01024,
+            "rf_activations": 170187,
+            "root_prepare_ms": 192.352952,
+            "rule_checks": 208274,
+            "rup_ms": 4e-05,
+            "rup_proved": 0,
+            "rup_unchecked": 0,
+            "rup_unmapped": 0,
+            "rup_unproved": 0,
+            "search_ms": 12276.359292,
+            "search_trace_equals_stock": 1,
+            "starts": 381,
+            "submit_ms": 211.685656,
+            "theory_conflicts": 1543,
+            "theory_propagations": 43212,
+            "used_derived": 0
+          },
+          "paired": {
+            "F_minus_mode_P1_ms": {
+              "median": -71.049971,
+              "positive": 2,
+              "range": [
+                -147.79474,
+                126.619829
+              ],
+              "values": [
+                -71.049971,
+                54.084977,
+                -83.354606,
+                126.619829,
+                -147.79474
+              ]
+            },
+            "F_minus_mode_pair_ms": {
+              "median": -34.21488,
+              "positive": 2,
+              "range": [
+                -109.327398,
+                124.914226
+              ],
+              "values": [
+                -55.188222,
+                74.444055,
+                -34.21488,
+                124.914226,
+                -109.327398
+              ]
+            },
+            "F_minus_mode_search_ms": {
+              "median": -45.919169,
+              "positive": 2,
+              "range": [
+                -110.051061,
+                133.761601
+              ],
+              "values": [
+                -45.919169,
+                78.556773,
+                -46.000573,
+                133.761601,
+                -110.051061
+              ]
+            }
+          },
+          "repetitions": 5
+        }
+      },
+      "stock": [
+        {
+          "cnf": "7b726c4c2b7be6179d46ff4e797138738b2f88dd06c135ed55a4d2a2f02b0247",
+          "graph": "7969837eedc6aaa0add99b568e706b9396b5cfdbf1523aa001f80a0b97ddbce0",
+          "program_ms": 765.120975,
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ]
+        },
+        {
+          "cnf": "02221d15e346318a26ffe8c3efc54fd0d057da40120ef0eac81adcaca5959934",
+          "graph": "b9e6676091924b8636b52f727e8e50e0cd1c4250de6155d7195f7ed3f37abbdb",
+          "program_ms": 12734.851623,
+          "properties": [
+            [
+              "reach_error.assertion.1",
+              "SUCCESS",
+              0
+            ]
+          ]
+        }
+      ]
+    }
+  },
+  "native_release": {
+    "ACCEPT_NATIVE_RESTRICTED": 200
+  },
+  "paths": 9476,
+  "unique": 3974,
+  "witnesses": {
+    "EXPLICIT_SC_ORDER": 8
+  }
+}

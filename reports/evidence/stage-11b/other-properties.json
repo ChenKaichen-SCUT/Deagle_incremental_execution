@@ -1,0 +1,106 @@
+{
+  "batch_retained-new": {
+    "classification": "ASSERTION_VIOLATION",
+    "code": 10,
+    "failure_messages": [],
+    "properties": [
+      [
+        "main.assertion.1",
+        "FAILURE"
+      ]
+    ]
+  },
+  "batch_retained-old": {
+    "classification": "ASSERTION_VIOLATION",
+    "code": 10,
+    "failure_messages": [],
+    "properties": [
+      [
+        "main.assertion.1",
+        "FAILURE"
+      ]
+    ]
+  },
+  "fib_updates_8-new": {
+    "classification": "BOUNDED_PASS",
+    "code": 0,
+    "failure_messages": [],
+    "properties": [
+      [
+        "main.assertion.1",
+        "SUCCESS"
+      ]
+    ]
+  },
+  "fib_updates_8-old": {
+    "classification": "ASSERTION_VIOLATION",
+    "code": 10,
+    "failure_messages": [],
+    "properties": [
+      [
+        "main.assertion.1",
+        "FAILURE"
+      ]
+    ]
+  },
+  "lock01-new": {
+    "classification": "ASSERTION_VIOLATION",
+    "code": 10,
+    "failure_messages": [],
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "FAILURE"
+      ]
+    ]
+  },
+  "lock01-old": {
+    "classification": "ASSERTION_VIOLATION",
+    "code": 10,
+    "failure_messages": [],
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "FAILURE"
+      ]
+    ]
+  },
+  "lock12-new": {
+    "classification": "BOUNDED_PASS",
+    "code": 0,
+    "failure_messages": [],
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "SUCCESS"
+      ]
+    ]
+  },
+  "lock12-old": {
+    "classification": "ASSERTION_VIOLATION",
+    "code": 10,
+    "failure_messages": [],
+    "properties": [
+      [
+        "reach_error.assertion.1",
+        "FAILURE"
+      ]
+    ]
+  },
+  "stack-new": {
+    "classification": "UNINTERPRETABLE",
+    "code": 6,
+    "failure_messages": [
+      "pointer handling for concurrency is unsound"
+    ],
+    "properties": []
+  },
+  "stack-old": {
+    "classification": "UNINTERPRETABLE",
+    "code": 6,
+    "failure_messages": [
+      "pointer handling for concurrency is unsound"
+    ],
+    "properties": []
+  }
+}
