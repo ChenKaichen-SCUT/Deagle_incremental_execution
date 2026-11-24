@@ -1,0 +1,5 @@
+Linux 5.15.0-186-generic x86_64 GNU/Linux
+8
+MemTotal:       31498544 kB
+g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+Python 3.10.12

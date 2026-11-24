@@ -1,0 +1,9 @@
+*.json -text
+*.sha256 -text
+*.txt -text
+*.tsv -text
+*.patch -text -whitespace
+*.gz binary
+*.zip binary
+*.part binary
+*.md text eol=lf
