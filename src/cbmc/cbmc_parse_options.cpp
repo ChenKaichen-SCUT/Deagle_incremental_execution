@@ -443,13 +443,25 @@ int cbmc_parse_optionst::doit()
 
   optionst options;
   get_command_line_options(options);
-  if(cmdline.isset("d1-manifest") || cmdline.isset("d2-proof"))
+  if(cmdline.isset("d3-layouts"))
+  {
+    if(!cmdline.isset("d1-manifest")) throw std::runtime_error("--d3-layouts requires --d1-manifest");
+    dependency_manifest::record_layouts=true;
+  }
+  if(cmdline.isset("d2-proof") && cmdline.isset("d3-proof"))
+    throw std::runtime_error("select a single proof archive version");
+  if(cmdline.isset("d1-manifest") || cmdline.isset("d2-proof") || cmdline.isset("d3-proof"))
   {
     if(!options.get_bool_option("deagle-closure") || options.get_bool_option("refined-pointer-analysis") ||
        (!options.get_option("mm").empty() && options.get_option("mm") != "sc"))
       throw std::runtime_error("dependency recording requires native SC Closure and single-pass symex");
     if(cmdline.isset("d2-proof"))
       dependency_manifest::proof_path=cmdline.get_value("d2-proof");
+    if(cmdline.isset("d3-proof"))
+    {
+      dependency_manifest::theory_proofs=true;
+      dependency_manifest::proof_path=cmdline.get_value("d3-proof");
+    }
   }
   if(cmdline.isset("d1-manifest"))
   {
@@ -1015,7 +1027,9 @@ void cbmc_parse_optionst::help()
     "\n"
     "Backend options:\n"
     HELP_CONFIG_BACKEND
+    " --d3-proof FILE              record native Boolean and SC Closure proofs in a new file\n"
     " --d2-proof FILE              record the native Boolean proof DAG in a new file\n"
+    " --d3-layouts                 include native aggregate layout evidence in the identity manifest\n"
     " --d1-manifest FILE           write D1 identities and scoped inputs to a new file\n"
     HELP_SOLVER
     HELP_STRING_REFINEMENT_CBMC

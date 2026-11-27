@@ -11,6 +11,9 @@ reports/evidence/d1/**/*.txt text eol=lf
 reports/evidence/d1/**/*.sha256 text eol=lf
 reports/*.md text eol=lf
 d2/** text eol=lf
+d3/** text eol=lf
+tests/d3/** text eol=lf
+reports/evidence/d3/** -text
 tests/d2/** text eol=lf
 reports/evidence/d2/**/*.tsv text eol=lf
 reports/evidence/d2/**/*.txt text eol=lf

@@ -51,10 +51,10 @@ def clauses(native):
                 yield scope,list(map(int,lits))
 
 
-def prepare(case,out,self_root=None):
+def prepare(case,out,self_root=None,*,pair=None,native=None):
     d1=BASE/"reports/evidence/d1"
-    pair=d1/"pairs"/case
-    native=d1/"runs/record"/case/"P0/native.tsv.gz"
+    pair=pair or d1/"pairs"/case
+    native=native or d1/"runs/record"/case/"P0/native.tsv.gz"
     var,matched=metadata(pair)
     expected=json.loads((pair/"summary.json").read_text())["native_sha256"][0]
     h=hashlib.sha256()

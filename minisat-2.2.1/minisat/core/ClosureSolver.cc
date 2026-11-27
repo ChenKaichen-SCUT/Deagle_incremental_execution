@@ -42,6 +42,17 @@ void ClosureSolver::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt
     init();
 }
 
+void ClosureSolver::record_early_conflict()
+{
+    if(!proof) return;
+    if(proof->d3 && graph.conflict_proof && graph.conflict_lv.empty())
+    {
+        vec<Lit> empty;
+        proof->terminals.push_back(proof->lemma(TheoryConflict,empty,graph.conflict_proof));
+    }
+    else proof->theoryEmpty(); // early native return can still use external root assignments
+}
+
 void ClosureSolver::set_graph()
 {
     oc_edge_tablet race_table;
@@ -97,7 +108,7 @@ void ClosureSolver::set_graph()
         if(graph.add_guard_literal(guard_literal, u))
         {
             std::cout << "WARNING: find cycle during set_graph\n";
-            if(proof) proof->theoryEmpty();
+            record_early_conflict();
             ok = false;
         }
 
@@ -149,7 +160,7 @@ void ClosureSolver::set_graph()
         if(graph.activate_edge(u, v, OC_PO, closure_empty_reason))
         {
             std::cout << "WARNING: Find cycle during set_graph\n";
-            if(proof) proof->theoryEmpty();
+            record_early_conflict();
             ok = false;
         }
     }
@@ -230,7 +241,7 @@ lbool ClosureSolver::search(int nof_conflicts)
 
     if(graph.use_available_info())
     {
-        if(proof) proof->theoryEmpty();
+        record_early_conflict();
         std::cout << "WARNING: use_available_info find cycle at the very start\n";
         return l_False;
     }
@@ -408,6 +419,7 @@ lbool ClosureSolver::solve_()
 CRef ClosureSolver::propagate()
 {
     literals_to_assign.clear();
+    assignment_proofs.clear();
     assigned_literals.clear();
 
     CRef confl = CRef_Undef;
@@ -539,7 +551,9 @@ CRef ClosureSolver::propagate()
                 minisat_lv.push(~l);
 
             confl = ca.alloc(minisat_lv, true);
-            if(proof) proof->bind(confl,proof->opaque(TheoryConflict,minisat_lv));
+            if(proof) proof->bind(confl,proof->d3 ?
+                proof->lemma(TheoryConflict,minisat_lv,graph.conflict_proof) :
+                proof->opaque(TheoryConflict,minisat_lv));
         }
         else if(!literals_to_assign.empty())//add literals propagated by unit edge
         {
@@ -548,6 +562,7 @@ CRef ClosureSolver::propagate()
         }
 
         literals_to_assign.clear();
+        assignment_proofs.clear();
         assigned_literals.clear();
     }
     //our method ends
@@ -697,26 +712,28 @@ void ClosureSolver::show_rf()
     graph.show_rf();
 }
 
-void ClosureSolver::assign_literal(Lit l, literal_set& lv)
+void ClosureSolver::assign_literal(Lit l, literal_set& lv, ProofId reason)
 {
     if(assigned_literals.find(l) != assigned_literals.end())
         return;
 
     literals_to_assign.push_back(std::make_pair(l, lv));
+    if(proof && proof->d3) assignment_proofs.push_back(reason);
     assigned_literals.insert(l);
 }
 
-void ClosureSolver::assign_literal(Lit l, literal_vector& lv)
+void ClosureSolver::assign_literal(Lit l, literal_vector& lv, ProofId reason)
 {
     if(assigned_literals.find(l) != assigned_literals.end())
         return;
 
     literal_set ls(lv.begin(), lv.end());
-    assign_literal(l, ls);
+    assign_literal(l, ls, reason);
 }
 
 void ClosureSolver::apply_literal_assignment()
 {
+    size_t assignment_index=0;
     for(auto p : literals_to_assign)
     {
         if(OC_VERBOSITY >= 1)
@@ -739,18 +756,22 @@ void ClosureSolver::apply_literal_assignment()
                 learnt_clause.push(lit);
 
 
+        ProofId cert=0;
+        if(proof)
+            cert=proof->d3 ? proof->lemma(TheoryReason,learnt_clause,assignment_proofs.at(assignment_index++)) :
+                             proof->opaque(TheoryReason,learnt_clause);
         if (learnt_clause.size() == 1)
         {
             if(OC_VERBOSITY >= 1)
                 std::cout << learnt_clause[0].x << " is really assigned\n";
-            if(proof) proof->tag(proof->opaque(TheoryReason,learnt_clause),ExplicitUnit);
+            if(proof) proof->tag(cert,ExplicitUnit);
             uncheckedEnqueue(learnt_clause[0]);
             theory_propagation++;
         }
         else
         {
             CRef cr = ca.alloc(learnt_clause, true);
-            if(proof) proof->bind(cr,proof->opaque(TheoryReason,learnt_clause));
+            if(proof) proof->bind(cr,cert);
             learnts.push(cr);
             attachClause(cr);
             claBumpActivity(ca[cr]);
@@ -767,6 +788,7 @@ void ClosureSolver::apply_literal_assignment()
     }
 
     literals_to_assign.clear();
+    assignment_proofs.clear();
     assigned_literals.clear();
 }
 

@@ -129,20 +129,21 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     for arg in ("old","new","boolean_diff","new_directory"):
         parser.add_argument(arg,type=Path)
+    parser.add_argument("--d3-mapping",action="store_true",help="use native aggregate layouts and certified duplicate gate contexts")
     args = parser.parse_args()
     out, engine = args.new_directory.resolve(),args.boolean_diff.resolve()
     out.mkdir(parents=True,exist_ok=False)
     start = time.monotonic()
     keys = Keys()
     paths = [args.old.resolve(),args.new.resolve()]
-    models = [Model(p,keys) for p in paths]
+    models = [Model(p,keys,args.d3_mapping) for p in paths]
     anchors = [out/f"P{s}.anchors" for s in (0,1)]
     for s in (0,1): models[s].write_anchors(models[1-s],anchors[s])
     with gzip.open(out/"aliases.jsonl.gz","wt") as file:
         for side,m in enumerate(models):
             for key, lits in sorted(m.alias_lits.items()):
                 jsonline(file,[side,key,sorted(lits)])
-    subprocess.run([engine,*paths,*anchors,out],check=True)
+    subprocess.run([engine,*paths,*anchors,out, *(["--d3-mapping"] if args.d3_mapping else [])],check=True)
     maps, variables = one_var_table(out/"variables.tsv",models)
     clauses = compare_clauses(out)
     theory = compare_theory(models,maps,out)

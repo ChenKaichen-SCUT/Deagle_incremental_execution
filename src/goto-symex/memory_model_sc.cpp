@@ -51,6 +51,11 @@ operator()(symex_target_equationt &equation, message_handlert &message_handler)
                  !base->is_thread_local && lhs.get_level_0().empty() && lhs.get_level_1().empty();
       }
       int ctx = it->source.d1_context == -2 ? -2 : dm::checked_context(it->source);
+      if(dm::record_layouts && global && type.empty() && !symbol.empty())
+      {
+        const unsigned layout=dm::aggregate_layout(lhs.type(),ns);
+        if(layout) dm::row("V_LAYOUT",{symbol,std::to_string(layout)});
+      }
       if(event)
         dm::row("E", {get_name(it), std::to_string(ctx), role, object, type, global ? "static" : "instance"});
       if(!symbol.empty())

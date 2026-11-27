@@ -636,6 +636,12 @@ void run_property_decider(
     {
       const auto &bits = entry.second.literal_map;
       auto type = dependency_manifest::scalar_type(entry.second.type);
+      if(dependency_manifest::record_layouts && type.empty())
+      {
+        const unsigned layout=dependency_manifest::recorded_layout(entry.second.type);
+        if(layout && !bits.empty() && bv.boolbv_width(entry.second.type)==bits.size())
+          dependency_manifest::row("A_LAYOUT",{id2string(entry.first),std::to_string(layout),std::to_string(bits.size())});
+      }
       for(size_t bit = 0; bit < bits.size(); ++bit)
         dependency_manifest::row("A", {id2string(entry.first), type, std::to_string(bit),
                                         std::to_string(int(bits[bit].get()))});

@@ -5,6 +5,7 @@
 #include <cstdint>
 #include <cstdio>
 #include <string>
+#include <initializer_list>
 #include <vector>
 
 namespace Minisat
@@ -14,9 +15,16 @@ using ProofId = uint32_t;
 enum ProofKind : uint32_t
 {
     Missing, BooleanInput, QueryInput, UnknownInput, Shortened, RootUnit, Learned,
-    TheoryConflict, TheoryReason, DynamicCO, RootConflict, TheoryEmpty
+    TheoryConflict, TheoryReason, DynamicCO, RootConflict, TheoryEmpty,
+    TheoryDeclaration, TheoryInference, TheoryLemma
 };
-enum ProofFlag : uint32_t { Theory = 1, Query = 2, Incomplete = 4 };
+enum ProofFlag : uint32_t { Theory = 1, Query = 2, Incomplete = 4, CertifiedTheory = 8 };
+enum TheoryOp : uint32_t
+{
+    Config, PODecl, APODecl, RFDecl, GuardDecl, SchemaDecl, AddressDecl, BlockDecl,
+    POEdge, APOEdge, RFEdge, GuardOn, Lift, Transitive, WSRule, FRRule, CycleRule, PreventRF, TripletRule
+};
+struct TheoryRecord { ProofId id; TheoryOp op; int32_t a,b,c; };
 enum InputAction : uint32_t { Accepted, Satisfied, Tautology, AlreadyInconsistent };
 enum AssignmentSource : uint32_t { ClauseReason, ExplicitUnit, Decision, Assumption, Unexplained };
 struct ProofNode { uint32_t lit_end, edge_end, kind, flags; };
@@ -40,6 +48,17 @@ class ProofStore
     AssignmentSource next_source = Unexplained;
     FILE *output = nullptr;
     const char *scope;
+    std::vector<uint32_t> theory_slots, condition_by_proof, condition_slots, theory_marks, discharge_cache;
+    struct Condition { uint32_t a,b; }; // b==UINT32_MAX means one raw assumption literal
+    std::vector<Condition> conditions{{0,0}};
+    uint32_t internCondition(uint32_t a,uint32_t b);
+    std::vector<int> expected_condition, actual_condition;
+    std::vector<ProofId> condition_stack;
+    std::vector<ProofEdge> theory_parents;
+    size_t theoryIndex(ProofId) const;
+    ProofId internTheory(ProofKind, TheoryOp, int, int, int, const ProofId *, size_t);
+    void growTheoryIndex();
+
     void addReason(Solver &, CRef, Lit);
     void appendRoots();
     ProofId root(int assigned) const;
@@ -61,6 +80,14 @@ public:
     std::vector<EvictedLearn> evicted;
     std::vector<SatisfiedRemoval> satisfied_removals;
     std::vector<ProofId> residents, root_units, terminals, offsets, children;
+    bool d3 = false;
+    std::vector<char> graph_receipt; // one exact static declaration stream per native graph
+    uint64_t discharge_stats[3] = {}; // missing certificate, condition mismatch, exact match
+    std::vector<TheoryRecord> theory_records;
+    ProofId decl(TheoryOp op,int a=-1,int b=-1,int c=-1);
+    ProofId rule(TheoryOp op,int a,int b,int c,const std::vector<ProofId> &parents);
+    ProofId rule(TheoryOp op,int a,int b,int c,std::initializer_list<ProofId> parents);
+    ProofId lemma(ProofKind boundary,const vec<Lit> &actual,ProofId reason);
     uint64_t stats[StatCount] = {};
     ProofStore(); // in-memory graph or archive reader
     ProofStore(const std::string &path, const char *scope);
@@ -71,7 +98,8 @@ public:
     int read(const std::string &path);
     void buildReverse();
     std::vector<uint8_t> invalidate(const std::vector<ProofId> &seeds) const;
-    std::vector<uint8_t> invalidatedInputs(const std::vector<uint8_t> &matched) const;
+    std::vector<uint8_t> invalidatedInputs(const std::vector<uint8_t> &matched,
+                                          const std::vector<uint8_t> &declaration_matched={}) const;
     uint32_t litBegin(ProofId i) const { return i ? nodes[i-1].lit_end : 0; }
     uint32_t edgeBegin(ProofId i) const { return i ? nodes[i-1].edge_end : 0; }
     void input(const vec<Lit> &);

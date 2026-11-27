@@ -128,11 +128,87 @@ Lit closure::check_tail_head_to_inactive_lit(int a, int b)
     return tail_head_to_inactive_lit[a][b];
 }
 
+// Certificates describe conditional order, never a Boolean assertion that the
+// current trail must hold. Only the final native reason discharges conditions.
+ProofId closure::rf_order(int write, int read, Lit binding) const
+{
+    auto found=rf_orders.find({write,read});
+    auto reverse=lit_to_edge.find(binding);
+    if(found==rf_orders.end() || found->second.first!=binding.x ||
+       observed_pair_binding(write,read)!=binding || reverse==lit_to_edge.end() ||
+       reverse->second.first!=std::make_pair(write,read) || reverse->second.second!=OC_RF)
+        return 0;
+    return found->second.second;
+}
+
+int closure::proof_rep(int event) const
+{
+    while(nodes[event].atomic_parent!=event) event=nodes[event].atomic_parent;
+    return event;
+}
+
+ProofId closure::lifted(ProofId reason, int old_from, int old_to, int from, int to)
+{
+    if(!reason || (from==old_from && to==old_to)) return reason;
+    const int a=proof_rep(old_from), b=proof_rep(old_to);
+    if(a==b || a!=proof_rep(from) || b!=proof_rep(to)) return 0;
+    return recorder->rule(Lift,from,to,-1,{reason,recorder->decl(BlockDecl,a),recorder->decl(BlockDecl,b)});
+}
+
+ProofId closure::active_order(int from, int to)
+{
+    int a=proof_rep(from), b=proof_rep(to);
+    if(a==b)
+    {
+        auto it=atomic_orders.find({from,to});
+        return it==atomic_orders.end() ? 0 : it->second;
+    }
+    int slot=nodes[a].out_bitset[b];
+    if(slot<0) return 0;
+    return lifted(nodes[a].out[slot].proof,a,b,from,to);
+}
+
+ProofId closure::competition(bool ws, int w1, int w2, int read, ProofId rf)
+{
+    if(!recorder || !rf || w1==w2 || nodes[w1].address!=nodes[w2].address ||
+       nodes[w1].address!=nodes[read].address || !nodes[w1].guard_lighted ||
+       !nodes[w2].guard_lighted || !nodes[w2].is_write) return 0;
+    const ProofId order=ws ? active_order(w2,read) : active_order(w1,w2);
+    return recorder->rule(ws ? WSRule : FRRule,w1,w2,read,
+        {rf,order,guards[w1],guards[w2],recorder->decl(SchemaDecl,w2),
+         recorder->decl(AddressDecl,std::min(w1,w2),std::max(w1,w2))});
+}
+
+void closure::atomic_proofs(int from, int to)
+{
+    auto direct=recorder->rule(APOEdge,from,to,-1,{config,recorder->decl(APODecl,from,to)});
+    // These are precisely the directed pairs installed by union_join below.
+    for(int pred : nodes[from].atomic_in)
+        for(int succ : nodes[to].atomic_out)
+        {
+            if(pred==succ || atomic_orders.count({pred,succ})) continue;
+            std::vector<ProofId> chain;
+            if(pred!=from) chain.push_back(active_order(pred,from));
+            chain.push_back(direct);
+            if(succ!=to) chain.push_back(active_order(to,succ));
+            atomic_orders[{pred,succ}]=chain.size()==1 ? direct :
+                recorder->rule(Transitive,pred,succ,-1,chain);
+        }
+}
+
 closure::closure() {}
 
 void closure::init(ClosureSolver* _solver)
 {
     solver = _solver;
+    recorder = solver->proof && solver->proof->d3 ? solver->proof : nullptr;
+    if(recorder)
+    {
+        config=recorder->decl(Config);
+        atomic_orders.clear();
+        rf_orders.clear();
+        guards.clear();
+    }
     nodes = std::vector<closure_nodet>();
 }
 
@@ -163,6 +239,7 @@ int closure::get_node(std::string name)
     }
 
     nodes.push_back(closure_nodet(name, address_id, new_node_id));
+    if(recorder) guards.push_back(0);
 
     if(OC_VERBOSITY >= 1)
         std::cout << "creating " << name << " " << address << "(" << address_id << ")\n";
@@ -199,6 +276,10 @@ void closure::init_reasonable_edge(int u, int v, edge_kindt kind, Lit l)
     {
         nodes[u].is_write = true;
         nodes[v].is_read = true;
+        if(recorder && u!=v && nodes[u].address==nodes[v].address && l.x>=0)
+            rf_orders[{u,v}]={l.x,recorder->rule(RFEdge,u,v,-1,
+                {config,recorder->decl(RFDecl,u,v,l.x),recorder->decl(SchemaDecl,u),
+                 recorder->decl(SchemaDecl,v),recorder->decl(AddressDecl,std::min(u,v),std::max(u,v))})};
     }
 }
 
@@ -217,6 +298,9 @@ bool closure::add_guard_literal(Lit guard_literal, int u)
 {
     nodes[u].is_write = true;
     nodes[u].guard = guard_literal;
+    if(recorder)
+        guards[u]=guard_literal.x < -1 ? 0 : recorder->rule(GuardOn,u,-1,-1,
+            {config,recorder->decl(GuardDecl,u,-1,guard_literal.x)});
 
     if(guard_literal.x == -1)
         return light_guard(u);
@@ -341,6 +425,13 @@ bool closure::activate_edge(int vi, int wi, edge_kindt kind, literal_vector& rea
         std::cout << "activating (" << vi << ", " << wi << ", " << kind_to_str(kind) << ")\n";
 
     closure_edget edge(vi, wi, kind, reason);
+    if(recorder)
+    {
+        if(kind==OC_PO && reason.empty())
+            edge.proof=recorder->rule(POEdge,vi,wi,-1,{config,recorder->decl(PODecl,vi,wi)});
+        else if(kind==OC_RF && reason.size()==1)
+            edge.proof=rf_order(vi,wi,reason.front());
+    }
     if(activate_directed_edge(edge))
         return true;
     
@@ -431,6 +522,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                 process_reason(co_reason);
 
                 closure_edget co(w2, w1, OC_NA, co_reason);
+                if(recorder) co.proof=competition(true,w1,w2,r,edge.proof);
 
                 if(OC_VERBOSITY >= 1)
                 {
@@ -476,6 +568,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                 process_reason(fr_reason);
 
                 closure_edget fr(r, w2, OC_NA, fr_reason);
+                if(recorder) fr.proof=competition(false,w1,w2,r,edge.proof);
 
                 if(OC_VERBOSITY >= 1)
                 {
@@ -493,6 +586,8 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
     int from_rep = union_find_parent(edge.from);
     int to_rep = union_find_parent(edge.to);
     closure_edget edge_rep(from_rep, to_rep, edge.kind, edge.reason);
+    if(recorder && from_rep!=to_rep && !has_edge(from_rep,to_rep))
+        edge_rep.proof=lifted(edge.proof,edge.from,edge.to,from_rep,to_rep);
 
     if(from_rep == to_rep)
     {
@@ -503,6 +598,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle\n";
 
             conflict_lv = edge.reason;
+            if(recorder) conflict_proof=recorder->rule(CycleRule,edge.from,edge.to,-1,{edge.proof});
             return true;
         }
         //or an intra-atomic edge contradicting po
@@ -512,6 +608,8 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle due to apo\n";
 
             conflict_lv = edge.reason;
+            if(recorder) conflict_proof=recorder->rule(CycleRule,edge.from,edge.to,-1,
+                {edge.proof,active_order(edge.to,edge.from)});
             return true;
         }
         //an intra-atomic edge obeying po is not considered
@@ -558,6 +656,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                         std::cout << "race" << from << " " << to << " should be set false but already true\n";
 
                     conflict_lv = conflict_reason;
+                    conflict_proof=0; // race rules have no supported declaration yet
                     return true;
                 }
                 else if(race_lit_status == l_Undef)
@@ -633,7 +732,11 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                     if(OC_VERBOSITY >= 1)
                         std::cout << "before preventive propagation, set rf" << to << " " << from << " false\n";
 
-                    solver->assign_literal(~rf_lit_cand, unit_lv);
+                    ProofId reason_id=0;
+                    if(recorder)
+                        reason_id=recorder->rule(PreventRF,to,from,-1,
+                            {active_order(from,to),rf_order(to,from,rf_lit_cand)});
+                    solver->assign_literal(~rf_lit_cand, unit_lv, reason_id);
                 }
             }
 #endif // (PROPAGATE_INTENSITY >= 0)
@@ -658,6 +761,20 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                     process_reason(na_reason);
 
                     closure_edget closure_edge(back_edge.from, front_edge.to, OC_NA, na_reason);
+                    if(recorder)
+                    {
+                        // The identity/identity combination was skipped by has_edge.
+                        int src=back_edge.from, dst=front_edge.to;
+                        if(src==from_rep)
+                            closure_edge.proof=recorder->rule(Transitive,src,dst,-1,
+                                {edge_rep.proof,front_edge.proof});
+                        else if(dst==to_rep)
+                            closure_edge.proof=recorder->rule(Transitive,src,dst,-1,
+                                {back_edge.proof,edge_rep.proof});
+                        else
+                            closure_edge.proof=recorder->rule(Transitive,src,dst,-1,
+                                {back_edge.proof,edge_rep.proof,front_edge.proof});
+                    }
 
                     if(OC_VERBOSITY >= 1)
                         std::cout << edge.from << " " << edge.to << " propagate " << closure_edge.from << " " << closure_edge.to << " by transitivity\n";
@@ -698,6 +815,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                             process_reason(co_reason);
 
                             closure_edget co(w2, w1, OC_NA, co_reason);
+                            if(recorder) co.proof=competition(true,w1,w2,r,edge_w1_r.proof);
 
                             if (OC_VERBOSITY >= 1)
                             {
@@ -743,6 +861,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                         process_reason(fr_reason);
 
                         closure_edget fr(r, w2, OC_NA, fr_reason);
+                        if(recorder) fr.proof=competition(false,w1,w2,r,edge_w1_r.proof);
 
                         //process_reason(fr_reason);
 
@@ -768,6 +887,7 @@ bool closure::activate_apo(int u, int v) //always before activating other edges
     // if(union_check(u, v))
     //     std::cout << "WARNING: " << u << " and " << v << " are already together\n";
 
+    if(recorder) atomic_proofs(u,v);
     union_join(u, v);
 
     return false;
@@ -833,6 +953,7 @@ bool closure::light_guard(int u)
                 process_reason(co_reason);
 
                 closure_edget co(w2, w1, OC_NA, co_reason);
+                if(recorder) co.proof=competition(true,w1,w2,r,edge_w1_r.proof);
 
                 if (OC_VERBOSITY >= 1)
                 {
@@ -890,6 +1011,7 @@ bool closure::light_guard(int u)
                     process_reason(co_reason);
 
                     closure_edget co(w2, w1, OC_NA, co_reason);
+                    if(recorder) co.proof=competition(true,w1,w2,r,edge_w1_r.proof);
 
                     if(OC_VERBOSITY >= 1)
                     {
@@ -942,6 +1064,7 @@ bool closure::light_guard(int u)
                 process_reason(fr_reason);
 
                 closure_edget fr(r, w2, OC_NA, fr_reason);
+                if(recorder) fr.proof=competition(false,w1,w2,r,edge_w1_r.proof);
 
                 if(OC_VERBOSITY >= 1)
                 {
@@ -996,6 +1119,7 @@ bool closure::light_guard(int u)
                 process_reason(fr_reason);
 
                 closure_edget fr(r, w2, OC_NA, fr_reason);
+                if(recorder) fr.proof=competition(false,w1,w2,r,edge_w1_r.proof);
 
                 if (OC_VERBOSITY >= 1)
                 {

@@ -3,6 +3,14 @@
 #include <goto-programs/goto_functions.h>
 #include <util/std_expr.h>
 #include <map>
+#include <set>
+#include <limits>
+#include <util/arith_tools.h>
+#include <util/c_types.h>
+#include <util/bitvector_types.h>
+#include <util/config.h>
+#include <util/namespace.h>
+#include <util/symbol.h>
 
 namespace dependency_manifest
 {
@@ -25,6 +33,91 @@ std::string scalar_type(const typet &type)
   if(type.id() == ID_signedbv || type.id() == ID_unsignedbv || type.id() == ID_c_bool)
     return id2string(type.id()) + ":" + id2string(type.get(ID_width));
   return {};
+}
+
+// The target ABI, ordered components and all reachable tag definitions participate
+// in the key. Memoizing tag definitions separately handles recursive pointer types.
+static std::map<typet, unsigned> layouts;
+static std::string describe_type(const irept &node, std::set<std::string> &tags)
+{
+  if(node.id()==ID_struct_tag || node.id()==ID_union_tag || node.id()==ID_c_enum_tag)
+    tags.insert(id2string(node.get(ID_identifier)));
+  std::vector<std::string> children, fields;
+  for(const auto &child : node.get_sub()) children.push_back(describe_type(child,tags));
+  std::map<std::string,std::string> named;
+  for(const auto &item : node.get_named_sub())
+    if(item.first!=ID_C_source_location) // debug provenance includes the run's working directory
+      named.emplace(id2string(item.first),describe_type(item.second,tags));
+  for(const auto &item : named) fields.push_back(tuple({item.first,item.second}));
+  return tuple({id2string(node.id()),tuple(children),tuple(fields)});
+}
+
+unsigned recorded_layout(const typet &type)
+{
+  auto p=layouts.find(type);
+  return p==layouts.end() ? 0 : p->second;
+}
+
+// A stable storage layout alone cannot identify a pointer object number. Keep
+// only a low integer prefix supported by every union view on little-endian targets.
+static std::size_t integer_prefix(const typet &t,const namespacet &ns)
+{
+  if(t.id()==ID_signedbv || t.id()==ID_unsignedbv) return to_bitvector_type(t).get_width();
+  if(t.id()==ID_struct_tag) return integer_prefix(ns.follow_tag(to_struct_tag_type(t)),ns);
+  if(t.id()==ID_union_tag) return integer_prefix(ns.follow_tag(to_union_tag_type(t)),ns);
+  if(t.id()==ID_struct || t.id()==ID_union)
+  {
+    const auto &members=to_struct_union_type(t).components();
+    if(members.empty()) return 0;
+    std::size_t prefix=std::numeric_limits<std::size_t>::max();
+    for(const auto &member:members)
+    {
+      if(member.get_is_padding()) return 0;
+      prefix=std::min(prefix,integer_prefix(member.type(),ns));
+      if(t.id()==ID_struct || !prefix) break;
+    }
+    return prefix;
+  }
+  if(t.id()==ID_array)
+  {
+    const auto &array=to_array_type(t);
+    const auto &element=array.element_type();
+    if(element.id()!=ID_signedbv && element.id()!=ID_unsignedbv) return 0;
+    const auto count=numeric_cast<std::size_t>(array.size());
+    const auto width=to_bitvector_type(element).get_width();
+    if(count.has_value() && width && *count<=std::numeric_limits<std::size_t>::max()/width) return *count*width;
+  }
+  return 0;
+}
+
+unsigned aggregate_layout(const typet &type,const namespacet &ns)
+{
+  if(type.id()!=ID_struct_tag && type.id()!=ID_union_tag && type.id()!=ID_struct && type.id()!=ID_union)
+    return 0;
+  const auto inserted=layouts.emplace(type,0);
+  if(!inserted.second) return inserted.first->second;
+  std::set<std::string> pending;
+  std::map<std::string,std::string> tags;
+  const auto root=describe_type(type,pending);
+  while(!pending.empty())
+  {
+    auto name=*pending.begin();
+    pending.erase(pending.begin());
+    if(tags.count(name)) continue;
+    const symbolt *sym=nullptr;
+    if(ns.lookup(name,sym) || !sym->is_type || sym->type.is_nil()) return 0;
+    tags.emplace(name,describe_type(sym->type,pending));
+  }
+  const auto &abi=config.ansi_c;
+  std::vector<std::string> fields{id2string(abi.arch),std::to_string(int(abi.os)),
+    std::to_string(int(abi.endianness)),std::to_string(abi.char_width),std::to_string(abi.pointer_width),
+    std::to_string(abi.alignment),root};
+  for(const auto &item:tags) fields.push_back(tuple({item.first,item.second}));
+  unsigned id=layouts.size();
+  inserted.first->second=id;
+  const auto prefix=abi.endianness==configt::ansi_ct::endiannesst::IS_LITTLE_ENDIAN ? integer_prefix(type,ns) : 0;
+  row("LAYOUT",{std::to_string(id),tuple(fields),std::to_string(prefix)});
+  return id;
 }
 
 std::string designator(const exprt &e)

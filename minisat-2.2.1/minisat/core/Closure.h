@@ -21,6 +21,17 @@ class closure
 private:
     //interact with solver
     ClosureSolver* solver;
+    ProofStore *recorder = nullptr;
+    ProofId config = 0;
+    std::map<std::pair<int,int>, ProofId> atomic_orders;
+    std::map<std::pair<int,int>, std::pair<int,ProofId>> rf_orders;
+    std::vector<ProofId> guards;
+    ProofId rf_order(int write, int read, Lit binding) const;
+    ProofId lifted(ProofId reason, int old_from, int old_to, int from, int to);
+    int proof_rep(int event) const;
+    ProofId active_order(int from, int to);
+    ProofId competition(bool ws, int w1, int w2, int read, ProofId rf);
+    void atomic_proofs(int from, int to);
     lbool get_assignment(Lit l);
 
     //basic information
@@ -131,6 +142,7 @@ public:
     void show_race();
     void final_check();
     literal_vector conflict_lv;
+    ProofId conflict_proof = 0;
 
     int union_find_parent(int n);
     bool union_check(int m, int n) { return union_find_parent(m) == union_find_parent(n); }

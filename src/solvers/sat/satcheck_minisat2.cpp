@@ -123,6 +123,7 @@ deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
     if(recording || solver->nVars()!=0)
       throw std::runtime_error("D2 needs one fresh native Closure solver per archive");
     recording.reset(new Minisat::ProofStore(dependency_manifest::proof_path,&dependency_manifest::scope));
+    recording->d3=dependency_manifest::theory_proofs;
     solver->proof=recording.get();
     dependency_manifest::finish_proof=[](int status) { return recording->write(status); };
   }
@@ -437,8 +438,22 @@ bool satcheck_minisat_simplifiert::is_eliminated(literalt a) const
 void deagle_closure_solvert::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order)
 {
   solver->save_raw_graph(_oc_edge_table, _oc_guard_map, _oc_location_map, _oc_result_order);
-  if(dependency_manifest::stream)
+  auto *store=solver->proof;
+  if(dependency_manifest::stream || (store && store->d3))
   {
+    auto emit=[&](const char *tag,const std::vector<std::string> &fields) {
+      if(!store || !store->d3)
+      {
+        dependency_manifest::row(tag,fields);
+        return;
+      }
+      std::string line(tag);
+      for(const auto &field:fields) { line+='\t'; line+=dependency_manifest::escape(field); }
+      line+='\n';
+      store->graph_receipt.insert(store->graph_receipt.end(),line.begin(),line.end());
+      if(dependency_manifest::stream)
+        std::fwrite(line.data(),1,line.size(),dependency_manifest::stream);
+    };
     const auto &graph = solver->declaration_graph();
     std::map<std::string, int> node_ids;
     for(size_t i = 0; i < graph.nodes.size(); ++i)
@@ -447,11 +462,11 @@ void deagle_closure_solvert::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_g
       node_ids.emplace(n.name, int(i));
       if(n.atomic_parent == int(i))
         for(int item : n.atomic_items)
-          dependency_manifest::row("MEMBER", {std::to_string(i), std::to_string(item)});
-      dependency_manifest::row("NODE", {std::to_string(i), n.name, std::to_string(n.address),
+          emit("MEMBER", {std::to_string(i), std::to_string(item)});
+      emit("NODE", {std::to_string(i), n.name, std::to_string(n.address),
         n.is_read ? "r" : "", n.is_write ? "w" : "", std::to_string(n.atomic_parent)});
-      for(int j : n.atomic_in) dependency_manifest::row("IN", {std::to_string(i), std::to_string(j)});
-      for(int j : n.atomic_out) dependency_manifest::row("OUT", {std::to_string(i), std::to_string(j)});
+      for(int j : n.atomic_in) emit("IN", {std::to_string(i), std::to_string(j)});
+      for(int j : n.atomic_out) emit("OUT", {std::to_string(i), std::to_string(j)});
     }
     for(const auto &edge : _oc_edge_table)
     {
@@ -459,11 +474,11 @@ void deagle_closure_solvert::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_g
       auto a = node_ids.find(edge.first.first), b = node_ids.find(edge.first.second);
       auto pair_lit = a == node_ids.end() || b == node_ids.end() ? Minisat::lit_Error :
         graph.observed_pair_binding(a->second, b->second);
-      dependency_manifest::row("EDGE", {edge.second.second, edge.first.first, edge.first.second,
+      emit("EDGE", {edge.second.second, edge.first.first, edge.first.second,
         std::to_string(edge.second.first.x), std::to_string(binding.first.first), std::to_string(binding.first.second), std::to_string(pair_lit.x)});
     }
     for(const auto &g : _oc_guard_map)
-      dependency_manifest::row("GUARD", {g.first, std::to_string(g.second.x)});
+      emit("GUARD", {g.first, std::to_string(g.second.x)});
   }
 }
 

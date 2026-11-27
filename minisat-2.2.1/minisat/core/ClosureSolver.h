@@ -30,6 +30,8 @@ class ClosureSolver : public Solver
 
     std::vector<std::pair<Lit, literal_set>> literals_to_assign;
     std::set<Lit> assigned_literals;
+    std::vector<ProofId> assignment_proofs;
+    void record_early_conflict();
 
     int conflict_cycle = 0;
     int theory_propagation = 0;
@@ -58,8 +60,8 @@ public:
 
     void show_rf();
 
-    void assign_literal(Lit l, literal_set& lv);
-    void assign_literal(Lit l, literal_vector& lv);
+    void assign_literal(Lit l, literal_set& lv, ProofId reason=0);
+    void assign_literal(Lit l, literal_vector& lv, ProofId reason=0);
 
     void apply_literal_assignment();
 

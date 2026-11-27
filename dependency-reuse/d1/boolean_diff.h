@@ -126,6 +126,121 @@ inline void pair_variables(Model &old, Model &now, int a, int b, int flip)
   x.reason = y.reason = "matched";
 }
 
+inline Groups resolved_gates(const std::array<Model *,2> &models)
+{
+  Groups result;
+  for(unsigned side=0;side<2;++side)
+  {
+    const Model &m=*models[side];
+    for(size_t i=1;i<m.vars.size();++i)
+    {
+      const auto &v=m.vars[i];
+      if(v.peer>=0 || v.role!="Aux" || v.op<=0) continue;
+      Key key{v.op};
+      for(int l:v.inputs)
+      {
+        const int t=m.canonical(l);
+        if(t<0) break;
+        key.push_back(t);
+      }
+      if(key.size()!=1+v.inputs.size()) continue;
+      if(v.op!=6) std::sort(key.begin()+1,key.end());
+      result[std::move(key)][side].push_back(int(i));
+    }
+  }
+  return result;
+}
+
+using Context = std::set<Key>;
+inline std::map<int,Context> use_contexts(const Model &m,const std::set<int> &wanted)
+{
+  std::map<int,Context> contexts;
+  if(wanted.empty()) return contexts;
+  std::ifstream f(m.path);
+  if(!f) throw std::runtime_error("cannot read gate uses");
+  std::string line;
+  while(std::getline(f,line))
+  {
+    if(line.compare(0,4,"C\tB\t")) continue;
+    std::istringstream fields(line.substr(4));
+    Key rest;
+    int l,position=-1;
+    bool complete=true;
+    while(fields>>l)
+    {
+      int mapped=m.canonical(l);
+      if(mapped>=0) rest.push_back(mapped);
+      else if(l>=2 && wanted.count(l/2) && position<0) position=l;
+      else { complete=false; break; }
+    }
+    if(!complete || position<0 || rest.empty()) continue;
+    std::sort(rest.begin(),rest.end());
+    rest.erase(std::unique(rest.begin(),rest.end()),rest.end());
+    rest.insert(rest.begin(),(position&1)^m.vars[position/2].output_sign);
+    contexts[position/2].insert(std::move(rest));
+  }
+  return contexts;
+}
+
+inline void refine_duplicate_gates(Model &old,Model &now)
+{
+  // A contextual witness only disambiguates outputs already forced to the
+  // identical Boolean function by the native encoder and mapped operands.
+  const std::array<Model *,2> models{{&old,&now}};
+  auto ready=resolved_gates(models);
+  std::array<std::set<int>,2> wanted;
+  for(const auto &group:ready)
+  {
+    const auto &p=group.second;
+    if(p[0].empty() || p[1].empty() || (p[0].size()==1 && p[1].size()==1)) continue;
+    for(unsigned s=0;s<2;++s) wanted[s].insert(p[s].begin(),p[s].end());
+  }
+  const std::array<std::map<int,Context>,2> uses{{use_contexts(old,wanted[0]),use_contexts(now,wanted[1])}};
+  auto pair=[&](int a,int b) {pair_variables(old,now,a,b,old.vars[a].output_sign^now.vars[b].output_sign);};
+  bool advanced=false;
+  for(const auto &group:ready)
+  {
+    std::map<Context,Pair> witnesses;
+    for(unsigned s=0;s<2;++s)
+      for(const int v:group.second[s])
+      {
+        const auto it=uses[s].find(v);
+        if(it!=uses[s].end()) witnesses[it->second][s].push_back(v);
+      }
+    for(const auto &w:witnesses)
+      if(w.second[0].size()==1 && w.second[1].size()==1)
+      {
+        pair(w.second[0][0],w.second[1][0]);
+        advanced=true;
+      }
+  }
+  while(advanced)
+  {
+    advanced=false;
+    for(const auto &group:resolved_gates(models))
+    {
+      const auto &p=group.second;
+      if(p[0].size()!=1 || p[1].size()!=1) continue;
+      pair(p[0][0],p[1][0]);
+      advanced=true;
+    }
+  }
+  for(const auto &group:resolved_gates(models))
+    for(unsigned s=0;s<2;++s)
+      for(const int i:group.second[s])
+        models[s]->vars[i].reason=group.second[1-s].empty()
+          ? "no_matching_resolved_gate" : "ambiguous_gate_definition";
+  for(Model *m:models)
+    for(auto &v:m->vars)
+      if(v.op>0 && v.role=="Aux" && v.peer<0)
+        for(const int l:v.inputs)
+          if(m->canonical(l)<0)
+          {
+            v.reason="unmapped_gate_input:"+std::to_string(l);
+            break;
+          }
+}
+
 inline void match(Model &old, Model &now)
 {
   std::array<Model *, 2> sides{{&old, &now}};

@@ -26,8 +26,50 @@ def exactly_one(values):
     return next(iter(values)) if len(values) == 1 else 0
 
 
+def apply_layouts(rows, keys):
+    """Admit an aggregate value only with one native type on every definition and bit."""
+    layouts={i:(signature,int(limit[0]) if len(limit)==1 else 0)
+             for i,signature,*limit in rows["LAYOUT"]}
+    if len(layouts)!=len(rows["LAYOUT"]):
+        raise ValueError("duplicate layout identity")
+    origins=defaultdict(list)
+    bit_layouts=defaultdict(list)
+    bits=defaultdict(list)
+    definitions=defaultdict(list)
+    for sym,layout in rows["V_LAYOUT"]:
+        origins[sym].append(layout)
+    for sym,layout,width in rows["A_LAYOUT"]:
+        bit_layouts[sym].append((layout,int(width)))
+    for name,*fields in rows["V"]:
+        if name in origins:
+            definitions[name].append(fields)
+    for name,typ,bit,_ in rows["A"]:
+        if name in origins:
+            bits[name].append((typ,int(bit)))
+    types={}
+    safe={}
+    for name,ids in origins.items():
+        enc=bit_layouts[name]
+        if len(enc)!=1 or len(ids)!=len(definitions[name]):
+            continue
+        layout,width=enc[0]
+        if width<=0 or set(ids)!={layout} or layout not in layouts:
+            continue
+        if any(typ or storage!="static" for _,_,_,typ,storage in definitions[name]):
+            continue
+        if len(bits[name])!=width or {bit for typ,bit in bits[name] if not typ}!=set(range(width)):
+            continue
+        signature,limit=layouts[layout]
+        if limit<=0 or limit>width:continue
+        types[name]="aggregate:"+str(keys.intern("native_layout",signature,width,limit))
+        safe[name]=limit
+    rows["V"]=[(s,c,r,o,types.get(s,t),st) for s,c,r,o,t,st in rows["V"]]
+    rows["A"]=[(s,types[s] if s in safe and int(b)<safe[s] else t,b,l) for s,t,b,l in rows["A"]]
+    return safe
+
+
 class Model:
-    def __init__(self, path, keys):
+    def __init__(self, path, keys, layout_bits=False):
         self.path, self.keys = path, keys
         rows = self.rows = defaultdict(list)
         ended = False
@@ -44,6 +86,7 @@ class Model:
                 ended = tag == "END"
         if not ended or rows["END"] not in ([("0",)], [("10",)]) or len(rows["N"]) != 1 or len(rows["K"]) != 1:
             raise ValueError("requires one completed native Closure query and one configuration")
+        certified_prefix=apply_layouts(rows,keys) if layout_bits else {}
         self.nvars = int(rows["N"][0][0])
         self.sites = {sid: keys.intern("site", signature) if status == "unique" else 0
                       for sid, signature, status, *_ in rows["S"]}
@@ -91,6 +134,9 @@ class Model:
             if symbol in self.sym_roles and typ == "bool" and bit == "0":
                 for role in self.sym_roles[symbol]:
                     self.add_alias(int(lit), role, "RF", "unresolved_rf_endpoint")
+                continue
+            if symbol in certified_prefix and int(bit)>=certified_prefix[symbol]:
+                self.add_alias(int(lit),0,"Value","aggregate_bit_outside_certified_integer_prefix")
                 continue
             anchors = self.defs.get(symbol, ())
             if not typ or not anchors or symbol in self.def_reason:

@@ -5,7 +5,9 @@ namespace dependency_manifest
 {
 std::FILE *stream = nullptr;
 char scope = 'U';
+bool record_layouts = false;
 std::string proof_path;
+bool theory_proofs = false;
 bool (*finish_proof)(int) = nullptr;
 
 void open(const std::string &filename)

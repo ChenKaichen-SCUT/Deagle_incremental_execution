@@ -10,8 +10,10 @@
 namespace dependency_manifest
 {
 extern std::FILE *stream;
+extern bool record_layouts;
 extern char scope;
 extern std::string proof_path;
+extern bool theory_proofs;
 extern bool (*finish_proof)(int);
 void open(const std::string &filename);
 bool finish(int exit_code);
