@@ -1,0 +1,22 @@
+{
+  "airline_reservations_6": {
+    "passed_modes": 3,
+    "ABI": "--64",
+    "memory_model": "sc"
+  },
+  "circular-buffer": {
+    "passed_modes": 3,
+    "ABI": "--32",
+    "memory_model": "sc"
+  },
+  "fib-snapshot-11": {
+    "passed_modes": 3,
+    "ABI": "--32",
+    "memory_model": "sc"
+  },
+  "fib_updates_8": {
+    "passed_modes": 3,
+    "ABI": "--64",
+    "memory_model": "sc"
+  }
+}

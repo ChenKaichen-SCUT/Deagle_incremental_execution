@@ -1,0 +1,5 @@
+case	boundaries	propagation	conflict	theory_units	immediate_RF	immediate_guard	RF_recheck	guard_recheck	reverse_RF	exact	unknown	queued	duplicates	discarded
+fib_updates_8	3733	3708	25	63	1766	0	0	0	1942	3733	0	4067	4664	359
+circular-buffer	11475	11457	18	287	3232	0	2	628	7595	11475	0	11879	10847	422
+airline_reservations_6	309974	307192	2782	56	153747	0	0	800	152645	309974	0	343259	1314701	36067
+fib-snapshot-11	285573	285457	116	253	185468	0	0	3636	96353	285573	0	294111	484611	8654

@@ -1,0 +1,298 @@
+make: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src'
+## Entering big-int
+make  -C big-int
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/big-int'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/big-int'
+## Entering util
+make  -C util
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/util'
+echo 'const char *CBMC_VERSION="5.67.0";\nconst char *DEAGLE_VERSION="4.2.0 (7812c5fe-dirty)";' > version.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o version.o version.cpp
+ar rcT util.a dependency_group_sources.o dependency_manifest.o arith_tools.o array_element_from_pointer.o array_name.o bitvector_expr.o bitvector_types.o bv_arithmetic.o byte_operators.o c_types.o cmdline.o config.o cout_message.o dstring.o endianness_map.o edit_distance.o expr.o expr_initializer.o expr_util.o exception_utils.o file_util.o find_macros.o find_symbols.o fixedbv.o floatbv_expr.o format_constant.o format_expr.o format_number_range.o format_type.o fresh_symbol.o get_base_name.o get_module.o identifier.o ieee_float.o interval_union.o invariant.o irep.o irep_hash.o irep_hash_container.o irep_ids.o irep_serialization.o interval_constraint.o invariant_utils.o json.o json_irep.o json_stream.o lispexpr.o lispirep.o mathematical_expr.o mathematical_types.o memory_info.o memory_units.o merge_irep.o message.o mp_arith.o namespace.o object_factory_parameters.o options.o parse_options.o parser.o piped_process.o pointer_expr.o pointer_offset_size.o pointer_offset_sum.o pointer_predicates.o prefix_filter.o rational.o rational_tools.o ref_expr_set.o refined_string_type.o rename.o rename_symbol.o replace_expr.o replace_symbol.o run.o signal_catcher.o simplify_expr.o simplify_expr_array.o simplify_expr_boolean.o simplify_expr_floatbv.o simplify_expr_if.o simplify_expr_int.o simplify_expr_pointer.o simplify_expr_struct.o simplify_utils.o source_location.o ssa_expr.o std_code.o std_expr.o std_types.o string2int.o string_constant.o string_container.o string_hash.o string_utils.o structured_data.o substitute_symbols.o symbol.o symbol_table_base.o symbol_table.o tempdir.o tempfile.o threeval.o timestamper.o type.o typecheck.o ui_message.o unicode.o union_find.o union_find_replace.o validate_expressions.o validate_types.o version.o xml.o xml_irep.o interval.o
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/util'
+## Entering langapi
+## Entering analyses
+## Entering linking
+## Entering xmllang
+## Entering assembler
+## Entering jsil
+make  -C langapi
+make  -C analyses
+make  -C linking
+make  -C xmllang
+make  -C assembler
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/langapi'
+make  -C jsil
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/analyses'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/linking'
+## Entering json
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/xmllang'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/jsil'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/assembler'
+make  -C json
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/json'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/xmllang'
+## Entering json-symtab-language
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/langapi'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/linking'
+## Entering statement-list
+## Entering cat
+make  -C json-symtab-language
+make  -C statement-list
+make  -C cat
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/jsil'
+## Entering pointer-analysis
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/json-symtab-language'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/statement-list'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/cat'
+make  -C pointer-analysis
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/json'
+## Entering goto-programs
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/pointer-analysis'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/assembler'
+make  -C goto-programs
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-programs'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/analyses'
+## Entering ansi-c
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/cat'
+## Entering solvers
+## Entering goto-symex
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/json-symtab-language'
+make  -C ansi-c
+make  -C solvers
+make  -C goto-symex
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/ansi-c'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/solvers'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/statement-list'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-symex'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/pointer-analysis'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-programs'
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/ansi-c'
+## Entering cpp
+make  -C cpp
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-symex'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/cpp'
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o sat/satcheck_minisat2.o sat/satcheck_minisat2.cpp
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o flattening/bv_minimize.o flattening/bv_minimize.cpp
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o refinement/refine_arrays.o refinement/refine_arrays.cpp
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o strings/string_refinement.o strings/string_refinement.cpp
+make[1]: Nothing to be done for 'first_target'.
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/cpp'
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o strings/string_constraint.o strings/string_constraint.cpp
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o ../../minisat-2.2.1/minisat/core/DependencyTags.o ../../minisat-2.2.1/minisat/core/DependencyTags.cc
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o ../../minisat-2.2.1/minisat/core/ClosureSolver.o ../../minisat-2.2.1/minisat/core/ClosureSolver.cc
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o ../../minisat-2.2.1/minisat/core/Closure.o ../../minisat-2.2.1/minisat/core/Closure.cc
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o ../../minisat-2.2.1/minisat/core/ClosureTypes.o ../../minisat-2.2.1/minisat/core/ClosureTypes.cc
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o ../../minisat-2.2.1/minisat/core/Solver.o ../../minisat-2.2.1/minisat/core/Solver.cc
+g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o smt2/smt2_solver.o smt2/smt2_solver.cpp
+In file included from ../../minisat-2.2.1/minisat/core/ClosureTypes.h:8,
+                 from ../../minisat-2.2.1/minisat/core/ClosureSolver.h:11,
+                 from ../../minisat-2.2.1/minisat/core/Closure.cc:3:
+In member function 'Minisat::TheoryTag& Minisat::TheoryTag::operator=(const Minisat::TheoryTag&)',
+    inlined from 'Minisat::TheoryTag& Minisat::TheoryTag::operator=(const Minisat::TheoryTag&)' at ../../minisat-2.2.1/minisat/core/DependencyTags.h:29:16,
+    inlined from 'Minisat::TheoryTag::TheoryTag(const Minisat::TheoryTag&)' at ../../minisat-2.2.1/minisat/core/DependencyTags.h:28:55,
+    inlined from 'Minisat::TheorySupport::TheorySupport(Minisat::TheorySupport&&)' at ../../minisat-2.2.1/minisat/core/DependencyTags.h:35:8,
+    inlined from 'void __gnu_cxx::new_allocator<_Tp>::construct(_Up*, _Args&& ...) [with _Up = Minisat::TheorySupport; _Args = {Minisat::TheorySupport}; _Tp = Minisat::TheorySupport]' at /usr/include/c++/11/ext/new_allocator.h:162:4,
+    inlined from 'static void std::allocator_traits<std::allocator<_Tp1> >::construct(std::allocator_traits<std::allocator<_Tp1> >::allocator_type&, _Up*, _Args&& ...) [with _Up = Minisat::TheorySupport; _Args = {Minisat::TheorySupport}; _Tp = Minisat::TheorySupport]' at /usr/include/c++/11/bits/alloc_traits.h:516:17,
+    inlined from 'void std::vector<_Tp, _Alloc>::emplace_back(_Args&& ...) [with _Args = {Minisat::TheorySupport}; _Tp = Minisat::TheorySupport; _Alloc = std::allocator<Minisat::TheorySupport>]' at /usr/include/c++/11/bits/vector.tcc:115:30,
+    inlined from 'void std::vector<_Tp, _Alloc>::push_back(std::vector<_Tp, _Alloc>::value_type&&) [with _Tp = Minisat::TheorySupport; _Alloc = std::allocator<Minisat::TheorySupport>]' at /usr/include/c++/11/bits/stl_vector.h:1204:21,
+    inlined from 'int Minisat::closure::get_node(std::string)' at ../../minisat-2.2.1/minisat/core/Closure.cc:250:34:
+../../minisat-2.2.1/minisat/core/DependencyTags.h:31:43: warning: '<unnamed>.Minisat::TheorySupport::tag.Minisat::TheoryTag::t' may be used uninitialized [-Wmaybe-uninitialized]
+   31 |         raw=rhs.raw;op=rhs.op;if(op!=255)t=rhs.t;return *this;
+      |                                          ~^~~~~~
+../../minisat-2.2.1/minisat/core/Closure.cc: In member function 'int Minisat::closure::get_node(std::string)':
+../../minisat-2.2.1/minisat/core/Closure.cc:250:34: note: '<anonymous>' declared here
+  250 |     if(recorder) guards.push_back(0);
+      |                  ~~~~~~~~~~~~~~~~^~~
+ar rcT solvers.a sat/satcheck_minisat2.o decision_procedure.o flattening/arrays.o flattening/boolbv.o flattening/boolbv_abs.o flattening/boolbv_add_sub.o flattening/boolbv_array.o flattening/boolbv_array_of.o flattening/boolbv_bitreverse.o flattening/boolbv_bitwise.o flattening/boolbv_bswap.o flattening/boolbv_bv_rel.o flattening/boolbv_byte_extract.o flattening/boolbv_byte_update.o flattening/boolbv_case.o flattening/boolbv_complex.o flattening/boolbv_concatenation.o flattening/boolbv_cond.o flattening/boolbv_constant.o flattening/boolbv_constraint_select_one.o flattening/boolbv_div.o flattening/boolbv_equality.o flattening/boolbv_extractbit.o flattening/boolbv_extractbits.o flattening/boolbv_floatbv_mod_rem.o flattening/boolbv_floatbv_op.o flattening/boolbv_get.o flattening/boolbv_ieee_float_rel.o flattening/boolbv_if.o flattening/boolbv_index.o flattening/boolbv_let.o flattening/boolbv_map.o flattening/boolbv_member.o flattening/boolbv_mod.o flattening/boolbv_mult.o flattening/boolbv_not.o flattening/boolbv_onehot.o flattening/boolbv_overflow.o flattening/boolbv_power.o flattening/boolbv_quantifier.o flattening/boolbv_reduction.o flattening/boolbv_replication.o flattening/boolbv_shift.o flattening/boolbv_struct.o flattening/boolbv_type.o flattening/boolbv_typecast.o flattening/boolbv_unary_minus.o flattening/boolbv_union.o flattening/boolbv_update.o flattening/boolbv_vector.o flattening/boolbv_width.o flattening/boolbv_with.o flattening/bv_dimacs.o flattening/bv_minimize.o flattening/bv_pointers.o flattening/bv_utils.o flattening/c_bit_field_replacement_type.o flattening/equality.o flattening/pointer_logic.o floatbv/float_bv.o floatbv/float_utils.o floatbv/float_approximation.o lowering/byte_operators.o lowering/functions.o bdd/miniBDD/miniBDD.o prop/bdd_expr.o prop/cover_goals.o prop/literal.o prop/prop_minimize.o prop/prop.o prop/prop_conv.o prop/prop_conv_solver.o qbf/qbf_quantor.o qbf/qbf_qube.o qbf/qbf_qube_core.o qbf/qbf_skizzo.o qbf/qdimacs_cnf.o qbf/qdimacs_core.o refinement/bv_refinement_loop.o refinement/refine_arithmetic.o refinement/refine_arrays.o strings/array_pool.o strings/equation_symbol_mapping.o strings/format_specifier.o strings/string_builtin_function.o strings/string_dependencies.o strings/string_concatenation_builtin_function.o strings/string_format_builtin_function.o strings/string_insertion_builtin_function.o strings/string_refinement.o strings/string_refinement_util.o strings/string_constraint.o strings/string_constraint_generator_code_points.o strings/string_constraint_generator_comparison.o strings/string_constraint_generator_constants.o strings/string_constraint_generator_indexof.o strings/string_constraint_generator_float.o strings/string_constraint_generator_main.o strings/string_constraint_generator_testing.o strings/string_constraint_generator_transformation.o strings/string_constraint_generator_valueof.o strings/string_constraint_instantiation.o sat/cnf.o sat/cnf_clause_list.o sat/dimacs_cnf.o sat/external_sat.o sat/pbs_dimacs_cnf.o sat/resolution_proof.o smt2/letify.o smt2/smt2_conv.o smt2/smt2_dec.o smt2/smt2_format.o smt2/smt2_parser.o smt2/smt2_tokenizer.o smt2/smt2irep.o smt2_incremental/ast/smt_commands.o smt2_incremental/ast/smt_index.o smt2_incremental/ast/smt_logics.o smt2_incremental/ast/smt_options.o smt2_incremental/ast/smt_responses.o smt2_incremental/ast/smt_sorts.o smt2_incremental/ast/smt_terms.o smt2_incremental/construct_value_expr_from_smt.o smt2_incremental/convert_expr_to_smt.o smt2_incremental/object_tracking.o smt2_incremental/type_size_mapping.o smt2_incremental/smt_object_size.o smt2_incremental/smt_response_validation.o smt2_incremental/smt_solver_process.o smt2_incremental/smt_to_smt2_string.o smt2_incremental/smt2_incremental_decision_procedure.o smt2_incremental/theories/smt_array_theory.o smt2_incremental/theories/smt_bit_vector_theory.o smt2_incremental/theories/smt_core_theory.o ../../minisat-2.2.1/minisat/core/DependencyTags.o ../../minisat-2.2.1/minisat/core/ProofStore.o ../../minisat-2.2.1/minisat/core/MemoryModelSolver.o ../../minisat-2.2.1/minisat/core/MemoryModelStaticAnalyzer.o ../../minisat-2.2.1/minisat/core/SegmentSolver.o ../../minisat-2.2.1/minisat/core/SegmentTypes.o ../../minisat-2.2.1/minisat/core/ClosureSolver.o ../../minisat-2.2.1/minisat/core/Closure.o ../../minisat-2.2.1/minisat/core/ClosureTypes.o ../../minisat-2.2.1/minisat/core/ICDSolver.o ../../minisat-2.2.1/minisat/core/ICD.o ../../minisat-2.2.1/minisat/core/ICDTypes.o ../../minisat-2.2.1/minisat/core/GraphTypes.o ../../minisat-2.2.1/minisat/simp/SimpSolver.o ../../minisat-2.2.1/minisat/core/Solver.o ../../minisat-2.2.1/minisat/utils/Options.o ../cat/cat_module.o
+g++  -o smt2_solver -Wl,--start-group sat/satcheck_minisat2.o decision_procedure.o flattening/arrays.o flattening/boolbv.o flattening/boolbv_abs.o flattening/boolbv_add_sub.o flattening/boolbv_array.o flattening/boolbv_array_of.o flattening/boolbv_bitreverse.o flattening/boolbv_bitwise.o flattening/boolbv_bswap.o flattening/boolbv_bv_rel.o flattening/boolbv_byte_extract.o flattening/boolbv_byte_update.o flattening/boolbv_case.o flattening/boolbv_complex.o flattening/boolbv_concatenation.o flattening/boolbv_cond.o flattening/boolbv_constant.o flattening/boolbv_constraint_select_one.o flattening/boolbv_div.o flattening/boolbv_equality.o flattening/boolbv_extractbit.o flattening/boolbv_extractbits.o flattening/boolbv_floatbv_mod_rem.o flattening/boolbv_floatbv_op.o flattening/boolbv_get.o flattening/boolbv_ieee_float_rel.o flattening/boolbv_if.o flattening/boolbv_index.o flattening/boolbv_let.o flattening/boolbv_map.o flattening/boolbv_member.o flattening/boolbv_mod.o flattening/boolbv_mult.o flattening/boolbv_not.o flattening/boolbv_onehot.o flattening/boolbv_overflow.o flattening/boolbv_power.o flattening/boolbv_quantifier.o flattening/boolbv_reduction.o flattening/boolbv_replication.o flattening/boolbv_shift.o flattening/boolbv_struct.o flattening/boolbv_type.o flattening/boolbv_typecast.o flattening/boolbv_unary_minus.o flattening/boolbv_union.o flattening/boolbv_update.o flattening/boolbv_vector.o flattening/boolbv_width.o flattening/boolbv_with.o flattening/bv_dimacs.o flattening/bv_minimize.o flattening/bv_pointers.o flattening/bv_utils.o flattening/c_bit_field_replacement_type.o flattening/equality.o flattening/pointer_logic.o floatbv/float_bv.o floatbv/float_utils.o floatbv/float_approximation.o lowering/byte_operators.o lowering/functions.o bdd/miniBDD/miniBDD.o prop/bdd_expr.o prop/cover_goals.o prop/literal.o prop/prop_minimize.o prop/prop.o prop/prop_conv.o prop/prop_conv_solver.o qbf/qbf_quantor.o qbf/qbf_qube.o qbf/qbf_qube_core.o qbf/qbf_skizzo.o qbf/qdimacs_cnf.o qbf/qdimacs_core.o refinement/bv_refinement_loop.o refinement/refine_arithmetic.o refinement/refine_arrays.o strings/array_pool.o strings/equation_symbol_mapping.o strings/format_specifier.o strings/string_builtin_function.o strings/string_dependencies.o strings/string_concatenation_builtin_function.o strings/string_format_builtin_function.o strings/string_insertion_builtin_function.o strings/string_refinement.o strings/string_refinement_util.o strings/string_constraint.o strings/string_constraint_generator_code_points.o strings/string_constraint_generator_comparison.o strings/string_constraint_generator_constants.o strings/string_constraint_generator_indexof.o strings/string_constraint_generator_float.o strings/string_constraint_generator_main.o strings/string_constraint_generator_testing.o strings/string_constraint_generator_transformation.o strings/string_constraint_generator_valueof.o strings/string_constraint_instantiation.o sat/cnf.o sat/cnf_clause_list.o sat/dimacs_cnf.o sat/external_sat.o sat/pbs_dimacs_cnf.o sat/resolution_proof.o smt2/letify.o smt2/smt2_conv.o smt2/smt2_dec.o smt2/smt2_format.o smt2/smt2_parser.o smt2/smt2_tokenizer.o smt2/smt2irep.o smt2_incremental/ast/smt_commands.o smt2_incremental/ast/smt_index.o smt2_incremental/ast/smt_logics.o smt2_incremental/ast/smt_options.o smt2_incremental/ast/smt_responses.o smt2_incremental/ast/smt_sorts.o smt2_incremental/ast/smt_terms.o smt2_incremental/construct_value_expr_from_smt.o smt2_incremental/convert_expr_to_smt.o smt2_incremental/object_tracking.o smt2_incremental/type_size_mapping.o smt2_incremental/smt_object_size.o smt2_incremental/smt_response_validation.o smt2_incremental/smt_solver_process.o smt2_incremental/smt_to_smt2_string.o smt2_incremental/smt2_incremental_decision_procedure.o smt2_incremental/theories/smt_array_theory.o smt2_incremental/theories/smt_bit_vector_theory.o smt2_incremental/theories/smt_core_theory.o smt2/smt2_solver.o ../util/util.a ../big-int/big-int.a ../../minisat-2.2.1/minisat/core/DependencyTags.o ../../minisat-2.2.1/minisat/core/ProofStore.o ../../minisat-2.2.1/minisat/core/MemoryModelSolver.o ../../minisat-2.2.1/minisat/core/MemoryModelStaticAnalyzer.o ../../minisat-2.2.1/minisat/core/SegmentSolver.o ../../minisat-2.2.1/minisat/core/SegmentTypes.o ../../minisat-2.2.1/minisat/core/ClosureSolver.o ../../minisat-2.2.1/minisat/core/Closure.o ../../minisat-2.2.1/minisat/core/ClosureTypes.o ../../minisat-2.2.1/minisat/core/ICDSolver.o ../../minisat-2.2.1/minisat/core/ICD.o ../../minisat-2.2.1/minisat/core/ICDTypes.o ../../minisat-2.2.1/minisat/core/GraphTypes.o ../../minisat-2.2.1/minisat/simp/SimpSolver.o ../../minisat-2.2.1/minisat/core/Solver.o ../../minisat-2.2.1/minisat/utils/Options.o ../cat/cat_module.o -Wl,--end-group 
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/solvers'
+## Entering goto-instrument
+## Entering goto-checker
+make  -C goto-instrument
+make  -C goto-checker
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-instrument'
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-checker'
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o bmc_util.o bmc_util.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o counterexample_beautification.o counterexample_beautification.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o multi_path_symex_checker.o multi_path_symex_checker.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o single_loop_incremental_symex_checker.o single_loop_incremental_symex_checker.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o single_path_symex_checker.o single_path_symex_checker.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o solver_factory.o solver_factory.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o accelerate/accelerate.o accelerate/accelerate.cpp
+In file included from ../cat/cat_parsing_driver.h:22,
+                 from bmc_util.cpp:34:
+cat_parser.tab.h: In instantiation of 'yy::parser::basic_symbol<Base>::basic_symbol(yy::parser::basic_symbol<Base>&&) [with Base = yy::parser::by_kind]':
+cat_parser.tab.h:791:12:   required from here
+cat_parser.tab.h:612:9: warning: enumeration value 'YYNTOKENS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_YYEMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_YYEOF' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_YYerror' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_YYUNDEF' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_FREE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_ACYCLIC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_IRREFLEXIVE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_DECLARE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_DECLARE_LOC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_EMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_NOT_EMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_FLAG' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_ERROR' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_ID_REL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_AS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_INCLUDE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_LET' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_REC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_SAVE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_TOTAL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_VIEW' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_WARNING' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_EQ' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_DCOLON' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_COMMA' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_ZERO' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_MONE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_SEMI' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_AND' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_ALT' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_BSLASH' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_PLUS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_PROD' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_QMARK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_LPAREN' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_RPAREN' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_LBRACK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_RBRACK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_SUPER' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_FENCEREL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_YYACCEPT' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_main' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_decl' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:612:9: warning: enumeration value 'S_constraint' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h: In instantiation of 'void yy::parser::basic_symbol<Base>::clear() [with Base = yy::parser::by_kind]':
+cat_parser.tab.h:678:9:   required from 'yy::parser::basic_symbol<Base>::~basic_symbol() [with Base = yy::parser::by_kind]'
+cat_parser.tab.h:797:34:   required from here
+cat_parser.tab.h:690:9: warning: enumeration value 'YYNTOKENS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_YYEMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_YYEOF' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_YYerror' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_YYUNDEF' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_FREE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_ACYCLIC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_IRREFLEXIVE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_DECLARE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_DECLARE_LOC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_EMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_NOT_EMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_FLAG' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_ERROR' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_ID_REL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_AS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_INCLUDE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_LET' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_REC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_SAVE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_TOTAL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_VIEW' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_WARNING' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_EQ' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_DCOLON' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_COMMA' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_ZERO' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_MONE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_SEMI' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_AND' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_ALT' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_BSLASH' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_PLUS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_PROD' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_QMARK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_LPAREN' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_RPAREN' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_LBRACK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_RBRACK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_SUPER' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_FENCEREL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_ID' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_QPATH' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_YYACCEPT' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_main' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_decl' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_qualified_ID' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_constraint' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:690:9: warning: enumeration value 'S_rel' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'YYNTOKENS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_YYEMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_YYEOF' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_YYerror' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_YYUNDEF' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_FREE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_ACYCLIC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_IRREFLEXIVE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_DECLARE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_DECLARE_LOC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_EMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_NOT_EMPTY' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_FLAG' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_ERROR' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_ID_REL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_AS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_INCLUDE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_LET' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_REC' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_SAVE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_TOTAL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_VIEW' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_WARNING' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_EQ' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_DCOLON' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_COMMA' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_ZERO' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_MONE' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_SEMI' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_AND' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_ALT' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_BSLASH' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_PLUS' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_PROD' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_QMARK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_LPAREN' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_RPAREN' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_LBRACK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_RBRACK' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_SUPER' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_FENCEREL' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_YYACCEPT' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_main' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_decl' not handled in switch [-Wswitch-enum]
+cat_parser.tab.h:697:1: warning: enumeration value 'S_constraint' not handled in switch [-Wswitch-enum]
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o accelerate/acceleration_utils.o accelerate/acceleration_utils.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o accelerate/disjunctive_polynomial_acceleration.o accelerate/disjunctive_polynomial_acceleration.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o accelerate/polynomial_accelerator.o accelerate/polynomial_accelerator.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o accelerate/sat_path_enumerator.o accelerate/sat_path_enumerator.cpp
+g++ -c -DSATCHECK_MINISAT2 -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I .. -o accelerate/scratch_program.o accelerate/scratch_program.cpp
+ar rcT goto-checker.a bmc_util.o violation_witness.o counterexample_beautification.o cover_goals_report_util.o incremental_goto_checker.o goto_symex_fault_localizer.o goto_symex_property_decider.o goto_trace_storage.o goto_verifier.o multi_path_symex_checker.o multi_path_symex_only_checker.o properties.o report_util.o single_loop_incremental_symex_checker.o single_path_symex_checker.o single_path_symex_only_checker.o solver_factory.o symex_coverage.o symex_bmc.o symex_bmc_incremental_one_loop.o
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-checker'
+g++  -o goto-instrument -Wl,--start-group ../ansi-c/ansi-c.a ../cpp/cpp.a ../linking/linking.a ../big-int/big-int.a ../goto-programs/goto-programs.a ../goto-symex/goto-symex.a ../assembler/assembler.a ../pointer-analysis/pointer-analysis.a ../analyses/analyses.a ../langapi/langapi.a ../xmllang/xmllang.a ../util/util.a ../solvers/solvers.a ../json/json.a accelerate/accelerate.o accelerate/acceleration_utils.o accelerate/all_paths_enumerator.o accelerate/cone_of_influence.o accelerate/disjunctive_polynomial_acceleration.o accelerate/enumerating_loop_acceleration.o accelerate/overflow_instrumenter.o accelerate/path.o accelerate/polynomial.o accelerate/polynomial_accelerator.o accelerate/sat_path_enumerator.o accelerate/scratch_program.o accelerate/trace_automaton.o accelerate/util.o aggressive_slicer.o alignment_checks.o branch.o call_sequences.o contracts/contracts.o contracts/havoc_assigns_clause_targets.o contracts/instrument_spec_assigns.o contracts/memory_predicates.o contracts/utils.o contracts/inlining_decorator.o concurrency.o count_eloc.o cover.o cover_basic_blocks.o cover_filter.o cover_instrument_assume.o cover_instrument_branch.o cover_instrument_condition.o cover_instrument_decision.o cover_instrument_location.o cover_instrument_mcdc.o cover_instrument_other.o cover_util.o document_properties.o dot.o dump_c.o full_slicer.o function.o function_assigns.o generate_function_bodies.o goto_instrument_languages.o goto_instrument_main.o goto_instrument_parse_options.o goto_program2code.o havoc_loops.o havoc_utils.o horn_encoding.o insert_final_assert_false.o interrupt.o k_induction.o loop_utils.o mmio.o model_argc_argv.o nondet_static.o nondet_volatile.o object_id.o points_to.o race_check.o reachability_slicer.o remove_function.o replace_calls.o rw_set.o show_locations.o skip_loops.o source_lines.o splice_call.o stack_depth.o synthesizer/enumerative_loop_invariant_synthesizer.o synthesizer/expr_enumerator.o synthesizer/synthesizer_utils.o thread_instrumentation.o undefined_functions.o uninitialized.o unwind.o unwindset.o value_set_fi_fp_removal.o wmm/abstract_event.o wmm/cycle_collection.o wmm/data_dp.o wmm/event_graph.o wmm/fence.o wmm/goto2graph.o wmm/instrumenter_strategies.o wmm/pair_collection.o wmm/shared_buffers.o wmm/weak_memory.o -Wl,--end-group 
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/goto-instrument'
+## Entering cbmc
+make  -C cbmc
+make[1]: Entering directory '/home/deagle/dependency-reuse/runs/d43c/production/src/cbmc'
+g++  -o deagle_exe -Wl,--start-group ../ansi-c/ansi-c.a ../cpp/cpp.a ../json/json.a ../json-symtab-language/json-symtab-language.a ../statement-list/statement-list.a ../linking/linking.a ../big-int/big-int.a ../goto-checker/goto-checker.a ../goto-programs/goto-programs.a ../goto-symex/goto-symex.a ../pointer-analysis/value_set.o ../pointer-analysis/value_set_analysis_fi.o ../pointer-analysis/value_set_domain_fi.o ../pointer-analysis/value_set_fi.o ../pointer-analysis/value_set_dereference.o ../pointer-analysis/add_failed_symbols.o ../pointer-analysis/rewrite_index.o ../pointer-analysis/goto_program_dereference.o ../goto-instrument/source_lines.o ../goto-instrument/cover.o ../goto-instrument/cover_basic_blocks.o ../goto-instrument/cover_filter.o ../goto-instrument/cover_instrument_assume.o ../goto-instrument/cover_instrument_branch.o ../goto-instrument/cover_instrument_condition.o ../goto-instrument/cover_instrument_decision.o ../goto-instrument/cover_instrument_location.o ../goto-instrument/cover_instrument_mcdc.o ../goto-instrument/cover_instrument_other.o ../goto-instrument/cover_util.o ../goto-instrument/reachability_slicer.o ../goto-instrument/nondet_static.o ../goto-instrument/full_slicer.o ../goto-instrument/unwindset.o ../analyses/analyses.a ../langapi/langapi.a ../xmllang/xmllang.a ../assembler/assembler.a ../solvers/solvers.a ../util/util.a ../cat/cat_parsing_driver.o ../cat/cat_module.o ../cat/cat_lexer.yy.o ../cat/cat_parser.tab.o c_test_input_generator.o cbmc_languages.o cbmc_main.o cbmc_parse_options.o ../jsil/jsil.a -Wl,--end-group 
+make[1]: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src/cbmc'
+make: Leaving directory '/home/deagle/dependency-reuse/runs/d43c/production/src'

@@ -1,0 +1,13 @@
+case	mode	variables	events	clauses	declarations	DirtyB	DirtyT	negative_images	eligible	selected	query	unknown
+fib_updates_8	identity	12553	81	50065	851	0	0	0	1307	512	135	0
+fib_updates_8	unsigned	12553	81	50065	851	0	0	0	1307	512	135	0
+fib_updates_8	signed	12553	81	50065	851	0	0	6249	1307	512	135	0
+circular-buffer	identity	245081	481	1161979	6414	0	0	0	188	188	155	0
+circular-buffer	unsigned	245081	481	1161979	6414	0	0	0	188	188	155	0
+circular-buffer	signed	245081	481	1161979	6414	0	0	122833	188	188	155	0
+airline_reservations_6	identity	199090	132	910797	2248	0	0	0	41800	512	444	0
+airline_reservations_6	unsigned	199090	132	910797	2248	0	0	0	41800	512	444	0
+airline_reservations_6	signed	199090	132	910797	2248	0	0	99472	41800	512	444	0
+fib-snapshot-11	identity	200360	590	1002193	13534	0	0	0	54606	512	54182	0
+fib-snapshot-11	unsigned	200360	590	1002193	13534	0	0	0	54606	512	54182	0
+fib-snapshot-11	signed	200360	590	1002193	13534	0	0	100081	54606	512	54182	0

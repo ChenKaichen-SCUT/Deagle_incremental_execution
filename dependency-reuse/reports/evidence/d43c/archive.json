@@ -1,0 +1,26 @@
+{
+  "format": "D43B-raw-v1",
+  "index_sha256": "0a8cc11d396d259c56d41602dfbf809eedfaa5ed303fac954764d0517711dbeb",
+  "files": 3276,
+  "original_bytes": 1947503354,
+  "unique_chunks_by_owner": {
+    "B": 756,
+    "D42": 802
+  },
+  "stored_gzip_bytes": 132367054,
+  "frozen_archive_dependencies": {
+    "D42": [
+      "d42/raw/release",
+      "45e21554e55b97dcb64aa68095c19acf7221656c7a18388f261aff78a82a96c2"
+    ],
+    "D43A": [
+      "d43a/raw",
+      "571c0203ef13f9bf614c6b12687c58a0638254cc869c27e28d3854c08b50619d"
+    ]
+  },
+  "restored_replay": [
+    "3276 files, 1947503354 original bytes verified",
+    "17 files, 10533111 original bytes verified",
+    "Restored Fibonacci boundary audit and leaf directory match byte for byte."
+  ]
+}

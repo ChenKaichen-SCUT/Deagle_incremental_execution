@@ -1,0 +1,56 @@
+{
+  "direct/B": {
+    "exact": 0,
+    "dense": 0,
+    "changed_B": 1,
+    "changed_T": 0
+  },
+  "direct/T": {
+    "exact": 0,
+    "dense": 0,
+    "changed_B": 0,
+    "changed_T": 1
+  },
+  "direct/B+T": {
+    "exact": 0,
+    "dense": 0,
+    "changed_B": 1,
+    "changed_T": 1
+  },
+  "direct/unrelated": {
+    "exact": 1,
+    "dense": 1,
+    "changed_B": 0,
+    "changed_T": 0
+  },
+  "root-chain/removed": {
+    "exact": 0,
+    "dense": 0,
+    "changed_B": 1,
+    "changed_T": 0
+  },
+  "minimize-gc/hidden-parent": {
+    "exact": 6,
+    "dense": 6,
+    "changed_B": 1,
+    "changed_T": 0
+  },
+  "block/split": {
+    "exact": 0,
+    "dense": 0,
+    "changed_B": 0,
+    "changed_T": 2
+  },
+  "block/merge": {
+    "exact": 0,
+    "dense": 0,
+    "changed_B": 0,
+    "changed_T": 2
+  },
+  "domain/expanded": {
+    "exact": 1,
+    "dense": 1,
+    "changed_B": 1,
+    "changed_T": 0
+  }
+}

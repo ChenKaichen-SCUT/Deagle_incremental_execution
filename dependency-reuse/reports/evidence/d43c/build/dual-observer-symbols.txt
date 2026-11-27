@@ -1,0 +1,5 @@
+0000000000989c30 W Minisat::BoundaryAudit43::event(Minisat::ProofKind, Minisat::BoundaryAudit43::Source, Minisat::vec<Minisat::Lit> const&, unsigned int, Minisat::TheorySupport const&, Minisat::DependencyTags const&)
+000000000098bdb0 W void Minisat::BoundaryAudit43::queued<std::set<Minisat::Lit, std::less<Minisat::Lit>, std::allocator<Minisat::Lit> > >(Minisat::Lit, std::set<Minisat::Lit, std::less<Minisat::Lit>, std::allocator<Minisat::Lit> > const&, Minisat::TheorySupport const&)
+0000000000806ef0 W std::unique_ptr<Minisat::BoundaryAudit43, std::default_delete<Minisat::BoundaryAudit43> >::~unique_ptr()
+0000000000806ef0 W std::unique_ptr<Minisat::BoundaryAudit43, std::default_delete<Minisat::BoundaryAudit43> >::~unique_ptr()
+0000000000dc4878 u Minisat::BoundaryAudit43::active()::p

@@ -1,0 +1,42 @@
+mutation	observed
+eliminated_B_ancestor	missing Boolean ancestor bit at birth 1
+explicit_root_unit	missing Boolean ancestor bit at birth 1
+successful_minimization	missing Boolean ancestor bit at birth 10
+second_same_slot_UsedLeaf	missing exact Boolean UsedLeaf 1
+stale_tag_after_eviction	missing Boolean ancestor bit at birth 8
+query_forged_permanent	wrong query/unknown disposition
+indirect_unknown_forged_permanent	wrong query/unknown disposition
+second_same_slot_theory_UsedLeaf	missing exact Theory UsedLeaf
+forged_discharge_all_literal_streams_agree	discharged theory clause differs at 23
+conditionless_PO	missing projected theory premise
+conditionless_APO	missing projected theory premise
+opaque_CO_certified	uncertified reason admitted
+missing_source_certified	uncertified reason admitted
+queue_reason_mixed	queued reason/ProofID/literal mismatch
+binding_native_polarity	independent native literal stream differs
+boundary_proofID_mixed	boundary paired with a different Audit ProofID
+dedup_overwrote_first_ticket	duplicate replaced pending reason
+stale_queue_ticket	map::at
+omitted_DirtyT	missing or spurious Dirty slot
+omitted_DirtyB	missing or spurious Dirty slot
+wrong_schema	compact format
+wrong_capacity	compact format
+incomplete_footer	invalid footer
+truncated_archive	truncated compact archive
+duplicate_independent_slot	persisted slot/domain
+false_unchanged_RF	order or RF binding missing
+false_unchanged_Guard	Guard binding missing
+false_unchanged_Block	changed structural premise
+false_unchanged_Direction	changed structural premise
+false_unchanged_SameAddress	same-address condition missing
+false_complete_RF_domain	changed complete candidate domain
+incompatible_ABI	incompatible ABI, memory model or theory semantics
+incompatible_memory_model	incompatible ABI, memory model or theory semantics
+incompatible_rule_version	incompatible ABI, memory model or theory semantics
+not_one_to_one	non-injective or out-of-range mapping
+wrong_known_polarity	changed typed G row 764
+lost_overflow_B	unconfirmed registered overflow member failed to invalidate the common slot
+lost_overflow_T	unconfirmed registered overflow member failed to invalidate the common slot
+scope_disposition_reclassified	invalid scope disposition
+tampered_compact_payload	library file integrity
+tag_from_previous_RF_branch	stale theory tag after native backtrack

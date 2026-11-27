@@ -1,0 +1,214 @@
+{
+  "Q": {
+    "discarded": 0,
+    "propagation": 0,
+    "checked_permanent_births": 0
+  },
+  "U": {
+    "discarded": 0,
+    "propagation": 0,
+    "checked_permanent_births": 0
+  },
+  "block": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "propagation": 1,
+    "queued": 1,
+    "reverse_RF": 1,
+    "theory_units": 1,
+    "units_reverse_RF": 1,
+    "checked_permanent_births": 1,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-RF": {
+    "RF_recheck": 1,
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "propagation": 1,
+    "queued": 1,
+    "checked_permanent_births": 0,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-guard": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "guard_recheck": 1,
+    "propagation": 1,
+    "queued": 1,
+    "checked_permanent_births": 1,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "direct": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "propagation": 1,
+    "queued": 1,
+    "reverse_RF": 1,
+    "theory_units": 1,
+    "units_reverse_RF": 1,
+    "checked_permanent_births": 1,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "domain": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "propagation": 1,
+    "queued": 1,
+    "reverse_RF": 1,
+    "theory_units": 1,
+    "units_reverse_RF": 1,
+    "checked_permanent_births": 2,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "dynamic-CO": {
+    "boundaries": 1,
+    "co_definitions": 1,
+    "discarded": 0,
+    "dynamic_CO": 1,
+    "propagation": 0,
+    "unknown": 1,
+    "checked_permanent_births": 0
+  },
+  "empty-PO-APO": {
+    "boundaries": 1,
+    "certified": 1,
+    "conflict": 1,
+    "discarded": 0,
+    "early_conflict": 1,
+    "exact": 1,
+    "propagation": 0,
+    "checked_permanent_births": 0
+  },
+  "immediate-RF": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "immediate_guard": 1,
+    "propagation": 1,
+    "queued": 1,
+    "checked_permanent_births": 0,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-guard": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "immediate_RF": 1,
+    "propagation": 1,
+    "queued": 1,
+    "checked_permanent_births": 1,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "minimize-gc": {
+    "discarded": 0,
+    "propagation": 0,
+    "checked_permanent_births": 41
+  },
+  "missing-source": {
+    "boundaries": 1,
+    "conflict": 1,
+    "discarded": 0,
+    "graph_conflict": 1,
+    "propagation": 0,
+    "unknown": 1,
+    "checked_permanent_births": 0
+  },
+  "rollback": {
+    "RF_recheck": 1,
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "propagation": 1,
+    "queued": 1,
+    "checked_permanent_births": 0
+  },
+  "root-chain": {
+    "discarded": 0,
+    "propagation": 0,
+    "checked_permanent_births": 1
+  },
+  "same-slot": {
+    "discarded": 0,
+    "propagation": 0,
+    "checked_permanent_births": 1
+  },
+  "shared-theory": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "propagation": 1,
+    "queued": 1,
+    "reverse_RF": 1,
+    "theory_units": 1,
+    "units_reverse_RF": 1,
+    "checked_permanent_births": 1
+  },
+  "shorten-empty": {
+    "discarded": 0,
+    "propagation": 0,
+    "checked_permanent_births": 0,
+    "exact_used_occurrences": [
+      1,
+      2,
+      3
+    ]
+  },
+  "unit-guard": {
+    "boundaries": 1,
+    "certified": 1,
+    "discarded": 0,
+    "exact": 1,
+    "immediate_RF": 1,
+    "propagation": 1,
+    "queued": 1,
+    "theory_units": 1,
+    "units_immediate_RF": 1,
+    "checked_permanent_births": 1,
+    "frozen_D1_boundary_counts": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "branch-edges": {
+    "Audit_ProofIDs": [
+      18,
+      15
+    ],
+    "backtrack_in_out_zero": true
+  }
+}

@@ -1,0 +1,146 @@
+000000000001b008 V DW.ref._ZTISt9exception
+000000000001b010 V DW.ref.__gxx_personality_v0
+000000000001ab98 d _DYNAMIC
+000000000001ada8 d _GLOBAL_OFFSET_TABLE_
+0000000000008310 t _GLOBAL__sub_I_main
+0000000000011ca0 t (anonymous namespace)::GraphModel::GraphModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000011ca0 t (anonymous namespace)::GraphModel::GraphModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000004cd8 t (anonymous namespace)::GraphModel::GraphModel(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [clone .cold]
+000000000000aff0 t (anonymous namespace)::GraphModel::~GraphModel()
+000000000000aff0 t (anonymous namespace)::GraphModel::~GraphModel()
+0000000000008850 t (anonymous namespace)::normalized(std::vector<int, std::allocator<int> >)
+000000000000e5e0 t (anonymous namespace)::TheoryAudit::replay()
+000000000000406c t (anonymous namespace)::TheoryAudit::replay() [clone .cold]
+000000000000bd40 t (anonymous namespace)::TheoryAudit::relation(Minisat::TheoryRecord const&, unsigned int, std::vector<unsigned int, std::allocator<unsigned int> > const&)
+0000000000003c24 t (anonymous namespace)::TheoryAudit::relation(Minisat::TheoryRecord const&, unsigned int, std::vector<unsigned int, std::allocator<unsigned int> > const&) [clone .cold]
+000000000000f410 t (anonymous namespace)::BoundaryCheck::boundary()
+000000000000447c t (anonymous namespace)::BoundaryCheck::boundary() [clone .cold]
+000000000000a8e0 t (anonymous namespace)::BoundaryCheck::nextTrace(unsigned int&, std::vector<int, std::allocator<int> >&) [clone .constprop.0]
+0000000000003aa4 t (anonymous namespace)::BoundaryCheck::nextTrace(unsigned int&, std::vector<int, std::allocator<int> >&) [clone .constprop.0] [clone .cold]
+000000000000b870 t (anonymous namespace)::BoundaryCheck::~BoundaryCheck()
+000000000000b870 t (anonymous namespace)::BoundaryCheck::~BoundaryCheck()
+0000000000013890 t void (anonymous namespace)::get<unsigned int>(_IO_FILE*, std::vector<unsigned int, std::allocator<unsigned int> >&, unsigned long&)
+00000000000056fa t void (anonymous namespace)::get<unsigned int>(_IO_FILE*, std::vector<unsigned int, std::allocator<unsigned int> >&, unsigned long&) [clone .cold]
+000000000000a100 t (anonymous namespace)::Reader::bytes(void*, unsigned long)
+0000000000003924 t (anonymous namespace)::Reader::bytes(void*, unsigned long) [clone .cold]
+000000000000a200 t (anonymous namespace)::Reader::magic(char const*)
+000000000000397a t (anonymous namespace)::Reader::magic(char const*) [clone .cold]
+000000000000a610 t (anonymous namespace)::Reader::literals()
+000000000000399a t (anonymous namespace)::Reader::literals() [clone .cold]
+000000000000ad80 t (anonymous namespace)::Reader::Reader(char const*)
+000000000000ad80 t (anonymous namespace)::Reader::Reader(char const*)
+0000000000003c08 t (anonymous namespace)::Reader::Reader(char const*) [clone .cold]
+000000000000a510 t (anonymous namespace)::content(Minisat::ProofStore const&, unsigned int)
+000000000000398a t (anonymous namespace)::content(Minisat::ProofStore const&, unsigned int) [clone .cold]
+00000000000084a0 t (anonymous namespace)::require(bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000003820 t (anonymous namespace)::require(bool, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [clone .cold]
+000000000001a980 d (anonymous namespace)::sources
+000000000000b430 t (anonymous namespace)::Analysis::~Analysis()
+000000000000b430 t (anonymous namespace)::Analysis::~Analysis()
+0000000000015330 T Minisat::ProofStore::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000005b66 t Minisat::ProofStore::read(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) [clone .cold]
+00000000000144e0 T Minisat::ProofStore::ProofStore()
+00000000000144e0 T Minisat::ProofStore::ProofStore()
+000000000000578c t Minisat::ProofStore::ProofStore() [clone .cold]
+00000000000130b0 T Minisat::ProofStore::~ProofStore()
+00000000000130b0 T Minisat::ProofStore::~ProofStore()
+0000000000008440 t std::map<int, (anonymous namespace)::Site, std::less<int>, std::allocator<std::pair<int const, (anonymous namespace)::Site> > >::at(int const&) const
+0000000000008430 W std::ctype<char>::do_widen(char) const
+0000000000013690 W std::_Vector_base<Minisat::ProofStore::Condition, std::allocator<Minisat::ProofStore::Condition> >::~_Vector_base()
+0000000000013690 W std::_Vector_base<Minisat::ProofStore::Condition, std::allocator<Minisat::ProofStore::Condition> >::~_Vector_base()
+0000000000013660 W std::_Vector_base<Minisat::ProofEdge, std::allocator<Minisat::ProofEdge> >::~_Vector_base()
+0000000000013660 W std::_Vector_base<Minisat::ProofEdge, std::allocator<Minisat::ProofEdge> >::~_Vector_base()
+000000000000b840 W std::_Vector_base<std::array<unsigned long, 16ul>, std::allocator<std::array<unsigned long, 16ul> > >::~_Vector_base()
+000000000000b840 W std::_Vector_base<std::array<unsigned long, 16ul>, std::allocator<std::array<unsigned long, 16ul> > >::~_Vector_base()
+000000000000afc0 W std::_Vector_base<char, std::allocator<char> >::~_Vector_base()
+000000000000afc0 W std::_Vector_base<char, std::allocator<char> >::~_Vector_base()
+000000000000af60 W std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base()
+000000000000af60 W std::_Vector_base<unsigned char, std::allocator<unsigned char> >::~_Vector_base()
+000000000000a4e0 W std::_Vector_base<int, std::allocator<int> >::~_Vector_base()
+000000000000a4e0 W std::_Vector_base<int, std::allocator<int> >::~_Vector_base()
+000000000000af90 W std::_Vector_base<unsigned int, std::allocator<unsigned int> >::~_Vector_base()
+000000000000af90 W std::_Vector_base<unsigned int, std::allocator<unsigned int> >::~_Vector_base()
+000000000000b400 W std::_Vector_base<unsigned short, std::allocator<unsigned short> >::~_Vector_base()
+000000000000b400 W std::_Vector_base<unsigned short, std::allocator<unsigned short> >::~_Vector_base()
+000000000000e3a0 W std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, unsigned long, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+0000000000008440 t std::map<int, (anonymous namespace)::Site, std::less<int>, std::allocator<std::pair<int const, (anonymous namespace)::Site> > >::at(int const&)
+000000000000b030 W std::pair<std::_Rb_tree_const_iterator<std::pair<int, int> >, bool> std::set<std::pair<int, int>, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::emplace<int&, int&>(int&, int&)
+0000000000008c70 t std::vector<(anonymous namespace)::Judgement, std::allocator<(anonymous namespace)::Judgement> >::~vector()
+0000000000008c70 t std::vector<(anonymous namespace)::Judgement, std::allocator<(anonymous namespace)::Judgement> >::~vector()
+0000000000013f40 W std::vector<Minisat::InputRecord, std::allocator<Minisat::InputRecord> >::_M_default_append(unsigned long)
+0000000000014b20 W std::vector<Minisat::LearnRecord, std::allocator<Minisat::LearnRecord> >::_M_default_append(unsigned long)
+0000000000014d50 W std::vector<Minisat::EvictedLearn, std::allocator<Minisat::EvictedLearn> >::_M_default_append(unsigned long)
+0000000000014130 W std::vector<Minisat::TheoryRecord, std::allocator<Minisat::TheoryRecord> >::_M_default_append(unsigned long)
+0000000000014f30 W std::vector<Minisat::SatisfiedRemoval, std::allocator<Minisat::SatisfiedRemoval> >::_M_default_append(unsigned long)
+0000000000013d60 W std::vector<Minisat::ProofEdge, std::allocator<Minisat::ProofEdge> >::_M_default_append(unsigned long)
+00000000000139a0 W std::vector<Minisat::ProofNode, std::allocator<Minisat::ProofNode> >::_M_default_append(unsigned long)
+0000000000014370 W void std::vector<Minisat::ProofNode, std::allocator<Minisat::ProofNode> >::_M_realloc_insert<Minisat::ProofNode>(__gnu_cxx::__normal_iterator<Minisat::ProofNode*, std::vector<Minisat::ProofNode, std::allocator<Minisat::ProofNode> > >, Minisat::ProofNode&&)
+000000000000b180 W std::vector<std::array<unsigned long, 16ul>, std::allocator<std::array<unsigned long, 16ul> > >::vector(unsigned long, std::allocator<std::array<unsigned long, 16ul> > const&)
+000000000000b180 W std::vector<std::array<unsigned long, 16ul>, std::allocator<std::array<unsigned long, 16ul> > >::vector(unsigned long, std::allocator<std::array<unsigned long, 16ul> > const&)
+0000000000015160 W std::vector<char, std::allocator<char> >::_M_default_append(unsigned long)
+0000000000011b50 W void std::vector<char, std::allocator<char> >::_M_realloc_insert<char>(__gnu_cxx::__normal_iterator<char*, std::vector<char, std::allocator<char> > >, char&&)
+000000000000bbf0 W void std::vector<unsigned char, std::allocator<unsigned char> >::_M_realloc_insert<unsigned char>(__gnu_cxx::__normal_iterator<unsigned char*, std::vector<unsigned char, std::allocator<unsigned char> > >, unsigned char&&)
+000000000000aec0 W std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&)
+000000000000aec0 W std::vector<unsigned char, std::allocator<unsigned char> >::vector(unsigned long, std::allocator<unsigned char> const&)
+00000000000089d0 t void std::vector<int, std::allocator<int> >::_M_range_insert<__gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > > >(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int const*, std::vector<int, std::allocator<int> > >, std::forward_iterator_tag) [clone .isra.0]
+0000000000013b90 W std::vector<int, std::allocator<int> >::_M_default_append(unsigned long)
+000000000000b290 W void std::vector<int, std::allocator<int> >::_M_realloc_insert<int const&>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, int const&)
+000000000000ae10 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+000000000000ae10 W std::vector<int, std::allocator<int> >::vector(std::vector<int, std::allocator<int> > const&)
+00000000000136c0 W std::vector<unsigned int, std::allocator<unsigned int> >::_M_default_append(unsigned long)
+000000000000b4a0 W void std::vector<unsigned int, std::allocator<unsigned int> >::_M_realloc_insert<unsigned int const&>(__gnu_cxx::__normal_iterator<unsigned int*, std::vector<unsigned int, std::allocator<unsigned int> > >, unsigned int const&)
+0000000000008cd0 t std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::basic_string<std::allocator<char> >(char const*, std::allocator<char> const&) [clone .constprop.0]
+000000000000a290 W std::__cxx11::to_string(unsigned int)
+000000000000dfb0 W std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> > >::_M_get_insert_unique_pos(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+000000000000e120 W std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> > >::_M_get_insert_hint_unique_pos(std::_Rb_tree_const_iterator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> >, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)
+0000000000009890 t std::_Rb_tree<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long>, std::_Select1st<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> >, std::less<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > >, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> > >::_M_erase(std::_Rb_tree_node<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, unsigned long> >*) [clone .isra.0]
+00000000000096c0 t std::_Rb_tree<std::pair<int, int>, std::pair<int, int>, std::_Identity<std::pair<int, int> >, std::less<std::pair<int, int> >, std::allocator<std::pair<int, int> > >::_M_erase(std::_Rb_tree_node<std::pair<int, int> >*) [clone .isra.0]
+000000000000b8c0 W std::pair<std::_Rb_tree_iterator<std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> > >, bool> std::_Rb_tree<std::array<int, 4ul>, std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> >, std::_Select1st<std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> > >, std::less<std::array<int, 4ul> >, std::allocator<std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> > > >::_M_emplace_unique<std::array<int, 4ul>&, std::pair<unsigned int, bool> >(std::array<int, 4ul>&, std::pair<unsigned int, bool>&&)
+0000000000009320 t std::_Rb_tree<std::array<int, 4ul>, std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> >, std::_Select1st<std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> > >, std::less<std::array<int, 4ul> >, std::allocator<std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> > > >::_M_erase(std::_Rb_tree_node<std::pair<std::array<int, 4ul> const, std::pair<unsigned int, bool> > >*) [clone .isra.0]
+000000000000b610 W std::pair<std::_Rb_tree_iterator<std::pair<std::array<int, 4ul> const, char> >, bool> std::_Rb_tree<std::array<int, 4ul>, std::pair<std::array<int, 4ul> const, char>, std::_Select1st<std::pair<std::array<int, 4ul> const, char> >, std::less<std::array<int, 4ul> >, std::allocator<std::pair<std::array<int, 4ul> const, char> > >::_M_emplace_unique<std::array<int, 4ul>&, char&>(std::array<int, 4ul>&, char&)
+0000000000009150 t std::_Rb_tree<std::array<int, 4ul>, std::pair<std::array<int, 4ul> const, char>, std::_Select1st<std::pair<std::array<int, 4ul> const, char> >, std::less<std::array<int, 4ul> >, std::allocator<std::pair<std::array<int, 4ul> const, char> > >::_M_erase(std::_Rb_tree_node<std::pair<std::array<int, 4ul> const, char> >*) [clone .isra.0]
+0000000000012ee0 t std::_Rb_tree<std::array<int, 4ul>, std::pair<std::array<int, 4ul> const, unsigned int>, std::_Select1st<std::pair<std::array<int, 4ul> const, unsigned int> >, std::less<std::array<int, 4ul> >, std::allocator<std::pair<std::array<int, 4ul> const, unsigned int> > >::_M_erase(std::_Rb_tree_node<std::pair<std::array<int, 4ul> const, unsigned int> >*) [clone .isra.0]
+0000000000008f80 t std::_Rb_tree<int, std::pair<int const, (anonymous namespace)::Site>, std::_Select1st<std::pair<int const, (anonymous namespace)::Site> >, std::less<int>, std::allocator<std::pair<int const, (anonymous namespace)::Site> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, (anonymous namespace)::Site> >*) [clone .isra.0]
+000000000000baf0 W std::pair<std::_Rb_tree_iterator<std::pair<int const, unsigned int> >, bool> std::_Rb_tree<int, std::pair<int const, unsigned int>, std::_Select1st<std::pair<int const, unsigned int> >, std::less<int>, std::allocator<std::pair<int const, unsigned int> > >::_M_emplace_unique<int&, unsigned int&>(int&, unsigned int&)
+00000000000094f0 t std::_Rb_tree<int, std::pair<int const, unsigned int>, std::_Select1st<std::pair<int const, unsigned int> >, std::less<int>, std::allocator<std::pair<int const, unsigned int> > >::_M_erase(std::_Rb_tree_node<std::pair<int const, unsigned int> >*) [clone .isra.0]
+0000000000009b80 t std::_Rb_tree<unsigned int, std::pair<unsigned int const, (anonymous namespace)::Queued>, std::_Select1st<std::pair<unsigned int const, (anonymous namespace)::Queued> >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, (anonymous namespace)::Queued> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned int const, (anonymous namespace)::Queued> >*) [clone .isra.0]
+0000000000008db0 t std::_Rb_tree<unsigned int, std::pair<unsigned int const, int>, std::_Select1st<std::pair<unsigned int const, int> >, std::less<unsigned int>, std::allocator<std::pair<unsigned int const, int> > >::_M_erase(std::_Rb_tree_node<std::pair<unsigned int const, int> >*) [clone .isra.0]
+00000000000084b0 t void std::__adjust_heap<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, int, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, long, int, __gnu_cxx::__ops::_Iter_less_iter) [clone .isra.0]
+00000000000087b0 t void std::__insertion_sort<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__ops::_Iter_less_iter) [clone .isra.0]
+00000000000085d0 t void std::__introsort_loop<__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter>(__gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, __gnu_cxx::__normal_iterator<int*, std::vector<int, std::allocator<int> > >, long, __gnu_cxx::__ops::_Iter_less_iter) [clone .isra.0]
+000000000001b160 B std::cerr@GLIBCXX_3.4
+000000000001b040 B std::cout@GLIBCXX_3.4
+000000000001b271 b std::__ioinit
+000000000000ace0 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&, char const*)
+000000000000a460 W std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > std::operator+<char, std::char_traits<char>, std::allocator<char> >(char const*, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&)
+000000000001ab00 V typeinfo for std::runtime_error@GLIBCXX_3.4
+000000000001aad0 V VTT for std::__cxx11::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >@GLIBCXX_3.4.21
+000000000001ab18 V vtable for std::__cxx11::basic_stringbuf<char, std::char_traits<char>, std::allocator<char> >@GLIBCXX_3.4.21
+000000000001aa00 V vtable for std::__cxx11::basic_istringstream<char, std::char_traits<char>, std::allocator<char> >@GLIBCXX_3.4.21
+000000000001aa50 V vtable for std::basic_streambuf<char, std::char_traits<char> >@GLIBCXX_3.4
+000000000001a9e0 V vtable for std::basic_ios<char, std::char_traits<char> >@GLIBCXX_3.4
+0000000000009e40 t (anonymous namespace)::TheoryAudit::relation(Minisat::TheoryRecord const&, unsigned int, std::vector<unsigned int, std::allocator<unsigned int> > const&)::{lambda(unsigned int, Minisat::TheoryOp, int, int, int)#3}::operator()(unsigned int, Minisat::TheoryOp, int, int, int) const [clone .isra.0]
+0000000000003874 t (anonymous namespace)::TheoryAudit::relation(Minisat::TheoryRecord const&, unsigned int, std::vector<unsigned int, std::allocator<unsigned int> > const&)::{lambda(unsigned int, Minisat::TheoryOp, int, int, int)#3}::operator()(unsigned int, Minisat::TheoryOp, int, int, int) const [clone .isra.0] [clone .cold]
+0000000000009fc0 t (anonymous namespace)::TheoryAudit::relation(Minisat::TheoryRecord const&, unsigned int, std::vector<unsigned int, std::allocator<unsigned int> > const&)::{lambda(unsigned int, int, int)#4}::operator()(unsigned int, int, int) const
+00000000000038ca t (anonymous namespace)::TheoryAudit::relation(Minisat::TheoryRecord const&, unsigned int, std::vector<unsigned int, std::allocator<unsigned int> > const&)::{lambda(unsigned int, int, int)#4}::operator()(unsigned int, int, int) const [clone .cold]
+00000000000164a0 u std::__detail::__to_chars_10_impl<unsigned int>(char*, unsigned int, unsigned int)::__digits
+0000000000018554 r __FRAME_END__
+0000000000016a44 r __GNU_EH_FRAME_HDR
+000000000001b018 D __TMC_END__
+000000000000038c r __abi_tag
+000000000001b018 B __bss_start
+00000000000083e0 t __do_global_dtors_aux
+000000000001a978 d __do_global_dtors_aux_fini_array_entry
+000000000001b000 D __dso_handle
+000000000001a968 d __frame_dummy_init_array_entry
+000000000001b018 D _edata
+000000000001b278 B _end
+0000000000015eac T _fini
+0000000000003000 T _init
+0000000000008340 T _start
+000000000001b270 b completed.0
+0000000000008370 t deregister_tm_clones
+0000000000008420 t frame_dummy
+0000000000006170 T main
+0000000000004f54 t main.cold
+00000000000083a0 t register_tm_clones

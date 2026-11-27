@@ -1,0 +1,3 @@
+27 production selector/importer cases passed
+P0 queries 3 all P1 properties matched; rejected ['receipt', 'producer', 'rules', 'truncated']
+30 native triplet transfers, finite model checks, six site controls, five corruptions passed

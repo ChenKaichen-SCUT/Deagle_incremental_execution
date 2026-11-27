@@ -1,0 +1,70 @@
+{
+  "gate": "CORRECTNESS_GATE_PASSED",
+  "boundaries": {
+    "boundaries": 610755,
+    "certified": 610755,
+    "conflict": 2941,
+    "discarded": 45502,
+    "duplicates": 1814823,
+    "exact": 610755,
+    "graph_conflict": 2941,
+    "immediate_RF": 344213,
+    "propagation": 607814,
+    "queued": 653316,
+    "reverse_RF": 258535,
+    "theory_units": 659,
+    "units_immediate_RF": 659,
+    "RF_recheck": 2,
+    "guard_recheck": 5064
+  },
+  "B_evidence": {
+    "births": 152817,
+    "exact": 388,
+    "eligible": 311,
+    "mixed": 264
+  },
+  "missing_exportable_leaves": 0,
+  "false_admissions": 0,
+  "controlled_models": {
+    "identity": {
+      "eligible": 97901,
+      "selected": 1724,
+      "query": 54916,
+      "unknown": 0,
+      "repair_eligible": 43295,
+      "repair_selected": 1212
+    },
+    "unsigned": {
+      "eligible": 97901,
+      "selected": 1724,
+      "query": 54916,
+      "unknown": 0,
+      "repair_eligible": 43295,
+      "repair_selected": 1212
+    },
+    "signed": {
+      "eligible": 97901,
+      "selected": 1724,
+      "query": 54916,
+      "unknown": 0,
+      "repair_eligible": 43295,
+      "repair_selected": 1212
+    }
+  },
+  "rejected_injections": 41,
+  "native_fixture_contexts": 20,
+  "legacy_result_entries": {
+    "d4": 27,
+    "triplets": 31,
+    "libraries": 6,
+    "light": 77
+  },
+  "default_canary": {
+    "SupportStore_instances": 0,
+    "proof_nodes": 0,
+    "proof_parent_edges": 0,
+    "duplicate_condition_nodes": 0
+  },
+  "real_P1_runs": 0,
+  "per_candidate_SAT_RUP_Closure_reproofs": 0
+}

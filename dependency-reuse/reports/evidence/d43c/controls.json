@@ -1,0 +1,310 @@
+{
+  "fib_updates_8": {
+    "identity": {
+      "typed_rows": 69814,
+      "original_occurrences": 50065,
+      "original_scopes": {
+        "B": 47493,
+        "Q": 2572
+      },
+      "theory_declarations": 851,
+      "RF_domains": 43,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 1307,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 135
+      },
+      "translated_conclusion_sha256": "ec244b0fdf0081d10a19a0220b2bf943c41b4b171225ee8f615bb1764a824cd7",
+      "source_sha256": "76081293a4bda06186802f0f59eaa9b4ebd061246257979ac5d3c63b7f57118b",
+      "model_sha256": "76081293a4bda06186802f0f59eaa9b4ebd061246257979ac5d3c63b7f57118b",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 12553,
+      "events": 81,
+      "selection_sha256": "36a9e0d1ab8c6179d9cb424cb43a6d0f263817dce3feb11bf0d1f58b45932e2a"
+    },
+    "unsigned": {
+      "typed_rows": 69814,
+      "original_occurrences": 50065,
+      "original_scopes": {
+        "B": 47493,
+        "Q": 2572
+      },
+      "theory_declarations": 851,
+      "RF_domains": 43,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 1307,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 135
+      },
+      "translated_conclusion_sha256": "222dfd6aea17428fe0a6466d6bdf028a3f7d9f8416aca07428b4c7db8368eb53",
+      "source_sha256": "76081293a4bda06186802f0f59eaa9b4ebd061246257979ac5d3c63b7f57118b",
+      "model_sha256": "474b8f8d2d7e331711089bcaa9cd32b151cc39fa8815f395e3ce6a349e173751",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 12553,
+      "events": 81,
+      "selection_sha256": "36a9e0d1ab8c6179d9cb424cb43a6d0f263817dce3feb11bf0d1f58b45932e2a"
+    },
+    "signed": {
+      "typed_rows": 69814,
+      "original_occurrences": 50065,
+      "original_scopes": {
+        "B": 47493,
+        "Q": 2572
+      },
+      "theory_declarations": 851,
+      "RF_domains": 43,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 1307,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 135
+      },
+      "translated_conclusion_sha256": "f8383ffdaa3ecfd160af4db813fba7323dd74610f1643d192977d7e867e02f96",
+      "source_sha256": "76081293a4bda06186802f0f59eaa9b4ebd061246257979ac5d3c63b7f57118b",
+      "model_sha256": "de5b7b1c1e91e413d5d5d4ccff7344f54c0bd9f8925089492fa14d4c90e45b1b",
+      "old_directory_unchanged": true,
+      "negative_images": 6249,
+      "native_variables": 12553,
+      "events": 81,
+      "selection_sha256": "36a9e0d1ab8c6179d9cb424cb43a6d0f263817dce3feb11bf0d1f58b45932e2a"
+    }
+  },
+  "circular-buffer": {
+    "identity": {
+      "typed_rows": 1427715,
+      "original_occurrences": 1161979,
+      "original_scopes": {
+        "B": 1160134,
+        "Q": 1845
+      },
+      "theory_declarations": 6414,
+      "RF_domains": 289,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 188,
+      "selected_under_cap": 188,
+      "rejected": {
+        "query": 155
+      },
+      "translated_conclusion_sha256": "3937927bbb51dfbb0b166aa2e831065fd247214e8d060995b1d2449f7ff563d2",
+      "source_sha256": "aed934e3d45d5adec6e344e4284ae0d020f31708ab51953a8e1d0249962b827a",
+      "model_sha256": "aed934e3d45d5adec6e344e4284ae0d020f31708ab51953a8e1d0249962b827a",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 245081,
+      "events": 481,
+      "selection_sha256": "c3122804da6e30ef87e293c4342052547147cecf99233394904d8b250a241d58"
+    },
+    "unsigned": {
+      "typed_rows": 1427715,
+      "original_occurrences": 1161979,
+      "original_scopes": {
+        "B": 1160134,
+        "Q": 1845
+      },
+      "theory_declarations": 6414,
+      "RF_domains": 289,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 188,
+      "selected_under_cap": 188,
+      "rejected": {
+        "query": 155
+      },
+      "translated_conclusion_sha256": "b45a44c47863ffcb95521d4fc5db2eb1f9f4c710afaa464a0510b89fb738e80a",
+      "source_sha256": "aed934e3d45d5adec6e344e4284ae0d020f31708ab51953a8e1d0249962b827a",
+      "model_sha256": "f4bf8ca9d97bbec36cb4223fbd6c19cbe922dbd0c8d35837f1a8c4a7914300da",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 245081,
+      "events": 481,
+      "selection_sha256": "c3122804da6e30ef87e293c4342052547147cecf99233394904d8b250a241d58"
+    },
+    "signed": {
+      "typed_rows": 1427715,
+      "original_occurrences": 1161979,
+      "original_scopes": {
+        "B": 1160134,
+        "Q": 1845
+      },
+      "theory_declarations": 6414,
+      "RF_domains": 289,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 188,
+      "selected_under_cap": 188,
+      "rejected": {
+        "query": 155
+      },
+      "translated_conclusion_sha256": "843e95221d83fa99c97ab3d8105f3edb9b42e981eff9565bba748bd961f6235b",
+      "source_sha256": "aed934e3d45d5adec6e344e4284ae0d020f31708ab51953a8e1d0249962b827a",
+      "model_sha256": "e7708c9e1d0cb6f53c11702ae437a96527b6000dddafe090f81121a4509faf05",
+      "old_directory_unchanged": true,
+      "negative_images": 122833,
+      "native_variables": 245081,
+      "events": 481,
+      "selection_sha256": "c3122804da6e30ef87e293c4342052547147cecf99233394904d8b250a241d58"
+    }
+  },
+  "airline_reservations_6": {
+    "identity": {
+      "typed_rows": 1138923,
+      "original_occurrences": 910797,
+      "original_scopes": {
+        "B": 866692,
+        "Q": 44105
+      },
+      "theory_declarations": 2248,
+      "RF_domains": 60,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 41800,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 444
+      },
+      "translated_conclusion_sha256": "014072c8ce7707800ceabfb4b60b8a0e6e71c11ed913a9d18d9ed63574f64093",
+      "source_sha256": "6cd878cef427a3133e957676aca9f614d7cb643386506ce87d678d61f9ad756a",
+      "model_sha256": "6cd878cef427a3133e957676aca9f614d7cb643386506ce87d678d61f9ad756a",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 199090,
+      "events": 132,
+      "selection_sha256": "74503ab13eed9e8cbfedf19a94779cb595a35b76d8138cb35e06842f5f46318d"
+    },
+    "unsigned": {
+      "typed_rows": 1138923,
+      "original_occurrences": 910797,
+      "original_scopes": {
+        "B": 866692,
+        "Q": 44105
+      },
+      "theory_declarations": 2248,
+      "RF_domains": 60,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 41800,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 444
+      },
+      "translated_conclusion_sha256": "ae1017d157897449ac0d35ecf108dcd261b80105f0221e5d50f37aac217ecebf",
+      "source_sha256": "6cd878cef427a3133e957676aca9f614d7cb643386506ce87d678d61f9ad756a",
+      "model_sha256": "9c748f42a730a107e103dad98af58c20322841eed596251f4f1ff7209d83d64b",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 199090,
+      "events": 132,
+      "selection_sha256": "74503ab13eed9e8cbfedf19a94779cb595a35b76d8138cb35e06842f5f46318d"
+    },
+    "signed": {
+      "typed_rows": 1138923,
+      "original_occurrences": 910797,
+      "original_scopes": {
+        "B": 866692,
+        "Q": 44105
+      },
+      "theory_declarations": 2248,
+      "RF_domains": 60,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 41800,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 444
+      },
+      "translated_conclusion_sha256": "f190a99db41b1c391056f5c0734d597ada633f1d4cc829a819a47a9470ff6c42",
+      "source_sha256": "6cd878cef427a3133e957676aca9f614d7cb643386506ce87d678d61f9ad756a",
+      "model_sha256": "5196dc0f6c785d1df91bfd778b4ace0b98e4b55ec71ec498ab0c73d2cfe2ce2c",
+      "old_directory_unchanged": true,
+      "negative_images": 99472,
+      "native_variables": 199090,
+      "events": 132,
+      "selection_sha256": "74503ab13eed9e8cbfedf19a94779cb595a35b76d8138cb35e06842f5f46318d"
+    }
+  },
+  "fib-snapshot-11": {
+    "identity": {
+      "typed_rows": 1225305,
+      "original_occurrences": 1002193,
+      "original_scopes": {
+        "B": 1001471,
+        "Q": 722
+      },
+      "theory_declarations": 13534,
+      "RF_domains": 356,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 54606,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 54182
+      },
+      "translated_conclusion_sha256": "2d2afff0be045757a4f96e3ad518a1c08fadaab540bde83af9b369b26d65a27a",
+      "source_sha256": "98d12248e59d4d2d25117dbce28a535b0c69f027fcfb7879afd241e410b82607",
+      "model_sha256": "98d12248e59d4d2d25117dbce28a535b0c69f027fcfb7879afd241e410b82607",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 200360,
+      "events": 590,
+      "selection_sha256": "896c9692f1f16399686083faa497704a2ea0975731478b12ce258b006a6b3a6c"
+    },
+    "unsigned": {
+      "typed_rows": 1225305,
+      "original_occurrences": 1002193,
+      "original_scopes": {
+        "B": 1001471,
+        "Q": 722
+      },
+      "theory_declarations": 13534,
+      "RF_domains": 356,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 54606,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 54182
+      },
+      "translated_conclusion_sha256": "ef473a7b42a1725c28b9586d045b9e7f290aa8822beb264057aed72bb3d030f6",
+      "source_sha256": "98d12248e59d4d2d25117dbce28a535b0c69f027fcfb7879afd241e410b82607",
+      "model_sha256": "77ca7cf238b4f699f607117b59943a964e195d16793ed1ed6d51257593a86703",
+      "old_directory_unchanged": true,
+      "negative_images": 0,
+      "native_variables": 200360,
+      "events": 590,
+      "selection_sha256": "896c9692f1f16399686083faa497704a2ea0975731478b12ce258b006a6b3a6c"
+    },
+    "signed": {
+      "typed_rows": 1225305,
+      "original_occurrences": 1002193,
+      "original_scopes": {
+        "B": 1001471,
+        "Q": 722
+      },
+      "theory_declarations": 13534,
+      "RF_domains": 356,
+      "DirtyB": 0,
+      "DirtyT": 0,
+      "eligible": 54606,
+      "selected_under_cap": 512,
+      "rejected": {
+        "query": 54182
+      },
+      "translated_conclusion_sha256": "491ad323574ceb3cd99e01adde4d19ae94c3bf868d719fdf98475f8a96c879b3",
+      "source_sha256": "98d12248e59d4d2d25117dbce28a535b0c69f027fcfb7879afd241e410b82607",
+      "model_sha256": "78fc53a6780bfd35e2f96b33813e16bd0b6b2f5228d6e9d70fdf1630b1c93c36",
+      "old_directory_unchanged": true,
+      "negative_images": 100081,
+      "native_variables": 200360,
+      "events": 590,
+      "selection_sha256": "896c9692f1f16399686083faa497704a2ea0975731478b12ce258b006a6b3a6c"
+    }
+  }
+}

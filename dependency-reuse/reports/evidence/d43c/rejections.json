@@ -1,0 +1,650 @@
+{
+  "eliminated_B_ancestor": {
+    "disposition": "REJECTED",
+    "observed": "missing Boolean ancestor bit at birth 1",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "4a5c9956e4ef52a6fe9c28dc6d187eae010d1a458d22a89cbd6441d8b1d96fca",
+      "case": "direct",
+      "birth": 1,
+      "occurrence": 1,
+      "slot": 0
+    }
+  },
+  "explicit_root_unit": {
+    "disposition": "REJECTED",
+    "observed": "missing Boolean ancestor bit at birth 1",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "2c704697b6680fe72a20f10070fb3b59be6865f222d44799f00eecbe0fed141f",
+      "case": "root-chain",
+      "birth": 1,
+      "occurrence": 5,
+      "slot": 4
+    }
+  },
+  "successful_minimization": {
+    "disposition": "REJECTED",
+    "observed": "missing Boolean ancestor bit at birth 10",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "1b18d9eace0d5bed9d6beec225b5d23c3a191f76e69890185bb35ef921969752",
+      "case": "minimize-gc",
+      "birth": 10,
+      "occurrence": 1,
+      "slot": 0
+    }
+  },
+  "second_same_slot_UsedLeaf": {
+    "disposition": "REJECTED",
+    "observed": "missing exact Boolean UsedLeaf 1",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "80ec67ceb8896457fa3beb04fc93399f4aa788d27109eccce4310d9fc06552fa",
+      "case": "same-slot",
+      "birth": 1,
+      "occurrence": 1,
+      "slot": 0
+    }
+  },
+  "stale_tag_after_eviction": {
+    "disposition": "REJECTED",
+    "observed": "missing Boolean ancestor bit at birth 8",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "c892b9c21096d8a31263b83c74a15106f21fbdc8ce549e932c272ae180c551db",
+      "case": "minimize-gc",
+      "birth": 8,
+      "occurrence": 4,
+      "slot": 3
+    }
+  },
+  "query_forged_permanent": {
+    "disposition": "REJECTED",
+    "observed": "wrong query/unknown disposition",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "8badae6d8f79a734a76b3852b400463025a3fa027caa9317b1cd91260ad46b9c",
+      "case": "Q",
+      "birth": 1
+    }
+  },
+  "indirect_unknown_forged_permanent": {
+    "disposition": "REJECTED",
+    "observed": "wrong query/unknown disposition",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "f5d1d428459d37c0a078e75f0ea655f891c3af8474d112fb55a0780807375863",
+      "case": "dynamic-CO",
+      "birth": 2
+    }
+  },
+  "second_same_slot_theory_UsedLeaf": {
+    "disposition": "REJECTED",
+    "observed": "missing exact Theory UsedLeaf",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "d5ae8176f2cf50ed2cffa649ccd0327b6ba5b00cd958ef53d63d3894a23be1f9",
+      "case": "shared-theory",
+      "leaf": [
+        1,
+        2,
+        3,
+        -1
+      ],
+      "other_leaf": [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "shared_group": 0
+    }
+  },
+  "forged_discharge_all_literal_streams_agree": {
+    "disposition": "REJECTED",
+    "observed": "discharged theory clause differs at 23",
+    "witness": {
+      "source": "proof.bin",
+      "mutant_sha256": "d4e7fb35b169878d3edb8946b9a3a0c74d50a260212b3f999c5fadca69fca765",
+      "case": "deferred-RF",
+      "Audit_ProofID": 23,
+      "changed_literal_index": 1
+    }
+  },
+  "conditionless_PO": {
+    "disposition": "REJECTED",
+    "observed": "missing projected theory premise",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "58541d19e1d45bb9b6ac15820a05660cd279f2656bbafd958949b6bf55f10bdc",
+      "case": "empty-PO-APO",
+      "lemma": 7,
+      "rule": 6
+    }
+  },
+  "conditionless_APO": {
+    "disposition": "REJECTED",
+    "observed": "missing projected theory premise",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "e88e6adc167815d4e19d4630c0d7a43ccf774226e91d6304b73ce702db2a38c9",
+      "case": "empty-PO-APO",
+      "lemma": 7,
+      "rule": 6
+    }
+  },
+  "opaque_CO_certified": {
+    "disposition": "REJECTED",
+    "observed": "uncertified reason admitted",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "ca7e5c69a1d6d7c4b75511d2393e59462d9465fc8cd380ee35675537c2809911",
+      "case": "dynamic-CO",
+      "lemma": 6,
+      "rule": 0
+    }
+  },
+  "missing_source_certified": {
+    "disposition": "REJECTED",
+    "observed": "uncertified reason admitted",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "2f62cee97c3d4f9eb7e319c81f417a0edb70dc16e578a06cd5f909d0ea6d1d38",
+      "case": "missing-source",
+      "lemma": 13,
+      "rule": 0
+    }
+  },
+  "queue_reason_mixed": {
+    "disposition": "REJECTED",
+    "observed": "queued reason/ProofID/literal mismatch",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "b97c92eb34c734b95bcaf6f37b9247c5413f0c3d38a519e312eba637085140b0",
+      "case": "deferred-RF",
+      "lemma": 23,
+      "rule": 22
+    }
+  },
+  "binding_native_polarity": {
+    "disposition": "REJECTED",
+    "observed": "independent native literal stream differs",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "5e73fdca54928d88b059a7d7b4eb5ba28be46e0179ecf01c339db4efa9e56c30",
+      "case": "unit-guard",
+      "lemma": 23,
+      "rule": 22
+    }
+  },
+  "boundary_proofID_mixed": {
+    "disposition": "REJECTED",
+    "observed": "boundary paired with a different Audit ProofID",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "45579ea761e414a933dbd9ee0c021b10ec87088a323d8df62b5ab1616a46f6e8",
+      "case": "deferred-guard",
+      "lemma": 23,
+      "rule": 22
+    }
+  },
+  "dedup_overwrote_first_ticket": {
+    "disposition": "REJECTED",
+    "observed": "duplicate replaced pending reason",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "de8456b2655ed3f68f2fd4ba8656a664a406193d4c674e5375044908b89560a3",
+      "case": "fib_updates_8",
+      "ticket": 3
+    }
+  },
+  "stale_queue_ticket": {
+    "disposition": "REJECTED",
+    "observed": "map::at",
+    "witness": {
+      "source": "boundaries.bin.cert",
+      "mutant_sha256": "c5fcbd1c0cb3db0b454030cddd2f6c20d69ed8d1d34977985135d61f3ff6e35e",
+      "case": "fib_updates_8",
+      "ticket": 2
+    }
+  },
+  "omitted_DirtyT": {
+    "disposition": "REJECTED",
+    "observed": "missing or spurious Dirty slot",
+    "witness": {
+      "case": "direct",
+      "change": "T",
+      "erased_slot": 5
+    }
+  },
+  "omitted_DirtyB": {
+    "disposition": "REJECTED",
+    "observed": "missing or spurious Dirty slot",
+    "witness": {
+      "case": "root-chain",
+      "change": "removed",
+      "erased_slot": 0
+    }
+  },
+  "wrong_schema": {
+    "disposition": "REJECTED",
+    "observed": "compact format",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "80c64002c2916787b44413c1908c2d779b724225bab69f7226a1b0c42e2c5e73"
+    }
+  },
+  "wrong_capacity": {
+    "disposition": "REJECTED",
+    "observed": "compact format",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "4191ce9b3f37d4310fac5fed1d80c01587ec683d291eed68d2dbb62c3c7dfdb6"
+    }
+  },
+  "incomplete_footer": {
+    "disposition": "REJECTED",
+    "observed": "invalid footer",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "2181e50b0880b75c7af4d305d26204604c25e147979e1332f2f129f4598ab2e3"
+    }
+  },
+  "truncated_archive": {
+    "disposition": "REJECTED",
+    "observed": "truncated compact archive",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "dddb2dba03d72e59e509fa829621ae741425f28ef1b0e0ad53ac80becf3e9238"
+    }
+  },
+  "duplicate_independent_slot": {
+    "disposition": "REJECTED",
+    "observed": "persisted slot/domain",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "49be0f1606aeb39c62bb3c515949917ad8dc60d14caac9e10dd3a81dd1f6ebdd"
+    }
+  },
+  "false_unchanged_RF": {
+    "disposition": "REJECTED",
+    "observed": "order or RF binding missing",
+    "witness": {
+      "case": "fib_updates_8",
+      "premise": [
+        3,
+        0,
+        1,
+        9142
+      ],
+      "old_rows": [
+        [
+          "EDGE",
+          "rf",
+          "__CPROVER_threads_exited#1",
+          "__CPROVER_threads_exited#2",
+          "9142",
+          "0",
+          "1",
+          "9142"
+        ],
+        [
+          "EDGE",
+          "rf",
+          "__CPROVER_threads_exited#5",
+          "__CPROVER_threads_exited#2",
+          "9148",
+          "2",
+          "1",
+          "9148"
+        ]
+      ],
+      "new_rows": [
+        [
+          "EDGE",
+          "rf",
+          "__CPROVER_threads_exited#1",
+          "__CPROVER_threads_exited#2",
+          "9148",
+          "0",
+          "1",
+          "9148"
+        ],
+        [
+          "EDGE",
+          "rf",
+          "__CPROVER_threads_exited#5",
+          "__CPROVER_threads_exited#2",
+          "9142",
+          "2",
+          "1",
+          "9142"
+        ]
+      ]
+    }
+  },
+  "false_unchanged_Guard": {
+    "disposition": "REJECTED",
+    "observed": "Guard binding missing",
+    "witness": {
+      "case": "circular-buffer",
+      "premise": [
+        4,
+        2,
+        -1,
+        10990
+      ],
+      "old_rows": [
+        [
+          "GUARD",
+          "__CPROVER_threads_exited#5",
+          "10990"
+        ],
+        [
+          "GUARD",
+          "__CPROVER_threads_exited#7",
+          "15650"
+        ]
+      ],
+      "new_rows": [
+        [
+          "GUARD",
+          "__CPROVER_threads_exited#5",
+          "15650"
+        ],
+        [
+          "GUARD",
+          "__CPROVER_threads_exited#7",
+          "10990"
+        ]
+      ]
+    }
+  },
+  "false_unchanged_Block": {
+    "disposition": "REJECTED",
+    "observed": "changed structural premise",
+    "witness": {
+      "case": "fib_updates_8",
+      "premise": [
+        7,
+        15,
+        -1,
+        -1
+      ],
+      "old_rows": [
+        [
+          "IN",
+          "15",
+          "23"
+        ],
+        [
+          "IN",
+          "23",
+          "49"
+        ],
+        [
+          "MEMBER",
+          "15",
+          "23"
+        ],
+        [
+          "NODE",
+          "23",
+          "left#3",
+          "2",
+          "r",
+          "",
+          "15"
+        ],
+        [
+          "OUT",
+          "23",
+          "15"
+        ],
+        [
+          "OUT",
+          "49",
+          "23"
+        ]
+      ],
+      "new_rows": [
+        [
+          "MEMBER",
+          "23",
+          "23"
+        ],
+        [
+          "NODE",
+          "23",
+          "left#3",
+          "2",
+          "r",
+          "",
+          "23"
+        ]
+      ]
+    }
+  },
+  "false_unchanged_Direction": {
+    "disposition": "REJECTED",
+    "observed": "changed structural premise",
+    "witness": {
+      "case": "fib_updates_8",
+      "premise": [
+        7,
+        15,
+        -1,
+        -1
+      ],
+      "old_rows": [
+        [
+          "IN",
+          "15",
+          "23"
+        ],
+        [
+          "OUT",
+          "23",
+          "15"
+        ]
+      ],
+      "new_rows": []
+    }
+  },
+  "false_unchanged_SameAddress": {
+    "disposition": "REJECTED",
+    "observed": "same-address condition missing",
+    "witness": {
+      "case": "fib_updates_8",
+      "premise": [
+        6,
+        0,
+        1,
+        -1
+      ],
+      "old_rows": [
+        [
+          "NODE",
+          "1",
+          "__CPROVER_threads_exited#2",
+          "0",
+          "r",
+          "",
+          "1"
+        ]
+      ],
+      "new_rows": [
+        [
+          "NODE",
+          "1",
+          "__CPROVER_threads_exited#2",
+          "16",
+          "r",
+          "",
+          "1"
+        ]
+      ]
+    }
+  },
+  "false_complete_RF_domain": {
+    "disposition": "REJECTED",
+    "observed": "changed complete candidate domain",
+    "witness": {
+      "read": "x#2",
+      "old": [
+        [
+          "x#1",
+          10
+        ],
+        [
+          "x#5",
+          12
+        ]
+      ],
+      "new": [
+        [
+          "x#1",
+          10
+        ],
+        [
+          "x#4",
+          16
+        ],
+        [
+          "x#5",
+          12
+        ]
+      ]
+    }
+  },
+  "incompatible_ABI": {
+    "disposition": "REJECTED",
+    "observed": "incompatible ABI, memory model or theory semantics",
+    "witness": {
+      "original": [
+        "K",
+        "Closure-SC-d8c79eab/D1-v1",
+        "64",
+        "32",
+        "1"
+      ],
+      "changed": [
+        "K",
+        "Closure-SC-d8c79eab/D1-v1",
+        "32",
+        "32",
+        "1"
+      ],
+      "mm": "sc"
+    }
+  },
+  "incompatible_memory_model": {
+    "disposition": "REJECTED",
+    "observed": "incompatible ABI, memory model or theory semantics",
+    "witness": {
+      "original": [
+        "K",
+        "Closure-SC-d8c79eab/D1-v1",
+        "64",
+        "32",
+        "1"
+      ],
+      "changed": [
+        "K",
+        "Closure-SC-d8c79eab/D1-v1",
+        "64",
+        "32",
+        "1"
+      ],
+      "mm": "tso"
+    }
+  },
+  "incompatible_rule_version": {
+    "disposition": "REJECTED",
+    "observed": "incompatible ABI, memory model or theory semantics",
+    "witness": {
+      "original": [
+        "K",
+        "Closure-SC-d8c79eab/D1-v1",
+        "64",
+        "32",
+        "1"
+      ],
+      "changed": [
+        "K",
+        "Closure-SC-d8c79eab/D1-v1-different",
+        "64",
+        "32",
+        "1"
+      ],
+      "mm": "sc"
+    }
+  },
+  "not_one_to_one": {
+    "disposition": "REJECTED",
+    "observed": "non-injective or out-of-range mapping",
+    "witness": {
+      "old_variables": [
+        1,
+        2
+      ],
+      "same_image": 4
+    }
+  },
+  "wrong_known_polarity": {
+    "disposition": "REJECTED",
+    "observed": "changed typed G row 764",
+    "witness": {
+      "atom": 1
+    }
+  },
+  "lost_overflow_B": {
+    "disposition": "REJECTED",
+    "observed": "unconfirmed registered overflow member failed to invalidate the common slot",
+    "witness": {
+      "unobserved_leaf": 1025,
+      "group": 1023,
+      "different_member_groups": [
+        1024,
+        1025
+      ]
+    }
+  },
+  "lost_overflow_T": {
+    "disposition": "REJECTED",
+    "observed": "unconfirmed registered overflow member failed to invalidate the common slot",
+    "witness": {
+      "unobserved_leaf": 1025,
+      "group": 1023,
+      "different_member_groups": [
+        1024,
+        1025
+      ]
+    }
+  },
+  "scope_disposition_reclassified": {
+    "disposition": "REJECTED",
+    "observed": "invalid scope disposition",
+    "witness": {
+      "source": "dense.bin",
+      "mutant_sha256": "38c148622061e0c0e8ec7821ec1b7f469691ae05c8fe117b62cbf0178ad2f372"
+    }
+  },
+  "tampered_compact_payload": {
+    "disposition": "REJECTED",
+    "observed": "library file integrity",
+    "witness": {
+      "changed_file": "dense.bin",
+      "byte": 28
+    }
+  },
+  "tag_from_previous_RF_branch": {
+    "disposition": "REJECTED",
+    "observed": "stale theory tag after native backtrack",
+    "witness": {
+      "first_ID": 18,
+      "second_ID": 15
+    }
+  }
+}

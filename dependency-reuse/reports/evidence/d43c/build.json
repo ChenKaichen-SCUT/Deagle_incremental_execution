@@ -1,0 +1,38 @@
+{
+  "implementation": "51fe7dc0fdb4b79376850cc63a1194b8a30ddbb9",
+  "approved_base": "7812c5febf9f3f0c7a792b5b979ca78c0a694637",
+  "system": "Deagle-Jammy WSL2 / Ubuntu 22.04",
+  "gcc": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "python": "3.10.12",
+  "cpu": "x86_64",
+  "native_source_git_blobs": {
+    "minisat-2.2.1/minisat/core/BoundaryAudit43.h": "3fa045261b8fd7ecae3f0748f34598118ce3795a",
+    "minisat-2.2.1/minisat/core/Closure.cc": "177ab08b601b20b96a3e7fda9073dbfedf8af133",
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": "63becd225a9babb9b6ec4e27faeca9e37c24dfff",
+    "minisat-2.2.1/minisat/core/DependencyTags.h": "db6fc4fca63089ea29df73d2f6e6c2e79fef2c9d",
+    "src/solvers/Makefile": "5ffa36b9c15c05e2bee52398ff23c1e86f25354f",
+    "src/solvers/sat/satcheck_minisat2.cpp": "33f649e611a92a8701ee66c63924ff15531efebf"
+  },
+  "audited_build_tree_diff": "",
+  "default_build_tree_diff": "",
+  "builds": {
+    "dual": "54c3a5f73bba54bee82ed34dc5940bc561071eb8aff75089fb10921d5005209b",
+    "default": "b46b2878407baa008e58fb32eabe6380ab6e04f20c0554f55d6fa7239204b1ea",
+    "standalone_checker_cxx17": "806f9951f2b80bc29e5cba310d3745d8d66bc30622fe033e9ed9bde745432319",
+    "rebuilt_cxx17": "806f9951f2b80bc29e5cba310d3745d8d66bc30622fe033e9ed9bde745432319",
+    "standalone_checker_cxx11": "d5b6c3fb941e9a88a61588d0e0278ee2e8ed41d371d6c8c13b461a0f8e96476e"
+  },
+  "standalone_checker_flags": "-std=c++17 -O2 -ffunction-sections -fdata-sections -I src -I minisat-2.2.1 -Wl,--gc-sections",
+  "CXX17_rebuilt_byte_identical": true,
+  "CXX11_same_four_audits_and_41_rejections_and_native_fixtures": true,
+  "solver_symbols_in_standalone_checker": 0,
+  "C_observer_symbols_in_default": 0,
+  "checked_frozen_real_P0_dual_runs": 4,
+  "default_P0_production_smokes": 1,
+  "formal_P1_runs": 0,
+  "intermediate_development": [
+    "Initial checker compile needed <cstring>; byte-identical rebuilt final binary archived.",
+    "The first block fixture exercised a BlockDecl. Added real condition-free opposite PO/APO edges to test both declaration omissions.",
+    "The final structural campaign includes an explicit same-address model-row mutation."
+  ]
+}
