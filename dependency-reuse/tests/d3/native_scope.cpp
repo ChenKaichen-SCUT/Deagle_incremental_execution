@@ -77,6 +77,61 @@ void scope_fixture(const std::string &path)
     require(g.write(10),"write scope proof");
 }
 
+// The lower-level graph API can tag the RF target as a competing write as
+// well. Native FR then produces a self-cycle. Certification is restricted to
+// three distinct events, even when all static leaves match the new graph.
+void aliased_competitor(const std::string &path)
+{
+    char scope='B';
+    ProofStore g(path,&scope);
+    g.d3=true;
+    {
+        ClosureSolver s;
+        s.proof=&g;
+        s.newVar(l_Undef,false);
+        const Lit p=mkLit(s.newVar()), y=mkLit(s.newVar()), k=mkLit(s.newVar());
+        oc_edge_tablet edges={{{"x#1","x#2"},{lit_Undef,"po"}},{{"x#1","x#2"},{p,"rf"}}};
+        oc_guard_mapt guards={{"x#1",Lit{-1}},{"x#2",Lit{-1}}};
+        oc_location_mapt locations;
+        std::map<std::string,int> order;
+        s.save_raw_graph(edges,guards,locations,order);
+        const auto &target=s.declaration_graph().nodes.at(1);
+        require(target.is_read && target.is_write,"expected a dual-role RF target");
+        vec<Lit> assumptions;
+        assumptions.push(p);
+        require(!s.solve(assumptions),"native alias cycle was not detected");
+        s.addClause(~y,p,k);
+        s.addClause(~y,p,~k);
+        assumptions.clear(); assumptions.push(y);
+        require(!s.solve(assumptions),"missing indirect conflict");
+        g.buildReverse();
+        std::vector<uint8_t> declarations;
+        for(const auto &r:g.theory_records)
+        {
+            if(g.nodes[r.id].kind==TheoryDeclaration) declarations.push_back(1);
+            if(r.op==FRRule || r.op==WSRule)
+                require(r.a!=r.b && r.a!=r.c && r.b!=r.c,"certified a repeated event");
+        }
+        auto dead=g.invalidatedInputs(std::vector<uint8_t>(g.inputs.size(),1),declarations);
+        ProofId prior=0,child=0;
+        for(const auto &birth:g.learned)
+        {
+            auto pos=g.litBegin(birth.id);
+            if(g.nodes[birth.id].lit_end!=pos+1) continue;
+            if(g.lits[pos]==(~p).x) prior=birth.id;
+            if(g.lits[pos]==(~y).x) child=birth.id;
+        }
+        require(prior && child && ancestry(g,child).at(prior),"missing native indirect learning");
+        auto support=ancestry(g,prior);
+        bool opaque=false;
+        for(size_t i=1;i<support.size();++i) opaque|=support[i] && g.nodes[i].kind==TheoryConflict;
+        require(opaque && (g.nodes[prior].flags&Theory) && (g.nodes[child].flags&Theory) &&
+                dead[prior] && dead[child],"aliased FR conflict or its descendant escaped invalidation");
+        std::cout<<"dual-role target: native opaque conflict, retired CDCL IDs "<<prior<<" and "<<child<<'\n';
+    }
+    require(g.write(0),"write aliased-competitor proof");
+}
+
 void dynamic_fixture(const std::string &path)
 {
     char scope='B';
@@ -144,10 +199,10 @@ void dynamic_fixture(const std::string &path)
 
 int main(int argc,char **argv)
 {
-    if(argc!=3) return 2;
+    if(argc!=4) return 2;
     try
     {
-        scope_fixture(argv[1]); dynamic_fixture(argv[2]);
+        scope_fixture(argv[1]); dynamic_fixture(argv[2]); aliased_competitor(argv[3]);
     }
     catch(const std::exception &e) { std::cerr<<e.what()<<'\n'; return 1; }
 }

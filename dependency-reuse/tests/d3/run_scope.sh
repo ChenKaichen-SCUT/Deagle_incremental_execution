@@ -8,6 +8,6 @@ cd "$root"
 g++ -std=c++11 -O2 -I src -I minisat-2.2.1 dependency-reuse/tests/d3/native_scope.cpp \
     minisat-2.2.1/minisat/core/{ProofStore,GraphTypes,ClosureTypes,Solver,Closure,ClosureSolver}.cc \
     minisat-2.2.1/minisat/utils/Options.cc -o "$out/native-scope"
-"$out/native-scope" "$out/scope.bin" "$out/dynamic.bin" > "$out/observations.txt"
-(cd "$out"; sha256sum native-scope scope.bin dynamic.bin observations.txt > sha256.txt)
+"$out/native-scope" "$out/scope.bin" "$out/dynamic.bin" "$out/aliased.bin" > "$out/observations.txt"
+(cd "$out"; sha256sum native-scope scope.bin dynamic.bin aliased.bin observations.txt > sha256.txt)
 cat "$out/observations.txt"

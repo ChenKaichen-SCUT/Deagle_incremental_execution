@@ -170,7 +170,8 @@ ProofId closure::active_order(int from, int to)
 
 ProofId closure::competition(bool ws, int w1, int w2, int read, ProofId rf)
 {
-    if(!recorder || !rf || w1==w2 || nodes[w1].address!=nodes[w2].address ||
+    if(!recorder || !rf || w1==w2 || read==w1 || read==w2 ||
+       nodes[w1].address!=nodes[w2].address ||
        nodes[w1].address!=nodes[read].address || !nodes[w1].guard_lighted ||
        !nodes[w2].guard_lighted || !nodes[w2].is_write) return 0;
     const ProofId order=ws ? active_order(w2,read) : active_order(w1,w2);
