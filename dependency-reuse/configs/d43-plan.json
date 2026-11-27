@@ -1,0 +1,116 @@
+{
+  "stage": "D4.3-A",
+  "review_base": "cf3ba64ee5f9cc7b71e6be61117e483ede830b84",
+  "implementation42": "dae97a351932918b7f172e23e0d93d6e8688e552",
+  "upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "archive_index_sha256": "45e21554e55b97dcb64aa68095c19acf7221656c7a18388f261aff78a82a96c2",
+  "cases": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6",
+    "fib-snapshot-11"
+  ],
+  "inputs": "cases42.load; frozen SC, ABI, unwind, claims, threads and property receipts from D4.2",
+  "capacities": {
+    "compact-small": {
+      "B": 256,
+      "T": 256,
+      "sat_payload_bytes": 64,
+      "closure_payload_bytes": 32
+    },
+    "compact-large": {
+      "B": 1024,
+      "T": 1024,
+      "sat_payload_bytes": 256,
+      "closure_payload_bytes": 128
+    }
+  },
+  "group_version": 1,
+  "seed": "Deagle-D43-A-v1/432043",
+  "bucket": "SHA256(ASCII seed || NUL || canonical key), first 8 digest bytes interpreted little-endian, modulo the domain capacity. Keys are compact UTF-8 JSON arrays, ensure_ascii=false; equality compares entire keys; separate B/T domains.",
+  "owners": {
+    "boolean": "At raw C registration: checked P0 SSA scope -> [B,ssa,conversion phase,static site,thread]. Fold unroll/call instances and bits at that site within the same phase/thread. A new encoder gate output freezes its first owner at G registration: current checked SSA owner or [B,gate,op,old output variable]. If an unowned C has known gate operands, inherit the most recently first-registered participating gate owner's key. Otherwise [B,fallback,phase] (outside if no observer scope). Old local identifiers never establish cross-version equality. Q/U carry scope only.",
+    "theory": "[T,decl,op,...endpoint owners] in actual argument order; sort endpoint owner keys for symmetric SameAddress. Config has no endpoint; Block uses its installed representative's event owner. Event owner [site,birth-context raw thread-origin id,role,designator,storage] using P0 X/E; initial event with ctx=-2 uses a distinct initial token. Unresolved endpoint -> [T,fallback,op]. Bindings, block contents and side conditions are still checked by the unchanged D4.2 declaration certificate.",
+    "observer": "Offline source observation only in checked SSA conversion scopes. Require all original rows of the P0 model to align with archived Audit; no later A/learned data supplies an earlier owner. Measure paired P0 manifest-only off/on diagnostic, report measurement boundary."
+  },
+  "universes": {
+    "U_audit": "Exact distinct permanent B occurrence / T declaration union across ALL complete permanent births before checking conclusions or P1. Exclude direct Q/U.",
+    "U_all": "All registered permanent P0 B occurrences and all registered P0 native TheoryDeclaration tuples (dedup by actual full tuple). Report the separately enumerated static graph comparison catalogue as well."
+  },
+  "mapping": "One unchanged D4.2 Mapping-only effective signed injection and locked declaration certificates per case for every aggregation and universe. Independently check all observed leaf statuses and complete birth catalogue. Historical hits joined only after eligibility is fixed.",
+  "candidates": {
+    "maximum": 512,
+    "selection": "ascending original P0 birth ordinal among admissible; never use P1 performance or hits",
+    "import_order": "ascending birth ordinal"
+  },
+  "levels": [
+    "exact_occurrence_or_declaration",
+    "full_logical_group_key",
+    "hash_slot"
+  ],
+  "loss_priority": [
+    "QUERY/UNKNOWN",
+    "conclusion_not_translatable",
+    "changed_or_unconfirmed_actual_leaf",
+    "unrelated_same_group",
+    "different_group_same_slot",
+    "eligible"
+  ],
+  "widths": "all births, separate permanent B, T, direct Q/U leaves and logical/slot widths; nearest-rank quantiles",
+  "timing_future": {
+    "only_stage": "E",
+    "modes": [
+      "stock",
+      "off",
+      "light42",
+      "compact-cold",
+      "compact-reuse"
+    ],
+    "orders": [
+      [
+        "stock",
+        "off",
+        "light42",
+        "compact-cold",
+        "compact-reuse"
+      ],
+      [
+        "off",
+        "compact-reuse",
+        "stock",
+        "light42",
+        "compact-cold"
+      ],
+      [
+        "light42",
+        "compact-cold",
+        "off",
+        "compact-reuse",
+        "stock"
+      ],
+      [
+        "compact-cold",
+        "stock",
+        "compact-reuse",
+        "off",
+        "light42"
+      ],
+      [
+        "compact-reuse",
+        "light42",
+        "compact-cold",
+        "stock",
+        "off"
+      ]
+    ],
+    "initial_rounds": 3,
+    "confirmation_rounds": 2,
+    "trigger": "any fixed case including history: paired median relative P1 or cycle saving >=5%, >=2/3 positive",
+    "confirmation": "5-round paired median >=5%, >=4/5 positive. Historical case never counts as repair net benefit.",
+    "recording": "paired 1-(compact-off)/(light42-off) median >=50%, >=2/3 improvements on one substantial-cost case; nonpositive/noisy denominator absolute only",
+    "schedule": "Single pinned CPU0, serial timing, fresh process/model/workdir, natural OS page caches, preflight stable background with no concurrent experiments; frozen per-case limits; share one immutable compact P0 per round charging each arm once. Report timeouts/failures and make no passing claim from incomplete pairs.",
+    "ablation": "only after a real repair has complete net gain, B-only vs B+M, same library/order"
+  },
+  "decision": "If both optimistic capacities have zero mixed, TAG_PRECISION_INSUFFICIENT; also BOOLEAN_ONLY_POTENTIAL if any surviving B and no mixed/pure T. Recommend at most one global capacity only if an actual repair retains a previously hit mixed birth. Prefer small if it meets this condition; otherwise large if it meets it. No additional configurations.",
+  "stop": "Submit A as READY_FOR_REVIEW; wait for explicit approval. Do not start B/C/D/E/D5."
+}
