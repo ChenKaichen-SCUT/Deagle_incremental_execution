@@ -118,10 +118,14 @@ def review_case(case,matrix,d42,preflight,engine,out):
     oracle=json.loads((p/"inputs.json").read_bytes())
     for arm in (*MODES,*DIAGNOSTICS):
         compare(case_dir/"off",case_dir/arm,True)
-    same_model=stream_receipt(old/"native/model.tsv",old/"work")["canonical_sha256"]
+    # SITE41 contains the original capture directory even after an evidence restore.
+    def canonical_model(folder):
+        captured_cwd=Path(json.loads((folder/"run.json").read_bytes())["cwd"])
+        return stream_receipt(folder/"native/model.tsv",captured_cwd)["canonical_sha256"]
+    same_model=canonical_model(old)
     for arm in ("off","compact","compact-audit"):
         folder=case_dir/arm
-        check(same_model==stream_receipt(folder/"native/model.tsv",folder/"work")["canonical_sha256"],
+        check(same_model==canonical_model(folder),
               case+"/"+arm+" fixed model/encoding mismatch")
     pair=compare(d42/"functional"/case/"1/stock/P0",dir0,False)
     compare(d42/"functional"/case/"1/stock/P0",case_dir/"off-default",True)
@@ -175,7 +179,7 @@ def review_case(case,matrix,d42,preflight,engine,out):
         data.write(b"ordinal\taudit_id\tflags\tclass\ttranslated\texact\teligible\tB_intersects\tT_intersects\textra_B_bits\textra_T_bits\n")
         for ref,native,prior in zip(reference(expected),lib.births(dir_dual/"native/dense.bin.scoped"),csv.DictReader(inf,delimiter="\t"),strict=True):
             i,flags,node,lits,b,t=ref;j,tag,conclusion,x,y=native
-            check(i==j==int(prior["ordinal"]) and conclusion==lits,"learned literal mismatch")
+            check(i==j==int(prior["ordinal"]) and node==int(prior["audit_id"]) and conclusion==lits,"learned literal mismatch")
             wanted=int(bool(b))+2*int(bool(t))+4*int(bool(flags&2))+8*int(bool(flags&5))
             check(tag==wanted and not (b&~x or t&~y),"scope/class or missing native support bit")
             tag_compare["all_births"]+=1
