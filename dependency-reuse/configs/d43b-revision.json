@@ -1,0 +1,31 @@
+{
+  "stage": "D4.3-B",
+  "approved_base": "d66eda630a6b6112aff64b25f42cce2155d1b96e",
+  "branch": "codex/compact-dependency-d43",
+  "configuration": "compact-large-dense",
+  "group_semantics": "Exact canonical B/T keys and P0 owners in configs/d43-plan.json. Each domain has its own append-only full-key directory. Assign positions 0..1022 to the first 1023 distinct keys; position 1023 is shared by all subsequent keys. Persist every full key and its logical index. Lookups compare the entire key.",
+  "static_extension_order": "For the offline sensitivity only, append never-registered P0 declaration tuples in lexicographic (op,a,b,c) order after actual registry order.",
+  "offline_reference": {
+    "U_audit": [
+      330,
+      264
+    ],
+    "U_all": [
+      311,
+      264
+    ],
+    "mapping": "same archived D4.2 signed injection for all fixed cases; zero reproving"
+  },
+  "actual": "Observe each original premise on consumption. Audit full support union over every scope-complete permanent birth before eligibility. Record all birth ordinals. Report exact, full-key and dense-slot eligibility using the native stored directories.",
+  "arms": [
+    "off (same manifest encoding)",
+    "Light42 quality on",
+    "Light42 quality off",
+    "Light42 quality off with opaque theory (diagnostic)",
+    "compact with opaque theory (diagnostic)",
+    "compact-large-dense"
+  ],
+  "timing": "One exploratory serial P0 per arm and case, CPU0, existing frozen limits. Include manifest and archive finalization and sealing. Compare Light quality on/off; compare theory enabled/opaque in each recorder with quality off (includes downstream effects). Record any off/manifest baseline distinction.",
+  "audit": "Separate simultaneous full Audit and compact observer, boundary/birth comparison; held outside production timings. Old quality disabled in compact. Real P1 solves and imports in this stage: zero.",
+  "stop": "Publish READY_FOR_REVIEW and stop after B. If measured U removes all mixed potential, report and stop."
+}
