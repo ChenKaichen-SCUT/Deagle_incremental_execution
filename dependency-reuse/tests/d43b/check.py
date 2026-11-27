@@ -34,9 +34,21 @@ def stress(directory):
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument("binary",type=Path);p.add_argument("out",type=Path)
     a=p.parse_args();results={}
-    for mode in ("observe","0","1","2"):
+    for mode in ("observe","0","1","2","branches","unknown"):
         directory=a.out/mode;directory.mkdir(parents=True,exist_ok=False)
         with (directory/"stdout").open("w") as out:subprocess.run([a.binary,mode,directory],stdout=out,check=True)
+        if mode=="branches":
+            Library(directory/"dense.bin")
+            results["RF_tags_follow_native_branch_rollback"]=True
+            continue
+        if mode=="unknown":
+            lib=Library(directory/"dense.bin")
+            records=list(lib.births(directory/"dense.bin.scoped"))
+            units={struct.unpack("<i",lits)[0] for _,flags,lits,b,t in records if flags&8 and len(lits)==4}
+            check({3,5} <= units and all(flags&8 and lits is None for _,flags,lits,b,t in lib.births()),
+                  "opaque CO ancestor or indirect learned root unit leaked into production")
+            results["opaque_CO_and_indirect_CDCL_root_units"]=sorted(units)
+            continue
         if mode!="observe":
             results["native_stress_min_"+mode]=stress(directory);continue
         lib=Library(directory/"dense.bin")

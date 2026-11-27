@@ -61,7 +61,67 @@ void stress(const std::string &dir,int mode){
     std::cout<<"min_mode "<<mode<<" native_births "<<audit.learned.size()<<" GC "<<audit.stats[Collections]
              <<" reductions "<<audit.stats[Reductions]<<" evictions "<<audit.evicted.size()<<"\n";
 }
+struct BranchSources : Sources {
+    std::string theory(int op,int a,int b) const override {
+        return "[\"T\",\"test\","+std::to_string(op)+","+std::to_string(a)+","+std::to_string(b)+"]";
+    }
+};
+struct BranchSolver : ClosureSolver {
+    void choose(Lit literal) {
+        newDecisionLevel();uncheckedEnqueue(literal);
+        need(propagate()==CRef_Undef,"unexpected branch conflict");
+    }
+    void undo(){cancelUntil(0);}
+};
+bool intersects(const DenseBits &a,const DenseBits &b){
+    for(size_t i=0;i<a.size();++i)if(a[i]&b[i])return true;
+    return false;
+}
+void branches(const std::string &dir){
+    BranchSources source;char scope='B';
+    DependencyTags tags(dir+"/dense.bin",&scope,source);
+    BranchSolver s;s.dense=&tags;s.newVar(l_Undef,false);
+    Lit p=mkLit(s.newVar()),q=mkLit(s.newVar());
+    oc_edge_tablet edges={{{"m#1","m#2"},{lit_Undef,"apo"}},{{"m#3","m#4"},{lit_Undef,"apo"}},
+                          {{"m#1","m#3"},{p,"rf"}},{{"m#2","m#4"},{q,"rf"}}};
+    oc_guard_mapt guards;oc_location_mapt locations;std::map<std::string,int> ordering;
+    s.save_raw_graph(edges,guards,locations,ordering);
+    const auto &nodes=s.declaration_graph().nodes;
+    auto first=tags.declaration(RFDecl,0,2,p.x).tag;
+    auto second=tags.declaration(RFDecl,1,3,q.x).tag;
+    need(!intersects(first.t,second.t),"distinct RF slots");
+    for(Lit binding:{p,q}){
+        s.choose(binding);
+        need(nodes.at(1).out.size()==1 && nodes[1].out[0].to==3,"missing conditional edge");
+        const auto &tag=nodes[1].out[0].proof.tag;
+        need(tag.op!=255 && intersects(tag.t,binding==p?first.t:second.t) &&
+             !intersects(tag.t,binding==p?second.t:first.t),"RF tag borrowed from another decision branch");
+        s.undo();need(nodes[1].out.empty() && nodes[3].in.empty(),"edge outlived branch");
+    }
+    need(s.solve() && tags.finish(10),"branch fixture");
+}
+void unknown_descendants(const std::string &dir){
+    Sources source;char scope='B';
+    ProofStore audit(dir+"/proof.bin",&scope);audit.d3=true;audit.triplets=true;
+    DependencyTags tags(dir+"/dense.bin",&scope,source);tags.dual=&audit;
+    ClosureSolver s;s.proof=&audit;s.dense=&tags;s.newVar(l_Undef,false);
+    Lit z=mkLit(s.newVar()),y=mkLit(s.newVar()),k=mkLit(s.newVar());
+    oc_edge_tablet edges;oc_guard_mapt guards={{"m#1",Lit{-1}},{"m#2",Lit{-1}}};
+    oc_location_mapt locations;std::map<std::string,int> order;
+    s.save_raw_graph(edges,guards,locations,order);
+    auto first=s.nVars();s.addMissingCoClauses();need(s.nVars()==first+2,"missing CO definitions");
+    s.addClause(~z,~mkLit(first));s.addClause(~z,~mkLit(first+1));
+    vec<Lit> assumptions;assumptions.push(z);need(!s.solve(assumptions),"CO ancestor must conflict");
+    s.addClause(~y,z,k);s.addClause(~y,z,~k);
+    assumptions.clear();assumptions.push(y);need(!s.solve(assumptions),"indirect root unit must conflict");
+    need(audit.write(0) && tags.finish(0),"unknown scope fixture");
+    std::cout<<"expected opaque units "<<(~z).x<<" "<<(~y).x<<"\n";
+}
 int main(int argc,char **argv){
     if(argc!=3)return 2;
-    if(std::string(argv[1])=="observe")observation(argv[2]);else stress(argv[2],std::stoi(argv[1]));
+    const std::string mode=argv[1];
+    if(mode=="observe")observation(argv[2]);
+    else if(mode=="branches")branches(argv[2]);
+    else if(mode=="unknown")unknown_descendants(argv[2]);
+    else stress(argv[2],std::stoi(mode));
 }
