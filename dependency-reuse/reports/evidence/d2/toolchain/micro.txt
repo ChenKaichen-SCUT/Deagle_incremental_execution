@@ -1,0 +1,1 @@
+11 native fixtures, 22 deltas, 2 rejected corruptions

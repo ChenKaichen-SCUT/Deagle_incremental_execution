@@ -1,0 +1,168 @@
+{
+  "distinct_used_occurrences": {
+    "all_B": {
+      "self_also_aux_and_other": 9258,
+      "self_also_aux_only": 5755,
+      "self_also_other": 1982,
+      "matched": 4214
+    },
+    "permanent_only_B": {
+      "self_also_aux_and_other": 4757,
+      "self_also_other": 405,
+      "self_also_aux_only": 2744,
+      "matched": 5
+    },
+    "all_Q": {
+      "self_also_aux_only": 154,
+      "self_also_other": 17,
+      "self_also_aux_and_other": 678,
+      "matched": 335
+    }
+  },
+  "direct_used_edge_counts": {
+    "all_B": {
+      "self_also_aux_and_other": 1565911,
+      "self_also_aux_only": 659278,
+      "self_also_other": 183069,
+      "matched": 23484
+    },
+    "permanent_only_B": {
+      "self_also_aux_and_other": 6199,
+      "self_also_other": 676,
+      "self_also_aux_only": 3087,
+      "matched": 5
+    },
+    "all_Q": {
+      "self_also_aux_only": 154,
+      "self_also_other": 17,
+      "self_also_aux_and_other": 4988,
+      "matched": 335
+    }
+  },
+  "terminal_reason_by_missing_literal": {
+    "all_B": {
+      "no_semantic_definition": 1412,
+      "unsupported_object_or_type": 44032,
+      "unresolved_rf_endpoint": 1218
+    },
+    "permanent_only_B": {
+      "unsupported_object_or_type": 24056,
+      "no_semantic_definition": 20,
+      "unresolved_rf_endpoint": 513
+    },
+    "all_Q": {}
+  },
+  "complete_permanent_proof_outcomes": {
+    "self_also_aux_and_other": 132,
+    "self_also_other_only": 1
+  },
+  "examples": {
+    "self_also_aux_and_other": {
+      "source_occurrence": 231,
+      "proof_id": 231,
+      "old_clause": [
+        1550,
+        1552,
+        1554,
+        1556,
+        1558,
+        1560,
+        1562,
+        1564,
+        2190
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:1550",
+      "self_comparable": false,
+      "dependency_path": [
+        231,
+        997583
+      ],
+      "first_learned_descendant": 997583,
+      "rejected_literal": 1550,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 775,
+        "terminal_role": "Value",
+        "terminal_reason": "unsupported_object_or_type",
+        "bit_examples": [
+          [
+            "bookings#9",
+            "",
+            0
+          ]
+        ],
+        "unchanged_source_site": null
+      }
+    },
+    "self_also_other": {
+      "source_occurrence": 247,
+      "proof_id": 247,
+      "old_clause": [
+        2198,
+        2200,
+        2202,
+        2204,
+        2206,
+        2208,
+        2210,
+        2212,
+        2838
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:2198",
+      "self_comparable": false,
+      "dependency_path": [
+        247,
+        1277963
+      ],
+      "first_learned_descendant": 1277963,
+      "rejected_literal": 2208,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 1104,
+        "terminal_role": "Value",
+        "terminal_reason": "unsupported_object_or_type",
+        "bit_examples": [
+          [
+            "bookings#15",
+            "",
+            5
+          ]
+        ],
+        "unchanged_source_site": null
+      }
+    },
+    "self_also_aux_only": {
+      "source_occurrence": 20888,
+      "proof_id": 23612,
+      "old_clause": [
+        7350,
+        42501
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:7350",
+      "self_comparable": false,
+      "dependency_path": [
+        23612,
+        928263
+      ],
+      "first_learned_descendant": 928263,
+      "rejected_literal": 42501,
+      "structural_witness": {
+        "gate_path": [
+          {
+            "variable": 21250,
+            "op": "and",
+            "input": 6708
+          }
+        ],
+        "terminal_variable": 3354,
+        "terminal_role": "Guard",
+        "terminal_reason": "unsupported_object_or_type",
+        "bit_examples": [],
+        "unchanged_source_site": null
+      }
+    }
+  }
+}

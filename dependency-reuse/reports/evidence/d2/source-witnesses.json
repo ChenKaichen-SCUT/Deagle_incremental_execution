@@ -1,0 +1,77 @@
+{
+  "circular-buffer": {
+    "P0_symbol": "next#23",
+    "definitions": [
+      {
+        "old_site": [
+          "16:insertLogElement63:2:1356:5:index16:6:symbol6:buffer27:8:typecast14:6:symbol4:next",
+          "unique",
+          "insertLogElement",
+          "program.i",
+          709
+        ],
+        "old_definition_role": "read",
+        "old_object_key": "6:symbol4:next",
+        "old_type_key": "unsignedbv:32",
+        "peer_symbols_at_same_site_role_object_type": [
+          "next#10",
+          "next#11",
+          "next#16",
+          "next#17",
+          "next#22",
+          "next#23",
+          "next#28",
+          "next#29",
+          "next#34",
+          "next#35",
+          "next#4",
+          "next#40",
+          "next#41",
+          "next#5"
+        ],
+        "same_source": {
+          "P0_line": 709,
+          "P1_line": 709,
+          "text": "    buffer[next] = b;"
+        }
+      }
+    ],
+    "native_P0_bit0": [
+      19850
+    ],
+    "same_spelling_P1_diagnostic_bit0": [
+      19857
+    ]
+  },
+  "airline_reservations_6": {
+    "P0_symbol": "bookings#9",
+    "definitions": [
+      {
+        "old_site": [
+          "18:pthread_mutex_lock3:1:2",
+          "unique",
+          "pthread_mutex_lock",
+          "<builtin-library-pthread_mutex_lock>",
+          38
+        ],
+        "old_definition_role": "assign4",
+        "old_object_key": "6:symbol8:bookings",
+        "old_type_key": "",
+        "peer_symbols_at_same_site_role_object_type": [
+          "bookings#15",
+          "bookings#21",
+          "bookings#27",
+          "bookings#3",
+          "bookings#33",
+          "bookings#9"
+        ]
+      }
+    ],
+    "native_P0_bit0": [
+      775
+    ],
+    "same_spelling_P1_diagnostic_bit0": [
+      777
+    ]
+  }
+}

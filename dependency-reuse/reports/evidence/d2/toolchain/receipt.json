@@ -1,0 +1,125 @@
+{
+  "status": "READY_FOR_REVIEW",
+  "phase": "D2",
+  "official": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "D1_implementation": "ed7679588106538c04dcb7dcc504b5ac682f010e",
+  "reviewed_D1": "3b89d39c246a8a22a31274cde1d34d1edc7c2e5a",
+  "D2_implementation": "41e227974fc35f3b98767b6cbdb3ca3a67144f1f",
+  "D2_source_tree": "8d7de02d35cf3368af5834674d89a06a22c0c58c",
+  "D2_version": [
+    "const char *CBMC_VERSION=\"5.67.0\";",
+    "const char *DEAGLE_VERSION=\"4.2.0 (41e22797)\";"
+  ],
+  "input_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+  "binary_sha256": {
+    "clean_D2": "9ac785e9308d9bb89e1a240e5c6b4f44a7911d508ae42e6bef803421b6ad1942",
+    "independent_development_relink": "9ac785e9308d9bb89e1a240e5c6b4f44a7911d508ae42e6bef803421b6ad1942",
+    "D1": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+    "D1_boolean_diff": "965b41cae93c3f3505e734af8ecad412f5e5b91f2eaa65fc187fb219b821378c",
+    "check": "ac0d29d8bc64abf29401b54c4606bc9448ad4a605c2fbc7db58874252b44b74d",
+    "cnf-on": "3f1ef3820cf7991e1775149d12ac62bfd9b4146a66361d3c0bdfe3ba65e6c9a0",
+    "cnf-oracle": "03c7e5794ee1c7c907399e2a8493f722bdb1ffbda43f6987c02d458953fa4308",
+    "oracle/deagle_exe": "b04c4d26ed2e2f371e12a01102408639bc71e1838e9c58aa50d016450c4e2d96"
+  },
+  "object_files_compared": 718,
+  "differing_objects": 0,
+  "development_before_archive_reorder": "19f9ce8f07f6b8040e7f012fe73a28ca3ac726b48e0d40c5128d7dd72ba90b18",
+  "development_build_difference": "An existing thin archive appended the new ProofStore.o member. All object bytes matched. Recreating only solvers.a in Makefile order and relinking produced a byte-identical ELF.",
+  "frozen_D1_log_sha256": "0420cec84e9b93f5616397b176ca096c6921a890e19a8b25cb1ad74de28c3515",
+  "clean_build": "LC_ALL=C PATH=/usr/bin:/bin make -C src -j12 cbmc.dir",
+  "clean_build_utc": [
+    "2026-11-27T07:56:26Z",
+    "2026-11-27T07:57:53Z"
+  ],
+  "environment": {
+    "wsl": "Deagle-Jammy",
+    "uname": {
+      "system": "Linux",
+      "node": "B7-104",
+      "release": "6.6.87.2-microsoft-standard-WSL2",
+      "version": "#1 SMP PREEMPT_DYNAMIC Thu Jun  5 18:30:46 UTC 2025",
+      "machine": "x86_64",
+      "processor": "x86_64"
+    },
+    "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+    "cpu": [
+      "Architecture:                         x86_64",
+      "CPU op-mode(s):                       32-bit, 64-bit",
+      "Address sizes:                        39 bits physical, 48 bits virtual",
+      "Byte Order:                           Little Endian",
+      "CPU(s):                               16",
+      "On-line CPU(s) list:                  0-15",
+      "Vendor ID:                            GenuineIntel",
+      "Model name:                           13th Gen Intel(R) Core(TM) i7-13700F",
+      "CPU family:                           6",
+      "Model:                                183",
+      "Thread(s) per core:                   2",
+      "Core(s) per socket:                   8",
+      "Socket(s):                            1",
+      "Stepping:                             1",
+      "BogoMIPS:                             4224.00",
+      "Flags:                                fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves avx_vnni vnmi umip waitpkg gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities",
+      "Virtualization:                       VT-x",
+      "Hypervisor vendor:                    Microsoft",
+      "Virtualization type:                  full",
+      "L1d cache:                            384 KiB (8 instances)",
+      "L1i cache:                            256 KiB (8 instances)",
+      "L2 cache:                             16 MiB (8 instances)",
+      "L3 cache:                             30 MiB (1 instance)",
+      "NUMA node(s):                         1",
+      "NUMA node0 CPU(s):                    0-15",
+      "Vulnerability Gather data sampling:   Not affected",
+      "Vulnerability Itlb multihit:          Not affected",
+      "Vulnerability L1tf:                   Not affected",
+      "Vulnerability Mds:                    Not affected",
+      "Vulnerability Meltdown:               Not affected",
+      "Vulnerability Mmio stale data:        Not affected",
+      "Vulnerability Reg file data sampling: Vulnerable: No microcode",
+      "Vulnerability Retbleed:               Mitigation; Enhanced IBRS",
+      "Vulnerability Spec rstack overflow:   Not affected",
+      "Vulnerability Spec store bypass:      Mitigation; Speculative Store Bypass disabled via prctl",
+      "Vulnerability Spectre v1:             Mitigation; usercopy/swapgs barriers and __user pointer sanitization",
+      "Vulnerability Spectre v2:             Mitigation; Enhanced / Automatic IBRS; IBPB conditional; RSB filling; PBRSB-eIBRS SW sequence; BHI BHI_DIS_S",
+      "Vulnerability Srbds:                  Not affected",
+      "Vulnerability Tsx async abort:        Not affected"
+    ],
+    "cpu_affinity": 0
+  },
+  "active_symbols": [
+    "0000000000930610 T Minisat::ProofStore::finishAnalysis(Minisat::Solver&, Minisat::vec<Minisat::Lit> const&)",
+    "000000000096bfe0 T Minisat::ClosureSolver::analyze(unsigned int, Minisat::vec<Minisat::Lit>&, int&)",
+    "000000000092e100 T Minisat::ProofStore::invalidatedInputs(std::vector<unsigned char, std::allocator<unsigned char> > const&) const"
+  ],
+  "self_comparability": {
+    "fib_updates_8": {
+      "inputs": {
+        "native_sha256": "8f6fdef118329c6279c7ca73e0eea5990e248c1e6f7d61daa11b88b9e46ba8e1",
+        "occurrences": 50065,
+        "d1_delta_sha256": "831e423008d9edd16ce839c322f4b69349baad02b15a75729e37380c74c05ace"
+      },
+      "D1_self_engine": "965b41cae93c3f3505e734af8ecad412f5e5b91f2eaa65fc187fb219b821378c"
+    },
+    "circular-buffer": {
+      "inputs": {
+        "native_sha256": "669a71179ec559efd67159a1b5a7a170484970d28c13bacea6303fb53362d66a",
+        "occurrences": 1161979,
+        "d1_delta_sha256": "51ce2ee79b3f4c3c8129989685750f0f6ecbe02a52beec827e9189375320ec5f"
+      },
+      "D1_self_engine": "965b41cae93c3f3505e734af8ecad412f5e5b91f2eaa65fc187fb219b821378c"
+    },
+    "airline_reservations_6": {
+      "inputs": {
+        "native_sha256": "d4b74dfc9bb097750813a911f0673fb5fcba3627dc5fd4adc909e0c1d6ba0670",
+        "occurrences": 910797,
+        "d1_delta_sha256": "f3765ff0b570d548803e8008c69f1628e6a0587c2f660720559861991d5dd431"
+      },
+      "D1_self_engine": "965b41cae93c3f3505e734af8ecad412f5e5b91f2eaa65fc187fb219b821378c"
+    }
+  },
+  "command_paths": {
+    "original_runs": "/home/deagle/dependency-reuse/runs/d2/release-runs",
+    "clean_tree": "/home/deagle/dependency-reuse/rebuild-d2/native",
+    "D1_tree": "/home/deagle/dependency-reuse/rebuild-d1/final",
+    "original_oracle": "/home/deagle/dependency-reuse/runs/d2/release-tools/oracle/deagle_exe"
+  }
+}

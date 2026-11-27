@@ -1,0 +1,50 @@
+{
+  "case": "airline_reservations_6",
+  "side": "P0",
+  "argv": [
+    "/home/deagle/dependency-reuse/rebuild-d2/native/src/cbmc/deagle_exe",
+    "--d2-proof",
+    "/home/deagle/dependency-reuse/runs/d2/release-runs/airline_reservations_6/on-3/knowledge.bin",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--64",
+    "--unwind",
+    "8",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "harness.c"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/d2/release-runs/airline_reservations_6/on-3/work",
+  "binary_sha256": "9ac785e9308d9bb89e1a240e5c6b4f44a7911d508ae42e6bef803421b6ad1942",
+  "input_sha256": {
+    "program.c": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+    "harness.c": "44f40b42442d83b54bea1f4e3420298ad2314d4698b726421fbcf9d81e061fa2"
+  },
+  "limits": {
+    "memory_bytes": 21474836480,
+    "timeout_seconds": 300
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "target": "main.assertion.1",
+  "started_utc": "2026-11-27T07:59:05.543752+00:00",
+  "exit_code": 10,
+  "timed_out": false,
+  "wall_ns": 6171237282,
+  "user_s": 5.975788,
+  "system_s": 0.193429,
+  "peak_rss_kib": 256012,
+  "stdout_sha256": "2f63e92937ead917296e9555baecb50e8e51b246e293febc7021447ba6ecdf01",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

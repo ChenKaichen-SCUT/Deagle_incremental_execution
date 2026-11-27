@@ -1,0 +1,146 @@
+[
+  {
+    "case": "fib_updates_8",
+    "mode": "identity",
+    "byte_identical_manifest": true,
+    "native_manifest_sha256": "8f6fdef118329c6279c7ca73e0eea5990e248c1e6f7d61daa11b88b9e46ba8e1",
+    "original_native_D1_sha256": "8f6fdef118329c6279c7ca73e0eea5990e248c1e6f7d61daa11b88b9e46ba8e1",
+    "complete_ordered_B_Q_input_sha256": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+    "same_ordered_rows_outside_TERM_H_VALUE_DEF": true,
+    "term_structures_and_bound_expressions_equal": true,
+    "scoped_d1_tables_equal": {
+      "variables.tsv.gz": true,
+      "occurrences.tsv.gz": true,
+      "clause-keys.tsv.gz": true,
+      "clause-counts.tsv.gz": true
+    },
+    "D1_delta_sections_equal": {
+      "variables": true,
+      "clauses": true,
+      "theory": true,
+      "assumptions": true,
+      "targets": true
+    },
+    "joint_p0_proof_reconstructed_sha256": null
+  },
+  {
+    "case": "fib_updates_8",
+    "mode": "identity-and-proof",
+    "byte_identical_manifest": false,
+    "native_manifest_sha256": "c4b431593ba7f5010b533e43b56eb895a27cb6291ad8321fa11116984ee8fb92",
+    "original_native_D1_sha256": "8f6fdef118329c6279c7ca73e0eea5990e248c1e6f7d61daa11b88b9e46ba8e1",
+    "complete_ordered_B_Q_input_sha256": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+    "same_ordered_rows_outside_TERM_H_VALUE_DEF": true,
+    "term_structures_and_bound_expressions_equal": true,
+    "scoped_d1_tables_equal": {
+      "variables.tsv.gz": true,
+      "occurrences.tsv.gz": true,
+      "clause-keys.tsv.gz": true,
+      "clause-counts.tsv.gz": true
+    },
+    "D1_delta_sections_equal": {
+      "variables": true,
+      "clauses": true,
+      "theory": true,
+      "assumptions": true,
+      "targets": true
+    },
+    "joint_p0_proof_reconstructed_sha256": "f7277429b3838744cb2b2508cf6ece790dd5f79a89889105e2373f1d4d988ec1"
+  },
+  {
+    "case": "circular-buffer",
+    "mode": "identity-and-proof",
+    "byte_identical_manifest": false,
+    "native_manifest_sha256": "36dacc0c73ab4ac88e14421c41825ad476833abc3dbce54222b397f015a34c63",
+    "original_native_D1_sha256": "669a71179ec559efd67159a1b5a7a170484970d28c13bacea6303fb53362d66a",
+    "complete_ordered_B_Q_input_sha256": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+    "same_ordered_rows_outside_TERM_H_VALUE_DEF": true,
+    "term_structures_and_bound_expressions_equal": true,
+    "scoped_d1_tables_equal": {
+      "variables.tsv.gz": true,
+      "occurrences.tsv.gz": true,
+      "clause-keys.tsv.gz": true,
+      "clause-counts.tsv.gz": true
+    },
+    "D1_delta_sections_equal": {
+      "variables": true,
+      "clauses": true,
+      "theory": true,
+      "assumptions": true,
+      "targets": true
+    },
+    "joint_p0_proof_reconstructed_sha256": "b024ba8b2d7a5aafeff406dc0d6f1bd54086138d63018f6c6fc88c7a9cb1fa45"
+  },
+  {
+    "case": "circular-buffer",
+    "mode": "identity",
+    "byte_identical_manifest": true,
+    "native_manifest_sha256": "669a71179ec559efd67159a1b5a7a170484970d28c13bacea6303fb53362d66a",
+    "original_native_D1_sha256": "669a71179ec559efd67159a1b5a7a170484970d28c13bacea6303fb53362d66a",
+    "complete_ordered_B_Q_input_sha256": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+    "same_ordered_rows_outside_TERM_H_VALUE_DEF": true,
+    "term_structures_and_bound_expressions_equal": true,
+    "scoped_d1_tables_equal": {
+      "variables.tsv.gz": true,
+      "occurrences.tsv.gz": true,
+      "clause-keys.tsv.gz": true,
+      "clause-counts.tsv.gz": true
+    },
+    "D1_delta_sections_equal": {
+      "variables": true,
+      "clauses": true,
+      "theory": true,
+      "assumptions": true,
+      "targets": true
+    },
+    "joint_p0_proof_reconstructed_sha256": null
+  },
+  {
+    "case": "airline_reservations_6",
+    "mode": "identity",
+    "byte_identical_manifest": false,
+    "native_manifest_sha256": "f1140498977783d4a6982a630c79880c0b158eb0e4268009610e142ef6f13ddf",
+    "original_native_D1_sha256": "d4b74dfc9bb097750813a911f0673fb5fcba3627dc5fd4adc909e0c1d6ba0670",
+    "complete_ordered_B_Q_input_sha256": "e035f90a0fcd6ff14443072fc46a3641637f2d4275a27e1c2b55428f30ece1ed",
+    "same_ordered_rows_outside_TERM_H_VALUE_DEF": true,
+    "term_structures_and_bound_expressions_equal": true,
+    "scoped_d1_tables_equal": {
+      "variables.tsv.gz": true,
+      "occurrences.tsv.gz": true,
+      "clause-keys.tsv.gz": true,
+      "clause-counts.tsv.gz": true
+    },
+    "D1_delta_sections_equal": {
+      "variables": true,
+      "clauses": true,
+      "theory": true,
+      "assumptions": true,
+      "targets": true
+    },
+    "joint_p0_proof_reconstructed_sha256": null
+  },
+  {
+    "case": "airline_reservations_6",
+    "mode": "identity-and-proof",
+    "byte_identical_manifest": false,
+    "native_manifest_sha256": "4d1879cc05410404e276ffb9b63cd5fb95dcef44fe809b2cb4ea32ab19a74f4d",
+    "original_native_D1_sha256": "d4b74dfc9bb097750813a911f0673fb5fcba3627dc5fd4adc909e0c1d6ba0670",
+    "complete_ordered_B_Q_input_sha256": "e035f90a0fcd6ff14443072fc46a3641637f2d4275a27e1c2b55428f30ece1ed",
+    "same_ordered_rows_outside_TERM_H_VALUE_DEF": true,
+    "term_structures_and_bound_expressions_equal": true,
+    "scoped_d1_tables_equal": {
+      "variables.tsv.gz": true,
+      "occurrences.tsv.gz": true,
+      "clause-keys.tsv.gz": true,
+      "clause-counts.tsv.gz": true
+    },
+    "D1_delta_sections_equal": {
+      "variables": true,
+      "clauses": true,
+      "theory": true,
+      "assumptions": true,
+      "targets": true
+    },
+    "joint_p0_proof_reconstructed_sha256": "8ffbdbde73f2455b5d6678a6784e6c69a44e4bf3bf2837d08e6efec1a1ea96ab"
+  }
+]

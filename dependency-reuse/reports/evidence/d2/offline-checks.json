@@ -1,0 +1,115 @@
+{
+  "checker_sha256": "ac0d29d8bc64abf29401b54c4606bc9448ad4a605c2fbc7db58874252b44b74d",
+  "replayed": {
+    "fib_updates_8": [
+      {
+        "repeat": 1,
+        "reconstructed_archive_sha256": "38002e9c8b7bd93d342fc30532fcc11ad61f5dd67219116bdf89680a76aa49bb",
+        "metrics_sha256": "4a10894003226565c7ef71b79f1a19d6d67c5de1a00822a0b09253ecad259fa3",
+        "checked_table_sha256": {
+          "learned.tsv": "efb07e6865835febcd230b9fd8b0c8bf14c6e2df41534b6b01ec5eabdbf071b8",
+          "used.tsv": "cd9cde1dc8fb2b89e672f30427e40a491ea80f91c931a80272c48f8e08b04914",
+          "survivors.tsv": "1f86a967dd2e6c68c16b1f6f849c027de7b0850d273e1526d4d0ae23da2b044b"
+        }
+      },
+      {
+        "repeat": 2,
+        "reconstructed_archive_sha256": "5bfeeb63fa84eb4d5ba42012f1ffc4f912af6146198bb3980498f297b99ef6e1",
+        "metrics_sha256": "4aeda4e95409e3736e602ed815d19479410c0a5c36444f47933047733a2f0424",
+        "checked_table_sha256": {
+          "learned.tsv": "efb07e6865835febcd230b9fd8b0c8bf14c6e2df41534b6b01ec5eabdbf071b8",
+          "used.tsv": "cd9cde1dc8fb2b89e672f30427e40a491ea80f91c931a80272c48f8e08b04914",
+          "survivors.tsv": "1f86a967dd2e6c68c16b1f6f849c027de7b0850d273e1526d4d0ae23da2b044b"
+        }
+      },
+      {
+        "repeat": 3,
+        "reconstructed_archive_sha256": "a31a352f8d715505f26d5a8c00c3f8e2a0a703e054b4411d3e507ffa929fcbf9",
+        "metrics_sha256": "358a18d3829e17cbd7508120be76e572bf4c8eb728e26d33ae3e2f8be48bf15e",
+        "checked_table_sha256": {
+          "learned.tsv": "efb07e6865835febcd230b9fd8b0c8bf14c6e2df41534b6b01ec5eabdbf071b8",
+          "used.tsv": "cd9cde1dc8fb2b89e672f30427e40a491ea80f91c931a80272c48f8e08b04914",
+          "survivors.tsv": "1f86a967dd2e6c68c16b1f6f849c027de7b0850d273e1526d4d0ae23da2b044b"
+        }
+      }
+    ],
+    "circular-buffer": [
+      {
+        "repeat": 1,
+        "reconstructed_archive_sha256": "d3a3706ba78e78534bf8f46ef5f92fe09a978d2e38f033db839a2f34eb150985",
+        "metrics_sha256": "efb18ead0003a7f4b0285db718dfaa1b855042fdcff4217362946c0292f61324",
+        "checked_table_sha256": {
+          "learned.tsv": "b901de95cb4c59207c1c639da5839b5ff443176a2f85eb5ac5af48911122417b",
+          "used.tsv": "bb906454785bdd124312ddb567654ef2787efcff0606b21ae44e0287dfcf160b",
+          "survivors.tsv": "dce67aa079167cc7af15a41e6958c3a4c2072ef38d62b299bb7945e8d0a302e2"
+        }
+      },
+      {
+        "repeat": 2,
+        "reconstructed_archive_sha256": "f4e9ea41841213b5ef9b73d34716f8b8bbbad7ecbfa8c9fc8867886051cc7c2e",
+        "metrics_sha256": "52b7840c0c82b7dc542d26ffbb9cb939edba08d58fc7ed417805aeb857840e4c",
+        "checked_table_sha256": {
+          "learned.tsv": "b901de95cb4c59207c1c639da5839b5ff443176a2f85eb5ac5af48911122417b",
+          "used.tsv": "bb906454785bdd124312ddb567654ef2787efcff0606b21ae44e0287dfcf160b",
+          "survivors.tsv": "dce67aa079167cc7af15a41e6958c3a4c2072ef38d62b299bb7945e8d0a302e2"
+        }
+      },
+      {
+        "repeat": 3,
+        "reconstructed_archive_sha256": "01ae2d2ee0abc76a80d35b2e621bf1f43c8d79bcdb58e17ec0a46034a914cbc4",
+        "metrics_sha256": "dfa88e33f188d84b9941fcebf8343da24f32f995dfb8455ebeb5f81ba0218639",
+        "checked_table_sha256": {
+          "learned.tsv": "b901de95cb4c59207c1c639da5839b5ff443176a2f85eb5ac5af48911122417b",
+          "used.tsv": "bb906454785bdd124312ddb567654ef2787efcff0606b21ae44e0287dfcf160b",
+          "survivors.tsv": "dce67aa079167cc7af15a41e6958c3a4c2072ef38d62b299bb7945e8d0a302e2"
+        }
+      }
+    ],
+    "airline_reservations_6": [
+      {
+        "repeat": 1,
+        "reconstructed_archive_sha256": "0b8cac64977f9727f5b8d70e61c9e127608d4b248d17fed7e124b0b98471d4a7",
+        "metrics_sha256": "26145cf585f1558cb9826f0ff4fb75775a135e66983a72f95a072400a25f5100",
+        "checked_table_sha256": {
+          "learned.tsv": "13c9d72a2057d6b7f0e954b5ad136d33c2838154527733198b4a0dc9b9e35642",
+          "used.tsv": "78bde8cf55bc527940f01127e6e9dd5da084411d7f127c6936b23009f55e22dd",
+          "survivors.tsv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "repeat": 2,
+        "reconstructed_archive_sha256": "31acfb7a7fcdca78544cab119d3b99b38082aa90d1eea171943780b3c09de5e1",
+        "metrics_sha256": "aec4e8d41aca15dcd4d3d3cbe8658c21e3e4451e01763ef2fc2c00ffb6d75054",
+        "checked_table_sha256": {
+          "learned.tsv": "13c9d72a2057d6b7f0e954b5ad136d33c2838154527733198b4a0dc9b9e35642",
+          "used.tsv": "78bde8cf55bc527940f01127e6e9dd5da084411d7f127c6936b23009f55e22dd",
+          "survivors.tsv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      },
+      {
+        "repeat": 3,
+        "reconstructed_archive_sha256": "d1518c584eedf9b56baf51e592f5882c8713ff97b01ea23815c4935d8a5a7fce",
+        "metrics_sha256": "f93512307d7ddabe509ac27d71e792cfc40ed3780148f271d8e80b200cb9c567",
+        "checked_table_sha256": {
+          "learned.tsv": "13c9d72a2057d6b7f0e954b5ad136d33c2838154527733198b4a0dc9b9e35642",
+          "used.tsv": "78bde8cf55bc527940f01127e6e9dd5da084411d7f127c6936b23009f55e22dd",
+          "survivors.tsv": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        }
+      }
+    ]
+  },
+  "distinct_primary_archives": 9,
+  "additional_combined_proofs": 3,
+  "compared_every_native_birth_in_order": true,
+  "compared_all_native_resident_clauses_and_root_units": true,
+  "checked_signed_resolution": true,
+  "comparisons": "Signed learning, used base rows, translated survivors and every metric matched for all primary repetitions. The combined proofs reconstruct from the same graph payload.",
+  "public_invalidation_only": {
+    "binary_sha256": "8633b2bf4c263dc0822b192f4f15551ac68ad37c678067238818172416afaa2c",
+    "source_sha256": "90f5833374ec54a922c8296acf550746c1e668cf534540ab3a0b2a9517fc4dd7",
+    "compilation": "g++ -std=c++11 -O2 -Isrc -I minisat-2.2.1 invalidation-audit.cpp minisat-2.2.1/minisat/core/ProofStore.cc",
+    "inputs": "on-1 raw proof and prepare_d2.py inputs.txt",
+    "cpu": 0,
+    "all_retained_ids_equal": true
+  }
+}

@@ -1,0 +1,166 @@
+{
+  "distinct_used_occurrences": {
+    "all_B": {
+      "self_also_aux_and_other": 676,
+      "self_also_aux_only": 269,
+      "self_also_other": 3013,
+      "matched": 7757,
+      "fully_mapped_absent": 30
+    },
+    "permanent_only_B": {
+      "self_also_other": 203,
+      "self_also_aux_and_other": 117,
+      "self_also_aux_only": 45,
+      "matched": 450,
+      "fully_mapped_absent": 3
+    },
+    "all_Q": {
+      "self_also_aux_only": 15,
+      "self_also_other": 68,
+      "self_also_aux_and_other": 49,
+      "matched": 66
+    }
+  },
+  "direct_used_edge_counts": {
+    "all_B": {
+      "self_also_aux_and_other": 12362,
+      "self_also_aux_only": 6152,
+      "self_also_other": 37192,
+      "matched": 69695,
+      "fully_mapped_absent": 892
+    },
+    "permanent_only_B": {
+      "self_also_other": 260,
+      "self_also_aux_and_other": 152,
+      "self_also_aux_only": 62,
+      "matched": 549,
+      "fully_mapped_absent": 4
+    },
+    "all_Q": {
+      "self_also_aux_only": 24,
+      "self_also_other": 1297,
+      "self_also_aux_and_other": 338,
+      "matched": 66
+    }
+  },
+  "terminal_reason_by_missing_literal": {
+    "all_B": {
+      "no_semantic_definition": 6767,
+      "unresolved_rf_endpoint": 21
+    },
+    "permanent_only_B": {
+      "no_semantic_definition": 689
+    },
+    "all_Q": {}
+  },
+  "complete_permanent_proof_outcomes": {
+    "survives": 31,
+    "self_also_aux_and_other": 57,
+    "self_also_other_only": 33,
+    "lost_exact_content_and_mapping_gaps": 3,
+    "lost_exact_content_only": 2
+  },
+  "examples": {
+    "self_also_other": {
+      "source_occurrence": 2381,
+      "proof_id": 2389,
+      "old_clause": [
+        2000,
+        2141,
+        2139
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:2141",
+      "self_comparable": false,
+      "dependency_path": [
+        2389,
+        57168
+      ],
+      "first_learned_descendant": 57168,
+      "rejected_literal": 2139,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 1069,
+        "terminal_role": "Opaque",
+        "terminal_reason": "no_semantic_definition",
+        "bit_examples": [],
+        "unchanged_source_site": null
+      }
+    },
+    "self_also_aux_and_other": {
+      "source_occurrence": 2781,
+      "proof_id": 2789,
+      "old_clause": [
+        2140,
+        2263
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:2140",
+      "self_comparable": false,
+      "dependency_path": [
+        2789,
+        57168
+      ],
+      "first_learned_descendant": 57168,
+      "rejected_literal": 2140,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 1070,
+        "terminal_role": "Opaque",
+        "terminal_reason": "no_semantic_definition",
+        "bit_examples": [],
+        "unchanged_source_site": null
+      }
+    },
+    "self_also_aux_only": {
+      "source_occurrence": 2789,
+      "proof_id": 2797,
+      "old_clause": [
+        2262,
+        2267
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:2262",
+      "self_comparable": false,
+      "dependency_path": [
+        2797,
+        57168
+      ],
+      "first_learned_descendant": 57168,
+      "rejected_literal": 2267,
+      "structural_witness": {
+        "gate_path": [
+          {
+            "variable": 1133,
+            "op": "and",
+            "input": 2144
+          }
+        ],
+        "terminal_variable": 1072,
+        "terminal_role": "Opaque",
+        "terminal_reason": "no_semantic_definition",
+        "bit_examples": [],
+        "unchanged_source_site": null
+      }
+    },
+    "fully_mapped_absent": {
+      "source_occurrence": 4289,
+      "proof_id": 4297,
+      "old_clause": [
+        3131,
+        3195,
+        3261
+      ],
+      "D1_key": 868,
+      "D1_reason": "-",
+      "self_comparable": true,
+      "dependency_path": [
+        4297,
+        56337
+      ],
+      "first_learned_descendant": 56337,
+      "rejected_literal": null,
+      "structural_witness": null
+    }
+  }
+}

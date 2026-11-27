@@ -1,0 +1,415 @@
+{
+  "distinct_used_occurrences": {
+    "all_B": {
+      "self_also_other": 4130,
+      "self_also_aux_only": 9038,
+      "matched": 1889,
+      "pair_only_aux_only": 5,
+      "pair_only_aux_and_other": 7,
+      "self_also_aux_and_other": 11332,
+      "fully_mapped_absent": 53
+    },
+    "permanent_only_B": {
+      "matched": 630,
+      "pair_only_aux_only": 4,
+      "pair_only_aux_and_other": 6,
+      "self_also_aux_and_other": 1412,
+      "self_also_aux_only": 755,
+      "fully_mapped_absent": 53,
+      "self_also_other": 451
+    },
+    "all_Q": {
+      "self_also_aux_only": 1,
+      "self_also_aux_and_other": 32
+    }
+  },
+  "direct_used_edge_counts": {
+    "all_B": {
+      "self_also_other": 6923,
+      "self_also_aux_only": 15820,
+      "matched": 3477,
+      "pair_only_aux_only": 28,
+      "pair_only_aux_and_other": 31,
+      "self_also_aux_and_other": 23304,
+      "fully_mapped_absent": 53
+    },
+    "permanent_only_B": {
+      "matched": 878,
+      "pair_only_aux_only": 4,
+      "pair_only_aux_and_other": 6,
+      "self_also_aux_and_other": 2263,
+      "self_also_aux_only": 789,
+      "fully_mapped_absent": 53,
+      "self_also_other": 809
+    },
+    "all_Q": {
+      "self_also_aux_only": 1,
+      "self_also_aux_and_other": 32
+    }
+  },
+  "terminal_reason_by_missing_literal": {
+    "all_B": {
+      "unsupported_object_or_type": 57984,
+      "different_or_ambiguous_complete_alias_class": 129,
+      "ambiguous_dynamic_definition": 627,
+      "no_semantic_definition": 2877,
+      "ambiguous_gate_definition": 455,
+      "missing_dynamic_context": 36,
+      "unregistered_symbol_or_type": 54,
+      "unresolved_rf_endpoint": 811
+    },
+    "permanent_only_B": {
+      "different_or_ambiguous_complete_alias_class": 20,
+      "unsupported_object_or_type": 7355,
+      "ambiguous_gate_definition": 59,
+      "ambiguous_dynamic_definition": 71,
+      "no_semantic_definition": 1654
+    },
+    "all_Q": {}
+  },
+  "complete_permanent_proof_outcomes": {
+    "lost_exact_content_only": 52,
+    "lost_exact_content_and_mapping_gaps": 25,
+    "self_also_aux_only": 5,
+    "self_also_aux_and_other": 30,
+    "survives": 12,
+    "pair_only_aux_and_other": 2,
+    "self_also_other_only": 5
+  },
+  "examples": {
+    "pair_only_aux_only": {
+      "source_occurrence": 917,
+      "proof_id": 917,
+      "old_clause": [
+        1706,
+        1711
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:1711",
+      "self_comparable": true,
+      "dependency_path": [
+        917,
+        1170779
+      ],
+      "first_learned_descendant": 1170779,
+      "rejected_literal": 1711,
+      "structural_witness": {
+        "gate_path": [
+          {
+            "variable": 855,
+            "op": "and",
+            "input": 814
+          }
+        ],
+        "terminal_variable": 407,
+        "terminal_role": "Value",
+        "terminal_reason": "different_or_ambiguous_complete_alias_class",
+        "bit_examples": [
+          [
+            "goto_symex::\\guard#5",
+            "bool",
+            0
+          ]
+        ],
+        "unchanged_source_site": {
+          "symbol": "goto_symex::\\guard#5",
+          "bit": 0,
+          "native_bit_type": "bool",
+          "operation_role": "assign5",
+          "function": "t1",
+          "file": "program.i",
+          "P0_line": 727,
+          "P1_line": 728,
+          "source": "if (send)",
+          "peer_definition_count": 7,
+          "peer_examples": [
+            "goto_symex::\\guard#11",
+            "goto_symex::\\guard#14",
+            "goto_symex::\\guard#17"
+          ]
+        }
+      }
+    },
+    "unchanged_frozen_line_gate": {
+      "source_occurrence": 917,
+      "proof_id": 917,
+      "old_clause": [
+        1706,
+        1711
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:1711",
+      "self_comparable": true,
+      "dependency_path": [
+        917,
+        1170779
+      ],
+      "first_learned_descendant": 1170779,
+      "rejected_literal": 1711,
+      "structural_witness": {
+        "gate_path": [
+          {
+            "variable": 855,
+            "op": "and",
+            "input": 814
+          }
+        ],
+        "terminal_variable": 407,
+        "terminal_role": "Value",
+        "terminal_reason": "different_or_ambiguous_complete_alias_class",
+        "bit_examples": [
+          [
+            "goto_symex::\\guard#5",
+            "bool",
+            0
+          ]
+        ],
+        "unchanged_source_site": {
+          "symbol": "goto_symex::\\guard#5",
+          "bit": 0,
+          "native_bit_type": "bool",
+          "operation_role": "assign5",
+          "function": "t1",
+          "file": "program.i",
+          "P0_line": 727,
+          "P1_line": 728,
+          "source": "if (send)",
+          "peer_definition_count": 7,
+          "peer_examples": [
+            "goto_symex::\\guard#11",
+            "goto_symex::\\guard#14",
+            "goto_symex::\\guard#17"
+          ]
+        }
+      }
+    },
+    "pair_only_aux_and_other": {
+      "source_occurrence": 921,
+      "proof_id": 921,
+      "old_clause": [
+        1710,
+        815,
+        1713
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:1710",
+      "self_comparable": true,
+      "dependency_path": [
+        921,
+        1170779
+      ],
+      "first_learned_descendant": 1170779,
+      "rejected_literal": 1713,
+      "structural_witness": {
+        "gate_path": [
+          {
+            "variable": 856,
+            "op": "or",
+            "input": 1710
+          },
+          {
+            "variable": 855,
+            "op": "and",
+            "input": 814
+          }
+        ],
+        "terminal_variable": 407,
+        "terminal_role": "Value",
+        "terminal_reason": "different_or_ambiguous_complete_alias_class",
+        "bit_examples": [
+          [
+            "goto_symex::\\guard#5",
+            "bool",
+            0
+          ]
+        ],
+        "unchanged_source_site": {
+          "symbol": "goto_symex::\\guard#5",
+          "bit": 0,
+          "native_bit_type": "bool",
+          "operation_role": "assign5",
+          "function": "t1",
+          "file": "program.i",
+          "P0_line": 727,
+          "P1_line": 728,
+          "source": "if (send)",
+          "peer_definition_count": 7,
+          "peer_examples": [
+            "goto_symex::\\guard#11",
+            "goto_symex::\\guard#14",
+            "goto_symex::\\guard#17"
+          ]
+        }
+      }
+    },
+    "self_also_aux_and_other": {
+      "source_occurrence": 3786,
+      "proof_id": 3786,
+      "old_clause": [
+        6354,
+        6356,
+        6358,
+        6360,
+        6362,
+        6364,
+        6366,
+        6368,
+        6994
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:6354",
+      "self_comparable": false,
+      "dependency_path": [
+        3786,
+        1175840
+      ],
+      "first_learned_descendant": 1175840,
+      "rejected_literal": 6368,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 3184,
+        "terminal_role": "Value",
+        "terminal_reason": "unsupported_object_or_type",
+        "bit_examples": [
+          [
+            "m#28",
+            "",
+            7
+          ]
+        ],
+        "unchanged_source_site": null
+      }
+    },
+    "self_also_aux_only": {
+      "source_occurrence": 22560,
+      "proof_id": 22584,
+      "old_clause": [
+        24924,
+        24926,
+        24928,
+        24930,
+        24932,
+        24934,
+        24936,
+        24938,
+        24940
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:24940",
+      "self_comparable": false,
+      "dependency_path": [
+        22584,
+        1175652
+      ],
+      "first_learned_descendant": 1175652,
+      "rejected_literal": 24940,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 12470,
+        "terminal_role": "Aux",
+        "terminal_reason": "ambiguous_gate_definition",
+        "bit_examples": [],
+        "unchanged_source_site": null
+      }
+    },
+    "fully_mapped_absent": {
+      "source_occurrence": 23338,
+      "proof_id": 23366,
+      "old_clause": [
+        25273,
+        25676
+      ],
+      "D1_key": 1264,
+      "D1_reason": "-",
+      "self_comparable": true,
+      "dependency_path": [
+        23366,
+        1164365
+      ],
+      "first_learned_descendant": 1164365,
+      "rejected_literal": null,
+      "structural_witness": null
+    },
+    "self_also_other": {
+      "source_occurrence": 61657,
+      "proof_id": 61729,
+      "old_clause": [
+        6355,
+        45686
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:6355",
+      "self_comparable": false,
+      "dependency_path": [
+        61729,
+        1175840
+      ],
+      "first_learned_descendant": 1175840,
+      "rejected_literal": 6355,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 3177,
+        "terminal_role": "Value",
+        "terminal_reason": "unsupported_object_or_type",
+        "bit_examples": [
+          [
+            "m#28",
+            "",
+            0
+          ]
+        ],
+        "unchanged_source_site": null
+      }
+    },
+    "unchanged_frozen_line_value": {
+      "source_occurrence": 75559,
+      "proof_id": 75647,
+      "old_clause": [
+        53671,
+        53606,
+        53543,
+        53672
+      ],
+      "D1_key": 0,
+      "D1_reason": "literal:53671",
+      "self_comparable": false,
+      "dependency_path": [
+        75647,
+        75648,
+        1175844
+      ],
+      "first_learned_descendant": 1175844,
+      "rejected_literal": 53606,
+      "structural_witness": {
+        "gate_path": [],
+        "terminal_variable": 26803,
+        "terminal_role": "Value",
+        "terminal_reason": "ambiguous_dynamic_definition",
+        "bit_examples": [
+          [
+            "buffer_size#23",
+            "signedbv:32",
+            31
+          ]
+        ],
+        "unchanged_source_site": {
+          "symbol": "buffer_size#23",
+          "bit": 31,
+          "native_bit_type": "signedbv:32",
+          "operation_role": "read",
+          "function": "insertLogElement",
+          "file": "program.i",
+          "P0_line": 707,
+          "P1_line": 707,
+          "source": "if (next < buffer_size && buffer_size > 0)",
+          "peer_definition_count": 14,
+          "peer_examples": [
+            "buffer_size#11",
+            "buffer_size#12",
+            "buffer_size#15"
+          ]
+        }
+      }
+    }
+  }
+}

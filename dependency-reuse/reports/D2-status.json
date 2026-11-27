@@ -1,0 +1,16 @@
+{
+  "stage": "D2",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/dependency-reuse",
+  "implementation_sha": "41e227974fc35f3b98767b6cbdb3ca3a67144f1f",
+  "reviewed_parent_sha": "3b89d39c246a8a22a31274cde1d34d1edc7c2e5a",
+  "native_elf_sha256": "9ac785e9308d9bb89e1a240e5c6b4f44a7911d508ae42e6bef803421b6ad1942",
+  "primary_runs": 21,
+  "supplementary_runs": 6,
+  "recorded_primary_archives_verified": 9,
+  "independent_cnf_fixtures": 11,
+  "cnf_deltas": 22,
+  "corruptions_rejected": 2,
+  "actual_cross_version_imports": 0,
+  "next_phase_requires_confirmation": true
+}

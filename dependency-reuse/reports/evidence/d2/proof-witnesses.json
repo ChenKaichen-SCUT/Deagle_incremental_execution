@@ -1,0 +1,846 @@
+{
+  "circular-buffer": [
+    {
+      "learned_id": 1164359,
+      "conclusion": [
+        32827,
+        471455,
+        39782,
+        471551,
+        471573
+      ],
+      "flags": 0,
+      "cause_mask": 66,
+      "distinct_B_input_occurrences": 4,
+      "support_leaf_cause_counts": {
+        "66": 1,
+        "0": 3
+      },
+      "ancestry_nodes": 5,
+      "examples": [
+        {
+          "source_occurrence": 1110209,
+          "proof_id": 1111491,
+          "cause": 0,
+          "raw_literals": [
+            39557,
+            32827,
+            471455
+          ],
+          "path": [
+            1111491,
+            1164359
+          ],
+          "unmapped_literals": []
+        },
+        {
+          "source_occurrence": 49859,
+          "proof_id": 49919,
+          "cause": 66,
+          "raw_literals": [
+            39782,
+            39556,
+            39961
+          ],
+          "path": [
+            49919,
+            1164359
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 39782,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:39700",
+              "gate_path": [
+                [
+                  19891,
+                  "and",
+                  39700
+                ]
+              ],
+              "terminal_variable": 19850,
+              "terminal_reason": "ambiguous_dynamic_definition",
+              "terminal_bits": [
+                [
+                  "next#23",
+                  "unsignedbv:32",
+                  0
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "learned_id": 1164365,
+      "conclusion": [
+        469236,
+        32410,
+        469383,
+        32412,
+        32414,
+        32416,
+        32418,
+        32420,
+        469354,
+        25276,
+        25278,
+        25280,
+        25282,
+        25284,
+        25286,
+        469302,
+        469334,
+        469282
+      ],
+      "flags": 0,
+      "cause_mask": 1,
+      "distinct_B_input_occurrences": 6,
+      "support_leaf_cause_counts": {
+        "0": 5,
+        "1": 1
+      },
+      "ancestry_nodes": 7,
+      "examples": [
+        {
+          "source_occurrence": 1104166,
+          "proof_id": 1105448,
+          "cause": 0,
+          "raw_literals": [
+            25275,
+            469236,
+            469282
+          ],
+          "path": [
+            1105448,
+            1164365
+          ],
+          "unmapped_literals": []
+        },
+        {
+          "source_occurrence": 23338,
+          "proof_id": 23366,
+          "cause": 1,
+          "raw_literals": [
+            25273,
+            25676
+          ],
+          "path": [
+            23366,
+            1164365
+          ],
+          "unmapped_literals": []
+        }
+      ]
+    },
+    {
+      "learned_id": 1170779,
+      "conclusion": [
+        88285,
+        1713
+      ],
+      "flags": 0,
+      "cause_mask": 134,
+      "distinct_B_input_occurrences": 10,
+      "support_leaf_cause_counts": {
+        "0": 5,
+        "134": 3,
+        "130": 2
+      },
+      "ancestry_nodes": 11,
+      "examples": [
+        {
+          "source_occurrence": 907,
+          "proof_id": 907,
+          "cause": 0,
+          "raw_literals": [
+            1697,
+            1705
+          ],
+          "path": [
+            907,
+            1170779
+          ],
+          "unmapped_literals": []
+        },
+        {
+          "source_occurrence": 917,
+          "proof_id": 917,
+          "cause": 130,
+          "raw_literals": [
+            1706,
+            1711
+          ],
+          "path": [
+            917,
+            1170779
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 1711,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:814",
+              "gate_path": [
+                [
+                  855,
+                  "and",
+                  814
+                ]
+              ],
+              "terminal_variable": 407,
+              "terminal_reason": "different_or_ambiguous_complete_alias_class",
+              "terminal_bits": [
+                [
+                  "goto_symex::\\guard#5",
+                  "bool",
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "source_occurrence": 921,
+          "proof_id": 921,
+          "cause": 134,
+          "raw_literals": [
+            1710,
+            815,
+            1713
+          ],
+          "path": [
+            921,
+            1170779
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 1710,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:814",
+              "gate_path": [
+                [
+                  855,
+                  "and",
+                  814
+                ]
+              ],
+              "terminal_variable": 407,
+              "terminal_reason": "different_or_ambiguous_complete_alias_class",
+              "terminal_bits": [
+                [
+                  "goto_symex::\\guard#5",
+                  "bool",
+                  0
+                ]
+              ]
+            },
+            {
+              "raw_literal": 815,
+              "role": "Value",
+              "first_reason": "different_or_ambiguous_complete_alias_class",
+              "gate_path": [],
+              "terminal_variable": 407,
+              "terminal_reason": "different_or_ambiguous_complete_alias_class",
+              "terminal_bits": [
+                [
+                  "goto_symex::\\guard#5",
+                  "bool",
+                  0
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1713,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:1710",
+              "gate_path": [
+                [
+                  856,
+                  "or",
+                  1710
+                ],
+                [
+                  855,
+                  "and",
+                  814
+                ]
+              ],
+              "terminal_variable": 407,
+              "terminal_reason": "different_or_ambiguous_complete_alias_class",
+              "terminal_bits": [
+                [
+                  "goto_symex::\\guard#5",
+                  "bool",
+                  0
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "learned_id": 1175295,
+      "conclusion": [
+        106687,
+        67746
+      ],
+      "flags": 0,
+      "cause_mask": 66,
+      "distinct_B_input_occurrences": 9,
+      "support_leaf_cause_counts": {
+        "66": 9
+      },
+      "ancestry_nodes": 10,
+      "examples": [
+        {
+          "source_occurrence": 102049,
+          "proof_id": 102169,
+          "cause": 66,
+          "raw_literals": [
+            67730,
+            67732,
+            67734,
+            67736,
+            67738,
+            67740,
+            67742,
+            67744,
+            67746
+          ],
+          "path": [
+            102169,
+            1175295
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 67746,
+              "role": "Aux",
+              "first_reason": "ambiguous_gate_definition",
+              "gate_path": [],
+              "terminal_variable": 33873,
+              "terminal_reason": "ambiguous_gate_definition",
+              "terminal_bits": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "learned_id": 1175622,
+      "conclusion": [
+        89763,
+        76036,
+        90266,
+        90264,
+        90262,
+        90260,
+        90258,
+        90256,
+        90254,
+        90252,
+        90250,
+        90248,
+        90246,
+        90244,
+        90242,
+        90240,
+        90238,
+        90236,
+        90234,
+        90232,
+        90230,
+        90228,
+        90226,
+        90224,
+        90222,
+        90220,
+        90218,
+        90216,
+        90214,
+        90212,
+        90210,
+        90208,
+        90206,
+        90204
+      ],
+      "flags": 0,
+      "cause_mask": 66,
+      "distinct_B_input_occurrences": 187,
+      "support_leaf_cause_counts": {
+        "0": 155,
+        "66": 32
+      },
+      "ancestry_nodes": 188,
+      "examples": [
+        {
+          "source_occurrence": 109126,
+          "proof_id": 109270,
+          "cause": 0,
+          "raw_literals": [
+            75610,
+            75675
+          ],
+          "path": [
+            109270,
+            1175622
+          ],
+          "unmapped_literals": []
+        },
+        {
+          "source_occurrence": 123313,
+          "proof_id": 124595,
+          "cause": 66,
+          "raw_literals": [
+            75611,
+            89763
+          ],
+          "path": [
+            124595,
+            1175622
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 89763,
+              "role": "Aux",
+              "first_reason": "ambiguous_gate_definition",
+              "gate_path": [],
+              "terminal_variable": 44881,
+              "terminal_reason": "ambiguous_gate_definition",
+              "terminal_bits": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "learned_id": 1175652,
+      "conclusion": [
+        106219,
+        24940
+      ],
+      "flags": 0,
+      "cause_mask": 66,
+      "distinct_B_input_occurrences": 9,
+      "support_leaf_cause_counts": {
+        "66": 9
+      },
+      "ancestry_nodes": 10,
+      "examples": [
+        {
+          "source_occurrence": 22560,
+          "proof_id": 22584,
+          "cause": 66,
+          "raw_literals": [
+            24924,
+            24926,
+            24928,
+            24930,
+            24932,
+            24934,
+            24936,
+            24938,
+            24940
+          ],
+          "path": [
+            22584,
+            1175652
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 24940,
+              "role": "Aux",
+              "first_reason": "ambiguous_gate_definition",
+              "gate_path": [],
+              "terminal_variable": 12470,
+              "terminal_reason": "ambiguous_gate_definition",
+              "terminal_bits": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "learned_id": 1175741,
+      "conclusion": [
+        106937,
+        75278
+      ],
+      "flags": 0,
+      "cause_mask": 66,
+      "distinct_B_input_occurrences": 9,
+      "support_leaf_cause_counts": {
+        "66": 9
+      },
+      "ancestry_nodes": 10,
+      "examples": [
+        {
+          "source_occurrence": 108917,
+          "proof_id": 109055,
+          "cause": 66,
+          "raw_literals": [
+            75262,
+            75264,
+            75266,
+            75268,
+            75270,
+            75272,
+            75274,
+            75276,
+            75278
+          ],
+          "path": [
+            109055,
+            1175741
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 75278,
+              "role": "Aux",
+              "first_reason": "ambiguous_gate_definition",
+              "gate_path": [],
+              "terminal_variable": 37639,
+              "terminal_reason": "ambiguous_gate_definition",
+              "terminal_bits": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "airline_reservations_6": [
+    {
+      "learned_id": 928263,
+      "conclusion": [
+        42501,
+        42979
+      ],
+      "flags": 0,
+      "cause_mask": 70,
+      "distinct_B_input_occurrences": 3,
+      "support_leaf_cause_counts": {
+        "70": 2,
+        "66": 1
+      },
+      "ancestry_nodes": 4,
+      "examples": [
+        {
+          "source_occurrence": 20888,
+          "proof_id": 23612,
+          "cause": 66,
+          "raw_literals": [
+            7350,
+            42501
+          ],
+          "path": [
+            23612,
+            928263
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 7350,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:6711",
+              "gate_path": [
+                [
+                  3675,
+                  "and",
+                  6711
+                ]
+              ],
+              "terminal_variable": 3355,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#57",
+                  "",
+                  0
+                ]
+              ]
+            },
+            {
+              "raw_literal": 42501,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:6708",
+              "gate_path": [
+                [
+                  21250,
+                  "and",
+                  6708
+                ]
+              ],
+              "terminal_variable": 3354,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": []
+            }
+          ]
+        },
+        {
+          "source_occurrence": 20887,
+          "proof_id": 23611,
+          "cause": 70,
+          "raw_literals": [
+            6708,
+            42501
+          ],
+          "path": [
+            23611,
+            928263
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 6708,
+              "role": "Guard",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 3354,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": []
+            },
+            {
+              "raw_literal": 42501,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:6708",
+              "gate_path": [
+                [
+                  21250,
+                  "and",
+                  6708
+                ]
+              ],
+              "terminal_variable": 3354,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "learned_id": 997583,
+      "conclusion": [
+        80753,
+        2190
+      ],
+      "flags": 0,
+      "cause_mask": 70,
+      "distinct_B_input_occurrences": 17,
+      "support_leaf_cause_counts": {
+        "70": 9,
+        "68": 8
+      },
+      "ancestry_nodes": 18,
+      "examples": [
+        {
+          "source_occurrence": 8673,
+          "proof_id": 8697,
+          "cause": 68,
+          "raw_literals": [
+            1551,
+            16450
+          ],
+          "path": [
+            8697,
+            997583
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 1551,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 775,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  0
+                ]
+              ]
+            },
+            {
+              "raw_literal": 16450,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 8225,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#8",
+                  "",
+                  0
+                ]
+              ]
+            }
+          ]
+        },
+        {
+          "source_occurrence": 231,
+          "proof_id": 231,
+          "cause": 70,
+          "raw_literals": [
+            1550,
+            1552,
+            1554,
+            1556,
+            1558,
+            1560,
+            1562,
+            1564,
+            2190
+          ],
+          "path": [
+            231,
+            997583
+          ],
+          "unmapped_literals": [
+            {
+              "raw_literal": 1550,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 775,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  0
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1552,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 776,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  1
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1554,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 777,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  2
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1556,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 778,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  3
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1558,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 779,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  4
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1560,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 780,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  5
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1562,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 781,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  6
+                ]
+              ]
+            },
+            {
+              "raw_literal": 1564,
+              "role": "Value",
+              "first_reason": "unsupported_object_or_type",
+              "gate_path": [],
+              "terminal_variable": 782,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  7
+                ]
+              ]
+            },
+            {
+              "raw_literal": 2190,
+              "role": "Aux",
+              "first_reason": "unmapped_gate_input:1551",
+              "gate_path": [
+                [
+                  1095,
+                  "and",
+                  1551
+                ]
+              ],
+              "terminal_variable": 775,
+              "terminal_reason": "unsupported_object_or_type",
+              "terminal_bits": [
+                [
+                  "bookings#9",
+                  "",
+                  0
+                ]
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

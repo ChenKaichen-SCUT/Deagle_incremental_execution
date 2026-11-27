@@ -1,0 +1,150 @@
+{
+  "plan": {
+    "schedule": [
+      [
+        "fib_updates_8",
+        1,
+        "off"
+      ],
+      [
+        "fib_updates_8",
+        1,
+        "on"
+      ],
+      [
+        "fib_updates_8",
+        1,
+        "oracle"
+      ],
+      [
+        "circular-buffer",
+        1,
+        "on"
+      ],
+      [
+        "circular-buffer",
+        1,
+        "off"
+      ],
+      [
+        "circular-buffer",
+        1,
+        "oracle"
+      ],
+      [
+        "airline_reservations_6",
+        1,
+        "off"
+      ],
+      [
+        "airline_reservations_6",
+        1,
+        "on"
+      ],
+      [
+        "airline_reservations_6",
+        1,
+        "oracle"
+      ]
+    ],
+    "binary_sha256": "158ce8d9f1ff88691fc79bc7eaa8ca81d338224131bc83fbd596655ba51a7073",
+    "oracle_sha256": "dc7e78b1fb6e5b0c116e191ec9dcddff0cdc29bd82f2d733406d86f7cf2dedc4",
+    "frozen_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+    "cpu": 0,
+    "serial": true,
+    "cold": "new process/model/solver; OS cache unmanaged"
+  },
+  "runs": [
+    {
+      "case": "airline_reservations_6",
+      "mode": "off-1",
+      "wall_ns": 5368043479,
+      "peak_rss_kib": 110976,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": null
+    },
+    {
+      "case": "airline_reservations_6",
+      "mode": "on-1",
+      "wall_ns": 5974008079,
+      "peak_rss_kib": 255108,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": "a385d9737ad96dfc24785e563c5bae8d953819583314babe140dcdedfd108a35"
+    },
+    {
+      "case": "airline_reservations_6",
+      "mode": "oracle-1",
+      "wall_ns": 5615267219,
+      "peak_rss_kib": 110720,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": null
+    },
+    {
+      "case": "circular-buffer",
+      "mode": "off-1",
+      "wall_ns": 500326221,
+      "peak_rss_kib": 123008,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": null
+    },
+    {
+      "case": "circular-buffer",
+      "mode": "on-1",
+      "wall_ns": 631586014,
+      "peak_rss_kib": 194400,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": "a2d446570f3657f4fefe586ddaedded25bf7d5ebe847b39800666069f963ce7f"
+    },
+    {
+      "case": "circular-buffer",
+      "mode": "oracle-1",
+      "wall_ns": 506822237,
+      "peak_rss_kib": 123008,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": null
+    },
+    {
+      "case": "fib_updates_8",
+      "mode": "off-1",
+      "wall_ns": 167111480,
+      "peak_rss_kib": 25228,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": null
+    },
+    {
+      "case": "fib_updates_8",
+      "mode": "on-1",
+      "wall_ns": 132308114,
+      "peak_rss_kib": 26624,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": "447616576b71b45e26808c5c74588bcfbaba6f420d26901fe187da76737498c4"
+    },
+    {
+      "case": "fib_updates_8",
+      "mode": "oracle-1",
+      "wall_ns": 120618916,
+      "peak_rss_kib": 25976,
+      "exit_code": 10,
+      "timed_out": false,
+      "classification": "VIOLATION",
+      "raw_proof_sha256": null
+    }
+  ],
+  "purpose": "Pre-release instrumentation validation. All planned release runs are independently included in the main matrix."
+}

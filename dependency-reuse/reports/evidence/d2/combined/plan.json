@@ -1,0 +1,33 @@
+{
+  "schedule": [
+    [
+      "fib_updates_8",
+      "identity"
+    ],
+    [
+      "fib_updates_8",
+      "identity-and-proof"
+    ],
+    [
+      "circular-buffer",
+      "identity-and-proof"
+    ],
+    [
+      "circular-buffer",
+      "identity"
+    ],
+    [
+      "airline_reservations_6",
+      "identity"
+    ],
+    [
+      "airline_reservations_6",
+      "identity-and-proof"
+    ]
+  ],
+  "repeats": 1,
+  "cpu": 0,
+  "serial": true,
+  "binary_sha256": "9ac785e9308d9bb89e1a240e5c6b4f44a7911d508ae42e6bef803421b6ad1942",
+  "purpose": "Separate descriptive cost of acquiring D1 identity records and D2 dependencies in the same P0 process. All six runs reported."
+}
