@@ -1,0 +1,9 @@
+case	domain	registered_permanent	observed	permanent_support	unobserved	observed_outside_permanent_union	dirty_observed	dirty_slots	registered_groups	overflow_groups	expanded_groups	expanded_overflow	bitmap_bytes
+fib_updates_8	B	47493	12858	7341	34635	5517	4852	25	33	0	33	0	6259
+fib_updates_8	T	851	851	610	0	241	72	64	166	0	215	0	107
+circular-buffer	B	1160134	35367	7818	1124767	27549	30734	51	75	0	75	0	145248
+circular-buffer	T	6414	6414	941	0	5473	1722	224	696	0	924	0	802
+airline_reservations_6	B	866692	33230	17411	833462	15819	26053	98	110	0	110	0	113850
+airline_reservations_6	T	2248	2248	1542	0	706	1447	732	957	0	1136	113	281
+fib-snapshot-11	B	1001471	138446	63990	863025	74456	18283	34	50	0	50	0	125275
+fib-snapshot-11	T	13534	13534	8885	0	4649	156	60	307	0	398	0	1692

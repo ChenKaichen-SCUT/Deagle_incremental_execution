@@ -1,0 +1,15 @@
+{
+  "B_births": 2113,
+  "B_eligible": 47,
+  "M_births": 95491,
+  "M_eligible": 264,
+  "T_births": 297,
+  "T_eligible": 0,
+  "QUERY_births": 54916,
+  "QUERY_eligible": 0,
+  "UNKNOWN_births": 0,
+  "UNKNOWN_eligible": 0,
+  "all_births": 152817,
+  "equal_tags": 152817,
+  "superset_tags": 0
+}

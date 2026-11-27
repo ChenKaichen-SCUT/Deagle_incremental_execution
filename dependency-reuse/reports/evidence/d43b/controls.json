@@ -1,0 +1,14 @@
+{
+  "unobserved_unmatched_overflow_member_invalidates_sibling": true,
+  "overflow_groups_each_domain": 3,
+  "read_two_raw_leaves_same_bit": true,
+  "registered_unused_declaration_excluded": true,
+  "native_stress_min_0": 41,
+  "native_stress_min_1": 41,
+  "native_stress_min_2": 41,
+  "RF_tags_follow_native_branch_rollback": true,
+  "opaque_CO_and_indirect_CDCL_root_units": [
+    3,
+    5
+  ]
+}

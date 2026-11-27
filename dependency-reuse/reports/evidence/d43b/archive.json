@@ -1,0 +1,14 @@
+{
+  "files": 1444,
+  "uncompressed_bytes": 9783501550,
+  "unique_chunks_by_parent": {
+    "B": 1367,
+    "D42": 393,
+    "D43A": 13
+  },
+  "new_compressed_chunk_bytes": 373549489,
+  "accepted_modes": 36,
+  "previous_engineering_modes": 72,
+  "smoke_modes": 7,
+  "SHA256_of_raw_index": "4468d5f2acb74072c8a8743797587e2f47f1372d5456dbdf0455c66b447ebccb"
+}

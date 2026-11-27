@@ -1,0 +1,52 @@
+{
+  "source_commit": "8191402119cbd0069d5d8a5d74365485d834771f",
+  "base": "d66eda630a6b6112aff64b25f42cce2155d1b96e",
+  "canonical_sources": {
+    "minisat-2.2.1/minisat/core/Closure.cc": "e951e1d9237d35f0dc1ea68bc1d2f5351dedb8df",
+    "minisat-2.2.1/minisat/core/Closure.h": "651479b2ce755d6862d08010d7f6e74335e7e3d2",
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": "008185372d966a68fdf782c6b9e9f25380dd9283",
+    "minisat-2.2.1/minisat/core/ClosureSolver.h": "9d601d44245b40c94ff4d486c5dc52d59dbaed39",
+    "minisat-2.2.1/minisat/core/ClosureTypes.h": "02f9d2efd2073abe3cc2ab2c9cf2e6b5a0c7719e",
+    "minisat-2.2.1/minisat/core/DependencyTags.cc": "8fe618f47d27384d01954fe8d9ba038eafac63f0",
+    "minisat-2.2.1/minisat/core/DependencyTags.h": "48d5d9f87282bcd99aab13150067dd076aadec95",
+    "minisat-2.2.1/minisat/core/ProofStore.h": "d5fcdaf65d9717d2a0c3b0f8df9bc99caa801333",
+    "minisat-2.2.1/minisat/core/Solver.cc": "ca1d8ff48cc09e6764d9d93b573c2dfa411c27c0",
+    "minisat-2.2.1/minisat/core/Solver.h": "c1e95c951d8fdd10be735b169b63a334010813da",
+    "src/cbmc/cbmc_parse_options.cpp": "94328cf96b158841dab5a03817d65aca2da4c935",
+    "src/cbmc/cbmc_parse_options.h": "ce2ab0f06c4c3bf71198ec7e58ba89a64fc714f8",
+    "src/goto-symex/symex_target_equation.cpp": "405dab40b0892c72939334556a35dee10ab67410",
+    "src/solvers/Makefile": "a9e083457e001e31e3b501356ebce6aaa59bcaef",
+    "src/solvers/sat/satcheck_minisat2.cpp": "710371de81eb390605556562392ae79a8c91137a",
+    "src/util/Makefile": "6b205ba5f56be34d92a851ab8b84d7735b9f50c5",
+    "src/util/dependency_group_sources.cpp": "0e77d6df8caa4c5a9298ed12408574b67d2d59db",
+    "src/util/dependency_group_sources.h": "08e28335b0b624e5007d06c6dbd3a48c87f1ec30",
+    "src/util/dependency_manifest.cpp": "fb68317150736fdc1e0373e35515b36a71c2bac4",
+    "src/util/dependency_manifest.h": "76d7edc899add09e788a20ac82156881ca4e23fa"
+  },
+  "upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "pre_registration": "8410d86259fb8351271b23a534e13103fcd7d1fc",
+  "ELF": {
+    "accepted": "157c52158e05a4f73068b657671b1789124e1cd76c71a2507f2d0415f53ba13c",
+    "engineering-1": "bab978ab4c5e1a80ee036d5c14419dca746b2d30a063e40f17f7199440a5d01e",
+    "engineering-2": "df15ba7b04b52f685c398d305510f4f14c289d03b55a0e1ddf6dc6b974a82c51"
+  },
+  "checker": "e82a373331ad8d375db9dc31fdeb6c34ebb1380f45bcb8de54d9accc912e71c4",
+  "controls": {
+    "scope-test": "d60b62ffe49be4c5258cbdddc5e3c66b4821474bc7f3c5eda435ce758aa15420",
+    "native-test": "229041aec33061316d9add73690f8a064cd63ab4b24fce34e3ba8c56f5311370",
+    "branch-test": "9bd068af7ecf22dbd1e382741c4c1a2e3bfe796a12ed45e13cbb8e4283fd3135"
+  },
+  "config_inc_sha256": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c",
+  "architecture": "x86_64",
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "cc": "11.4.0",
+  "python": "3.10.12",
+  "cpus": "16",
+  "memory_kib": "MemTotal:       30802092 kB",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+  "build": "make -C src -j7 cbmc.dir; reused pinned native object cache, recompiled all minisat core and simp translation units after changed ABI",
+  "build_log": "logs/submission-build.log",
+  "affinity": 0,
+  "rounds": 1,
+  "last_test_code": "b0c95dfdc5cc3d1e7a544db1dfbfa784bb7a8c63"
+}

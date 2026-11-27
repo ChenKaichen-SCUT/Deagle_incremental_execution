@@ -1,0 +1,235 @@
+{
+  "case": "fib-snapshot-11",
+  "counts": {
+    "registered_B": 1001471,
+    "permanent_support_B": 63990,
+    "observed_B": 138446,
+    "dirty_leaves_B": 18283,
+    "registered_T": 13534,
+    "permanent_support_T": 8885,
+    "observed_T": 13534,
+    "dirty_leaves_T": 156
+  },
+  "registered_groups": [
+    50,
+    307
+  ],
+  "overflow_groups": [
+    0,
+    0
+  ],
+  "dirty_slots": [
+    34,
+    60
+  ],
+  "exact": {
+    "B": 40
+  },
+  "eligible": {
+    "B": 16
+  },
+  "previously_hit": {
+    "B": 7
+  },
+  "birth_check": {
+    "all_births": 108788,
+    "equal_tags": 108788,
+    "superset_tags": 0
+  },
+  "candidate_subset_violations": 0,
+  "permanent_union_missing": 0,
+  "same_run_reference_sha256": "055584844b204d737574fb57b88602b54699976ae34987384936ae719ee45210",
+  "model_canonical_sha256": "a66138f326ce3fec975858b93a90ef58d35c16c881d06d6dfe5b4444745a43d2",
+  "boundary_stream_sha256": "214c686219b2a74ec8099f8dde7d129bcffebda812aad5d92602d8d77441ee49",
+  "P0_properties_and_witnesses": {
+    "properties": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "19"
+          },
+          "status": "SUCCESS"
+        },
+        {
+          "description": "unwinding assertion loop 0",
+          "property": "fib.unwind.0",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "fib",
+            "line": "706"
+          },
+          "status": "SUCCESS"
+        },
+        {
+          "description": "unwinding assertion loop 0",
+          "property": "t1.unwind.0",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "t1",
+            "line": "688"
+          },
+          "status": "SUCCESS"
+        },
+        {
+          "description": "unwinding assertion loop 0",
+          "property": "t2.unwind.0",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "t2",
+            "line": "696"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "INCOMPLETE_UNWINDING",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [
+        "fib.unwind.0",
+        "t1.unwind.0",
+        "t2.unwind.0"
+      ],
+      "unwinding_iterations": {
+        "fib.0 file program.i line 706 function fib thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "t1.0 file program.i line 688 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ],
+        "t2.0 file program.i line 696 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          14,
+          15,
+          16,
+          17,
+          18,
+          19,
+          20,
+          21,
+          22,
+          23,
+          24
+        ]
+      },
+      "unwinding_stop_or_warning": [
+        "Not unwinding loop fib.0 iteration 25 file program.i line 706 function fib thread 0",
+        "Not unwinding loop t1.0 iteration 25 file program.i line 688 function t1 thread 1",
+        "Not unwinding loop t2.0 iteration 25 file program.i line 696 function t2 thread 2"
+      ],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 4 VCC(s), 4 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 403\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": []
+    },
+    "traces": {},
+    "cold_trajectory_checked": false,
+    "verified_query_renaming": false
+  },
+  "stats": {
+    "births": 108788,
+    "original_occurrences": 1002193,
+    "registered_theory": 13534,
+    "exportable_births": 54606,
+    "scoped_dispositions": 54182,
+    "legacy_recorders": 0,
+    "SupportStore_instances": 0,
+    "proof_nodes": 0,
+    "proof_parent_edges": 0,
+    "duplicate_condition_nodes": 0,
+    "legacy_quality_enabled": 0,
+    "B_groups": 50,
+    "T_groups": 307,
+    "B_observations": 63525775,
+    "T_observations": 1266601,
+    "clause_ORs": 74434910,
+    "theory_ORs": 74924920,
+    "peak_root_tags": 93150,
+    "peak_raw_clause_refs": 1001765,
+    "peak_active_derived_clause_slots": 335952,
+    "peak_active_clause_plus_root_tags": 427939,
+    "peak_theory_value_instances": 299496,
+    "peak_native_graph_edges": 112086,
+    "peak_persistent_theory_slots": 299001,
+    "sizeof_theory_tag": 136,
+    "sizeof_native_theory_support": 144,
+    "sizeof_clause_tag": 264,
+    "sizeof_root_entry": 272,
+    "GC": 3,
+    "recycled_clause_slots": 58207,
+    "root_conflicts": 1,
+    "min_success": 9219434,
+    "min_failure": 9894778,
+    "theory_reason_clauses": 285457,
+    "theory_conflicts": 116,
+    "other_boundaries": 0,
+    "opaque_boundaries": 0
+  },
+  "projection_confirmed": true
+}

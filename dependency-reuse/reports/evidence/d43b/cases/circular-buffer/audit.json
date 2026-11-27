@@ -1,0 +1,157 @@
+{
+  "case": "circular-buffer",
+  "counts": {
+    "registered_B": 1160134,
+    "observed_B": 35367,
+    "dirty_leaves_B": 30734,
+    "permanent_support_B": 7818,
+    "registered_T": 6414,
+    "permanent_support_T": 941,
+    "observed_T": 6414,
+    "dirty_leaves_T": 1722
+  },
+  "registered_groups": [
+    75,
+    696
+  ],
+  "overflow_groups": [
+    0,
+    0
+  ],
+  "dirty_slots": [
+    51,
+    224
+  ],
+  "exact": {
+    "B": 17,
+    "M": 18
+  },
+  "eligible": {},
+  "previously_hit": {},
+  "birth_check": {
+    "all_births": 343,
+    "equal_tags": 343,
+    "superset_tags": 0
+  },
+  "candidate_subset_violations": 0,
+  "permanent_union_missing": 0,
+  "same_run_reference_sha256": "2fdd92c0ab3c2d1ff343d598a110943ea8a095c81b5e767e8b19cd5f0e6da244",
+  "model_canonical_sha256": "a2a3a587e89edfc97bb6b3c91ffbc58cd8562d7dbc02faa911be630899e6d7a0",
+  "boundary_stream_sha256": "5a30e841951fbefdbe7637b482161aa1ed3d4d3b1ec1180cdf83c7fc9abdc2a4",
+  "P0_properties_and_witnesses": {
+    "properties": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": []
+    },
+    "traces": {
+      "reach_error.assertion.1": {
+        "total_steps": 357,
+        "different_positions": 12,
+        "spans": [
+          {
+            "first_zero_based": 67,
+            "last_zero_based": 72,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          },
+          {
+            "first_zero_based": 92,
+            "last_zero_based": 97,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          }
+        ],
+        "visible_steps_equal": true
+      }
+    },
+    "cold_trajectory_checked": false,
+    "verified_query_renaming": false
+  },
+  "stats": {
+    "births": 343,
+    "original_occurrences": 1161979,
+    "registered_theory": 6414,
+    "exportable_births": 188,
+    "scoped_dispositions": 155,
+    "legacy_recorders": 0,
+    "SupportStore_instances": 0,
+    "proof_nodes": 0,
+    "proof_parent_edges": 0,
+    "duplicate_condition_nodes": 0,
+    "legacy_quality_enabled": 0,
+    "B_groups": 75,
+    "T_groups": 696,
+    "B_observations": 105238,
+    "T_observations": 33557,
+    "clause_ORs": 27621,
+    "theory_ORs": 3179210,
+    "peak_root_tags": 5938,
+    "peak_raw_clause_refs": 1156938,
+    "peak_active_derived_clause_slots": 11869,
+    "peak_active_clause_plus_root_tags": 17807,
+    "peak_theory_value_instances": 207896,
+    "peak_native_graph_edges": 98630,
+    "peak_persistent_theory_slots": 207772,
+    "sizeof_theory_tag": 136,
+    "sizeof_native_theory_support": 144,
+    "sizeof_clause_tag": 264,
+    "sizeof_root_entry": 272,
+    "GC": 0,
+    "recycled_clause_slots": 46,
+    "root_conflicts": 0,
+    "min_success": 2503,
+    "min_failure": 13462,
+    "theory_reason_clauses": 11457,
+    "theory_conflicts": 18,
+    "other_boundaries": 0,
+    "opaque_boundaries": 0
+  },
+  "projection_confirmed": true
+}

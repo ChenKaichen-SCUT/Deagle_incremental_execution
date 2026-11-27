@@ -1,0 +1,146 @@
+[
+  {
+    "case": "fib_updates_8",
+    "registered_groups": [
+      33,
+      166
+    ],
+    "expanded_groups": [
+      33,
+      215
+    ],
+    "overflow_registered": [
+      0,
+      0
+    ],
+    "overflow_expanded": [
+      0,
+      0
+    ],
+    "expanded_extra_declarations": 391,
+    "results": {
+      "U_audit": {
+        "exact_M": 282,
+        "group_M": 264,
+        "dense_M": 264,
+        "exact_B": 31,
+        "group_B": 31,
+        "dense_B": 31
+      },
+      "U_all": {
+        "exact_M": 282,
+        "group_M": 264,
+        "dense_M": 264,
+        "exact_B": 31,
+        "group_B": 31,
+        "dense_B": 31
+      },
+      "expanded": {
+        "exact_M": 282,
+        "group_M": 264,
+        "dense_M": 264,
+        "exact_B": 31,
+        "group_B": 31,
+        "dense_B": 31
+      }
+    }
+  },
+  {
+    "case": "circular-buffer",
+    "registered_groups": [
+      75,
+      696
+    ],
+    "expanded_groups": [
+      75,
+      924
+    ],
+    "overflow_registered": [
+      0,
+      0
+    ],
+    "overflow_expanded": [
+      0,
+      0
+    ],
+    "expanded_extra_declarations": 4944,
+    "results": {
+      "U_audit": {
+        "exact_B": 17,
+        "exact_M": 18,
+        "group_B": 4,
+        "dense_B": 4
+      },
+      "U_all": {
+        "exact_B": 17,
+        "exact_M": 18
+      },
+      "expanded": {
+        "exact_B": 17,
+        "exact_M": 18
+      }
+    }
+  },
+  {
+    "case": "airline_reservations_6",
+    "registered_groups": [
+      110,
+      957
+    ],
+    "expanded_groups": [
+      110,
+      1136
+    ],
+    "overflow_registered": [
+      0,
+      0
+    ],
+    "overflow_expanded": [
+      0,
+      113
+    ],
+    "expanded_extra_declarations": 586,
+    "results": {
+      "U_audit": {},
+      "U_all": {},
+      "expanded": {}
+    }
+  },
+  {
+    "case": "fib-snapshot-11",
+    "registered_groups": [
+      50,
+      307
+    ],
+    "expanded_groups": [
+      50,
+      398
+    ],
+    "overflow_registered": [
+      0,
+      0
+    ],
+    "overflow_expanded": [
+      0,
+      0
+    ],
+    "expanded_extra_declarations": 14483,
+    "results": {
+      "U_audit": {
+        "exact_B": 40,
+        "group_B": 31,
+        "dense_B": 31
+      },
+      "U_all": {
+        "exact_B": 40,
+        "group_B": 16,
+        "dense_B": 16
+      },
+      "expanded": {
+        "exact_B": 40,
+        "group_B": 16,
+        "dense_B": 16
+      }
+    }
+  }
+]

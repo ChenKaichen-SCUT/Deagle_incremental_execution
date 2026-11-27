@@ -1,0 +1,154 @@
+{
+  "case": "fib_updates_8",
+  "counts": {
+    "registered_B": 47493,
+    "observed_B": 12858,
+    "dirty_leaves_B": 4852,
+    "permanent_support_B": 7341,
+    "registered_T": 851,
+    "permanent_support_T": 610,
+    "observed_T": 851,
+    "dirty_leaves_T": 72
+  },
+  "registered_groups": [
+    33,
+    166
+  ],
+  "overflow_groups": [
+    0,
+    0
+  ],
+  "dirty_slots": [
+    25,
+    64
+  ],
+  "exact": {
+    "M": 282,
+    "B": 31
+  },
+  "eligible": {
+    "M": 264,
+    "B": 31
+  },
+  "previously_hit": {
+    "M": 214,
+    "B": 31
+  },
+  "birth_check": {
+    "all_births": 1442,
+    "equal_tags": 1442,
+    "superset_tags": 0
+  },
+  "candidate_subset_violations": 0,
+  "permanent_union_missing": 0,
+  "same_run_reference_sha256": "24a033e8317a766274d3472f4f643f124bfa45cb2127728efe85532c7fe41fea",
+  "model_canonical_sha256": "1c86fe3b2c07d226cf79250199626b8ef416781ef8b0e0e300c70ab40bc23418",
+  "boundary_stream_sha256": "f64d954c8dbe45ea34de93f874f1fcf76614b64f0c6511ce870800e1f926d29e",
+  "P0_properties_and_witnesses": {
+    "properties": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "warnings": [],
+      "native_warning_lines": []
+    },
+    "traces": {
+      "main.assertion.1": {
+        "total_steps": 187,
+        "different_positions": 6,
+        "spans": [
+          {
+            "first_zero_based": 36,
+            "last_zero_based": 41,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          }
+        ],
+        "visible_steps_equal": true
+      }
+    },
+    "cold_trajectory_checked": false,
+    "verified_query_renaming": false
+  },
+  "stats": {
+    "births": 1442,
+    "original_occurrences": 50065,
+    "registered_theory": 851,
+    "exportable_births": 1307,
+    "scoped_dispositions": 135,
+    "legacy_recorders": 0,
+    "SupportStore_instances": 0,
+    "proof_nodes": 0,
+    "proof_parent_edges": 0,
+    "duplicate_condition_nodes": 0,
+    "legacy_quality_enabled": 0,
+    "B_groups": 33,
+    "T_groups": 166,
+    "B_observations": 392334,
+    "T_observations": 16952,
+    "clause_ORs": 160695,
+    "theory_ORs": 70684,
+    "peak_root_tags": 2675,
+    "peak_raw_clause_refs": 48225,
+    "peak_active_derived_clause_slots": 5152,
+    "peak_active_clause_plus_root_tags": 7827,
+    "peak_theory_value_instances": 2736,
+    "peak_native_graph_edges": 1042,
+    "peak_persistent_theory_slots": 2657,
+    "sizeof_theory_tag": 136,
+    "sizeof_native_theory_support": 144,
+    "sizeof_clause_tag": 264,
+    "sizeof_root_entry": 272,
+    "GC": 0,
+    "recycled_clause_slots": 93,
+    "root_conflicts": 0,
+    "min_success": 13557,
+    "min_failure": 39514,
+    "theory_reason_clauses": 3708,
+    "theory_conflicts": 25,
+    "other_boundaries": 0,
+    "opaque_boundaries": 0
+  },
+  "projection_confirmed": true
+}

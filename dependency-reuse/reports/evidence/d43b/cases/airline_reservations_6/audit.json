@@ -1,0 +1,165 @@
+{
+  "case": "airline_reservations_6",
+  "counts": {
+    "registered_B": 866692,
+    "observed_B": 33230,
+    "dirty_leaves_B": 26053,
+    "permanent_support_B": 17411,
+    "registered_T": 2248,
+    "permanent_support_T": 1542,
+    "observed_T": 2248,
+    "dirty_leaves_T": 1447
+  },
+  "registered_groups": [
+    110,
+    957
+  ],
+  "overflow_groups": [
+    0,
+    0
+  ],
+  "dirty_slots": [
+    98,
+    732
+  ],
+  "exact": {},
+  "eligible": {},
+  "previously_hit": {},
+  "birth_check": {
+    "all_births": 42244,
+    "equal_tags": 42244,
+    "superset_tags": 0
+  },
+  "candidate_subset_violations": 0,
+  "permanent_union_missing": 0,
+  "same_run_reference_sha256": "1b8300e228b3b63c15159611f758601c7c01a198cc3c6ebfa4fdff0b8894281c",
+  "model_canonical_sha256": "e390ba66ae7a38c003ff1e67ddcb0a5eb51998474583bfa5720d503b464c598d",
+  "boundary_stream_sha256": "564bc9b5a1ed6a374858996ea2bfc9d3b34537230fb479b7e8a95b3810083b72",
+  "P0_properties_and_witnesses": {
+    "properties": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "warnings": [],
+      "native_warning_lines": []
+    },
+    "traces": {
+      "main.assertion.1": {
+        "total_steps": 516,
+        "different_positions": 30,
+        "spans": [
+          {
+            "first_zero_based": 38,
+            "last_zero_based": 43,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          },
+          {
+            "first_zero_based": 92,
+            "last_zero_based": 97,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          },
+          {
+            "first_zero_based": 119,
+            "last_zero_based": 124,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          },
+          {
+            "first_zero_based": 146,
+            "last_zero_based": 151,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          },
+          {
+            "first_zero_based": 173,
+            "last_zero_based": 178,
+            "same_step_multiset": true,
+            "hidden_assignments": true
+          }
+        ],
+        "visible_steps_equal": true
+      }
+    },
+    "cold_trajectory_checked": false,
+    "verified_query_renaming": false
+  },
+  "stats": {
+    "births": 42244,
+    "original_occurrences": 910797,
+    "registered_theory": 2248,
+    "exportable_births": 41800,
+    "scoped_dispositions": 444,
+    "legacy_recorders": 0,
+    "SupportStore_instances": 0,
+    "proof_nodes": 0,
+    "proof_parent_edges": 0,
+    "duplicate_condition_nodes": 0,
+    "legacy_quality_enabled": 0,
+    "B_groups": 110,
+    "T_groups": 957,
+    "B_observations": 2907582,
+    "T_observations": 1873132,
+    "clause_ORs": 2685076,
+    "theory_ORs": 15086520,
+    "peak_root_tags": 16198,
+    "peak_raw_clause_refs": 878720,
+    "peak_active_derived_clause_slots": 350434,
+    "peak_active_clause_plus_root_tags": 366632,
+    "peak_theory_value_instances": 10878,
+    "peak_native_graph_edges": 4536,
+    "peak_persistent_theory_slots": 10553,
+    "sizeof_theory_tag": 136,
+    "sizeof_native_theory_support": 144,
+    "sizeof_clause_tag": 264,
+    "sizeof_root_entry": 272,
+    "GC": 0,
+    "recycled_clause_slots": 3101,
+    "root_conflicts": 0,
+    "min_success": 1276128,
+    "min_failure": 353080,
+    "theory_reason_clauses": 307192,
+    "theory_conflicts": 2782,
+    "other_boundaries": 0,
+    "opaque_boundaries": 0
+  },
+  "projection_confirmed": true
+}

@@ -1,0 +1,3 @@
+1444 files, 9783501550 original bytes verified
+107 files, 27371618 original bytes verified
+Separate-root Fibonacci replay reproduced audit.json, birth-check.tsv.gz and eligible.tsv byte for byte.
