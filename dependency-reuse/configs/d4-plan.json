@@ -1,0 +1,27 @@
+{
+  "stage": "D4",
+  "cpu": 0,
+  "repeats": 1,
+  "order": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6"
+  ],
+  "modes": [
+    "stock",
+    "off",
+    "record-cold",
+    "reuse"
+  ],
+  "versions": [
+    "P0",
+    "P1"
+  ],
+  "recorded_arms": "each arm independently records and seals its own P0; read first installed P1 query only",
+  "selection": "all permanent native CDCL births in ascending ProofId whose original proof survives and whose full conclusion has a signed translation; no length or count cap",
+  "normalization": "sort signed literals; remove repeated literals; reject tautologies, batch duplicates, root-satisfied clauses and exact resident residual duplicates; root units enqueue and propagate, ordinary clauses enter the reducible learnt database",
+  "metrics": "unfiltered wall time for complete P0 and P1 processes, including source hashing, manifest capture, signed mapping/delta, receipt binding, reverse traversal, import, receipts and verification; native search timer surrounds restart loop",
+  "stock_search_observer": "separate timer-only upstream process on each P1 with native counts/properties checked; primary stock wall/counters always from unmodified locked ELF",
+  "cache": "new process, new work directory for each side and arm; OS caches unmanaged",
+  "no_d5": true
+}

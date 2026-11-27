@@ -109,11 +109,12 @@ void compare(const Model &old, const Model &now, const std::string &out)
 
 int main(int argc, char **argv)
 {
-  const bool refine=argc==7 && std::string(argv[6])=="--d3-mapping";
+  const bool live=argc==7 && std::string(argv[6])=="--d4-boundary";
+  const bool refine=live || (argc==7 && std::string(argv[6])=="--d3-mapping");
   if(argc!=6 && !refine) return 2;
   try
   {
-    d1::Model old(argv[1],argv[3]), now(argv[2],argv[4]);
+    d1::Model old(argv[1],argv[3],live), now(argv[2],argv[4]);
     d1::match(old,now);
     if(refine) d1::refine_duplicate_gates(old,now);
     d1::compare(old,now,argv[5]);

@@ -7,6 +7,7 @@ std::FILE *stream = nullptr;
 char scope = 'U';
 bool record_layouts = false;
 std::string proof_path;
+std::string d4_library, d4_out, d4_tools, d4_mode, search_log;
 bool theory_proofs = false;
 bool (*finish_proof)(int) = nullptr;
 

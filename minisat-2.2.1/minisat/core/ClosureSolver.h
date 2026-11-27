@@ -10,6 +10,7 @@
 
 #include "ClosureTypes.h"
 #include "Closure.h"
+#include "ClauseImports.h"
 
 
 
@@ -47,6 +48,11 @@ protected:
     void analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel);
 public:
     ClosureSolver();
+    bool graph_ready=false;
+    bool import_boundary_used=false;
+    std::string search_log;
+    void importAtRoot(ClauseImports &batch,bool reuse);
+    bool residentDuplicate(const std::vector<int> &residual);
     const closure& declaration_graph() const { return graph; }
     void (*observe_co)(int, int, Lit, Lit, Lit, Lit) = nullptr;
     void init();

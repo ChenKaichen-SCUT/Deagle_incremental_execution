@@ -13,6 +13,7 @@ extern std::FILE *stream;
 extern bool record_layouts;
 extern char scope;
 extern std::string proof_path;
+extern std::string d4_library, d4_out, d4_tools, d4_mode, search_log;
 extern bool theory_proofs;
 extern bool (*finish_proof)(int);
 void open(const std::string &filename);

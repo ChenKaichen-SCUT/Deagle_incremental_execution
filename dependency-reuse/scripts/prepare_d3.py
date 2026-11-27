@@ -6,14 +6,14 @@ import json
 from pathlib import Path
 from urllib.parse import unquote
 
-from prepare_d2 import prepare
-from run_stock import BASE
+
 
 
 def facts(manifest, delta, output):
     nodes, names, directions, members = {}, {}, set(), defaultdict(set)
     receipt=[]
-    with gzip.open(manifest, "rt") as stream:
+    opener = gzip.open if manifest.suffix == ".gz" else open
+    with opener(manifest, "rt") as stream:
         for line in stream:
             tag = line.partition("\t")[0]
             if tag in {"NODE","IN","OUT","MEMBER","EDGE","GUARD"}:
@@ -92,6 +92,8 @@ def facts(manifest, delta, output):
 
 
 if __name__ == "__main__":
+    from prepare_d2 import prepare
+    from run_stock import BASE
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("case")
     p.add_argument("output", type=Path)

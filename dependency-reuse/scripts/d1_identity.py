@@ -69,7 +69,7 @@ def apply_layouts(rows, keys):
 
 
 class Model:
-    def __init__(self, path, keys, layout_bits=False):
+    def __init__(self, path, keys, layout_bits=False, *, live_boundary=False, recorded_queries=False):
         self.path, self.keys = path, keys
         rows = self.rows = defaultdict(list)
         ended = False
@@ -83,11 +83,17 @@ class Model:
                     continue
                 tag, *fields = line.rstrip("\n").split("\t")
                 rows[tag].append(tuple(unquote(x) if "%" in x else x for x in fields))
-                ended = tag == "END"
-        if not ended or rows["END"] not in ([("0",)], [("10",)]) or len(rows["N"]) != 1 or len(rows["K"]) != 1:
-            raise ValueError("requires one completed native Closure query and one configuration")
+                ended = tag in ("END", "READY")
+        if live_boundary:
+            complete = rows["READY"] == [("D4-P1-v1",)] and not rows["END"]
+        else:
+            complete = rows["END"] in ([("0",)], [("10",)]) and not rows["READY"]
+        sizes = [int(r[0]) for r in rows["N"]]
+        if (not ended or not complete or not sizes or sizes != sorted(sizes) or len(rows["K"]) != 1
+                or len(sizes) != 1 and (live_boundary or not recorded_queries)):
+            raise ValueError("requires a complete manifest at the requested native query boundary")
         certified_prefix=apply_layouts(rows,keys) if layout_bits else {}
-        self.nvars = int(rows["N"][0][0])
+        self.nvars = sizes[-1]
         self.sites = {sid: keys.intern("site", signature) if status == "unique" else 0
                       for sid, signature, status, *_ in rows["S"]}
         self.context = {"0": 0}

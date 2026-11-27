@@ -32,6 +32,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include <string>
 
 namespace Minisat {
+class ClauseImports;
 
 //=================================================================================================
 // Solver -- the main class:
@@ -45,6 +46,7 @@ public:
     virtual ~Solver();
     // Optional observer sees the input before sorting and root simplification.
     friend class ProofStore;
+    ClauseImports *imports = nullptr; // non-owning, only while imported watchers are tracked
     ProofStore *proof = nullptr; // optional non-owning recorder for native Closure
     void (*observe_input)(const vec<Lit>&) = nullptr;
 

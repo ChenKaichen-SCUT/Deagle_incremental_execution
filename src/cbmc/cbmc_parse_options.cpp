@@ -443,6 +443,25 @@ int cbmc_parse_optionst::doit()
 
   optionst options;
   get_command_line_options(options);
+  const bool loading=cmdline.isset("d4-load");
+  if(loading || cmdline.isset("d4-mode") || cmdline.isset("d4-out") || cmdline.isset("d4-tools"))
+  {
+    if(!loading || !cmdline.isset("d4-out") || !cmdline.isset("d4-tools") ||
+       (cmdline.get_value("d4-mode")!="reuse" && cmdline.get_value("d4-mode")!="record-cold") ||
+       cmdline.isset("d3-proof") || cmdline.isset("d2-proof") || cmdline.isset("d1-manifest"))
+      throw std::runtime_error("D4 load requires its mode, fresh output directory and matching tools");
+    dependency_manifest::d4_library=cmdline.get_value("d4-load");
+    dependency_manifest::d4_out=cmdline.get_value("d4-out");
+    dependency_manifest::d4_tools=cmdline.get_value("d4-tools");
+    dependency_manifest::d4_mode=cmdline.get_value("d4-mode");
+    dependency_manifest::record_layouts=true;
+  }
+  if(cmdline.isset("d4-search-log"))
+  {
+    dependency_manifest::search_log=cmdline.get_value("d4-search-log");
+    auto *f=std::fopen(dependency_manifest::search_log.c_str(),"wbx");
+    if(!f || std::fclose(f)!=0) throw std::runtime_error("D4 requires a fresh search timing file");
+  }
   if(cmdline.isset("d3-layouts"))
   {
     if(!cmdline.isset("d1-manifest")) throw std::runtime_error("--d3-layouts requires --d1-manifest");
@@ -450,7 +469,7 @@ int cbmc_parse_optionst::doit()
   }
   if(cmdline.isset("d2-proof") && cmdline.isset("d3-proof"))
     throw std::runtime_error("select a single proof archive version");
-  if(cmdline.isset("d1-manifest") || cmdline.isset("d2-proof") || cmdline.isset("d3-proof"))
+  if(loading || cmdline.isset("d1-manifest") || cmdline.isset("d2-proof") || cmdline.isset("d3-proof"))
   {
     if(!options.get_bool_option("deagle-closure") || options.get_bool_option("refined-pointer-analysis") ||
        (!options.get_option("mm").empty() && options.get_option("mm") != "sc"))
@@ -463,9 +482,9 @@ int cbmc_parse_optionst::doit()
       dependency_manifest::proof_path=cmdline.get_value("d3-proof");
     }
   }
-  if(cmdline.isset("d1-manifest"))
+  if(loading || cmdline.isset("d1-manifest"))
   {
-    dependency_manifest::open(cmdline.get_value("d1-manifest"));
+    dependency_manifest::open(loading ? dependency_manifest::d4_out+"/boundary.tsv" : cmdline.get_value("d1-manifest"));
     std::ostringstream configured;
     options.output(configured);
     dependency_manifest::row("K", {"Closure-SC-d8c79eab/D1-v1", std::to_string(config.ansi_c.pointer_width),
@@ -1027,6 +1046,9 @@ void cbmc_parse_optionst::help()
     "\n"
     "Backend options:\n"
     HELP_CONFIG_BACKEND
+    " --d4-load LIB --d4-mode reuse|record-cold --d4-out DIR --d4-tools DIR\n"
+    "                              bind a recorded P0 to this SC solver at its first root boundary\n"
+    " --d4-search-log FILE         record time inside the native restart/search loop\n"
     " --d3-proof FILE              record native Boolean and SC Closure proofs in a new file\n"
     " --d2-proof FILE              record the native Boolean proof DAG in a new file\n"
     " --d3-layouts                 include native aggregate layout evidence in the identity manifest\n"

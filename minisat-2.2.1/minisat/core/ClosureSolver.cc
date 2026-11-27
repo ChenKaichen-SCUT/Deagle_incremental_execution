@@ -40,6 +40,107 @@ void ClosureSolver::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt
     oc_result_order = &_oc_result_order;
 
     init();
+    graph_ready=true;
+}
+
+// At a root fixpoint an unsatisfied resident clause with two or more live
+// literals watches a live literal. Compare its entire residual signed content.
+bool ClosureSolver::residentDuplicate(const std::vector<int> &key)
+{
+    std::set<CRef> visited;
+    std::vector<int> residual;
+    for(int raw:key)
+    {
+        auto &ws=watches.lookup(~toLit(raw));
+        for(int j=0;j<ws.size();++j)
+        {
+            const CRef cr=ws[j].cref;
+            const Clause &c=ca[cr];
+            if(size_t(c.size())<key.size() || !visited.insert(cr).second) continue;
+            residual.clear();
+            bool satisfied=false;
+            for(int k=0;k<c.size();++k)
+            {
+                if(value(c[k])==l_True) {satisfied=true; break;}
+                if(value(c[k])==l_Undef) residual.push_back(c[k].x);
+            }
+            if(!satisfied && residual.size()==key.size())
+            {
+                std::sort(residual.begin(),residual.end());
+                if(residual==key) return true;
+            }
+        }
+    }
+    return false;
+}
+
+void ClosureSolver::importAtRoot(ClauseImports &batch,bool reuse)
+{
+    if(!graph_ready || solves || decisionLevel()!=0 || import_boundary_used || proof)
+        throw std::logic_error("D4 requires a fresh root with its P1 graph installed");
+    const auto start=std::chrono::steady_clock::now();
+    uint32_t last=0;
+    for(const auto &r:batch.rows)
+    {
+        if(r.id<=last || (r.family!='B' && r.family!='M' && r.family!='T'))
+            throw std::invalid_argument("invalid import identity or scope");
+        last=r.id;
+        for(int raw:r.translated)
+            if(raw<2 || var(toLit(raw))>=nVars()) throw std::invalid_argument("import outside P1 variable space");
+    }
+    import_boundary_used=true;
+    std::set<std::vector<int>> seen;
+    if(reuse && !batch.rows.empty() && ok && qhead<trail.size())
+        ok=propagate()==CRef_Undef;
+    for(size_t i=0;i<batch.rows.size();++i)
+    {
+        auto &r=batch.rows[i];
+        if(!reuse) { r.disposition="check_only"; continue; }
+        if(!ok) { r.disposition="already_inconsistent"; continue; }
+        auto key=r.translated;
+        std::sort(key.begin(),key.end());
+        key.erase(std::unique(key.begin(),key.end()),key.end());
+        bool tautology=false;
+        for(size_t j=1;j<key.size();++j) tautology|=(key[j-1]^1)==key[j];
+        if(tautology) { r.disposition="tautology"; continue; }
+        if(!seen.insert(key).second) { r.disposition="duplicate_batch"; continue; }
+        std::vector<int> residual;
+        for(int raw:key)
+        {
+            auto v=value(toLit(raw));
+            if(v==l_True) { r.root_witness=raw; break; }
+            if(v==l_False) r.removed_false.push_back(raw);
+            else residual.push_back(raw);
+        }
+        if(r.root_witness!=-1) { r.disposition="root_satisfied"; continue; }
+        if(residual.size()>1 && residentDuplicate(residual)) { r.disposition="duplicate_resident"; continue; }
+        if(residual.empty())
+        {
+            r.disposition="root_conflict";
+            ok=false;
+            continue;
+        }
+        r.installed=residual;
+        if(residual.size()==1)
+        {
+            r.disposition="root_unit";
+            uncheckedEnqueue(toLit(residual.front()));
+            ok=propagate()==CRef_Undef;
+            continue;
+        }
+        vec<Lit> ps;
+        for(int raw:residual) ps.push(toLit(raw));
+        CRef cr=ca.alloc(ps,true);
+        learnts.push(cr);
+        attachClause(cr);
+        // Same initial activity and normal deletion policy as a fresh CDCL birth.
+        claBumpActivity(ca[cr]);
+        r.disposition="attached";
+        batch.bind(i,cr);
+        imports=&batch;
+    }
+    batch.import_ns=std::chrono::duration_cast<std::chrono::nanoseconds>(
+        std::chrono::steady_clock::now()-start).count();
 }
 
 void ClosureSolver::record_early_conflict()
@@ -381,7 +482,8 @@ lbool ClosureSolver::solve_()
 
     // Search:
     auto proof_start=std::chrono::steady_clock::time_point{};
-    if(proof) { proof_start=std::chrono::steady_clock::now(); ++proof->stats[Queries]; }
+    if(proof || !search_log.empty()) proof_start=std::chrono::steady_clock::now();
+    if(proof) ++proof->stats[Queries];
     int curr_restarts = 0;
     while (status == l_Undef){
         double rest_base = luby_restart ? luby(restart_inc, curr_restarts) : pow(restart_inc, curr_restarts);
@@ -394,9 +496,18 @@ lbool ClosureSolver::solve_()
         printf("===============================================================================\n");
 
 
-    if(proof)
-        proof->stats[SearchNS]+=std::chrono::duration_cast<std::chrono::nanoseconds>(
-            std::chrono::steady_clock::now()-proof_start).count();
+    if(proof || !search_log.empty())
+    {
+        const auto ns=std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-proof_start).count();
+        if(proof) proof->stats[SearchNS]+=ns;
+        if(!search_log.empty())
+        {
+            std::ofstream out(search_log,std::ios::app);
+            out.exceptions(std::ios::badbit|std::ios::failbit);
+            out<<ns<<'\t'<<curr_restarts<<'\n';
+            out.close();
+        }
+    }
     if (status == l_True){
         // Extend & copy model:
         model.growTo(nVars());
@@ -490,12 +601,15 @@ CRef ClosureSolver::propagate()
             *j++ = w;
             if (value(first) == l_False){
                 confl = cr;
+                if(imports) imports->hit(cr,WatchConflict,decisionLevel(),first.x,conflicts,c);
                 qhead = trail.size();
                 // Copy the remaining watches:
                 while (i < end)
                     *j++ = *i++;
-            }else
+            }else{
+                if(imports) imports->hit(cr,WatchUnit,decisionLevel(),first.x,conflicts,c);
                 uncheckedEnqueue(first, cr);
+            }
 
         NextClause:;
         }
@@ -623,6 +737,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
         assert(confl != CRef_Undef); // (otherwise should be UIP)
         Clause& c = ca[confl];
         if(proof) proof->analysisParent(*this,confl,p);
+        if(imports) imports->hit(confl,AnalyzeParent,decisionLevel(),p.x,conflicts,c);
 
         if (c.learnt())
             claBumpActivity(c);
@@ -677,6 +792,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
                         out_learnt[j++] = out_learnt[i];
                         break; }
                 if(proof && k==c.size()) proof->basicMin(x);
+                if(imports && k==c.size()) imports->hit(reason(x),MinimizeParent,decisionLevel(),c[0].x,conflicts,c);
             }
         }
     }else

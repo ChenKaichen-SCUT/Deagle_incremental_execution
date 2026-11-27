@@ -79,6 +79,7 @@ protected:
   std::unique_ptr<T> solver;
   uint32_t time_limit_seconds;
 
+  virtual void at_root_boundary() {}
   void add_variables();
   bvt assumptions;
 };
@@ -110,6 +111,12 @@ class deagle_closure_solvert:
 {
 public:
   explicit deagle_closure_solvert(message_handlert &);
+protected:
+  void at_root_boundary() override;
+  resultt do_prop_solve() override;
+private:
+  std::unique_ptr<Minisat::ClauseImports> imported;
+public:
   const std::string solver_text() override;
   void save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order);
 };

@@ -22,6 +22,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 #include "../../minisat/mtl/Sort.h"
 #include "../../minisat/core/Solver.h"
+#include "ClauseImports.h"
 
 using namespace Minisat;
 
@@ -210,6 +211,7 @@ void Solver::removeClause(CRef cr) {
     // Don't leave pointers to free'd memory!
     if (locked(c)) vardata[var(c[0])].reason = CRef_Undef;
     if(proof) proof->forget(cr);
+    if(imports) imports->forget(cr);
     c.mark(1); 
     ca.free(cr);
 }
@@ -389,11 +391,13 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
 {
     if(proof) proof->beginTrial();
+    if(imports) imports->beginTrial();
     analyze_stack.clear(); analyze_stack.push(p);
     int top = analyze_toclear.size();
     while (analyze_stack.size() > 0){
         assert(reason(var(analyze_stack.last())) != CRef_Undef);
         if(proof) proof->visitTrial(var(analyze_stack.last()));
+        if(imports) imports->visitTrial(reason(var(analyze_stack.last())));
         Clause& c = ca[reason(var(analyze_stack.last()))]; analyze_stack.pop();
 
         for (int i = 1; i < c.size(); i++){
@@ -415,6 +419,7 @@ bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
     }
 
     if(proof) proof->endTrial(true);
+    if(imports) imports->commitTrial(ca,decisionLevel(),conflicts);
     return true;
 }
 
@@ -527,12 +532,15 @@ CRef Solver::propagate()
             *j++ = w;
             if (value(first) == l_False){
                 confl = cr;
+                if(imports) imports->hit(cr,WatchConflict,decisionLevel(),first.x,conflicts,c);
                 qhead = trail.size();
                 // Copy the remaining watches:
                 while (i < end)
                     *j++ = *i++;
-            }else
+            }else{
+                if(imports) imports->hit(cr,WatchUnit,decisionLevel(),first.x,conflicts,c);
                 uncheckedEnqueue(first, cr);
+            }
 
         NextClause:;
         }
@@ -965,6 +973,7 @@ void Solver::garbageCollect()
 
     relocAll(to);
     if(proof) proof->relocated(ca,to.size());
+    if(imports) imports->relocated(ca);
     if (verbosity >= 2)
         printf("|  Garbage collection:   %12d bytes => %12d bytes             |\n", 
                ca.size()*ClauseAllocator::Unit_Size, to.size()*ClauseAllocator::Unit_Size);

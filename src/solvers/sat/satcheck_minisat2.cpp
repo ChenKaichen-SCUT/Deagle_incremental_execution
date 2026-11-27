@@ -17,6 +17,8 @@ Author: Daniel Kroening, kroening@kroening.com
 
 #include <util/invariant.h>
 #include <util/dependency_manifest.h>
+#include <util/run.h>
+#include <sstream>
 #include <util/make_unique.h>
 #include <util/threeval.h>
 
@@ -117,6 +119,7 @@ const std::string satcheck_minisat_simplifiert::solver_text()
 deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
   : satcheck_minisat2_baset<Minisat::ClosureSolver>(handler)
 {
+  solver->search_log=dependency_manifest::search_log;
   if(!dependency_manifest::proof_path.empty())
   {
     static std::unique_ptr<Minisat::ProofStore> recording;
@@ -137,6 +140,42 @@ deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
   solver->observe_co = [](int a, int b, Minisat::Lit x, Minisat::Lit y, Minisat::Lit g, Minisat::Lit h) {
     std::fprintf(dependency_manifest::stream, "CO\t%d\t%d\t%d\t%d\t%d\t%d\n", a,b,x.x,y.x,g.x,h.x);
   };
+}
+
+void deagle_closure_solvert::at_root_boundary()
+{
+  namespace dm=dependency_manifest;
+  if(imported) return; // Later property queries keep the same permanent learnt DB.
+  if(!dm::stream || !solver->graph_ready || solver->nVars()!=int(no_variables()))
+    throw std::runtime_error("D4 requires the current solver's installed graph, variables and input stream");
+  dm::row("READY",{"D4-P1-v1"});
+  const bool write_ok=std::ferror(dm::stream)==0;
+  const bool close_ok=std::fclose(dm::stream)==0;
+  dm::stream=nullptr;
+  if(!write_ok || !close_ok) throw std::runtime_error("D4 manifest write failed");
+  solver->observe_input=nullptr;
+  solver->observe_co=nullptr;
+  const auto &dir=dm::d4_out;
+  const std::string worker=dm::d4_tools+"/d4_prepare.py";
+  if(run("python3",{"python3",worker,dm::d4_library,dir,dm::d4_tools},
+         "",dir+"/prepare.stdout",dir+"/prepare.stderr")!=0)
+    throw std::runtime_error("D4 live model preparation failed; see "+dir+"/prepare.stderr");
+
+  imported.reset(new Minisat::ClauseImports);
+  imported->read(dir+"/ready.tsv",solver->nVars());
+  const int roots=solver->nAssigns();
+  solver->importAtRoot(*imported,dm::d4_mode=="reuse");
+  std::ofstream log(dir+"/import-time.tsv");
+  log.exceptions(std::ios::failbit|std::ios::badbit);
+  log<<"import_ns\t"<<imported->import_ns<<"\nroot_before\t"<<roots<<"\nroot_after\t"<<solver->nAssigns()<<"\n";
+  log.close();
+}
+
+propt::resultt deagle_closure_solvert::do_prop_solve()
+{
+  auto result=satcheck_minisat2_baset<Minisat::ClosureSolver>::do_prop_solve();
+  if(imported) imported->write(dependency_manifest::d4_out);
+  return result;
 }
 
 const std::string deagle_closure_solvert::solver_text()
@@ -253,6 +292,7 @@ propt::resultt satcheck_minisat2_baset<T>::do_prop_solve()
   try
   {
     add_variables();
+    if(!dependency_manifest::d4_library.empty()) at_root_boundary();
 
     if(!solver->okay())
     {

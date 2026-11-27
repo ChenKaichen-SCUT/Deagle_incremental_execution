@@ -44,7 +44,7 @@ struct Model
   Key assumptions;
   unsigned queries = 0;
 
-  Model(const std::string &manifest, const std::string &anchors) : path(manifest)
+  Model(const std::string &manifest, const std::string &anchors, bool recorded_queries=false) : path(manifest)
   {
     static const std::map<std::string, int> ops =
       {{"and",1},{"or",2},{"xor",3},{"nand",4},{"nor",5},{"ite",6}};
@@ -72,7 +72,10 @@ struct Model
       else if(line.compare(0, 2, "N\t") == 0)
       {
         std::istringstream fields(line.substr(2));
-        if(count || !(fields >> count) || !count) throw std::runtime_error("invalid solve boundary");
+        size_t next_count=0;
+        if((count && !recorded_queries) || !(fields >> next_count) || !next_count || next_count<count)
+          throw std::runtime_error("invalid solve boundary");
+        count=next_count;
         int lit;
         while(fields >> lit) assumptions.push_back(lit);
       }
