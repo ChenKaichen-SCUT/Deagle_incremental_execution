@@ -1,0 +1,94 @@
+{
+  "stage": "D4.3-C",
+  "gate": "CORRECTNESS_GATE_PASSED",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/compact-dependency-d43",
+  "review_base": "7812c5febf9f3f0c7a792b5b979ca78c0a694637",
+  "implementation": "51fe7dc0fdb4b79376850cc63a1194b8a30ddbb9",
+  "raw_capture": "8bc102fe55e7f05c761d4b68aa0e8b6ce939b397",
+  "evidence": {
+    "commit": "3ee9ba25322230c6ac91c788d44ae58df276e8aa",
+    "index": "evidence/d43c/files.json",
+    "index_sha256": "e59e5933bba8252a76439cf933ff804a737a462dcbae7d60c6d3c3f81e803965",
+    "raw_index_sha256": "0a8cc11d396d259c56d41602dfbf809eedfaa5ed303fac954764d0517711dbeb",
+    "verified_original_files": 3276,
+    "verified_original_bytes": 1947503354
+  },
+  "published_report": {
+    "verified_remote_sha": "fe1aea12e1b37542fa56f12b2772c17536cf2a9b",
+    "verified_ref": "refs/heads/codex/compact-dependency-d43",
+    "url": "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution/blob/fe1aea12e1b37542fa56f12b2772c17536cf2a9b/dependency-reuse/reports/D4.3-C.md"
+  },
+  "github_verified_blobs": {
+    "D4.3-C.md": "a367d5973e7b7e1bfb7442acb37edc669c828184",
+    "gate.json": "9b71a058defc2ad8d3b65d451504e7a4c17be1a5",
+    "archive.json": "382be7153db21b6576924ff7906a959c80da0dc9"
+  },
+  "results": {
+    "theory_boundaries": 610755,
+    "propagation_reasons": 607814,
+    "conflict_reasons": 2941,
+    "propagation_units_included": 659,
+    "exact_raw_and_SAT_tags": 610755,
+    "real_unknown_boundaries": 0,
+    "opaque_native_positive_controls": [
+      "dynamic CO",
+      "missing conflict source",
+      "indirect UNKNOWN learning units"
+    ],
+    "anchored_B_births": 152817,
+    "permanent_births": 97901,
+    "query_births": 54916,
+    "actual_usedleaf_missing_exportable_leaves": 0,
+    "real_mapping_exact_eligible": 388,
+    "real_mapping_compact_eligible": 311,
+    "real_mapping_compact_mixed": 264,
+    "real_mapping_false_admissions": 0,
+    "real_mapping_case_eligible": [
+      295,
+      0,
+      0,
+      16
+    ],
+    "controlled_families": [
+      "identity",
+      "unsigned",
+      "signed"
+    ],
+    "logical_per_family": 97901,
+    "selected_per_family_under_per_case_512": 1724,
+    "repair_logical_per_family": 43295,
+    "repair_selected_per_family": 1212,
+    "scoped_rejections_per_family": 54916,
+    "independently_rejected_fault_injections": 41,
+    "independent_native_fixture_contexts": 20,
+    "production_added_proof_nodes": 0,
+    "production_parent_edges": 0,
+    "production_duplicate_theory_conditions_DAG_nodes": 0,
+    "production_SupportStore_instances": 0,
+    "per_candidate_SAT_RUP_Closure_reproofs": 0,
+    "properties_unwinds_witnesses_and_deterministic_search_identical": true,
+    "snapshot11_classification": "INCOMPLETE_UNWINDING"
+  },
+  "independent_replay": {
+    "C_B_D42_fully_restored_for_checked_inputs": true,
+    "restored_boundary_results_match_byte_for_byte": true,
+    "all_12_fresh_permutations_and_selected_ordinals_byte_identical": true,
+    "all_41_restored_fault_rejections_byte_identical": true,
+    "recompiled_CXX17_checker_byte_identical": true,
+    "recompiled_CXX11_repeats_all_audits_and_rejections": true
+  },
+  "performance": {
+    "real_P1_runs": 0,
+    "real_P1_imports": 0,
+    "formal_measurements": 0,
+    "deferred_comparators": [
+      "unmodified stock",
+      "same-encoding off",
+      "Light-no-quality"
+    ]
+  },
+  "D43D_started": false,
+  "D5_started": false,
+  "stop": "Await explicit review."
+}
