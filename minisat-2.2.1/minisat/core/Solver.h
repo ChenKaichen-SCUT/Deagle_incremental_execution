@@ -33,6 +33,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 
 namespace Minisat {
 class ClauseImports;
+class DependencyTags;
 
 //=================================================================================================
 // Solver -- the main class:
@@ -46,6 +47,9 @@ public:
     virtual ~Solver();
     // Optional observer sees the input before sorting and root simplification.
     friend class ProofStore;
+    friend class DependencyTags;
+    DependencyTags *dense = nullptr;
+    bool opaque_theory43 = false;
     ClauseImports *imports = nullptr; // non-owning, only while imported watchers are tracked
     ProofStore *proof = nullptr; // optional non-owning recorder for native Closure
     void (*observe_input)(const vec<Lit>&) = nullptr;

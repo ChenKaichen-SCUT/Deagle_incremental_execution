@@ -120,6 +120,21 @@ deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
   : satcheck_minisat2_baset<Minisat::ClosureSolver>(handler)
 {
   solver->search_log=dependency_manifest::search_log;
+  solver->opaque_theory43=dependency_manifest::opaque43;
+  if(!dependency_manifest::boundary_trace.empty())
+  {
+    static FILE *trace=nullptr;
+    if(trace || !(trace=std::fopen(dependency_manifest::boundary_trace.c_str(),"wbx")))
+      throw std::runtime_error("expected a new writable boundary trace");
+    solver->observe_boundary=[](unsigned k,const Minisat::vec<Minisat::Lit> &clause) {
+      uint32_t n=clause.size();
+      if(std::fwrite(&k,4,1,trace)!=1 || std::fwrite(&n,4,1,trace)!=1)
+        throw std::runtime_error("boundary trace write failed");
+      for(int i=0;i<clause.size();++i)if(std::fwrite(&clause[i].x,4,1,trace)!=1)
+        throw std::runtime_error("boundary literal write failed");
+    };
+    dependency_manifest::finish_boundaries=[](){bool ok=std::fclose(trace)==0;trace=nullptr;return ok;};
+  }
   if(!dependency_manifest::proof_path.empty())
   {
     static std::unique_ptr<Minisat::ProofStore> recording;
@@ -130,10 +145,20 @@ deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
     recording->triplets=dependency_manifest::triplets;
     recording->eager_triplets=dependency_manifest::eager_triplets;
     recording->compact=dependency_manifest::compact_proof;
-    recording->quality=dependency_manifest::quality42 || dependency_manifest::light42;
+    recording->quality=(dependency_manifest::quality42 || dependency_manifest::light42) && !dependency_manifest::no_quality43;
     if(dependency_manifest::light42)recording->enableLight();
     solver->proof=recording.get();
     dependency_manifest::finish_proof=[](int status) { return recording->write(status); };
+  }
+  if(!dependency_manifest::dense_path.empty())
+  {
+    static std::unique_ptr<Minisat::DependencyTags> recording;
+    if(recording || solver->nVars()!=0)throw std::runtime_error("compact requires a fresh native solver");
+    recording.reset(new Minisat::DependencyTags(dependency_manifest::dense_path,&dependency_manifest::scope,
+                                                *dependency_manifest::group_sources));
+    recording->dual=solver->proof;
+    solver->dense=recording.get();
+    dependency_manifest::finish_dense=[](int status){return recording->finish(status);};
   }
   if(!dependency_manifest::stream) return;
   solver->observe_input = [](const Minisat::vec<Minisat::Lit> &ps) {

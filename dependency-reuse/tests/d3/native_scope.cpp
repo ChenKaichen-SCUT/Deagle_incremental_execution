@@ -57,7 +57,7 @@ void scope_fixture(const std::string &path)
         {
             s.branch(binding);
             require(nodes[1].out.size()==1 && nodes[1].out[0].to==3,"expected active block edge");
-            auto id=nodes[1].out[0].proof;
+            auto id=nodes[1].out[0].proof.audit;
             require(id!=0,"branch edge has no proof");
             auto used=ancestry(g,id);
             unsigned bound=0;
@@ -156,7 +156,7 @@ void dynamic_fixture(const std::string &path)
         {
             s.branch(orientation==a ? ~b : ~a);
             int from=orientation==a ? 0 : 1;
-            require(nodes[from].out.size()==1 && nodes[from].out.front().proof==0,
+            require(nodes[from].out.size()==1 && nodes[from].out.front().proof.audit==0,
                     "dynamic CO edge was certified");
             s.undo();
             require(nodes[0].out.empty() && nodes[1].out.empty(),"dynamic edge survived rollback");

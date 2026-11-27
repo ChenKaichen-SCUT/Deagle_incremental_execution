@@ -21,16 +21,17 @@ class closure
 private:
     //interact with solver
     ClosureSolver* solver;
-    ProofStore *recorder = nullptr;
-    ProofId config = 0;
-    std::map<std::pair<int,int>, ProofId> atomic_orders;
-    std::map<std::pair<int,int>, std::pair<int,ProofId>> rf_orders;
-    std::vector<ProofId> guards;
-    ProofId rf_order(int write, int read, Lit binding) const;
-    ProofId lifted(ProofId reason, int old_from, int old_to, int from, int to);
+    TheoryCapture capture;
+    TheoryCapture *recorder = nullptr;
+    TheorySupport config = 0;
+    std::map<std::pair<int,int>, TheorySupport> atomic_orders;
+    std::map<std::pair<int,int>, std::pair<int,TheorySupport>> rf_orders;
+    std::vector<TheorySupport> guards;
+    TheorySupport rf_order(int write, int read, Lit binding) const;
+    TheorySupport lifted(TheorySupport reason, int old_from, int old_to, int from, int to);
     int proof_rep(int event) const;
-    ProofId active_order(int from, int to);
-    ProofId competition(bool ws, int w1, int w2, int read, ProofId rf);
+    TheorySupport active_order(int from, int to);
+    TheorySupport competition(bool ws, int w1, int w2, int read, TheorySupport rf);
     void atomic_proofs(int from, int to);
     lbool get_assignment(Lit l);
 
@@ -64,7 +65,7 @@ public:
         Lit rf_lit;
         Lit guard_lit;
 
-        ProofId rf_certificate=0;
+        TheorySupport rf_certificate=0;
         triplett(int _w1, int _w2, int _r, Lit _rf_lit, Lit _guard_lit) :
             w1(_w1), w2(_w2), r(_r), rf_lit(_rf_lit), guard_lit(_guard_lit) {}
     };
@@ -72,7 +73,7 @@ public:
     std::vector<triplett> triplets_to_check;
 
 private:
-    ProofId triplet_reason(const triplett &t,Lit target);
+    TheorySupport triplet_reason(const triplett &t,Lit target);
     std::map<Lit, std::vector<triplett>> rf_to_triplets;
     std::map<Lit, std::vector<triplett>> guard_to_triplets;
 
@@ -132,6 +133,7 @@ public:
     bool light_guard(int u);
 
     void supportRoots(std::vector<ProofId> &out) const;
+    void observeDenseSlots() const;
     void push_scope();
     void pop_scope(int new_level);
 
@@ -145,7 +147,7 @@ public:
     void show_race();
     void final_check();
     literal_vector conflict_lv;
-    ProofId conflict_proof = 0;
+    TheorySupport conflict_proof = 0;
 
     int union_find_parent(int n);
     bool union_check(int m, int n) { return union_find_parent(m) == union_find_parent(n); }

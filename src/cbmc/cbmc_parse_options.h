@@ -33,7 +33,7 @@ class optionst;
 
 // clang-format off
 #define CBMC_OPTIONS \
-  "(d42-light)(d42-quality)(d41-triplets)(d41-eager)(d41-compact)(d41-identities)(d4-load):(d4-mode):(d4-out):(d4-tools):(d4-search-log):(d3-proof):(d2-proof):(d1-manifest):(d3-layouts)(deagle-closure)(deagle-icd)(deagle-segment)(datarace)(goblint)(locksmith)(deadlock)" \
+  "(d43-record):(d43-boundaries):(d43-no-quality)(d43-opaque-theory)(d42-light)(d42-quality)(d41-triplets)(d41-eager)(d41-compact)(d41-identities)(d4-load):(d4-mode):(d4-out):(d4-tools):(d4-search-log):(d3-proof):(d2-proof):(d1-manifest):(d3-layouts)(deagle-closure)(deagle-icd)(deagle-segment)(datarace)(goblint)(locksmith)(deadlock)" \
   OPT_BMC \
   "(preprocess)(slice-by-trace):" \
   OPT_FUNCTIONS \

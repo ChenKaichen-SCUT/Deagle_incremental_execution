@@ -31,7 +31,7 @@ class ClosureSolver : public Solver
 
     std::vector<std::pair<Lit, literal_set>> literals_to_assign;
     std::set<Lit> assigned_literals;
-    std::vector<ProofId> assignment_proofs;
+    std::vector<TheorySupport> assignment_proofs;
     void record_early_conflict();
 
     int conflict_cycle = 0;
@@ -56,6 +56,7 @@ public:
     { return {{conflicts,decisions,propagations,uint64_t(theory_propagation),uint64_t(conflict_cycle)}}; }
     bool residentDuplicate(const std::vector<int> &residual);
     const closure& declaration_graph() const { return graph; }
+    void (*observe_boundary)(unsigned,const vec<Lit> &)=nullptr;
     void (*observe_co)(int, int, Lit, Lit, Lit, Lit) = nullptr;
     void init();
     void save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order);
@@ -68,11 +69,12 @@ public:
 
     void show_rf();
 
-    void assign_literal(Lit l, literal_set& lv, ProofId reason=0);
-    void assign_literal(Lit l, literal_vector& lv, ProofId reason=0);
+    void assign_literal(Lit l, literal_set& lv, const TheorySupport &reason=0);
+    void assign_literal(Lit l, literal_vector& lv, const TheorySupport &reason=0);
 
     void apply_literal_assignment();
     bool already_scheduled(Lit target) const {return assigned_literals.count(target)!=0;}
+    size_t queuedTheorySlots() const {return assignment_proofs.size();}
 
     std::vector<std::string> get_write_order();
 

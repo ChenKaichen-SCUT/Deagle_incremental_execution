@@ -23,3 +23,5 @@ tests/d2/** text eol=lf
 reports/evidence/d2/**/*.tsv text eol=lf
 reports/evidence/d2/**/*.txt text eol=lf
 reports/evidence/d2/**/*.sha256 text eol=lf
+reports/evidence/d43b/** -text
+tests/d43b/** text eol=lf

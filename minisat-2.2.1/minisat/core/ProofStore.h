@@ -99,6 +99,8 @@ public:
     bool quality=false;
     void enableLight();
     bool light() const {return bool(support);}
+    size_t conditionNodeCount() const {return conditions.size()-1;}
+    ProofId localRule(TheoryOp op,int a,int b,int c,const ProofId *p,size_t n) {return internTheory(TheoryInference,op,a,b,c,p,n);}
     bool collectDue() const;
     void collect(std::vector<ProofId> &roots);
     void birthUse(CRef ref,unsigned kind);

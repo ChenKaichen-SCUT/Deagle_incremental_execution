@@ -11,6 +11,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 #include "cbmc_parse_options.h"
 #include <util/dependency_manifest.h>
+#include <util/dependency_group_sources.h>
 
 #include <cstdlib> // exit()
 #include <cstdio>
@@ -444,6 +445,23 @@ int cbmc_parse_optionst::doit()
   optionst options;
   get_command_line_options(options);
   const bool loading=cmdline.isset("d4-load");
+  if(cmdline.isset("d43-record"))
+  {
+    if(loading || cmdline.isset("d2-proof") || cmdline.isset("d42-light") || cmdline.isset("d41-compact") ||
+       !cmdline.isset("d1-manifest") || !cmdline.isset("d3-layouts") || !cmdline.isset("d41-identities") ||
+       (cmdline.isset("d3-proof") && !cmdline.isset("d41-triplets")))
+      throw std::runtime_error("compact requires the SC identity manifest; paired Audit requires full triplet proofs");
+    dependency_manifest::dense_path=cmdline.get_value("d43-record");
+    static dependency_manifest::group_sourcest sources;
+    dependency_manifest::group_sources=&sources;
+  }
+  dependency_manifest::no_quality43=cmdline.isset("d43-no-quality");
+  dependency_manifest::opaque43=cmdline.isset("d43-opaque-theory");
+  if(cmdline.isset("d43-boundaries"))dependency_manifest::boundary_trace=cmdline.get_value("d43-boundaries");
+  if(dependency_manifest::no_quality43 && (!cmdline.isset("d42-light") || cmdline.isset("d42-quality")))
+    throw std::runtime_error("no-quality control requires Light42 without the quality flag");
+  if(dependency_manifest::opaque43 && !cmdline.isset("d42-light") && !cmdline.isset("d43-record"))
+    throw std::runtime_error("opaque theory control requires Light42 or compact");
   dependency_manifest::light42=cmdline.isset("d42-light");
   dependency_manifest::quality42=cmdline.isset("d42-quality");
   if((dependency_manifest::light42 || dependency_manifest::quality42) && !cmdline.isset("d3-proof"))

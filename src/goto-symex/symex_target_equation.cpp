@@ -12,6 +12,25 @@ Author: Daniel Kroening, kroening@kroening.com
 
 #include "symex_target_equation.h"
 #include <util/dependency_manifest.h>
+#include <util/dependency_group_sources.h>
+#include "dependency_context.h"
+
+namespace {
+class dense_owner_scope
+{
+  dependency_manifest::group_sourcest *sources=dependency_manifest::group_sources;
+  const std::string *previous=nullptr;
+  const char *previous_phase=nullptr;
+public:
+  dense_owner_scope(const char *phase,const symex_targett::sourcet &source)
+  {
+    if(!sources)return;
+    previous=sources->owner;previous_phase=sources->phase;
+    sources->enter(phase,dependency_manifest::checked_context(source),source.thread_nr);
+  }
+  ~dense_owner_scope(){if(sources){sources->owner=previous;sources->phase=previous_phase;}}
+};
+}
 
 #include <chrono>
 
@@ -366,6 +385,7 @@ void symex_target_equationt::convert_assignments(
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("assignments",step.source);
     if(step.is_assignment() && !step.ignore && !step.converted)
     {
       log.conditional_output(log.debug(), [&step](messaget::mstreamt &mstream) {
@@ -388,6 +408,7 @@ void symex_target_equationt::convert_decls(
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("decls",step.source);
     if(step.is_decl() && !step.ignore && !step.converted)
     {
       // The result is not used, these have no impact on
@@ -409,6 +430,7 @@ void symex_target_equationt::convert_guards(
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("guards",step.source);
     if(step.ignore)
       step.guard_handle = false_exprt();
     else
@@ -432,6 +454,7 @@ void symex_target_equationt::convert_assumptions(
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("assumptions",step.source);
     if(step.is_assume())
     {
       if(step.ignore)
@@ -460,6 +483,7 @@ void symex_target_equationt::convert_goto_instructions(
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("goto_instructions",step.source);
     if(step.is_goto())
     {
       if(step.ignore)
@@ -487,6 +511,7 @@ void symex_target_equationt::convert_constraints(
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("constraints",step.source);
     if(step.is_constraint() && !step.ignore && !step.converted)
     {
       log.conditional_output(log.debug(), [&step](messaget::mstreamt &mstream) {
@@ -623,6 +648,7 @@ void symex_target_equationt::convert_function_calls(
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("function_calls",step.source);
     if(!step.ignore)
     {
       and_exprt::operandst conjuncts;
@@ -662,6 +688,7 @@ void symex_target_equationt::convert_io(decision_proceduret &decision_procedure)
   std::size_t step_index = 0;
   for(auto &step : SSA_steps)
   {
+    dense_owner_scope owner("io",step.source);
     if(!step.ignore)
     {
       and_exprt::operandst conjuncts;

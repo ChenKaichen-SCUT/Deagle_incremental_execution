@@ -5,7 +5,7 @@
 #include <iostream>
 #include <vector>
 #include <bitset>
-#include "ProofStore.h"
+#include "DependencyTags.h"
 #include <set>
 
 #include "../../minisat/mtl/Vec.h"
@@ -25,7 +25,7 @@ struct closure_edget
     int from;
 	int to;
 	edge_kindt kind;
-    ProofId proof = 0; // follows the actual active edge through copies and backtracking
+    TheorySupport proof; // follows the actual active edge through copies and backtracking
     literal_vector reason;
 
     //closure_edget() : from(-1), to(-1), kind(OC_NA), reason(literal_vector()) {}

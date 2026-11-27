@@ -130,7 +130,7 @@ Lit closure::check_tail_head_to_inactive_lit(int a, int b)
 
 // Certificates describe conditional order, never a Boolean assertion that the
 // current trail must hold. Only the final native reason discharges conditions.
-ProofId closure::rf_order(int write, int read, Lit binding) const
+TheorySupport closure::rf_order(int write, int read, Lit binding) const
 {
     auto found=rf_orders.find({write,read});
     auto reverse=lit_to_edge.find(binding);
@@ -147,7 +147,7 @@ int closure::proof_rep(int event) const
     return event;
 }
 
-ProofId closure::lifted(ProofId reason, int old_from, int old_to, int from, int to)
+TheorySupport closure::lifted(TheorySupport reason, int old_from, int old_to, int from, int to)
 {
     if(!reason || (from==old_from && to==old_to)) return reason;
     const int a=proof_rep(old_from), b=proof_rep(old_to);
@@ -155,7 +155,7 @@ ProofId closure::lifted(ProofId reason, int old_from, int old_to, int from, int 
     return recorder->rule(Lift,from,to,-1,{reason,recorder->decl(BlockDecl,a),recorder->decl(BlockDecl,b)});
 }
 
-ProofId closure::active_order(int from, int to)
+TheorySupport closure::active_order(int from, int to)
 {
     int a=proof_rep(from), b=proof_rep(to);
     if(a==b)
@@ -168,13 +168,13 @@ ProofId closure::active_order(int from, int to)
     return lifted(nodes[a].out[slot].proof,a,b,from,to);
 }
 
-ProofId closure::competition(bool ws, int w1, int w2, int read, ProofId rf)
+TheorySupport closure::competition(bool ws, int w1, int w2, int read, TheorySupport rf)
 {
     if(!recorder || !rf || w1==w2 || read==w1 || read==w2 ||
        nodes[w1].address!=nodes[w2].address ||
        nodes[w1].address!=nodes[read].address || !nodes[w1].guard_lighted ||
        !nodes[w2].guard_lighted || !nodes[w2].is_write) return 0;
-    const ProofId order=ws ? active_order(w2,read) : active_order(w1,w2);
+    const TheorySupport order=ws ? active_order(w2,read) : active_order(w1,w2);
     return recorder->rule(ws ? WSRule : FRRule,w1,w2,read,
         {rf,order,guards[w1],guards[w2],recorder->decl(SchemaDecl,w2),
          recorder->decl(AddressDecl,std::min(w1,w2),std::max(w1,w2))});
@@ -188,12 +188,13 @@ void closure::atomic_proofs(int from, int to)
         for(int succ : nodes[to].atomic_out)
         {
             if(pred==succ || atomic_orders.count({pred,succ})) continue;
-            std::vector<ProofId> chain;
+            std::vector<TheorySupport> chain;
             if(pred!=from) chain.push_back(active_order(pred,from));
             chain.push_back(direct);
             if(succ!=to) chain.push_back(active_order(to,succ));
             atomic_orders[{pred,succ}]=chain.size()==1 ? direct :
                 recorder->rule(Transitive,pred,succ,-1,chain);
+                if(solver->dense)observeDenseSlots();
         }
 }
 
@@ -202,7 +203,11 @@ closure::closure() {}
 void closure::init(ClosureSolver* _solver)
 {
     solver = _solver;
-    recorder = solver->proof && solver->proof->d3 ? solver->proof : nullptr;
+    capture.audit=solver->proof && solver->proof->d3 && !solver->opaque_theory43 ? solver->proof : nullptr;
+    capture.dense=solver->opaque_theory43 ? nullptr : solver->dense;
+    capture.triplets=(capture.audit && capture.audit->triplets)||capture.dense;
+    capture.eager_triplets=capture.audit && capture.audit->eager_triplets;
+    recorder=capture.audit||capture.dense ? &capture : nullptr;
     if(recorder)
     {
         config=recorder->decl(Config);
@@ -240,7 +245,9 @@ int closure::get_node(std::string name)
     }
 
     nodes.push_back(closure_nodet(name, address_id, new_node_id));
+    if(solver->dense)solver->dense->node(new_node_id,name);
     if(recorder) guards.push_back(0);
+    if(solver->dense)observeDenseSlots();
 
     if(OC_VERBOSITY >= 1)
         std::cout << "creating " << name << " " << address << "(" << address_id << ")\n";
@@ -281,6 +288,7 @@ void closure::init_reasonable_edge(int u, int v, edge_kindt kind, Lit l)
             rf_orders[{u,v}]={l.x,recorder->rule(RFEdge,u,v,-1,
                 {config,recorder->decl(RFDecl,u,v,l.x),recorder->decl(SchemaDecl,u),
                  recorder->decl(SchemaDecl,v),recorder->decl(AddressDecl,std::min(u,v),std::max(u,v))})};
+                 if(solver->dense)observeDenseSlots();
     }
 }
 
@@ -361,11 +369,12 @@ void closure::add_trinary_pattern(int w1, int w2, int r)
     }
 
     triplets_to_check.emplace_back(w1,w2,r,rf_lit,guard_lit);
+    if(solver->dense)observeDenseSlots();
     if(recorder && recorder->triplets)
         triplets_to_check.back().rf_certificate=rf_order(w1,r,rf_lit);
 }
 
-ProofId closure::triplet_reason(const triplett &t,Lit target)
+TheorySupport closure::triplet_reason(const triplett &t,Lit target)
 {
     if(!recorder || !t.rf_certificate || (!recorder->eager_triplets && solver->already_scheduled(target))) return 0;
     const int a=t.w1,b=t.w2,r=t.r;
@@ -432,6 +441,7 @@ void closure::check_trinary_pattern()
             guard_to_triplets[guard_lit].push_back(triplet);
 
             trail_triplet.push(std::make_pair(rf_lit, guard_lit));
+            if(solver->dense)observeDenseSlots();
         }
     }
 }
@@ -499,6 +509,8 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
     {
         nodes[edge.from].out_rf.push_back(edge);
         nodes[edge.to].in_rf.push_back(edge);
+        if(solver->dense)solver->dense->edgeAdded();
+        if(solver->dense)observeDenseSlots();
         trail_rf.push(std::make_pair(edge.from, edge.to));
 
         int w1 = edge.from;
@@ -637,6 +649,8 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
         nodes[from_rep].out_bitset[to_rep] = nodes[from_rep].out.size();
         nodes[from_rep].out.push_back(edge_rep);
         nodes[to_rep].in.push_back(edge_rep);
+        if(solver->dense)solver->dense->edgeAdded();
+        if(solver->dense)observeDenseSlots();
         trail_edge.push(std::make_pair(from_rep, to_rep));
 
         //propagate race
@@ -749,7 +763,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                     if(OC_VERBOSITY >= 1)
                         std::cout << "before preventive propagation, set rf" << to << " " << from << " false\n";
 
-                    ProofId reason_id=0;
+                    TheorySupport reason_id=0;
                     if(recorder)
                         reason_id=recorder->rule(PreventRF,to,from,-1,
                             {active_order(from,to),rf_order(to,from,rf_lit_cand)});
@@ -1186,18 +1200,24 @@ bool closure::light_guard(int u)
     return false;
 }
 
+void closure::observeDenseSlots() const
+{
+    if(solver->dense)solver->dense->persistent(2+atomic_orders.size()+rf_orders.size()+guards.size()+
+        triplets_to_check.size()+2*size_t(trail_triplet.size())+solver->queuedTheorySlots());
+}
+
 void closure::supportRoots(std::vector<ProofId> &out) const
 {
-    out.push_back(config);out.push_back(conflict_proof);
-    for(const auto &p:atomic_orders)out.push_back(p.second);
-    for(const auto &p:rf_orders)out.push_back(p.second.second);
-    out.insert(out.end(),guards.begin(),guards.end());
+    out.push_back(config.audit);out.push_back(conflict_proof.audit);
+    for(const auto &p:atomic_orders)out.push_back(p.second.audit);
+    for(const auto &p:rf_orders)out.push_back(p.second.second.audit);
+    for(const auto &g:guards)out.push_back(g.audit);
     for(const auto &n:nodes)
         for(const auto *edges:{&n.in,&n.out,&n.in_rf,&n.out_rf})
-            for(const auto &e:*edges)out.push_back(e.proof);
-    for(const auto &t:triplets_to_check)out.push_back(t.rf_certificate);
+            for(const auto &e:*edges)out.push_back(e.proof.audit);
+    for(const auto &t:triplets_to_check)out.push_back(t.rf_certificate.audit);
     for(const auto *table:{&rf_to_triplets,&guard_to_triplets})
-        for(const auto &kv:*table)for(const auto &t:kv.second)out.push_back(t.rf_certificate);
+        for(const auto &kv:*table)for(const auto &t:kv.second)out.push_back(t.rf_certificate.audit);
 }
 void closure::push_scope()
 {
@@ -1216,6 +1236,7 @@ void closure::pop_scope(int new_level)
         nodes[e.first].out_bitset[e.second] = -1;
         nodes[e.first].out.pop_back();
         nodes[e.second].in.pop_back();
+        if(solver->dense)solver->dense->edgeRemoved();
     }
     trail_edge.shrink(trail_edge.size() - trail_edge_lim[new_level]);
     trail_edge_lim.shrink(trail_edge_lim.size() - new_level);
@@ -1225,6 +1246,7 @@ void closure::pop_scope(int new_level)
         auto e = trail_rf[c];
         nodes[e.first].out_rf.pop_back();
         nodes[e.second].in_rf.pop_back();
+        if(solver->dense)solver->dense->edgeRemoved();
     }
     trail_rf.shrink(trail_rf.size() - trail_rf_lim[new_level]);
     trail_rf_lim.shrink(trail_rf_lim.size() - new_level);

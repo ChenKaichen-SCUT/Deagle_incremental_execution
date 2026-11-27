@@ -76,7 +76,7 @@ bool ClosureSolver::residentDuplicate(const std::vector<int> &key)
 
 void ClosureSolver::importAtRoot(ClauseImports &batch,bool reuse)
 {
-    if(!graph_ready || solves || decisionLevel()!=0 || import_boundary_used || proof)
+    if(!graph_ready || solves || decisionLevel()!=0 || import_boundary_used || proof || dense)
         throw std::logic_error("D4 requires a fresh root with its P1 graph installed");
     const auto start=std::chrono::steady_clock::now();
     uint32_t last=0;
@@ -145,11 +145,16 @@ void ClosureSolver::importAtRoot(ClauseImports &batch,bool reuse)
 
 void ClosureSolver::record_early_conflict()
 {
+    if(dense || observe_boundary) {
+        vec<Lit> c;for(Lit l:graph.conflict_lv)c.push(~l);
+        if(observe_boundary)observe_boundary(TheoryEmpty,c);
+        if(dense)dense->boundary(c.size()?TheoryEmpty:TheoryConflict,graph.conflict_proof);
+    }
     if(!proof) return;
-    if(proof->d3 && graph.conflict_proof && graph.conflict_lv.empty())
+    if(proof->d3 && graph.conflict_proof.audit && graph.conflict_lv.empty())
     {
         vec<Lit> empty;
-        proof->terminals.push_back(proof->lemma(TheoryConflict,empty,graph.conflict_proof));
+        proof->terminals.push_back(proof->lemma(TheoryConflict,empty,graph.conflict_proof.audit));
     }
     else proof->theoryEmpty(); // early native return can still use external root assignments
 }
@@ -349,7 +354,8 @@ lbool ClosureSolver::search(int nof_conflicts)
 
     for (;;){
         if(proof && proof->collectDue()){
-            std::vector<ProofId> roots(assignment_proofs);
+            std::vector<ProofId> roots;
+            for(const auto &p:assignment_proofs)roots.push_back(p.audit);
             graph.supportRoots(roots);proof->collect(roots);
         }
         CRef confl = propagate();
@@ -358,6 +364,7 @@ lbool ClosureSolver::search(int nof_conflicts)
             conflicts++; conflictC++;
             if (decisionLevel() == 0) {
                 if(proof) proof->rootConflict(*this,confl);
+                if(dense) dense->rootConflict(*this,confl);
                 return l_False;
             }
 
@@ -368,10 +375,12 @@ lbool ClosureSolver::search(int nof_conflicts)
 
             if (learnt_clause.size() == 1){
                 if(proof) proof->tag(proof->lastLearned(),ExplicitUnit);
+                if(dense)dense->unit();
                 uncheckedEnqueue(learnt_clause[0]);
             }else{
                 CRef cr = ca.alloc(learnt_clause, true);
                 if(proof) proof->bind(cr,proof->lastLearned());
+                if(dense)dense->bind(cr);
                 learnts.push(cr);
                 attachClause(cr);
                 claBumpActivity(ca[cr]);
@@ -671,8 +680,10 @@ CRef ClosureSolver::propagate()
                 minisat_lv.push(~l);
 
             confl = ca.alloc(minisat_lv, true);
+            if(observe_boundary)observe_boundary(TheoryConflict,minisat_lv);
+            if(dense){dense->boundary(TheoryConflict,graph.conflict_proof);dense->bindTransient(confl);}
             if(proof) proof->bind(confl,proof->d3 ?
-                proof->lemma(TheoryConflict,minisat_lv,graph.conflict_proof) :
+                proof->lemma(TheoryConflict,minisat_lv,graph.conflict_proof.audit) :
                 proof->opaque(TheoryConflict,minisat_lv));
         }
         else if(!literals_to_assign.empty())//add literals propagated by unit edge
@@ -731,6 +742,7 @@ void ClosureSolver::newDecisionLevel()
 void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 {
     if(proof) proof->beginAnalysis();
+    if(dense)dense->beginAnalysis();
     int pathC = 0;
     Lit p     = lit_Undef;
 
@@ -743,6 +755,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
         assert(confl != CRef_Undef); // (otherwise should be UIP)
         Clause& c = ca[confl];
         if(proof) proof->analysisParent(*this,confl,p);
+        if(dense)dense->parent(*this,confl,p);
         if(proof && proof->quality)proof->birthUse(confl,2);
         if(imports) imports->hit(confl,AnalyzeParent,decisionLevel(),p.x,conflicts,c);
 
@@ -799,6 +812,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
                         out_learnt[j++] = out_learnt[i];
                         break; }
                 if(proof && k==c.size()) proof->basicMin(x);
+                if(dense && k==c.size())dense->basic(*this,x);
                 if(imports && k==c.size()) imports->hit(reason(x),MinimizeParent,decisionLevel(),c[0].x,conflicts,c);
             }
         }
@@ -827,6 +841,8 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
     }
 
     if(proof) proof->finishAnalysis(*this,out_learnt);
+    if(dense)dense->learned(out_learnt);
+    if(observe_boundary)observe_boundary(Learned,out_learnt);
     for (int j = 0; j < analyze_toclear.size(); j++) seen[var(analyze_toclear[j])] = 0;    // ('seen[]' is now cleared)
 }
 
@@ -835,17 +851,18 @@ void ClosureSolver::show_rf()
     graph.show_rf();
 }
 
-void ClosureSolver::assign_literal(Lit l, literal_set& lv, ProofId reason)
+void ClosureSolver::assign_literal(Lit l, literal_set& lv, const TheorySupport &reason)
 {
     if(assigned_literals.find(l) != assigned_literals.end())
         return;
 
     literals_to_assign.push_back(std::make_pair(l, lv));
-    if(proof && proof->d3) assignment_proofs.push_back(reason);
+    if((proof && proof->d3) || dense) assignment_proofs.push_back(reason);
+    if(dense)graph.observeDenseSlots();
     assigned_literals.insert(l);
 }
 
-void ClosureSolver::assign_literal(Lit l, literal_vector& lv, ProofId reason)
+void ClosureSolver::assign_literal(Lit l, literal_vector& lv, const TheorySupport &reason)
 {
     if(assigned_literals.find(l) != assigned_literals.end())
         return;
@@ -879,15 +896,19 @@ void ClosureSolver::apply_literal_assignment()
                 learnt_clause.push(lit);
 
 
+        const TheorySupport *support=((proof && proof->d3)||dense)?&assignment_proofs.at(assignment_index++):nullptr;
+        if(observe_boundary)observe_boundary(TheoryReason,learnt_clause);
+        if(dense)dense->boundary(TheoryReason,*support);
         ProofId cert=0;
         if(proof)
-            cert=proof->d3 ? proof->lemma(TheoryReason,learnt_clause,assignment_proofs.at(assignment_index++)) :
+            cert=proof->d3 ? proof->lemma(TheoryReason,learnt_clause,support->audit) :
                              proof->opaque(TheoryReason,learnt_clause);
         if (learnt_clause.size() == 1)
         {
             if(OC_VERBOSITY >= 1)
                 std::cout << learnt_clause[0].x << " is really assigned\n";
             if(proof) proof->tag(cert,ExplicitUnit);
+            if(dense)dense->unit();
             uncheckedEnqueue(learnt_clause[0]);
             theory_propagation++;
         }
@@ -895,6 +916,7 @@ void ClosureSolver::apply_literal_assignment()
         {
             CRef cr = ca.alloc(learnt_clause, true);
             if(proof) proof->bind(cr,cert);
+            if(dense)dense->bind(cr);
             learnts.push(cr);
             attachClause(cr);
             claBumpActivity(ca[cr]);
@@ -967,6 +989,8 @@ void ClosureSolver::addMissingCoClauses()
         if(observe_co) observe_co(node1, node2, lit12, lit21, guard_lit1, guard_lit2);
         CRef cr = ca.alloc(co_clause, false);
         if(proof) proof->bind(cr,proof->opaque(DynamicCO,co_clause));
+        if(dense){dense->boundary(DynamicCO,{});dense->bind(cr);}
+        if(observe_boundary)observe_boundary(DynamicCO,co_clause);
         clauses.push(cr);
         attachClause(cr);
 

@@ -23,6 +23,7 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include "../../minisat/mtl/Sort.h"
 #include "../../minisat/core/Solver.h"
 #include "ClauseImports.h"
+#include "DependencyTags.h"
 
 using namespace Minisat;
 
@@ -141,6 +142,7 @@ bool Solver::addClause_(vec<Lit>& ps)
 {
     if (observe_input) observe_input(ps);
     if(proof) proof->input(ps);
+    if(dense) dense->input(ps);
     assert(decisionLevel() == 0);
     if (!ok) {
         if(proof) proof->skipInput(AlreadyInconsistent);
@@ -159,18 +161,22 @@ bool Solver::addClause_(vec<Lit>& ps)
             ps[j++] = p = ps[i];
     ps.shrink(i - j);
     const ProofId id=proof ? proof->acceptInput(*this,ps) : 0;
+    if(dense) dense->acceptInput(*this,ps.size());
 
     if (ps.size() == 0)
         return ok = false;
     else if (ps.size() == 1){
         if(proof) proof->tag(id,ExplicitUnit);
+        if(dense) dense->unit();
         uncheckedEnqueue(ps[0]);
         CRef conflict_ref=propagate();
         if(proof) proof->rootConflict(*this,conflict_ref);
+        if(dense) dense->rootConflict(*this,conflict_ref);
         return ok = (conflict_ref == CRef_Undef);
     }else{
         CRef cr = ca.alloc(ps, false);
         if(proof) proof->bind(cr,id);
+        if(dense) dense->bind(cr);
         clauses.push(cr);
         attachClause(cr);
     }
@@ -211,6 +217,7 @@ void Solver::removeClause(CRef cr) {
     // Don't leave pointers to free'd memory!
     if (locked(c)) vardata[var(c[0])].reason = CRef_Undef;
     if(proof) proof->forget(cr);
+    if(dense) dense->forget(cr);
     if(imports) imports->forget(cr);
     c.mark(1); 
     ca.free(cr);
@@ -391,12 +398,14 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
 {
     if(proof) proof->beginTrial();
+    if(dense) dense->beginTrial();
     if(imports) imports->beginTrial();
     analyze_stack.clear(); analyze_stack.push(p);
     int top = analyze_toclear.size();
     while (analyze_stack.size() > 0){
         assert(reason(var(analyze_stack.last())) != CRef_Undef);
         if(proof) proof->visitTrial(var(analyze_stack.last()));
+        if(dense) dense->visit(*this,var(analyze_stack.last()));
         if(imports) imports->visitTrial(reason(var(analyze_stack.last())));
         Clause& c = ca[reason(var(analyze_stack.last()))]; analyze_stack.pop();
 
@@ -412,6 +421,7 @@ bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
                         seen[var(analyze_toclear[j])] = 0;
                     analyze_toclear.shrink(analyze_toclear.size() - top);
                     if(proof) proof->endTrial(false);
+                    if(dense) dense->endTrial(false);
                     return false;
                 }
             }
@@ -419,6 +429,7 @@ bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
     }
 
     if(proof) proof->endTrial(true);
+    if(dense) dense->endTrial(true);
     if(imports) imports->commitTrial(ca,decisionLevel(),conflicts);
     return true;
 }
@@ -468,6 +479,7 @@ void Solver::uncheckedEnqueue(Lit p, CRef from)
 {
     assert(value(p) == l_Undef);
     if(proof) proof->assignment(*this,p,from);
+    if(dense) dense->assignment(*this,p,from);
     assigns[var(p)] = lbool(!sign(p));
     vardata[var(p)] = mkVarData(from, decisionLevel());
     trail.push_(p);
@@ -631,6 +643,7 @@ bool Solver::simplify()
     CRef conflict_ref=propagate();
     if(conflict_ref!=CRef_Undef) {
         if(proof) proof->rootConflict(*this,conflict_ref);
+        if(dense) dense->rootConflict(*this,conflict_ref);
         return ok=false;
     }
 
@@ -975,6 +988,7 @@ void Solver::garbageCollect()
 
     relocAll(to);
     if(proof) proof->relocated(ca,to.size());
+    if(dense) dense->relocated(ca,to.size());
     if(imports) imports->relocated(ca);
     if (verbosity >= 2)
         printf("|  Garbage collection:   %12d bytes => %12d bytes             |\n", 
