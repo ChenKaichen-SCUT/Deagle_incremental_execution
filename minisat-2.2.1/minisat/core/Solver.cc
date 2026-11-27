@@ -101,6 +101,7 @@ Solver::Solver() :
 
 Solver::~Solver()
 {
+    if(proof) proof->snapshot(learnts);
 }
 
 //Virtual methods:
@@ -118,6 +119,7 @@ void Solver::addGuard(std::string node, Lit guard) {}
 Var Solver::newVar(lbool upol, bool dvar)
 {
     int v = nVars();
+    if(proof) proof->newVariable();
     watches  .init(mkLit(v, false));
     watches  .init(mkLit(v, true ));
     assigns  .push(l_Undef);
@@ -137,26 +139,37 @@ Var Solver::newVar(lbool upol, bool dvar)
 bool Solver::addClause_(vec<Lit>& ps)
 {
     if (observe_input) observe_input(ps);
+    if(proof) proof->input(ps);
     assert(decisionLevel() == 0);
-    if (!ok) return false;
+    if (!ok) {
+        if(proof) proof->skipInput(AlreadyInconsistent);
+        return false;
+    }
 
     // Check if clause is satisfied and remove false/duplicate literals:
     sort(ps);
     Lit p; int i, j;
     for (i = j = 0, p = lit_Undef; i < ps.size(); i++)
-        if (value(ps[i]) == l_True || ps[i] == ~p)
+        if (value(ps[i]) == l_True || ps[i] == ~p) {
+            if(proof) proof->skipInput(value(ps[i])==l_True ? Satisfied : Tautology,ps[i].x);
             return true;
+        }
         else if (value(ps[i]) != l_False && ps[i] != p)
             ps[j++] = p = ps[i];
     ps.shrink(i - j);
+    const ProofId id=proof ? proof->acceptInput(*this,ps) : 0;
 
     if (ps.size() == 0)
         return ok = false;
     else if (ps.size() == 1){
+        if(proof) proof->tag(id,ExplicitUnit);
         uncheckedEnqueue(ps[0]);
-        return ok = (propagate() == CRef_Undef);
+        CRef conflict_ref=propagate();
+        if(proof) proof->rootConflict(*this,conflict_ref);
+        return ok = (conflict_ref == CRef_Undef);
     }else{
         CRef cr = ca.alloc(ps, false);
+        if(proof) proof->bind(cr,id);
         clauses.push(cr);
         attachClause(cr);
     }
@@ -196,6 +209,7 @@ void Solver::removeClause(CRef cr) {
     detachClause(cr);
     // Don't leave pointers to free'd memory!
     if (locked(c)) vardata[var(c[0])].reason = CRef_Undef;
+    if(proof) proof->forget(cr);
     c.mark(1); 
     ca.free(cr);
 }
@@ -374,10 +388,12 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 // visiting literals at levels that cannot be removed later.
 bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
 {
+    if(proof) proof->beginTrial();
     analyze_stack.clear(); analyze_stack.push(p);
     int top = analyze_toclear.size();
     while (analyze_stack.size() > 0){
         assert(reason(var(analyze_stack.last())) != CRef_Undef);
+        if(proof) proof->visitTrial(var(analyze_stack.last()));
         Clause& c = ca[reason(var(analyze_stack.last()))]; analyze_stack.pop();
 
         for (int i = 1; i < c.size(); i++){
@@ -391,12 +407,14 @@ bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
                     for (int j = top; j < analyze_toclear.size(); j++)
                         seen[var(analyze_toclear[j])] = 0;
                     analyze_toclear.shrink(analyze_toclear.size() - top);
+                    if(proof) proof->endTrial(false);
                     return false;
                 }
             }
         }
     }
 
+    if(proof) proof->endTrial(true);
     return true;
 }
 
@@ -444,6 +462,7 @@ void Solver::analyzeFinal(Lit p, vec<Lit>& out_conflict)
 void Solver::uncheckedEnqueue(Lit p, CRef from)
 {
     assert(value(p) == l_Undef);
+    if(proof) proof->assignment(*this,p,from);
     assigns[var(p)] = lbool(!sign(p));
     vardata[var(p)] = mkVarData(from, decisionLevel());
     trail.push_(p);
@@ -542,6 +561,7 @@ struct reduceDB_lt {
 };
 void Solver::reduceDB()
 {
+    if(proof) ++proof->stats[Reductions];
     int     i, j;
     double  extra_lim = cla_inc / learnts.size();    // Remove any clause below this activity
 
@@ -565,9 +585,10 @@ void Solver::removeSatisfied(vec<CRef>& cs)
     int i, j;
     for (i = j = 0; i < cs.size(); i++){
         Clause& c = ca[cs[i]];
-        if (satisfied(c))
+        if (satisfied(c)) {
+            if(proof) proof->removedSatisfied(*this,cs[i]);
             removeClause(cs[i]);
-        else
+        } else
             cs[j++] = cs[i];
     }
     cs.shrink(i - j);
@@ -596,8 +617,12 @@ bool Solver::simplify()
 {
     assert(decisionLevel() == 0);
 
-    if (!ok || propagate() != CRef_Undef)
-        return ok = false;
+    if (!ok) return false;
+    CRef conflict_ref=propagate();
+    if(conflict_ref!=CRef_Undef) {
+        if(proof) proof->rootConflict(*this,conflict_ref);
+        return ok=false;
+    }
 
     if (nAssigns() == simpDB_assigns || (simpDB_props > 0))
         return true;
@@ -939,6 +964,7 @@ void Solver::garbageCollect()
     ClauseAllocator to(ca.size() - ca.wasted()); 
 
     relocAll(to);
+    if(proof) proof->relocated(ca,to.size());
     if (verbosity >= 2)
         printf("|  Garbage collection:   %12d bytes => %12d bytes             |\n", 
                ca.size()*ClauseAllocator::Unit_Size, to.size()*ClauseAllocator::Unit_Size);

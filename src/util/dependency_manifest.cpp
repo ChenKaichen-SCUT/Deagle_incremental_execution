@@ -5,6 +5,8 @@ namespace dependency_manifest
 {
 std::FILE *stream = nullptr;
 char scope = 'U';
+std::string proof_path;
+bool (*finish_proof)(int) = nullptr;
 
 void open(const std::string &filename)
 {
@@ -15,12 +17,13 @@ void open(const std::string &filename)
 
 bool finish(int exit_code)
 {
-  if(!stream) return true;
+  bool proof_ok=proof_path.empty() || (finish_proof && finish_proof(exit_code));
+  if(!stream) return proof_ok;
   std::fprintf(stream, "END\t%d\n", exit_code);
   bool ok = std::ferror(stream) == 0;
   ok = std::fclose(stream) == 0 && ok;
   stream = nullptr;
-  return ok;
+  return ok && proof_ok;
 }
 
 std::string escape(const std::string &field)

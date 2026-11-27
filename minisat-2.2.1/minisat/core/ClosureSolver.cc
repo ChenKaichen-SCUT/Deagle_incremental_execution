@@ -1,6 +1,7 @@
 // __SZH_ADD_BEGIN__
 
 #include "ClosureSolver.h"
+#include <chrono>
 #include "GraphTypes.h"
 
 #include "../../minisat/mtl/Vec.h"
@@ -96,6 +97,7 @@ void ClosureSolver::set_graph()
         if(graph.add_guard_literal(guard_literal, u))
         {
             std::cout << "WARNING: find cycle during set_graph\n";
+            if(proof) proof->theoryEmpty();
             ok = false;
         }
 
@@ -147,6 +149,7 @@ void ClosureSolver::set_graph()
         if(graph.activate_edge(u, v, OC_PO, closure_empty_reason))
         {
             std::cout << "WARNING: Find cycle during set_graph\n";
+            if(proof) proof->theoryEmpty();
             ok = false;
         }
     }
@@ -227,6 +230,7 @@ lbool ClosureSolver::search(int nof_conflicts)
 
     if(graph.use_available_info())
     {
+        if(proof) proof->theoryEmpty();
         std::cout << "WARNING: use_available_info find cycle at the very start\n";
         return l_False;
     }
@@ -236,7 +240,10 @@ lbool ClosureSolver::search(int nof_conflicts)
         if (confl != CRef_Undef){
             // CONFLICT
             conflicts++; conflictC++;
-            if (decisionLevel() == 0) return l_False;
+            if (decisionLevel() == 0) {
+                if(proof) proof->rootConflict(*this,confl);
+                return l_False;
+            }
 
             learnt_clause.clear();
             analyze(confl, learnt_clause, backtrack_level);
@@ -244,9 +251,11 @@ lbool ClosureSolver::search(int nof_conflicts)
             cancelUntil(backtrack_level);
 
             if (learnt_clause.size() == 1){
+                if(proof) proof->tag(proof->lastLearned(),ExplicitUnit);
                 uncheckedEnqueue(learnt_clause[0]);
             }else{
                 CRef cr = ca.alloc(learnt_clause, true);
+                if(proof) proof->bind(cr,proof->lastLearned());
                 learnts.push(cr);
                 attachClause(cr);
                 claBumpActivity(ca[cr]);
@@ -316,6 +325,7 @@ lbool ClosureSolver::search(int nof_conflicts)
             }
 
             // Increase decision level and enqueue 'next'
+            if(proof) proof->tag(0,decisionLevel()<assumptions.size() ? Assumption : Decision);
             newDecisionLevel();
             uncheckedEnqueue(next);
         }
@@ -359,6 +369,8 @@ lbool ClosureSolver::solve_()
     }
 
     // Search:
+    auto proof_start=std::chrono::steady_clock::time_point{};
+    if(proof) { proof_start=std::chrono::steady_clock::now(); ++proof->stats[Queries]; }
     int curr_restarts = 0;
     while (status == l_Undef){
         double rest_base = luby_restart ? luby(restart_inc, curr_restarts) : pow(restart_inc, curr_restarts);
@@ -371,6 +383,9 @@ lbool ClosureSolver::solve_()
         printf("===============================================================================\n");
 
 
+    if(proof)
+        proof->stats[SearchNS]+=std::chrono::duration_cast<std::chrono::nanoseconds>(
+            std::chrono::steady_clock::now()-proof_start).count();
     if (status == l_True){
         // Extend & copy model:
         model.growTo(nVars());
@@ -524,6 +539,7 @@ CRef ClosureSolver::propagate()
                 minisat_lv.push(~l);
 
             confl = ca.alloc(minisat_lv, true);
+            if(proof) proof->bind(confl,proof->opaque(TheoryConflict,minisat_lv));
         }
         else if(!literals_to_assign.empty())//add literals propagated by unit edge
         {
@@ -579,6 +595,7 @@ void ClosureSolver::newDecisionLevel()
 
 void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 {
+    if(proof) proof->beginAnalysis();
     int pathC = 0;
     Lit p     = lit_Undef;
 
@@ -590,6 +607,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
     do{
         assert(confl != CRef_Undef); // (otherwise should be UIP)
         Clause& c = ca[confl];
+        if(proof) proof->analysisParent(*this,confl,p);
 
         if (c.learnt())
             claBumpActivity(c);
@@ -638,10 +656,12 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
                 out_learnt[j++] = out_learnt[i];
             else{
                 Clause& c = ca[reason(var(out_learnt[i]))];
-                for (int k = 1; k < c.size(); k++)
+                int k=1;
+                for (; k < c.size(); k++)
                     if (!seen[var(c[k])] && level(var(c[k])) > 0){
                         out_learnt[j++] = out_learnt[i];
                         break; }
+                if(proof && k==c.size()) proof->basicMin(x);
             }
         }
     }else
@@ -668,6 +688,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
         out_btlevel       = level(var(p));
     }
 
+    if(proof) proof->finishAnalysis(*this,out_learnt);
     for (int j = 0; j < analyze_toclear.size(); j++) seen[var(analyze_toclear[j])] = 0;    // ('seen[]' is now cleared)
 }
 
@@ -722,12 +743,14 @@ void ClosureSolver::apply_literal_assignment()
         {
             if(OC_VERBOSITY >= 1)
                 std::cout << learnt_clause[0].x << " is really assigned\n";
+            if(proof) proof->tag(proof->opaque(TheoryReason,learnt_clause),ExplicitUnit);
             uncheckedEnqueue(learnt_clause[0]);
             theory_propagation++;
         }
         else
         {
             CRef cr = ca.alloc(learnt_clause, true);
+            if(proof) proof->bind(cr,proof->opaque(TheoryReason,learnt_clause));
             learnts.push(cr);
             attachClause(cr);
             claBumpActivity(ca[cr]);
@@ -798,6 +821,7 @@ void ClosureSolver::addMissingCoClauses()
 
         if(observe_co) observe_co(node1, node2, lit12, lit21, guard_lit1, guard_lit2);
         CRef cr = ca.alloc(co_clause, false);
+        if(proof) proof->bind(cr,proof->opaque(DynamicCO,co_clause));
         clauses.push(cr);
         attachClause(cr);
 

@@ -11,6 +11,8 @@ namespace dependency_manifest
 {
 extern std::FILE *stream;
 extern char scope;
+extern std::string proof_path;
+extern bool (*finish_proof)(int);
 void open(const std::string &filename);
 bool finish(int exit_code);
 std::string escape(const std::string &field);
@@ -22,8 +24,8 @@ class scopet
 {
   char previous;
 public:
-  explicit scopet(char value) : previous(scope) { if(stream) scope = value; }
-  ~scopet() { if(stream) scope = previous; }
+  explicit scopet(char value) : previous(scope) { if(stream || !proof_path.empty()) scope = value; }
+  ~scopet() { if(stream || !proof_path.empty()) scope = previous; }
 };
 }
 #endif

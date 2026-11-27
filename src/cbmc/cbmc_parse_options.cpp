@@ -443,11 +443,16 @@ int cbmc_parse_optionst::doit()
 
   optionst options;
   get_command_line_options(options);
-  if(cmdline.isset("d1-manifest"))
+  if(cmdline.isset("d1-manifest") || cmdline.isset("d2-proof"))
   {
     if(!options.get_bool_option("deagle-closure") || options.get_bool_option("refined-pointer-analysis") ||
        (!options.get_option("mm").empty() && options.get_option("mm") != "sc"))
-      throw std::runtime_error("D1 requires native SC Closure and single-pass symex");
+      throw std::runtime_error("dependency recording requires native SC Closure and single-pass symex");
+    if(cmdline.isset("d2-proof"))
+      dependency_manifest::proof_path=cmdline.get_value("d2-proof");
+  }
+  if(cmdline.isset("d1-manifest"))
+  {
     dependency_manifest::open(cmdline.get_value("d1-manifest"));
     std::ostringstream configured;
     options.output(configured);
@@ -1010,6 +1015,7 @@ void cbmc_parse_optionst::help()
     "\n"
     "Backend options:\n"
     HELP_CONFIG_BACKEND
+    " --d2-proof FILE              record the native Boolean proof DAG in a new file\n"
     " --d1-manifest FILE           write D1 identities and scoped inputs to a new file\n"
     HELP_SOLVER
     HELP_STRING_REFINEMENT_CBMC

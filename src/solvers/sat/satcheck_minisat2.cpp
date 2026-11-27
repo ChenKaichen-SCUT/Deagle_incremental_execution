@@ -117,6 +117,15 @@ const std::string satcheck_minisat_simplifiert::solver_text()
 deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
   : satcheck_minisat2_baset<Minisat::ClosureSolver>(handler)
 {
+  if(!dependency_manifest::proof_path.empty())
+  {
+    static std::unique_ptr<Minisat::ProofStore> recording;
+    if(recording || solver->nVars()!=0)
+      throw std::runtime_error("D2 needs one fresh native Closure solver per archive");
+    recording.reset(new Minisat::ProofStore(dependency_manifest::proof_path,&dependency_manifest::scope));
+    solver->proof=recording.get();
+    dependency_manifest::finish_proof=[](int status) { return recording->write(status); };
+  }
   if(!dependency_manifest::stream) return;
   solver->observe_input = [](const Minisat::vec<Minisat::Lit> &ps) {
     auto *f = dependency_manifest::stream;

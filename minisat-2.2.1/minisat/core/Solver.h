@@ -21,6 +21,8 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #ifndef Minisat_Solver_h
 #define Minisat_Solver_h
 
+#include "ProofStore.h"
+
 #include "../../minisat/mtl/Vec.h"
 #include "../../minisat/mtl/Heap.h"
 #include "../../minisat/mtl/Alg.h"
@@ -42,6 +44,8 @@ public:
     Solver();
     virtual ~Solver();
     // Optional observer sees the input before sorting and root simplification.
+    friend class ProofStore;
+    ProofStore *proof = nullptr; // optional non-owning recorder for native Closure
     void (*observe_input)(const vec<Lit>&) = nullptr;
 
     // Problem specification:
