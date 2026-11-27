@@ -1,0 +1,79 @@
+{
+  "stage": "D4.3-A",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/compact-dependency-d43",
+  "review_base": "cf3ba64ee5f9cc7b71e6be61117e483ede830b84",
+  "preregistration": "a436c9f92a88009e1130f1346b949454113ce3ee",
+  "source_and_evidence": {
+    "local_sha": "a554d08f914d968a285cc5753340237ceba2a8a5",
+    "remote_sha": "a554d08f914d968a285cc5753340237ceba2a8a5",
+    "remote": "origin",
+    "index": "evidence/d43a/files.json",
+    "sha256": "8354389eb98a46f97d2b48acee8644d646aa6d3b73a05ae6cde5957a522b7ca6"
+  },
+  "correctness": {
+    "scope": "offline projection under the fixed D4.2 mapping",
+    "births": 152817,
+    "complete_permanent": 97901,
+    "query": 54916,
+    "unknown": 0,
+    "disagreements_with_exact_catalogue": 0,
+    "subset_violations": 0,
+    "usedleaf_order_violations": 0,
+    "independent_direct_walks": 33,
+    "d42_original_results": "verified with target, unwind and observable SAT traces",
+    "same_bytes_replayed": {
+      "per_case_outputs": 44,
+      "aggregate_outputs": 12
+    },
+    "per_clause_sat_rup_or_closure_reproofs": 0
+  },
+  "retention": {
+    "exact": {
+      "eligible": 388,
+      "mixed": 300,
+      "previous_hits": 304,
+      "previous_mixed_hits": 242
+    },
+    "U_audit": {
+      "both_capacities": {
+        "eligible": 330,
+        "mixed": 264,
+        "previous_hits": 257,
+        "previous_mixed_hits": 214
+      }
+    },
+    "U_all": {
+      "compact_small": {
+        "eligible": 38,
+        "mixed": 0,
+        "previous_hits": 34,
+        "previous_mixed_hits": 0
+      },
+      "compact_large": {
+        "eligible": 42,
+        "mixed": 4,
+        "previous_hits": 38,
+        "previous_mixed_hits": 4
+      }
+    },
+    "all_registered_lower_bound_mixed_ordinals_Fibonacci": [
+      229,
+      265,
+      316,
+      918
+    ],
+    "extra_static_catalogue_check": "With the same mu, registering the full enumerable T catalogue would invalidate all four U_all compact-large mixed births."
+  },
+  "decision": "OFFLINE_MIXED_RETENTION_POTENTIAL",
+  "one_configuration_for_review": "compact-large",
+  "selection_basis": "Previously hit mixed births survive both preregistered bounds on one repair only for compact-large.",
+  "U_actual": null,
+  "native_D43_imports_executed": false,
+  "native_D43_use_measured": false,
+  "production_overhead_measured": false,
+  "P1_verification_gain_measured": false,
+  "two_version_cycle_gain_measured": false,
+  "next_stage_started": false,
+  "stop": "Await explicit review."
+}
