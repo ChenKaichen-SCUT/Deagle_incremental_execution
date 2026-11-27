@@ -202,7 +202,7 @@ def corruption_tests(path,checker):
             with tarfile.open(package) as f:
                 member=next(m for m in f.getmembers() if m.name.endswith('/cnf-on/proof.bin'))
                 data=f.extractfile(member).read()
-        elif label=='wrong-graph': decl+='G\\tNODE\\taltered\\n'
+        elif label=='wrong-graph': decl+='G\tNODE\taltered\n'
         else:
             # D3 footer ends with three discharge counters, eighteen native
             # counters, the 32-bit status and four-byte closing marker.
