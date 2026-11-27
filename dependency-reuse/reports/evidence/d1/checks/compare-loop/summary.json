@@ -1,0 +1,2302 @@
+{
+  "schema": "D1-pair-v1",
+  "native_sha256": [
+    "0ba8f7f73e5af6fa0b267c55294db304246eba6090c488ca1cfb7599c94a56a8",
+    "cf41d11ef01cada4845526d66d0c830e1aac847ab31e6f319777c90d940946ba"
+  ],
+  "engine_sha256": "965b41cae93c3f3505e734af8ecad412f5e5b91f2eaa65fc187fb219b821378c",
+  "scope": "one completed native SC Closure query per version",
+  "targets": [
+    [
+      [
+        "main.assertion.1"
+      ]
+    ],
+    [
+      [
+        "main.assertion.1"
+      ]
+    ]
+  ],
+  "assumptions": [
+    [],
+    []
+  ],
+  "variables": {
+    "exclusive_roles": [
+      {
+        "Value": {
+          "matched": 418,
+          "unknown": 448
+        },
+        "Aux": {
+          "matched": 76,
+          "unknown": 77
+        },
+        "Opaque": {
+          "unknown": 116
+        },
+        "RF": {
+          "matched": 7,
+          "unknown": 3
+        }
+      },
+      {
+        "Value": {
+          "matched": 418,
+          "unknown": 448
+        },
+        "Aux": {
+          "matched": 76,
+          "unknown": 77
+        },
+        "Opaque": {
+          "unknown": 116
+        },
+        "RF": {
+          "matched": 7,
+          "unknown": 3
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "matched": 501,
+        "no_semantic_definition": 116,
+        "unmapped_gate_input": 74,
+        "unregistered_symbol_or_type": 288,
+        "ambiguous_dynamic_definition": 128,
+        "peer_alias_absent": 32,
+        "ambiguous_gate_definition": 3,
+        "unresolved_rf_endpoint": 3
+      },
+      {
+        "matched": 501,
+        "no_semantic_definition": 116,
+        "unmapped_gate_input": 74,
+        "unregistered_symbol_or_type": 288,
+        "ambiguous_dynamic_definition": 128,
+        "peer_alias_absent": 32,
+        "ambiguous_gate_definition": 3,
+        "unresolved_rf_endpoint": 3
+      }
+    ],
+    "reasons_by_role": [
+      {
+        "Value": {
+          "matched": 418,
+          "unregistered_symbol_or_type": 288,
+          "ambiguous_dynamic_definition": 128,
+          "peer_alias_absent": 32
+        },
+        "Aux": {
+          "matched": 76,
+          "unmapped_gate_input": 74,
+          "ambiguous_gate_definition": 3
+        },
+        "Opaque": {
+          "no_semantic_definition": 116
+        },
+        "RF": {
+          "matched": 7,
+          "unresolved_rf_endpoint": 3
+        }
+      },
+      {
+        "Value": {
+          "matched": 418,
+          "unregistered_symbol_or_type": 288,
+          "ambiguous_dynamic_definition": 128,
+          "peer_alias_absent": 32
+        },
+        "Aux": {
+          "matched": 76,
+          "unmapped_gate_input": 74,
+          "ambiguous_gate_definition": 3
+        },
+        "Opaque": {
+          "no_semantic_definition": 116
+        },
+        "RF": {
+          "matched": 7,
+          "unresolved_rf_endpoint": 3
+        }
+      }
+    ],
+    "examples": [
+      {
+        "matched": [
+          [
+            1,
+            2,
+            "matched",
+            "Value",
+            3319
+          ],
+          [
+            2,
+            4,
+            "matched",
+            "Value",
+            3320
+          ],
+          [
+            3,
+            6,
+            "matched",
+            "Aux",
+            0
+          ]
+        ],
+        "no_semantic_definition": [
+          [
+            5,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ],
+          [
+            74,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ],
+          [
+            75,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ]
+        ],
+        "unmapped_gate_input": [
+          [
+            70,
+            -1,
+            "unmapped_gate_input:10",
+            "Aux",
+            0
+          ],
+          [
+            71,
+            -1,
+            "unmapped_gate_input:140",
+            "Aux",
+            0
+          ],
+          [
+            72,
+            -1,
+            "unmapped_gate_input:142",
+            "Aux",
+            0
+          ]
+        ],
+        "unregistered_symbol_or_type": [
+          [
+            77,
+            -1,
+            "unregistered_symbol_or_type",
+            "Value",
+            0
+          ],
+          [
+            78,
+            -1,
+            "unregistered_symbol_or_type",
+            "Value",
+            0
+          ],
+          [
+            79,
+            -1,
+            "unregistered_symbol_or_type",
+            "Value",
+            0
+          ]
+        ],
+        "ambiguous_dynamic_definition": [
+          [
+            307,
+            -1,
+            "ambiguous_dynamic_definition",
+            "Value",
+            0
+          ],
+          [
+            308,
+            -1,
+            "ambiguous_dynamic_definition",
+            "Value",
+            0
+          ],
+          [
+            309,
+            -1,
+            "ambiguous_dynamic_definition",
+            "Value",
+            0
+          ]
+        ],
+        "peer_alias_absent": [
+          [
+            628,
+            -1,
+            "peer_alias_absent",
+            "Value",
+            0
+          ],
+          [
+            629,
+            -1,
+            "peer_alias_absent",
+            "Value",
+            0
+          ],
+          [
+            630,
+            -1,
+            "peer_alias_absent",
+            "Value",
+            0
+          ]
+        ],
+        "ambiguous_gate_definition": [
+          [
+            955,
+            -1,
+            "ambiguous_gate_definition",
+            "Aux",
+            0
+          ],
+          [
+            958,
+            -1,
+            "ambiguous_gate_definition",
+            "Aux",
+            0
+          ],
+          [
+            1047,
+            -1,
+            "ambiguous_gate_definition",
+            "Aux",
+            0
+          ]
+        ],
+        "unresolved_rf_endpoint": [
+          [
+            965,
+            -1,
+            "unresolved_rf_endpoint",
+            "RF",
+            0
+          ],
+          [
+            968,
+            -1,
+            "unresolved_rf_endpoint",
+            "RF",
+            0
+          ],
+          [
+            973,
+            -1,
+            "unresolved_rf_endpoint",
+            "RF",
+            0
+          ]
+        ]
+      },
+      {
+        "matched": [
+          [
+            1,
+            2,
+            "matched",
+            "Value",
+            3319
+          ],
+          [
+            2,
+            4,
+            "matched",
+            "Value",
+            3320
+          ],
+          [
+            3,
+            6,
+            "matched",
+            "Aux",
+            0
+          ]
+        ],
+        "no_semantic_definition": [
+          [
+            5,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ],
+          [
+            74,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ],
+          [
+            75,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ]
+        ],
+        "unmapped_gate_input": [
+          [
+            70,
+            -1,
+            "unmapped_gate_input:10",
+            "Aux",
+            0
+          ],
+          [
+            71,
+            -1,
+            "unmapped_gate_input:140",
+            "Aux",
+            0
+          ],
+          [
+            72,
+            -1,
+            "unmapped_gate_input:142",
+            "Aux",
+            0
+          ]
+        ],
+        "unregistered_symbol_or_type": [
+          [
+            77,
+            -1,
+            "unregistered_symbol_or_type",
+            "Value",
+            0
+          ],
+          [
+            78,
+            -1,
+            "unregistered_symbol_or_type",
+            "Value",
+            0
+          ],
+          [
+            79,
+            -1,
+            "unregistered_symbol_or_type",
+            "Value",
+            0
+          ]
+        ],
+        "ambiguous_dynamic_definition": [
+          [
+            307,
+            -1,
+            "ambiguous_dynamic_definition",
+            "Value",
+            0
+          ],
+          [
+            308,
+            -1,
+            "ambiguous_dynamic_definition",
+            "Value",
+            0
+          ],
+          [
+            309,
+            -1,
+            "ambiguous_dynamic_definition",
+            "Value",
+            0
+          ]
+        ],
+        "peer_alias_absent": [
+          [
+            628,
+            -1,
+            "peer_alias_absent",
+            "Value",
+            0
+          ],
+          [
+            629,
+            -1,
+            "peer_alias_absent",
+            "Value",
+            0
+          ],
+          [
+            630,
+            -1,
+            "peer_alias_absent",
+            "Value",
+            0
+          ]
+        ],
+        "ambiguous_gate_definition": [
+          [
+            955,
+            -1,
+            "ambiguous_gate_definition",
+            "Aux",
+            0
+          ],
+          [
+            958,
+            -1,
+            "ambiguous_gate_definition",
+            "Aux",
+            0
+          ],
+          [
+            1047,
+            -1,
+            "ambiguous_gate_definition",
+            "Aux",
+            0
+          ]
+        ],
+        "unresolved_rf_endpoint": [
+          [
+            965,
+            -1,
+            "unresolved_rf_endpoint",
+            "RF",
+            0
+          ],
+          [
+            968,
+            -1,
+            "unresolved_rf_endpoint",
+            "RF",
+            0
+          ],
+          [
+            973,
+            -1,
+            "unresolved_rf_endpoint",
+            "RF",
+            0
+          ]
+        ]
+      }
+    ],
+    "matched": 501,
+    "totals": [
+      1145,
+      1145
+    ],
+    "constant_aliases": [
+      {
+        "Guard": 15,
+        "Value": 1924
+      },
+      {
+        "Guard": 15,
+        "Value": 1924
+      }
+    ]
+  },
+  "clauses": {
+    "occurrences": {
+      "Q": {
+        "P0_matched": 65,
+        "P1_matched": 65,
+        "P0_unknown": 290,
+        "P1_unknown": 290
+      },
+      "B": {
+        "P0_matched": 766,
+        "P1_matched": 766,
+        "P0_unknown": 1033,
+        "P1_unknown": 1033
+      }
+    },
+    "distinct_resolved_keys": {
+      "Q": {
+        "P0_matched": 65,
+        "P1_matched": 65
+      },
+      "B": {
+        "P0_matched": 766,
+        "P1_matched": 766
+      }
+    },
+    "reasons": {
+      "B": {
+        "P0/literal": 1033,
+        "P1/literal": 1033
+      },
+      "Q": {
+        "P0/literal": 290,
+        "P1/literal": 290
+      }
+    },
+    "examples": {
+      "B": {
+        "P0_matched": [
+          [
+            1,
+            1,
+            "-"
+          ],
+          [
+            2,
+            2,
+            "-"
+          ],
+          [
+            3,
+            3,
+            "-"
+          ]
+        ],
+        "P0_unknown": [
+          [
+            7,
+            0,
+            "literal:141"
+          ],
+          [
+            8,
+            0,
+            "literal:10"
+          ],
+          [
+            9,
+            0,
+            "literal:11"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            1,
+            "-"
+          ],
+          [
+            2,
+            2,
+            "-"
+          ],
+          [
+            3,
+            3,
+            "-"
+          ]
+        ],
+        "P1_unknown": [
+          [
+            7,
+            0,
+            "literal:141"
+          ],
+          [
+            8,
+            0,
+            "literal:10"
+          ],
+          [
+            9,
+            0,
+            "literal:11"
+          ]
+        ]
+      },
+      "Q": {
+        "P0_unknown": [
+          [
+            1800,
+            0,
+            "literal:144"
+          ],
+          [
+            1801,
+            0,
+            "literal:2095"
+          ],
+          [
+            1802,
+            0,
+            "literal:2095"
+          ]
+        ],
+        "P0_matched": [
+          [
+            1838,
+            767,
+            "-"
+          ],
+          [
+            1839,
+            768,
+            "-"
+          ],
+          [
+            1840,
+            769,
+            "-"
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1800,
+            0,
+            "literal:144"
+          ],
+          [
+            1801,
+            0,
+            "literal:2095"
+          ],
+          [
+            1802,
+            0,
+            "literal:2095"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1838,
+            767,
+            "-"
+          ],
+          [
+            1839,
+            768,
+            "-"
+          ],
+          [
+            1840,
+            769,
+            "-"
+          ]
+        ]
+      }
+    }
+  },
+  "theory": {
+    "occurrences": {
+      "RuleConfig": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "EventIdentity": {
+        "P0_unknown": 9,
+        "P0_matched": 19,
+        "P1_unknown": 9,
+        "P1_matched": 19
+      },
+      "EventSchema": {
+        "P0_matched": 15,
+        "P0_unknown": 12,
+        "P1_matched": 15,
+        "P1_unknown": 12
+      },
+      "SameAddress": {
+        "P0_matched": 11,
+        "P0_unknown": 9,
+        "P1_matched": 11,
+        "P1_unknown": 9
+      },
+      "CompleteWriteDomain": {
+        "P0_matched": 2,
+        "P0_unknown": 3,
+        "P1_matched": 2,
+        "P1_unknown": 3
+      },
+      "BlockCertificate": {
+        "P0_matched": 18,
+        "P0_unknown": 8,
+        "P1_matched": 18,
+        "P1_unknown": 8
+      },
+      "GuardDefinition": {
+        "P0_unknown": 7,
+        "P0_matched": 14,
+        "P1_unknown": 7,
+        "P1_matched": 14
+      },
+      "GuardBinding": {
+        "P0_unknown": 7,
+        "P0_matched": 14,
+        "P1_unknown": 7,
+        "P1_matched": 14
+      },
+      "ValueDefinition": {
+        "P0_unknown": 27,
+        "P0_matched": 30,
+        "P0_retired": 3,
+        "P1_unknown": 27,
+        "P1_matched": 30,
+        "P1_added": 3
+      },
+      "RFIdentity": {
+        "P0_matched": 7,
+        "P0_unknown": 3,
+        "P1_matched": 7,
+        "P1_unknown": 3
+      },
+      "RFBinding": {
+        "P0_matched": 7,
+        "P0_unknown": 3,
+        "P1_matched": 7,
+        "P1_unknown": 3
+      },
+      "PO": {
+        "P0_matched": 15,
+        "P0_unknown": 13,
+        "P1_matched": 15,
+        "P1_unknown": 13
+      },
+      "APO": {
+        "P0_unknown": 1,
+        "P1_unknown": 1
+      },
+      "CompleteRFDomain": {
+        "P0_matched": 3,
+        "P0_unknown": 2,
+        "P1_matched": 3,
+        "P1_unknown": 2
+      },
+      "QueryScope": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      }
+    },
+    "distinct_resolved_keys": {
+      "RuleConfig": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "EventIdentity": {
+        "P0_matched": 19,
+        "P1_matched": 19
+      },
+      "EventSchema": {
+        "P0_matched": 15,
+        "P1_matched": 15
+      },
+      "SameAddress": {
+        "P0_matched": 11,
+        "P1_matched": 11
+      },
+      "CompleteWriteDomain": {
+        "P0_matched": 2,
+        "P1_matched": 2
+      },
+      "BlockCertificate": {
+        "P0_matched": 18,
+        "P1_matched": 18
+      },
+      "GuardDefinition": {
+        "P0_matched": 14,
+        "P1_matched": 14
+      },
+      "GuardBinding": {
+        "P0_matched": 14,
+        "P1_matched": 14
+      },
+      "ValueDefinition": {
+        "P0_matched": 30,
+        "P0_retired": 3,
+        "P1_matched": 30,
+        "P1_added": 3
+      },
+      "RFIdentity": {
+        "P0_matched": 7,
+        "P1_matched": 7
+      },
+      "RFBinding": {
+        "P0_matched": 7,
+        "P1_matched": 7
+      },
+      "PO": {
+        "P0_matched": 15,
+        "P1_matched": 15
+      },
+      "CompleteRFDomain": {
+        "P0_matched": 3,
+        "P1_matched": 3
+      },
+      "QueryScope": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      }
+    },
+    "reasons": {
+      "EventIdentity": {
+        "P0/unsupported_object_or_type": 9,
+        "P1/unsupported_object_or_type": 9
+      },
+      "EventSchema": {
+        "P0/unsupported_object_or_type": 9,
+        "P0/unresolved_address_interpretation": 3,
+        "P1/unsupported_object_or_type": 9,
+        "P1/unresolved_address_interpretation": 3
+      },
+      "SameAddress": {
+        "P0/unresolved_endpoint_or_native_address": 9,
+        "P1/unresolved_endpoint_or_native_address": 9
+      },
+      "CompleteWriteDomain": {
+        "P0/incomplete_address_write_domain": 3,
+        "P1/incomplete_address_write_domain": 3
+      },
+      "BlockCertificate": {
+        "P0/unresolved_block_member": 8,
+        "P1/unresolved_block_member": 8
+      },
+      "GuardDefinition": {
+        "P0/unresolved_guard_event": 7,
+        "P1/unresolved_guard_event": 7
+      },
+      "GuardBinding": {
+        "P0/unresolved_guard_event": 7,
+        "P1/unresolved_guard_event": 7
+      },
+      "ValueDefinition": {
+        "P0/unsupported_expression_type": 23,
+        "P0/unsupported_expression_operator:nondet_symbol": 1,
+        "P0/ambiguous_dynamic_definition": 2,
+        "P0/missing_dynamic_context": 1,
+        "P1/unsupported_expression_type": 23,
+        "P1/unsupported_expression_operator:nondet_symbol": 1,
+        "P1/ambiguous_dynamic_definition": 2,
+        "P1/missing_dynamic_context": 1
+      },
+      "RFIdentity": {
+        "P0/unresolved_rf_endpoint": 3,
+        "P1/unresolved_rf_endpoint": 3
+      },
+      "RFBinding": {
+        "P0/unresolved_rf_endpoint": 3,
+        "P1/unresolved_rf_endpoint": 3
+      },
+      "PO": {
+        "P0/unresolved_order_endpoint": 13,
+        "P1/unresolved_order_endpoint": 13
+      },
+      "APO": {
+        "P0/unresolved_order_endpoint": 1,
+        "P1/unresolved_order_endpoint": 1
+      },
+      "CompleteRFDomain": {
+        "P0/unresolved_rf_candidate": 2,
+        "P1/unresolved_rf_candidate": 2
+      }
+    },
+    "examples": {
+      "RuleConfig": {
+        "P0_matched": [
+          [
+            0,
+            "RuleConfig",
+            "native-SC",
+            "config",
+            3321,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "RuleConfig",
+            "native-SC",
+            "config",
+            3321,
+            "matched",
+            ""
+          ]
+        ]
+      },
+      "EventIdentity": {
+        "P0_unknown": [
+          [
+            0,
+            "EventIdentity",
+            "__CPROVER_alloca_object#1",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ],
+          [
+            0,
+            "EventIdentity",
+            "__CPROVER_dead_object#1",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ]
+        ],
+        "P0_matched": [
+          [
+            0,
+            "EventIdentity",
+            "__CPROVER_malloc_is_new_array#1",
+            159,
+            3322,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "EventIdentity",
+            "__CPROVER_max_malloc_size#1",
+            160,
+            3323,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "EventIdentity",
+            "__CPROVER_alloca_object#1",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ],
+          [
+            1,
+            "EventIdentity",
+            "__CPROVER_dead_object#1",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "EventIdentity",
+            "__CPROVER_malloc_is_new_array#1",
+            159,
+            3322,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "EventIdentity",
+            "__CPROVER_max_malloc_size#1",
+            160,
+            3323,
+            "matched",
+            ""
+          ]
+        ]
+      },
+      "EventSchema": {
+        "P0_matched": [
+          [
+            0,
+            "EventSchema",
+            "value#1",
+            165,
+            3342,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "EventSchema",
+            "value#2",
+            174,
+            3343,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "EventSchema",
+            "__CPROVER_threads_exited#1",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ],
+          [
+            0,
+            "EventSchema",
+            "__CPROVER_threads_exited#2",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "EventSchema",
+            "value#1",
+            165,
+            3342,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "EventSchema",
+            "value#2",
+            174,
+            3343,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "EventSchema",
+            "__CPROVER_threads_exited#1",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ],
+          [
+            1,
+            "EventSchema",
+            "__CPROVER_threads_exited#2",
+            0,
+            0,
+            "unknown",
+            "unsupported_object_or_type"
+          ]
+        ]
+      },
+      "SameAddress": {
+        "P0_matched": [
+          [
+            0,
+            "SameAddress",
+            [
+              "0",
+              "1"
+            ],
+            [
+              165,
+              174
+            ],
+            3363,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "SameAddress",
+            [
+              "0",
+              "2"
+            ],
+            [
+              165,
+              175
+            ],
+            3364,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "SameAddress",
+            [
+              "4",
+              "5"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_endpoint_or_native_address"
+          ],
+          [
+            0,
+            "SameAddress",
+            [
+              "4",
+              "6"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_endpoint_or_native_address"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "SameAddress",
+            [
+              "0",
+              "1"
+            ],
+            [
+              165,
+              174
+            ],
+            3363,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "SameAddress",
+            [
+              "0",
+              "2"
+            ],
+            [
+              165,
+              175
+            ],
+            3364,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "SameAddress",
+            [
+              "4",
+              "5"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_endpoint_or_native_address"
+          ],
+          [
+            1,
+            "SameAddress",
+            [
+              "4",
+              "6"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_endpoint_or_native_address"
+          ]
+        ]
+      },
+      "CompleteWriteDomain": {
+        "P0_matched": [
+          [
+            0,
+            "CompleteWriteDomain",
+            "1",
+            174,
+            3369,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "CompleteWriteDomain",
+            "9",
+            173,
+            3373,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "CompleteWriteDomain",
+            "5",
+            0,
+            0,
+            "unknown",
+            "incomplete_address_write_domain"
+          ],
+          [
+            0,
+            "CompleteWriteDomain",
+            "7",
+            0,
+            0,
+            "unknown",
+            "incomplete_address_write_domain"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "CompleteWriteDomain",
+            "1",
+            174,
+            3369,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "CompleteWriteDomain",
+            "9",
+            173,
+            3373,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "CompleteWriteDomain",
+            "5",
+            0,
+            0,
+            "unknown",
+            "incomplete_address_write_domain"
+          ],
+          [
+            1,
+            "CompleteWriteDomain",
+            "7",
+            0,
+            0,
+            "unknown",
+            "incomplete_address_write_domain"
+          ]
+        ]
+      },
+      "BlockCertificate": {
+        "P0_matched": [
+          [
+            0,
+            "BlockCertificate",
+            [
+              "0"
+            ],
+            [
+              165
+            ],
+            3376,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "BlockCertificate",
+            [
+              "1"
+            ],
+            [
+              174
+            ],
+            3377,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "BlockCertificate",
+            [
+              "4"
+            ],
+            [
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_block_member"
+          ],
+          [
+            0,
+            "BlockCertificate",
+            [
+              "5"
+            ],
+            [
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_block_member"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "BlockCertificate",
+            [
+              "0"
+            ],
+            [
+              165
+            ],
+            3376,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "BlockCertificate",
+            [
+              "1"
+            ],
+            [
+              174
+            ],
+            3377,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "BlockCertificate",
+            [
+              "4"
+            ],
+            [
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_block_member"
+          ],
+          [
+            1,
+            "BlockCertificate",
+            [
+              "5"
+            ],
+            [
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_block_member"
+          ]
+        ]
+      },
+      "GuardDefinition": {
+        "P0_unknown": [
+          [
+            0,
+            "GuardDefinition",
+            "__CPROVER_alloca_object#1",
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ],
+          [
+            0,
+            "GuardDefinition",
+            "__CPROVER_dead_object#1",
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ]
+        ],
+        "P0_matched": [
+          [
+            0,
+            "GuardDefinition",
+            "__CPROVER_malloc_is_new_array#1",
+            159,
+            3395,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "GuardDefinition",
+            "__CPROVER_max_malloc_size#1",
+            160,
+            3397,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "GuardDefinition",
+            "__CPROVER_alloca_object#1",
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ],
+          [
+            1,
+            "GuardDefinition",
+            "__CPROVER_dead_object#1",
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "GuardDefinition",
+            "__CPROVER_malloc_is_new_array#1",
+            159,
+            3395,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "GuardDefinition",
+            "__CPROVER_max_malloc_size#1",
+            160,
+            3397,
+            "matched",
+            ""
+          ]
+        ]
+      },
+      "GuardBinding": {
+        "P0_unknown": [
+          [
+            0,
+            "GuardBinding",
+            [
+              "__CPROVER_alloca_object#1",
+              "-1"
+            ],
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ],
+          [
+            0,
+            "GuardBinding",
+            [
+              "__CPROVER_dead_object#1",
+              "-1"
+            ],
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ]
+        ],
+        "P0_matched": [
+          [
+            0,
+            "GuardBinding",
+            [
+              "__CPROVER_malloc_is_new_array#1",
+              "-1"
+            ],
+            159,
+            3396,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "GuardBinding",
+            [
+              "__CPROVER_max_malloc_size#1",
+              "-1"
+            ],
+            160,
+            3398,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "GuardBinding",
+            [
+              "__CPROVER_alloca_object#1",
+              "-1"
+            ],
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ],
+          [
+            1,
+            "GuardBinding",
+            [
+              "__CPROVER_dead_object#1",
+              "-1"
+            ],
+            0,
+            0,
+            "unknown",
+            "unresolved_guard_event"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "GuardBinding",
+            [
+              "__CPROVER_malloc_is_new_array#1",
+              "-1"
+            ],
+            159,
+            3396,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "GuardBinding",
+            [
+              "__CPROVER_max_malloc_size#1",
+              "-1"
+            ],
+            160,
+            3398,
+            "matched",
+            ""
+          ]
+        ]
+      },
+      "ValueDefinition": {
+        "P0_unknown": [
+          [
+            0,
+            "ValueDefinition",
+            "__CPROVER_alloca_object#1",
+            [],
+            0,
+            "unknown",
+            "unsupported_expression_type"
+          ],
+          [
+            0,
+            "ValueDefinition",
+            "__CPROVER_dead_object#1",
+            [],
+            0,
+            "unknown",
+            "unsupported_expression_type"
+          ]
+        ],
+        "P0_matched": [
+          [
+            0,
+            "ValueDefinition",
+            "__CPROVER_malloc_is_new_array#1",
+            [
+              178,
+              179
+            ],
+            3424,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "ValueDefinition",
+            "__CPROVER_max_malloc_size#1",
+            [
+              180,
+              181
+            ],
+            3426,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_retired": [
+          [
+            0,
+            "ValueDefinition",
+            "store::1::1::step!1@1#2",
+            [
+              227
+            ],
+            3465,
+            "retired",
+            ""
+          ],
+          [
+            0,
+            "ValueDefinition",
+            "store::1::1::step!1@1#3",
+            [
+              230
+            ],
+            3468,
+            "retired",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "ValueDefinition",
+            "__CPROVER_alloca_object#1",
+            [],
+            0,
+            "unknown",
+            "unsupported_expression_type"
+          ],
+          [
+            1,
+            "ValueDefinition",
+            "__CPROVER_dead_object#1",
+            [],
+            0,
+            "unknown",
+            "unsupported_expression_type"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "ValueDefinition",
+            "__CPROVER_malloc_is_new_array#1",
+            [
+              178,
+              179
+            ],
+            3424,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "ValueDefinition",
+            "__CPROVER_max_malloc_size#1",
+            [
+              180,
+              181
+            ],
+            3426,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "ValueDefinition",
+            "store::1::1::attempt!1@1#2",
+            [
+              2765
+            ],
+            3505,
+            "added",
+            ""
+          ],
+          [
+            1,
+            "ValueDefinition",
+            "store::1::1::attempt!1@1#3",
+            [
+              2766
+            ],
+            3506,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "RFIdentity": {
+        "P0_matched": [
+          [
+            0,
+            "RFIdentity",
+            [
+              "value#1",
+              "value#2"
+            ],
+            [
+              165,
+              174
+            ],
+            3472,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "RFIdentity",
+            [
+              "value#3",
+              "value#2"
+            ],
+            [
+              175,
+              174
+            ],
+            3474,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "RFIdentity",
+            [
+              "__CPROVER_threads_exited#1",
+              "__CPROVER_threads_exited#2"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ],
+          [
+            0,
+            "RFIdentity",
+            [
+              "__CPROVER_threads_exited#4",
+              "__CPROVER_threads_exited#2"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "RFIdentity",
+            [
+              "value#1",
+              "value#2"
+            ],
+            [
+              165,
+              174
+            ],
+            3472,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "RFIdentity",
+            [
+              "value#3",
+              "value#2"
+            ],
+            [
+              175,
+              174
+            ],
+            3474,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "RFIdentity",
+            [
+              "__CPROVER_threads_exited#1",
+              "__CPROVER_threads_exited#2"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ],
+          [
+            1,
+            "RFIdentity",
+            [
+              "__CPROVER_threads_exited#4",
+              "__CPROVER_threads_exited#2"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ]
+        ]
+      },
+      "RFBinding": {
+        "P0_matched": [
+          [
+            0,
+            "RFBinding",
+            [
+              "value#1",
+              "value#2",
+              "1838"
+            ],
+            [
+              165,
+              174
+            ],
+            3473,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "RFBinding",
+            [
+              "value#3",
+              "value#2",
+              "1908"
+            ],
+            [
+              175,
+              174
+            ],
+            3475,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "RFBinding",
+            [
+              "__CPROVER_threads_exited#1",
+              "__CPROVER_threads_exited#2",
+              "1930"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ],
+          [
+            0,
+            "RFBinding",
+            [
+              "__CPROVER_threads_exited#4",
+              "__CPROVER_threads_exited#2",
+              "1936"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "RFBinding",
+            [
+              "value#1",
+              "value#2",
+              "1838"
+            ],
+            [
+              165,
+              174
+            ],
+            3473,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "RFBinding",
+            [
+              "value#3",
+              "value#2",
+              "1908"
+            ],
+            [
+              175,
+              174
+            ],
+            3475,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "RFBinding",
+            [
+              "__CPROVER_threads_exited#1",
+              "__CPROVER_threads_exited#2",
+              "1930"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ],
+          [
+            1,
+            "RFBinding",
+            [
+              "__CPROVER_threads_exited#4",
+              "__CPROVER_threads_exited#2",
+              "1936"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_rf_endpoint"
+          ]
+        ]
+      },
+      "PO": {
+        "P0_matched": [
+          [
+            0,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "value#3"
+            ],
+            [
+              171,
+              175
+            ],
+            3486,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "value#4"
+            ],
+            [
+              171,
+              176
+            ],
+            3487,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "__CPROVER_threads_exited#3"
+            ],
+            [
+              171,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_order_endpoint"
+          ],
+          [
+            0,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "__CPROVER_threads_exited#4"
+            ],
+            [
+              171,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_order_endpoint"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "value#3"
+            ],
+            [
+              171,
+              175
+            ],
+            3486,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "value#4"
+            ],
+            [
+              171,
+              176
+            ],
+            3487,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "__CPROVER_threads_exited#3"
+            ],
+            [
+              171,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_order_endpoint"
+          ],
+          [
+            1,
+            "PO",
+            [
+              "t1$18$spwnclk",
+              "__CPROVER_threads_exited#4"
+            ],
+            [
+              171,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_order_endpoint"
+          ]
+        ]
+      },
+      "APO": {
+        "P0_unknown": [
+          [
+            0,
+            "APO",
+            [
+              "__CPROVER_threads_exited#3",
+              "__CPROVER_threads_exited#4"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_order_endpoint"
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "APO",
+            [
+              "__CPROVER_threads_exited#3",
+              "__CPROVER_threads_exited#4"
+            ],
+            [
+              0,
+              0
+            ],
+            0,
+            "unknown",
+            "unresolved_order_endpoint"
+          ]
+        ]
+      },
+      "CompleteRFDomain": {
+        "P0_matched": [
+          [
+            0,
+            "CompleteRFDomain",
+            "value#2",
+            174,
+            3501,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "CompleteRFDomain",
+            "__CPROVER_next_thread_id#3",
+            173,
+            3502,
+            "matched",
+            ""
+          ]
+        ],
+        "P0_unknown": [
+          [
+            0,
+            "CompleteRFDomain",
+            "__CPROVER_threads_exited#2",
+            0,
+            0,
+            "unknown",
+            "unresolved_rf_candidate"
+          ],
+          [
+            0,
+            "CompleteRFDomain",
+            "__CPROVER_threads_exited#3",
+            0,
+            0,
+            "unknown",
+            "unresolved_rf_candidate"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "CompleteRFDomain",
+            "value#2",
+            174,
+            3501,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "CompleteRFDomain",
+            "__CPROVER_next_thread_id#3",
+            173,
+            3502,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "CompleteRFDomain",
+            "__CPROVER_threads_exited#2",
+            0,
+            0,
+            "unknown",
+            "unresolved_rf_candidate"
+          ],
+          [
+            1,
+            "CompleteRFDomain",
+            "__CPROVER_threads_exited#3",
+            0,
+            0,
+            "unknown",
+            "unresolved_rf_candidate"
+          ]
+        ]
+      },
+      "QueryScope": {
+        "P0_matched": [
+          [
+            0,
+            "QueryScope",
+            [
+              [
+                "main.assertion.1"
+              ]
+            ],
+            "query",
+            3504,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "QueryScope",
+            [
+              [
+                "main.assertion.1"
+              ]
+            ],
+            "query",
+            3504,
+            "matched",
+            ""
+          ]
+        ]
+      }
+    }
+  },
+  "analysis_wall_s": 0.05424759100424126,
+  "evidence_compression_and_digest_wall_s": 0.002830751007422805
+}

@@ -1,0 +1,228 @@
+[
+  {
+    "case": "airline_reservations_6",
+    "side": "P0",
+    "raw_record_counts": {
+      "DEAGLE-D1": 1,
+      "K": 1,
+      "S": 106,
+      "X": 557,
+      "E": 162,
+      "V": 473,
+      "G": 178105,
+      "C": 910797,
+      "TERM": 315,
+      "VALUE_DEF": 326,
+      "H": 66,
+      "F": 734,
+      "MEMBER": 132,
+      "NODE": 132,
+      "IN": 35,
+      "OUT": 35,
+      "EDGE": 931,
+      "GUARD": 66,
+      "QUERY": 1,
+      "TARGET": 1,
+      "A": 45617,
+      "N": 1,
+      "END": 1
+    },
+    "raw_guards": {
+      "true": 30,
+      "variable": 36
+    },
+    "raw_folded_bit_rows": {
+      "-1": 123,
+      "-2": 10598
+    },
+    "native_bytes": 27916913
+  },
+  {
+    "case": "airline_reservations_6",
+    "side": "P1",
+    "raw_record_counts": {
+      "DEAGLE-D1": 1,
+      "K": 1,
+      "S": 104,
+      "X": 467,
+      "E": 126,
+      "V": 413,
+      "G": 55579,
+      "C": 287511,
+      "TERM": 261,
+      "VALUE_DEF": 290,
+      "H": 54,
+      "F": 332,
+      "MEMBER": 108,
+      "NODE": 108,
+      "IN": 23,
+      "OUT": 23,
+      "EDGE": 481,
+      "GUARD": 54,
+      "QUERY": 1,
+      "TARGET": 1,
+      "A": 32159,
+      "N": 1,
+      "END": 1
+    },
+    "raw_guards": {
+      "true": 30,
+      "variable": 24
+    },
+    "raw_folded_bit_rows": {
+      "-2": 9752,
+      "-1": 105
+    },
+    "native_bytes": 9209259
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P0",
+    "raw_record_counts": {
+      "DEAGLE-D1": 1,
+      "K": 1,
+      "S": 161,
+      "X": 683,
+      "E": 511,
+      "V": 907,
+      "G": 210731,
+      "C": 1161979,
+      "TERM": 1339,
+      "VALUE_DEF": 413,
+      "H": 190,
+      "F": 2227,
+      "MEMBER": 481,
+      "NODE": 481,
+      "IN": 31,
+      "OUT": 31,
+      "EDGE": 3129,
+      "GUARD": 190,
+      "QUERY": 1,
+      "TARGET": 1,
+      "A": 43802,
+      "N": 1,
+      "END": 1
+    },
+    "raw_guards": {
+      "true": 48,
+      "variable": 142
+    },
+    "raw_folded_bit_rows": {
+      "-1": 343,
+      "-2": 4906
+    },
+    "native_bytes": 34996674
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P1",
+    "raw_record_counts": {
+      "DEAGLE-D1": 1,
+      "K": 1,
+      "S": 169,
+      "X": 704,
+      "E": 511,
+      "V": 939,
+      "G": 210866,
+      "C": 1163110,
+      "TERM": 1396,
+      "VALUE_DEF": 443,
+      "H": 190,
+      "F": 2227,
+      "MEMBER": 481,
+      "NODE": 481,
+      "IN": 31,
+      "OUT": 31,
+      "EDGE": 3129,
+      "GUARD": 190,
+      "QUERY": 1,
+      "TARGET": 1,
+      "A": 45018,
+      "N": 1,
+      "END": 1
+    },
+    "raw_guards": {
+      "true": 48,
+      "variable": 142
+    },
+    "raw_folded_bit_rows": {
+      "-1": 336,
+      "-2": 5742
+    },
+    "native_bytes": 35088192
+  },
+  {
+    "case": "fib_updates_8",
+    "side": "P0",
+    "raw_record_counts": {
+      "DEAGLE-D1": 1,
+      "K": 1,
+      "S": 100,
+      "X": 239,
+      "E": 83,
+      "V": 239,
+      "G": 8422,
+      "C": 50065,
+      "TERM": 145,
+      "VALUE_DEF": 152,
+      "H": 36,
+      "F": 256,
+      "MEMBER": 81,
+      "NODE": 81,
+      "IN": 51,
+      "OUT": 51,
+      "EDGE": 386,
+      "GUARD": 36,
+      "QUERY": 1,
+      "TARGET": 1,
+      "A": 9285,
+      "N": 1,
+      "END": 1
+    },
+    "raw_guards": {
+      "true": 36
+    },
+    "raw_folded_bit_rows": {
+      "-1": 51,
+      "-2": 4046
+    },
+    "native_bytes": 1693339
+  },
+  {
+    "case": "fib_updates_8",
+    "side": "P1",
+    "raw_record_counts": {
+      "DEAGLE-D1": 1,
+      "K": 1,
+      "S": 100,
+      "X": 239,
+      "E": 83,
+      "V": 239,
+      "G": 7926,
+      "C": 48329,
+      "TERM": 145,
+      "VALUE_DEF": 152,
+      "H": 36,
+      "F": 256,
+      "MEMBER": 81,
+      "NODE": 81,
+      "IN": 51,
+      "OUT": 51,
+      "EDGE": 386,
+      "GUARD": 36,
+      "QUERY": 1,
+      "TARGET": 1,
+      "A": 9285,
+      "N": 1,
+      "END": 1
+    },
+    "raw_guards": {
+      "true": 36
+    },
+    "raw_folded_bit_rows": {
+      "-1": 51,
+      "-2": 4046
+    },
+    "native_bytes": 1647946
+  }
+]

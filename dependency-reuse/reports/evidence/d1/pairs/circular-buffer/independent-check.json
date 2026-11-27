@@ -1,0 +1,31 @@
+{
+  "verified_occurrences": [
+    {
+      "B": 1160134,
+      "Q": 1845
+    },
+    {
+      "B": 1161265,
+      "Q": 1845
+    }
+  ],
+  "verified_variable_pairs": 22865,
+  "boolean_witness": {
+    "key": 1596,
+    "old_occurrence": 36592,
+    "old_raw": [
+      32410,
+      32815
+    ],
+    "new_occurrence": 36641,
+    "new_raw": [
+      32414,
+      32819
+    ],
+    "canonical": [
+      32410,
+      32815
+    ],
+    "different_local_literals": true
+  }
+}

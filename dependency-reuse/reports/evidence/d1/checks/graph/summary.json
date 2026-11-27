@@ -1,0 +1,928 @@
+{
+  "schema": "D1-pair-v1",
+  "native_sha256": [
+    "87e8c7cc03662ffa886b96d89e990f1185005333afcfbbfadcac380b612016c5",
+    "6a54a593c4093dc1a7691a1e3fc297f6d109903d06dc5cf278e5a13231c2f0bc"
+  ],
+  "engine_sha256": "965b41cae93c3f3505e734af8ecad412f5e5b91f2eaa65fc187fb219b821378c",
+  "scope": "one completed native SC Closure query per version",
+  "targets": [
+    [
+      [
+        "p"
+      ]
+    ],
+    [
+      [
+        "p"
+      ]
+    ]
+  ],
+  "assumptions": [
+    [],
+    []
+  ],
+  "variables": {
+    "exclusive_roles": [
+      {
+        "RF": {
+          "matched": 1
+        },
+        "Opaque": {
+          "unknown": 2
+        }
+      },
+      {
+        "RF": {
+          "matched": 1,
+          "unknown": 1
+        },
+        "Opaque": {
+          "unknown": 1
+        },
+        "CO": {
+          "unknown": 2
+        }
+      }
+    ],
+    "reasons": [
+      {
+        "matched": 1,
+        "no_semantic_definition": 2
+      },
+      {
+        "matched": 1,
+        "peer_alias_absent": 1,
+        "no_semantic_definition": 1,
+        "dynamic_co": 2
+      }
+    ],
+    "reasons_by_role": [
+      {
+        "RF": {
+          "matched": 1
+        },
+        "Opaque": {
+          "no_semantic_definition": 2
+        }
+      },
+      {
+        "RF": {
+          "matched": 1,
+          "peer_alias_absent": 1
+        },
+        "Opaque": {
+          "no_semantic_definition": 1
+        },
+        "CO": {
+          "dynamic_co": 2
+        }
+      }
+    ],
+    "examples": [
+      {
+        "matched": [
+          [
+            1,
+            2,
+            "matched",
+            "RF",
+            14
+          ]
+        ],
+        "no_semantic_definition": [
+          [
+            2,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ],
+          [
+            3,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ]
+        ]
+      },
+      {
+        "matched": [
+          [
+            1,
+            2,
+            "matched",
+            "RF",
+            14
+          ]
+        ],
+        "peer_alias_absent": [
+          [
+            2,
+            -1,
+            "peer_alias_absent",
+            "RF",
+            0
+          ]
+        ],
+        "no_semantic_definition": [
+          [
+            3,
+            -1,
+            "no_semantic_definition",
+            "Opaque",
+            0
+          ]
+        ],
+        "dynamic_co": [
+          [
+            4,
+            -1,
+            "dynamic_co",
+            "CO",
+            0
+          ],
+          [
+            5,
+            -1,
+            "dynamic_co",
+            "CO",
+            0
+          ]
+        ]
+      }
+    ],
+    "matched": 1,
+    "totals": [
+      3,
+      5
+    ],
+    "constant_aliases": [
+      {
+        "Guard": 1
+      },
+      {
+        "Guard": 2
+      }
+    ]
+  },
+  "clauses": {
+    "occurrences": {
+      "Q": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "B": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      }
+    },
+    "distinct_resolved_keys": {
+      "Q": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "B": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      }
+    },
+    "reasons": {},
+    "examples": {
+      "B": {
+        "P0_matched": [
+          [
+            1,
+            1,
+            "-"
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            1,
+            "-"
+          ]
+        ]
+      },
+      "Q": {
+        "P0_matched": [
+          [
+            2,
+            2,
+            "-"
+          ]
+        ],
+        "P1_matched": [
+          [
+            2,
+            2,
+            "-"
+          ]
+        ]
+      }
+    }
+  },
+  "theory": {
+    "occurrences": {
+      "RuleConfig": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "EventIdentity": {
+        "P0_matched": 2,
+        "P1_matched": 2,
+        "P1_added": 1
+      },
+      "EventSchema": {
+        "P0_matched": 2,
+        "P1_matched": 2,
+        "P1_added": 1
+      },
+      "SameAddress": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 2
+      },
+      "CompleteWriteDomain": {
+        "P0_retired": 1,
+        "P1_added": 1
+      },
+      "BlockCertificate": {
+        "P0_retired": 2,
+        "P1_added": 2
+      },
+      "GuardDefinition": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 1
+      },
+      "GuardBinding": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 1
+      },
+      "RFIdentity": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 1
+      },
+      "RFBinding": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_unknown": 1
+      },
+      "CompleteRFDomain": {
+        "P0_retired": 1,
+        "P1_added": 1
+      },
+      "QueryScope": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "APO": {
+        "P1_added": 1
+      },
+      "DynamicCO": {
+        "P1_unknown": 1
+      }
+    },
+    "distinct_resolved_keys": {
+      "RuleConfig": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "EventIdentity": {
+        "P0_matched": 2,
+        "P1_matched": 2,
+        "P1_added": 1
+      },
+      "EventSchema": {
+        "P0_matched": 2,
+        "P1_matched": 2,
+        "P1_added": 1
+      },
+      "SameAddress": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 2
+      },
+      "CompleteWriteDomain": {
+        "P0_retired": 1,
+        "P1_added": 1
+      },
+      "BlockCertificate": {
+        "P0_retired": 2,
+        "P1_added": 2
+      },
+      "GuardDefinition": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 1
+      },
+      "GuardBinding": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 1
+      },
+      "RFIdentity": {
+        "P0_matched": 1,
+        "P1_matched": 1,
+        "P1_added": 1
+      },
+      "RFBinding": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "CompleteRFDomain": {
+        "P0_retired": 1,
+        "P1_added": 1
+      },
+      "QueryScope": {
+        "P0_matched": 1,
+        "P1_matched": 1
+      },
+      "APO": {
+        "P1_added": 1
+      }
+    },
+    "reasons": {
+      "RFBinding": {
+        "P1/unmapped_rf_literal": 1
+      },
+      "DynamicCO": {
+        "P1/search_allocated_co": 1
+      }
+    },
+    "examples": {
+      "RuleConfig": {
+        "P0_matched": [
+          [
+            0,
+            "RuleConfig",
+            "native-SC",
+            "config",
+            15,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "RuleConfig",
+            "native-SC",
+            "config",
+            15,
+            "matched",
+            ""
+          ]
+        ]
+      },
+      "EventIdentity": {
+        "P0_matched": [
+          [
+            0,
+            "EventIdentity",
+            "r",
+            6,
+            16,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "EventIdentity",
+            "w",
+            5,
+            17,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "EventIdentity",
+            "r",
+            6,
+            16,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "EventIdentity",
+            "w",
+            5,
+            17,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "EventIdentity",
+            "z",
+            11,
+            32,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "EventSchema": {
+        "P0_matched": [
+          [
+            0,
+            "EventSchema",
+            "w",
+            5,
+            19,
+            "matched",
+            ""
+          ],
+          [
+            0,
+            "EventSchema",
+            "r",
+            6,
+            20,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "EventSchema",
+            "w",
+            5,
+            19,
+            "matched",
+            ""
+          ],
+          [
+            1,
+            "EventSchema",
+            "r",
+            6,
+            20,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "EventSchema",
+            "z",
+            11,
+            33,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "SameAddress": {
+        "P0_matched": [
+          [
+            0,
+            "SameAddress",
+            [
+              "0",
+              "1"
+            ],
+            [
+              5,
+              6
+            ],
+            21,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "SameAddress",
+            [
+              "0",
+              "1"
+            ],
+            [
+              5,
+              6
+            ],
+            21,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "SameAddress",
+            [
+              "0",
+              "2"
+            ],
+            [
+              5,
+              11
+            ],
+            34,
+            "added",
+            ""
+          ],
+          [
+            1,
+            "SameAddress",
+            [
+              "1",
+              "2"
+            ],
+            [
+              6,
+              11
+            ],
+            35,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "CompleteWriteDomain": {
+        "P0_retired": [
+          [
+            0,
+            "CompleteWriteDomain",
+            "1",
+            6,
+            22,
+            "retired",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "CompleteWriteDomain",
+            "1",
+            6,
+            36,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "BlockCertificate": {
+        "P0_retired": [
+          [
+            0,
+            "BlockCertificate",
+            [
+              "0"
+            ],
+            [
+              5
+            ],
+            23,
+            "retired",
+            ""
+          ],
+          [
+            0,
+            "BlockCertificate",
+            [
+              "1"
+            ],
+            [
+              6
+            ],
+            24,
+            "retired",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "BlockCertificate",
+            [
+              "0",
+              "1"
+            ],
+            [
+              5,
+              6
+            ],
+            37,
+            "added",
+            ""
+          ],
+          [
+            1,
+            "BlockCertificate",
+            [
+              "2"
+            ],
+            [
+              11
+            ],
+            38,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "GuardDefinition": {
+        "P0_matched": [
+          [
+            0,
+            "GuardDefinition",
+            "w",
+            5,
+            26,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "GuardDefinition",
+            "w",
+            5,
+            26,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "GuardDefinition",
+            "z",
+            11,
+            39,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "GuardBinding": {
+        "P0_matched": [
+          [
+            0,
+            "GuardBinding",
+            [
+              "w",
+              "-1"
+            ],
+            5,
+            27,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "GuardBinding",
+            [
+              "w",
+              "-1"
+            ],
+            5,
+            27,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "GuardBinding",
+            [
+              "z",
+              "-1"
+            ],
+            11,
+            40,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "RFIdentity": {
+        "P0_matched": [
+          [
+            0,
+            "RFIdentity",
+            [
+              "w",
+              "r"
+            ],
+            [
+              5,
+              6
+            ],
+            28,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "RFIdentity",
+            [
+              "w",
+              "r"
+            ],
+            [
+              5,
+              6
+            ],
+            28,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "RFIdentity",
+            [
+              "z",
+              "r"
+            ],
+            [
+              11,
+              6
+            ],
+            41,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "RFBinding": {
+        "P0_matched": [
+          [
+            0,
+            "RFBinding",
+            [
+              "w",
+              "r",
+              "2"
+            ],
+            [
+              5,
+              6
+            ],
+            29,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "RFBinding",
+            [
+              "w",
+              "r",
+              "2"
+            ],
+            [
+              5,
+              6
+            ],
+            29,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_unknown": [
+          [
+            1,
+            "RFBinding",
+            [
+              "z",
+              "r",
+              "4"
+            ],
+            [
+              11,
+              6
+            ],
+            0,
+            "unknown",
+            "unmapped_rf_literal"
+          ]
+        ]
+      },
+      "CompleteRFDomain": {
+        "P0_retired": [
+          [
+            0,
+            "CompleteRFDomain",
+            "r",
+            6,
+            30,
+            "retired",
+            ""
+          ]
+        ],
+        "P1_added": [
+          [
+            1,
+            "CompleteRFDomain",
+            "r",
+            6,
+            43,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "QueryScope": {
+        "P0_matched": [
+          [
+            0,
+            "QueryScope",
+            [
+              [
+                "p"
+              ]
+            ],
+            "query",
+            31,
+            "matched",
+            ""
+          ]
+        ],
+        "P1_matched": [
+          [
+            1,
+            "QueryScope",
+            [
+              [
+                "p"
+              ]
+            ],
+            "query",
+            31,
+            "matched",
+            ""
+          ]
+        ]
+      },
+      "APO": {
+        "P1_added": [
+          [
+            1,
+            "APO",
+            [
+              "w",
+              "r"
+            ],
+            [
+              5,
+              6
+            ],
+            42,
+            "added",
+            ""
+          ]
+        ]
+      },
+      "DynamicCO": {
+        "P1_unknown": [
+          [
+            1,
+            "DynamicCO",
+            [
+              "0",
+              "2",
+              "8",
+              "10",
+              "-1",
+              "-1"
+            ],
+            [],
+            0,
+            "unknown",
+            "search_allocated_co"
+          ]
+        ]
+      }
+    }
+  },
+  "analysis_wall_s": 0.0024362779804505408,
+  "evidence_compression_and_digest_wall_s": 0.00043809899943880737
+}

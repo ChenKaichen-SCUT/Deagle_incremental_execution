@@ -1,0 +1,5 @@
+{
+  "implementation": "15c5774d0f79792d0f115889db1b4c770a2c8b8e",
+  "raw_archive": "/home/deagle/dependency-reuse/runs/d1/package-earlier-loop",
+  "reason": "Initial GOTO loop backedge key included the complete header condition. Replaced in all three pairs before promotion."
+}

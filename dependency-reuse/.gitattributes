@@ -7,4 +7,6 @@ d1/** text eol=lf
 tests/d1/** text eol=lf
 reports/**/*.json text eol=lf
 reports/**/*.gz -text
+reports/evidence/d1/**/*.txt text eol=lf
+reports/evidence/d1/**/*.sha256 text eol=lf
 reports/*.md text eol=lf

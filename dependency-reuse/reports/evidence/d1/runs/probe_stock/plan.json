@@ -1,0 +1,15 @@
+{
+  "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+  "inputs_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+  "cases": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6"
+  ],
+  "sides": [
+    "P0",
+    "P1"
+  ],
+  "manifest": false,
+  "repeats": 1
+}

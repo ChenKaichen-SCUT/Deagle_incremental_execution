@@ -1,0 +1,437 @@
+[
+  {
+    "case": "fib_updates_8",
+    "side": "P0",
+    "trace": {
+      "off": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "record": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_dev": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_record": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "active_streams": {
+      "clauses": {
+        "equal": true,
+        "sha256": "c22d7f8e93d05423dea62c02e2eeea39e7034bf44b16f4dffc2ba33a33bbcc1a",
+        "records": 50065,
+        "bytes": 888792
+      },
+      "graph": {
+        "equal": true,
+        "sha256": "5ebe8292ee6cbb549ac65ec42176549b9b4a4e1d98c416ed5ddfa86339f8b4be",
+        "records": 458,
+        "bytes": 13699
+      },
+      "vars": {
+        "equal": true,
+        "sha256": "2a822e9a2ca336c9529e63a90506ca928385087007c85eb5dbcfd9e2126efe0d",
+        "records": 12554,
+        "bytes": 114430
+      },
+      "init": {
+        "equal": true,
+        "sha256": "5fe058d866662a94c8a267f1e484cf5f77af850184740392c2b42f9be04cb5a7",
+        "records": 27779,
+        "bytes": 386216
+      }
+    },
+    "active_manifest_sha256": "5cce2c5ebd50ce9df085d2c91db5d78e86f2cb966adbcb20a9404de257b29682"
+  },
+  {
+    "case": "fib_updates_8",
+    "side": "P1",
+    "trace": {
+      "off": {},
+      "record": {},
+      "probe_stock": {},
+      "probe_dev": {},
+      "probe_record": {}
+    },
+    "active_streams": {
+      "clauses": {
+        "equal": true,
+        "sha256": "85e1665483d8eaa34345a9a901a92b59007712c13eda2543c4f34b060f0e6798",
+        "records": 48329,
+        "bytes": 858303
+      },
+      "graph": {
+        "equal": true,
+        "sha256": "d0ebab1e1357929c9ef665ad497a517316c38be68673bd5750601a9a118b912f",
+        "records": 458,
+        "bytes": 13679
+      },
+      "vars": {
+        "equal": true,
+        "sha256": "ba451cec972215b964f094a2251f118b25fa9acb910415b7380a76ddbc6fc4aa",
+        "records": 12058,
+        "bytes": 109470
+      },
+      "init": {
+        "equal": true,
+        "sha256": "487b02feb7181761226270a47c4dfad8cc29f5c2d0aa663231d5eae1353aecb3",
+        "records": 26787,
+        "bytes": 370682
+      }
+    },
+    "active_manifest_sha256": "59f4b3df3992733b464aac2b7d3ea2a416637dbf153ffd45c0248e49ab6fdcad"
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P0",
+    "trace": {
+      "off": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "record": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_dev": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_record": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "active_streams": {
+      "clauses": {
+        "equal": true,
+        "sha256": "45f4f3d7e2d2dab4df0d470df2667cc9570e07378851b40d6f17bc8558e1e29a",
+        "records": 1161979,
+        "bytes": 24130523
+      },
+      "graph": {
+        "equal": true,
+        "sha256": "e65f79c9f5daba7399c496f6e4f78dfbae9d2e780e76bafac12df174e6d01bf0",
+        "records": 3509,
+        "bytes": 109695
+      },
+      "vars": {
+        "equal": true,
+        "sha256": "6910663629302ff3adf7e5cf280ae278d267764d253217cff3ddaeda0d064055",
+        "records": 245082,
+        "bytes": 2584792
+      },
+      "init": {
+        "equal": true,
+        "sha256": "bb23b5e176b014e0d9e361c80870529f3de3d94603d34c13f44b795212b377d4",
+        "records": 496050,
+        "bytes": 7913007
+      }
+    },
+    "active_manifest_sha256": "380837816000b5b0a1da27661f6cc664a83036e4f41bb9fa83dddb46584b6a51"
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P1",
+    "trace": {
+      "off": {},
+      "record": {},
+      "probe_stock": {},
+      "probe_dev": {},
+      "probe_record": {}
+    },
+    "active_streams": {
+      "clauses": {
+        "equal": true,
+        "sha256": "5dfa1d57172c639a110e2117962f974ea227de6323f5491783e70d95c6ba9bd3",
+        "records": 1163110,
+        "bytes": 24158125
+      },
+      "graph": {
+        "equal": true,
+        "sha256": "b5810a268c5aa07a57f1a0127f55bf2888201e486b71c5658eaf9b077ee42091",
+        "records": 3509,
+        "bytes": 109710
+      },
+      "vars": {
+        "equal": true,
+        "sha256": "69fd4b3a533e17f000f65986c8b2d179c55f6b784c3d69fa6c25b59beecce333",
+        "records": 245473,
+        "bytes": 2589093
+      },
+      "init": {
+        "equal": true,
+        "sha256": "6e3bb98cc4fdf33a6d92cc14c13781298cce95931814544c4eacec8604e57ea6",
+        "records": 497003,
+        "bytes": 7927280
+      }
+    },
+    "active_manifest_sha256": "696061ca340f9d033ce5f3c0ef61bc1036b307bed2f36cc5947e381aed1311eb"
+  },
+  {
+    "case": "airline_reservations_6",
+    "side": "P0",
+    "trace": {
+      "off": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "record": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_dev": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "probe_record": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "active_streams": {
+      "clauses": {
+        "equal": true,
+        "sha256": "1c167aced8fccd7a3a121e608d3ea7b13f9444fe697b0603c5bfc2cb15fc4559",
+        "records": 910797,
+        "bytes": 18737146
+      },
+      "graph": {
+        "equal": true,
+        "sha256": "755190350ab5fafea385d39973549a48a65a1e0cac64d37fae71dc599b50a92e",
+        "records": 1063,
+        "bytes": 41804
+      },
+      "vars": {
+        "equal": true,
+        "sha256": "de4b0d5798b9c9429a38bfca5cb080f634490c56a29102b32bdb8fd52a1de5d7",
+        "records": 199091,
+        "bytes": 2078891
+      },
+      "init": {
+        "equal": true,
+        "sha256": "492e4a104c86f6aa6a5bd65c08848cbd59f383cf4adbb1e4eef826b6b1adf7d7",
+        "records": 414380,
+        "bytes": 6483161
+      }
+    },
+    "active_manifest_sha256": "0147d958c4eb0dd04e8d29cfd54f5900557ddc52d566d88bc41feff8bde716d5"
+  },
+  {
+    "case": "airline_reservations_6",
+    "side": "P1",
+    "trace": {
+      "off": {},
+      "record": {},
+      "probe_stock": {},
+      "probe_dev": {},
+      "probe_record": {}
+    },
+    "active_streams": {
+      "clauses": {
+        "equal": true,
+        "sha256": "1b8e5dcf15df73c9902a163f643a256a8aec6b4f83bf62fcb78abda3b2a78d86",
+        "records": 287511,
+        "bytes": 5609230
+      },
+      "graph": {
+        "equal": true,
+        "sha256": "9222e825f19b04596f6d6fc350bc1a29b39cda98c1a8c0031856aff3eb54effe",
+        "records": 589,
+        "bytes": 25346
+      },
+      "vars": {
+        "equal": true,
+        "sha256": "f8c258f19f56b6bc1fde4ed9383045c480134ff89262374143dc625d3622b422",
+        "records": 69635,
+        "bytes": 685240
+      },
+      "init": {
+        "equal": true,
+        "sha256": "bf50a721f484a9275099b6a67eb879349fa2a58a9a47ea51b2ee352fdc5a2f75",
+        "records": 154688,
+        "bytes": 2263675
+      }
+    },
+    "active_manifest_sha256": "0e4de9e84e49a91cc085564558af2d68744c30641bd6a21bfe3be101b6badcbd"
+  }
+]

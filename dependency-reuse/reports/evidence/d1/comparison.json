@@ -1,0 +1,356 @@
+[
+  {
+    "case": "fib_updates_8",
+    "side": "P0",
+    "baseline_wall_s": 0.115947106,
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "warnings": 0,
+    "queries": 1,
+    "modes": {
+      "record": {
+        "wall_s": 0.128882835,
+        "peak_rss_kib": 19968,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 10
+      },
+      "off": {
+        "wall_s": 0.11727604,
+        "peak_rss_kib": 19712,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 10
+      },
+      "probe_stock": {
+        "wall_s": 0.175475092,
+        "peak_rss_kib": 19328,
+        "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+        "exit_code": 10
+      },
+      "probe_dev": {
+        "wall_s": 0.130833233,
+        "peak_rss_kib": 19584,
+        "binary_sha256": "f79de76f4bdc17b79e52e9cfd71cad518e432b9df71bb36a349f85c1fbe43857",
+        "exit_code": 10
+      }
+    },
+    "streams": {
+      "clauses": {
+        "sha256": "c22d7f8e93d05423dea62c02e2eeea39e7034bf44b16f4dffc2ba33a33bbcc1a",
+        "records": 50065,
+        "bytes": 888792
+      },
+      "graph": {
+        "sha256": "5ebe8292ee6cbb549ac65ec42176549b9b4a4e1d98c416ed5ddfa86339f8b4be",
+        "records": 458,
+        "bytes": 13699
+      },
+      "vars": {
+        "sha256": "2a822e9a2ca336c9529e63a90506ca928385087007c85eb5dbcfd9e2126efe0d",
+        "records": 12554,
+        "bytes": 114430
+      },
+      "init": {
+        "sha256": "5fe058d866662a94c8a267f1e484cf5f77af850184740392c2b42f9be04cb5a7",
+        "records": 27779,
+        "bytes": 386216
+      }
+    },
+    "recorded_input_sha256": "c22d7f8e93d05423dea62c02e2eeea39e7034bf44b16f4dffc2ba33a33bbcc1a"
+  },
+  {
+    "case": "fib_updates_8",
+    "side": "P1",
+    "baseline_wall_s": 1.99166672,
+    "properties": {
+      "main.assertion.1": "SUCCESS"
+    },
+    "warnings": 0,
+    "queries": 1,
+    "modes": {
+      "record": {
+        "wall_s": 2.004896714,
+        "peak_rss_kib": 29568,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 0
+      },
+      "off": {
+        "wall_s": 1.960656082,
+        "peak_rss_kib": 29568,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 0
+      },
+      "probe_stock": {
+        "wall_s": 1.988114935,
+        "peak_rss_kib": 29056,
+        "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+        "exit_code": 0
+      },
+      "probe_dev": {
+        "wall_s": 1.979515051,
+        "peak_rss_kib": 29184,
+        "binary_sha256": "f79de76f4bdc17b79e52e9cfd71cad518e432b9df71bb36a349f85c1fbe43857",
+        "exit_code": 0
+      }
+    },
+    "streams": {
+      "clauses": {
+        "sha256": "85e1665483d8eaa34345a9a901a92b59007712c13eda2543c4f34b060f0e6798",
+        "records": 48329,
+        "bytes": 858303
+      },
+      "graph": {
+        "sha256": "d0ebab1e1357929c9ef665ad497a517316c38be68673bd5750601a9a118b912f",
+        "records": 458,
+        "bytes": 13679
+      },
+      "vars": {
+        "sha256": "ba451cec972215b964f094a2251f118b25fa9acb910415b7380a76ddbc6fc4aa",
+        "records": 12058,
+        "bytes": 109470
+      },
+      "init": {
+        "sha256": "487b02feb7181761226270a47c4dfad8cc29f5c2d0aa663231d5eae1353aecb3",
+        "records": 26787,
+        "bytes": 370682
+      }
+    },
+    "recorded_input_sha256": "85e1665483d8eaa34345a9a901a92b59007712c13eda2543c4f34b060f0e6798"
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P0",
+    "baseline_wall_s": 0.515454198,
+    "properties": {
+      "reach_error.assertion.1": "FAILURE"
+    },
+    "warnings": 4,
+    "queries": 1,
+    "modes": {
+      "record": {
+        "wall_s": 0.723956277,
+        "peak_rss_kib": 123392,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 10
+      },
+      "off": {
+        "wall_s": 0.517594827,
+        "peak_rss_kib": 123264,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 10
+      },
+      "probe_stock": {
+        "wall_s": 0.737123272,
+        "peak_rss_kib": 123136,
+        "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+        "exit_code": 10
+      },
+      "probe_dev": {
+        "wall_s": 0.732295956,
+        "peak_rss_kib": 123136,
+        "binary_sha256": "f79de76f4bdc17b79e52e9cfd71cad518e432b9df71bb36a349f85c1fbe43857",
+        "exit_code": 10
+      }
+    },
+    "streams": {
+      "clauses": {
+        "sha256": "45f4f3d7e2d2dab4df0d470df2667cc9570e07378851b40d6f17bc8558e1e29a",
+        "records": 1161979,
+        "bytes": 24130523
+      },
+      "graph": {
+        "sha256": "e65f79c9f5daba7399c496f6e4f78dfbae9d2e780e76bafac12df174e6d01bf0",
+        "records": 3509,
+        "bytes": 109695
+      },
+      "vars": {
+        "sha256": "6910663629302ff3adf7e5cf280ae278d267764d253217cff3ddaeda0d064055",
+        "records": 245082,
+        "bytes": 2584792
+      },
+      "init": {
+        "sha256": "bb23b5e176b014e0d9e361c80870529f3de3d94603d34c13f44b795212b377d4",
+        "records": 496050,
+        "bytes": 7913007
+      }
+    },
+    "recorded_input_sha256": "45f4f3d7e2d2dab4df0d470df2667cc9570e07378851b40d6f17bc8558e1e29a"
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P1",
+    "baseline_wall_s": 8.184117025,
+    "properties": {
+      "reach_error.assertion.1": "SUCCESS"
+    },
+    "warnings": 4,
+    "queries": 1,
+    "modes": {
+      "record": {
+        "wall_s": 9.043225946,
+        "peak_rss_kib": 144640,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 0
+      },
+      "off": {
+        "wall_s": 8.640837365,
+        "peak_rss_kib": 144512,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 0
+      },
+      "probe_stock": {
+        "wall_s": 8.534462001,
+        "peak_rss_kib": 144128,
+        "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+        "exit_code": 0
+      },
+      "probe_dev": {
+        "wall_s": 8.94834856,
+        "peak_rss_kib": 144512,
+        "binary_sha256": "f79de76f4bdc17b79e52e9cfd71cad518e432b9df71bb36a349f85c1fbe43857",
+        "exit_code": 0
+      }
+    },
+    "streams": {
+      "clauses": {
+        "sha256": "5dfa1d57172c639a110e2117962f974ea227de6323f5491783e70d95c6ba9bd3",
+        "records": 1163110,
+        "bytes": 24158125
+      },
+      "graph": {
+        "sha256": "b5810a268c5aa07a57f1a0127f55bf2888201e486b71c5658eaf9b077ee42091",
+        "records": 3509,
+        "bytes": 109710
+      },
+      "vars": {
+        "sha256": "69fd4b3a533e17f000f65986c8b2d179c55f6b784c3d69fa6c25b59beecce333",
+        "records": 245473,
+        "bytes": 2589093
+      },
+      "init": {
+        "sha256": "6e3bb98cc4fdf33a6d92cc14c13781298cce95931814544c4eacec8604e57ea6",
+        "records": 497003,
+        "bytes": 7927280
+      }
+    },
+    "recorded_input_sha256": "5dfa1d57172c639a110e2117962f974ea227de6323f5491783e70d95c6ba9bd3"
+  },
+  {
+    "case": "airline_reservations_6",
+    "side": "P0",
+    "baseline_wall_s": 5.20277707,
+    "properties": {
+      "main.assertion.1": "FAILURE"
+    },
+    "warnings": 0,
+    "queries": 1,
+    "modes": {
+      "record": {
+        "wall_s": 5.761474211,
+        "peak_rss_kib": 110976,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 10
+      },
+      "off": {
+        "wall_s": 5.602872738,
+        "peak_rss_kib": 111104,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 10
+      },
+      "probe_stock": {
+        "wall_s": 5.445140802,
+        "peak_rss_kib": 110720,
+        "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+        "exit_code": 10
+      },
+      "probe_dev": {
+        "wall_s": 5.812315279,
+        "peak_rss_kib": 110720,
+        "binary_sha256": "f79de76f4bdc17b79e52e9cfd71cad518e432b9df71bb36a349f85c1fbe43857",
+        "exit_code": 10
+      }
+    },
+    "streams": {
+      "clauses": {
+        "sha256": "1c167aced8fccd7a3a121e608d3ea7b13f9444fe697b0603c5bfc2cb15fc4559",
+        "records": 910797,
+        "bytes": 18737146
+      },
+      "graph": {
+        "sha256": "755190350ab5fafea385d39973549a48a65a1e0cac64d37fae71dc599b50a92e",
+        "records": 1063,
+        "bytes": 41804
+      },
+      "vars": {
+        "sha256": "de4b0d5798b9c9429a38bfca5cb080f634490c56a29102b32bdb8fd52a1de5d7",
+        "records": 199091,
+        "bytes": 2078891
+      },
+      "init": {
+        "sha256": "492e4a104c86f6aa6a5bd65c08848cbd59f383cf4adbb1e4eef826b6b1adf7d7",
+        "records": 414380,
+        "bytes": 6483161
+      }
+    },
+    "recorded_input_sha256": "1c167aced8fccd7a3a121e608d3ea7b13f9444fe697b0603c5bfc2cb15fc4559"
+  },
+  {
+    "case": "airline_reservations_6",
+    "side": "P1",
+    "baseline_wall_s": 19.571874615,
+    "properties": {
+      "main.assertion.1": "SUCCESS"
+    },
+    "warnings": 0,
+    "queries": 1,
+    "modes": {
+      "record": {
+        "wall_s": 20.240057488,
+        "peak_rss_kib": 69120,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 0
+      },
+      "off": {
+        "wall_s": 20.632295083,
+        "peak_rss_kib": 69248,
+        "binary_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+        "exit_code": 0
+      },
+      "probe_stock": {
+        "wall_s": 20.120068815,
+        "peak_rss_kib": 68352,
+        "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+        "exit_code": 0
+      },
+      "probe_dev": {
+        "wall_s": 21.641010501,
+        "peak_rss_kib": 68864,
+        "binary_sha256": "f79de76f4bdc17b79e52e9cfd71cad518e432b9df71bb36a349f85c1fbe43857",
+        "exit_code": 0
+      }
+    },
+    "streams": {
+      "clauses": {
+        "sha256": "1b8e5dcf15df73c9902a163f643a256a8aec6b4f83bf62fcb78abda3b2a78d86",
+        "records": 287511,
+        "bytes": 5609230
+      },
+      "graph": {
+        "sha256": "9222e825f19b04596f6d6fc350bc1a29b39cda98c1a8c0031856aff3eb54effe",
+        "records": 589,
+        "bytes": 25346
+      },
+      "vars": {
+        "sha256": "f8c258f19f56b6bc1fde4ed9383045c480134ff89262374143dc625d3622b422",
+        "records": 69635,
+        "bytes": 685240
+      },
+      "init": {
+        "sha256": "bf50a721f484a9275099b6a67eb879349fa2a58a9a47ea51b2ee352fdc5a2f75",
+        "records": 154688,
+        "bytes": 2263675
+      }
+    },
+    "recorded_input_sha256": "1b8e5dcf15df73c9902a163f643a256a8aec6b4f83bf62fcb78abda3b2a78d86"
+  }
+]

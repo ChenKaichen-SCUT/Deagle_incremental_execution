@@ -1,0 +1,48 @@
+{
+  "case": "fib_updates_8",
+  "side": "P0",
+  "argv": [
+    "/home/deagle/dependency-reuse/runs/d1/audit-stock-02/deagle_exe",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--64",
+    "--unwind",
+    "10",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "harness.c"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/d1/probe-stock-01/fib_updates_8/P0/work",
+  "binary_sha256": "cb890e794f7e4e2af949c0daa264d3bf12c5c43b861c87c562b5a41831854a8d",
+  "input_sha256": {
+    "program.c": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "harness.c": "a83ec85d1a3105f26025be5de55bc9c102ae78e8cad6e2b9dbcaf0182032928a"
+  },
+  "limits": {
+    "memory_bytes": 21474836480,
+    "timeout_seconds": 300
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "target": "main.assertion.1",
+  "started_utc": "2026-11-27T06:52:25.577790+00:00",
+  "exit_code": 10,
+  "timed_out": false,
+  "wall_ns": 175475092,
+  "user_s": 0.115077,
+  "system_s": 0.018837,
+  "peak_rss_kib": 19328,
+  "stdout_sha256": "d8c08e23e7b0542ab7a71ef72b4e7da46bbe72505405fbbf35bb48c4cd4c89f8",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}
