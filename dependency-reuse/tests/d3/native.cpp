@@ -24,6 +24,9 @@ int main(int argc,char **argv)
 #ifdef RECORD_PROOFS
     ProofStore store(argv[2],&scope);
     store.d3=true;
+#ifdef D42_LIGHT
+    store.quality=true;store.enableLight();
+#endif
 #ifdef D41_TRIPLETS
     store.triplets=true;
 #endif

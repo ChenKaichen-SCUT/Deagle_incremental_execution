@@ -348,6 +348,10 @@ lbool ClosureSolver::search(int nof_conflicts)
     }
 
     for (;;){
+        if(proof && proof->collectDue()){
+            std::vector<ProofId> roots(assignment_proofs);
+            graph.supportRoots(roots);proof->collect(roots);
+        }
         CRef confl = propagate();
         if (confl != CRef_Undef){
             // CONFLICT
@@ -601,12 +605,14 @@ CRef ClosureSolver::propagate()
             *j++ = w;
             if (value(first) == l_False){
                 confl = cr;
+                if(proof && proof->quality)proof->birthUse(cr,1);
                 if(imports) imports->hit(cr,WatchConflict,decisionLevel(),first.x,conflicts,c);
                 qhead = trail.size();
                 // Copy the remaining watches:
                 while (i < end)
                     *j++ = *i++;
             }else{
+                if(proof && proof->quality)proof->birthUse(cr,0);
                 if(imports) imports->hit(cr,WatchUnit,decisionLevel(),first.x,conflicts,c);
                 uncheckedEnqueue(first, cr);
             }
@@ -737,6 +743,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
         assert(confl != CRef_Undef); // (otherwise should be UIP)
         Clause& c = ca[confl];
         if(proof) proof->analysisParent(*this,confl,p);
+        if(proof && proof->quality)proof->birthUse(confl,2);
         if(imports) imports->hit(confl,AnalyzeParent,decisionLevel(),p.x,conflicts,c);
 
         if (c.learnt())

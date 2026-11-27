@@ -1,4 +1,6 @@
 #include "ProofStore.h"
+#include "SupportStore.h"
+#include <fstream>
 #include "Solver.h"
 #include <algorithm>
 #include <cstring>
@@ -38,14 +40,19 @@ ProofStore::ProofStore() : scope(nullptr)
 ProofStore::ProofStore(const std::string &path, const char *origin) : ProofStore()
 {
     scope=origin;
+    archive_path=path;
     output=std::fopen(path.c_str(),"wbx");
     if(!output) throw std::runtime_error("D2 requires a new writable proof file: "+path);
 }
 
 ProofStore::~ProofStore() { if(output) std::fclose(output); }
+void ProofStore::enableLight() {support.reset(new SupportStore(output));}
+bool ProofStore::collectDue() const {return support && support->due();}
+void ProofStore::collect(std::vector<ProofId> &roots) {support->collect(roots);}
 
 ProofId ProofStore::append(ProofKind kind, const int *c, size_t size, const std::vector<ProofEdge> &parents)
 {
+    if(support)return support->capture(kind,c,size,parents);
     ProofId id=narrow(nodes.size());
     uint32_t flags=leafFlags(kind);
     for(const auto &e:parents)
@@ -124,6 +131,14 @@ uint32_t ProofStore::internCondition(uint32_t a,uint32_t b)
 }
 ProofId ProofStore::internTheory(ProofKind kind,TheoryOp op,int a,int b,int c,const ProofId *parents,size_t count)
 {
+    if(support){
+        if(kind==TheoryDeclaration){
+            const auto condition=(op==RFDecl || op==GuardDecl) && c>=0?internCondition(uint32_t(c),UINT32_MAX):0;
+            return support->declaration(op,a,b,c,condition);
+        }
+        if(op<=BlockDecl || op>(triplets?TripletRule:PreventRF) || !count)return 0;
+        return support->rule(op,parents,count,[&](uint32_t u,uint32_t v){return internCondition(u,v);});
+    }
     if(theory_records.size()+1 > theory_slots.size()*3/4) growTheoryIndex();
     uint64_t h=payloadHash(op,a,b,c);
     if(kind==TheoryInference && (op<=BlockDecl || op>(triplets ? TripletRule : PreventRF) || !count)) return 0;
@@ -185,34 +200,36 @@ size_t ProofStore::theoryIndex(ProofId id) const
 }
 ProofId ProofStore::lemma(ProofKind boundary,const vec<Lit> &actual,ProofId reason)
 {
-    if(!reason || nodes.at(reason).kind!=TheoryInference)
+    if(!reason || (!light() && nodes.at(reason).kind!=TheoryInference))
     {
         ++discharge_stats[0];
         return opaque(boundary,actual);
     }
-    const size_t index=theoryIndex(reason);
-    const auto op=theory_records[index].op;
+    const auto op=light()?support->operation(reason):theory_records[theoryIndex(reason)].op;
     if(!((op==CycleRule && boundary==TheoryConflict) ||
          ((op==PreventRF || (triplets && op==TripletRule)) && boundary==TheoryReason)))
     {
         ++discharge_stats[0];
         return opaque(boundary,actual);
     }
-    const auto support=condition_by_proof.at(reason);
+    const auto conditions_id=light()?support->condition(reason):condition_by_proof.at(reason);
     discharge_cache.resize(conditions.size(),0);
     actual_condition.clear();
     for(int i=0;i<actual.size();++i) actual_condition.push_back(actual[i].x);
     uniqueInts(actual_condition);
     expected_condition.clear();
-    if(ProofId cached=discharge_cache[support])
-        expected_condition.assign(lits.begin()+litBegin(cached),lits.begin()+nodes[cached].lit_end);
+    if(ProofId cached=discharge_cache[conditions_id]){
+        if(light())expected_condition=verified_conditions.at(cached-1);
+        else expected_condition.assign(lits.begin()+litBegin(cached),lits.begin()+nodes[cached].lit_end);
+    }
     else
     {
         // Discharge branch premises exactly once for this immutable rule result.
         // Share the verified native clause as a cache. No ancestor list is retained.
         theory_marks.resize(conditions.size(),0);
-        const auto stamp=narrow(nodes.size());
-        condition_stack.assign(1,support);
+        if(++condition_stamp==0){std::fill(theory_marks.begin(),theory_marks.end(),0);++condition_stamp;}
+        const auto stamp=condition_stamp;
+        condition_stack.assign(1,conditions_id);
         while(!condition_stack.empty())
         {
             auto id=condition_stack.back(); condition_stack.pop_back();
@@ -230,25 +247,35 @@ ProofId ProofStore::lemma(ProofKind boundary,const vec<Lit> &actual,ProofId reas
         return opaque(boundary,actual);
     }
     ++discharge_stats[2];
+    if(light()){
+        if(!discharge_cache[conditions_id]){
+            verified_conditions.push_back(actual_condition);
+            discharge_cache[conditions_id]=narrow(verified_conditions.size());
+        }
+        return support->adopt(reason);
+    }
     ProofId id=clause(TheoryLemma,actual,{{reason,-1}});
-    discharge_cache[support]=id;
+    discharge_cache[conditions_id]=id;
     return id;
 }
 
 ProofId ProofStore::root(int assigned) const
 {
     ProofId id=units.at(unsigned(assigned)/2);
+    if(light())return root_values.at(unsigned(assigned)/2)==assigned?id:0;
     return id && nodes[id].lit_end==litBegin(id)+1 && lits[litBegin(id)]==assigned ? id : 0;
 }
 
 void ProofStore::input(const vec<Lit> &c)
 {
+    if(support){support->input(c,*scope);return;}
     auto id=clause(*scope=='B' ? BooleanInput : *scope=='Q' ? QueryInput : UnknownInput,c,{});
     inputs.push_back({id,0,Accepted,-1});
 }
 
 void ProofStore::skipInput(InputAction action,int lit)
 {
+    if(light())return;
     auto &in=inputs.back();
     in.action=action;
     in.witness=lit;
@@ -257,6 +284,13 @@ void ProofStore::skipInput(InputAction action,int lit)
 
 ProofId ProofStore::acceptInput(Solver &s,const vec<Lit> &c)
 {
+    if(support){
+        roots.clear();
+        for(int raw:support->original)if(s.value(Lit{raw})==l_False)roots.push_back(raw);
+        if(roots.empty())return support->pending_input;
+        chain.assign(1,{support->pending_input,-1});appendRoots();
+        return support->capture(Shortened,nullptr,0,chain);
+    }
     auto &in=inputs.back();
     roots.clear();
     for(auto i=litBegin(in.leaf);i<nodes[in.leaf].lit_end;++i)
@@ -280,6 +314,7 @@ void ProofStore::bind(CRef cr,ProofId id)
 
 void ProofStore::removedSatisfied(Solver &s,CRef cr)
 {
+    if(light())return;
     const Clause &c=s.ca[cr];
     for(int i=0;i<c.size();++i)
         if(s.value(c[i])==l_True)
@@ -293,7 +328,7 @@ void ProofStore::removedSatisfied(Solver &s,CRef cr)
 void ProofStore::forget(CRef cr)
 {
     auto id=ref(cr);
-    if(id && nodes[id].kind==Learned) evicted.push_back({id,narrow(nodes.size()-1)});
+    if(!light() && id && nodes[id].kind==Learned) evicted.push_back({id,narrow(nodes.size()-1)});
     if(cr<refs.size()) refs[cr]=0;
     ++stats[Removals];
 }
@@ -309,7 +344,7 @@ void ProofStore::relocated(const ClauseAllocator &from,uint32_t new_size)
             if(dest!=i)
             {
                 ++stats[ChangedRefs];
-                stats[ChangedLearnRefs]+=nodes[refs[i]].kind==Learned;
+                stats[ChangedLearnRefs]+=light()?birth_numbers.count(refs[i])!=0:nodes[refs[i]].kind==Learned;
             }
         }
     refs.swap(moved);
@@ -343,6 +378,7 @@ void ProofStore::assignment(Solver &s,Lit p,CRef cr)
         id=append(RootUnit,&p.x,1,why);
     }
     units[var(p)]=id;
+    if(light())root_values[var(p)]=p.x;
 }
 
 void ProofStore::rootConflict(Solver &s,CRef cr)
@@ -382,17 +418,50 @@ void ProofStore::finishAnalysis(Solver &s,const vec<Lit> &result)
     for(Var v:minimized) addReason(s,s.reason(v),s.trail[position[v]]);
     appendRoots();
     pending=clause(Learned,result,chain);
-    learned.push_back({pending,uip,narrow(minimized.size())});
+    if(!light())learned.push_back({pending,uip,narrow(minimized.size())});
+    if(quality)recordQuality(s,result);
 }
 
 void ProofStore::snapshot(const vec<CRef> &db)
 {
+    if(quality){
+        for(auto &q:qualities)q.resident=false;
+        auto mark=[&](ProofId id){auto it=birth_numbers.find(id);if(it!=birth_numbers.end())qualities[it->second].resident=true;};
+        for(int i=0;i<db.size();++i)mark(ref(db[i]));
+        for(auto id:units)mark(id);
+    }
+    if(light())return;
     residents.clear();
     for(int i=0;i<db.size();++i) residents.push_back(ref(db[i]));
     root_units.clear();
     for(ProofId id:units) if(id) root_units.push_back(id);
 }
 
+void ProofStore::recordQuality(Solver &s,const vec<Lit> &c)
+{
+    const uint32_t stamp=narrow(qualities.size()+1);
+    uint32_t lbd=0;
+    for(int i=0;i<c.size();++i){
+        const auto level=unsigned(s.level(var(c[i])));
+        if(level>=level_stamp.size())level_stamp.resize(level+1);
+        if(level_stamp[level]!=stamp){level_stamp[level]=stamp;++lbd;}
+    }
+    if(!birth_numbers.emplace(pending,qualities.size()).second)throw std::logic_error("duplicated birth");
+    qualities.push_back({pending,uint32_t(c.size()),lbd,{0,0,0},false});
+}
+void ProofStore::birthUse(CRef ref_id,unsigned kind)
+{
+    auto it=birth_numbers.find(ref(ref_id));
+    if(it!=birth_numbers.end())++qualities[it->second].use[kind];
+}
+void ProofStore::writeQuality() const
+{
+    std::ofstream out(archive_path+".quality.tsv");
+    out.exceptions(std::ios::failbit|std::ios::badbit);
+    out<<"ordinal\tid\tlength\tlbd\tpropagations\tconflicts\tanalyze\tresident\n";
+    size_t seq=0;
+    for(const auto &q:qualities)out<<++seq<<'\t'<<q.id<<'\t'<<q.length<<'\t'<<q.lbd<<'\t'<<q.use[0]<<'\t'<<q.use[1]<<'\t'<<q.use[2]<<'\t'<<q.resident<<'\n';
+}
 void ProofStore::buildReverse()
 {
     offsets.assign(nodes.size()+1,0);
@@ -528,6 +597,19 @@ void ProofStore::projectBirths()
 bool ProofStore::write(int exit_code)
 {
     if(!output) return false;
+    const auto export_start=std::chrono::steady_clock::now();
+    const uint64_t streamed=support?support->io_ns:0;
+    if(quality)writeQuality();
+    auto timing=[&](){
+        if(!quality)return;
+        std::ofstream side(archive_path+".timing.tsv");
+        side.exceptions(std::ios::badbit|std::ios::failbit);
+        side<<"online_write_ns\t"<<streamed<<"\nfinalize_ns\t"<<std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-export_start).count()<<'\n';
+    };
+    if(support){
+        bool ok=support->finish(exit_code,graph_receipt,discharge_stats);
+        ok=std::fclose(output)==0 && ok;output=nullptr;timing();return ok;
+    }
     if(compact) projectBirths();
     const auto start=std::chrono::steady_clock::now();
     buildReverse();
@@ -562,6 +644,7 @@ bool ProofStore::write(int exit_code)
         fwrite(compact?"ENDC":d3?"END3":"END2",1,4,output)==4;
     ok=std::fclose(output)==0 && ok;
     output=nullptr;
+    timing();
     return ok;
 }
 

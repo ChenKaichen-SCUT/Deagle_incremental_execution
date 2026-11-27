@@ -6,11 +6,15 @@
 #include <cstdio>
 #include <string>
 #include <initializer_list>
+#include <memory>
+#include <unordered_map>
+#include <array>
 #include <vector>
 
 namespace Minisat
 {
 class Solver;
+class SupportStore;
 using ProofId = uint32_t;
 enum ProofKind : uint32_t
 {
@@ -40,6 +44,17 @@ enum Stat { Collections, Removals, Reductions, MinSuccess, MinFailure, SearchNS,
 // Proofs are immutable. Only the current allocator references and scratch space follow the solver.
 class ProofStore
 {
+    std::unique_ptr<SupportStore> support;
+    std::vector<int> root_values;
+    std::vector<std::vector<int>> verified_conditions;
+    uint32_t condition_stamp=0;
+    std::string archive_path;
+    struct Quality { uint32_t id,length,lbd; uint64_t use[3]; bool resident; };
+    std::vector<Quality> qualities;
+    std::unordered_map<ProofId,size_t> birth_numbers;
+    std::vector<uint32_t> level_stamp;
+    void recordQuality(Solver &,const vec<Lit> &);
+    void writeQuality() const;
     std::vector<ProofId> refs, units;
     std::vector<int> position;
     std::vector<ProofEdge> chain;
@@ -81,6 +96,12 @@ public:
     std::vector<SatisfiedRemoval> satisfied_removals;
     std::vector<ProofId> residents, root_units, terminals, offsets, children;
     bool d3 = false;
+    bool quality=false;
+    void enableLight();
+    bool light() const {return bool(support);}
+    bool collectDue() const;
+    void collect(std::vector<ProofId> &roots);
+    void birthUse(CRef ref,unsigned kind);
     bool triplets = false, compact = false, eager_triplets=false;
     std::vector<ProofId> origins; // compact ID to native P0 ID, including the sentinel
     uint64_t project_ns=0;
@@ -114,7 +135,7 @@ public:
     void forget(CRef);
     void removedSatisfied(Solver &, CRef);
     void relocated(const ClauseAllocator &, uint32_t new_size);
-    void newVariable() { position.push_back(-1); units.push_back(0); }
+    void newVariable() { position.push_back(-1); units.push_back(0); if(light()) root_values.push_back(-1); }
     void tag(ProofId id, AssignmentSource source) { next_unit=id; next_source=source; }
     void assignment(Solver &, Lit, CRef);
     void rootConflict(Solver &, CRef);

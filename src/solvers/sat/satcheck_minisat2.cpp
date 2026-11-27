@@ -130,6 +130,8 @@ deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
     recording->triplets=dependency_manifest::triplets;
     recording->eager_triplets=dependency_manifest::eager_triplets;
     recording->compact=dependency_manifest::compact_proof;
+    recording->quality=dependency_manifest::quality42 || dependency_manifest::light42;
+    if(dependency_manifest::light42)recording->enableLight();
     solver->proof=recording.get();
     dependency_manifest::finish_proof=[](int status) { return recording->write(status); };
   }

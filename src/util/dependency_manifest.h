@@ -11,7 +11,7 @@ namespace dependency_manifest
 {
 extern std::FILE *stream;
 extern bool record_layouts;
-extern bool triplets, compact_proof, identities41, eager_triplets;
+extern bool triplets, compact_proof, identities41, eager_triplets, light42, quality42;
 extern char scope;
 extern std::string proof_path;
 extern std::string d4_library, d4_out, d4_tools, d4_mode, search_log;

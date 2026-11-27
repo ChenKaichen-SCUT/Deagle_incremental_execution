@@ -1186,6 +1186,19 @@ bool closure::light_guard(int u)
     return false;
 }
 
+void closure::supportRoots(std::vector<ProofId> &out) const
+{
+    out.push_back(config);out.push_back(conflict_proof);
+    for(const auto &p:atomic_orders)out.push_back(p.second);
+    for(const auto &p:rf_orders)out.push_back(p.second.second);
+    out.insert(out.end(),guards.begin(),guards.end());
+    for(const auto &n:nodes)
+        for(const auto *edges:{&n.in,&n.out,&n.in_rf,&n.out_rf})
+            for(const auto &e:*edges)out.push_back(e.proof);
+    for(const auto &t:triplets_to_check)out.push_back(t.rf_certificate);
+    for(const auto *table:{&rf_to_triplets,&guard_to_triplets})
+        for(const auto &kv:*table)for(const auto &t:kv.second)out.push_back(t.rf_certificate);
+}
 void closure::push_scope()
 {
     trail_rf_lim.push(trail_rf.size());

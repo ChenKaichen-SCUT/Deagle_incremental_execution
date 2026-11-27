@@ -1,0 +1,80 @@
+{
+  "stage": "D4.2",
+  "baseline": "7f26925c54192980e541ea95daf7e2565517cdda",
+  "baseline_implementation": "0da0f58cc2066f4b182d00d6d33b44ea520f053d",
+  "upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "old_project": "06510d4999c4b1030945e83a50c9ef73e3db690b",
+  "cases": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6",
+    "fib-snapshot-11"
+  ],
+  "permanent_controls": [
+    1307,
+    188,
+    41800
+  ],
+  "known_permutations": [
+    "unsigned",
+    "signed"
+  ],
+  "permutation_seed": 420187,
+  "structural_rounds": 4,
+  "candidate_probes": 1000000,
+  "extra_mapping_seconds": 5,
+  "quality_order": [
+    "LBD with level zero counted once when present",
+    "original minimized length",
+    "descending P0 watcher propagation, watcher conflict and actual analyze reason visits",
+    "ascending native birth ordinal"
+  ],
+  "top": 512,
+  "import_order": "ascending original birth ordinal within the selected top 512",
+  "repetitions": 3,
+  "order": [
+    [
+      "stock",
+      "off",
+      "record",
+      "reference",
+      "record-cold",
+      "reuse"
+    ],
+    [
+      "off",
+      "reference",
+      "record",
+      "reuse",
+      "record-cold",
+      "stock"
+    ],
+    [
+      "record",
+      "stock",
+      "off",
+      "record-cold",
+      "reuse",
+      "reference"
+    ]
+  ],
+  "preconditions": [
+    "verified controlled transport before changing real mapping",
+    "all correctness checks before conducting paired performance tests"
+  ],
+  "comparison": "same-build off, full Audit reference with D4.1 mapping, Light-only, Mapping-only, Combined; exact support comparison for every actual birth",
+  "frozen_reference_candidate": "D4 Fibonacci 121",
+  "thresholds": {
+    "light_extra_time_reduction": 0.3,
+    "light_extra_RSS_reduction": 0.3,
+    "other_case_time_degradation": 0.1,
+    "added_candidates_min": 10,
+    "added_candidates_fraction": 0.1,
+    "search_work_reduction": 0.1,
+    "search_time_reduction": 0.05,
+    "net_wall_reduction": 0.05,
+    "net_cycle_reduction": 0.05,
+    "positive_rounds": 2
+  },
+  "stop": "D4.2 review only"
+}

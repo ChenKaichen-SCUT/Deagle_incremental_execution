@@ -532,12 +532,14 @@ CRef Solver::propagate()
             *j++ = w;
             if (value(first) == l_False){
                 confl = cr;
+                if(proof && proof->quality)proof->birthUse(cr,1);
                 if(imports) imports->hit(cr,WatchConflict,decisionLevel(),first.x,conflicts,c);
                 qhead = trail.size();
                 // Copy the remaining watches:
                 while (i < end)
                     *j++ = *i++;
             }else{
+                if(proof && proof->quality)proof->birthUse(cr,0);
                 if(imports) imports->hit(cr,WatchUnit,decisionLevel(),first.x,conflicts,c);
                 uncheckedEnqueue(first, cr);
             }

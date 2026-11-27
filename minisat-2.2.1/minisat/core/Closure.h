@@ -131,6 +131,7 @@ public:
 
     bool light_guard(int u);
 
+    void supportRoots(std::vector<ProofId> &out) const;
     void push_scope();
     void pop_scope(int new_level);
 

@@ -444,6 +444,12 @@ int cbmc_parse_optionst::doit()
   optionst options;
   get_command_line_options(options);
   const bool loading=cmdline.isset("d4-load");
+  dependency_manifest::light42=cmdline.isset("d42-light");
+  dependency_manifest::quality42=cmdline.isset("d42-quality");
+  if((dependency_manifest::light42 || dependency_manifest::quality42) && !cmdline.isset("d3-proof"))
+    throw std::runtime_error("D4.2 requires native recording");
+  if(dependency_manifest::light42 && (!cmdline.isset("d41-triplets") || cmdline.isset("d41-compact")))
+    throw std::runtime_error("Light requires the D4.1 rule set and its own archive format");
   dependency_manifest::triplets=cmdline.isset("d41-triplets");
   dependency_manifest::eager_triplets=cmdline.isset("d41-eager");
   if(dependency_manifest::eager_triplets && !dependency_manifest::triplets) throw std::runtime_error("eager control needs triplet recording");

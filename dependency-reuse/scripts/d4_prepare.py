@@ -66,6 +66,9 @@ def policies(out,policy):
 
 
 def prepare(lib, out, tools):
+    if (out/"control42.json").is_file():
+        from d42_prepare import prepare as prepare42
+        return prepare42(lib,out,tools)
     timings = {}
     start = time.monotonic_ns()
     # The caller is the live native process suspended in at_root_boundary.
