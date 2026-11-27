@@ -23,7 +23,7 @@
 从仓库根目录可独立构建边界检查器。链接器只保留读库所需的对象节。
 
 ```sh
-g++ -std=c++11 -O2 -ffunction-sections -fdata-sections -I src -I minisat-2.2.1 \
+g++ -std=c++17 -O2 -ffunction-sections -fdata-sections -I src -I minisat-2.2.1 \
   dependency-reuse/d4/boundary43_check.cpp minisat-2.2.1/minisat/core/ProofStore.cc \
   -Wl,--gc-sections -o /tmp/boundary43-check
 ```
