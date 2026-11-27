@@ -36,6 +36,7 @@ public:
   struct sourcet
   {
     unsigned thread_nr;
+    int d1_context = -1;
     irep_idt function_id;
     // The program counter is an iterator which indicates where the execution
     // is in its program sequence
@@ -56,7 +57,7 @@ public:
     }
 
     sourcet(sourcet &&other) noexcept
-      : thread_nr(other.thread_nr), function_id(other.function_id), pc(other.pc)
+      : thread_nr(other.thread_nr), d1_context(other.d1_context), function_id(other.function_id), pc(other.pc)
     {
     }
 

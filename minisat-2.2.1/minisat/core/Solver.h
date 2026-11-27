@@ -41,6 +41,8 @@ public:
     //
     Solver();
     virtual ~Solver();
+    // Optional observer sees the input before sorting and root simplification.
+    void (*observe_input)(const vec<Lit>&) = nullptr;
 
     // Problem specification:
     //

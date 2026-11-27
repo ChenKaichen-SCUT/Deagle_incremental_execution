@@ -15,6 +15,7 @@ Author: Daniel Kroening, kroening@kroening.com
 #include <set>
 
 #include <util/invariant.h>
+#include <util/dependency_manifest.h>
 
 // #define VERBOSE
 
@@ -23,6 +24,8 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \par parameters: Two input signals to the AND gate, one output
 void cnft::gate_and(literalt a, literalt b, literalt o)
 {
+  if(dependency_manifest::stream)
+    dependency_manifest::gate("and", int(o.get()), {int(a.get()), int(b.get())});
   // a*b=c <==> (a + o')( b + o')(a'+b'+o)
   bvt lits(2);
 
@@ -46,6 +49,8 @@ void cnft::gate_and(literalt a, literalt b, literalt o)
 /// \par parameters: Two input signals to the OR gate, one output
 void cnft::gate_or(literalt a, literalt b, literalt o)
 {
+  if(dependency_manifest::stream)
+    dependency_manifest::gate("or", int(o.get()), {int(a.get()), int(b.get())});
   // a+b=c <==> (a' + c)( b' + c)(a + b + c')
   bvt lits(2);
 
@@ -68,6 +73,8 @@ void cnft::gate_or(literalt a, literalt b, literalt o)
 /// \par parameters: Two input signals to the XOR gate, one output
 void cnft::gate_xor(literalt a, literalt b, literalt o)
 {
+  if(dependency_manifest::stream)
+    dependency_manifest::gate("xor", int(o.get()), {int(a.get()), int(b.get())});
   // a xor b = o <==> (a' + b' + o')
   //                  (a + b + o' )
   //                  (a' + b + o)
@@ -99,6 +106,8 @@ void cnft::gate_xor(literalt a, literalt b, literalt o)
 /// \par parameters: Two input signals to the NAND gate, one output
 void cnft::gate_nand(literalt a, literalt b, literalt o)
 {
+  if(dependency_manifest::stream)
+    dependency_manifest::gate("nand", int(o.get()), {int(a.get()), int(b.get())});
   // a Nand b = o <==> (a + o)( b + o)(a' + b' + o')
   bvt lits(2);
 
@@ -121,6 +130,8 @@ void cnft::gate_nand(literalt a, literalt b, literalt o)
 /// \par parameters: Two input signals to the NOR gate, one output
 void cnft::gate_nor(literalt a, literalt b, literalt o)
 {
+  if(dependency_manifest::stream)
+    dependency_manifest::gate("nor", int(o.get()), {int(a.get()), int(b.get())});
   // a Nor b = o <==> (a' + o')( b' + o')(a + b + o)
   bvt lits(2);
 
@@ -177,6 +188,12 @@ literalt cnft::land(const bvt &bv)
   bvt lits(2);
   literalt literal=new_variable();
   lits[1]=neg(literal);
+  if(dependency_manifest::stream)
+  {
+    std::vector<int> inputs;
+    for(const auto &l : new_bv) inputs.push_back(int(l.get()));
+    dependency_manifest::gate("and", int(literal.get()), inputs);
+  }
 
   for(const auto &l : new_bv)
   {
@@ -220,6 +237,12 @@ literalt cnft::lor(const bvt &bv)
   bvt lits(2);
   literalt literal=new_variable();
   lits[1]=pos(literal);
+  if(dependency_manifest::stream)
+  {
+    std::vector<int> inputs;
+    for(const auto &l : new_bv) inputs.push_back(int(l.get()));
+    dependency_manifest::gate("or", int(literal.get()), inputs);
+  }
 
   for(const auto &l : new_bv)
   {
@@ -363,6 +386,8 @@ literalt cnft::lselect(literalt a, literalt b, literalt c)
 
   bvt lits;
 
+  if(dependency_manifest::stream)
+    dependency_manifest::gate("ite", int(o.get()), {int(a.get()), int(b.get()), int(c.get())});
   lcnf(a, !c,  o);
   lcnf(a,  c, !o);
   lcnf(!a, !b,  o);

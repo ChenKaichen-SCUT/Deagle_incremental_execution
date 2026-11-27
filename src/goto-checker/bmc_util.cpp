@@ -419,6 +419,33 @@ void postprocess_equation(
 }
 
 #include <solvers/sat/satcheck_minisat2.h>
+#include <solvers/flattening/boolbv.h>
+#include <goto-symex/dependency_context.h>
+
+namespace
+{
+class d1_term_tablet
+{
+  std::map<exprt, int> terms;
+public:
+  int intern(const exprt &expr)
+  {
+    const auto found = terms.find(expr);
+    if(found != terms.end())
+      return found->second;
+    std::vector<std::string> fields{"", id2string(expr.id()), dependency_manifest::scalar_type(expr.type()), ""};
+    if(expr.id() == ID_symbol) fields[3] = id2string(expr.get(ID_identifier));
+    if(expr.id() == ID_constant) fields[3] = id2string(expr.get(ID_value));
+    for(const auto &child : expr.operands())
+      fields.push_back(std::to_string(intern(child)));
+    int id = int(terms.size()) + 1;
+    fields[0] = std::to_string(id);
+    terms.emplace(expr, id);
+    dependency_manifest::row("TERM", fields);
+    return id;
+  }
+};
+}
 #include <solvers/prop/prop_conv_solver.h>
 
 std::chrono::duration<double> prepare_property_decider(
@@ -474,6 +501,7 @@ std::chrono::duration<double> prepare_property_decider(
   }
   else if(equation.use_deagle_closure)
   {
+    dependency_manifest::scopet scope('B');
     auto& deagle_closure_solver = *(deagle_closure_solvert*)(&(property_decider.get_solver()->prop()));
     auto& decision_procedure = *(prop_conv_solvert*)(&(property_decider.get_decision_procedure()));
 
@@ -501,6 +529,21 @@ std::chrono::duration<double> prepare_property_decider(
         Minisat::Lit guard_final = Minisat::mkLit(guard.var_no(), guard.sign());
         oc_guard_map.insert(std::make_pair(name, guard_final));
         oc_location_map.insert(std::make_pair(name, location));
+    }
+
+    if(dependency_manifest::stream)
+    {
+      d1_term_tablet terms;
+      for(const auto &step : equation.SSA_steps)
+        if(step.is_assignment() && step.ssa_lhs.is_not_nil() && step.ssa_rhs.is_not_nil())
+          dependency_manifest::row("VALUE_DEF", {id2string(step.ssa_lhs.get_identifier()),
+                                                 std::to_string(terms.intern(step.ssa_rhs))});
+      for(const auto &write : equation.oc_guard_map)
+        dependency_manifest::row("H", {id2string(write->ssa_lhs.get_identifier()),
+                                       std::to_string(terms.intern(write->guard))});
+      for(const auto &edge : equation.oc_edges)
+        if(edge.kind == "rf" && edge.expr.id() == ID_symbol)
+          dependency_manifest::row("F", {id2string(edge.expr.get(ID_identifier)), edge.e1_str, edge.e2_str});
     }
 
     deagle_closure_solver.save_raw_graph(oc_edge_table, oc_guard_map, oc_location_map, equation.oc_result_order);
@@ -586,6 +629,20 @@ void run_property_decider(
       return is_property_to_check(properties.at(property_id).status);
     });
 
+  if(dependency_manifest::stream)
+  {
+    auto &bv = dynamic_cast<const boolbvt &>(property_decider.get_decision_procedure());
+    for(const auto &entry : bv.get_map().get_mapping())
+    {
+      const auto &bits = entry.second.literal_map;
+      auto type = dependency_manifest::scalar_type(entry.second.type);
+      for(size_t bit = 0; bit < bits.size(); ++bit)
+        dependency_manifest::row("A", {id2string(entry.first), type, std::to_string(bit),
+                                        std::to_string(int(bits[bit].get()))});
+    }
+    for(const auto &s : bv.get_symbols())
+      dependency_manifest::row("A", {id2string(s.first), "bool", "0", std::to_string(int(s.second.get()))});
+  }
   auto const sat_solver_start = std::chrono::steady_clock::now();
 
   decision_proceduret::resultt dec_result = property_decider.solve();

@@ -10,6 +10,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// CBMC Command Line Option Processing
 
 #include "cbmc_parse_options.h"
+#include <util/dependency_manifest.h>
 
 #include <cstdlib> // exit()
 #include <cstdio>
@@ -442,6 +443,22 @@ int cbmc_parse_optionst::doit()
 
   optionst options;
   get_command_line_options(options);
+  if(cmdline.isset("d1-manifest"))
+  {
+    if(!options.get_bool_option("deagle-closure") || options.get_bool_option("refined-pointer-analysis") ||
+       (!options.get_option("mm").empty() && options.get_option("mm") != "sc"))
+      throw std::runtime_error("D1 requires native SC Closure and single-pass symex");
+    dependency_manifest::open(cmdline.get_value("d1-manifest"));
+    std::ostringstream configured;
+    options.output(configured);
+    dependency_manifest::row("K", {"Closure-SC-d8c79eab/D1-v1", std::to_string(config.ansi_c.pointer_width),
+      std::to_string(config.ansi_c.int_width), std::to_string(int(config.ansi_c.endianness)),
+      options.get_option("unwind"), options.get_bool_option("unwinding-assertions") ? "unwind-assert" : "none",
+      id2string(config.ansi_c.arch), std::to_string(config.ansi_c.char_width),
+      std::to_string(config.ansi_c.short_int_width), std::to_string(config.ansi_c.long_int_width),
+      std::to_string(config.ansi_c.long_long_int_width), std::to_string(config.ansi_c.alignment),
+      config.ansi_c.char_is_unsigned ? "unsigned-char" : "signed-char", configured.str()});
+  }
 
   messaget::eval_verbosity(
     cmdline.get_value("verbosity"), messaget::M_STATISTICS, ui_message_handler);
@@ -993,6 +1010,7 @@ void cbmc_parse_optionst::help()
     "\n"
     "Backend options:\n"
     HELP_CONFIG_BACKEND
+    " --d1-manifest FILE           write D1 identities and scoped inputs to a new file\n"
     HELP_SOLVER
     HELP_STRING_REFINEMENT_CBMC
     " --arrays-uf-never            never turn arrays into uninterpreted functions\n" // NOLINT(*)

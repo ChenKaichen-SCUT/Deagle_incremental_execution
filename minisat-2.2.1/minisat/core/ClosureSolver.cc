@@ -796,6 +796,7 @@ void ClosureSolver::addMissingCoClauses()
         if(guard_lit2.x != -1)
             co_clause.push(~guard_lit2);
 
+        if(observe_co) observe_co(node1, node2, lit12, lit21, guard_lit1, guard_lit2);
         CRef cr = ca.alloc(co_clause, false);
         clauses.push(cr);
         attachClause(cr);

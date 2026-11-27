@@ -109,7 +109,7 @@ class deagle_closure_solvert:
   public satcheck_minisat2_baset<Minisat::ClosureSolver>
 {
 public:
-  using satcheck_minisat2_baset<Minisat::ClosureSolver>::satcheck_minisat2_baset;
+  explicit deagle_closure_solvert(message_handlert &);
   const std::string solver_text() override;
   void save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order);
 };

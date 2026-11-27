@@ -1,4 +1,5 @@
-SRC = auto_objects.cpp \
+SRC = dependency_context.cpp \
+      auto_objects.cpp \
       build_goto_trace.cpp \
       expr_skeleton.cpp \
       field_sensitivity.cpp \

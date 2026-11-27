@@ -10,6 +10,7 @@ Author: Daniel Kroening, Peter Schrammel
 /// Property Decider for Goto-Symex
 
 #include "goto_symex_property_decider.h"
+#include <util/dependency_manifest.h>
 
 #include <util/ui_message.h>
 
@@ -70,6 +71,7 @@ void goto_symex_property_decidert::
 
 void goto_symex_property_decidert::convert_goals()
 {
+  dependency_manifest::scopet scope('Q');
   for(auto &goal_pair : goal_map)
   {
     // Our goal is to falsify a property, i.e., we will
@@ -82,7 +84,9 @@ void goto_symex_property_decidert::convert_goals()
 void goto_symex_property_decidert::add_constraint_from_goals(
   std::function<bool(const irep_idt &)> select_property)
 {
+  dependency_manifest::scopet scope('Q');
   exprt::operandst disjuncts;
+  if(dependency_manifest::stream) dependency_manifest::row("QUERY", {});
 
   for(const auto &goal_pair : goal_map)
   {
@@ -90,6 +94,7 @@ void goto_symex_property_decidert::add_constraint_from_goals(
       select_property(goal_pair.first) &&
       !goal_pair.second.condition.is_false())
     {
+      if(dependency_manifest::stream) dependency_manifest::row("TARGET", {id2string(goal_pair.first)});
       disjuncts.push_back(goal_pair.second.condition);
     }
   }
@@ -100,6 +105,7 @@ void goto_symex_property_decidert::add_constraint_from_goals(
 
 decision_proceduret::resultt goto_symex_property_decidert::solve()
 {
+  dependency_manifest::scopet scope('Q'); // postprocessing during this query is conservatively scoped
   return solver->decision_procedure()();
 }
 

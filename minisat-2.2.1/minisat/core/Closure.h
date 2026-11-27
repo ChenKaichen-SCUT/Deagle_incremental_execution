@@ -142,6 +142,8 @@ public:
     void filter_writes_reasons(std::set<int> &src, std::vector<std::pair<int, literal_vector>> &dst, literal_vector& reason);
 
     decide_entryt get_decide_entry(Lit l);
+    decide_entryt observed_binding(Lit l) const;
+    Lit observed_pair_binding(int a, int b) const;
     bool use_available_info();
     int get_decision_level();
     bool remove_rf(int from, int to, Lit p);

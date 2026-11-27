@@ -136,6 +136,7 @@ Var Solver::newVar(lbool upol, bool dvar)
 
 bool Solver::addClause_(vec<Lit>& ps)
 {
+    if (observe_input) observe_input(ps);
     assert(decisionLevel() == 0);
     if (!ok) return false;
 

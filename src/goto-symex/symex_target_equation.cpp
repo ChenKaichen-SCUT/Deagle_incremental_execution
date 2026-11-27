@@ -11,6 +11,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// Implementation of functions to build SSA equation.
 
 #include "symex_target_equation.h"
+#include <util/dependency_manifest.h>
 
 #include <chrono>
 
@@ -330,6 +331,7 @@ void symex_target_equationt::constraint(
 void symex_target_equationt::convert_without_assertions(
   decision_proceduret &decision_procedure)
 {
+  dependency_manifest::scopet scope('B');
   with_solver_hardness(decision_procedure, [&](solver_hardnesst &hardness) {
     hardness.register_ssa_size(SSA_steps.size());
   });
@@ -506,6 +508,7 @@ void symex_target_equationt::convert_assertions(
   decision_proceduret &decision_procedure,
   bool optimized_for_single_assertions)
 {
+  dependency_manifest::scopet scope('Q');
   // we find out if there is only _one_ assertion,
   // which allows for a simpler formula
 

@@ -10,6 +10,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// Symbolic Execution
 
 #include "goto_symex.h"
+#include "dependency_context.h"
 
 #include <util/exception_utils.h>
 #include <util/expr_initializer.h>
@@ -41,6 +42,8 @@ void goto_symext::symex_start_thread(statet &state)
 
   // put into thread vector
   const std::size_t new_thread_nr = state.threads.size();
+  if(dependency_manifest::stream)
+    dependency_manifest::birth(new_thread_nr, state.source);
   if(state.call_stack().top().function_identifier == "pthread_create")
     target.witness_spawn_events.push_back(
       {state.source.thread_nr,

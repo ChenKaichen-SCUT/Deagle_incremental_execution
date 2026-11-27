@@ -1472,6 +1472,22 @@ decide_entryt closure::get_decide_entry(Lit l)
     return std::make_pair(std::make_pair(-1, -1), OC_PO);
 }
 
+Lit closure::observed_pair_binding(int a, int b) const
+{
+    if(a < 0 || b < 0 || size_t(a) >= tail_head_to_inactive_lit.size() ||
+       size_t(b) >= tail_head_to_inactive_lit[a].size())
+        return lit_Error;
+    return tail_head_to_inactive_lit[a][b];
+}
+
+decide_entryt closure::observed_binding(Lit l) const
+{
+    const auto it = lit_to_edge.find(l);
+    if(it != lit_to_edge.end())
+        return it->second;
+    return std::make_pair(std::make_pair(-1, -1), OC_PO);
+}
+
 bool closure::use_available_info()
 {
     for(auto it = lit_to_edge.begin(); it != lit_to_edge.end();)

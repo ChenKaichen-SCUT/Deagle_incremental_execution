@@ -18,6 +18,7 @@ Author: Daniel Kroening, kroening@kroening.com
 */
 
 #include "cbmc_parse_options.h"
+#include <util/dependency_manifest.h>
 
 #ifdef _MSC_VER
 #  include <util/unicode.h>
@@ -53,5 +54,5 @@ int main(int argc, const char **argv)
   std::cout << "IREP_CMP_NE_CNT=" << irep_cmp_ne_cnt << '\n';
   #endif
 
-  return res;
+  return dependency_manifest::finish(res) ? res : 6;
 }

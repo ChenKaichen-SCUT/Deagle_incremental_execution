@@ -10,8 +10,10 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
 /// Memory model for partial order concurrency
 
 #include "memory_model_sc.h"
+#include "dependency_context.h"
 
 #include <util/std_expr.h>
+#include <util/symbol.h>
 #include <iostream>
 
 void memory_model_sct::
@@ -25,6 +27,36 @@ operator()(symex_target_equationt &equation, message_handlert &message_handler)
   log.statistics() << "Adding SC constraints" << messaget::eom;
 
   build_event_lists(equation, message_handler);
+  if(dependency_manifest::stream)
+  {
+    namespace dm = dependency_manifest;
+    // Use the exact graph endpoint spelling, including the native spawn/fence clocks.
+    for(auto it = equation.SSA_steps.begin(); it != equation.SSA_steps.end(); ++it)
+    {
+      bool event = it->is_shared_read() || it->is_shared_write() || it->is_spawn() || it->is_memory_barrier();
+      if(!event && !it->is_assignment() && !it->is_decl()) continue;
+      const auto &lhs = it->ssa_lhs;
+      std::string role = it->is_shared_read() ? "read" : it->is_shared_write() ? "write" :
+        it->is_spawn() ? "spawn" : it->is_memory_barrier() ? "fence" :
+        it->is_decl() ? "decl" : "assign" + std::to_string(int(it->assignment_type));
+      std::string object, type, symbol;
+      bool global = false;
+      if(lhs.is_not_nil())
+      {
+        object = dm::designator(lhs.get_original_expr());
+        type = dm::scalar_type(lhs.type());
+        symbol = id2string(lhs.get_identifier());
+        const symbolt *base = nullptr;
+        global = !ns.lookup(lhs.get_object_name(), base) && base->is_static_lifetime &&
+                 !base->is_thread_local && lhs.get_level_0().empty() && lhs.get_level_1().empty();
+      }
+      int ctx = it->source.d1_context == -2 ? -2 : dm::checked_context(it->source);
+      if(event)
+        dm::row("E", {get_name(it), std::to_string(ctx), role, object, type, global ? "static" : "instance"});
+      if(!symbol.empty())
+        dm::row("V", {symbol, std::to_string(ctx), role, object, type, global ? "static" : "instance"});
+    }
+  }
   build_clock_type();
 
   if(enable_datarace)

@@ -14,6 +14,7 @@ Author: Daniel Kroening, Peter Schrammel
 #include <util/ui_message.h>
 
 #include <goto-symex/show_program.h>
+#include <goto-symex/dependency_context.h>
 #include <goto-symex/show_vcc.h>
 
 #include <chrono>
@@ -76,6 +77,8 @@ operator()(propertiest &properties)
 void multi_path_symex_only_checkert::generate_equation()
 {
   const auto symex_start = std::chrono::steady_clock::now();
+  if(dependency_manifest::stream)
+    dependency_manifest::index_sites(goto_model.get_goto_functions());
 
   // __WP_ADD_BEGIN__
   if(options.get_bool_option("unwind-suggest"))

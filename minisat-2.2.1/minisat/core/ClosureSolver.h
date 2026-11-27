@@ -45,6 +45,8 @@ protected:
     void analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel);
 public:
     ClosureSolver();
+    const closure& declaration_graph() const { return graph; }
+    void (*observe_co)(int, int, Lit, Lit, Lit, Lit) = nullptr;
     void init();
     void save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order);
     void set_graph();

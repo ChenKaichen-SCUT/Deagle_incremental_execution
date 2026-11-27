@@ -59,6 +59,7 @@ void partial_order_concurrencyt::add_init_writes(
         e_it->source, goto_trace_stept::typet::SHARED_WRITE);
       SSA_stept &SSA_step = init_steps.back();
 
+      SSA_step.source.d1_context = -2; // synthetic initial write for this address
       SSA_step.guard=true_exprt();
       // no SSA L2 index, thus nondet value
       SSA_step.ssa_lhs = remove_level_2(e_it->ssa_lhs);

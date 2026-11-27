@@ -1,4 +1,5 @@
-SRC = arith_tools.cpp \
+SRC = dependency_manifest.cpp \
+      arith_tools.cpp \
       array_element_from_pointer.cpp \
       array_name.cpp \
       bitvector_expr.cpp \

@@ -16,6 +16,7 @@ Author: Daniel Kroening, kroening@kroening.com
 #include <limits>
 
 #include <util/invariant.h>
+#include <util/dependency_manifest.h>
 #include <util/make_unique.h>
 #include <util/threeval.h>
 
@@ -113,6 +114,21 @@ const std::string satcheck_minisat_simplifiert::solver_text()
 }
 
 // __SZH_ADD_BEGIN__
+deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
+  : satcheck_minisat2_baset<Minisat::ClosureSolver>(handler)
+{
+  if(!dependency_manifest::stream) return;
+  solver->observe_input = [](const Minisat::vec<Minisat::Lit> &ps) {
+    auto *f = dependency_manifest::stream;
+    std::fprintf(f, "C\t%c", dependency_manifest::scope);
+    for(int i = 0; i < ps.size(); ++i) std::fprintf(f, "\t%d", ps[i].x);
+    std::fputc('\n', f);
+  };
+  solver->observe_co = [](int a, int b, Minisat::Lit x, Minisat::Lit y, Minisat::Lit g, Minisat::Lit h) {
+    std::fprintf(dependency_manifest::stream, "CO\t%d\t%d\t%d\t%d\t%d\t%d\n", a,b,x.x,y.x,g.x,h.x);
+  };
+}
+
 const std::string deagle_closure_solvert::solver_text()
 {
   return "Deagle's Closure Solver";
@@ -215,6 +231,12 @@ propt::resultt satcheck_minisat2_baset<T>::do_prop_solve()
 {
   PRECONDITION(status != statust::ERROR);
 
+  if(dependency_manifest::stream)
+  {
+    std::fprintf(dependency_manifest::stream, "N\t%zu", no_variables());
+    for(const auto &a : assumptions) std::fprintf(dependency_manifest::stream, "\t%d", int(a.get()));
+    std::fputc('\n', dependency_manifest::stream);
+  }
   log.statistics() << (no_variables() - 1) << " variables, "
                    << solver->nClauses() << " clauses" << messaget::eom;
 
@@ -406,6 +428,34 @@ bool satcheck_minisat_simplifiert::is_eliminated(literalt a) const
 void deagle_closure_solvert::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order)
 {
   solver->save_raw_graph(_oc_edge_table, _oc_guard_map, _oc_location_map, _oc_result_order);
+  if(dependency_manifest::stream)
+  {
+    const auto &graph = solver->declaration_graph();
+    std::map<std::string, int> node_ids;
+    for(size_t i = 0; i < graph.nodes.size(); ++i)
+    {
+      const auto &n = graph.nodes[i];
+      node_ids.emplace(n.name, int(i));
+      if(n.atomic_parent == int(i))
+        for(int item : n.atomic_items)
+          dependency_manifest::row("MEMBER", {std::to_string(i), std::to_string(item)});
+      dependency_manifest::row("NODE", {std::to_string(i), n.name, std::to_string(n.address),
+        n.is_read ? "r" : "", n.is_write ? "w" : "", std::to_string(n.atomic_parent)});
+      for(int j : n.atomic_in) dependency_manifest::row("IN", {std::to_string(i), std::to_string(j)});
+      for(int j : n.atomic_out) dependency_manifest::row("OUT", {std::to_string(i), std::to_string(j)});
+    }
+    for(const auto &edge : _oc_edge_table)
+    {
+      auto binding = graph.observed_binding(edge.second.first);
+      auto a = node_ids.find(edge.first.first), b = node_ids.find(edge.first.second);
+      auto pair_lit = a == node_ids.end() || b == node_ids.end() ? Minisat::lit_Error :
+        graph.observed_pair_binding(a->second, b->second);
+      dependency_manifest::row("EDGE", {edge.second.second, edge.first.first, edge.first.second,
+        std::to_string(edge.second.first.x), std::to_string(binding.first.first), std::to_string(binding.first.second), std::to_string(pair_lit.x)});
+    }
+    for(const auto &g : _oc_guard_map)
+      dependency_manifest::row("GUARD", {g.first, std::to_string(g.second.x)});
+  }
 }
 
 void deagle_icd_solvert::save_raw_graph(oc_edge_tablet& _oc_edge_table, std::map<std::string, int>& _oc_result_order)

@@ -10,6 +10,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// Symbolic Execution
 
 #include "goto_symex.h"
+#include "dependency_context.h"
 
 #include <memory>
 #include <chrono>
@@ -617,6 +618,9 @@ void goto_symext::symex_step(
   if(try_finding_value_set)
     overall_value_set.make_union(state.value_set);
   // __SZH_ADD_END__
+
+  if(dependency_manifest::stream)
+    dependency_manifest::context(state);
 
   // Print debug statements if they've been enabled.
   print_symex_step(state);

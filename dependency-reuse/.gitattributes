@@ -3,6 +3,8 @@ bench/** -text
 configs/*.json text eol=lf
 scripts/*.py text eol=lf
 scripts/*.sh text eol=lf
+d1/** text eol=lf
+tests/d1/** text eol=lf
 reports/**/*.json text eol=lf
 reports/**/*.gz -text
 reports/*.md text eol=lf
