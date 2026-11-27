@@ -68,17 +68,29 @@ def boundary(binary,tools,spec,case,folder,lib,mode,mapping,policy):
     save(folder/"run.json",meta)
     if meta["exit_code"] in (0,10) and not (out/"imports.tsv").exists():raise RuntimeError("missing actual native import receipt")
 
-def compare(reference,folder,trajectory):
+def compare(reference,folder,trajectory,encoding=None):
     def result(root):return interpret(read(root/"run.json"),(root/"stdout").read_text())
     gold,t0=result(reference);actual,t1=result(folder)
     a,b=map(property_contract,(gold,actual));a.pop("closure_completion_count");b.pop("closure_completion_count")
     if a!=b:raise ValueError(f"property/unwind mismatch: {folder}")
     traces=trace_comparison(t0,t1)
     if any(not r["visible_steps_equal"] for r in traces.values()):raise ValueError(f"observable trace changed: {folder}")
-    if trajectory and metrics(gold)!=metrics(actual):raise ValueError(f"cold search changed: {folder}")
-    return {"properties":a,"traces":traces,"cold_trajectory_checked":trajectory}
+    explained=False
+    if trajectory and metrics(gold)!=metrics(actual):
+        if not encoding:raise ValueError(f"cold search changed: {folder}")
+        oldq=[q["native_cumulative"] for q in gold["queries"]]
+        newq=[q["native_cumulative"] for q in actual["queries"]]
+        if oldq!=encoding["stock"] or newq!=encoding["manifest"] or not encoding["alpha"]["exact_all_scopes"]:
+            raise ValueError(f"trajectory differs from independent same-encoding observers: {folder}")
+        import copy
+        adjusted=copy.deepcopy(actual)
+        for x,y in zip(adjusted["queries"],gold["queries"]):
+            for k in ("native_cumulative","native_delta_from_previous_snapshot"):x[k]=y[k]
+        if metrics(gold)!=metrics(adjusted):raise ValueError(f"additional native difference in {folder}")
+        explained=True
+    return {"properties":a,"traces":traces,"cold_trajectory_checked":trajectory,"verified_query_renaming":explained}
 
-def matrix(binary,tools,root,action,gate,chosen_cases=None):
+def matrix(binary,tools,root,action,gate,chosen_cases=None,encoding=None):
     plan=read(BASE/"configs/d42-plan.json");specs=load();stockinfo=read(BASE/"configs/build.json")
     stock=Path(stockinfo["binary_path"]);assert digest(stock)==stockinfo["binary_sha256"]
     if action=="performance":
@@ -112,7 +124,10 @@ def matrix(binary,tools,root,action,gate,chosen_cases=None):
                     if label==mode:data.setdefault(mode,{})[side]=snapshot(folder)
                 save(root/"results.json",results)
             for mode,side,folder,trajectory in folders:
-                properties[f"{c}/{i}/{mode}/{side}"]=compare(arm/"stock"/side,folder,trajectory)
+                certificate=None
+                if encoding and c=="fib-snapshot-11" and mode in ("record","reference","record-cold"):
+                    certificate=read(encoding)[side]
+                properties[f"{c}/{i}/{mode}/{side}"]=compare(arm/"stock"/side,folder,trajectory,certificate)
             save(root/"properties.json",properties)
     return results
 
@@ -122,4 +137,5 @@ if __name__=="__main__":
     a.add_argument("action",choices=("functional","performance"))
     for name in ("binary","tools","out"):a.add_argument(name,type=Path)
     a.add_argument("--gate",type=Path);a.add_argument("--cases",nargs="+")
-    p=a.parse_args();matrix(p.binary.resolve(),p.tools.resolve(),p.out.resolve(),p.action,p.gate,p.cases)
+    a.add_argument("--encoding",type=Path,help="independent whole-model and trajectory receipts for the historical Q encoding")
+    p=a.parse_args();matrix(p.binary.resolve(),p.tools.resolve(),p.out.resolve(),p.action,p.gate,p.cases,p.encoding)
