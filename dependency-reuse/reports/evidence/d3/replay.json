@@ -1,0 +1,26 @@
+{
+  "fib_updates_8": {
+    "exact_archive_replay": "fib_updates_8 mixed 2 e1c2c9cbe1133cde2eef0d620412ee06cea63888ec51e7cf874c561cb297da5d verified",
+    "scopes": [
+      "improved",
+      "frozen"
+    ],
+    "regenerated": "metrics, learned, used, survivors, mixed witness when present"
+  },
+  "circular-buffer": {
+    "exact_archive_replay": "circular-buffer mixed 2 1e31d1a02db8b7fb8b9e75657481793daab22b0d2e81dd9c4a9e1584aa7b9a9d verified",
+    "scopes": [
+      "improved",
+      "frozen"
+    ],
+    "regenerated": "metrics, learned, used, survivors, mixed witness when present"
+  },
+  "airline_reservations_6": {
+    "exact_archive_replay": "airline_reservations_6 mixed 2 05d389d8961793deef1ebb99ade76c98b299260e908b1c50f0d81d2c5d678268 verified",
+    "scopes": [
+      "improved",
+      "frozen"
+    ],
+    "regenerated": "metrics, learned, used, survivors, mixed witness when present"
+  }
+}

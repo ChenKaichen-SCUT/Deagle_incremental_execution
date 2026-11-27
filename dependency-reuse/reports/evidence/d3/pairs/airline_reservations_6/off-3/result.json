@@ -1,0 +1,101 @@
+{
+  "classification": "VIOLATION",
+  "cProverStatus": "failure",
+  "target_status": "FAILURE",
+  "properties": [
+    {
+      "description": "assertion sold == capacity",
+      "property": "main.assertion.1",
+      "sourceLocation": {
+        "file": "harness.c",
+        "function": "main",
+        "line": "24",
+        "workingDirectory": "/home/deagle/dependency-reuse/runs/d3/checked/final-runs/airline_reservations_6/off-3/work"
+      },
+      "status": "FAILURE"
+    }
+  ],
+  "trace_step_counts": {
+    "main.assertion.1": 516
+  },
+  "unwinding_property_ids": [],
+  "unwinding_iterations": {
+    "main.0 file harness.c line 20 function main thread 0": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "main.1 file harness.c line 22 function main thread 0": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6
+    ]
+  },
+  "unwinding_stop_or_warning": [],
+  "enabled_unwinding_assertions": true,
+  "vcc_messages": [
+    "Generated 1 VCC(s), 1 remaining after simplification"
+  ],
+  "adapter_query_count": 1,
+  "closure_completion_count": 1,
+  "queries": [
+    {
+      "query": 1,
+      "adapter_message": "SAT checker: instance is SATISFIABLE",
+      "reported_variables": 199090,
+      "live_clauses": 880094,
+      "property_decider_solve_s": 5.77865,
+      "early_adapter_return": false,
+      "native_cumulative": {
+        "sat_conflicts": 42244,
+        "decisions": 87181,
+        "sat_propagations": 58423777,
+        "theory_propagations": 307192,
+        "theory_cycle_conflicts": 2782,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      },
+      "native_delta_from_previous_snapshot": {
+        "sat_conflicts": 42244,
+        "decisions": 87181,
+        "sat_propagations": 58423777,
+        "theory_propagations": 307192,
+        "theory_cycle_conflicts": 2782,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      },
+      "adapter_entry_to_exit_delta": null,
+      "restarts": null,
+      "search_only_s": null,
+      "co_pairs_in_graph_at_return": 368
+    }
+  ],
+  "native_timers_s": {
+    "Symex": [
+      0.0163448
+    ],
+    "Postprocess Equation": [
+      0.0127668
+    ],
+    "Convert SSA": [
+      0.0620926
+    ],
+    "Post-process": [
+      0.00665529
+    ],
+    "Solver": [
+      5.77865
+    ],
+    "decision procedure": [
+      5.8469
+    ]
+  },
+  "warnings": [],
+  "native_warning_lines": []
+}

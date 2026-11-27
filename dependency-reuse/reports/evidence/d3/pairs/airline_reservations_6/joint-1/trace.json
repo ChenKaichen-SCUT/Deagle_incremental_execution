@@ -1,0 +1,39 @@
+{
+  "main.assertion.1": {
+    "total_steps": 516,
+    "different_positions": 30,
+    "spans": [
+      {
+        "first_zero_based": 38,
+        "last_zero_based": 43,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      },
+      {
+        "first_zero_based": 92,
+        "last_zero_based": 97,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      },
+      {
+        "first_zero_based": 119,
+        "last_zero_based": 124,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      },
+      {
+        "first_zero_based": 146,
+        "last_zero_based": 151,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      },
+      {
+        "first_zero_based": 173,
+        "last_zero_based": 178,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      }
+    ],
+    "visible_steps_equal": true
+  }
+}

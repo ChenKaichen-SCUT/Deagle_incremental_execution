@@ -1,0 +1,113 @@
+{
+  "fib_updates_8": [
+    {
+      "mode": "boolean",
+      "repeat": 1,
+      "restored_sha256": "40c272150937ecb9e8c460f194f6403448c313d707cb2f20b7a95bd516622bbc"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 1,
+      "restored_sha256": "fcebecf502d5138a562a068ea56a0b8e97e4062de971cf30d4fe86614cc5a2db"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 2,
+      "restored_sha256": "09b000c395dbe0fbd30de3199ed3939edb5b3869102ffb2f4286d4f1ccc33edf"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 2,
+      "restored_sha256": "e1c2c9cbe1133cde2eef0d620412ee06cea63888ec51e7cf874c561cb297da5d"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 3,
+      "restored_sha256": "d4dfc119b659b49269b9e175e94896420280810516a19f3725d91d0d3bc2e726"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 3,
+      "restored_sha256": "07fb19500fd187e324ad1c93c727aad96001cadc081d4e7dbfa89657de29ecdd"
+    },
+    {
+      "mode": "joint",
+      "repeat": 1,
+      "restored_sha256": "6c878bcd8dbbfa9dc52ecf1f79d2f69f1efa666444a460991111353615c1c5e5"
+    }
+  ],
+  "circular-buffer": [
+    {
+      "mode": "boolean",
+      "repeat": 1,
+      "restored_sha256": "518f863ef5429ba9cf1249788bc0cac68b21fc6570aa07586d4d3b74096ea06e"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 1,
+      "restored_sha256": "9beed1033ff96afc7b3ba341394f91b16c74fe2ac5708fb52710355328bc62fc"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 2,
+      "restored_sha256": "1e31d1a02db8b7fb8b9e75657481793daab22b0d2e81dd9c4a9e1584aa7b9a9d"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 2,
+      "restored_sha256": "e4583ebea8524124afd52d1fc192a625e993fbd14ff020575db440ca62679528"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 3,
+      "restored_sha256": "387c45f63bf7626b904d91b4bcffa41b384fb19ee3d4b516a054772fdba4fc6c"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 3,
+      "restored_sha256": "51f1e7359dd08f30d3fdcdf7f84ca36fd565a69760d88b9a956c0f7d16ffa8ff"
+    },
+    {
+      "mode": "joint",
+      "repeat": 1,
+      "restored_sha256": "ac451482656f98aca4d2b0ca977daf50c0995a90d1f700811c4d4227f58b5586"
+    }
+  ],
+  "airline_reservations_6": [
+    {
+      "mode": "mixed",
+      "repeat": 1,
+      "restored_sha256": "ee3c0a475f309eebbc8faabbada68e0f4b218a5fcb54db6fd4808bb35df873e3"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 1,
+      "restored_sha256": "66f1f672bd87f0d9b72d751063347d994020d63700980ec91b2dd50b72ea442a"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 2,
+      "restored_sha256": "6df64b875e633c5cbef194ea0cadfef163bf94ba2d9f1afed0d07d2961631adf"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 2,
+      "restored_sha256": "05d389d8961793deef1ebb99ade76c98b299260e908b1c50f0d81d2c5d678268"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 3,
+      "restored_sha256": "d42606ed972795dd9640db0ccfc18c5042099f370c080ee8d5a6251b8b1bea66"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 3,
+      "restored_sha256": "a0e5dedfd5c4d54dfed2f4054daf9a2f807326b6764baabb3109a88e1a62edc1"
+    },
+    {
+      "mode": "joint",
+      "repeat": 1,
+      "restored_sha256": "b15c652762cdfe28181e47055bbdeac0eeb1a2936db50d614cc5e73b80406a2f"
+    }
+  ]
+}

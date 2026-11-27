@@ -1,0 +1,14 @@
+scope edge 18 raw binding 2
+scope edge 15 raw binding 4
+ClosureSolver finishes with 0 conflicts, 3 decisions, and 4 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 0.
+ClosureSolver finishes with 1 conflicts, 0 decisions, and 7 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 1. Added co clauses: 1. Total co pairs: 1.
+ClosureSolver finishes with 2 conflicts, 0 decisions, and 9 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 1. Added co clauses: 1. Total co pairs: 1.
+dynamic CO learned 9 and 14 retire after both CO variables resolve out
+ClosureSolver finishes with 1 conflicts, 0 decisions, and 2 propagations. 0 theory propagations and 1 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 1.
+ClosureSolver finishes with 2 conflicts, 0 decisions, and 4 propagations. 0 theory propagations and 1 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 1.
+dual-role target: native opaque conflict, retired CDCL IDs 14 and 19

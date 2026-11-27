@@ -1,0 +1,266 @@
+{
+  "d3_source": "5f5bb7b5422752f878d45c7b93a5eaa5d8881f91",
+  "cpu": 2,
+  "probe": {
+    "d1_implementation": "ed7679588106538c04dcb7dcc504b5ac682f010e",
+    "original_closure_sha256": "79387f654cafcf2ae9f0f3359669eb574d0614322b5f9532d78c34eabcdacf20",
+    "official_observer_source_sha256": "b499b62f757bcc8a7d5a7d4ffee2cecf8f2fc6d7aa54dd6f5acb3dea3ab3619c",
+    "augmented_binary_sha256": "95401978be0084af0c9e0f5ccf2893691069ef6ab4a285729fe6c69c4832d3cd",
+    "sites": {
+      "308": [
+        1,
+        "triplet_initial_guard",
+        "solver->assign_literal(~guard_lit, unit_lv);"
+      ],
+      "321": [
+        2,
+        "triplet_initial_rf",
+        "solver->assign_literal(~rf_lit, unit_lv);"
+      ],
+      "369": [
+        3,
+        "triplet_after_rf_guard",
+        "solver->assign_literal(~guard_lit, unit_lv);"
+      ],
+      "505": [
+        4,
+        "order_self_cycle",
+        "conflict_lv = edge.reason;"
+      ],
+      "514": [
+        5,
+        "order_reverse_apo_cycle",
+        "conflict_lv = edge.reason;"
+      ],
+      "560": [
+        6,
+        "race_conflict",
+        "conflict_lv = conflict_reason;"
+      ],
+      "570": [
+        7,
+        "race_propagation",
+        "solver->assign_literal(~race_lit, conflict_reason);"
+      ],
+      "636": [
+        8,
+        "reverse_rf_prevention",
+        "solver->assign_literal(~rf_lit_cand, unit_lv);"
+      ],
+      "1034": [
+        9,
+        "triplet_after_guard_rf",
+        "solver->assign_literal(~rf_lit, unit_lv);"
+      ]
+    },
+    "patched_files": {
+      "Closure.cc": "4aeccffeed17892c3c75abb8cbd93f8a653581361feac4922ab4dd34c322ddf9",
+      "ClosureSolver.cc": "04cb9b0588c0402fdff1b3e3dd0222d0a62eaa7dd282443bb4386db4f6e4c1b0"
+    }
+  },
+  "cases": {
+    "fib_updates_8": {
+      "hashes": {
+        "native-theory.tsv": "d45dea46445736b91cd3b03ec2763a2d924dc9d75f5372eb783ae4635e0435f6",
+        "native-learns.tsv": "f81912cb7b585ffe53fdff1d21a04bdc0160585c8fe6bfc262d7bf1d0c766716",
+        "native-origins.tsv": "b0cf21413c5a1117578cb055ab14526bc0ff049fb9a62057d4786836c38e6b66",
+        "probe_verified_D3_archive": "fcebecf502d5138a562a068ea56a0b8e97e4062de971cf30d4fe86614cc5a2db"
+      },
+      "site_boundaries": {
+        "triplet_initial_guard": {},
+        "triplet_initial_rf": {
+          "opaque": 1766
+        },
+        "triplet_after_rf_guard": {},
+        "order_self_cycle": {
+          "certified": 25
+        },
+        "order_reverse_apo_cycle": {},
+        "race_conflict": {},
+        "race_propagation": {},
+        "reverse_rf_prevention": {
+          "certified": 1942
+        },
+        "triplet_after_guard_rf": {}
+      },
+      "by_site_learning": {
+        "triplet_initial_guard": {},
+        "triplet_initial_rf": {
+          "descendants": 1189,
+          "direct": 669,
+          "indirect_only": 520,
+          "via_earlier_learning": 855
+        },
+        "triplet_after_rf_guard": {},
+        "order_self_cycle": {},
+        "order_reverse_apo_cycle": {},
+        "race_conflict": {},
+        "race_propagation": {},
+        "reverse_rf_prevention": {},
+        "triplet_after_guard_rf": {}
+      },
+      "births": 1442,
+      "unknown_theory_births": 1189,
+      "total_boundary_records": 3733,
+      "unknown_mask_histogram": {
+        "0": 253,
+        "2": 1189
+      },
+      "group_descendants": {
+        "triplet_any": 1189
+      },
+      "dynamic_co_or_opaque_empty": 0,
+      "D3_discharge_missing_mismatch_verified": [
+        1766,
+        0,
+        1967
+      ],
+      "opaque_all": 1189,
+      "opaque_direct": 669,
+      "through_previous_learned": 855,
+      "indirect_only_opaque": 520
+    },
+    "circular-buffer": {
+      "hashes": {
+        "native-theory.tsv": "53103ffbbc1cd2bb794f7f8c3d7a39b6dc9ddb0fad27f1d98536be4e52c66a93",
+        "native-learns.tsv": "acd52a777cbb33288d082bb1ecf8437f236754e952c119bc870eb9af6f66c8a5",
+        "native-origins.tsv": "3496e727b049b97e0a28dc58ab19b5842e8545b4e9336b0decbc1628acb25a1c",
+        "probe_verified_D3_archive": "9beed1033ff96afc7b3ba341394f91b16c74fe2ac5708fb52710355328bc62fc"
+      },
+      "site_boundaries": {
+        "triplet_initial_guard": {},
+        "triplet_initial_rf": {
+          "opaque": 3232
+        },
+        "triplet_after_rf_guard": {
+          "opaque": 2
+        },
+        "order_self_cycle": {
+          "certified": 18
+        },
+        "order_reverse_apo_cycle": {},
+        "race_conflict": {},
+        "race_propagation": {},
+        "reverse_rf_prevention": {
+          "certified": 7595
+        },
+        "triplet_after_guard_rf": {
+          "opaque": 628
+        }
+      },
+      "by_site_learning": {
+        "triplet_initial_guard": {},
+        "triplet_initial_rf": {
+          "descendants": 200,
+          "direct": 162,
+          "indirect_only": 38,
+          "via_earlier_learning": 153
+        },
+        "triplet_after_rf_guard": {},
+        "order_self_cycle": {},
+        "order_reverse_apo_cycle": {},
+        "race_conflict": {},
+        "race_propagation": {},
+        "reverse_rf_prevention": {},
+        "triplet_after_guard_rf": {
+          "descendants": 153,
+          "direct": 101,
+          "indirect_only": 52,
+          "via_earlier_learning": 146
+        }
+      },
+      "births": 343,
+      "unknown_theory_births": 200,
+      "total_boundary_records": 11475,
+      "unknown_mask_histogram": {
+        "0": 143,
+        "2": 47,
+        "258": 153
+      },
+      "group_descendants": {
+        "triplet_any": 200
+      },
+      "dynamic_co_or_opaque_empty": 0,
+      "D3_discharge_missing_mismatch_verified": [
+        3862,
+        0,
+        7613
+      ],
+      "opaque_all": 200,
+      "opaque_direct": 174,
+      "through_previous_learned": 153,
+      "indirect_only_opaque": 26
+    },
+    "airline_reservations_6": {
+      "hashes": {
+        "native-theory.tsv": "37ebd7a20e4b1cd5f1c4a17e7123976c70ae967c95c58dcec989279ccae1e61c",
+        "native-learns.tsv": "c8a10df2dc8025a4618f089c2d47658980b1f7c8ae3591e09069ce8ec193b882",
+        "native-origins.tsv": "de61e0e5cc364cd4782bc6c01e799b255ca9a7a13b64c4ab92d3dcae5d3c32b6",
+        "probe_verified_D3_archive": "ee3c0a475f309eebbc8faabbada68e0f4b218a5fcb54db6fd4808bb35df873e3"
+      },
+      "site_boundaries": {
+        "triplet_initial_guard": {},
+        "triplet_initial_rf": {
+          "opaque": 153747
+        },
+        "triplet_after_rf_guard": {},
+        "order_self_cycle": {
+          "certified": 2782
+        },
+        "order_reverse_apo_cycle": {},
+        "race_conflict": {},
+        "race_propagation": {},
+        "reverse_rf_prevention": {
+          "certified": 152645
+        },
+        "triplet_after_guard_rf": {
+          "opaque": 800
+        }
+      },
+      "by_site_learning": {
+        "triplet_initial_guard": {},
+        "triplet_initial_rf": {
+          "descendants": 39185,
+          "direct": 28301,
+          "indirect_only": 10884,
+          "via_earlier_learning": 37467
+        },
+        "triplet_after_rf_guard": {},
+        "order_self_cycle": {},
+        "order_reverse_apo_cycle": {},
+        "race_conflict": {},
+        "race_propagation": {},
+        "reverse_rf_prevention": {},
+        "triplet_after_guard_rf": {
+          "descendants": 37293,
+          "direct": 19603,
+          "indirect_only": 17690,
+          "via_earlier_learning": 35367
+        }
+      },
+      "births": 42244,
+      "unknown_theory_births": 39735,
+      "total_boundary_records": 309974,
+      "unknown_mask_histogram": {
+        "2": 2442,
+        "0": 2509,
+        "258": 36743,
+        "256": 550
+      },
+      "group_descendants": {
+        "triplet_any": 39735
+      },
+      "dynamic_co_or_opaque_empty": 0,
+      "D3_discharge_missing_mismatch_verified": [
+        154547,
+        0,
+        155427
+      ],
+      "opaque_all": 39735,
+      "opaque_direct": 31199,
+      "through_previous_learned": 37802,
+      "indirect_only_opaque": 8536
+    }
+  },
+  "mask": "bit 1<<(call_site_id-1). Tables contain ProofId, union of opaque ancestors, direct opaque parents, opaque ancestors through earlier CDCL. Distinct per-site descendant counts can overlap."
+}

@@ -1,0 +1,21 @@
+{
+  "reach_error.assertion.1": {
+    "total_steps": 357,
+    "different_positions": 12,
+    "spans": [
+      {
+        "first_zero_based": 67,
+        "last_zero_based": 72,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      },
+      {
+        "first_zero_based": 92,
+        "last_zero_based": 97,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      }
+    ],
+    "visible_steps_equal": true
+  }
+}

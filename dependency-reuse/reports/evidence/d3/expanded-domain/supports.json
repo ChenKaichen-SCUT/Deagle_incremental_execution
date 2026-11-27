@@ -1,0 +1,232 @@
+{
+  "24": {
+    "24": {
+      "kind": 6,
+      "flags": 8,
+      "conclusion": [
+        2
+      ],
+      "parents": [
+        [
+          3,
+          -1
+        ],
+        [
+          2,
+          4
+        ],
+        [
+          22,
+          12
+        ]
+      ],
+      "boolean_input_ordinal": null
+    },
+    "22": {
+      "kind": 5,
+      "flags": 8,
+      "conclusion": [
+        12
+      ],
+      "parents": [
+        [
+          1,
+          -1
+        ],
+        [
+          21,
+          11
+        ]
+      ],
+      "boolean_input_ordinal": null
+    },
+    "21": {
+      "kind": 14,
+      "flags": 8,
+      "conclusion": [
+        11
+      ],
+      "parents": [
+        [
+          20,
+          -1
+        ]
+      ],
+      "boolean_input_ordinal": null
+    },
+    "20": {
+      "kind": 13,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [
+        [
+          19,
+          -1
+        ],
+        [
+          13,
+          -1
+        ]
+      ],
+      "boolean_input_ordinal": null
+    },
+    "13": {
+      "kind": 13,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [
+        [
+          8,
+          -1
+        ],
+        [
+          9,
+          -1
+        ],
+        [
+          10,
+          -1
+        ],
+        [
+          11,
+          -1
+        ],
+        [
+          12,
+          -1
+        ]
+      ],
+      "boolean_input_ordinal": null
+    },
+    "12": {
+      "kind": 12,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [],
+      "boolean_input_ordinal": null
+    },
+    "11": {
+      "kind": 12,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [],
+      "boolean_input_ordinal": null
+    },
+    "10": {
+      "kind": 12,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [],
+      "boolean_input_ordinal": null
+    },
+    "9": {
+      "kind": 12,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [],
+      "boolean_input_ordinal": null
+    },
+    "8": {
+      "kind": 12,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [],
+      "boolean_input_ordinal": null
+    },
+    "19": {
+      "kind": 13,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [
+        [
+          8,
+          -1
+        ],
+        [
+          18,
+          -1
+        ]
+      ],
+      "boolean_input_ordinal": null
+    },
+    "18": {
+      "kind": 12,
+      "flags": 8,
+      "conclusion": [],
+      "parents": [],
+      "boolean_input_ordinal": null
+    },
+    "1": {
+      "kind": 1,
+      "flags": 0,
+      "conclusion": [
+        10,
+        12
+      ],
+      "parents": [],
+      "boolean_input_ordinal": 1
+    },
+    "2": {
+      "kind": 1,
+      "flags": 0,
+      "conclusion": [
+        2,
+        4,
+        13
+      ],
+      "parents": [],
+      "boolean_input_ordinal": 2
+    },
+    "3": {
+      "kind": 1,
+      "flags": 0,
+      "conclusion": [
+        2,
+        5,
+        13
+      ],
+      "parents": [],
+      "boolean_input_ordinal": 3
+    }
+  },
+  "25": {
+    "25": {
+      "kind": 6,
+      "flags": 0,
+      "conclusion": [
+        14
+      ],
+      "parents": [
+        [
+          5,
+          -1
+        ],
+        [
+          4,
+          6
+        ]
+      ],
+      "boolean_input_ordinal": null
+    },
+    "4": {
+      "kind": 1,
+      "flags": 0,
+      "conclusion": [
+        14,
+        6
+      ],
+      "parents": [],
+      "boolean_input_ordinal": 4
+    },
+    "5": {
+      "kind": 1,
+      "flags": 0,
+      "conclusion": [
+        14,
+        7
+      ],
+      "parents": [],
+      "boolean_input_ordinal": 5
+    }
+  }
+}

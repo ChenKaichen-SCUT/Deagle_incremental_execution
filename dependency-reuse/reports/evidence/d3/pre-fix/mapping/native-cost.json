@@ -1,0 +1,92 @@
+{
+  "fib_updates_8": {
+    "P0": {
+      "before": {
+        "wall_s": 0.129316613,
+        "rss_kib": 20096,
+        "manifest_bytes": 1693339,
+        "sha256": "0979e2332d14396fddcd5a34e7554630c6ced69bb41da470583e1daa7e30446f"
+      },
+      "after": {
+        "wall_s": 0.128931747,
+        "rss_kib": 20224,
+        "manifest_bytes": 1693339,
+        "sha256": "0979e2332d14396fddcd5a34e7554630c6ced69bb41da470583e1daa7e30446f"
+      }
+    },
+    "P1": {
+      "after": {
+        "wall_s": 2.000314697,
+        "rss_kib": 29568,
+        "manifest_bytes": 1647946,
+        "sha256": "11aaf618aaaddf0ee18d503f5c6a799f89c677c7bb394183c0f24ad5e469e5bc"
+      },
+      "before": {
+        "wall_s": 2.029363505,
+        "rss_kib": 29568,
+        "manifest_bytes": 1647946,
+        "sha256": "11aaf618aaaddf0ee18d503f5c6a799f89c677c7bb394183c0f24ad5e469e5bc"
+      }
+    }
+  },
+  "circular-buffer": {
+    "P0": {
+      "after": {
+        "wall_s": 0.733551853,
+        "rss_kib": 123520,
+        "manifest_bytes": 35003766,
+        "sha256": "7acff6a6d2010cd37b75b1d2433f972aee1aca814839a9719d5e90e12adad414"
+      },
+      "before": {
+        "wall_s": 0.737728405,
+        "rss_kib": 123008,
+        "manifest_bytes": 34996710,
+        "sha256": "f54c9a62710662d5ea94d94a288844faa7ad51fabd59357dcaa7d56485d4f628"
+      }
+    },
+    "P1": {
+      "before": {
+        "wall_s": 9.289836481,
+        "rss_kib": 144896,
+        "manifest_bytes": 35088211,
+        "sha256": "b90b4063ac03311daa898aa72de9f53446609040b9b33da44290ae4e374f5964"
+      },
+      "after": {
+        "wall_s": 9.206085741,
+        "rss_kib": 145024,
+        "manifest_bytes": 35095267,
+        "sha256": "2a689a5c1b26627fd72b082784d5438913c8d74b48a1d7241e418867307df021"
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "P0": {
+      "before": {
+        "wall_s": 6.043059957,
+        "rss_kib": 111104,
+        "manifest_bytes": 27916913,
+        "sha256": "0264c9262fad7b3b76fe9d267ad5bfead197f4231926c0916243bcf79da74846"
+      },
+      "after": {
+        "wall_s": 5.944018544,
+        "rss_kib": 111232,
+        "manifest_bytes": 27924609,
+        "sha256": "748a664ea9e6e0bf7ea48cbdc68eb0d0157c30ab7c6ee4182c6adf01a4f218fa"
+      }
+    },
+    "P1": {
+      "after": {
+        "wall_s": 22.102121691,
+        "rss_kib": 69376,
+        "manifest_bytes": 9214879,
+        "sha256": "ee58b00e55c8c35d2402ea1e748d4e405e3e7bd7ca9feb7f1c4ef7abf9047622"
+      },
+      "before": {
+        "wall_s": 22.310633247,
+        "rss_kib": 68992,
+        "manifest_bytes": 9209259,
+        "sha256": "0930de299266cb1497f3a4a0be5749556af829579c5005024d9f89b3c3910df7"
+      }
+    }
+  }
+}

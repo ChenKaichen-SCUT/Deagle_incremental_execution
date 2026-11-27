@@ -1,0 +1,37 @@
+{
+  "stage": "D3",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/dependency-reuse",
+  "implementation_sha": "5f5bb7b5422752f878d45c7b93a5eaa5d8881f91",
+  "reviewed_parent_sha": "8f7668a4113a67275d3bc1af45e663729c5cf35e",
+  "upstream_sha": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "native_elf_sha256": "5f863d39f09c173428185de3f93a5c0efdfc3eaf088f84403c21830c0b9d707e",
+  "frozen_program_pairs": 3,
+  "formal_P0_runs": 30,
+  "identity_comparison_runs": 12,
+  "formal_D3_archives_checked": 12,
+  "D1_and_improved_checks": 24,
+  "all_recorded_archives_restored": 21,
+  "all_native_learning": {
+    "births": 44029,
+    "complete_permanent_boolean": 390,
+    "complete_permanent_mixed": 2160,
+    "complete_permanent_theory_only": 289,
+    "complete_theory_reasons": 165007,
+    "theory_any": 41124,
+    "complete_mixed_old_proof_survives": 90,
+    "old_proof_survives": 133,
+    "all_mappable": 1074
+  },
+  "public_invalidation_disagreements": 0,
+  "joint_micro_scenarios": 16,
+  "corruptions_rejected": 6,
+  "D2_compatibility": {
+    "fixtures": 11,
+    "deltas": 22,
+    "rejected_corruptions": 2
+  },
+  "actual_cross_version_imports": 0,
+  "next_phase_requires_confirmation": true,
+  "evidence_index_sha256": "9abe978bd1ffaeaa6364831c905abdd08c4c2fb4e35b7b51d9e0ab041096b813"
+}

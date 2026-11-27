@@ -1,0 +1,38 @@
+{
+  "inverted-binding": {
+    "source": "direct",
+    "node": 6,
+    "byte_offset": 712,
+    "old_word": 10,
+    "new_word": 11,
+    "rejection": "discharged theory clause differs at 14"
+  },
+  "reserved-triplet": {
+    "source": "direct",
+    "node": 13,
+    "byte_offset": 840,
+    "old_word": 17,
+    "new_word": 18,
+    "rejection": "theory node 13 op 18: triplet inference reserved and opaque in D3"
+  },
+  "wrong-block": {
+    "source": "block",
+    "node": 19,
+    "byte_offset": 1244,
+    "old_word": 1,
+    "new_word": 0,
+    "rejection": "theory node 19 op 12: atomic block lift"
+  },
+  "legacy-D2": {
+    "source": "direct",
+    "rejection": "requires a completed D3 archive"
+  },
+  "wrong-graph": {
+    "source": "direct",
+    "rejection": "P0 native graph receipt mismatch"
+  },
+  "counter-mismatch": {
+    "source": "direct",
+    "rejection": "invalid native discharge counters"
+  }
+}

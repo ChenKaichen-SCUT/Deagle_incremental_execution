@@ -1,0 +1,127 @@
+{
+  "disjoint_learning_classes": {
+    "opaque_theory": 39735,
+    "query_scoped": 43,
+    "permanent_boolean": 133,
+    "permanent_mixed": 2048,
+    "permanent_theory_only": 285
+  },
+  "disjoint_complete_outcomes": {
+    "permanent_boolean": {
+      "B": 133
+    },
+    "permanent_mixed": {
+      "B+T": 2047,
+      "T": 1
+    },
+    "permanent_theory_only": {
+      "T": 285
+    }
+  },
+  "failed_declarations_among_complete_mixed_overlapping": {
+    "RFBinding_unknown": 2048,
+    "GuardBinding_unknown": 1882,
+    "EventSchema_unknown": 2048,
+    "SameAddress_unknown": 2048,
+    "BlockCertificate_unknown": 2048,
+    "PO_unknown": 1821
+  },
+  "mixed_witness": {
+    "root": 935666,
+    "root_record": {
+      "kind": 6,
+      "flags": 8,
+      "lits": [
+        42995,
+        3483,
+        4773,
+        42875
+      ],
+      "parents": [
+        [
+          935665,
+          -1
+        ],
+        [
+          359,
+          8642
+        ],
+        [
+          24380,
+          8640
+        ],
+        [
+          24379,
+          7998
+        ],
+        [
+          24383,
+          42998
+        ]
+      ],
+      "op": null
+    },
+    "ancestry_by_kind": {
+      "1": 4,
+      "12": 18,
+      "13": 13,
+      "14": 1,
+      "6": 1
+    },
+    "first_boolean": [
+      359,
+      {
+        "kind": 1,
+        "flags": 0,
+        "lits": [
+          7999,
+          8641,
+          8642
+        ],
+        "parents": [],
+        "op": null
+      }
+    ],
+    "first_lemma": [
+      935665,
+      {
+        "kind": 14,
+        "flags": 8,
+        "lits": [
+          3483,
+          3483,
+          4773,
+          8643,
+          42875,
+          42875,
+          42995,
+          42995
+        ],
+        "parents": [
+          [
+            935664,
+            -1
+          ]
+        ],
+        "op": null
+      }
+    ],
+    "first_lemma_rule": {
+      "kind": 13,
+      "flags": 8,
+      "lits": [],
+      "parents": [
+        [
+          935663,
+          -1
+        ]
+      ],
+      "op": [
+        "16",
+        "3",
+        "3",
+        "-1"
+      ]
+    }
+  }
+}

@@ -1,0 +1,168 @@
+--- Closure.cc.before
++++ Closure.cc
+@@ -1,3 +1,4 @@
++extern unsigned d3_observer_site;
+ // __SZH_ADD_BEGIN__
+ 
+ #include "ClosureSolver.h"
+@@ -305,7 +306,7 @@
+             push_need(unit_lv, guard_lit);
+             neg(unit_lv);
+ 
+-            solver->assign_literal(~guard_lit, unit_lv);
++            { d3_observer_site = 1; solver->assign_literal(~guard_lit, unit_lv); }
+ 
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "using pattern, propagate guard " << w2 << " false\n";
+@@ -318,7 +319,7 @@
+             push_need(unit_lv, guard_lit);
+             neg(unit_lv);
+ 
+-            solver->assign_literal(~rf_lit, unit_lv);
++            { d3_observer_site = 2; solver->assign_literal(~rf_lit, unit_lv); }
+ 
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "using pattern, propagate rf " << w1 << " " << r << " false\n";
+@@ -366,7 +367,7 @@
+                 push_need(unit_lv, guard_lit);
+                 neg(unit_lv);
+ 
+-                solver->assign_literal(~guard_lit, unit_lv);
++                { d3_observer_site = 3; solver->assign_literal(~guard_lit, unit_lv); }
+ 
+                 if(OC_VERBOSITY >= 1)
+                     std::cout << "revisiting pattern, propagate guard " << w2 << " false\n";
+@@ -502,7 +503,7 @@
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle\n";
+ 
+-            conflict_lv = edge.reason;
++            { d3_observer_site = 4; conflict_lv = edge.reason; }
+             return true;
+         }
+         //or an intra-atomic edge contradicting po
+@@ -511,7 +512,7 @@
+             if(OC_VERBOSITY >= 1)
+                 std::cout << "adding " << edge.from << " " << edge.to << " a cycle due to apo\n";
+ 
+-            conflict_lv = edge.reason;
++            { d3_observer_site = 5; conflict_lv = edge.reason; }
+             return true;
+         }
+         //an intra-atomic edge obeying po is not considered
+@@ -557,7 +558,7 @@
+                     if(OC_VERBOSITY >= 1)
+                         std::cout << "race" << from << " " << to << " should be set false but already true\n";
+ 
+-                    conflict_lv = conflict_reason;
++                    { d3_observer_site = 6; conflict_lv = conflict_reason; }
+                     return true;
+                 }
+                 else if(race_lit_status == l_Undef)
+@@ -567,7 +568,7 @@
+                     if(OC_VERBOSITY >= 1)
+                         std::cout << "set race" << from << " " << to << " false\n";
+ 
+-                    solver->assign_literal(~race_lit, conflict_reason);
++                    { d3_observer_site = 7; solver->assign_literal(~race_lit, conflict_reason); }
+                 }
+                 else
+                 {
+@@ -633,7 +634,7 @@
+                     if(OC_VERBOSITY >= 1)
+                         std::cout << "before preventive propagation, set rf" << to << " " << from << " false\n";
+ 
+-                    solver->assign_literal(~rf_lit_cand, unit_lv);
++                    { d3_observer_site = 8; solver->assign_literal(~rf_lit_cand, unit_lv); }
+                 }
+             }
+ #endif // (PROPAGATE_INTENSITY >= 0)
+@@ -1031,7 +1032,7 @@
+                 push_need(unit_lv, guard_lit);
+                 neg(unit_lv);
+ 
+-                solver->assign_literal(~rf_lit, unit_lv);
++                { d3_observer_site = 9; solver->assign_literal(~rf_lit, unit_lv); }
+ 
+                 if(OC_VERBOSITY >= 1)
+                     std::cout << "revisiting pattern, propagate rf " << w1 << " " << r << " false\n";
+--- ClosureSolver.cc.before
++++ ClosureSolver.cc
+@@ -12,6 +12,15 @@
+ const int OC_VERBOSITY = 0;
+ 
+ using namespace Minisat;
++unsigned d3_observer_site=0;
++static std::vector<unsigned> d3_accepted_sources;
++static void d3_emit_source(char boundary,unsigned source)
++{
++    static FILE* f=std::fopen("native-origins.tsv","wbx");
++    if(!f || !source || source>9) std::abort();
++    std::fprintf(f,"%c\t%u\n",boundary,source);
++}
++
+ 
+ template<class C> static void theory_observation(char tag,const C &clause)
+ {
+@@ -427,7 +436,7 @@
+ 
+ CRef ClosureSolver::propagate()
+ {
+-    literals_to_assign.clear();
++    literals_to_assign.clear(); d3_accepted_sources.clear();
+     assigned_literals.clear();
+ 
+     CRef confl = CRef_Undef;
+@@ -559,7 +568,7 @@
+                 minisat_lv.push(~l);
+ 
+             confl = ca.alloc(minisat_lv, true);
+-            theory_observation('C',minisat_lv);
++            theory_observation('C',minisat_lv); d3_emit_source('C',d3_observer_site);
+         }
+         else if(!literals_to_assign.empty())//add literals propagated by unit edge
+         {
+@@ -567,7 +576,7 @@
+             apply_literal_assignment();
+         }
+ 
+-        literals_to_assign.clear();
++        literals_to_assign.clear(); d3_accepted_sources.clear();
+         assigned_literals.clear();
+     }
+     //our method ends
+@@ -717,6 +726,7 @@
+     if(assigned_literals.find(l) != assigned_literals.end())
+         return;
+ 
++    d3_accepted_sources.push_back(d3_observer_site);
+     literals_to_assign.push_back(std::make_pair(l, lv));
+     assigned_literals.insert(l);
+ }
+@@ -732,6 +742,8 @@
+ 
+ void ClosureSolver::apply_literal_assignment()
+ {
++    size_t source_index=0;
++    if(d3_accepted_sources.size()!=literals_to_assign.size()) std::abort();
+     for(auto p : literals_to_assign)
+     {
+         if(OC_VERBOSITY >= 1)
+@@ -754,7 +766,7 @@
+                 learnt_clause.push(lit);
+ 
+ 
+-        theory_observation('A',learnt_clause);
++        theory_observation('A',learnt_clause); d3_emit_source('A',d3_accepted_sources.at(source_index++));
+         if (learnt_clause.size() == 1)
+         {
+             if(OC_VERBOSITY >= 1)
+@@ -780,7 +792,7 @@
+ 
+     }
+ 
+-    literals_to_assign.clear();
++    literals_to_assign.clear(); d3_accepted_sources.clear();
+     assigned_literals.clear();
+ }
+ 

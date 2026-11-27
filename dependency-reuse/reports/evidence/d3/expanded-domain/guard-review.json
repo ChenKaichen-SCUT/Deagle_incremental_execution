@@ -1,0 +1,102 @@
+{
+  "competition": {
+    "spec_sha256": "a35473a8bfce7bd6afc44ce8492505e83c88ca4ecf2169d397b4fb879707ea8b",
+    "proof_sha256": "8bd924695e0a8cbbb67b62e9c82ed2a879d5496e74577511cfb9e5d8e3da2949",
+    "p0_guard": {
+      "x#1": 0,
+      "x#5": 7
+    },
+    "p1_guard": {
+      "x#1": 0,
+      "x#5": -7
+    },
+    "local_graph_changed_decl": [
+      4,
+      2,
+      -1,
+      14
+    ],
+    "changed_decl_id": 8,
+    "use_rule": "FR",
+    "lemma_id": 24,
+    "old_signed_clause": [
+      11,
+      13,
+      15
+    ],
+    "branch_assumptions": [
+      6,
+      7
+    ],
+    "truth_table_scope": "all permanent Boolean/SC models",
+    "checked_p0_surviving_reasons": 1,
+    "checked_p1_surviving_reasons": 0,
+    "models_enumerated": {
+      "P0": 88,
+      "P1": 88
+    },
+    "models_falsifying_old_reason": {
+      "P0": 0,
+      "P1": 0
+    },
+    "p1_counterexample": null,
+    "p0_stats_sha256": "cc5330c7b3b20ddb505b1f84875a3dd1159216384a17ef65761eea17116a0432",
+    "p1_stats_sha256": "e7999eaaec6a70275c463e5698ea075aabc321faaf6ea5c126316623d99bca5b"
+  },
+  "ws": {
+    "spec_sha256": "4036e981d9c3e149ca07b4a3de1066e071dc9b3cd976ec8053e788b9c41f754d",
+    "proof_sha256": "c3d7ee476b27ae28166563679106006127c50ba8970cd58adfac9961985a4b02",
+    "p0_guard": {
+      "x#1": 0,
+      "x#5": 7
+    },
+    "p1_guard": {
+      "x#1": 0,
+      "x#5": -7
+    },
+    "local_graph_changed_decl": [
+      4,
+      2,
+      -1,
+      14
+    ],
+    "changed_decl_id": 8,
+    "use_rule": "WS",
+    "lemma_id": 23,
+    "old_signed_clause": [
+      11,
+      13,
+      15
+    ],
+    "branch_assumptions": [
+      6,
+      7
+    ],
+    "truth_table_scope": "all permanent Boolean/SC models",
+    "checked_p0_surviving_reasons": 1,
+    "checked_p1_surviving_reasons": 0,
+    "models_enumerated": {
+      "P0": 120,
+      "P1": 120
+    },
+    "models_falsifying_old_reason": {
+      "P0": 0,
+      "P1": 16
+    },
+    "p1_counterexample": {
+      "order": [
+        "x#1",
+        "x#5",
+        "x#2"
+      ],
+      "true_variables": [
+        3,
+        5,
+        6,
+        7
+      ]
+    },
+    "p0_stats_sha256": "7768c29ad3c4cc3cf79e78ecda1c508543336f23d69583d7033c0e98eca663e5",
+    "p1_stats_sha256": "e3d62a14d959eb2bbe0770b53a38fd180d0258b4f25fdcde91f7c4f86018f9d9"
+  }
+}

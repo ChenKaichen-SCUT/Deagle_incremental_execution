@@ -1,0 +1,19 @@
+{
+  "disjoint_learning_classes": {
+    "query_scoped": 8,
+    "permanent_boolean": 131,
+    "opaque_theory": 200,
+    "permanent_theory_only": 4
+  },
+  "disjoint_complete_outcomes": {
+    "permanent_boolean": {
+      "B": 119,
+      "survives": 12
+    },
+    "permanent_theory_only": {
+      "T": 4
+    }
+  },
+  "failed_declarations_among_complete_mixed_overlapping": {},
+  "mixed_witness": {}
+}

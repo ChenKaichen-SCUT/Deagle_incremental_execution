@@ -1,0 +1,111 @@
+{
+  "source_commit": "2ffbab74f8ac78265f370cce24922d9278954be1",
+  "native_source_sha256": "9a20faa6cd65410019a03babfa28654929129b4d9fe6195bc78791f02e823890",
+  "compiled_source_sha256": "dbb445193f424c10359064cdb0c19b5ea2827aa2cc2a9929659fab2979f0c51e",
+  "prototype_sha256": "0a7bab33aa5b575bc0d3c58342c1be83db7f3478314e53fc6bac6a4695715e66",
+  "source_adjustment": "Emit each actual birth ID and its public proof-alive bit, including retired births. No changes to binding, invalidation or timers.",
+  "binary_sha256": "09b1b42ec2ded8fdfcb7e80ed95e8a8166b2083d1be6b2424767c27b54204b0d",
+  "build_argv": [
+    "g++",
+    "-std=c++11",
+    "-O2",
+    "-I",
+    "/home/deagle/dependency-reuse/runs/d3/final/src",
+    "-I",
+    "/home/deagle/dependency-reuse/runs/d3/final/minisat-2.2.1",
+    "/home/deagle/dependency-reuse/runs/d3/final-public-joint/joint-invalidate.cc",
+    "/home/deagle/dependency-reuse/runs/d3/final/minisat-2.2.1/minisat/core/ProofStore.cc",
+    "-o",
+    "/home/deagle/dependency-reuse/runs/d3/final-public-joint/joint-invalidate"
+  ],
+  "reference_columns": [
+    1,
+    8
+  ],
+  "cpu_affinity": [
+    0
+  ],
+  "cases": {
+    "fib_updates_8": {
+      "native_births_compared": 1442,
+      "retained": 121,
+      "retired": 1321,
+      "disagreements": 0,
+      "archive_read_ns": 5037557,
+      "input_bind_ns": 10349801,
+      "joint_reverse_ns": 458367,
+      "comparison": "Exact row-by-row equality of ProofId and proof_alive for all CDCL births",
+      "input_sha256": {
+        "/home/deagle/dependency-reuse/runs/d3/final-runs/fib_updates_8/mixed-1/proof.bin": "75114c8acc7885d82021986d13a137801bc0401125965cf73afc2727e2a9e40a",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/fib_updates_8/improved/inputs.txt": "aadf88020707270803ad443a54131be269ecb7a15db272f10ee06edbdd5b888d",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/fib_updates_8/improved/declarations.txt": "e44115f24674c740f0003dd6ab775589bbc53b8c4439acf438a2c061a1e71474",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/fib_updates_8/mixed-1/improved/learned.tsv": "bf93ab8a9d3a94a83a6a7f1a6c68afd0b7ecf9d29c3a617d1563da95586f16c3"
+      },
+      "public_catalog_sha256": "cb2918e6ebe7d978186efc0fd237dc4ebb1130c057ba00be74ab241528ce8fb6",
+      "retained_ids_sha256": "e065c9f3939e6660b74f9adb87880e97b28a8608589b8bbdb560c412846cffa0",
+      "argv": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/deagle/dependency-reuse/runs/d3/final-public-joint/joint-invalidate",
+        "/home/deagle/dependency-reuse/runs/d3/final-runs/fib_updates_8/mixed-1/proof.bin",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/fib_updates_8/improved/inputs.txt",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/fib_updates_8/improved/declarations.txt"
+      ]
+    },
+    "circular-buffer": {
+      "native_births_compared": 343,
+      "retained": 12,
+      "retired": 331,
+      "disagreements": 0,
+      "archive_read_ns": 82019627,
+      "input_bind_ns": 215998319,
+      "joint_reverse_ns": 14888306,
+      "comparison": "Exact row-by-row equality of ProofId and proof_alive for all CDCL births",
+      "input_sha256": {
+        "/home/deagle/dependency-reuse/runs/d3/final-runs/circular-buffer/mixed-1/proof.bin": "0e351645bbc0e136042a874331f6098c233eec7e8905d37bb2b2b6bfe167be73",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/circular-buffer/improved/inputs.txt": "4fa384368c8a91e3d895635d83c40f2dded1f38a78c55a87783aca1b3a907914",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/circular-buffer/improved/declarations.txt": "fdea1ae56c9c71d8ab6cdd471aa56ce429b04ba0bd043f40689f7e189f6c1fb7",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/circular-buffer/mixed-1/improved/learned.tsv": "1fadca0be78123af8c4824da8c8fda9b861d6107505c528c28c7eaf2f8603bb3"
+      },
+      "public_catalog_sha256": "5c913865e75b9d4c8364fa33110b5c4ec61fb5989e8071eaacafafb0407f4e2b",
+      "retained_ids_sha256": "9dd3eb39d4c8a58c93cae06a97f3d356578eff87181224ece4720d42f943436f",
+      "argv": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/deagle/dependency-reuse/runs/d3/final-public-joint/joint-invalidate",
+        "/home/deagle/dependency-reuse/runs/d3/final-runs/circular-buffer/mixed-1/proof.bin",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/circular-buffer/improved/inputs.txt",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/circular-buffer/improved/declarations.txt"
+      ]
+    },
+    "airline_reservations_6": {
+      "native_births_compared": 42244,
+      "retained": 0,
+      "retired": 42244,
+      "disagreements": 0,
+      "archive_read_ns": 143422283,
+      "input_bind_ns": 179257118,
+      "joint_reverse_ns": 34074392,
+      "comparison": "Exact row-by-row equality of ProofId and proof_alive for all CDCL births",
+      "input_sha256": {
+        "/home/deagle/dependency-reuse/runs/d3/final-runs/airline_reservations_6/mixed-1/proof.bin": "e45f580d88523895d1c58203fdb1b4dd7b081cb0652650f793747f3439e7cb84",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/airline_reservations_6/improved/inputs.txt": "3230f4c88acf36eb5f0858179d57c16b1b7b6b05295c2542317b64a5e3f11b06",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/airline_reservations_6/improved/declarations.txt": "0fa9a3994855e8d8e37689ca67abd762b804cdf9ba76926095210f67975b409e",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/airline_reservations_6/mixed-1/improved/learned.tsv": "0d8795814238467954cad2bf4e04eda5ea461e38c45998ed28204a633aa0cf69"
+      },
+      "public_catalog_sha256": "58b4e52e7e0aa98215e4ef2df65fbefe40dda37ef7911d975274b08ba3aeb99c",
+      "retained_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "argv": [
+        "taskset",
+        "-c",
+        "0",
+        "/home/deagle/dependency-reuse/runs/d3/final-public-joint/joint-invalidate",
+        "/home/deagle/dependency-reuse/runs/d3/final-runs/airline_reservations_6/mixed-1/proof.bin",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/airline_reservations_6/improved/inputs.txt",
+        "/home/deagle/dependency-reuse/runs/d3/final-checks/airline_reservations_6/improved/declarations.txt"
+      ]
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "schedule": [
+    [
+      "fib_updates_8",
+      "P0",
+      "before"
+    ],
+    [
+      "fib_updates_8",
+      "P0",
+      "after"
+    ],
+    [
+      "fib_updates_8",
+      "P1",
+      "after"
+    ],
+    [
+      "fib_updates_8",
+      "P1",
+      "before"
+    ],
+    [
+      "circular-buffer",
+      "P0",
+      "after"
+    ],
+    [
+      "circular-buffer",
+      "P0",
+      "before"
+    ],
+    [
+      "circular-buffer",
+      "P1",
+      "before"
+    ],
+    [
+      "circular-buffer",
+      "P1",
+      "after"
+    ],
+    [
+      "airline_reservations_6",
+      "P0",
+      "before"
+    ],
+    [
+      "airline_reservations_6",
+      "P0",
+      "after"
+    ],
+    [
+      "airline_reservations_6",
+      "P1",
+      "after"
+    ],
+    [
+      "airline_reservations_6",
+      "P1",
+      "before"
+    ]
+  ],
+  "binary_sha256": "f09d38df571852f3e7b2b1f9ecafefc0c1fd831c46c58bb82bce538e286c05f5",
+  "engine_sha256": "75542b82b5aa80d9d362f62b1889db5887d2a44e1de991bdbfbbbd10f67b664c",
+  "checker_sha256": "580b766f40e88605f8fd8ea3b1b51ae6542ef5f565adf0c2add3e3767318adb7",
+  "cpu": 0,
+  "replicates_per_arm": 1
+}

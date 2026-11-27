@@ -1,0 +1,106 @@
+{
+  "classification": "BOUNDED_PASS",
+  "cProverStatus": "success",
+  "target_status": "SUCCESS",
+  "properties": [
+    {
+      "description": "assertion 0",
+      "property": "reach_error.assertion.1",
+      "sourceLocation": {
+        "file": "program.i",
+        "function": "reach_error",
+        "line": "681",
+        "workingDirectory": "/home/deagle/dependency-reuse/runs/d3/checked/final-mapping/manifests/circular-buffer/P1/before/work"
+      },
+      "status": "SUCCESS"
+    }
+  ],
+  "trace_step_counts": {},
+  "unwinding_property_ids": [],
+  "unwinding_iterations": {
+    "t1.0 file program.i line 725 function t1 thread 1": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "t2.0 file program.i line 743 function t2 thread 2": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ]
+  },
+  "unwinding_stop_or_warning": [],
+  "enabled_unwinding_assertions": true,
+  "vcc_messages": [
+    "Generated 14 VCC(s), 14 remaining after simplification"
+  ],
+  "adapter_query_count": 1,
+  "closure_completion_count": 1,
+  "queries": [
+    {
+      "query": 1,
+      "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+      "reported_variables": 245472,
+      "live_clauses": 1158284,
+      "property_decider_solve_s": 8.65573,
+      "early_adapter_return": false,
+      "native_cumulative": {
+        "sat_conflicts": 7525,
+        "decisions": 30512,
+        "sat_propagations": 54998143,
+        "theory_propagations": 118100,
+        "theory_cycle_conflicts": 56,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      },
+      "native_delta_from_previous_snapshot": {
+        "sat_conflicts": 7525,
+        "decisions": 30512,
+        "sat_propagations": 54998143,
+        "theory_propagations": 118100,
+        "theory_cycle_conflicts": 56,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      },
+      "adapter_entry_to_exit_delta": null,
+      "restarts": null,
+      "search_only_s": null,
+      "co_pairs_in_graph_at_return": 1116
+    }
+  ],
+  "native_timers_s": {
+    "Symex": [
+      0.0282714
+    ],
+    "Postprocess Equation": [
+      0.0809126
+    ],
+    "Convert SSA": [
+      0.271398
+    ],
+    "Post-process": [
+      0.000679962
+    ],
+    "Solver": [
+      8.65573
+    ],
+    "decision procedure": [
+      8.97056
+    ]
+  },
+  "warnings": [
+    "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+    "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+    "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+    "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+  ],
+  "native_warning_lines": []
+}

@@ -1,0 +1,52 @@
+{
+  "plan": {
+    "schedule": [
+      [
+        "fib_updates_8",
+        1,
+        "joint"
+      ],
+      [
+        "circular-buffer",
+        1,
+        "joint"
+      ],
+      [
+        "airline_reservations_6",
+        1,
+        "joint"
+      ]
+    ],
+    "executable_sha256": "2acd5dda1c9e6185ee375d74f2fec92b36c81b00509d4099555d8383fb65ac56",
+    "input_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+    "cpu": 0,
+    "fresh_process": true,
+    "os_cache": "unmanaged"
+  },
+  "samples": [
+    {
+      "case": "fib_updates_8",
+      "exit_code": 10,
+      "rss_kib": 28928,
+      "wall_ns": 180032801,
+      "solver_s": 0.0787891,
+      "proof_bytes": 6706076
+    },
+    {
+      "case": "circular-buffer",
+      "exit_code": 10,
+      "rss_kib": 278168,
+      "wall_ns": 1143202888,
+      "solver_s": 0.507596,
+      "proof_bytes": 109947860
+    },
+    {
+      "case": "airline_reservations_6",
+      "exit_code": 10,
+      "rss_kib": 455032,
+      "wall_ns": 8895846480,
+      "solver_s": 8.35771,
+      "proof_bytes": 315001604
+    }
+  ]
+}

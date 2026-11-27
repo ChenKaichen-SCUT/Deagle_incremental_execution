@@ -1,0 +1,27 @@
+{
+  "native_births_compared": 42244,
+  "retained": 0,
+  "retired": 42244,
+  "disagreements": 0,
+  "archive_read_ns": 61208099,
+  "input_bind_ns": 163351512,
+  "joint_reverse_ns": 32876173,
+  "comparison": "Exact row-by-row equality of ProofId and proof_alive for all CDCL births",
+  "input_sha256": {
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-runs/airline_reservations_6/mixed-1/proof.bin": "ee3c0a475f309eebbc8faabbada68e0f4b218a5fcb54db6fd4808bb35df873e3",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/airline_reservations_6/improved/inputs.txt": "3230f4c88acf36eb5f0858179d57c16b1b7b6b05295c2542317b64a5e3f11b06",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/airline_reservations_6/improved/declarations.txt": "0fa9a3994855e8d8e37689ca67abd762b804cdf9ba76926095210f67975b409e",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/airline_reservations_6/mixed-1/improved/learned.tsv": "0d8795814238467954cad2bf4e04eda5ea461e38c45998ed28204a633aa0cf69"
+  },
+  "public_catalog_sha256": "58b4e52e7e0aa98215e4ef2df65fbefe40dda37ef7911d975274b08ba3aeb99c",
+  "retained_ids_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "argv": [
+    "taskset",
+    "-c",
+    "0",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-public-joint/joint-invalidate",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-runs/airline_reservations_6/mixed-1/proof.bin",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/airline_reservations_6/improved/inputs.txt",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/airline_reservations_6/improved/declarations.txt"
+  ]
+}

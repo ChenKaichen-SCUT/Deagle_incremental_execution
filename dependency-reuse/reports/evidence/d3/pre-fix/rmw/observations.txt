@@ -1,0 +1,6 @@
+target read=1 write=1
+ClosureSolver finishes with 1 conflicts, 0 decisions, and 2 propagations. 0 theory propagations and 1 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 1.
+rule 15 0 1 1 ID 13
+rule 16 1 1 -1 ID 14
+birth 16 flags=8 alive=1 literal=3

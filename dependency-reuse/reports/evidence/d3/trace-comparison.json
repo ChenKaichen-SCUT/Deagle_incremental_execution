@@ -1,0 +1,977 @@
+{
+  "method": "Parse original stdout, remove workingDirectory recursively and compare every JSON trace step. Each permutation lists D1 zero-based positions in joint order.",
+  "cases": {
+    "fib_updates_8": {
+      "property": "main.assertion.1",
+      "comparisons": {
+        "D1_proof_off": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        },
+        "D1_manifest_only": {
+          "total_steps": 187,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        },
+        "final_mapping_before": {
+          "total_steps": 187,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        },
+        "final_mapping_after": {
+          "total_steps": 187,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "span_details": [
+        {
+          "first_zero_based": 36,
+          "last_zero_based": 41,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            37,
+            38,
+            39,
+            40,
+            41,
+            36
+          ],
+          "reference_fields": [
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "1ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "left_worker",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "a!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "1ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "left_worker",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "a!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        }
+      ],
+      "last_failure_equal": true,
+      "joint_stdout_sha256": "745dee5097a8d3667ff6d0de96ba05073878d07de140726d15d2e57b19422766",
+      "d1_reference_gzip_sha256": "3706ed90d08cce13487ff7ec565487f1fc94eed74fde5da7d9298ed8e84c2eb6",
+      "final_mapping_after_stdout_sha256": "d5b69fd385a52dbe2098f00452ffcd0a4b33455506ed28164941719d24c63ebb"
+    },
+    "circular-buffer": {
+      "property": "reach_error.assertion.1",
+      "comparisons": {
+        "D1_proof_off": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        },
+        "D1_manifest_only": {
+          "total_steps": 357,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        },
+        "final_mapping_before": {
+          "total_steps": 357,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        },
+        "final_mapping_after": {
+          "total_steps": 357,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "span_details": [
+        {
+          "first_zero_based": 67,
+          "last_zero_based": 72,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            69,
+            70,
+            71,
+            72,
+            68,
+            67
+          ],
+          "reference_fields": [
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "id1!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "1u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "t1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "id1!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "1u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "t1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        },
+        {
+          "first_zero_based": 92,
+          "last_zero_based": 97,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            94,
+            95,
+            96,
+            97,
+            92,
+            93
+          ],
+          "reference_fields": [
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "t2",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "2u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "id2!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "2u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "id2!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0u",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "t2",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        }
+      ],
+      "last_failure_equal": true,
+      "joint_stdout_sha256": "62886658b019f0280ca1858fed43342dddcca559ebb10c5faceaa5b2bbadca14",
+      "d1_reference_gzip_sha256": "f15de646f6f8c62617c235b5d48151acd83eebb2dffd8542f6a2e4feee182cfe",
+      "final_mapping_after_stdout_sha256": "eccc910e656362b3a33e6a0bcbfdce9688b014f9142f53e94e23654a9246acee"
+    },
+    "airline_reservations_6": {
+      "property": "main.assertion.1",
+      "comparisons": {
+        "D1_proof_off": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        },
+        "D1_manifest_only": {
+          "total_steps": 516,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        },
+        "final_mapping_before": {
+          "total_steps": 516,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        },
+        "final_mapping_after": {
+          "total_steps": 516,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      },
+      "span_details": [
+        {
+          "first_zero_based": 38,
+          "last_zero_based": 43,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            39,
+            40,
+            41,
+            42,
+            43,
+            38
+          ],
+          "reference_fields": [
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "agents!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "1ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "1ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "agents!0@1",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        },
+        {
+          "first_zero_based": 92,
+          "last_zero_based": 97,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            93,
+            94,
+            95,
+            96,
+            97,
+            92
+          ],
+          "reference_fields": [
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "3ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "3ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        },
+        {
+          "first_zero_based": 119,
+          "last_zero_based": 124,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            121,
+            122,
+            123,
+            124,
+            120,
+            119
+          ],
+          "reference_fields": [
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "4ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "4ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        },
+        {
+          "first_zero_based": 146,
+          "last_zero_based": 151,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            147,
+            148,
+            149,
+            150,
+            151,
+            146
+          ],
+          "reference_fields": [
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "5ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "5ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        },
+        {
+          "first_zero_based": 173,
+          "last_zero_based": 178,
+          "same_step_multiset": true,
+          "hidden_assignments": true,
+          "joint_positions_in_D1_order": [
+            174,
+            175,
+            176,
+            177,
+            178,
+            173
+          ],
+          "reference_fields": [
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "6ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ],
+          "joint_fields": [
+            {
+              "lhs": "attr",
+              "thread": 0,
+              "value": "((const pthread_attr_t *)NULL)",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "this_thread_id",
+              "thread": 0,
+              "value": "6ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "thread",
+              "thread": 0,
+              "value": "unknown",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "next_thread_key",
+              "thread": 0,
+              "value": "0ul",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "arg",
+              "thread": 0,
+              "value": "NULL",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            },
+            {
+              "lhs": "start_routine",
+              "thread": 0,
+              "value": "agent",
+              "assignment_type": "variable",
+              "function": "pthread_create"
+            }
+          ]
+        }
+      ],
+      "last_failure_equal": true,
+      "joint_stdout_sha256": "a77788580fd12a0bf4333a943f177b93eb8a22ccad15dc499f6fe682321074d9",
+      "d1_reference_gzip_sha256": "6859f273941aa8658e388058ba1590eda8092347c32383a6d16064392d858f6a",
+      "final_mapping_after_stdout_sha256": "a3228d900ba92b82ca10177681c28ca8814f09f56039606e0cf4aaf49c3c484a"
+    }
+  }
+}

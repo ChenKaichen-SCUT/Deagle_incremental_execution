@@ -1,0 +1,15 @@
+{
+  "main.assertion.1": {
+    "total_steps": 187,
+    "different_positions": 6,
+    "spans": [
+      {
+        "first_zero_based": 36,
+        "last_zero_based": 41,
+        "same_step_multiset": true,
+        "hidden_assignments": true
+      }
+    ],
+    "visible_steps_equal": true
+  }
+}

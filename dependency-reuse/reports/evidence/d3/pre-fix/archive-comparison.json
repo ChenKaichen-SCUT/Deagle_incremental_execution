@@ -1,0 +1,155 @@
+{
+  "fib_updates_8": [
+    {
+      "mode": "boolean",
+      "repeat": 1,
+      "sha256": "f70281e00734fc577c86612ef23f613cc51a1f7e97dcf955ee994505194ed71f",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 1,
+      "sha256": "75114c8acc7885d82021986d13a137801bc0401125965cf73afc2727e2a9e40a",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 2,
+      "sha256": "b653bbf7f4aada075f5d04cd01e6ded611955e966c1106b54fcc2552daed82ac",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 2,
+      "sha256": "4774b0e05de54d8dc85993a339ad1bc733d71918600f3d127793de694f083830",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 3,
+      "sha256": "7c61613926bdacf4bd3e27b4a0496763935eaec29bd1b33a79a9a9ddcb32814a",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 3,
+      "sha256": "3a0bca82df0989e794e813eae3282d9535b212d58eddb2d359d205606e0c3834",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "joint",
+      "repeat": 1,
+      "sha256": "8a91b040547a4f65c31698c13d1dd419793ef7f7d5dee19b196f4eaaee406786",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    }
+  ],
+  "circular-buffer": [
+    {
+      "mode": "boolean",
+      "repeat": 1,
+      "sha256": "b8cf4817730c7196998c16d63f34d9c372f7db63f74e1ce1c56a219040fbaad7",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 1,
+      "sha256": "0e351645bbc0e136042a874331f6098c233eec7e8905d37bb2b2b6bfe167be73",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 2,
+      "sha256": "a46889eee75ab940993dbb0b5b99d01a759ab7e2c4453e19e3671bbd7dfa9faf",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 2,
+      "sha256": "11e35f105f348c1cc8b07c1d37804fd80f6a884b69ab448fd09fa27fa5514f98",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 3,
+      "sha256": "857ef73b37020ddc641a2a1c9e308ca7b91c55a8396f720f9235b97f1e73e32b",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 3,
+      "sha256": "86ec4032a3a8a7183aea9ba5f604d279bd6b4b4f251a48575687e7e242c3284d",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "joint",
+      "repeat": 1,
+      "sha256": "e891425648061e58d581984be7bdd12f30bb6ffbffe6fc397c4a162f8f44eb5c",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    }
+  ],
+  "airline_reservations_6": [
+    {
+      "mode": "mixed",
+      "repeat": 1,
+      "sha256": "e45f580d88523895d1c58203fdb1b4dd7b081cb0652650f793747f3439e7cb84",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 1,
+      "sha256": "8c2c8ec2ef6bd8953a69955260d05d9c58481f135a2ed59ab46f198268b84547",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 2,
+      "sha256": "91a733457b4388d36f751c3933f80763067cfd311c57a5a3a535792e48d22e17",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 2,
+      "sha256": "2159b4155fab5c6e3089859410badb44088a8fe04084530682070659bcb9da27",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "boolean",
+      "repeat": 3,
+      "sha256": "99bf69f04de00b10801d0f968ca1648f3c19b5080ac16f82d172acad5d2e3f3a",
+      "identical_logical_payload": true,
+      "final_payload": "proof-boolean-1.bin.gz"
+    },
+    {
+      "mode": "mixed",
+      "repeat": 3,
+      "sha256": "925f894d866dc780ee64ff504f5e258201af9c7d21015d0c97f4aac7ca1a4786",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    },
+    {
+      "mode": "joint",
+      "repeat": 1,
+      "sha256": "7086250dd77ca5935ff668472abc5abcf672459dc1a75dc9a73c2fff297e1354",
+      "identical_logical_payload": true,
+      "final_payload": "proof-mixed-1.bin.gz"
+    }
+  ]
+}

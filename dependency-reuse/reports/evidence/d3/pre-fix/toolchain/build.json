@@ -1,0 +1,23 @@
+{
+  "upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "reviewed_D2": "8f7668a4113a67275d3bc1af45e663729c5cf35e",
+  "native_implementation": "9cd892b3536ee23f49a8e35f8e62c972c380b12a",
+  "final_tree_commit": "2ffbab74f8ac78265f370cce24922d9278954be1",
+  "tree": "35192cd9ac34a261115da5a034deddbd3b928b5e",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "wsl": "Deagle-Jammy",
+  "frozen_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+  "clean_build": "LC_ALL=C PATH=/usr/bin:/bin make -C src -j12 cbmc.dir",
+  "binaries_sha256": {
+    "native": "f09d38df571852f3e7b2b1f9ecafefc0c1fd831c46c58bb82bce538e286c05f5",
+    "checker": "cb6b1f443294beff469d424762223011be5ac8cec3fbedc77c4b98453b4c52db",
+    "diff": "75542b82b5aa80d9d362f62b1889db5887d2a44e1de991bdbfbbbd10f67b664c",
+    "D2_checker": "580b766f40e88605f8fd8ea3b1b51ae6542ef5f565adf0c2add3e3767318adb7",
+    "D1_boundary_observer": "b1ddae473db18bb2025f386fbbe7be0e760382e08f4839907c36b450101db071",
+    "fixture": "7544478c4c948011a52771cb75eef70f8adc32eb7d36e2ae2915c94b8f9b50b6",
+    "fixture_oracle": "f903f41122f7a6088598339f3a92128dee70318e13194d9f56334fc41d7b995c",
+    "scope_fixture": "c407e8a2e505327c38633e4f9ea5f19b46764b7e6dd5077e5661dddd8fb7f9f0"
+  },
+  "d2_regression": "d2-regression/summary.json"
+}

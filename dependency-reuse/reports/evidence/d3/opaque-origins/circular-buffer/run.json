@@ -1,0 +1,47 @@
+{
+  "case": "circular-buffer",
+  "side": "P0",
+  "argv": [
+    "/home/deagle/dependency-reuse/runs/d3/checked/opaque-audit/probe/deagle_exe",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "8",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/d3/checked/opaque-audit/runs/circular-buffer/work",
+  "binary_sha256": "95401978be0084af0c9e0f5ccf2893691069ef6ab4a285729fe6c69c4832d3cd",
+  "input_sha256": {
+    "program.i": "a5ee9b9286f55973fff2cea9c449f3602c5be2a48fed2e7e6cce6beebc18d9bc"
+  },
+  "limits": {
+    "timeout_seconds": 660,
+    "memory_bytes": 7516192768
+  },
+  "cpu_affinity": [
+    2
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "target": "reach_error.assertion.1",
+  "started_utc": "2026-11-27T09:02:40.211650+00:00",
+  "exit_code": 10,
+  "timed_out": false,
+  "wall_ns": 516430597,
+  "user_s": 0.477323,
+  "system_s": 0.038077,
+  "peak_rss_kib": 122752,
+  "stdout_sha256": "49bbc0b14b255b09e00e56e10eb3b398ba57e54c0a9bd4a70e62b5c2c50eeb12",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

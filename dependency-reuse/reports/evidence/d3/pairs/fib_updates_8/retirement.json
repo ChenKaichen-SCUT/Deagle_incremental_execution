@@ -1,0 +1,151 @@
+{
+  "disjoint_learning_classes": {
+    "query_scoped": 15,
+    "opaque_theory": 1189,
+    "permanent_boolean": 126,
+    "permanent_mixed": 112
+  },
+  "disjoint_complete_outcomes": {
+    "permanent_boolean": {
+      "survives": 31,
+      "B": 95
+    },
+    "permanent_mixed": {
+      "survives": 90,
+      "B": 22
+    }
+  },
+  "failed_declarations_among_complete_mixed_overlapping": {},
+  "mixed_witness": {
+    "root": 56261,
+    "root_record": {
+      "kind": 6,
+      "flags": 8,
+      "lits": [
+        15925,
+        15304,
+        15236,
+        6376,
+        6889
+      ],
+      "parents": [
+        [
+          27372,
+          -1
+        ],
+        [
+          56192,
+          14897
+        ],
+        [
+          56191,
+          15169
+        ],
+        [
+          56190,
+          15101
+        ],
+        [
+          56189,
+          15033
+        ],
+        [
+          56188,
+          14965
+        ],
+        [
+          26237,
+          14829
+        ],
+        [
+          26204,
+          14895
+        ],
+        [
+          26079,
+          14830
+        ],
+        [
+          28740,
+          2121
+        ],
+        [
+          28866,
+          15927
+        ],
+        [
+          28899,
+          15990
+        ],
+        [
+          26075,
+          14825
+        ],
+        [
+          26042,
+          14827
+        ]
+      ],
+      "op": null
+    },
+    "ancestry_by_kind": {
+      "1": 9,
+      "12": 40,
+      "13": 43,
+      "14": 5,
+      "6": 1
+    },
+    "first_boolean": [
+      26042,
+      {
+        "kind": 1,
+        "flags": 0,
+        "lits": [
+          6376,
+          14827
+        ],
+        "parents": [],
+        "op": null
+      }
+    ],
+    "first_lemma": [
+      56188,
+      {
+        "kind": 14,
+        "flags": 8,
+        "lits": [
+          14965,
+          15925
+        ],
+        "parents": [
+          [
+            56084,
+            -1
+          ]
+        ],
+        "op": null
+      }
+    ],
+    "first_lemma_rule": {
+      "kind": 13,
+      "flags": 8,
+      "lits": [],
+      "parents": [
+        [
+          56083,
+          -1
+        ],
+        [
+          48623,
+          -1
+        ]
+      ],
+      "op": [
+        "17",
+        "17",
+        "36",
+        "-1"
+      ]
+    }
+  }
+}

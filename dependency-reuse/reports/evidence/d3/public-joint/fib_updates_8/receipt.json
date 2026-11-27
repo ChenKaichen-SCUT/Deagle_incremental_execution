@@ -1,0 +1,27 @@
+{
+  "native_births_compared": 1442,
+  "retained": 121,
+  "retired": 1321,
+  "disagreements": 0,
+  "archive_read_ns": 2199905,
+  "input_bind_ns": 9043653,
+  "joint_reverse_ns": 432856,
+  "comparison": "Exact row-by-row equality of ProofId and proof_alive for all CDCL births",
+  "input_sha256": {
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-runs/fib_updates_8/mixed-1/proof.bin": "fcebecf502d5138a562a068ea56a0b8e97e4062de971cf30d4fe86614cc5a2db",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/fib_updates_8/improved/inputs.txt": "aadf88020707270803ad443a54131be269ecb7a15db272f10ee06edbdd5b888d",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/fib_updates_8/improved/declarations.txt": "e44115f24674c740f0003dd6ab775589bbc53b8c4439acf438a2c061a1e71474",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/fib_updates_8/mixed-1/improved/learned.tsv": "bf93ab8a9d3a94a83a6a7f1a6c68afd0b7ecf9d29c3a617d1563da95586f16c3"
+  },
+  "public_catalog_sha256": "cb2918e6ebe7d978186efc0fd237dc4ebb1130c057ba00be74ab241528ce8fb6",
+  "retained_ids_sha256": "e065c9f3939e6660b74f9adb87880e97b28a8608589b8bbdb560c412846cffa0",
+  "argv": [
+    "taskset",
+    "-c",
+    "0",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-public-joint/joint-invalidate",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-runs/fib_updates_8/mixed-1/proof.bin",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/fib_updates_8/improved/inputs.txt",
+    "/home/deagle/dependency-reuse/runs/d3/checked/final-checks/fib_updates_8/improved/declarations.txt"
+  ]
+}
