@@ -179,7 +179,7 @@ def main():
             results.append(row)
     save(out/"comparison.json",results)
     shutil.copytree(args.tests,out/"checks",ignore=shutil.ignore_patterns("*.tsv","stdout","stderr","*.c"))
-    for label in ("base","local","guard"):
+    for label in ("base","local","guard","loop_original","loop_renamed"):
         src = args.tests/label
         dest = out/"checks"/label
         for name in ("stdout","stderr","native.tsv","case.c"): packed(src/name,dest/(name+".gz"))

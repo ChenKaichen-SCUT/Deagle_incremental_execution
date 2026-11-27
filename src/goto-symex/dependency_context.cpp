@@ -56,8 +56,8 @@ static std::string operation(const instructiont &ins)
   else if(ins.is_goto())
   {
     parts.push_back(ins.is_backwards_goto() ? "backedge" : "branch");
-    if(ins.is_backwards_goto() && ins.targets.size() == 1 && ins.get_target()->is_goto())
-      parts.push_back(designator(ins.get_target()->condition()));
+    // The loop predicate is version-specific. Multiple backedges are disambiguated
+    // by the same local operation-neighbour check as other repeated sites.
   }
   else if(ins.is_assert()) parts.push_back(id2string(ins.source_location().get_property_id()));
   return tuple(parts);

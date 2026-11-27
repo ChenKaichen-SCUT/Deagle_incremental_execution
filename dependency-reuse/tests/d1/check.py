@@ -166,6 +166,8 @@ def main():
     template = (Path(__file__).with_name("local.c")).read_text()
     variants = {"base":template, "local":template.replace("unrelated = 1;", "unrelated = 17;\n  unrelated += 1;"),
                 "guard":template.replace("value = 7;", "if(enabled) value = 7;")}
+    variants["loop_original"] = template.replace("value = 7;", "for(unsigned step=0; step<2; ++step) value = 7;")
+    variants["loop_renamed"] = variants["loop_original"].replace("step","attempt")
     native_runs = {}
     for label,source in variants.items():
         d = out/label
@@ -190,10 +192,21 @@ def main():
                        and r[6]=="guard_literal_form_changed"]
             assert {r[5] for r in changed} == {"retired","added"}
             assert any(r[1]=="GuardDefinition" and r[5]=="retired" and r[2].startswith("value#") for r in dec)
+    loop_out = out/"compare-loop"
+    difference(out/"loop_original/native.tsv",out/"loop_renamed/native.tsv",engine,loop_out)
+    loop_model = Model(out/"loop_original/native.tsv",Keys())
+    fn = {row[0]:row[3] for row in loop_model.rows["S"]}
+    functions = {row[0]:fn[row[1]] for row in loop_model.rows["X"]}
+    writes = {name for name,ctx,role,*_ in loop_model.rows["E"]
+              if functions.get(ctx)=="store" and role=="write" and name.startswith("value#")}
+    loop_decs = load_jsonl(loop_out/"declarations.jsonl.gz")
+    retained = {r[2] for r in loop_decs if r[0]==0 and r[1]=="EventIdentity" and r[5]=="matched"}
+    rf_writes = {r[2][0] for r in loop_decs if r[0]==0 and r[1]=="RFBinding" and r[5]=="matched"}
+    assert len(writes)==2 and writes<=retained and writes<=rf_writes
     (out/"checks.json").write_text(json.dumps(dict(renumber_checked_variables=ref["variables"]["matched"],
         renumber_clauses=ref["clauses"]["occurrences"],alias_probe=alias["variables"],native=native_runs,
         guard_transition=changed,local_and_guard_unaffected_rf=True,block_merge_and_domain=graph,
-        incomplete_manifest_rejected=True,different_target_separates_Q=True),indent=2)+"\n")
+        incomplete_manifest_rejected=True,different_target_separates_Q=True,renamed_loop_writes=sorted(writes)),indent=2)+"\n")
     print("D1 regression checks passed")
 
 
