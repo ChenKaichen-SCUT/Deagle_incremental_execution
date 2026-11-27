@@ -1,0 +1,862 @@
+[
+  {
+    "case": "smoke/worker_violation",
+    "side": "smoke",
+    "target": "worker.assertion.1",
+    "exit_code": 10,
+    "timed_out": false,
+    "wall_ns": 81401878,
+    "user_s": 0.027208999999999997,
+    "system_s": 0.018135,
+    "peak_rss_kib": 15744,
+    "classification": "VIOLATION",
+    "cProverStatus": "failure",
+    "target_status": "FAILURE",
+    "properties": [
+      {
+        "description": "assertion flag == 0",
+        "property": "worker.assertion.1",
+        "sourceLocation": {
+          "file": "worker_violation.c",
+          "function": "worker",
+          "line": "10",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/smoke/worker_violation/smoke/work"
+        },
+        "status": "FAILURE"
+      }
+    ],
+    "trace_step_counts": {
+      "worker.assertion.1": 66
+    },
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {},
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 1 VCC(s), 1 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is SATISFIABLE",
+        "reported_variables": 623,
+        "live_clauses": 1131,
+        "property_decider_solve_s": 0.000161016,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 0,
+          "decisions": 140,
+          "sat_propagations": 624,
+          "theory_propagations": 3,
+          "theory_cycle_conflicts": 0,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 0,
+          "decisions": 140,
+          "sat_propagations": 624,
+          "theory_propagations": 3,
+          "theory_cycle_conflicts": 0,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 4
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.0013367
+      ],
+      "Postprocess Equation": [
+        0.000991966
+      ],
+      "Convert SSA": [
+        0.000214228
+      ],
+      "Post-process": [
+        8.3225e-05
+      ],
+      "Solver": [
+        0.000161016
+      ],
+      "decision procedure": [
+        0.0013368
+      ]
+    },
+    "warnings": [],
+    "native_warning_lines": []
+  },
+  {
+    "case": "smoke/join_pass",
+    "side": "smoke",
+    "target": "main.assertion.1",
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_ns": 39857953,
+    "user_s": 0.029604,
+    "system_s": 0.00987,
+    "peak_rss_kib": 15616,
+    "classification": "BOUNDED_PASS",
+    "cProverStatus": "success",
+    "target_status": "SUCCESS",
+    "properties": [
+      {
+        "description": "assertion value == 7",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "join_pass.c",
+          "function": "main",
+          "line": "18",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/smoke/join_pass/smoke/work"
+        },
+        "status": "SUCCESS"
+      }
+    ],
+    "trace_step_counts": {},
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {},
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 1 VCC(s), 1 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+        "reported_variables": 630,
+        "live_clauses": 1132,
+        "property_decider_solve_s": 0.000141268,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 2,
+          "decisions": 43,
+          "sat_propagations": 540,
+          "theory_propagations": 2,
+          "theory_cycle_conflicts": 1,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 2,
+          "decisions": 43,
+          "sat_propagations": 540,
+          "theory_propagations": 2,
+          "theory_cycle_conflicts": 1,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 4
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.00138445
+      ],
+      "Postprocess Equation": [
+        0.000966645
+      ],
+      "Convert SSA": [
+        0.000211899
+      ],
+      "Post-process": [
+        7.8804e-05
+      ],
+      "Solver": [
+        0.000141268
+      ],
+      "decision procedure": [
+        0.00126399
+      ]
+    },
+    "warnings": [],
+    "native_warning_lines": []
+  },
+  {
+    "case": "fib_updates_8",
+    "side": "P0",
+    "target": "main.assertion.1",
+    "exit_code": 10,
+    "timed_out": false,
+    "wall_ns": 115947106,
+    "user_s": 0.112818,
+    "system_s": 0.0025689999999999997,
+    "peak_rss_kib": 19840,
+    "classification": "VIOLATION",
+    "cProverStatus": "failure",
+    "target_status": "FAILURE",
+    "properties": [
+      {
+        "description": "assertion left <= 2584u && right <= 2584u",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "40",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/fib_updates_8/P0/work"
+        },
+        "status": "FAILURE"
+      }
+    ],
+    "trace_step_counts": {
+      "main.assertion.1": 187
+    },
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {
+      "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 1 VCC(s), 1 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is SATISFIABLE",
+        "reported_variables": 12553,
+        "live_clauses": 48363,
+        "property_decider_solve_s": 0.0604096,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 80
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.00382811
+      ],
+      "Postprocess Equation": [
+        0.00452179
+      ],
+      "Convert SSA": [
+        0.00380493
+      ],
+      "Post-process": [
+        0.000486028
+      ],
+      "Solver": [
+        0.0604096
+      ],
+      "decision procedure": [
+        0.0678111
+      ]
+    },
+    "warnings": [],
+    "native_warning_lines": []
+  },
+  {
+    "case": "fib_updates_8",
+    "side": "P1",
+    "target": "main.assertion.1",
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_ns": 1991666720,
+    "user_s": 1.976529,
+    "system_s": 0.014692,
+    "peak_rss_kib": 28928,
+    "classification": "BOUNDED_PASS",
+    "cProverStatus": "success",
+    "target_status": "SUCCESS",
+    "properties": [
+      {
+        "description": "assertion left <= 2584u && right <= 2584u",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "40",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/fib_updates_8/P1/work"
+        },
+        "status": "SUCCESS"
+      }
+    ],
+    "trace_step_counts": {},
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {
+      "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 1 VCC(s), 1 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+        "reported_variables": 12057,
+        "live_clauses": 46627,
+        "property_decider_solve_s": 1.93784,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 80
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.0043368
+      ],
+      "Postprocess Equation": [
+        0.0043419
+      ],
+      "Convert SSA": [
+        0.00349276
+      ],
+      "Post-process": [
+        0.000356588
+      ],
+      "Solver": [
+        1.93784
+      ],
+      "decision procedure": [
+        1.94485
+      ]
+    },
+    "warnings": [],
+    "native_warning_lines": []
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P0",
+    "target": "reach_error.assertion.1",
+    "exit_code": 10,
+    "timed_out": false,
+    "wall_ns": 515454198,
+    "user_s": 0.461966,
+    "system_s": 0.053052999999999996,
+    "peak_rss_kib": 123136,
+    "classification": "VIOLATION",
+    "cProverStatus": "failure",
+    "target_status": "FAILURE",
+    "properties": [
+      {
+        "description": "assertion 0",
+        "property": "reach_error.assertion.1",
+        "sourceLocation": {
+          "file": "program.i",
+          "function": "reach_error",
+          "line": "681",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/circular-buffer/P0/work"
+        },
+        "status": "FAILURE"
+      }
+    ],
+    "trace_step_counts": {
+      "reach_error.assertion.1": 357
+    },
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {
+      "t1.0 file program.i line 724 function t1 thread 1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "t2.0 file program.i line 740 function t2 thread 2": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 14 VCC(s), 14 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is SATISFIABLE",
+        "reported_variables": 245081,
+        "live_clauses": 1157324,
+        "property_decider_solve_s": 0.231652,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 1116
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.0241101
+      ],
+      "Postprocess Equation": [
+        0.0778086
+      ],
+      "Convert SSA": [
+        0.0922303
+      ],
+      "Post-process": [
+        0.000412778
+      ],
+      "Solver": [
+        0.231652
+      ],
+      "decision procedure": [
+        0.354196
+      ]
+    },
+    "warnings": [
+      "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+      "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+      "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+      "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+    ],
+    "native_warning_lines": []
+  },
+  {
+    "case": "circular-buffer",
+    "side": "P1",
+    "target": "reach_error.assertion.1",
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_ns": 8184117025,
+    "user_s": 8.13621,
+    "system_s": 0.042290999999999995,
+    "peak_rss_kib": 144384,
+    "classification": "BOUNDED_PASS",
+    "cProverStatus": "success",
+    "target_status": "SUCCESS",
+    "properties": [
+      {
+        "description": "assertion 0",
+        "property": "reach_error.assertion.1",
+        "sourceLocation": {
+          "file": "program.i",
+          "function": "reach_error",
+          "line": "681",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/circular-buffer/P1/work"
+        },
+        "status": "SUCCESS"
+      }
+    ],
+    "trace_step_counts": {},
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {
+      "t1.0 file program.i line 725 function t1 thread 1": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ],
+      "t2.0 file program.i line 743 function t2 thread 2": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7
+      ]
+    },
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 14 VCC(s), 14 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+        "reported_variables": 245472,
+        "live_clauses": 1158284,
+        "property_decider_solve_s": 7.91968,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 1116
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.0255651
+      ],
+      "Postprocess Equation": [
+        0.076819
+      ],
+      "Convert SSA": [
+        0.082076
+      ],
+      "Post-process": [
+        0.000371839
+      ],
+      "Solver": [
+        7.91968
+      ],
+      "decision procedure": [
+        8.03036
+      ]
+    },
+    "warnings": [
+      "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+      "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+      "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+      "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+    ],
+    "native_warning_lines": []
+  },
+  {
+    "case": "airline_reservations_6",
+    "side": "P0",
+    "target": "main.assertion.1",
+    "exit_code": 10,
+    "timed_out": false,
+    "wall_ns": 5202777070,
+    "user_s": 5.16521,
+    "system_s": 0.031667,
+    "peak_rss_kib": 110848,
+    "classification": "VIOLATION",
+    "cProverStatus": "failure",
+    "target_status": "FAILURE",
+    "properties": [
+      {
+        "description": "assertion sold == capacity",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "24",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/airline_reservations_6/P0/work"
+        },
+        "status": "FAILURE"
+      }
+    ],
+    "trace_step_counts": {
+      "main.assertion.1": 516
+    },
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {
+      "main.0 file harness.c line 20 function main thread 0": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "main.1 file harness.c line 22 function main thread 0": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 1 VCC(s), 1 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is SATISFIABLE",
+        "reported_variables": 199090,
+        "live_clauses": 880094,
+        "property_decider_solve_s": 5.05446,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 368
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.0141473
+      ],
+      "Postprocess Equation": [
+        0.0123225
+      ],
+      "Convert SSA": [
+        0.055906
+      ],
+      "Post-process": [
+        0.00634235
+      ],
+      "Solver": [
+        5.05446
+      ],
+      "decision procedure": [
+        5.11706
+      ]
+    },
+    "warnings": [],
+    "native_warning_lines": []
+  },
+  {
+    "case": "airline_reservations_6",
+    "side": "P1",
+    "target": "main.assertion.1",
+    "exit_code": 0,
+    "timed_out": false,
+    "wall_ns": 19571874615,
+    "user_s": 19.464275,
+    "system_s": 0.081815,
+    "peak_rss_kib": 68864,
+    "classification": "BOUNDED_PASS",
+    "cProverStatus": "success",
+    "target_status": "SUCCESS",
+    "properties": [
+      {
+        "description": "assertion sold == capacity",
+        "property": "main.assertion.1",
+        "sourceLocation": {
+          "file": "harness.c",
+          "function": "main",
+          "line": "24",
+          "workingDirectory": "/home/deagle/dependency-reuse/runs/d0-stock-01/airline_reservations_6/P1/work"
+        },
+        "status": "SUCCESS"
+      }
+    ],
+    "trace_step_counts": {},
+    "unwinding_property_ids": [],
+    "unwinding_iterations": {
+      "main.0 file harness.c line 20 function main thread 0": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ],
+      "main.1 file harness.c line 22 function main thread 0": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    "unwinding_stop_or_warning": [],
+    "enabled_unwinding_assertions": true,
+    "vcc_messages": [
+      "Generated 1 VCC(s), 1 remaining after simplification"
+    ],
+    "adapter_query_count": 1,
+    "closure_completion_count": 1,
+    "queries": [
+      {
+        "query": 1,
+        "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+        "reported_variables": 69634,
+        "live_clauses": 256820,
+        "property_decider_solve_s": 19.4866,
+        "early_adapter_return": false,
+        "native_cumulative": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "native_delta_from_previous_snapshot": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "adapter_entry_to_exit_delta": null,
+        "restarts": null,
+        "search_only_s": null,
+        "co_pairs_in_graph_at_return": 146
+      }
+    ],
+    "native_timers_s": {
+      "Symex": [
+        0.0117166
+      ],
+      "Postprocess Equation": [
+        0.00753394
+      ],
+      "Convert SSA": [
+        0.0169601
+      ],
+      "Post-process": [
+        0.00651309
+      ],
+      "Solver": [
+        19.4866
+      ],
+      "decision procedure": [
+        19.5085
+      ]
+    },
+    "warnings": [],
+    "native_warning_lines": []
+  }
+]

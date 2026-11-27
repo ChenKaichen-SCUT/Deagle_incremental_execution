@@ -1,0 +1,408 @@
+{
+  "fib_updates_8": {
+    "schedules": 12870,
+    "bound": 2584,
+    "old_max_component": 4180,
+    "candidate_max_component": 2584,
+    "observed_P0": {
+      "actions": [
+        [
+          "R",
+          2
+        ],
+        [
+          "L",
+          4
+        ],
+        [
+          "R",
+          6
+        ],
+        [
+          "R",
+          10
+        ],
+        [
+          "L",
+          15
+        ],
+        [
+          "R",
+          25
+        ],
+        [
+          "L",
+          41
+        ],
+        [
+          "R",
+          66
+        ],
+        [
+          "L",
+          108
+        ],
+        [
+          "R",
+          174
+        ],
+        [
+          "L",
+          283
+        ],
+        [
+          "L",
+          458
+        ],
+        [
+          "R",
+          632
+        ],
+        [
+          "L",
+          1091
+        ],
+        [
+          "R",
+          1723
+        ],
+        [
+          "L",
+          2815
+        ]
+      ],
+      "final_left": 2815,
+      "final_right": 1723
+    }
+  },
+  "airline_reservations_6": {
+    "capacity": 5,
+    "old_reachable_final_sold": [
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "candidate_reachable_final_sold": [
+      5
+    ],
+    "observed_P0": {
+      "actions": [
+        [
+          5,
+          "read",
+          0
+        ],
+        [
+          3,
+          "read",
+          0
+        ],
+        [
+          5,
+          "write",
+          1
+        ],
+        [
+          1,
+          "read",
+          1
+        ],
+        [
+          3,
+          "write",
+          1
+        ],
+        [
+          2,
+          "read",
+          1
+        ],
+        [
+          1,
+          "write",
+          2
+        ],
+        [
+          6,
+          "read",
+          2
+        ],
+        [
+          6,
+          "write",
+          3
+        ],
+        [
+          4,
+          "read",
+          3
+        ],
+        [
+          4,
+          "write",
+          4
+        ],
+        [
+          2,
+          "write",
+          2
+        ]
+      ],
+      "final_sold": 2
+    }
+  },
+  "circular-buffer": {
+    "basis": "Every critical section takes the same mutex, so each source execution projects onto an order of seven producer and seven consumer polls. Successful transactions alternate. At most seven writes, before index wrap at 10. Each payload is the ordinal of its successful send and must equal the ordinal of its successful receive.",
+    "complete_dequeue_counts": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+    ],
+    "first_bad_sender_slots": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "fixed_bad_schedules": 0,
+    "original_bad_schedules": 3304,
+    "schedules": 3432,
+    "observed_P0_projection": [
+      [
+        1,
+        "t1",
+        "i",
+        "0",
+        "assignment"
+      ],
+      [
+        1,
+        "t1",
+        "i",
+        "0",
+        "assignment"
+      ],
+      [
+        1,
+        "insertLogElement",
+        "next",
+        "1u",
+        "assignment"
+      ],
+      [
+        1,
+        "t1",
+        "i",
+        "1",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "return_value_removeLogElement",
+        "0",
+        "assignment"
+      ],
+      [
+        2,
+        "removeLogElement",
+        "first",
+        "1u",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "return_value_removeLogElement",
+        "0",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "i",
+        "1",
+        "assignment"
+      ],
+      [
+        1,
+        "insertLogElement",
+        "next",
+        "2u",
+        "assignment"
+      ],
+      [
+        1,
+        "t1",
+        "i",
+        "2",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "return_value_removeLogElement",
+        "0",
+        "assignment"
+      ],
+      [
+        2,
+        "removeLogElement",
+        "first",
+        "2u",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "return_value_removeLogElement",
+        "1",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "i",
+        "2",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "i",
+        "3",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "i",
+        "4",
+        "assignment"
+      ],
+      [
+        1,
+        "insertLogElement",
+        "next",
+        "3u",
+        "assignment"
+      ],
+      [
+        1,
+        "t1",
+        "i",
+        "3",
+        "assignment"
+      ],
+      [
+        1,
+        "t1",
+        "i",
+        "4",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "i",
+        "0",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "i",
+        "0",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "return_value_removeLogElement",
+        "0",
+        "assignment"
+      ],
+      [
+        2,
+        "removeLogElement",
+        "first",
+        "3u",
+        "assignment"
+      ],
+      [
+        2,
+        "t2",
+        "return_value_removeLogElement",
+        "2",
+        "assignment"
+      ],
+      [
+        2,
+        "reach_error",
+        null,
+        null,
+        "failure"
+      ]
+    ],
+    "matches_historical_projection": {
+      "extended/buffer-b8": true,
+      "formal/buffer-b8": true
+    }
+  },
+  "circular_historical_counter_boundaries": {
+    "P0": {
+      "old_native_state_sha256": "1e426cb95e940af78a1ba28deebc26c61a7376fb3638cf4a91d46f2daf8c7d59",
+      "historical_query_start": {
+        "sat_conflicts": 0,
+        "sat_propagations": 5885,
+        "theory_propagations": 287,
+        "theory_cycle_conflicts": 0
+      },
+      "historical_query_end": {
+        "sat_conflicts": 343,
+        "sat_propagations": 1371484,
+        "theory_propagations": 11457,
+        "theory_cycle_conflicts": 18
+      },
+      "historical_query_delta": {
+        "sat_conflicts": 343,
+        "sat_propagations": 1365599,
+        "theory_propagations": 11170,
+        "theory_cycle_conflicts": 18
+      },
+      "stock_end_agrees": true
+    },
+    "P1": {
+      "old_native_state_sha256": "a42b42243c1eb1b580d958afec7c41440abec2dfad1070fb334ec13f2cd04962",
+      "historical_query_start": {
+        "sat_conflicts": 0,
+        "sat_propagations": 6056,
+        "theory_propagations": 287,
+        "theory_cycle_conflicts": 0
+      },
+      "historical_query_end": {
+        "sat_conflicts": 7525,
+        "sat_propagations": 54998143,
+        "theory_propagations": 118100,
+        "theory_cycle_conflicts": 56
+      },
+      "historical_query_delta": {
+        "sat_conflicts": 7525,
+        "sat_propagations": 54992087,
+        "theory_propagations": 117813,
+        "theory_cycle_conflicts": 56
+      },
+      "stock_end_agrees": true
+    }
+  }
+}

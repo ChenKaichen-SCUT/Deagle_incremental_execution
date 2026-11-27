@@ -1,0 +1,102 @@
+{
+  "sample_utc": "2026-11-27T06:17:31.265022+00:00",
+  "wsl_distro": "Deagle-Jammy",
+  "wsl_version": 2,
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "architecture": "x86_64",
+  "os_release": [
+    "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"",
+    "NAME=\"Ubuntu\"",
+    "VERSION_ID=\"22.04\"",
+    "VERSION=\"22.04.5 LTS (Jammy Jellyfish)\"",
+    "VERSION_CODENAME=jammy",
+    "ID=ubuntu",
+    "ID_LIKE=debian",
+    "HOME_URL=\"https://www.ubuntu.com/\"",
+    "SUPPORT_URL=\"https://help.ubuntu.com/\"",
+    "BUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"",
+    "PRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"",
+    "UBUNTU_CODENAME=jammy"
+  ],
+  "cpu_model": "13th Gen Intel(R) Core(TM) i7-13700F",
+  "logical_cpus": 16,
+  "allowed_cpus": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "memory_kib": {
+    "MemTotal": 30802092,
+    "MemAvailable": 29226116,
+    "SwapTotal": 33554432,
+    "SwapFree": 33554432
+  },
+  "cgroup": [
+    "0::/"
+  ],
+  "filesystems": {
+    "/": {
+      "mount": "ext4",
+      "total_bytes": 1081101176832,
+      "free_bytes": 1009556402176
+    },
+    "/mnt/e": {
+      "mount": "9p",
+      "total_bytes": 474316009472,
+      "free_bytes": 145849958400
+    }
+  },
+  "glibc": "glibc 2.35",
+  "packages": [
+    "binutils\t2.38-4ubuntu2.12",
+    "bison\t2:3.8.2+dfsg-1ubuntu0.22.04.1",
+    "flex\t2.6.4-8build2",
+    "g++\t4:11.2.0-1ubuntu1",
+    "g++-11\t11.4.0-1ubuntu1~22.04.3",
+    "g++-multilib\t4:11.2.0-1ubuntu1",
+    "gcc\t4:11.2.0-1ubuntu1",
+    "gcc-11\t11.4.0-1ubuntu1~22.04.3",
+    "gcc-multilib\t4:11.2.0-1ubuntu1",
+    "git\t1:2.34.1-1ubuntu1.18",
+    "libc6-dev:amd64\t2.35-0ubuntu3.18",
+    "make\t4.3-4.1build1",
+    "patch\t2.7.6-7build2",
+    "python3\t3.10.6-1~22.04.1",
+    "python3-yaml\t5.4.1-1ubuntu1",
+    "time\t1.9-0.1build2",
+    "zlib1g-dev:amd64\t1:1.2.11.dfsg-2ubuntu9.2"
+  ],
+  "wsl_linux_project": "/mnt/e/Deagle_incremental_execution",
+  "stock_tree": "/home/deagle/dependency-reuse/stock-build",
+  "native_tree": "/home/deagle/dependency-reuse/native",
+  "windows_project": "E:/Deagle_incremental_execution",
+  "network": {
+    "official_git_fetch": true,
+    "official_api_commit_and_tree_verified": true,
+    "windows_git_configured_proxy": "connection refused; completed via WSL Git"
+  },
+  "python": "3.10.12",
+  "windows_host": {
+    "edition": "Windows 11 家庭版 中文版",
+    "version": "10.0.26200",
+    "build": "26200",
+    "architecture": "64-bit",
+    "physical_cores": 16,
+    "logical_processors": 24,
+    "total_visible_memory_kib": 33363256,
+    "wsl_distribution_storage": "E:/Deagle_incremental_execution/runs/local-runtime/wsl-jammy"
+  }
+}

@@ -1,0 +1,45 @@
+schema_version: 1
+case_id: fib_updates_8
+source_origin: Independently written bounded adaptation of Yogar EX1 fib_safe-6.i.
+  Eight additions per worker instead of six, local loop indices, joins before observation,
+  and the equivalent constant F(18). P0 injects a one-unit bias into the left update.
+old_source: old/program.c
+candidate_source: candidate/program.c
+entry: main
+property:
+  file: phi.json
+  id: main.assertion.1
+  description: After both joins neither component exceeds Fibonacci number F(18) =
+    2584.
+  protected_files:
+  - harness.c
+  - phi.json
+  - gamma.json
+  original_assertion_fingerprint: 3576fa603071cb93db5c683a107fa2955de28594c0152605d28ad6267733dbd8
+semantics:
+  memory_model: sc
+  backend: deagle-closure
+  target_bits: 64
+  unwind: 10
+  check_unwinding: true
+  compiler_flags: []
+  preprocessor: GCC system preprocessor as invoked by the locked Deagle C front end
+  library_model: pthread and C library built into the pinned Deagle binary
+  worker_threads: 2
+  thread_bound: Exactly two workers, one creation per worker; eight iterations per
+    worker.
+  assumptions:
+  - Both components start at one; each addition is atomic; fixed size unsigned arithmetic
+    has no overflow for these values.
+  initial_state: static C initialization; main is the sole entry
+verification_config: gamma.json
+limits:
+  timeout_seconds: 300
+  memory_bytes: 21474836480
+repair:
+  method: stage7_manual
+  change_type: arithmetic_constant
+  intent: Remove the left additive bias while preserving both eight-iteration workers.
+  allowed_files:
+  - program.c
+  final_candidates: 1

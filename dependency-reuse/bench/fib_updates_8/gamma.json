@@ -1,0 +1,49 @@
+{
+  "binary_sha256": "4566c4ae50aed3be4d68aa5450a049952b32daad88b3ac745efb72e839a318a3",
+  "deagle_commit": "a159f9923722646185ba8028610b2eef2618fa72",
+  "entry": "main",
+  "frontend_mode": [
+    "--show-goto-functions"
+  ],
+  "harness": "harness.c",
+  "harness_sha256": "a83ec85d1a3105f26025be5de55bc9c102ae78e8cad6e2b9dbcaf0182032928a",
+  "included_source": "program.c",
+  "limits": {
+    "memory_bytes": 21474836480,
+    "timeout_seconds": 300
+  },
+  "platform": "Ubuntu 22.04 amd64 LP64, GCC 11.4, libc6-dev headers",
+  "semantics": {
+    "assumptions": [
+      "Both components start at one; each addition is atomic; fixed size unsigned arithmetic has no overflow for these values."
+    ],
+    "backend": "deagle-closure",
+    "check_unwinding": true,
+    "compiler_flags": [],
+    "initial_state": "static C initialization; main is the sole entry",
+    "library_model": "pthread and C library built into the pinned Deagle binary",
+    "memory_model": "sc",
+    "preprocessor": "GCC system preprocessor as invoked by the locked Deagle C front end",
+    "target_bits": 64,
+    "thread_bound": "Exactly two workers, one creation per worker; eight iterations per worker.",
+    "unwind": 10,
+    "worker_threads": 2
+  },
+  "source_argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--64",
+    "--unwind",
+    "10",
+    "--unwinding-assertions"
+  ],
+  "target_property": "main.assertion.1",
+  "translation_unit": "harness.c",
+  "verification_output": [
+    "--trace",
+    "--json-ui"
+  ]
+}

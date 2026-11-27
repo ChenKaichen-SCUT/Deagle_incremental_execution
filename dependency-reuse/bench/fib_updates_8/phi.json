@@ -1,0 +1,12 @@
+{
+  "assertion": "assert(left <= 2584u && right <= 2584u);",
+  "assertion_sha256": "3576fa603071cb93db5c683a107fa2955de28594c0152605d28ad6267733dbd8",
+  "description": "After both joins neither component exceeds Fibonacci number F(18) = 2584.",
+  "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+  "id": "main.assertion.1",
+  "source": {
+    "file": "harness.c",
+    "function": "main",
+    "line": 40
+  }
+}

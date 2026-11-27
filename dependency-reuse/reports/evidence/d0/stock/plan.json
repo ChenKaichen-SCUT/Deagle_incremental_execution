@@ -1,0 +1,206 @@
+{
+  "mode": "stock",
+  "repeat_count": 1,
+  "serial": true,
+  "cpu_affinity": [
+    0
+  ],
+  "binary_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "source_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "input_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "limits_enforcement": "RLIMIT_AS per process; monotonic deadline for the process group",
+  "cold": "fresh process/model/solver, no knowledge input, OS file caches left under OS control",
+  "defaults": {
+    "rnd_seed": 91648253,
+    "rnd_freq": 0,
+    "rnd_init": false,
+    "ccmin_mode": 2,
+    "luby": true,
+    "rfirst": 100,
+    "rinc": 2
+  },
+  "order": [
+    {
+      "case": "smoke/worker_violation",
+      "side": "smoke",
+      "limits": {
+        "timeout_seconds": 60,
+        "memory_bytes": 1073741824
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "worker_violation.c"
+      ]
+    },
+    {
+      "case": "smoke/join_pass",
+      "side": "smoke",
+      "limits": {
+        "timeout_seconds": 60,
+        "memory_bytes": 1073741824
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "3",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "join_pass.c"
+      ]
+    },
+    {
+      "case": "fib_updates_8",
+      "side": "P0",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "10",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "harness.c"
+      ]
+    },
+    {
+      "case": "fib_updates_8",
+      "side": "P1",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "10",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "harness.c"
+      ]
+    },
+    {
+      "case": "circular-buffer",
+      "side": "P0",
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ]
+    },
+    {
+      "case": "circular-buffer",
+      "side": "P1",
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ]
+    },
+    {
+      "case": "airline_reservations_6",
+      "side": "P0",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "harness.c"
+      ]
+    },
+    {
+      "case": "airline_reservations_6",
+      "side": "P1",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "harness.c"
+      ]
+    }
+  ]
+}

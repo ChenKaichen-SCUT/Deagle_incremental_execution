@@ -1,0 +1,41 @@
+{
+  "official_url": "https://github.com/thufv/Deagle.git",
+  "official": {
+    "commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+    "tree": "ee983048136026478a6af5774ab20077b273db2f"
+  },
+  "commit_subject": "Update 4.2.0 version",
+  "official_api": "https://api.github.com/repos/thufv/Deagle/git/commits/d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "history_url": "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution.git",
+  "history": {
+    "commit": "efaca29d9fa74777e5d1224efec3a95539030ff2",
+    "tree": "47bb4effa9482782731922d8b09e98efbd86515d"
+  },
+  "stage12_release": {
+    "commit": "06510d4999c4b1030945e83a50c9ef73e3db690b",
+    "tree": "f3151bf619825d3768a2d88eb24a4b5869e6185d"
+  },
+  "circular_subtree_in_both": "19071014648489b3f4763ab08214d18e03406836",
+  "historical_11c_reference_only": {
+    "commit": "7d2d08ecbf6e643d3537131489ab6ba23c327c52",
+    "tree": "fb808c8d8f9b9e51fe0438b7c5c44331659a3f5b"
+  },
+  "development_branch": "codex/dependency-reuse",
+  "existing_project_branch": "stage-12-hard-pairs",
+  "fetch_commands": [
+    "git fetch --depth=1 --no-tags origin d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+    "git -C /mnt/e/Deagle_incremental_execution fetch --no-tags --no-recurse-submodules https://github.com/thufv/Deagle.git d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e"
+  ],
+  "build_environment": "WSL2 Deagle-Jammy",
+  "native_patches": [],
+  "guide_sha256": "ecbce5bf41a1a67257942e10beb96265f4b5d1188c47a5e73887ebf27388d8aa",
+  "upstream_file_sha256": {
+    "README.md": "5cf83af0dbb0f4a5f0451153baf17550b4bc36c42f7b9e385795867710b2aad0",
+    "LICENSE": "b14387d3daaee30ca91b272c2d88b7730a96ff9d75835b27cfa083443a9c56e8",
+    "src/config.inc": "6fc8052088367ca5ebac9d58328b870d6714385e181a6c3392e5ce0dbfa1bb1c",
+    "src/common": "a0564833381ceb0242554e7cb02bb2f821e0fa01e5d2eb7d2e6d9136ece08ff7",
+    "src/solvers/Makefile": "d5ed12741cb544f2c79efd21228e0dd92dd0c84e3cedf2212891c3f378a08499",
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": "dfe9852cd628059530d03ee342ec0ae9f68624dff42cc2a6d1c5dc2da5fb8b71"
+  },
+  "input_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206"
+}

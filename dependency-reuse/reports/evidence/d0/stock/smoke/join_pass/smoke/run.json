@@ -1,0 +1,47 @@
+{
+  "case": "smoke/join_pass",
+  "side": "smoke",
+  "argv": [
+    "/home/deagle/dependency-reuse/stock-build/src/cbmc/deagle_exe",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "3",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "join_pass.c"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/d0-stock-01/smoke/join_pass/smoke/work",
+  "binary_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "input_sha256": {
+    "join_pass.c": "7475f35a3f5a7b9ba59a54689714ff1a330f3a464de6eb85a801f6eb5c03f2e5"
+  },
+  "limits": {
+    "timeout_seconds": 60,
+    "memory_bytes": 1073741824
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "target": "main.assertion.1",
+  "started_utc": "2026-11-27T06:17:31.395425+00:00",
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_ns": 39857953,
+  "user_s": 0.029604,
+  "system_s": 0.00987,
+  "peak_rss_kib": 15616,
+  "stdout_sha256": "f28c0cccc51452f73f0633455289ec0b5f1f27809d79048d5b8f1553cdf584f3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

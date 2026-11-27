@@ -1,0 +1,8 @@
+--- a/program.c
++++ b/program.c
+@@ -1,4 +1,4 @@
+ static void update_left(void)
+ {
+-    left += right + 1u;
++    left += right + 0u;
+ }

@@ -1,0 +1,12 @@
+{
+  "assertion": "assert(sold == capacity);",
+  "assertion_sha256": "dedaedd35af5e51dc3d8ef6b3159878a965c4de9c40bf090f46c0276c195e788",
+  "description": "After all agents finish, five seats have been sold.",
+  "fingerprint_algorithm": "sha256 of stripped UTF-8 assertion statement, excluding newline",
+  "id": "main.assertion.1",
+  "source": {
+    "file": "harness.c",
+    "function": "main",
+    "line": 24
+  }
+}

@@ -1,0 +1,8 @@
+# Preserve historical blob bytes and the hashes of experiment artifacts on Windows.
+bench/** -text
+configs/*.json text eol=lf
+scripts/*.py text eol=lf
+scripts/*.sh text eol=lf
+reports/**/*.json text eol=lf
+reports/**/*.gz -text
+reports/*.md text eol=lf

@@ -1,0 +1,39 @@
+--- old/program.i
++++ new/program.i
+@@ -720,13 +720,15 @@
+ }
+ void *t1(void *arg)
+ {
+-  int i;
+-  for(i=0; i<7; i++)
++  int i = 0;
++  int attempt;
++  for(attempt=0; attempt<7; attempt++)
+   {
+     pthread_mutex_lock(&m);
+     if (send)
+     {
+       insertLogElement(i);
++      i++;
+       send=0;
+       receive=1;
+     }
+@@ -736,14 +738,16 @@
+ }
+ void *t2(void *arg)
+ {
+-  int i;
+-  for(i=0; i<7; i++)
++  int i = 0;
++  int attempt;
++  for(attempt=0; attempt<7; attempt++)
+   {
+     pthread_mutex_lock(&m);
+     if (receive)
+     {
+ 	  if(removeLogElement()==i) ;
+       else ERROR: {reach_error();abort();}
++      i++;
+       receive=0;
+       send=1;
+     }

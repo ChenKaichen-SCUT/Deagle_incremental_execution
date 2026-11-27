@@ -1,0 +1,37 @@
+{
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "8",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "binding": "all native properties including reach_error.assertion.1 and all unwinding assertions",
+  "case_id": "circular-buffer",
+  "description": "轮询失败也推进了载荷编号。修复让七次轮询照常执行，生产和消费各在事务成功后推进序号。",
+  "limits": {
+    "memory_gib": 7,
+    "timeout_s": 660
+  },
+  "model": "ILP32",
+  "pair_kind": "trace_repair",
+  "property": "unreach-call.prp",
+  "property_sha256": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150",
+  "sides": {
+    "new": {
+      "file": "new/program.i",
+      "sha256": "45d0532015299cbea6251779c55f20bc70cd28eb2933c8ada200deed7fd901e3"
+    },
+    "old": {
+      "file": "old/program.i",
+      "sha256": "a5ee9b9286f55973fff2cea9c449f3602c5be2a48fed2e7e6cce6beebc18d9bc"
+    }
+  }
+}
