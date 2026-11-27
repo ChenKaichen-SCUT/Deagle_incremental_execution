@@ -1,0 +1,26 @@
+{
+  "lost-signed-pivot": {
+    "byte_offset": 580492,
+    "old_word": 4294967295,
+    "new_word": 4294967294,
+    "rejection": "direct dependency"
+  },
+  "changed-conclusion-or-premise": {
+    "byte_offset": 276004,
+    "old_word": 2054,
+    "new_word": 2055,
+    "rejection": "literal polarity"
+  },
+  "changed-input-ordinal": {
+    "byte_offset": 1422848,
+    "old_word": 2313,
+    "new_word": 2312,
+    "rejection": "input ordinal"
+  },
+  "cleared-retirement-scope": {
+    "byte_offset": 142364,
+    "old_word": 2,
+    "new_word": 0,
+    "rejection": "node origin or kind"
+  }
+}

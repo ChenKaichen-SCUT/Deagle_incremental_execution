@@ -1,0 +1,57 @@
+{
+  "stage": "D4.2",
+  "status": "READY_FOR_REVIEW",
+  "implementation_sha": "dae97a351932918b7f172e23e0d93d6e8688e552",
+  "baseline_review": "7f26925c54192980e541ea95daf7e2565517cdda",
+  "baseline_implementation": "0da0f58cc2066f4b182d00d6d33b44ea520f053d",
+  "official_upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "historical_source": "06510d4999c4b1030945e83a50c9ef73e3db690b",
+  "stock_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "native_sha256": "3e2622fc86dfe08e632a1f3d54fe337bff8fe589b4985e188b5e7a14a3315bc6",
+  "production_tools": {
+    "boolean-diff": "5a7bb5f4f9fb71866654c48ac88bb8249871047c17512eea10485c57c2023912",
+    "select42": "3fcdc78ed1388f3b8c3fd6773084e0c5c7ea2081cada4df0a86af4afb45b53e1",
+    "d4_prepare.py": "8b8a5702890178f64851dde05281b799f5565963e6e4b847fcd8154c644cfc89",
+    "d42_prepare.py": "29b28eddacc749c36a36c34e7d885d4b85bbdd3850e1e04fca3809d23020ad48",
+    "d42_events.py": "181f8e6c7867caaacf8e9e630104cf3230d7ac4d67a7b01b6138716e2c74e08a",
+    "d1_identity.py": "895bcd680fcb8c548b85fc6536d7ddc3d91b703f2172e11b34bab3a774766eac",
+    "d1_theory.py": "90e00cec40d661665af7459d26c62082d811e4565d4e9885695e7f622f25514a",
+    "d41_identity.py": "d9fef56de77946812439bfec1878ba85945da8cdebee1be5089bef574e1c0616",
+    "diff_d1.py": "df310cb403cf1f4cd3814fb9ffa6bf7f19aff1dff5207f844b2d00500ffe2585",
+    "prepare_d3.py": "494cdc512a654d3640e205dbdc6be8cc808056c9a936e1e9aeaf75115aeabad2"
+  },
+  "cases": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6",
+    "fib-snapshot-11"
+  ],
+  "rounds": 3,
+  "preregistration_sha256": "0d0e4453524cd1ba15ae9b87bd4a2a191d9ac9b6106e7e714be9e833879e1045",
+  "acceptance": {
+    "L1": "PASS",
+    "L2-A": "NOT_ACHIEVED",
+    "L2-B": "PASS",
+    "L2-C": "PASS",
+    "L3.1": "NOT_ACHIEVED",
+    "L3.2": "NOT_ACHIEVED"
+  },
+  "raw_indices": {
+    "development": "0f8d4d09fa3e7e322b937ba666895bef094337a745a633c958a101df6f01e8e7",
+    "release": "45e21554e55b97dcb64aa68095c19acf7221656c7a18388f261aff78a82a96c2"
+  },
+  "lossless_archives": {
+    "development": {
+      "files": 1288,
+      "original_bytes": 6206973580,
+      "objects": 1393,
+      "gzip_bytes": 699191234
+    },
+    "release": {
+      "files": 5524,
+      "original_bytes": 9429382244,
+      "objects": 2788,
+      "gzip_bytes": 687572651
+    }
+  }
+}

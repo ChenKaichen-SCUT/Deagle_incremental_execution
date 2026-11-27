@@ -23,10 +23,12 @@ def grouped(v):return dict(median=median(v),min=min(v),max=max(v),rounds=v)
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     for n in ("functional","performance","audit","clocks","d4","out"):p.add_argument(n,type=Path)
+    p.add_argument("--stock-clocks",nargs=2,metavar=("ROUND_2","ROUND_3"),type=Path,
+                   help="independent stock search-only observations; stock walls always use the original ELF")
     a=p.parse_args();out=a.out.resolve();out.mkdir(parents=True)
     stage=read(BASE/"configs/d42-plan.json");gate=read(a.audit/"gate.json");assert gate["L1"]=="PASS"
     results=read(a.performance/"results.json");func=read(a.functional/"results.json");aud=read(a.audit/"dependency-equivalence.json")
-    timers=read(a.clocks/"timers.json")
+    timers=[read(folder/"timers.json") for folder in (a.clocks,*(a.stock_clocks or []))]
     rawperf=[];pol=[];mapping=[];recording=[];deltas=[];classes=[]
     stats={};stats_search={};l2a={};l2b={};net1={};net2={};plans=stage["thresholds"]
     for case in stage["cases"]:
@@ -48,7 +50,10 @@ def main():
                         native_process_ns=r["process_ns"],seal_ns=r["seal_ns"],search_ns=r["search_ns"],restarts=r["restarts"],
                         solver_s=r["solver_s"],rss_kib=r["rss_kib"],**r["counts"],**r["root"])
                     if mode=="stock":
-                        q=timers[case+"/"+version];x.update(separate_stock_search_ns=q["search_ns"],separate_stock_restarts=q["restarts"])
+                        obs=max(0,round_-1) if len(timers)==3 else 0
+                        q=timers[obs][case+"/"+version]
+                        x.update(separate_stock_search_ns=q["search_ns"],separate_stock_restarts=q["restarts"],
+                                 stock_observer_round=obs+1)
                     rawperf.append(x)
                     if version=="P0" and mode in ("record","reference"):
                         recording.append(dict(phase=phase,round=round_,case=case,mode=mode,wall_ns=r["wall_ns"],search_ns=r["search_ns"],

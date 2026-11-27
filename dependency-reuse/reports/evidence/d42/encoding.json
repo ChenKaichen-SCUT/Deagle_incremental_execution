@@ -1,0 +1,155 @@
+{
+  "P0": {
+    "source_sha256": "deae7fd0ef95d67bb618281e50bfba6f50a83de212ef14f46660866b256c6152",
+    "observer": "b1ddae473db18bb2025f386fbbe7be0e760382e08f4839907c36b450101db071",
+    "stock": [
+      {
+        "sat_conflicts": 108789,
+        "decisions": 341809,
+        "sat_propagations": 131660246,
+        "theory_propagations": 285458,
+        "theory_cycle_conflicts": 116,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      }
+    ],
+    "manifest": [
+      {
+        "sat_conflicts": 108789,
+        "decisions": 341809,
+        "sat_propagations": 131660190,
+        "theory_propagations": 285457,
+        "theory_cycle_conflicts": 116,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      }
+    ],
+    "alpha": {
+      "phase": "offline encoding control",
+      "clauses": {
+        "B": 1001471,
+        "Q": 722
+      },
+      "identical_ordered_rows": 1002021,
+      "unaltered_interface_rows": 6918,
+      "refinement_rounds": 4,
+      "symmetric_q_atoms": 204,
+      "permutation": {
+        "200239": 200246,
+        "200240": 200247,
+        "200241": 200248,
+        "200242": 200249,
+        "200243": 200250,
+        "200244": 200251,
+        "200245": 200252,
+        "200246": 200253,
+        "200271": 200278,
+        "200272": 200279,
+        "200273": 200280,
+        "200274": 200281,
+        "200275": 200282,
+        "200263": 200270,
+        "200264": 200271,
+        "200265": 200272,
+        "200266": 200273,
+        "200276": 200283,
+        "200277": 200284,
+        "200278": 200285,
+        "200279": 200286,
+        "200280": 200287,
+        "200267": 200274,
+        "200268": 200275,
+        "200269": 200276,
+        "200270": 200277,
+        "200281": 200288,
+        "200282": 200289,
+        "200283": 200290,
+        "200284": 200291,
+        "200285": 200292,
+        "200247": 200254,
+        "200248": 200255,
+        "200249": 200256,
+        "200250": 200257,
+        "200251": 200258,
+        "200252": 200259,
+        "200253": 200260,
+        "200254": 200261,
+        "200286": 200293,
+        "200287": 200294,
+        "200288": 200295,
+        "200289": 200296,
+        "200290": 200297,
+        "200291": 200298,
+        "200292": 200299,
+        "200293": 200300,
+        "200294": 200301,
+        "200295": 200302,
+        "200255": 200262,
+        "200256": 200263,
+        "200257": 200264,
+        "200258": 200265,
+        "200259": 200266,
+        "200260": 200267,
+        "200261": 200268,
+        "200262": 200269,
+        "200296": 200303,
+        "200297": 200304,
+        "200298": 200305,
+        "200299": 200306,
+        "200300": 200307,
+        "200301": 200308,
+        "200302": 200309,
+        "200303": 200310,
+        "200304": 200311,
+        "200305": 200312,
+        "200306": 200239,
+        "200307": 200240,
+        "200308": 200241,
+        "200309": 200242,
+        "200310": 200243,
+        "200311": 200244,
+        "200312": 200245
+      },
+      "exact_all_scopes": true
+    }
+  },
+  "P1": {
+    "source_sha256": "c0e681ed69012b0e000ff579cf0a3e27385ce7ab4c28525dd10d6a37e7685181",
+    "observer": "b1ddae473db18bb2025f386fbbe7be0e760382e08f4839907c36b450101db071",
+    "stock": [
+      {
+        "sat_conflicts": 130707,
+        "decisions": 388360,
+        "sat_propagations": 158011347,
+        "theory_propagations": 445118,
+        "theory_cycle_conflicts": 34,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      }
+    ],
+    "manifest": [
+      {
+        "sat_conflicts": 130707,
+        "decisions": 388360,
+        "sat_propagations": 158011347,
+        "theory_propagations": 445118,
+        "theory_cycle_conflicts": 34,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      }
+    ],
+    "alpha": {
+      "phase": "offline encoding control",
+      "clauses": {
+        "B": 1001473,
+        "Q": 722
+      },
+      "identical_ordered_rows": 1002195,
+      "unaltered_interface_rows": 6918,
+      "refinement_rounds": 4,
+      "symmetric_q_atoms": 204,
+      "permutation": {},
+      "exact_all_scopes": true
+    }
+  }
+}

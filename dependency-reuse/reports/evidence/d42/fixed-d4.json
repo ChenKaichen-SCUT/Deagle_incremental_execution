@@ -1,0 +1,7 @@
+{
+  "source": "D4 release-runs/fib_updates_8/reuse/P1/native",
+  "sha256": "28f127c81109ff041bc4dc7a5bb7f0cf1b21ba64487593df0076e1df0c096d95",
+  "eligible": 121,
+  "hits_sha256": "06d8ee2a95b97f6bb9284b7744925ff476fce4a958a384ba0ddb455b4df11d64",
+  "imports_sha256": "f54018b3467ceac065bc55626fb81d3566da1766001d02f196e76e2a912d0d39"
+}

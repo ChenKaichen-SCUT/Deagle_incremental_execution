@@ -1,0 +1,195 @@
+{
+  "fib_updates_8": {
+    "raw_inputs": 50065,
+    "distinct_used_inputs": 11943,
+    "permanent_birth_inputs": 7341,
+    "durable_records": 14135,
+    "decoded_virtual_inputs": 13058,
+    "edges": 200721,
+    "transient_created": 14914,
+    "transient_peak": 14914,
+    "reclaimed": 0,
+    "cache_hits": 9461,
+    "discharges": 3733,
+    "events": {
+      "unsupported_object_or_type": 12,
+      "matched": 71
+    },
+    "old_and_new_atoms": [
+      12553,
+      12057
+    ],
+    "semantic_variables_by_role": {
+      "Value": {
+        "matched": 2563,
+        "unknown": 832
+      },
+      "Aux": {
+        "matched": 7253,
+        "unknown": 586
+      },
+      "Opaque": {
+        "unknown": 1063
+      },
+      "RF": {
+        "unknown": 10,
+        "matched": 246
+      }
+    },
+    "structural_variables_by_role": {}
+  },
+  "circular-buffer": {
+    "raw_inputs": 1161979,
+    "distinct_used_inputs": 26487,
+    "permanent_birth_inputs": 7818,
+    "durable_records": 47839,
+    "decoded_virtual_inputs": 28563,
+    "edges": 167131,
+    "transient_created": 1047915,
+    "transient_peak": 149778,
+    "reclaimed": 902820,
+    "cache_hits": 41206,
+    "discharges": 11475,
+    "events": {
+      "matched": 471,
+      "unsupported_object_or_type": 12,
+      "ambiguous_dynamic_definition": 28
+    },
+    "old_and_new_atoms": [
+      245081,
+      245472
+    ],
+    "semantic_variables_by_role": {
+      "Value": {
+        "matched": 6868,
+        "unknown": 15498
+      },
+      "Aux": {
+        "matched": 27246,
+        "unknown": 181447
+      },
+      "Opaque": {
+        "unknown": 11669
+      },
+      "Guard": {
+        "matched": 124,
+        "unknown": 2
+      },
+      "RF": {
+        "unknown": 108,
+        "matched": 2119
+      }
+    },
+    "structural_variables_by_role": {
+      "Value": 1,
+      "Aux": 137
+    }
+  },
+  "airline_reservations_6": {
+    "raw_inputs": 910797,
+    "distinct_used_inputs": 22393,
+    "permanent_birth_inputs": 17411,
+    "durable_records": 758302,
+    "decoded_virtual_inputs": 35425,
+    "edges": 5933180,
+    "transient_created": 3043085,
+    "transient_peak": 23315,
+    "reclaimed": 3029104,
+    "cache_hits": 2119073,
+    "discharges": 309974,
+    "events": {
+      "missing_dynamic_context": 5,
+      "unsupported_object_or_type": 25,
+      "matched": 96,
+      "no_peer_with_certified_context": 36
+    },
+    "old_and_new_atoms": [
+      199090,
+      69634
+    ],
+    "semantic_variables_by_role": {
+      "Value": {
+        "matched": 3815,
+        "unknown": 16512
+      },
+      "Aux": {
+        "matched": 9907,
+        "unknown": 166911
+      },
+      "Opaque": {
+        "unknown": 1193
+      },
+      "Guard": {
+        "unknown": 12,
+        "matched": 6
+      },
+      "RF": {
+        "unknown": 485,
+        "matched": 249
+      }
+    },
+    "structural_variables_by_role": {
+      "Aux": 177
+    },
+    "rf_and_guard_bindings": {
+      "RF": {
+        "endpoint_unmatched": 485,
+        "binding_certified": 249
+      },
+      "Guard": {
+        "event_unmatched": 30,
+        "certified_same_literal": 18,
+        "guard_definition_unresolved": 18
+      }
+    }
+  },
+  "fib-snapshot-11": {
+    "raw_inputs": 1002193,
+    "distinct_used_inputs": 69151,
+    "permanent_birth_inputs": 63990,
+    "durable_records": 700733,
+    "decoded_virtual_inputs": 137287,
+    "edges": 45115775,
+    "transient_created": 17236633,
+    "transient_peak": 194500,
+    "reclaimed": 17127322,
+    "cache_hits": 8786781,
+    "discharges": 285573,
+    "events": {
+      "unsupported_object_or_type": 11,
+      "matched": 579,
+      "no_peer_with_certified_context": 2
+    },
+    "old_and_new_atoms": [
+      200360,
+      200369
+    ],
+    "semantic_variables_by_role": {
+      "Guard+Value": {
+        "matched": 3
+      },
+      "Value": {
+        "matched": 16317,
+        "unknown": 448
+      },
+      "Guard": {
+        "matched": 72,
+        "unknown": 2
+      },
+      "Aux": {
+        "matched": 169494,
+        "unknown": 3377
+      },
+      "Opaque": {
+        "unknown": 5086
+      },
+      "RF": {
+        "unknown": 58,
+        "matched": 5503
+      }
+    },
+    "structural_variables_by_role": {
+      "Aux": 21
+    }
+  }
+}

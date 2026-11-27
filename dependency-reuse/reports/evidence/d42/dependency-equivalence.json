@@ -1,0 +1,2992 @@
+{
+  "fib_updates_8": {
+    "equivalence": {
+      "births": 1442,
+      "permanent": 1307,
+      "query": 135,
+      "unknown": 0,
+      "canonical_expressions": 21200,
+      "input_occurrences": 50065,
+      "used_inputs": 11943,
+      "permanent_inputs": 7341,
+      "decoded_nodes": 27194,
+      "durable_edges": 200721,
+      "transient_created": 14914,
+      "peak_live_transient": 14914,
+      "online_reclaimed": 0,
+      "sweeps": 0,
+      "written_edges": 200721,
+      "adopted": 9167,
+      "cache_hits": 9461,
+      "boundary_missing": 0,
+      "boundary_mismatch": 0,
+      "boundary_exact": 3733
+    },
+    "native_reason_checks": {
+      "C": 25,
+      "A": 3708
+    },
+    "independent": {
+      "active_learned_units": 5,
+      "all_mappable": 1003,
+      "assigned_by_clause": 1173791,
+      "assigned_explicit_unit": 406,
+      "assumptions": 0,
+      "births": 1442,
+      "boolean_including_query": 141,
+      "born_after_ancestor_eviction": 0,
+      "cause_0": 313,
+      "cause_1": 994,
+      "cause_521": 116,
+      "cause_9": 19,
+      "checked_derivations": 4137,
+      "checked_resolutions": 166113,
+      "complete_mixed_mappable": 876,
+      "complete_mixed_old_proof_survives": 282,
+      "complete_mixed_survives_mappable": 282,
+      "complete_permanent_boolean": 126,
+      "complete_permanent_mixed": 1181,
+      "complete_permanent_theory_only": 0,
+      "complete_theory_reasons": 3733,
+      "contains_certified_theory": 1301,
+      "decisions": 7651,
+      "discharge_matched": 3733,
+      "discharge_mismatch": 0,
+      "discharge_missing": 0,
+      "edges": 217060,
+      "evicted_cdcl": 0,
+      "flags_0": 126,
+      "flags_10": 120,
+      "flags_2": 15,
+      "flags_8": 1181,
+      "gc": 0,
+      "incomplete_any": 0,
+      "input_action_0": 48701,
+      "input_action_1": 1364,
+      "invalidated_nodes": 18712,
+      "kind_1": 47493,
+      "kind_12": 851,
+      "kind_13": 13728,
+      "kind_14": 3733,
+      "kind_2": 2572,
+      "kind_4": 426,
+      "kind_5": 2269,
+      "kind_6": 1442,
+      "lemma_op_16": 25,
+      "lemma_op_17": 1942,
+      "lemma_op_18": 1766,
+      "literal_entries": 210882,
+      "loss_through_prior_learned": 780,
+      "min_failure": 39514,
+      "min_success": 13557,
+      "minimized_births": 809,
+      "native_learnts_vector": 5072,
+      "nodes": 72514,
+      "old_proof_survives": 313,
+      "op_0": 1,
+      "op_1": 95,
+      "op_10": 256,
+      "op_11": 36,
+      "op_12": 3158,
+      "op_13": 6186,
+      "op_14": 33,
+      "op_15": 132,
+      "op_16": 20,
+      "op_17": 1984,
+      "op_18": 1793,
+      "op_2": 35,
+      "op_3": 256,
+      "op_4": 36,
+      "op_5": 71,
+      "op_6": 335,
+      "op_7": 22,
+      "op_8": 95,
+      "op_9": 35,
+      "opaque_theory_reasons": 0,
+      "persistent_arena_capacity_bytes": 7827906,
+      "query_any": 135,
+      "recorder_capacity_bytes": 10316954,
+      "reduce_db": 0,
+      "relocated_cdcl_to_new_cref": 0,
+      "relocated_to_new_cref": 0,
+      "removed_clauses": 6683,
+      "resident_cdcl": 1437,
+      "reverse_ns": 1038048,
+      "satisfied_database_deletions": 6683,
+      "search_calls": 1,
+      "search_ns": 134489162,
+      "seed_count": 13529,
+      "survives_and_translates": 313,
+      "theory_any": 0,
+      "theory_direct": 0,
+      "theory_indirect_only": 0,
+      "theory_reasons_survive": 3692,
+      "uncheckable_local_steps": 0,
+      "unexplained_assignments": 0,
+      "unit_births": 5,
+      "used_parent_edges_to_evicted_learned": 0,
+      "uses_prior_learned_directly": 1002,
+      "write_sections_ns": 2558644
+    },
+    "premises": {
+      "injective_pairs": 10062,
+      "premises": {
+        "unmapped": 3958,
+        "matched": 7757,
+        "mapped_absent": 30,
+        "scope": 198
+      },
+      "structural_signed_occurrences": 0
+    },
+    "births": 1442,
+    "resident": 1442,
+    "baseline": 313,
+    "combined": 313,
+    "added": [],
+    "added_hits": [],
+    "all_import_hits": 260,
+    "main_hits": 260,
+    "A3": {
+      "transport": {
+        "added": 32,
+        "alive": 505,
+        "ambiguous_signatures": 0,
+        "births": 1442,
+        "checks": 3484,
+        "collisions": 0,
+        "edges": 200721,
+        "eligible": 505,
+        "eligible_B": 33,
+        "eligible_M": 472,
+        "invalidated": 7427,
+        "mapped": 1006,
+        "mapped_interface_or_other": 246,
+        "mapped_ordinary": 9848,
+        "membership_ns": 3911212,
+        "nodes": 27194,
+        "p0_inputs": 50065,
+        "p1_inputs": 50065,
+        "permanent": 1307,
+        "permanent_B": 126,
+        "permanent_M": 1181,
+        "permanent_input_matched": 4465,
+        "permanent_input_unmapped": 2876,
+        "query": 135,
+        "read_ns": 13744943,
+        "reverse_ns": 756723,
+        "rounds": 4,
+        "seeds": 4570,
+        "structural_ns": 1940951,
+        "total_ns": 24150934,
+        "unknown": 0,
+        "used_input_matched": 7819,
+        "used_input_scope": 198,
+        "used_input_unmapped": 3926,
+        "used_theory_M": 674,
+        "used_theory_U": 41,
+        "stop": "round-limit"
+      },
+      "verified": {
+        "injective_pairs": 10094,
+        "premises": {
+          "unmapped": 3926,
+          "matched": 7819,
+          "scope": 198
+        },
+        "structural_signed_occurrences": 32
+      },
+      "remaining_seed_reasons": {
+        "no_semantic_definition": 1063,
+        "unmapped_gate_input": 584,
+        "ambiguous_dynamic_definition": 256,
+        "unregistered_symbol_or_type": 576,
+        "unresolved_rf_endpoint": 10,
+        "ambiguous_gate_definition": 2
+      },
+      "unresolved_after_structure": {
+        "no_semantic_definition": 1063,
+        "unmapped_gate_input": 552,
+        "ambiguous_dynamic_definition": 256,
+        "unregistered_symbol_or_type": 576,
+        "unresolved_rf_endpoint": 10,
+        "ambiguous_gate_definition": 2
+      },
+      "variables": 12553,
+      "oracle_table_supplied": false
+    },
+    "A1_A2": {
+      "fixture": {
+        "identity": {
+          "proof_sha256": "f82e8acf8ab03dac2f624c613c5d4d843cfba842f94f55ab928e4b86cf3cd1ae",
+          "original": "deff8ebc297c70b9b98b65c8b16701399c0fef2bd5128d084c1a72bf2f1e2537",
+          "fixture": "deff8ebc297c70b9b98b65c8b16701399c0fef2bd5128d084c1a72bf2f1e2537",
+          "births": 1442,
+          "eligible": 1307,
+          "rejected": 135,
+          "atoms": 12553,
+          "events": 81,
+          "negative": 0,
+          "signed_map_sha256": "429ff94a975fe61d8edb22e52a31da53674cf30c467d6544b05a627418e1afca",
+          "checked_inverse": true
+        },
+        "unsigned": {
+          "proof_sha256": "f82e8acf8ab03dac2f624c613c5d4d843cfba842f94f55ab928e4b86cf3cd1ae",
+          "original": "deff8ebc297c70b9b98b65c8b16701399c0fef2bd5128d084c1a72bf2f1e2537",
+          "fixture": "c14139d172ce973e9f34258626a6e1eed6734896b53fb2f24ee2e2f16cd52ae9",
+          "births": 1442,
+          "eligible": 1307,
+          "rejected": 135,
+          "atoms": 12553,
+          "events": 81,
+          "negative": 0,
+          "signed_map_sha256": "358574b877f53b0fba43512be9c711633075dcd3bb2ad0c31c2ca961a6fe9984",
+          "checked_inverse": true
+        },
+        "signed": {
+          "proof_sha256": "f82e8acf8ab03dac2f624c613c5d4d843cfba842f94f55ab928e4b86cf3cd1ae",
+          "original": "deff8ebc297c70b9b98b65c8b16701399c0fef2bd5128d084c1a72bf2f1e2537",
+          "fixture": "3fe6a0ab46ed9a78b76ce21f0af4fdeacaeb719c673b0db91064acb641498e6c",
+          "births": 1442,
+          "eligible": 1307,
+          "rejected": 135,
+          "atoms": 12553,
+          "events": 81,
+          "negative": 6249,
+          "signed_map_sha256": "c4d03333b3665376f93de3e53fe816152437c67812342b30098ff64f958ed9dc",
+          "checked_inverse": true
+        },
+        "hidden_d41": {
+          "vars": {
+            "exclusive_roles": [
+              {
+                "Value": {
+                  "matched": 2563,
+                  "unknown": 832
+                },
+                "Aux": {
+                  "matched": 7253,
+                  "unknown": 586
+                },
+                "Opaque": {
+                  "unknown": 1063
+                },
+                "RF": {
+                  "unknown": 10,
+                  "matched": 246
+                }
+              },
+              {
+                "Aux": {
+                  "matched": 7253,
+                  "unknown": 586
+                },
+                "Value": {
+                  "matched": 2563,
+                  "unknown": 832
+                },
+                "RF": {
+                  "matched": 246,
+                  "unknown": 10
+                },
+                "Opaque": {
+                  "unknown": 1063
+                }
+              }
+            ],
+            "reasons": [
+              {
+                "matched": 10062,
+                "no_semantic_definition": 1063,
+                "unmapped_gate_input": 584,
+                "ambiguous_dynamic_definition": 256,
+                "unregistered_symbol_or_type": 576,
+                "unresolved_rf_endpoint": 10,
+                "ambiguous_gate_definition": 2
+              },
+              {
+                "matched": 10062,
+                "unregistered_symbol_or_type": 576,
+                "unmapped_gate_input": 584,
+                "ambiguous_dynamic_definition": 256,
+                "no_semantic_definition": 1063,
+                "unresolved_rf_endpoint": 10,
+                "ambiguous_gate_definition": 2
+              }
+            ],
+            "reasons_by_role": [
+              {
+                "Value": {
+                  "matched": 2563,
+                  "ambiguous_dynamic_definition": 256,
+                  "unregistered_symbol_or_type": 576
+                },
+                "Aux": {
+                  "matched": 7253,
+                  "unmapped_gate_input": 584,
+                  "ambiguous_gate_definition": 2
+                },
+                "Opaque": {
+                  "no_semantic_definition": 1063
+                },
+                "RF": {
+                  "unresolved_rf_endpoint": 10,
+                  "matched": 246
+                }
+              },
+              {
+                "Aux": {
+                  "matched": 7253,
+                  "unmapped_gate_input": 584,
+                  "ambiguous_gate_definition": 2
+                },
+                "Value": {
+                  "matched": 2563,
+                  "unregistered_symbol_or_type": 576,
+                  "ambiguous_dynamic_definition": 256
+                },
+                "RF": {
+                  "matched": 246,
+                  "unresolved_rf_endpoint": 10
+                },
+                "Opaque": {
+                  "no_semantic_definition": 1063
+                }
+              }
+            ],
+            "examples": [
+              {
+                "matched": [
+                  [
+                    1,
+                    11199,
+                    "matched",
+                    "Value",
+                    10978
+                  ],
+                  [
+                    2,
+                    16712,
+                    "matched",
+                    "Value",
+                    10979
+                  ],
+                  [
+                    3,
+                    2607,
+                    "matched",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "no_semantic_definition": [
+                  [
+                    5,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    80,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    150,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ]
+                ],
+                "unmapped_gate_input": [
+                  [
+                    70,
+                    -1,
+                    "unmapped_gate_input:10",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    71,
+                    -1,
+                    "unmapped_gate_input:140",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    72,
+                    -1,
+                    "unmapped_gate_input:142",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "ambiguous_dynamic_definition": [
+                  [
+                    543,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    544,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    545,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unregistered_symbol_or_type": [
+                  [
+                    3989,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    3990,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    3991,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unresolved_rf_endpoint": [
+                  [
+                    4571,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    4574,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    4577,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ]
+                ],
+                "ambiguous_gate_definition": [
+                  [
+                    11985,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    12001,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ]
+                ]
+              },
+              {
+                "matched": [
+                  [
+                    1,
+                    23584,
+                    "matched",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    2,
+                    9324,
+                    "matched",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    3,
+                    13244,
+                    "matched",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "unregistered_symbol_or_type": [
+                  [
+                    7,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    52,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    67,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unmapped_gate_input": [
+                  [
+                    12,
+                    -1,
+                    "unmapped_gate_input:8909",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    38,
+                    -1,
+                    "unmapped_gate_input:23202",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    72,
+                    -1,
+                    "unmapped_gate_input:8674",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "ambiguous_dynamic_definition": [
+                  [
+                    14,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    18,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    107,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ]
+                ],
+                "no_semantic_definition": [
+                  [
+                    31,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    44,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    53,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ]
+                ],
+                "unresolved_rf_endpoint": [
+                  [
+                    224,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    1439,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    2154,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ]
+                ],
+                "ambiguous_gate_definition": [
+                  [
+                    5245,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    10739,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ]
+                ]
+              }
+            ],
+            "matched": 10062,
+            "totals": [
+              12553,
+              12553
+            ],
+            "constant_aliases": [
+              {
+                "Guard": 29,
+                "Value": 2564
+              },
+              {
+                "Guard": 29,
+                "Value": 2564
+              }
+            ]
+          },
+          "final_mappable": 1003,
+          "eligible": 505,
+          "permanent": 1307
+        }
+      },
+      "light": {
+        "identity": {
+          "added": 0,
+          "alive": 1307,
+          "ambiguous_signatures": 0,
+          "births": 1442,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 200721,
+          "eligible": 1307,
+          "eligible_B": 126,
+          "eligible_M": 1181,
+          "invalidated": 1750,
+          "mapped": 1442,
+          "mapped_interface_or_other": 12553,
+          "membership_ns": 4343343,
+          "nodes": 27194,
+          "p0_inputs": 50065,
+          "p1_inputs": 50065,
+          "permanent": 1307,
+          "permanent_B": 126,
+          "permanent_M": 1181,
+          "permanent_input_matched": 7341,
+          "query": 135,
+          "read_ns": 13152646,
+          "reverse_ns": 1005241,
+          "rounds": 0,
+          "seeds": 572,
+          "structural_ns": 17833,
+          "total_ns": 22958457,
+          "unknown": 0,
+          "used_input_matched": 11745,
+          "used_input_scope": 198,
+          "used_theory_M": 715,
+          "stop": "fixed-point"
+        },
+        "unsigned": {
+          "added": 0,
+          "alive": 1307,
+          "ambiguous_signatures": 0,
+          "births": 1442,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 200721,
+          "eligible": 1307,
+          "eligible_B": 126,
+          "eligible_M": 1181,
+          "invalidated": 1750,
+          "mapped": 1442,
+          "mapped_interface_or_other": 12553,
+          "membership_ns": 4544099,
+          "nodes": 27194,
+          "p0_inputs": 50065,
+          "p1_inputs": 50065,
+          "permanent": 1307,
+          "permanent_B": 126,
+          "permanent_M": 1181,
+          "permanent_input_matched": 7341,
+          "query": 135,
+          "read_ns": 13924116,
+          "reverse_ns": 664226,
+          "rounds": 0,
+          "seeds": 572,
+          "structural_ns": 15674,
+          "total_ns": 23682448,
+          "unknown": 0,
+          "used_input_matched": 11745,
+          "used_input_scope": 198,
+          "used_theory_M": 715,
+          "stop": "fixed-point"
+        },
+        "signed": {
+          "added": 0,
+          "alive": 1307,
+          "ambiguous_signatures": 0,
+          "births": 1442,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 200721,
+          "eligible": 1307,
+          "eligible_B": 126,
+          "eligible_M": 1181,
+          "invalidated": 1750,
+          "mapped": 1442,
+          "mapped_interface_or_other": 12553,
+          "membership_ns": 4468319,
+          "nodes": 27194,
+          "p0_inputs": 50065,
+          "p1_inputs": 50065,
+          "permanent": 1307,
+          "permanent_B": 126,
+          "permanent_M": 1181,
+          "permanent_input_matched": 7341,
+          "query": 135,
+          "read_ns": 13948442,
+          "reverse_ns": 663258,
+          "rounds": 0,
+          "seeds": 572,
+          "structural_ns": 17914,
+          "total_ns": 23932744,
+          "unknown": 0,
+          "used_input_matched": 11745,
+          "used_input_scope": 198,
+          "used_theory_M": 715,
+          "stop": "fixed-point"
+        }
+      }
+    }
+  },
+  "circular-buffer": {
+    "equivalence": {
+      "births": 343,
+      "permanent": 188,
+      "query": 155,
+      "unknown": 0,
+      "canonical_expressions": 36257,
+      "input_occurrences": 1161979,
+      "used_inputs": 26487,
+      "permanent_inputs": 7818,
+      "decoded_nodes": 76403,
+      "durable_edges": 167131,
+      "transient_created": 1047915,
+      "peak_live_transient": 149778,
+      "online_reclaimed": 902820,
+      "sweeps": 20,
+      "written_edges": 167131,
+      "adopted": 39029,
+      "cache_hits": 41206,
+      "boundary_missing": 0,
+      "boundary_mismatch": 0,
+      "boundary_exact": 11475
+    },
+    "native_reason_checks": {
+      "C": 18,
+      "A": 11457
+    },
+    "independent": {
+      "active_learned_units": 2,
+      "all_mappable": 216,
+      "assigned_by_clause": 1372778,
+      "assigned_explicit_unit": 4353,
+      "assumptions": 0,
+      "births": 343,
+      "boolean_including_query": 139,
+      "born_after_ancestor_eviction": 0,
+      "cause_0": 35,
+      "cause_1": 123,
+      "cause_512": 22,
+      "cause_513": 8,
+      "cause_521": 147,
+      "cause_9": 8,
+      "checked_derivations": 2414,
+      "checked_resolutions": 54986,
+      "complete_mixed_mappable": 43,
+      "complete_mixed_old_proof_survives": 18,
+      "complete_mixed_survives_mappable": 18,
+      "complete_permanent_boolean": 131,
+      "complete_permanent_mixed": 52,
+      "complete_permanent_theory_only": 5,
+      "complete_theory_reasons": 11475,
+      "contains_certified_theory": 204,
+      "decisions": 115442,
+      "discharge_matched": 11475,
+      "discharge_mismatch": 0,
+      "discharge_missing": 0,
+      "edges": 2063160,
+      "evicted_cdcl": 0,
+      "flags_0": 131,
+      "flags_10": 147,
+      "flags_2": 8,
+      "flags_8": 57,
+      "gc": 0,
+      "incomplete_any": 0,
+      "input_action_0": 1161388,
+      "input_action_1": 591,
+      "invalidated_nodes": 1638316,
+      "kind_1": 1160134,
+      "kind_12": 6414,
+      "kind_13": 683061,
+      "kind_14": 11475,
+      "kind_2": 1845,
+      "kind_4": 486,
+      "kind_5": 1585,
+      "kind_6": 343,
+      "lemma_op_16": 18,
+      "lemma_op_17": 7595,
+      "lemma_op_18": 3862,
+      "literal_entries": 3500279,
+      "loss_through_prior_learned": 187,
+      "min_failure": 13462,
+      "min_success": 2503,
+      "minimized_births": 118,
+      "native_learnts_vector": 11511,
+      "nodes": 1865343,
+      "old_proof_survives": 35,
+      "op_0": 1,
+      "op_1": 871,
+      "op_10": 2227,
+      "op_11": 190,
+      "op_12": 3196,
+      "op_13": 664677,
+      "op_14": 72,
+      "op_15": 130,
+      "op_16": 17,
+      "op_17": 7830,
+      "op_18": 3820,
+      "op_2": 31,
+      "op_3": 2227,
+      "op_4": 190,
+      "op_5": 469,
+      "op_6": 2576,
+      "op_7": 49,
+      "op_8": 871,
+      "op_9": 31,
+      "opaque_theory_reasons": 0,
+      "persistent_arena_capacity_bytes": 135418154,
+      "query_any": 155,
+      "recorder_capacity_bytes": 178350234,
+      "reduce_db": 0,
+      "relocated_cdcl_to_new_cref": 0,
+      "relocated_to_new_cref": 0,
+      "removed_clauses": 11788,
+      "resident_cdcl": 341,
+      "reverse_ns": 21498069,
+      "satisfied_database_deletions": 11788,
+      "search_calls": 1,
+      "search_ns": 1059079974,
+      "seed_count": 1034495,
+      "survives_and_translates": 35,
+      "theory_any": 0,
+      "theory_direct": 0,
+      "theory_indirect_only": 0,
+      "theory_reasons_survive": 409,
+      "uncheckable_local_steps": 0,
+      "unexplained_assignments": 0,
+      "unit_births": 2,
+      "used_parent_edges_to_evicted_learned": 0,
+      "uses_prior_learned_directly": 182,
+      "write_sections_ns": 81871271
+    },
+    "premises": {
+      "injective_pairs": 36495,
+      "premises": {
+        "matched": 3845,
+        "unmapped": 22556,
+        "mapped_absent": 53,
+        "scope": 33
+      },
+      "structural_signed_occurrences": 138
+    },
+    "births": 343,
+    "resident": 343,
+    "baseline": 15,
+    "combined": 35,
+    "added": [
+      73,
+      89,
+      94,
+      95,
+      144,
+      148,
+      149,
+      162,
+      164,
+      169,
+      181,
+      251,
+      252,
+      256,
+      257,
+      262,
+      269,
+      270,
+      289,
+      315
+    ],
+    "added_hits": [
+      89,
+      94,
+      148,
+      149,
+      162,
+      181,
+      251,
+      252,
+      256,
+      257,
+      270,
+      289,
+      315
+    ],
+    "all_import_hits": 27,
+    "main_hits": 27,
+    "new_used_witness": 89,
+    "A3": {
+      "transport": {
+        "added": 101,
+        "alive": 118,
+        "ambiguous_signatures": 230,
+        "births": 343,
+        "checks": 206777,
+        "collisions": 0,
+        "edges": 167131,
+        "eligible": 118,
+        "eligible_B": 96,
+        "eligible_M": 22,
+        "invalidated": 51915,
+        "mapped": 274,
+        "mapped_interface_or_other": 2243,
+        "mapped_ordinary": 35146,
+        "membership_ns": 17511131,
+        "nodes": 76403,
+        "p0_inputs": 1161979,
+        "p1_inputs": 1161979,
+        "permanent": 188,
+        "permanent_B": 131,
+        "permanent_M": 52,
+        "permanent_T": 5,
+        "permanent_input_matched": 1819,
+        "permanent_input_unmapped": 5999,
+        "query": 155,
+        "read_ns": 199408556,
+        "reverse_ns": 615738,
+        "rounds": 3,
+        "seeds": 24186,
+        "structural_ns": 27205366,
+        "total_ns": 296759573,
+        "unknown": 0,
+        "used_input_matched": 4395,
+        "used_input_scope": 33,
+        "used_input_unmapped": 22059,
+        "used_theory_M": 1771,
+        "used_theory_U": 137,
+        "stop": "fixed-point"
+      },
+      "verified": {
+        "injective_pairs": 37389,
+        "premises": {
+          "matched": 4395,
+          "unmapped": 22059,
+          "scope": 33
+        },
+        "structural_signed_occurrences": 101
+      },
+      "remaining_seed_reasons": {
+        "no_semantic_definition": 11669,
+        "unmapped_gate_input": 178052,
+        "aggregate_bit_outside_certified_integer_prefix": 12096,
+        "ambiguous_dynamic_definition": 1024,
+        "unsupported_object_or_type": 562,
+        "unregistered_symbol_or_type": 1592,
+        "missing_dynamic_context": 224,
+        "unresolved_rf_endpoint": 108,
+        "ambiguous_gate_definition": 2466
+      },
+      "unresolved_after_structure": {
+        "no_semantic_definition": 11669,
+        "unmapped_gate_input": 177955,
+        "aggregate_bit_outside_certified_integer_prefix": 12096,
+        "ambiguous_dynamic_definition": 1024,
+        "unsupported_object_or_type": 562,
+        "unregistered_symbol_or_type": 1592,
+        "missing_dynamic_context": 224,
+        "unresolved_rf_endpoint": 108,
+        "ambiguous_gate_definition": 2462
+      },
+      "variables": 245081,
+      "oracle_table_supplied": false
+    },
+    "A1_A2": {
+      "fixture": {
+        "identity": {
+          "proof_sha256": "eca54d76ff517bb9e1ea3882b2d37167d59c03272975c36f4f4c8d527fe5c652",
+          "original": "68f77f081d2d2b8ca04f7eaf2856cfda44517da08ab1f6e3c20f0fe945c28d9d",
+          "fixture": "68f77f081d2d2b8ca04f7eaf2856cfda44517da08ab1f6e3c20f0fe945c28d9d",
+          "births": 343,
+          "eligible": 188,
+          "rejected": 155,
+          "atoms": 245081,
+          "events": 481,
+          "negative": 0,
+          "signed_map_sha256": "5cb313e67a8bb074748612acc4579f3f8fca8284f00cec79b496c9c2fd9c4aea",
+          "checked_inverse": true
+        },
+        "unsigned": {
+          "proof_sha256": "eca54d76ff517bb9e1ea3882b2d37167d59c03272975c36f4f4c8d527fe5c652",
+          "original": "68f77f081d2d2b8ca04f7eaf2856cfda44517da08ab1f6e3c20f0fe945c28d9d",
+          "fixture": "319399556d34d95fb96bdb640807456a8ddcfebf8cd7fa4285dd3592bde2a02c",
+          "births": 343,
+          "eligible": 188,
+          "rejected": 155,
+          "atoms": 245081,
+          "events": 481,
+          "negative": 0,
+          "signed_map_sha256": "447df824509bd853e11373e18f2b0e7840eacbfcc49eaf8316450c2de7649580",
+          "checked_inverse": true
+        },
+        "signed": {
+          "proof_sha256": "eca54d76ff517bb9e1ea3882b2d37167d59c03272975c36f4f4c8d527fe5c652",
+          "original": "68f77f081d2d2b8ca04f7eaf2856cfda44517da08ab1f6e3c20f0fe945c28d9d",
+          "fixture": "deb9b7138f56b55c96da21d2dfac4b5c8e061b02fa9010e42415095b6aa89823",
+          "births": 343,
+          "eligible": 188,
+          "rejected": 155,
+          "atoms": 245081,
+          "events": 481,
+          "negative": 122833,
+          "signed_map_sha256": "99d0eba06c4d12522fee6c1f7808f2523a073fa708ed32e08e9f7ed523f4d718",
+          "checked_inverse": true
+        },
+        "hidden_d41": {
+          "vars": {
+            "exclusive_roles": [
+              {
+                "Value": {
+                  "matched": 6870,
+                  "unknown": 15496
+                },
+                "Aux": {
+                  "matched": 28175,
+                  "unknown": 180518
+                },
+                "Opaque": {
+                  "unknown": 11669
+                },
+                "Guard": {
+                  "matched": 124,
+                  "unknown": 2
+                },
+                "RF": {
+                  "unknown": 108,
+                  "matched": 2119
+                }
+              },
+              {
+                "Aux": {
+                  "unknown": 180518,
+                  "matched": 28175
+                },
+                "Value": {
+                  "unknown": 15496,
+                  "matched": 6870
+                },
+                "Opaque": {
+                  "unknown": 11669
+                },
+                "RF": {
+                  "matched": 2119,
+                  "unknown": 108
+                },
+                "Guard": {
+                  "matched": 124,
+                  "unknown": 2
+                }
+              }
+            ],
+            "reasons": [
+              {
+                "matched": 37288,
+                "no_semantic_definition": 11669,
+                "unmapped_gate_input": 178052,
+                "aggregate_bit_outside_certified_integer_prefix": 12096,
+                "ambiguous_dynamic_definition": 1024,
+                "unsupported_object_or_type": 562,
+                "unregistered_symbol_or_type": 1592,
+                "missing_dynamic_context": 224,
+                "unresolved_rf_endpoint": 108,
+                "ambiguous_gate_definition": 2466
+              },
+              {
+                "unmapped_gate_input": 178052,
+                "ambiguous_dynamic_definition": 1024,
+                "matched": 37288,
+                "no_semantic_definition": 11669,
+                "aggregate_bit_outside_certified_integer_prefix": 12096,
+                "ambiguous_gate_definition": 2466,
+                "unregistered_symbol_or_type": 1592,
+                "unsupported_object_or_type": 562,
+                "missing_dynamic_context": 224,
+                "unresolved_rf_endpoint": 108
+              }
+            ],
+            "reasons_by_role": [
+              {
+                "Value": {
+                  "matched": 6870,
+                  "aggregate_bit_outside_certified_integer_prefix": 12096,
+                  "ambiguous_dynamic_definition": 1024,
+                  "unregistered_symbol_or_type": 1592,
+                  "unsupported_object_or_type": 560,
+                  "missing_dynamic_context": 224
+                },
+                "Aux": {
+                  "matched": 28175,
+                  "unmapped_gate_input": 178052,
+                  "ambiguous_gate_definition": 2466
+                },
+                "Opaque": {
+                  "no_semantic_definition": 11669
+                },
+                "Guard": {
+                  "matched": 124,
+                  "unsupported_object_or_type": 2
+                },
+                "RF": {
+                  "unresolved_rf_endpoint": 108,
+                  "matched": 2119
+                }
+              },
+              {
+                "Aux": {
+                  "unmapped_gate_input": 178052,
+                  "matched": 28175,
+                  "ambiguous_gate_definition": 2466
+                },
+                "Value": {
+                  "ambiguous_dynamic_definition": 1024,
+                  "aggregate_bit_outside_certified_integer_prefix": 12096,
+                  "matched": 6870,
+                  "unregistered_symbol_or_type": 1592,
+                  "unsupported_object_or_type": 560,
+                  "missing_dynamic_context": 224
+                },
+                "Opaque": {
+                  "no_semantic_definition": 11669
+                },
+                "RF": {
+                  "matched": 2119,
+                  "unresolved_rf_endpoint": 108
+                },
+                "Guard": {
+                  "matched": 124,
+                  "unsupported_object_or_type": 2
+                }
+              }
+            ],
+            "examples": [
+              {
+                "matched": [
+                  [
+                    1,
+                    371481,
+                    "matched",
+                    "Value",
+                    27633
+                  ],
+                  [
+                    2,
+                    230644,
+                    "matched",
+                    "Value",
+                    27634
+                  ],
+                  [
+                    3,
+                    225388,
+                    "matched",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "no_semantic_definition": [
+                  [
+                    5,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    48,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    443,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ]
+                ],
+                "unmapped_gate_input": [
+                  [
+                    38,
+                    -1,
+                    "unmapped_gate_input:10",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    39,
+                    -1,
+                    "unmapped_gate_input:76",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    40,
+                    -1,
+                    "unmapped_gate_input:78",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "aggregate_bit_outside_certified_integer_prefix": [
+                  [
+                    118,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    119,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    120,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ]
+                ],
+                "ambiguous_dynamic_definition": [
+                  [
+                    411,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    412,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    413,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unsupported_object_or_type": [
+                  [
+                    5495,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Guard",
+                    0
+                  ],
+                  [
+                    7825,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Guard",
+                    0
+                  ],
+                  [
+                    9182,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unregistered_symbol_or_type": [
+                  [
+                    7829,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    7830,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    7831,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "missing_dynamic_context": [
+                  [
+                    34425,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    34426,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    34427,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unresolved_rf_endpoint": [
+                  [
+                    44107,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    44110,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    44113,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ]
+                ],
+                "ambiguous_gate_definition": [
+                  [
+                    44276,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    44279,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    44284,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ]
+                ]
+              },
+              {
+                "unmapped_gate_input": [
+                  [
+                    1,
+                    -1,
+                    "unmapped_gate_input:2481",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    2,
+                    -1,
+                    "unmapped_gate_input:313343",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    3,
+                    -1,
+                    "unmapped_gate_input:326594",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "ambiguous_dynamic_definition": [
+                  [
+                    4,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    341,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    685,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ]
+                ],
+                "matched": [
+                  [
+                    12,
+                    101952,
+                    "matched",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    22,
+                    154571,
+                    "matched",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    27,
+                    104930,
+                    "matched",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "no_semantic_definition": [
+                  [
+                    15,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    16,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    30,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ]
+                ],
+                "aggregate_bit_outside_certified_integer_prefix": [
+                  [
+                    18,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    52,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    71,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ]
+                ],
+                "ambiguous_gate_definition": [
+                  [
+                    48,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    230,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    232,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "unregistered_symbol_or_type": [
+                  [
+                    284,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    766,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    908,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unsupported_object_or_type": [
+                  [
+                    1066,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    2123,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    2495,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "missing_dynamic_context": [
+                  [
+                    1636,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    1897,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    2842,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unresolved_rf_endpoint": [
+                  [
+                    4546,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    5578,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    10007,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ]
+                ]
+              }
+            ],
+            "matched": 37288,
+            "totals": [
+              245081,
+              245081
+            ],
+            "constant_aliases": [
+              {
+                "Guard": 43,
+                "Value": 3652
+              },
+              {
+                "Guard": 43,
+                "Value": 3652
+              }
+            ]
+          },
+          "final_mappable": 236,
+          "eligible": 74,
+          "permanent": 188
+        }
+      },
+      "light": {
+        "identity": {
+          "added": 0,
+          "alive": 188,
+          "ambiguous_signatures": 0,
+          "births": 343,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 167131,
+          "eligible": 188,
+          "eligible_B": 131,
+          "eligible_M": 52,
+          "eligible_T": 5,
+          "invalidated": 983,
+          "mapped": 343,
+          "mapped_interface_or_other": 245081,
+          "membership_ns": 24484376,
+          "nodes": 76403,
+          "p0_inputs": 1161979,
+          "p1_inputs": 1161979,
+          "permanent": 188,
+          "permanent_B": 131,
+          "permanent_M": 52,
+          "permanent_T": 5,
+          "permanent_input_matched": 7818,
+          "query": 155,
+          "read_ns": 192313803,
+          "reverse_ns": 425905,
+          "rounds": 0,
+          "seeds": 405,
+          "structural_ns": 17090,
+          "total_ns": 274643488,
+          "unknown": 0,
+          "used_input_matched": 26454,
+          "used_input_scope": 33,
+          "used_theory_M": 1908,
+          "stop": "fixed-point"
+        },
+        "unsigned": {
+          "added": 0,
+          "alive": 188,
+          "ambiguous_signatures": 0,
+          "births": 343,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 167131,
+          "eligible": 188,
+          "eligible_B": 131,
+          "eligible_M": 52,
+          "eligible_T": 5,
+          "invalidated": 983,
+          "mapped": 343,
+          "mapped_interface_or_other": 245081,
+          "membership_ns": 23598589,
+          "nodes": 76403,
+          "p0_inputs": 1161979,
+          "p1_inputs": 1161979,
+          "permanent": 188,
+          "permanent_B": 131,
+          "permanent_M": 52,
+          "permanent_T": 5,
+          "permanent_input_matched": 7818,
+          "query": 155,
+          "read_ns": 203292999,
+          "reverse_ns": 465265,
+          "rounds": 0,
+          "seeds": 405,
+          "structural_ns": 16827,
+          "total_ns": 285833468,
+          "unknown": 0,
+          "used_input_matched": 26454,
+          "used_input_scope": 33,
+          "used_theory_M": 1908,
+          "stop": "fixed-point"
+        },
+        "signed": {
+          "added": 0,
+          "alive": 188,
+          "ambiguous_signatures": 0,
+          "births": 343,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 167131,
+          "eligible": 188,
+          "eligible_B": 131,
+          "eligible_M": 52,
+          "eligible_T": 5,
+          "invalidated": 983,
+          "mapped": 343,
+          "mapped_interface_or_other": 245081,
+          "membership_ns": 21733365,
+          "nodes": 76403,
+          "p0_inputs": 1161979,
+          "p1_inputs": 1161979,
+          "permanent": 188,
+          "permanent_B": 131,
+          "permanent_M": 52,
+          "permanent_T": 5,
+          "permanent_input_matched": 7818,
+          "query": 155,
+          "read_ns": 201577125,
+          "reverse_ns": 412252,
+          "rounds": 0,
+          "seeds": 405,
+          "structural_ns": 17215,
+          "total_ns": 281091637,
+          "unknown": 0,
+          "used_input_matched": 26454,
+          "used_input_scope": 33,
+          "used_theory_M": 1908,
+          "stop": "fixed-point"
+        }
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "equivalence": {
+      "births": 42244,
+      "permanent": 41800,
+      "query": 444,
+      "unknown": 0,
+      "canonical_expressions": 189211,
+      "input_occurrences": 910797,
+      "used_inputs": 22393,
+      "permanent_inputs": 17411,
+      "decoded_nodes": 793728,
+      "durable_edges": 5933180,
+      "transient_created": 3043085,
+      "peak_live_transient": 23315,
+      "online_reclaimed": 3029104,
+      "sweeps": 184,
+      "written_edges": 5933180,
+      "adopted": 699204,
+      "cache_hits": 2119073,
+      "boundary_missing": 0,
+      "boundary_mismatch": 0,
+      "boundary_exact": 309974
+    },
+    "native_reason_checks": {
+      "C": 2782,
+      "A": 307192
+    },
+    "independent": {
+      "active_learned_units": 1,
+      "all_mappable": 2,
+      "assigned_by_clause": 64714466,
+      "assigned_explicit_unit": 6454,
+      "assumptions": 0,
+      "births": 42244,
+      "boolean_including_query": 175,
+      "born_after_ancestor_eviction": 0,
+      "cause_1": 150,
+      "cause_512": 55,
+      "cause_513": 91,
+      "cause_521": 399,
+      "cause_768": 238,
+      "cause_769": 41266,
+      "cause_777": 3,
+      "cause_9": 42,
+      "checked_derivations": 59448,
+      "checked_resolutions": 3471711,
+      "complete_mixed_mappable": 2,
+      "complete_mixed_old_proof_survives": 0,
+      "complete_mixed_survives_mappable": 0,
+      "complete_permanent_boolean": 133,
+      "complete_permanent_mixed": 41375,
+      "complete_permanent_theory_only": 292,
+      "complete_theory_reasons": 309974,
+      "contains_certified_theory": 42069,
+      "decisions": 87180,
+      "discharge_matched": 309974,
+      "discharge_mismatch": 0,
+      "discharge_missing": 0,
+      "edges": 7615274,
+      "evicted_cdcl": 0,
+      "flags_0": 133,
+      "flags_10": 402,
+      "flags_2": 42,
+      "flags_8": 41667,
+      "gc": 0,
+      "incomplete_any": 0,
+      "input_action_0": 886491,
+      "input_action_1": 24306,
+      "invalidated_nodes": 2475427,
+      "kind_1": 866692,
+      "kind_12": 2248,
+      "kind_13": 1234460,
+      "kind_14": 309974,
+      "kind_2": 44105,
+      "kind_4": 7460,
+      "kind_5": 9744,
+      "kind_6": 42244,
+      "lemma_op_16": 2782,
+      "lemma_op_17": 152645,
+      "lemma_op_18": 154547,
+      "literal_entries": 6074599,
+      "loss_through_prior_learned": 39675,
+      "min_failure": 353080,
+      "min_success": 1276128,
+      "minimized_births": 40868,
+      "native_learnts_vector": 349378,
+      "nodes": 2516927,
+      "old_proof_survives": 0,
+      "op_0": 1,
+      "op_1": 162,
+      "op_10": 734,
+      "op_11": 66,
+      "op_12": 166920,
+      "op_13": 789911,
+      "op_14": 31007,
+      "op_15": 17247,
+      "op_16": 2372,
+      "op_17": 114982,
+      "op_18": 111024,
+      "op_2": 35,
+      "op_3": 734,
+      "op_4": 66,
+      "op_5": 117,
+      "op_6": 1079,
+      "op_7": 54,
+      "op_8": 162,
+      "op_9": 35,
+      "opaque_theory_reasons": 0,
+      "persistent_arena_capacity_bytes": 265537628,
+      "query_any": 444,
+      "recorder_capacity_bytes": 362798348,
+      "reduce_db": 0,
+      "relocated_cdcl_to_new_cref": 0,
+      "relocated_to_new_cref": 0,
+      "removed_clauses": 30357,
+      "resident_cdcl": 42243,
+      "reverse_ns": 36784002,
+      "satisfied_database_deletions": 30357,
+      "search_calls": 1,
+      "search_ns": 9054534066,
+      "seed_count": 873133,
+      "survives_and_translates": 0,
+      "theory_any": 0,
+      "theory_direct": 0,
+      "theory_indirect_only": 0,
+      "theory_reasons_survive": 74,
+      "uncheckable_local_steps": 0,
+      "unexplained_assignments": 0,
+      "unit_births": 1,
+      "used_parent_edges_to_evicted_learned": 0,
+      "uses_prior_learned_directly": 40578,
+      "write_sections_ns": 92501839
+    },
+    "premises": {
+      "injective_pairs": 14154,
+      "premises": {
+        "unmapped": 16293,
+        "matched": 4916,
+        "scope": 1184
+      },
+      "structural_signed_occurrences": 177
+    },
+    "births": 42244,
+    "resident": 42244,
+    "baseline": 0,
+    "combined": 0,
+    "added": [],
+    "added_hits": [],
+    "all_import_hits": 0,
+    "main_hits": 0,
+    "events": {
+      "events": {
+        "missing_dynamic_context": 5,
+        "unsupported_object_or_type": 25,
+        "matched": 96,
+        "removed_invocation_in_patch": 36
+      },
+      "deleted_lines": [
+        6,
+        7
+      ],
+      "unmapped_by_role": {
+        "Opaque": 1193,
+        "Aux": 166734,
+        "Value": 16512,
+        "Guard": 12,
+        "RF": 485
+      }
+    },
+    "A3": {
+      "transport": {
+        "added": 885,
+        "alive": 147,
+        "ambiguous_signatures": 812,
+        "births": 42244,
+        "checks": 265877,
+        "collisions": 0,
+        "edges": 5933180,
+        "eligible": 147,
+        "eligible_B": 52,
+        "eligible_M": 95,
+        "invalidated": 649280,
+        "mapped": 11073,
+        "mapped_interface_or_other": 663,
+        "mapped_ordinary": 22449,
+        "membership_ns": 15012881,
+        "nodes": 793728,
+        "p0_inputs": 910797,
+        "p1_inputs": 910797,
+        "permanent": 41800,
+        "permanent_B": 133,
+        "permanent_M": 41375,
+        "permanent_T": 292,
+        "permanent_input_matched": 4578,
+        "permanent_input_unmapped": 12833,
+        "query": 444,
+        "read_ns": 263717085,
+        "reverse_ns": 32725278,
+        "rounds": 3,
+        "seeds": 22167,
+        "structural_ns": 20771877,
+        "total_ns": 391189174,
+        "unknown": 0,
+        "used_input_matched": 7673,
+        "used_input_scope": 1184,
+        "used_input_unmapped": 13536,
+        "used_theory_M": 1560,
+        "used_theory_U": 246,
+        "stop": "fixed-point"
+      },
+      "verified": {
+        "injective_pairs": 23112,
+        "premises": {
+          "unmapped": 13536,
+          "matched": 7673,
+          "scope": 1184
+        },
+        "structural_signed_occurrences": 885
+      },
+      "remaining_seed_reasons": {
+        "no_semantic_definition": 1193,
+        "unmapped_gate_input": 155475,
+        "aggregate_bit_outside_certified_integer_prefix": 10368,
+        "unsupported_object_or_type": 390,
+        "unregistered_symbol_or_type": 4096,
+        "ambiguous_dynamic_definition": 768,
+        "unresolved_rf_endpoint": 83,
+        "ambiguous_gate_definition": 4170,
+        "missing_dynamic_context": 320
+      },
+      "unresolved_after_structure": {
+        "no_semantic_definition": 1193,
+        "unmapped_gate_input": 154590,
+        "aggregate_bit_outside_certified_integer_prefix": 10368,
+        "unsupported_object_or_type": 390,
+        "unregistered_symbol_or_type": 4096,
+        "ambiguous_dynamic_definition": 768,
+        "unresolved_rf_endpoint": 83,
+        "ambiguous_gate_definition": 4170,
+        "missing_dynamic_context": 320
+      },
+      "variables": 199090,
+      "oracle_table_supplied": false
+    },
+    "A1_A2": {
+      "fixture": {
+        "identity": {
+          "proof_sha256": "bbaf0aef6fc1f84dcb2d971328c66ec45ed5465ec9555bf1eece1cd367db6fd4",
+          "original": "6ae9408754f8bf09e816e3fefdb04cdea487b6e4fa2b66d952fc1f32107c55c5",
+          "fixture": "6ae9408754f8bf09e816e3fefdb04cdea487b6e4fa2b66d952fc1f32107c55c5",
+          "births": 42244,
+          "eligible": 41800,
+          "rejected": 444,
+          "atoms": 199090,
+          "events": 132,
+          "negative": 0,
+          "signed_map_sha256": "745544d71011915a4c4af2dcc3e04a98fd62dd10103f618b1340a7e85c80d6ca",
+          "checked_inverse": true
+        },
+        "unsigned": {
+          "proof_sha256": "bbaf0aef6fc1f84dcb2d971328c66ec45ed5465ec9555bf1eece1cd367db6fd4",
+          "original": "6ae9408754f8bf09e816e3fefdb04cdea487b6e4fa2b66d952fc1f32107c55c5",
+          "fixture": "52e4b315de965d8eb7445d82480ebdf013d38c3da12d1a488db2e0388d4d555a",
+          "births": 42244,
+          "eligible": 41800,
+          "rejected": 444,
+          "atoms": 199090,
+          "events": 132,
+          "negative": 0,
+          "signed_map_sha256": "428eec3d9e38bea147d945af1c8682ed90fd8c20258ca52f2433330c6901bfe6",
+          "checked_inverse": true
+        },
+        "signed": {
+          "proof_sha256": "bbaf0aef6fc1f84dcb2d971328c66ec45ed5465ec9555bf1eece1cd367db6fd4",
+          "original": "6ae9408754f8bf09e816e3fefdb04cdea487b6e4fa2b66d952fc1f32107c55c5",
+          "fixture": "da8d204217a583de26006f70752a9aab095c7320b6c64cd82cbed6ee0acf3486",
+          "births": 42244,
+          "eligible": 41800,
+          "rejected": 444,
+          "atoms": 199090,
+          "events": 132,
+          "negative": 99472,
+          "signed_map_sha256": "e367bb0efea1c7ca0ac08a905e94dfde4613a57461e1d2bc938528021195a50f",
+          "checked_inverse": true
+        },
+        "hidden_d41": {
+          "vars": {
+            "exclusive_roles": [
+              {
+                "Value": {
+                  "matched": 4391,
+                  "unknown": 15936
+                },
+                "Aux": {
+                  "matched": 17173,
+                  "unknown": 159645
+                },
+                "Opaque": {
+                  "unknown": 1193
+                },
+                "Guard": {
+                  "matched": 12,
+                  "unknown": 6
+                },
+                "RF": {
+                  "unknown": 83,
+                  "matched": 651
+                }
+              },
+              {
+                "Aux": {
+                  "unknown": 159645,
+                  "matched": 17173
+                },
+                "Opaque": {
+                  "unknown": 1193
+                },
+                "Value": {
+                  "unknown": 15936,
+                  "matched": 4391
+                },
+                "RF": {
+                  "matched": 651,
+                  "unknown": 83
+                },
+                "Guard": {
+                  "matched": 12,
+                  "unknown": 6
+                }
+              }
+            ],
+            "reasons": [
+              {
+                "matched": 22227,
+                "no_semantic_definition": 1193,
+                "unmapped_gate_input": 155475,
+                "aggregate_bit_outside_certified_integer_prefix": 10368,
+                "unsupported_object_or_type": 390,
+                "unregistered_symbol_or_type": 4096,
+                "ambiguous_dynamic_definition": 768,
+                "unresolved_rf_endpoint": 83,
+                "ambiguous_gate_definition": 4170,
+                "missing_dynamic_context": 320
+              },
+              {
+                "unmapped_gate_input": 155475,
+                "no_semantic_definition": 1193,
+                "aggregate_bit_outside_certified_integer_prefix": 10368,
+                "missing_dynamic_context": 320,
+                "ambiguous_gate_definition": 4170,
+                "matched": 22227,
+                "ambiguous_dynamic_definition": 768,
+                "unregistered_symbol_or_type": 4096,
+                "unresolved_rf_endpoint": 83,
+                "unsupported_object_or_type": 390
+              }
+            ],
+            "reasons_by_role": [
+              {
+                "Value": {
+                  "matched": 4391,
+                  "aggregate_bit_outside_certified_integer_prefix": 10368,
+                  "unregistered_symbol_or_type": 4096,
+                  "ambiguous_dynamic_definition": 768,
+                  "unsupported_object_or_type": 384,
+                  "missing_dynamic_context": 320
+                },
+                "Aux": {
+                  "matched": 17173,
+                  "unmapped_gate_input": 155475,
+                  "ambiguous_gate_definition": 4170
+                },
+                "Opaque": {
+                  "no_semantic_definition": 1193
+                },
+                "Guard": {
+                  "matched": 12,
+                  "unsupported_object_or_type": 6
+                },
+                "RF": {
+                  "unresolved_rf_endpoint": 83,
+                  "matched": 651
+                }
+              },
+              {
+                "Aux": {
+                  "unmapped_gate_input": 155475,
+                  "ambiguous_gate_definition": 4170,
+                  "matched": 17173
+                },
+                "Opaque": {
+                  "no_semantic_definition": 1193
+                },
+                "Value": {
+                  "aggregate_bit_outside_certified_integer_prefix": 10368,
+                  "missing_dynamic_context": 320,
+                  "ambiguous_dynamic_definition": 768,
+                  "unregistered_symbol_or_type": 4096,
+                  "matched": 4391,
+                  "unsupported_object_or_type": 384
+                },
+                "RF": {
+                  "matched": 651,
+                  "unresolved_rf_endpoint": 83
+                },
+                "Guard": {
+                  "matched": 12,
+                  "unsupported_object_or_type": 6
+                }
+              }
+            ],
+            "examples": [
+              {
+                "matched": [
+                  [
+                    1,
+                    288070,
+                    "matched",
+                    "Value",
+                    20210
+                  ],
+                  [
+                    2,
+                    330328,
+                    "matched",
+                    "Value",
+                    20211
+                  ],
+                  [
+                    3,
+                    4657,
+                    "matched",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "no_semantic_definition": [
+                  [
+                    5,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    80,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    156,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ]
+                ],
+                "unmapped_gate_input": [
+                  [
+                    70,
+                    -1,
+                    "unmapped_gate_input:10",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    71,
+                    -1,
+                    "unmapped_gate_input:140",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    72,
+                    -1,
+                    "unmapped_gate_input:142",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "aggregate_bit_outside_certified_integer_prefix": [
+                  [
+                    486,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    487,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    488,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unsupported_object_or_type": [
+                  [
+                    1096,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Guard",
+                    0
+                  ],
+                  [
+                    1741,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Guard",
+                    0
+                  ],
+                  [
+                    2386,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Guard",
+                    0
+                  ]
+                ],
+                "unregistered_symbol_or_type": [
+                  [
+                    4327,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    4328,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    4329,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "ambiguous_dynamic_definition": [
+                  [
+                    5805,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    5806,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    5807,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unresolved_rf_endpoint": [
+                  [
+                    21233,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    21236,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    21239,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ]
+                ],
+                "ambiguous_gate_definition": [
+                  [
+                    32500,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    32501,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    32502,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "missing_dynamic_context": [
+                  [
+                    188191,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    188192,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    188193,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ]
+                ]
+              },
+              {
+                "unmapped_gate_input": [
+                  [
+                    1,
+                    -1,
+                    "unmapped_gate_input:46593",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    2,
+                    -1,
+                    "unmapped_gate_input:91492",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    3,
+                    -1,
+                    "unmapped_gate_input:114383",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "no_semantic_definition": [
+                  [
+                    8,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    183,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ],
+                  [
+                    268,
+                    -1,
+                    "no_semantic_definition",
+                    "Opaque",
+                    0
+                  ]
+                ],
+                "aggregate_bit_outside_certified_integer_prefix": [
+                  [
+                    16,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    63,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ],
+                  [
+                    130,
+                    -1,
+                    "aggregate_bit_outside_certified_integer_prefix",
+                    "Value",
+                    0
+                  ]
+                ],
+                "missing_dynamic_context": [
+                  [
+                    24,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    447,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ],
+                  [
+                    718,
+                    -1,
+                    "missing_dynamic_context",
+                    "Value",
+                    0
+                  ]
+                ],
+                "ambiguous_gate_definition": [
+                  [
+                    39,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    71,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    85,
+                    -1,
+                    "ambiguous_gate_definition",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "matched": [
+                  [
+                    45,
+                    274933,
+                    "matched",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    54,
+                    380913,
+                    "matched",
+                    "Aux",
+                    0
+                  ],
+                  [
+                    55,
+                    388225,
+                    "matched",
+                    "Aux",
+                    0
+                  ]
+                ],
+                "ambiguous_dynamic_definition": [
+                  [
+                    80,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    1049,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ],
+                  [
+                    1271,
+                    -1,
+                    "ambiguous_dynamic_definition",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unregistered_symbol_or_type": [
+                  [
+                    87,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    209,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    241,
+                    -1,
+                    "unregistered_symbol_or_type",
+                    "Value",
+                    0
+                  ]
+                ],
+                "unresolved_rf_endpoint": [
+                  [
+                    220,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    1446,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ],
+                  [
+                    1929,
+                    -1,
+                    "unresolved_rf_endpoint",
+                    "RF",
+                    0
+                  ]
+                ],
+                "unsupported_object_or_type": [
+                  [
+                    221,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    418,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Value",
+                    0
+                  ],
+                  [
+                    443,
+                    -1,
+                    "unsupported_object_or_type",
+                    "Value",
+                    0
+                  ]
+                ]
+              }
+            ],
+            "matched": 22227,
+            "totals": [
+              199090,
+              199090
+            ],
+            "constant_aliases": [
+              {
+                "Guard": 19,
+                "Value": 4484
+              },
+              {
+                "Guard": 19,
+                "Value": 4484
+              }
+            ]
+          },
+          "final_mappable": 11038,
+          "eligible": 74,
+          "permanent": 41800
+        }
+      },
+      "light": {
+        "identity": {
+          "added": 0,
+          "alive": 41800,
+          "ambiguous_signatures": 0,
+          "births": 42244,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 5933180,
+          "eligible": 41800,
+          "eligible_B": 133,
+          "eligible_M": 41375,
+          "eligible_T": 292,
+          "invalidated": 20562,
+          "mapped": 42244,
+          "mapped_interface_or_other": 199090,
+          "membership_ns": 16402597,
+          "nodes": 793728,
+          "p0_inputs": 910797,
+          "p1_inputs": 910797,
+          "permanent": 41800,
+          "permanent_B": 133,
+          "permanent_M": 41375,
+          "permanent_T": 292,
+          "permanent_input_matched": 17411,
+          "query": 444,
+          "read_ns": 248520661,
+          "reverse_ns": 18901119,
+          "rounds": 0,
+          "seeds": 8292,
+          "structural_ns": 17582,
+          "total_ns": 382362135,
+          "unknown": 0,
+          "used_input_matched": 21209,
+          "used_input_scope": 1184,
+          "used_theory_M": 1806,
+          "stop": "fixed-point"
+        },
+        "unsigned": {
+          "added": 0,
+          "alive": 41800,
+          "ambiguous_signatures": 0,
+          "births": 42244,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 5933180,
+          "eligible": 41800,
+          "eligible_B": 133,
+          "eligible_M": 41375,
+          "eligible_T": 292,
+          "invalidated": 20562,
+          "mapped": 42244,
+          "mapped_interface_or_other": 199090,
+          "membership_ns": 17118732,
+          "nodes": 793728,
+          "p0_inputs": 910797,
+          "p1_inputs": 910797,
+          "permanent": 41800,
+          "permanent_B": 133,
+          "permanent_M": 41375,
+          "permanent_T": 292,
+          "permanent_input_matched": 17411,
+          "query": 444,
+          "read_ns": 260239954,
+          "reverse_ns": 18880538,
+          "rounds": 0,
+          "seeds": 8292,
+          "structural_ns": 17028,
+          "total_ns": 390787623,
+          "unknown": 0,
+          "used_input_matched": 21209,
+          "used_input_scope": 1184,
+          "used_theory_M": 1806,
+          "stop": "fixed-point"
+        },
+        "signed": {
+          "added": 0,
+          "alive": 41800,
+          "ambiguous_signatures": 0,
+          "births": 42244,
+          "checks": 0,
+          "collisions": 0,
+          "edges": 5933180,
+          "eligible": 41800,
+          "eligible_B": 133,
+          "eligible_M": 41375,
+          "eligible_T": 292,
+          "invalidated": 20562,
+          "mapped": 42244,
+          "mapped_interface_or_other": 199090,
+          "membership_ns": 16848878,
+          "nodes": 793728,
+          "p0_inputs": 910797,
+          "p1_inputs": 910797,
+          "permanent": 41800,
+          "permanent_B": 133,
+          "permanent_M": 41375,
+          "permanent_T": 292,
+          "permanent_input_matched": 17411,
+          "query": 444,
+          "read_ns": 253740091,
+          "reverse_ns": 22343703,
+          "rounds": 0,
+          "seeds": 8292,
+          "structural_ns": 18975,
+          "total_ns": 388148666,
+          "unknown": 0,
+          "used_input_matched": 21209,
+          "used_input_scope": 1184,
+          "used_theory_M": 1806,
+          "stop": "fixed-point"
+        }
+      }
+    }
+  },
+  "fib-snapshot-11": {
+    "equivalence": {
+      "births": 108788,
+      "permanent": 54606,
+      "query": 54182,
+      "unknown": 0,
+      "canonical_expressions": 293489,
+      "input_occurrences": 1002193,
+      "used_inputs": 69151,
+      "permanent_inputs": 63990,
+      "decoded_nodes": 838021,
+      "durable_edges": 45115775,
+      "transient_created": 17236633,
+      "peak_live_transient": 194500,
+      "online_reclaimed": 17127322,
+      "sweeps": 410,
+      "written_edges": 45115775,
+      "adopted": 485673,
+      "cache_hits": 8786781,
+      "boundary_missing": 0,
+      "boundary_mismatch": 0,
+      "boundary_exact": 285573
+    },
+    "native_reason_checks": {
+      "C": 116,
+      "A": 285457
+    },
+    "independent": {
+      "active_learned_units": 43,
+      "all_mappable": 26993,
+      "assigned_by_clause": 142010348,
+      "assigned_explicit_unit": 425,
+      "assumptions": 0,
+      "births": 108788,
+      "boolean_including_query": 1723,
+      "born_after_ancestor_eviction": 105387,
+      "cause_0": 40,
+      "cause_1": 1683,
+      "cause_512": 179,
+      "cause_513": 52556,
+      "cause_521": 20,
+      "cause_769": 148,
+      "cause_777": 54162,
+      "checked_derivations": 201637,
+      "checked_resolutions": 43136636,
+      "complete_mixed_mappable": 18421,
+      "complete_mixed_old_proof_survives": 0,
+      "complete_mixed_survives_mappable": 0,
+      "complete_permanent_boolean": 1723,
+      "complete_permanent_mixed": 52883,
+      "complete_permanent_theory_only": 0,
+      "complete_theory_reasons": 285573,
+      "contains_certified_theory": 107065,
+      "decisions": 341809,
+      "discharge_matched": 285573,
+      "discharge_mismatch": 0,
+      "discharge_missing": 0,
+      "edges": 49799747,
+      "evicted_cdcl": 100019,
+      "flags_0": 1723,
+      "flags_10": 54182,
+      "flags_8": 52883,
+      "gc": 3,
+      "incomplete_any": 0,
+      "input_action_0": 1001988,
+      "input_action_1": 205,
+      "invalidated_nodes": 1028080,
+      "kind_1": 1001471,
+      "kind_10": 1,
+      "kind_12": 13534,
+      "kind_13": 2065304,
+      "kind_14": 285573,
+      "kind_2": 722,
+      "kind_4": 123,
+      "kind_5": 92725,
+      "kind_6": 108788,
+      "lemma_op_16": 116,
+      "lemma_op_17": 96353,
+      "lemma_op_18": 189104,
+      "literal_entries": 18867703,
+      "loss_through_prior_learned": 106789,
+      "min_failure": 9894778,
+      "min_success": 9219434,
+      "minimized_births": 90537,
+      "native_learnts_vector": 28253,
+      "nodes": 3568241,
+      "old_proof_survives": 40,
+      "op_0": 1,
+      "op_1": 790,
+      "op_10": 5561,
+      "op_11": 232,
+      "op_12": 37760,
+      "op_13": 1951783,
+      "op_14": 67,
+      "op_15": 374,
+      "op_16": 108,
+      "op_17": 28384,
+      "op_18": 40142,
+      "op_2": 103,
+      "op_3": 5561,
+      "op_4": 232,
+      "op_5": 571,
+      "op_6": 6166,
+      "op_7": 110,
+      "op_8": 790,
+      "op_9": 103,
+      "opaque_theory_reasons": 0,
+      "persistent_arena_capacity_bytes": 990228850,
+      "query_any": 54182,
+      "recorder_capacity_bytes": 1046799586,
+      "reduce_db": 0,
+      "relocated_cdcl_to_new_cref": 11883,
+      "relocated_to_new_cref": 1714031,
+      "removed_clauses": 936968,
+      "resident_cdcl": 8726,
+      "reverse_ns": 250683111,
+      "satisfied_database_deletions": 936968,
+      "search_calls": 1,
+      "search_ns": 42511864030,
+      "seed_count": 66854,
+      "survives_and_translates": 40,
+      "theory_any": 0,
+      "theory_direct": 0,
+      "theory_indirect_only": 0,
+      "theory_reasons_survive": 283296,
+      "uncheckable_local_steps": 0,
+      "unexplained_assignments": 0,
+      "unit_births": 43,
+      "used_parent_edges_to_evicted_learned": 5378745,
+      "uses_prior_learned_directly": 101385,
+      "write_sections_ns": 439422615
+    },
+    "premises": {
+      "injective_pairs": 191410,
+      "premises": {
+        "matched": 53062,
+        "unmapped": 16084,
+        "scope": 5
+      },
+      "structural_signed_occurrences": 21
+    },
+    "births": 108788,
+    "resident": 8769,
+    "baseline": 40,
+    "combined": 40,
+    "added": [],
+    "added_hits": [],
+    "all_import_hits": 17,
+    "main_hits": 17
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "gate": {
+    "L1": "PASS",
+    "binary": "3e2622fc86dfe08e632a1f3d54fe337bff8fe589b4985e188b5e7a14a3315bc6",
+    "tools": {
+      "boolean-diff": "5a7bb5f4f9fb71866654c48ac88bb8249871047c17512eea10485c57c2023912",
+      "select42": "3fcdc78ed1388f3b8c3fd6773084e0c5c7ea2081cada4df0a86af4afb45b53e1",
+      "d4_prepare.py": "8b8a5702890178f64851dde05281b799f5565963e6e4b847fcd8154c644cfc89",
+      "d42_prepare.py": "29b28eddacc749c36a36c34e7d885d4b85bbdd3850e1e04fca3809d23020ad48",
+      "d42_events.py": "181f8e6c7867caaacf8e9e630104cf3230d7ac4d67a7b01b6138716e2c74e08a",
+      "d1_identity.py": "895bcd680fcb8c548b85fc6536d7ddc3d91b703f2172e11b34bab3a774766eac",
+      "d1_theory.py": "90e00cec40d661665af7459d26c62082d811e4565d4e9885695e7f622f25514a",
+      "d41_identity.py": "d9fef56de77946812439bfec1878ba85945da8cdebee1be5089bef574e1c0616",
+      "diff_d1.py": "df310cb403cf1f4cd3814fb9ffa6bf7f19aff1dff5207f844b2d00500ffe2585",
+      "prepare_d3.py": "494cdc512a654d3640e205dbdc6be8cc808056c9a936e1e9aeaf75115aeabad2"
+    },
+    "cases": [
+      "fib_updates_8",
+      "circular-buffer",
+      "airline_reservations_6",
+      "fib-snapshot-11"
+    ],
+    "births": 152817,
+    "checks": "01fa06c4899572ed06d9dba91438c4ab65f5c5d8dc2f367bf49b19f71195cd63",
+    "functional_properties": "01939353cd7534b822fecc4e4826898df3d01abae79de0ce626271baaa206ded",
+    "micro": "141143d3393fe5cdd591ef7036937429f8627f0923ea03a7e9884c049c302db9",
+    "normal_clause_reproof_calls": 0
+  },
+  "case_search": {
+    "fib_updates_8": false,
+    "circular-buffer": false,
+    "airline_reservations_6": false,
+    "fib-snapshot-11": true
+  },
+  "case_mapping": {
+    "fib_updates_8": false,
+    "circular-buffer": true,
+    "airline_reservations_6": false,
+    "fib-snapshot-11": false
+  },
+  "case_P1": {
+    "fib_updates_8": false,
+    "circular-buffer": false,
+    "airline_reservations_6": false,
+    "fib-snapshot-11": true
+  },
+  "case_cycle": {
+    "fib_updates_8": false,
+    "circular-buffer": false,
+    "airline_reservations_6": false,
+    "fib-snapshot-11": false
+  },
+  "outcomes": {
+    "L1": "PASS",
+    "L2-A": "NOT_ACHIEVED",
+    "L2-B": "PASS",
+    "L2-C": "PASS",
+    "L3.1": "NOT_ACHIEVED",
+    "L3.2": "NOT_ACHIEVED"
+  }
+}

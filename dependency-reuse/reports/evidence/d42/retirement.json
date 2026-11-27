@@ -1,0 +1,170 @@
+{
+  "fib_updates_8": {
+    "births": 1442,
+    "exclusive": {
+      "query_scope+unmapped_conclusion": 14,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 7,
+      "eligible": 313,
+      "unmapped_boolean_leaf+translated_premise_absent+unmapped_conclusion": 110,
+      "unmapped_boolean_leaf+unmapped_conclusion": 241,
+      "translated_premise_absent": 192,
+      "unmapped_boolean_leaf+translated_premise_absent": 282,
+      "unmapped_boolean_leaf+translated_premise_absent+unknown_theory_binding+query_scope+unmapped_conclusion": 62,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope": 27,
+      "unmapped_boolean_leaf+translated_premise_absent+query_scope+unmapped_conclusion": 4,
+      "unmapped_boolean_leaf+translated_premise_absent+unknown_theory_binding+query_scope": 20,
+      "unmapped_boolean_leaf": 169,
+      "unmapped_boolean_leaf+query_scope+unmapped_conclusion": 1
+    },
+    "overlapping": {
+      "query_scope": 135,
+      "unmapped_conclusion": 439,
+      "unmapped_boolean_leaf": 923,
+      "unknown_theory_binding": 116,
+      "translated_premise_absent": 670
+    },
+    "unmapped_conclusion_roles": {
+      "Opaque": 398,
+      "Aux": 238,
+      "RF": 1
+    },
+    "first_birth": {
+      "query_scope+unmapped_conclusion": 1,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 5,
+      "eligible": 6,
+      "unmapped_boolean_leaf+translated_premise_absent+unmapped_conclusion": 31,
+      "unmapped_boolean_leaf+unmapped_conclusion": 32,
+      "translated_premise_absent": 35,
+      "unmapped_boolean_leaf+translated_premise_absent": 46,
+      "unmapped_boolean_leaf+translated_premise_absent+unknown_theory_binding+query_scope+unmapped_conclusion": 340,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope": 342,
+      "unmapped_boolean_leaf+translated_premise_absent+query_scope+unmapped_conclusion": 350,
+      "unmapped_boolean_leaf+translated_premise_absent+unknown_theory_binding+query_scope": 363,
+      "unmapped_boolean_leaf": 394,
+      "unmapped_boolean_leaf+query_scope+unmapped_conclusion": 399
+    }
+  },
+  "circular-buffer": {
+    "births": 343,
+    "exclusive": {
+      "query_scope+unmapped_conclusion": 8,
+      "translated_premise_absent": 77,
+      "eligible": 35,
+      "unmapped_boolean_leaf+unmapped_conclusion": 43,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope": 74,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 73,
+      "unknown_theory_binding": 22,
+      "unmapped_boolean_leaf+unknown_theory_binding": 5,
+      "unmapped_boolean_leaf": 3,
+      "unmapped_boolean_leaf+unknown_theory_binding+unmapped_conclusion": 3
+    },
+    "overlapping": {
+      "query_scope": 155,
+      "unmapped_conclusion": 127,
+      "translated_premise_absent": 77,
+      "unmapped_boolean_leaf": 201,
+      "unknown_theory_binding": 177
+    },
+    "unmapped_conclusion_roles": {
+      "Opaque": 28,
+      "Aux": 119,
+      "Value": 20,
+      "RF": 5
+    },
+    "first_birth": {
+      "query_scope+unmapped_conclusion": 1,
+      "translated_premise_absent": 9,
+      "eligible": 73,
+      "unmapped_boolean_leaf+unmapped_conclusion": 87,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope": 102,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 106,
+      "unknown_theory_binding": 107,
+      "unmapped_boolean_leaf+unknown_theory_binding": 127,
+      "unmapped_boolean_leaf": 136,
+      "unmapped_boolean_leaf+unknown_theory_binding+unmapped_conclusion": 286
+    }
+  },
+  "airline_reservations_6": {
+    "births": 42244,
+    "exclusive": {
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 399,
+      "unmapped_boolean_leaf+unknown_theory_binding+unmapped_conclusion": 90,
+      "unmapped_boolean_leaf+query_scope+unmapped_conclusion": 8,
+      "unmapped_boolean_leaf+unmapped_conclusion": 150,
+      "query_scope+unmapped_conclusion": 34,
+      "unmapped_boolean_leaf+unknown_theory_binding": 1,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+unmapped_conclusion": 41265,
+      "changed_theory+unknown_theory_binding+unmapped_conclusion": 238,
+      "unknown_theory_binding+unmapped_conclusion": 55,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding": 1,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+query_scope+unmapped_conclusion": 3
+    },
+    "overlapping": {
+      "unmapped_boolean_leaf": 41917,
+      "unknown_theory_binding": 42052,
+      "query_scope": 444,
+      "unmapped_conclusion": 42242,
+      "changed_theory": 41507
+    },
+    "unmapped_conclusion_roles": {
+      "Aux": 4071,
+      "RF": 42044,
+      "Opaque": 253,
+      "Guard": 41624,
+      "Value": 418
+    },
+    "first_birth": {
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 1,
+      "unmapped_boolean_leaf+unknown_theory_binding+unmapped_conclusion": 36,
+      "unmapped_boolean_leaf+query_scope+unmapped_conclusion": 60,
+      "unmapped_boolean_leaf+unmapped_conclusion": 72,
+      "query_scope+unmapped_conclusion": 135,
+      "unmapped_boolean_leaf+unknown_theory_binding": 203,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+unmapped_conclusion": 204,
+      "changed_theory+unknown_theory_binding+unmapped_conclusion": 210,
+      "unknown_theory_binding+unmapped_conclusion": 486,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding": 553,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+query_scope+unmapped_conclusion": 41905
+    }
+  },
+  "fib-snapshot-11": {
+    "births": 108788,
+    "exclusive": {
+      "eligible": 40,
+      "unmapped_boolean_leaf+unmapped_conclusion": 728,
+      "unmapped_boolean_leaf+unknown_theory_binding": 18242,
+      "unmapped_boolean_leaf+unknown_theory_binding+unmapped_conclusion": 34314,
+      "unknown_theory_binding": 179,
+      "unmapped_boolean_leaf": 955,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+unmapped_conclusion": 148,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 20,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+query_scope+unmapped_conclusion": 46585,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+query_scope": 7577
+    },
+    "overlapping": {
+      "unmapped_boolean_leaf": 108569,
+      "unmapped_conclusion": 81795,
+      "unknown_theory_binding": 107065,
+      "changed_theory": 54310,
+      "query_scope": 54182
+    },
+    "unmapped_conclusion_roles": {
+      "Opaque": 81617,
+      "Value": 1897,
+      "RF": 236,
+      "Aux": 187
+    },
+    "first_birth": {
+      "eligible": 1,
+      "unmapped_boolean_leaf+unmapped_conclusion": 2,
+      "unmapped_boolean_leaf+unknown_theory_binding": 3,
+      "unmapped_boolean_leaf+unknown_theory_binding+unmapped_conclusion": 5,
+      "unknown_theory_binding": 678,
+      "unmapped_boolean_leaf": 691,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+unmapped_conclusion": 1753,
+      "unmapped_boolean_leaf+unknown_theory_binding+query_scope+unmapped_conclusion": 1754,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+query_scope+unmapped_conclusion": 1755,
+      "unmapped_boolean_leaf+changed_theory+unknown_theory_binding+query_scope": 3797
+    }
+  }
+}
