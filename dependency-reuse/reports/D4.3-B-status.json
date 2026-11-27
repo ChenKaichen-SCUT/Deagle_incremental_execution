@@ -1,0 +1,105 @@
+{
+  "stage": "D4.3-B",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/compact-dependency-d43",
+  "review_base": "d66eda630a6b6112aff64b25f42cce2155d1b96e",
+  "preregistration_amendment": "8410d86259fb8351271b23a534e13103fcd7d1fc",
+  "implementation": "8191402119cbd0069d5d8a5d74365485d834771f",
+  "fixtures_and_auditor": "b0c95dfdc5cc3d1e7a544db1dfbfa784bb7a8c63",
+  "native_elf_sha256": "157c52158e05a4f73068b657671b1789124e1cd76c71a2507f2d0415f53ba13c",
+  "published_report": {
+    "local_sha": "5ca7ad0fbfebdc0dfc35eba53b251bfd05269fd9",
+    "verified_remote_sha": "5ca7ad0fbfebdc0dfc35eba53b251bfd05269fd9",
+    "verified_ref": "refs/heads/codex/compact-dependency-d43",
+    "verified_github_content": true,
+    "url": "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution/blob/5ca7ad0fbfebdc0dfc35eba53b251bfd05269fd9/dependency-reuse/reports/D4.3-B.md"
+  },
+  "evidence": {
+    "local_sha": "014c7a5f9db3ef90d8fdb39abe021acb57502136",
+    "verified_remote_sha": "014c7a5f9db3ef90d8fdb39abe021acb57502136",
+    "github_verified": [
+      "archive.json",
+      "totals.json"
+    ],
+    "index": "evidence/d43b/files.json",
+    "index_sha256": "078de7253f722cf3bf2eaaa5ad692da805b3490a09af68155e7023d2cc7c228a",
+    "raw_files": 1444,
+    "verified_original_bytes": 9783501550,
+    "restored_replay": "Fibonacci candidate ordinals, birth audit and aggregate audit byte-identical"
+  },
+  "configuration": {
+    "backend": "compact-large-dense",
+    "slots_per_domain": 1024,
+    "independent": 1023,
+    "overflow": 1023,
+    "actual_registered_overflow_groups": 0,
+    "expanded_airline_theory_overflow_groups": 113,
+    "expanded_overflow_additional_retirements": 0
+  },
+  "results": {
+    "all_births": 152817,
+    "permanent_births": 97901,
+    "scope_only_dispositions": 54916,
+    "identical_native_and_audit_tags": 152817,
+    "missing_exportable_leaves": 0,
+    "exact": 388,
+    "U_audit": 330,
+    "U_actual": 311,
+    "U_all": 311,
+    "eligible_boolean": 47,
+    "eligible_mixed": 264,
+    "eligible_theory_only": 0,
+    "retained_D42_hits": 252,
+    "retained_D42_mixed_hits": 214,
+    "false_admissions": 0,
+    "production_proof_nodes": 0,
+    "production_parent_edges": 0,
+    "production_duplicate_condition_DAG_nodes": 0,
+    "production_SupportStore_instances": 0,
+    "SAT_RUP_Closure_per_candidate_reproofs": 0,
+    "production_quality_counters": false,
+    "all_frozen_P0_properties_unwind_and_same_encoding_counts_confirmed": true,
+    "off_trace_equal_dual_trace": true,
+    "cases": [
+      {
+        "case": "fib_updates_8",
+        "candidates": 295,
+        "mixed": 264,
+        "observed_B": 12858,
+        "observed_T": 851,
+        "extra_P0_vs_same_encoding_off_ns": 19269785
+      },
+      {
+        "case": "circular-buffer",
+        "candidates": 0,
+        "mixed": 0,
+        "observed_B": 35367,
+        "observed_T": 6414,
+        "extra_P0_vs_same_encoding_off_ns": 201616757
+      },
+      {
+        "case": "airline_reservations_6",
+        "candidates": 0,
+        "mixed": 0,
+        "observed_B": 33230,
+        "observed_T": 2248,
+        "extra_P0_vs_same_encoding_off_ns": 1323614077
+      },
+      {
+        "case": "fib-snapshot-11",
+        "candidates": 16,
+        "mixed": 0,
+        "observed_B": 138446,
+        "observed_T": 13534,
+        "extra_P0_vs_same_encoding_off_ns": 6425135854
+      }
+    ]
+  },
+  "cost_scope": "One exploratory P0 per predeclared arm and case, library serialization and sealing included; diagnostics and engineering runs archived separately.",
+  "P1_imports": 0,
+  "P1_runs": 0,
+  "P1_gain_measured": false,
+  "two_version_gain_measured": false,
+  "next_stage_started": false,
+  "stop": "Await explicit review."
+}
