@@ -1,0 +1,30 @@
+{
+  "official": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "parent_D0": "f046c3c0a6d5ba36afe78249ef9400b74d60b1e0",
+  "first_identity_implementation": "15c5774d0f79792d0f115889db1b4c770a2c8b8e",
+  "implementation": "ed7679588106538c04dcb7dcc504b5ac682f010e",
+  "frozen_input_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+  "stock_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "native_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+  "independent_clean_native_sha256": "ef80ec645ffe3d8c22f31d88230dd782b7a562bd8b56d8fbbb44aec4459f0574",
+  "diff_sha256": "965b41cae93c3f3505e734af8ecad412f5e5b91f2eaa65fc187fb219b821378c",
+  "source_version": [
+    "const char *CBMC_VERSION=\"5.67.0\";",
+    "const char *DEAGLE_VERSION=\"4.2.0 (ed767958)\";"
+  ],
+  "build_command": "LC_ALL=C PATH=/usr/bin:/bin make -C src -j12 cbmc.dir",
+  "diff_build_command": "g++ -std=c++11 -O2 -Wall -Wextra -pedantic dependency-reuse/d1/boolean_diff.cpp",
+  "wsl_distribution": "Deagle-Jammy",
+  "compiler": "11.4.0",
+  "development_rehearsal_native_sha256": "f69a3b050046077245c4aed0707e4acf1686b9be5faff1d14c807a872de0bf91",
+  "rehearsal_difference": "Only src/util/version.o differed. The Makefile embeds git describe --tags --always --dirty.",
+  "authoritative_runs": {
+    "record": "record-release",
+    "off": "off-release",
+    "probe_stock": "probe-stock-01",
+    "probe_dev": "probe-release",
+    "probe_record": "probe-release-on",
+    "delta": "delta-release",
+    "checks": "tests-release"
+  }
+}
