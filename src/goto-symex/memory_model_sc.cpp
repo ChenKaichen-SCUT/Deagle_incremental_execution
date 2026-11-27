@@ -55,6 +55,8 @@ operator()(symex_target_equationt &equation, message_handlert &message_handler)
       {
         const unsigned layout=dm::aggregate_layout(lhs.type(),ns);
         if(layout) dm::row("V_LAYOUT",{symbol,std::to_string(layout)});
+        if(dm::identities41 && event && layout)
+          dm::row("EVENT_LAYOUT",{get_name(it),std::to_string(layout)});
       }
       if(event)
         dm::row("E", {get_name(it), std::to_string(ctx), role, object, type, global ? "static" : "instance"});

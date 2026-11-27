@@ -127,6 +127,9 @@ deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
       throw std::runtime_error("D2 needs one fresh native Closure solver per archive");
     recording.reset(new Minisat::ProofStore(dependency_manifest::proof_path,&dependency_manifest::scope));
     recording->d3=dependency_manifest::theory_proofs;
+    recording->triplets=dependency_manifest::triplets;
+    recording->eager_triplets=dependency_manifest::eager_triplets;
+    recording->compact=dependency_manifest::compact_proof;
     solver->proof=recording.get();
     dependency_manifest::finish_proof=[](int status) { return recording->write(status); };
   }
@@ -164,17 +167,32 @@ void deagle_closure_solvert::at_root_boundary()
   imported.reset(new Minisat::ClauseImports);
   imported->read(dir+"/ready.tsv",solver->nVars());
   const int roots=solver->nAssigns();
+  const bool was_ok=solver->okay();
+  const auto before=solver->work();
   solver->importAtRoot(*imported,dm::d4_mode=="reuse");
   std::ofstream log(dir+"/import-time.tsv");
   log.exceptions(std::ios::failbit|std::ios::badbit);
   log<<"import_ns\t"<<imported->import_ns<<"\nroot_before\t"<<roots<<"\nroot_after\t"<<solver->nAssigns()<<"\n";
+  log<<"root_conflicts\t"<<(was_ok && !solver->okay())<<"\n";
+  const auto after=solver->work();
+  const char *names[]={"conflicts","decisions","propagations","theory_propagations","theory_cycles"};
+  for(size_t i=0;i<after.size();++i)
+    log<<"root_"<<names[i]<<"_counter_delta\t"<<(after[i]-before[i])<<"\n";
   log.close();
 }
 
 propt::resultt deagle_closure_solvert::do_prop_solve()
 {
   auto result=satcheck_minisat2_baset<Minisat::ClosureSolver>::do_prop_solve();
-  if(imported) imported->write(dependency_manifest::d4_out);
+  if(imported)
+  {
+    imported->write(dependency_manifest::d4_out);
+    std::ofstream out(dependency_manifest::d4_out+"/cumulative-work.tsv",std::ios::app);
+    out.exceptions(std::ios::failbit|std::ios::badbit);
+    for(auto value:solver->work()) out<<value<<'\t';
+    out<<solver->okay()<<'\n';
+    out.close();
+  }
   return result;
 }
 

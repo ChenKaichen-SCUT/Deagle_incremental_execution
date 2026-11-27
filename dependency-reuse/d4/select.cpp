@@ -1,6 +1,7 @@
 // Runtime selection. Inspect membership, archive structure and the recorded reverse index.
 // This binary links ProofStore only. It has no SAT, resolution-replay or Closure engine.
 #include "minisat/core/ProofStore.h"
+#include <algorithm>
 #include <array>
 #include <chrono>
 #include <fstream>
@@ -9,6 +10,7 @@
 #include <set>
 #include <sstream>
 #include <stdexcept>
+#include <unordered_map>
 #include <unordered_set>
 
 using namespace Minisat;
@@ -26,6 +28,11 @@ std::vector<unsigned char> validate(const ProofStore &g)
     check(g.offsets.size()==n+1 && !g.offsets.front() && g.offsets.back()==g.edges.size() &&
           g.children.size()==g.edges.size() && g.nodes.back().edge_end==g.edges.size() &&
           g.nodes.back().lit_end==g.lits.size(),"archive section bounds");
+    if(g.compact)
+    {
+        check(g.origins.size()==n && g.origins[0]==0,"compact origin directory");
+        for(size_t i=1;i<n;++i) check(g.origins[i-1]<g.origins[i],"nonunique compact origin");
+    }
     auto cursor=g.offsets;
     std::vector<unsigned char> has_b(n);
     size_t births=0, theories=0;
@@ -33,12 +40,20 @@ std::vector<unsigned char> validate(const ProofStore &g)
     {
         const auto &node=g.nodes[id];
         const auto eb=g.edgeBegin(id);
-        check(node.kind>Missing && node.kind<=TheoryLemma && eb<=node.edge_end && node.edge_end<=g.edges.size() &&
+        check(node.kind>Missing && node.kind<=(g.compact?RetiredBirth:TheoryLemma) && eb<=node.edge_end && node.edge_end<=g.edges.size() &&
               g.litBegin(id)<=node.lit_end && node.lit_end<=g.lits.size(),"invalid proof node");
         bool opaque=node.kind==TheoryReason || node.kind==TheoryConflict || node.kind==DynamicCO || node.kind==TheoryEmpty;
         const bool derived=node.kind==Shortened || node.kind==RootUnit || node.kind==Learned ||
                            node.kind==RootConflict || node.kind==TheoryInference || node.kind==TheoryLemma;
         check(derived==(eb<node.edge_end),"incorrect parent arity");
+        if(node.kind==RetiredBirth)
+        {
+            const auto &b=g.learned.at(births++);
+            check(g.compact && b.id==id && b.uip_edges==0 && b.min_edges<=1 &&
+                  (node.flags&(Query|Theory|Incomplete)) && !(node.flags&~15u),"invalid retired birth");
+            has_b[id]=b.min_edges;
+            continue;
+        }
         uint32_t flags=opaque ? Theory : node.kind==QueryInput ? Query : node.kind==UnknownInput ? Incomplete :
                        node.kind==TheoryDeclaration ? CertifiedTheory : 0;
         has_b[id]=node.kind==BooleanInput || node.kind==QueryInput;
@@ -59,7 +74,7 @@ std::vector<unsigned char> validate(const ProofStore &g)
         if(node.kind==TheoryInference || node.kind==TheoryDeclaration)
         {
             const auto &r=g.theory_records.at(theories++);
-            check(r.id==id && (node.kind==TheoryDeclaration ? r.op<=BlockDecl : r.op>=POEdge && r.op<=PreventRF),
+            check(r.id==id && (node.kind==TheoryDeclaration ? r.op<=BlockDecl : r.op>=POEdge && r.op<=(g.triplets ? TripletRule : PreventRF)),
                   "unsupported theory archive rule");
         }
     }
@@ -80,13 +95,20 @@ std::vector<uint8_t> bindInputs(const ProofStore &g,const std::string &manifest,
     check(counts.eof(),"malformed input counts");
     std::vector<uint8_t> result;
     std::string line,occurrence,why;
+    size_t seq0=0;
     while(std::getline(raw,line))
     {
         if(line.compare(0,2,"C\t")!=0) continue;
-        const auto &r=g.inputs.at(result.size());
-        const auto &node=g.nodes.at(r.leaf);
+        ++seq0;
         std::istringstream input(line.substr(2));
         input>>scope;
+        check(bool(std::getline(occ,occurrence)),"missing delta occurrence");
+        std::istringstream entry(occurrence);
+        unsigned side,seq;char s;
+        check(bool(entry>>side>>seq>>s>>leaf>>why) && !side && seq==seq0 && s==scope,"delta occurrence mismatch");
+        if(g.compact && (result.size()==g.inputs.size() || size_t(g.inputs[result.size()].witness)!=seq0)) continue;
+        const auto &r=g.inputs.at(result.size());
+        const auto &node=g.nodes.at(r.leaf);
         check((scope=='B' && node.kind==BooleanInput) || (scope=='Q' && node.kind==QueryInput) ||
               (scope=='U' && node.kind==UnknownInput),"P0 scope mismatch");
         for(auto k=g.litBegin(r.leaf);k<node.lit_end;++k)
@@ -95,16 +117,72 @@ std::vector<uint8_t> bindInputs(const ProofStore &g,const std::string &manifest,
             check(bool(input>>lit) && lit==g.lits[k],"P0 archive/manifest input mismatch");
         }
         input>>std::ws;check(input.eof(),"extra input literal");
-        check(bool(std::getline(occ,occurrence)),"missing delta occurrence");
-        std::istringstream entry(occurrence);
-        unsigned side,seq;char s;
-        check(bool(entry>>side>>seq>>s>>leaf>>why) && !side && seq==result.size()+1 && s==scope,
-              "delta occurrence mismatch");
         if(leaf) check(leaves.at(leaf).first==scope,"cross-scope input");
         result.push_back(leaf && leaves.at(leaf).second);
     }
     check(raw.eof() && result.size()==g.inputs.size(),"incomplete P0 input stream");
     return result;
+}
+
+struct ClauseHash
+{
+    size_t operator()(const std::vector<int> &v) const
+    { size_t h=2166136261u;for(int l:v) h=(h^unsigned(l))*16777619u;return h; }
+};
+void normalize(std::vector<int> &xs)
+{
+    std::sort(xs.begin(),xs.end());xs.erase(std::unique(xs.begin(),xs.end()),xs.end());
+}
+std::vector<uint8_t> focusedInputs(const ProofStore &g,const std::string &old,const std::string &now,
+                                   const std::map<int,int> &mapping)
+{
+    check(g.compact,"focused matching needs a proof-slice archive");
+    std::unordered_map<std::vector<int>,std::vector<size_t>,ClauseHash> wanted;
+    std::vector<uint8_t> matched(g.inputs.size());
+    std::ifstream p0(old),p1(now);
+    check(p0 && p1,"missing live Boolean input");
+    size_t seq=0,index=0;
+    std::string row;std::vector<int> key;
+    while(std::getline(p0,row))
+    {
+        if(row.compare(0,2,"C\t")) continue;
+        ++seq;
+        if(index==g.inputs.size() || seq!=size_t(g.inputs[index].witness)) continue;
+        const auto leaf=g.inputs[index].leaf;
+        check(g.nodes.at(leaf).kind==BooleanInput && row.compare(0,3,"C\tB")==0,"wrong permanent input");
+        std::istringstream stream(row.substr(3));key.clear();bool complete=true;
+        for(auto k=g.litBegin(leaf);k<g.nodes[leaf].lit_end;++k)
+        {
+            int lit;check(bool(stream>>lit) && lit==g.lits[k],"old signed premise mismatch");
+            if(lit==-1 || lit==-2) {key.push_back(lit);continue;}
+            auto it=mapping.find(lit/2);
+            if(lit<2 || it==mapping.end()) complete=false;
+            else key.push_back(it->second^(lit&1));
+        }
+        stream>>std::ws;check(stream.eof(),"extra old literal");
+        if(complete) {normalize(key);wanted[key].push_back(index);}
+        ++index;
+    }
+    check(p0.eof() && index==g.inputs.size(),"missing slice premise");
+    while(!wanted.empty() && std::getline(p1,row))
+    {
+        if(row.size()<3 || row.compare(0,3,"C\tB") || (row.size()>3 && row[3]!='\t')) continue;
+        key.clear();const char *p=row.c_str()+3;char *end=nullptr;
+        while(*p)
+        {
+            long v=std::strtol(p,&end,10);check(end!=p && v>=-2 && v<=INT32_MAX,"invalid P1 literal");
+            key.push_back(int(v));p=end;
+        }
+        normalize(key);
+        auto found=wanted.find(key);
+        if(found!=wanted.end())
+        {
+            for(auto i:found->second) matched[i]=1;
+            wanted.erase(found);
+        }
+    }
+    check(!p1.bad(),"P1 Boolean input read failure");
+    return matched;
 }
 
 std::vector<uint8_t> bindTheory(const ProofStore &g,const std::string &path)
@@ -153,7 +231,7 @@ std::map<int,int> translation(const std::string &dir,int p0,int p1)
 
 int main(int argc,char **argv)
 {
-    if(argc!=8) return 2;
+    if(argc!=8 && argc!=9) return 2;
     try
     {
         auto start=Clock::now();
@@ -162,10 +240,11 @@ int main(int argc,char **argv)
         check(g.d3 && (code==0 || code==10),"incomplete native D3 archive");
         const auto loaded=Clock::now();
         auto has_b=validate(g);
-        auto inputs=bindInputs(g,argv[2],argv[3]);
+
         auto decls=bindTheory(g,argv[4]);
         const int p0=std::stoi(argv[5]),p1=std::stoi(argv[6]);
         auto mapped=translation(argv[3],p0,p1);
+        auto inputs=argc==9 ? focusedInputs(g,argv[2],argv[8],mapped) : bindInputs(g,argv[2],argv[3]);
         const auto bound=Clock::now();
         auto dead=g.invalidatedInputs(inputs,decls);
         const auto marked=Clock::now();
@@ -184,17 +263,18 @@ int main(int argc,char **argv)
         for(const auto &birth:g.learned)
         {
             const ProofId id=birth.id;
+            const auto original=g.compact?g.origins[id]:id;
             bool can_map=true;
             const auto &node=g.nodes[id];
             for(auto k=g.litBegin(id);k<node.lit_end;++k)
                 if(g.lits[k]<2 || !mapped.count(g.lits[k]/2)) {can_map=false;break;}
             if(!dead[id]) check(node.flags==0 || node.flags==CertifiedTheory,"surviving non-permanent proof");
             const bool take=!dead[id] && can_map;
-            table<<id<<'\t'<<node.flags<<'\t'<<int(has_b[id])<<'\t'<<!dead[id]<<'\t'<<can_map<<'\t'<<take<<'\n';
+            table<<original<<'\t'<<node.flags<<'\t'<<int(has_b[id])<<'\t'<<!dead[id]<<'\t'<<can_map<<'\t'<<take<<'\n';
             survive+=!dead[id];
             if(!take) continue;
             const char type=node.flags==0 ? 'B' : has_b[id] ? 'M' : 'T';
-            selected<<id<<'\t'<<type<<'\t'<<node.lit_end-g.litBegin(id);
+            selected<<original<<'\t'<<type<<'\t'<<node.lit_end-g.litBegin(id);
             for(auto k=g.litBegin(id);k<node.lit_end;++k)
                 selected<<'\t'<<(mapped.at(g.lits[k]/2)^(g.lits[k]&1));
             selected<<'\n';

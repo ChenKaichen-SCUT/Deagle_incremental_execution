@@ -64,6 +64,7 @@ public:
         Lit rf_lit;
         Lit guard_lit;
 
+        ProofId rf_certificate=0;
         triplett(int _w1, int _w2, int _r, Lit _rf_lit, Lit _guard_lit) :
             w1(_w1), w2(_w2), r(_r), rf_lit(_rf_lit), guard_lit(_guard_lit) {}
     };
@@ -71,6 +72,7 @@ public:
     std::vector<triplett> triplets_to_check;
 
 private:
+    ProofId triplet_reason(const triplett &t,Lit target);
     std::map<Lit, std::vector<triplett>> rf_to_triplets;
     std::map<Lit, std::vector<triplett>> guard_to_triplets;
 

@@ -4,12 +4,19 @@ from pathlib import Path
 import subprocess
 import sys
 
-from d4_prepare import SCHEMA, RULES, TOOL_FILES, check_library, digest, save
+from d4_prepare import SCHEMA, RULES, RULES41, POLICIES, TOOL_FILES, check_library, digest, save
 
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument("mode",choices=("record","record-cold","reuse"))
+    parser.add_argument("--triplets",action="store_true",help="record D4.1 conditional triplet proofs")
+    parser.add_argument("--compact",action="store_true",help="persist permanent birth ancestry and retired-birth receipts")
+    parser.add_argument("--eager",action="store_true",help="audit control recording duplicate triplet proposals before native deduplication")
+    parser.add_argument("--identities",action="store_true",help="record static interval and aggregate event witnesses")
+    parser.add_argument("--mapping",choices=("d4","d41"),default="d4")
+    parser.add_argument("--diff",choices=("full","focused"),default="full")
+    parser.add_argument("--policy",choices=POLICIES)
     parser.add_argument("--binary",required=True,type=Path)
     parser.add_argument("--tools",required=True,type=Path)
     parser.add_argument("--out",required=True,type=Path,help="new output directory")
@@ -31,16 +38,26 @@ def main():
     if not files:parser.error("identify at least one program input")
     out.mkdir(parents=True,exist_ok=False)
     if args.mode=="record":
+        if args.policy or args.mapping!="d4" or args.diff!="full":parser.error("selection options require P1")
         flags=["--d3-layouts","--d1-manifest",out/"model.tsv","--d3-proof",out/"proof.bin"]
+        if args.triplets:flags.append("--d41-triplets")
+        if args.eager:flags.append("--d41-eager")
+        if args.compact:flags.append("--d41-compact")
+        if args.identities:flags.append("--d41-identities")
     else:
         lib=args.library.resolve()
-        check_library(lib,binary,tools)
+        if args.triplets or args.compact or args.identities or args.eager:parser.error("P0 recording options on P1")
+        check_library(lib,binary,tools,preflight=args.diff=="focused")
+        if args.policy or args.mapping!="d4" or args.diff!="full":
+            save(out/"control.json",dict(mapping=args.mapping,diff=args.diff,policy=args.policy or "all"))
         flags=["--d4-load",lib,"--d4-mode",args.mode,"--d4-out",out,"--d4-tools",tools]
+        if args.mapping=="d41":flags.append("--d41-identities")
     command=[binary,*flags,"--d4-search-log",out/"search.tsv",*verifier_args]
     code=subprocess.run(command).returncode
     if code not in (0,10):return code if code>=0 else 128-code
     if args.mode=="record":
-        r=dict(schema=SCHEMA,rules=RULES,native_sha256=digest(binary),exit_code=code,sources=files,
+        r=dict(schema=SCHEMA,rules=RULES41 if args.triplets else RULES,triplets=args.triplets,compact=args.compact,
+               identities=args.identities,native_sha256=digest(binary),exit_code=code,sources=files,
                argv=list(map(str,command)),working_directory=str(Path.cwd()),
                tool_sha256={f:digest(tools/f) for f in TOOL_FILES},
                library_sha256={f:digest(out/f) for f in ("model.tsv","proof.bin")})

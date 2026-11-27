@@ -1,5 +1,6 @@
 """Bind local native graph IDs to exact D1 declarations before joint invalidation."""
 import argparse
+from contextlib import nullcontext
 from collections import defaultdict
 import gzip
 import json
@@ -9,11 +10,11 @@ from urllib.parse import unquote
 
 
 
-def facts(manifest, delta, output):
+def facts(manifest, delta, output, *, graph_lines=None, declaration_rows=None):
     nodes, names, directions, members = {}, {}, set(), defaultdict(set)
     receipt=[]
     opener = gzip.open if manifest.suffix == ".gz" else open
-    with opener(manifest, "rt") as stream:
+    with (opener(manifest,"rt") if graph_lines is None else nullcontext(graph_lines)) as stream:
         for line in stream:
             tag = line.partition("\t")[0]
             if tag in {"NODE","IN","OUT","MEMBER","EDGE","GUARD"}:
@@ -46,9 +47,9 @@ def facts(manifest, delta, output):
         return i
 
     declarations = {}
-    with gzip.open(delta / "declarations.jsonl.gz", "rt") as stream:
-        for line in stream:
-            side, kind, local, _, key, state, why = json.loads(line)
+    with (gzip.open(delta/"declarations.jsonl.gz","rt") if declaration_rows is None else nullcontext(declaration_rows)) as stream:
+        for row in stream:
+            side, kind, local, _, key, state, why = json.loads(row) if declaration_rows is None else row
             if side != 0:
                 continue
             if kind == "RuleConfig":

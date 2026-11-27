@@ -68,34 +68,49 @@ def apply_layouts(rows, keys):
     return safe
 
 
+def load_rows(path, capture_graph=False):
+    rows=defaultdict(list)
+    ended=False
+    with path.open(encoding="utf-8") as file:
+        if file.readline().rstrip("\n")!="DEAGLE-D1\t1":raise ValueError("unexpected manifest format")
+        for line in file:
+            if ended:raise ValueError("extra records after native boundary")
+            if line.startswith(("C\t","G\t")):continue
+            tag,*fields=line.rstrip("\n").split("\t")
+            rows[tag].append(tuple(unquote(x) if "%" in x else x for x in fields))
+            if capture_graph and tag in {"NODE","IN","OUT","MEMBER","EDGE","GUARD"}:rows["_GRAPH"].append(line)
+            ended=tag in ("END","READY")
+    if not ended:raise ValueError("missing native boundary")
+    return rows
+
+
 class Model:
-    def __init__(self, path, keys, layout_bits=False, *, live_boundary=False, recorded_queries=False):
+    def __init__(self, path, keys, layout_bits=False, *, live_boundary=False, recorded_queries=False,
+                 records=None, site_pairs=None):
         self.path, self.keys = path, keys
-        rows = self.rows = defaultdict(list)
-        ended = False
-        with path.open(encoding="utf-8") as file:
-            if file.readline().rstrip("\n") != "DEAGLE-D1\t1":
-                raise ValueError("unexpected manifest format")
-            for line in file:
-                if ended:
-                    raise ValueError("extra records after END")
-                if line.startswith(("C\t", "G\t")):
-                    continue
-                tag, *fields = line.rstrip("\n").split("\t")
-                rows[tag].append(tuple(unquote(x) if "%" in x else x for x in fields))
-                ended = tag in ("END", "READY")
+        rows = self.rows = load_rows(path) if records is None else records
         if live_boundary:
             complete = rows["READY"] == [("D4-P1-v1",)] and not rows["END"]
         else:
             complete = rows["END"] in ([("0",)], [("10",)]) and not rows["READY"]
         sizes = [int(r[0]) for r in rows["N"]]
-        if (not ended or not complete or not sizes or sizes != sorted(sizes) or len(rows["K"]) != 1
+        if (not complete or not sizes or sizes != sorted(sizes) or len(rows["K"]) != 1
                 or len(sizes) != 1 and (live_boundary or not recorded_queries)):
             raise ValueError("requires a complete manifest at the requested native query boundary")
         certified_prefix=apply_layouts(rows,keys) if layout_bits else {}
         self.nvars = sizes[-1]
         self.sites = {sid: keys.intern("site", signature) if status == "unique" else 0
                       for sid, signature, status, *_ in rows["S"]}
+        if site_pairs is not None:
+            self.sites.update(site_pairs)
+            # An event needs an object and its full type identity, not a value
+            # equivalence for every encoding bit of the aggregate.
+            signatures={r[0]:r[1] for r in rows["LAYOUT"]}
+            layouts=defaultdict(set)
+            for name,layout in rows["EVENT_LAYOUT"]:layouts[name].add(signatures[layout])
+            rows["E"]=[(name,ctx,role,obj,"event-layout:"+str(keys.intern("event-layout",next(iter(layouts[name]))))
+                        if not typ and storage=="static" and obj and len(layouts[name])==1 else typ,storage)
+                       for name,ctx,role,obj,typ,storage in rows["E"]]
         self.context = {"0": 0}
         self.ctx_reason = {}
         for idx, site, birth, caller, *loops in rows["X"]:

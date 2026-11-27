@@ -52,6 +52,8 @@ public:
     bool import_boundary_used=false;
     std::string search_log;
     void importAtRoot(ClauseImports &batch,bool reuse);
+    std::array<uint64_t,5> work() const
+    { return {{conflicts,decisions,propagations,uint64_t(theory_propagation),uint64_t(conflict_cycle)}}; }
     bool residentDuplicate(const std::vector<int> &residual);
     const closure& declaration_graph() const { return graph; }
     void (*observe_co)(int, int, Lit, Lit, Lit, Lit) = nullptr;
@@ -70,6 +72,7 @@ public:
     void assign_literal(Lit l, literal_vector& lv, ProofId reason=0);
 
     void apply_literal_assignment();
+    bool already_scheduled(Lit target) const {return assigned_literals.count(target)!=0;}
 
     std::vector<std::string> get_write_order();
 

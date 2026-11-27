@@ -28,10 +28,10 @@ bool same_query(const Model &old, const Model &now)
   return assumptions[0] == assumptions[1];
 }
 
-void compare(const Model &old, const Model &now, const std::string &out)
+void compare(const Model &old, const Model &now, const std::string &out,bool only_map=false)
 {
-  std::ofstream variables(out+"/variables.tsv"), occurrences(out+"/occurrences.tsv"),
-    content(out+"/clause-keys.tsv"), counts(out+"/clause-counts.tsv");
+  std::ofstream variables(out+"/variables.tsv"), occurrences,content,counts;
+  if(!only_map) {occurrences.open(out+"/occurrences.tsv");content.open(out+"/clause-keys.tsv");counts.open(out+"/clause-counts.tsv");}
   for(auto *f : {&variables, &occurrences, &content, &counts})
     f->exceptions(std::ios::badbit | std::ios::failbit);
   std::unordered_map<Key,Leaf,Hash> leaves;
@@ -45,6 +45,7 @@ void compare(const Model &old, const Model &now, const std::string &out)
       variables << side << '\t' << i << '\t' << v.peer << '\t' << v.role << '\t'
                 << v.reason << '\t' << v.anchor << '\n';
     }
+    if(only_map) continue;
     std::ifstream file(m.path);
     file.exceptions(std::ios::badbit);
     std::string line;
@@ -103,13 +104,16 @@ void compare(const Model &old, const Model &now, const std::string &out)
     counts << l.id << '\t' << char(entry.first.front()) << '\t' << l.count[0] << '\t'
            << l.count[1] << '\n';
   }
-  for(auto *f : {&variables,&occurrences,&content,&counts}) f->close();
+  for(auto *f : {&variables,&occurrences,&content,&counts}) if(f->is_open()) f->close();
 }
 }
 
 int main(int argc, char **argv)
 {
-  const bool live=argc==7 && std::string(argv[6])=="--d4-boundary";
+  const std::string mode=argc==7?argv[6]:"";
+  const bool improved=mode=="--d41-map" || mode=="--d41-map-only";
+  const bool only=mode=="--d41-map-only" || mode=="--d41-old-map-only";
+  const bool live=improved || only || mode=="--d4-boundary";
   const bool refine=live || (argc==7 && std::string(argv[6])=="--d3-mapping");
   if(argc!=6 && !refine) return 2;
   try
@@ -117,7 +121,8 @@ int main(int argc, char **argv)
     d1::Model old(argv[1],argv[3],live), now(argv[2],argv[4]);
     d1::match(old,now);
     if(refine) d1::refine_duplicate_gates(old,now);
-    d1::compare(old,now,argv[5]);
+    if(improved) d1::refine_duplicate_gates(old,now,true);
+    d1::compare(old,now,argv[5],only);
   }
   catch(const std::exception &e)
   {

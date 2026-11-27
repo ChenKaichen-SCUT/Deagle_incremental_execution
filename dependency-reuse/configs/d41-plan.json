@@ -1,0 +1,29 @@
+{
+  "baseline": "78d909da845966744908a111a389b883ea2fc81b",
+  "cases": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6"
+  ],
+  "fixed_selection": [
+    "none",
+    "boolean",
+    "mixed",
+    "theory",
+    "all",
+    "short"
+  ],
+  "short_rule": "all permanent final births with unshortened P0 length <= 4; count before import/root shortening",
+  "order": "listed case order, one paired exploratory block per case; all policy arms reuse exactly the same compact P0 archive, root boundary and verifier settings",
+  "comparisons": [
+    "stock",
+    "D4 fixed",
+    "triplet recording vs D4 rules with original mapping",
+    "D4 vs improved identity on same proof and models",
+    "full audit vs compact serialization and focused matching with identical theory and mapping",
+    "eager versus accepted-only triplet proposals on identical models",
+    "six fixed policies"
+  ],
+  "outcomes": "all properties and unwind obligations, all births, native uses, import root work, search counters, wall/RSS and P0+P1 cycles; no P1-informed selection",
+  "stage": "D4.1"
+}

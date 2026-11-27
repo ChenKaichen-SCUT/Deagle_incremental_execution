@@ -8,7 +8,7 @@ from pathlib import Path
 def verify(path, observer):
     counts = {"C": 0, "A": 0}
     with path.open("rb") as src, mmap.mmap(src.fileno(),0,access=mmap.ACCESS_READ) as data, observer.open("rb") as rows:
-        if data[:8]!=b"DEAGD3\x01\0" or data[-4:]!=b"END3":
+        if data[:8] not in (b"DEAGD3\x01\0",b"DEAGD3\x02\0") or data[-4:]!=b"END3":
             raise ValueError("incomplete D3 proof")
         sections=[]
         pos=12
@@ -20,14 +20,14 @@ def verify(path, observer):
         ops={}
         for i in range(sections[12][1]):
             id_,opcode=struct.unpack_from("<II",data,sections[12][0]+20*i)
-            if opcode in (16,17):ops[id_]=opcode
+            if opcode in (16,17) or opcode==18 and data[6]==2:ops[id_]=opcode
         lo=0
         for i in range(sections[0][1]):
             hi,end,kind,_=struct.unpack_from("<IIII",data,sections[0][0]+16*i)
             tag=None
             if kind==14:
                 parent=struct.unpack_from("<I",data,sections[2][0]+8*(end-1))[0]
-                tag={16:"C",17:"A"}[ops[parent]]
+                tag={16:"C",17:"A",18:"A"}[ops[parent]]
             elif kind in (7,8):
                 tag="C" if kind==7 else "A"
             if tag:

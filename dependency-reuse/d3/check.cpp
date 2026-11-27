@@ -223,7 +223,14 @@ struct TheoryAudit {
         case PreventRF:
             arity(2); require(z==-1,"prevention payload"); ordered(0,y,x); bound(1,RFEdge,x,y,-1);
             result.sort=Contradiction; break;
-        case TripletRule: throw std::runtime_error("triplet inference reserved and opaque in D3");
+        case TripletRule:
+            require(g.triplets,"triplet inference reserved in D3");
+            arity(6);
+            require(x!=y && y!=z && x!=z && m.nodes.at(x).write && m.nodes.at(y).write &&
+                    m.nodes.at(z).read,"triplet event roles");
+            ordered(0,x,y); ordered(1,y,z); bound(2,RFEdge,x,z,-1);
+            bound(3,GuardOn,y,-1,-1); bound(4,SchemaDecl,y,-1,-1); address(5,x,y);
+            result.sort=Contradiction; break;
         default: throw std::runtime_error("unsupported inference");
         }
         result.conditions=normalized(std::move(result.conditions));

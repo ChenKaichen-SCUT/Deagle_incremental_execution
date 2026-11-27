@@ -444,6 +444,15 @@ int cbmc_parse_optionst::doit()
   optionst options;
   get_command_line_options(options);
   const bool loading=cmdline.isset("d4-load");
+  dependency_manifest::triplets=cmdline.isset("d41-triplets");
+  dependency_manifest::eager_triplets=cmdline.isset("d41-eager");
+  if(dependency_manifest::eager_triplets && !dependency_manifest::triplets) throw std::runtime_error("eager control needs triplet recording");
+  dependency_manifest::compact_proof=cmdline.isset("d41-compact");
+  dependency_manifest::identities41=cmdline.isset("d41-identities");
+  if((dependency_manifest::triplets || dependency_manifest::compact_proof) && !cmdline.isset("d3-proof"))
+    throw std::runtime_error("D4.1 recording requires --d3-proof");
+  if(dependency_manifest::identities41 && !loading && !cmdline.isset("d3-layouts"))
+    throw std::runtime_error("D4.1 identities require a native layout manifest");
   if(loading || cmdline.isset("d4-mode") || cmdline.isset("d4-out") || cmdline.isset("d4-tools"))
   {
     if(!loading || !cmdline.isset("d4-out") || !cmdline.isset("d4-tools") ||

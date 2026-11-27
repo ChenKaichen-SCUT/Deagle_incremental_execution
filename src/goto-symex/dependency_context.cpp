@@ -189,6 +189,14 @@ void index_sites(const goto_functionst &functions)
       row("S", {std::to_string(id), keys[i], key_count[keys[i]] == 1 ? "unique" : "ambiguous",
                 id2string(f.first), id2string(ins.source_location().get_file()),
                 id2string(ins.source_location().get_line())});
+      if(identities41)
+      {
+        std::set<std::string> tags;
+        std::vector<std::string> targets;
+        for(const auto &target:ins.targets) targets.push_back(operation(*target));
+        row("SITE41",{std::to_string(id),tuple({ops[i],describe_type(ins.code(),tags),
+          ins.has_condition()?describe_type(ins.condition(),tags):"",tuple(targets)})});
+      }
       if(ins.is_backwards_goto() && ins.targets.size() == 1)
         loops[f.first].push_back({ins.get_target()->location_number, ins.location_number,
                                   goto_programt::loop_id(f.first, ins), id});

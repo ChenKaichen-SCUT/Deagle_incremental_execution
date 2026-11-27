@@ -360,7 +360,24 @@ void closure::add_trinary_pattern(int w1, int w2, int r)
         return;
     }
 
-    triplets_to_check.push_back(triplett(w1, w2, r, rf_lit, guard_lit));
+    triplets_to_check.emplace_back(w1,w2,r,rf_lit,guard_lit);
+    if(recorder && recorder->triplets)
+        triplets_to_check.back().rf_certificate=rf_order(w1,r,rf_lit);
+}
+
+ProofId closure::triplet_reason(const triplett &t,Lit target)
+{
+    if(!recorder || !t.rf_certificate || (!recorder->eager_triplets && solver->already_scheduled(target))) return 0;
+    const int a=t.w1,b=t.w2,r=t.r;
+    if(a==b || a==r || b==r || !nodes[a].is_write || !nodes[b].is_write || !nodes[r].is_read ||
+       nodes[a].address!=nodes[b].address || nodes[a].address!=nodes[r].address ||
+       t.guard_lit!=nodes[b].guard || t.guard_lit.x < -1 ||
+       proof_rep(a)==proof_rep(b) || proof_rep(b)==proof_rep(r)) return 0;
+    // These are the two live edges whose reason vectors the native path just read.
+    // The RF binding was checked while registered; a root activation may since
+    // have removed it from the inactive index. The certificate is conditional.
+    return recorder->rule(TripletRule,a,b,r,{active_order(a,b),active_order(b,r),t.rf_certificate,
+        guards[b],recorder->decl(SchemaDecl,b),recorder->decl(AddressDecl,std::min(a,b),std::max(a,b))});
 }
 
 void closure::check_trinary_pattern()
@@ -390,7 +407,7 @@ void closure::check_trinary_pattern()
             push_need(unit_lv, guard_lit);
             neg(unit_lv);
 
-            solver->assign_literal(~guard_lit, unit_lv);
+            solver->assign_literal(~guard_lit, unit_lv, triplet_reason(triplet,~guard_lit));
 
             if(OC_VERBOSITY >= 1)
                 std::cout << "using pattern, propagate guard " << w2 << " false\n";
@@ -403,15 +420,14 @@ void closure::check_trinary_pattern()
             push_need(unit_lv, guard_lit);
             neg(unit_lv);
 
-            solver->assign_literal(~rf_lit, unit_lv);
+            solver->assign_literal(~rf_lit, unit_lv, triplet_reason(triplet,~rf_lit));
 
             if(OC_VERBOSITY >= 1)
                 std::cout << "using pattern, propagate rf " << w1 << " " << r << " false\n";
         }
         else
         {
-            //add "binary clause"
-            triplett triplet(w1, w2, r, rf_lit, guard_lit);
+            // Defer the checked RF binding together with the native triplet.
             rf_to_triplets[rf_lit].push_back(triplet);
             guard_to_triplets[guard_lit].push_back(triplet);
 
@@ -458,7 +474,7 @@ bool closure::activate_edge(int vi, int wi, edge_kindt kind, literal_vector& rea
                 push_need(unit_lv, guard_lit);
                 neg(unit_lv);
 
-                solver->assign_literal(~guard_lit, unit_lv);
+                solver->assign_literal(~guard_lit, unit_lv, triplet_reason(triplet,~guard_lit));
 
                 if(OC_VERBOSITY >= 1)
                     std::cout << "revisiting pattern, propagate guard " << w2 << " false\n";
@@ -1156,7 +1172,7 @@ bool closure::light_guard(int u)
                 push_need(unit_lv, guard_lit);
                 neg(unit_lv);
 
-                solver->assign_literal(~rf_lit, unit_lv);
+                solver->assign_literal(~rf_lit, unit_lv, triplet_reason(triplet,~rf_lit));
 
                 if(OC_VERBOSITY >= 1)
                     std::cout << "revisiting pattern, propagate rf " << w1 << " " << r << " false\n";

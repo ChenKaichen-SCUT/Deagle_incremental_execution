@@ -126,7 +126,7 @@ ProofId ProofStore::internTheory(ProofKind kind,TheoryOp op,int a,int b,int c,co
 {
     if(theory_records.size()+1 > theory_slots.size()*3/4) growTheoryIndex();
     uint64_t h=payloadHash(op,a,b,c);
-    if(kind==TheoryInference && (op<=BlockDecl || op>=TripletRule || !count)) return 0;
+    if(kind==TheoryInference && (op<=BlockDecl || op>(triplets ? TripletRule : PreventRF) || !count)) return 0;
     for(size_t i=0;i<count;++i)
     {
         auto id=parents[i];
@@ -193,7 +193,7 @@ ProofId ProofStore::lemma(ProofKind boundary,const vec<Lit> &actual,ProofId reas
     const size_t index=theoryIndex(reason);
     const auto op=theory_records[index].op;
     if(!((op==CycleRule && boundary==TheoryConflict) ||
-         (op==PreventRF && boundary==TheoryReason)))
+         ((op==PreventRF || (triplets && op==TripletRule)) && boundary==TheoryReason)))
     {
         ++discharge_stats[0];
         return opaque(boundary,actual);
@@ -461,9 +461,74 @@ template<typename T> void get(FILE *f,std::vector<T> &v,uint64_t &left)
 }
 }
 
+// Keep the complete direct proof of each permanent final birth. Retired births
+// keep their native identity, flags and conclusion, but cannot certify a child.
+void ProofStore::projectBirths()
+{
+    const auto start=std::chrono::steady_clock::now();
+    std::vector<uint8_t> keep(nodes.size()),has_boolean(nodes.size());
+    std::vector<ProofId> dense(nodes.size());
+    for(const auto &birth:learned)
+        if(!(nodes[birth.id].flags&(Incomplete|Query|Theory))) keep[birth.id]=1;
+    for(size_t id=nodes.size();id-->1;)
+        if(keep[id])
+            for(auto j=edgeBegin(id);j<nodes[id].edge_end;++j) keep[edges[j].parent]=1;
+    // Forward compaction only overwrites already-consumed slots.
+    uint32_t lit_out=0,edge_out=0,lit_in=0,edge_in=0;
+    origins.push_back(0);
+    size_t birth_index=0;
+    for(ProofId id=1;id<nodes.size();++id)
+    {
+        const ProofNode n=nodes[id];
+        bool b=n.kind==BooleanInput || n.kind==QueryInput;
+        for(auto j=edge_in;j<n.edge_end;++j) b|=bool(has_boolean[edges[j].parent]);
+        has_boolean[id]=b;
+        if(keep[id] || n.kind==Learned)
+        {
+            const ProofId dst=narrow(origins.size());
+            dense[id]=dst; origins.push_back(id);
+            for(auto k=lit_in;k<n.lit_end;++k) lits[lit_out++]=lits[k];
+            if(keep[id]) for(auto j=edge_in;j<n.edge_end;++j)
+            {
+                const auto e=edges[j];
+                if(!dense[e.parent]) throw std::logic_error("incomplete compact ancestry");
+                edges[edge_out++]={dense[e.parent],e.pivot};
+            }
+            nodes[dst]={lit_out,edge_out,keep[id]?n.kind:uint32_t(RetiredBirth),n.flags};
+            if(n.kind==Learned)
+            {
+                auto &birth=learned.at(birth_index++);
+                if(birth.id!=id) throw std::logic_error("out-of-order native birth");
+                birth.id=dst;
+                if(!keep[id]) {birth.uip_edges=0;birth.min_edges=b;}
+            }
+        }
+        lit_in=n.lit_end; edge_in=n.edge_end;
+    }
+    if(birth_index!=learned.size()) throw std::logic_error("missing native birth");
+    nodes.resize(origins.size());lits.resize(lit_out);edges.resize(edge_out);
+    size_t next=0;
+    for(size_t seq=0;seq<inputs.size();++seq)
+    {
+        const auto leaf=dense[inputs[seq].leaf];
+        if(leaf)
+        {
+            if(nodes[leaf].kind!=BooleanInput || seq>=INT32_MAX) throw std::logic_error("invalid compact Boolean leaf");
+            inputs[next++]={leaf,0,0,int32_t(seq+1)};
+        }
+    }
+    inputs.resize(next); next=0;
+    for(auto r:theory_records)
+        if(dense[r.id]) {r.id=dense[r.id];theory_records[next++]=r;}
+    theory_records.resize(next);
+    evicted.clear();satisfied_removals.clear();residents.clear();root_units.clear();terminals.clear();
+    project_ns=std::chrono::duration_cast<std::chrono::nanoseconds>(std::chrono::steady_clock::now()-start).count();
+}
+
 bool ProofStore::write(int exit_code)
 {
     if(!output) return false;
+    if(compact) projectBirths();
     const auto start=std::chrono::steady_clock::now();
     buildReverse();
     const auto indexed=std::chrono::steady_clock::now();
@@ -482,17 +547,19 @@ bool ProofStore::write(int exit_code)
         (chain.capacity()+theory_parents.capacity())*sizeof(ProofEdge);
     uint32_t marker=0x01020304;
     char format[8]; std::memcpy(format,magic,8);
-    if(d3) format[5]='3';
+    if(d3) format[5]=compact?'C':'3';
+    if(triplets) format[6]=2;
     bool ok=fwrite(format,1,8,output)==8 && fwrite(&marker,4,1,output)==1 &&
         put(output,nodes) && put(output,lits) && put(output,edges) && put(output,inputs) &&
         put(output,learned) && put(output,evicted) && put(output,satisfied_removals) && put(output,residents) && put(output,root_units) && put(output,terminals) &&
         put(output,offsets) && put(output,children);
     if(d3) ok=ok && put(output,theory_records) && put(output,graph_receipt) &&
                   fwrite(discharge_stats,sizeof(discharge_stats),1,output)==1;
+    if(compact) ok=ok && put(output,origins) && fwrite(&project_ns,sizeof(project_ns),1,output)==1;
     stats[WriteSectionsNS]=std::chrono::duration_cast<std::chrono::nanoseconds>(
         std::chrono::steady_clock::now()-indexed).count();
-    ok=ok && fwrite(stats,sizeof(stats),1,output)==1 &&
-        fwrite(&exit_code,4,1,output)==1 && fwrite(d3?"END3":"END2",1,4,output)==4;
+    ok=ok && fwrite(stats,sizeof(stats),1,output)==1 && fwrite(&exit_code,4,1,output)==1 &&
+        fwrite(compact?"ENDC":d3?"END3":"END2",1,4,output)==4;
     ok=std::fclose(output)==0 && ok;
     output=nullptr;
     return ok;
@@ -509,8 +576,11 @@ int ProofStore::read(const std::string &path)
     char head[8],end[4];
     uint32_t marker;
     if(fread(head,1,8,f)!=8) throw std::runtime_error("truncated archive header");
-    d3=head[5]=='3';
+    compact=head[5]=='C';
+    d3=compact || head[5]=='3';
     if(d3) head[5]='2';
+    triplets=d3 && head[6]==2;
+    if(triplets) head[6]=1;
     if(memcmp(head,magic,8) || fread(&marker,4,1,f)!=1 || marker!=0x01020304)
         throw std::runtime_error("incompatible D2 archive");
     uint64_t left=uint64_t(size)-12;
@@ -524,8 +594,15 @@ int ProofStore::read(const std::string &path)
             throw std::runtime_error("missing D3 discharge counters");
         left-=sizeof(discharge_stats);
     }
+    if(compact)
+    {
+        get(f,origins,left);
+        if(left<sizeof(project_ns) || fread(&project_ns,sizeof(project_ns),1,f)!=1)
+            throw std::runtime_error("missing compact projection timing");
+        left-=sizeof(project_ns);
+    }
     int code;
     if(left!=sizeof(stats)+8 || fread(stats,sizeof(stats),1,f)!=1 || fread(&code,4,1,f)!=1 ||
-       fread(end,1,4,f)!=4 || memcmp(end,d3?"END3":"END2",4)) throw std::runtime_error("incomplete proof footer");
+       fread(end,1,4,f)!=4 || memcmp(end,compact?"ENDC":d3?"END3":"END2",4)) throw std::runtime_error("incomplete proof footer");
     return code;
 }

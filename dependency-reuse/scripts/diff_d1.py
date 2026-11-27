@@ -1,5 +1,6 @@
 """Produce an auditable D1 delta from two complete, single-query native manifests."""
 import argparse
+from contextlib import nullcontext
 from collections import Counter, defaultdict
 import gzip
 import hashlib
@@ -51,7 +52,7 @@ def one_var_table(path, models):
                              constant_aliases=[{role:len(s) for role,s in m.folded.items()} for m in models])
 
 
-def compare_theory(models, maps, out):
+def compare_theory(models, maps, out, *, old_rows=None):
     lists = [declarations(m, t) for m,t in zip(models,maps)]
     known = [{(kind, key) for kind, _, _, key, _ in items if key} for items in lists]
     unproven = [{(kind, slot) for kind, _, slot, key, _ in items if not key and slot} for items in lists]
@@ -65,7 +66,7 @@ def compare_theory(models, maps, out):
         guard_forms.append(forms)
     counts, unique, reasons = (defaultdict(Counter) for _ in range(3))
     examples = defaultdict(lambda: defaultdict(list))
-    with gzip.open(out/"declarations.jsonl.gz", "wt") as file:
+    with (gzip.open(out/"declarations.jsonl.gz","wt") if old_rows is None else nullcontext()) as file:
         for side in (0,1):
             seen = set()
             for kind, local, slot, key, why in lists[side]:
@@ -89,7 +90,8 @@ def compare_theory(models, maps, out):
                 if why:
                     reasons[kind][f"P{side}/{why}"] += 1
                 record = [side,kind,local,slot,key,state,why]
-                jsonline(file,record)
+                if old_rows is None:jsonline(file,record)
+                elif not side:old_rows.append(record)
                 if len(examples[kind][label]) < 2:
                     examples[kind][label].append(record)
     return dict(occurrences=counts, distinct_resolved_keys=unique, reasons=reasons, examples=examples)

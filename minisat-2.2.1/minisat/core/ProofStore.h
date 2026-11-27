@@ -16,7 +16,7 @@ enum ProofKind : uint32_t
 {
     Missing, BooleanInput, QueryInput, UnknownInput, Shortened, RootUnit, Learned,
     TheoryConflict, TheoryReason, DynamicCO, RootConflict, TheoryEmpty,
-    TheoryDeclaration, TheoryInference, TheoryLemma
+    TheoryDeclaration, TheoryInference, TheoryLemma, RetiredBirth
 };
 enum ProofFlag : uint32_t { Theory = 1, Query = 2, Incomplete = 4, CertifiedTheory = 8 };
 enum TheoryOp : uint32_t
@@ -81,6 +81,10 @@ public:
     std::vector<SatisfiedRemoval> satisfied_removals;
     std::vector<ProofId> residents, root_units, terminals, offsets, children;
     bool d3 = false;
+    bool triplets = false, compact = false, eager_triplets=false;
+    std::vector<ProofId> origins; // compact ID to native P0 ID, including the sentinel
+    uint64_t project_ns=0;
+    void projectBirths();
     std::vector<char> graph_receipt; // one exact static declaration stream per native graph
     uint64_t discharge_stats[3] = {}; // missing certificate, condition mismatch, exact match
     std::vector<TheoryRecord> theory_records;

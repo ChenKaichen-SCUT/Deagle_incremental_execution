@@ -185,7 +185,35 @@ inline std::map<int,Context> use_contexts(const Model &m,const std::set<int> &wa
   return contexts;
 }
 
-inline void refine_duplicate_gates(Model &old,Model &now)
+// A consumer can distinguish multiple Tseitin outputs already certified to
+// implement the same signed function. Require every other operand to be bound.
+inline void consumer_contexts(const Model &m,const std::set<int> &wanted,std::map<int,Context> &uses)
+{
+  for(size_t i=1;i<m.vars.size();++i)
+  {
+    const auto &g=m.vars[i];
+    if(g.op<=0) continue;
+    for(size_t j=0;j<g.inputs.size();++j)
+    {
+      const int lit=g.inputs[j];
+      if(lit<2 || !wanted.count(lit/2)) continue;
+      Key rest;
+      for(size_t k=0;k<g.inputs.size();++k) if(k!=j)
+      {
+        const int c=m.canonical(g.inputs[k]);if(c<0) break;
+        rest.push_back(c);
+      }
+      if(rest.size()+1!=g.inputs.size()) continue;
+      if(g.op!=6) std::sort(rest.begin(),rest.end());
+      Key key{-3,g.op,g.op==6?int(j):-1,m.canonical(2*i+g.output_sign),
+              (lit&1)^m.vars[lit/2].output_sign};
+      key.insert(key.end(),rest.begin(),rest.end());
+      uses[lit/2].insert(std::move(key));
+    }
+  }
+}
+
+inline void refine_duplicate_gates(Model &old,Model &now,bool consumers=false)
 {
   // A contextual witness only disambiguates outputs already forced to the
   // identical Boolean function by the native encoder and mapped operands.
@@ -198,7 +226,8 @@ inline void refine_duplicate_gates(Model &old,Model &now)
     if(p[0].empty() || p[1].empty() || (p[0].size()==1 && p[1].size()==1)) continue;
     for(unsigned s=0;s<2;++s) wanted[s].insert(p[s].begin(),p[s].end());
   }
-  const std::array<std::map<int,Context>,2> uses{{use_contexts(old,wanted[0]),use_contexts(now,wanted[1])}};
+  std::array<std::map<int,Context>,2> uses{{use_contexts(old,wanted[0]),use_contexts(now,wanted[1])}};
+  if(consumers) for(unsigned s=0;s<2;++s) consumer_contexts(*models[s],wanted[s],uses[s]);
   auto pair=[&](int a,int b) {pair_variables(old,now,a,b,old.vars[a].output_sign^now.vars[b].output_sign);};
   bool advanced=false;
   for(const auto &group:ready)
