@@ -5,7 +5,7 @@ import struct
 from pathlib import Path
 
 
-def verify(path, observer):
+def verify(path, observer, *, native_fixture=False):
     counts = {"C": 0, "A": 0}
     with path.open("rb") as src, mmap.mmap(src.fileno(),0,access=mmap.ACCESS_READ) as data, observer.open("rb") as rows:
         if data[:8] not in (b"DEAGD3\x01\0",b"DEAGD3\x02\0") or data[-4:]!=b"END3":
@@ -16,7 +16,8 @@ def verify(path, observer):
             n=struct.unpack_from("<I",data,pos)[0]
             sections.append((pos+4,n))
             pos+=4+width*n
-        if pos+24+18*8+8!=len(data) or not sections[13][1]:raise ValueError("missing native graph or invalid D3 section length")
+        if pos+24+18*8+8!=len(data) or (not native_fixture and not sections[13][1]):
+            raise ValueError("missing native graph or invalid D3 section length")
         ops={}
         for i in range(sections[12][1]):
             id_,opcode=struct.unpack_from("<II",data,sections[12][0]+20*i)

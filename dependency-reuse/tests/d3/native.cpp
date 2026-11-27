@@ -24,6 +24,9 @@ int main(int argc,char **argv)
 #ifdef RECORD_PROOFS
     ProofStore store(argv[2],&scope);
     store.d3=true;
+#ifdef D41_TRIPLETS
+    store.triplets=true;
+#endif
 #endif
 #ifdef IMPORT_PROOFS
     ClauseImports imported;
