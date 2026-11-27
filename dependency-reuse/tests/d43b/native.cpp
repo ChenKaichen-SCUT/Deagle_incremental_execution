@@ -2,6 +2,9 @@
 #include "minisat/core/ClosureSolver.h"
 #include <stdexcept>
 #include <iostream>
+#ifdef D43C_FIXTURE
+#include "../d43c/fixture_capture.h"
+#endif
 using namespace Minisat;
 struct Sources : dependency_manifest::group_owner_interfacet {
     std::string current="[\"B\",\"test\",0]";
@@ -105,6 +108,9 @@ void unknown_descendants(const std::string &dir){
     ProofStore audit(dir+"/proof.bin",&scope);audit.d3=true;audit.triplets=true;
     DependencyTags tags(dir+"/dense.bin",&scope,source);tags.dual=&audit;
     ClosureSolver s;s.proof=&audit;s.dense=&tags;s.newVar(l_Undef,false);
+#ifdef D43C_FIXTURE
+    FixtureTrace43 observer(dir);observer.attach(s);
+#endif
     Lit z=mkLit(s.newVar()),y=mkLit(s.newVar()),k=mkLit(s.newVar());
     oc_edge_tablet edges;oc_guard_mapt guards={{"m#1",Lit{-1}},{"m#2",Lit{-1}}};
     oc_location_mapt locations;std::map<std::string,int> order;
@@ -115,6 +121,9 @@ void unknown_descendants(const std::string &dir){
     s.addClause(~y,z,k);s.addClause(~y,z,~k);
     assumptions.clear();assumptions.push(y);need(!s.solve(assumptions),"indirect root unit must conflict");
     need(audit.write(0) && tags.finish(0),"unknown scope fixture");
+#ifdef D43C_FIXTURE
+    observer.finish();
+#endif
     std::cout<<"expected opaque units "<<(~z).x<<" "<<(~y).x<<"\n";
 }
 int main(int argc,char **argv){

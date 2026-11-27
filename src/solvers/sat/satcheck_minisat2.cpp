@@ -23,6 +23,7 @@ Author: Daniel Kroening, kroening@kroening.com
 #include <util/threeval.h>
 
 #include <minisat/core/Solver.h>
+#include <minisat/core/BoundaryAudit43.h>
 #include <minisat/simp/SimpSolver.h>
 #include "../minisat-2.2.1/minisat/core/ClosureSolver.h"
 #include "../minisat-2.2.1/minisat/core/SegmentSolver.h"
@@ -158,6 +159,14 @@ deagle_closure_solvert::deagle_closure_solvert(message_handlert &handler)
                                                 *dependency_manifest::group_sources));
     recording->dual=solver->proof;
     solver->dense=recording.get();
+#ifdef DEAGLE_D43C_AUDIT
+    if(recording->dual && !dependency_manifest::boundary_trace.empty()){
+      static std::unique_ptr<Minisat::BoundaryAudit43> boundary;
+      boundary.reset(new Minisat::BoundaryAudit43(dependency_manifest::boundary_trace+".cert"));
+      static auto finish_native=dependency_manifest::finish_boundaries;
+      dependency_manifest::finish_boundaries=[](){bool ok=boundary->finish();return finish_native() && ok;};
+    }
+#endif
     dependency_manifest::finish_dense=[](int status){return recording->finish(status);};
   }
   if(!dependency_manifest::stream) return;

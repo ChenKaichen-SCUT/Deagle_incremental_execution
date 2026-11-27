@@ -1,5 +1,9 @@
 include ../config.inc
 
+ifeq ($(D43C_AUDIT),1)
+  CP_CXXFLAGS += -DDEAGLE_D43C_AUDIT
+endif
+
 ifneq ($(CHAFF),)
   CHAFF_SRC=sat/satcheck_zchaff.cpp sat/satcheck_zcore.cpp
   CHAFF_INCLUDE=-I $(CHAFF)

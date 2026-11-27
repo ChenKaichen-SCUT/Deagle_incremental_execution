@@ -1,6 +1,9 @@
 #include "minisat/core/ClosureSolver.h"
 #include <algorithm>
 #include <fstream>
+#ifdef D43C_FIXTURE
+#include "../d43c/fixture_capture.h"
+#endif
 #include <stdexcept>
 
 using namespace Minisat;
@@ -40,9 +43,16 @@ void scope_fixture(const std::string &path)
     char scope='B';
     ProofStore g(path,&scope);
     g.d3=true;
+#ifdef D43C_FIXTURE
+    FixtureOwners43 owners;DependencyTags tags(path+".dense",&scope,owners);tags.dual=&g;
+    std::ofstream edges43(path+".branches");edges43.exceptions(std::ios::failbit|std::ios::badbit);
+#endif
     {
         ObservedSolver s;
         s.proof=&g;
+#ifdef D43C_FIXTURE
+        s.dense=&tags;
+#endif
         s.newVar(l_Undef,false);
         const Lit p=mkLit(s.newVar()),q=mkLit(s.newVar());
         oc_edge_tablet edges={{{"m#1","m#2"},{lit_Undef,"apo"}},{{"m#3","m#4"},{lit_Undef,"apo"}},
@@ -69,12 +79,24 @@ void scope_fixture(const std::string &path)
                 }
             require(bound==1,"expected exactly one conditional RF binding");
             std::cout<<"scope edge "<<id<<" raw binding "<<binding.x<<"\n";
+#ifdef D43C_FIXTURE
+            const auto &edge=nodes[1].out[0];
+            edges43<<binding.x<<' '<<id<<' '<<int(edge.proof.tag.op)<<' '<<edge.reason.size();
+            for(auto l:edge.reason)edges43<<' '<<l.x;
+            for(auto mask:edge.proof.tag.t)edges43<<' '<<mask;
+#endif
             s.undo();
+#ifdef D43C_FIXTURE
+            edges43<<' '<<nodes[1].out.size()<<' '<<nodes[3].in.size()<<'\n';
+#endif
             require(nodes[1].out.empty() && nodes[3].in.empty(),"branch edge survived rollback");
         }
         require(s.solve(),"scope fixture should admit a native model");
     }
     require(g.write(10),"write scope proof");
+#ifdef D43C_FIXTURE
+    require(tags.finish(10),"write compact branch captures");
+#endif
 }
 
 // The lower-level graph API can tag the RF target as a competing write as

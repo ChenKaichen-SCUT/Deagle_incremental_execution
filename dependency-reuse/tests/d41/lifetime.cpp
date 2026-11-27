@@ -1,6 +1,9 @@
 // Native SAT-boundary lifetime and inclusive import-work probes.
 #include "minisat/core/ClosureSolver.h"
 #include <iostream>
+#ifdef D43C_FIXTURE
+#include "../d43c/fixture_capture.h"
+#endif
 #include <stdexcept>
 using namespace Minisat;
 
@@ -43,7 +46,12 @@ static void lifetime()
 {
     char scope='B';ProofStore store("lifetime.bin",&scope);store.d3=true;store.triplets=true;
     {
-        Native s(&store);s.install();
+        Native s(&store);
+#ifdef D43C_FIXTURE
+        FixtureOwners43 owners;DependencyTags tags("dense.bin",&scope,owners);tags.dual=&store;
+        FixtureTrace43 recorder(".");s.dense=&tags;recorder.attach(s);
+#endif
+        s.install();
         s.branch(5);
         check(s.value(7)==l_False,"RF recheck did not imply guard");
         bool found=false;
@@ -55,6 +63,9 @@ static void lifetime()
         check(s.value(5)==l_False,"opposite branch did not exclude RF");
         s.undo();
         check(s.solve(),"backtrack did not preserve a native model");
+#ifdef D43C_FIXTURE
+        check(tags.finish(10),"lifetime labels");recorder.finish();s.dense=nullptr;
+#endif
     }
     check(store.write(10),"write lifetime archive");
     std::cout<<"branch RF excludes guard, undo clears both, guard branch excludes RF, native SAT\n";

@@ -1,6 +1,7 @@
 // __SZH_ADD_BEGIN__
 
 #include "ClosureSolver.h"
+#include "BoundaryAudit43.h"
 #include <algorithm>
 #include <iostream>
 #include <regex>
@@ -416,6 +417,7 @@ void closure::check_trinary_pattern()
             push_need(unit_lv, guard_lit);
             neg(unit_lv);
 
+            D43C_OBSERVE(site=BoundaryAudit43::ImmediateGuard);
             solver->assign_literal(~guard_lit, unit_lv, triplet_reason(triplet,~guard_lit));
 
             if(OC_VERBOSITY >= 1)
@@ -429,6 +431,7 @@ void closure::check_trinary_pattern()
             push_need(unit_lv, guard_lit);
             neg(unit_lv);
 
+            D43C_OBSERVE(site=BoundaryAudit43::ImmediateRF);
             solver->assign_literal(~rf_lit, unit_lv, triplet_reason(triplet,~rf_lit));
 
             if(OC_VERBOSITY >= 1)
@@ -484,6 +487,7 @@ bool closure::activate_edge(int vi, int wi, edge_kindt kind, literal_vector& rea
                 push_need(unit_lv, guard_lit);
                 neg(unit_lv);
 
+                D43C_OBSERVE(site=BoundaryAudit43::RecheckRF);
                 solver->assign_literal(~guard_lit, unit_lv, triplet_reason(triplet,~guard_lit));
 
                 if(OC_VERBOSITY >= 1)
@@ -697,6 +701,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                     if(OC_VERBOSITY >= 1)
                         std::cout << "set race" << from << " " << to << " false\n";
 
+                    D43C_OBSERVE(site=BoundaryAudit43::Race);
                     solver->assign_literal(~race_lit, conflict_reason);
                 }
                 else
@@ -767,6 +772,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                     if(recorder)
                         reason_id=recorder->rule(PreventRF,to,from,-1,
                             {active_order(from,to),rf_order(to,from,rf_lit_cand)});
+                    D43C_OBSERVE(site=BoundaryAudit43::ReverseRF);
                     solver->assign_literal(~rf_lit_cand, unit_lv, reason_id);
                 }
             }
@@ -1186,6 +1192,7 @@ bool closure::light_guard(int u)
                 push_need(unit_lv, guard_lit);
                 neg(unit_lv);
 
+                D43C_OBSERVE(site=BoundaryAudit43::RecheckGuard);
                 solver->assign_literal(~rf_lit, unit_lv, triplet_reason(triplet,~rf_lit));
 
                 if(OC_VERBOSITY >= 1)

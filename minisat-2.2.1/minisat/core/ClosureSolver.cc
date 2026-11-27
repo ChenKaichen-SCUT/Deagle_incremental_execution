@@ -1,6 +1,7 @@
 // __SZH_ADD_BEGIN__
 
 #include "ClosureSolver.h"
+#include "BoundaryAudit43.h"
 #include <chrono>
 #include "GraphTypes.h"
 
@@ -157,6 +158,12 @@ void ClosureSolver::record_early_conflict()
         proof->terminals.push_back(proof->lemma(TheoryConflict,empty,graph.conflict_proof.audit));
     }
     else proof->theoryEmpty(); // early native return can still use external root assignments
+#ifdef DEAGLE_D43C_AUDIT
+    if(auto *ob=BoundaryAudit43::active()){
+        vec<Lit> actual;for(auto lit:graph.conflict_lv)actual.push(~lit);
+        ob->event(TheoryEmpty,BoundaryAudit43::Early,actual,proof->terminals.back(),graph.conflict_proof,*dense);
+    }
+#endif
 }
 
 void ClosureSolver::set_graph()
@@ -542,6 +549,7 @@ lbool ClosureSolver::solve_()
 
 CRef ClosureSolver::propagate()
 {
+    D43C_OBSERVE(clear());
     literals_to_assign.clear();
     assignment_proofs.clear();
     assigned_literals.clear();
@@ -685,6 +693,7 @@ CRef ClosureSolver::propagate()
             if(proof) proof->bind(confl,proof->d3 ?
                 proof->lemma(TheoryConflict,minisat_lv,graph.conflict_proof.audit) :
                 proof->opaque(TheoryConflict,minisat_lv));
+            D43C_OBSERVE(event(TheoryConflict,BoundaryAudit43::GraphConflict,minisat_lv,proof->ref(confl),graph.conflict_proof,*dense));
         }
         else if(!literals_to_assign.empty())//add literals propagated by unit edge
         {
@@ -692,6 +701,7 @@ CRef ClosureSolver::propagate()
             apply_literal_assignment();
         }
 
+        D43C_OBSERVE(clear());
         literals_to_assign.clear();
         assignment_proofs.clear();
         assigned_literals.clear();
@@ -853,9 +863,12 @@ void ClosureSolver::show_rf()
 
 void ClosureSolver::assign_literal(Lit l, literal_set& lv, const TheorySupport &reason)
 {
-    if(assigned_literals.find(l) != assigned_literals.end())
+    if(assigned_literals.find(l) != assigned_literals.end()){
+        D43C_OBSERVE(duplicate(l));
         return;
+    }
 
+    D43C_OBSERVE(queued(l,lv,reason));
     literals_to_assign.push_back(std::make_pair(l, lv));
     if((proof && proof->d3) || dense) assignment_proofs.push_back(reason);
     if(dense)graph.observeDenseSlots();
@@ -864,8 +877,10 @@ void ClosureSolver::assign_literal(Lit l, literal_set& lv, const TheorySupport &
 
 void ClosureSolver::assign_literal(Lit l, literal_vector& lv, const TheorySupport &reason)
 {
-    if(assigned_literals.find(l) != assigned_literals.end())
+    if(assigned_literals.find(l) != assigned_literals.end()){
+        D43C_OBSERVE(duplicate(l));
         return;
+    }
 
     literal_set ls(lv.begin(), lv.end());
     assign_literal(l, ls, reason);
@@ -903,6 +918,7 @@ void ClosureSolver::apply_literal_assignment()
         if(proof)
             cert=proof->d3 ? proof->lemma(TheoryReason,learnt_clause,support->audit) :
                              proof->opaque(TheoryReason,learnt_clause);
+        D43C_OBSERVE(event(TheoryReason,BoundaryAudit43::Other,learnt_clause,cert,*support,*dense));
         if (learnt_clause.size() == 1)
         {
             if(OC_VERBOSITY >= 1)
@@ -932,6 +948,7 @@ void ClosureSolver::apply_literal_assignment()
 
     }
 
+    D43C_OBSERVE(clear());
     literals_to_assign.clear();
     assignment_proofs.clear();
     assigned_literals.clear();
@@ -991,6 +1008,7 @@ void ClosureSolver::addMissingCoClauses()
         if(proof) proof->bind(cr,proof->opaque(DynamicCO,co_clause));
         if(dense){dense->boundary(DynamicCO,{});dense->bind(cr);}
         if(observe_boundary)observe_boundary(DynamicCO,co_clause);
+        D43C_OBSERVE(event(DynamicCO,BoundaryAudit43::Dynamic,co_clause,proof->ref(cr),TheorySupport{},*dense));
         clauses.push(cr);
         attachClause(cr);
 

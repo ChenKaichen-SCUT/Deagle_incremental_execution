@@ -117,6 +117,7 @@ public:
     void basic(Solver &,Var);
     void learned(const vec<Lit> &);
     bool finish(int);
+    const ClauseTag &boundaryTagForAudit() const {return pending;}
     uint8_t boundaryFlags() const {return pending.flags;}
 };
 

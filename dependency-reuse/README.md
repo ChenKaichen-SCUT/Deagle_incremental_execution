@@ -15,3 +15,17 @@
 `scripts/run_d43b.py BINARY NEW_DIRECTORY` 运行固定四例，保存完整命令、输入和 ELF 摘要、性质及展开结果、确定性计数、时间、RSS 和封存回执。生产库包含模型清单、稠密目录、单调 UsedLeaf 位图及永久出生的有符号结论和标签。作用域受限的出生仅占一个带序号和标志的处置记录。双观察模式另存 `dense.bin.scoped`，供审计所有出生使用。D43DNS2 的目录顺序就是 P0 的首次注册顺序，读取时验证完整键、位号、边界和封存哈希。
 
 离线复算、同次 Audit 核对、夹具和证据恢复命令见 [D4.3-B 报告](reports/D4.3-B.md)。
+
+## D4.3-C 同次理论边界审计
+
+默认构建及生产 compact 沿用 B 阶段命令。另取一棵干净的同提交源码树，执行 `make -C src -j7 D43C_AUDIT=1 cbmc.dir`，用此 ELF 运行 `scripts/run_d43b.py AUDIT_ELF OUTPUT --modes compact-audit`。两个构建使用各自的对象目录。审计构建在同时具有完整 Audit、dense 标签和边界输出的查询中，额外写出 `boundaries.bin.cert`。每个边界保留原生有序子句、实际 Audit 理由 ID、来源推理 ID、队列票号以及原始和 SAT 端标签。生产构建在预处理时移除这些观察点。
+
+从仓库根目录可独立构建边界检查器。链接器只保留读库所需的对象节。
+
+```sh
+g++ -std=c++11 -O2 -ffunction-sections -fdata-sections -I src -I minisat-2.2.1 \
+  dependency-reuse/d4/boundary43_check.cpp minisat-2.2.1/minisat/core/ProofStore.cc \
+  -Wl,--gc-sections -o /tmp/boundary43-check
+```
+
+`scripts/audit_d43c.py` 将四例逐一对齐到冻结的 B 图和原生文字流；`scripts/control_d43c.py` 检查三种整模型置换；`tests/d43c/check.py` 从未损坏的原生夹具生成故障并核对具体拒绝原因；`scripts/gate_d43c.py` 汇总边界、准入、UsedLeaf、旧回归和生产检查。数据恢复、复核命令和固定提交见 [D4.3-C 报告](reports/D4.3-C.md)。

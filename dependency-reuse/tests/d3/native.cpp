@@ -1,6 +1,9 @@
 // D1 links the original observation-only object; D3 links the native recorder.
 #include "minisat/core/ClosureSolver.h"
 #include <fstream>
+#ifdef D43C_FIXTURE
+#include "../d43c/fixture_capture.h"
+#endif
 #include <sstream>
 #include <stdexcept>
 using namespace Minisat;
@@ -34,11 +37,19 @@ int main(int argc,char **argv)
 #ifdef IMPORT_PROOFS
     ClauseImports imported;
 #endif
+#ifdef D43C_FIXTURE
+    FixtureOwners43 owners;
+    DependencyTags tags("dense.bin",&scope,owners);tags.dual=&store;
+    FixtureTrace43 observer(".");
+#endif
     int result;
     {
         ClosureSolver solver;
 #ifdef RECORD_PROOFS
         solver.proof=&store;
+#endif
+#ifdef D43C_FIXTURE
+        solver.dense=&tags;observer.attach(solver);
 #endif
         solver.ccmin_mode=min_mode;
         if(stress)
@@ -95,6 +106,10 @@ int main(int argc,char **argv)
     }
 #ifdef RECORD_PROOFS
     if(!store.write(result)) return 3;
+#ifdef D43C_FIXTURE
+    if(!tags.finish(result)) return 3;
+    observer.finish();
+#endif
 #endif
 #ifdef IMPORT_PROOFS
     imported.write(".");
