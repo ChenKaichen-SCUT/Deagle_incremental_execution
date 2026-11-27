@@ -4,6 +4,13 @@
   "branch": "codex/compact-dependency-d43",
   "review_base": "cf3ba64ee5f9cc7b71e6be61117e483ede830b84",
   "preregistration": "a436c9f92a88009e1130f1346b949454113ce3ee",
+  "published_report": {
+    "local_sha": "d9c955c80f53596390d048314dc5b858ade05f41",
+    "verified_remote_sha": "d9c955c80f53596390d048314dc5b858ade05f41",
+    "remote_ref": "refs/heads/codex/compact-dependency-d43",
+    "report_verified_on_github": true,
+    "report": "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution/blob/d9c955c80f53596390d048314dc5b858ade05f41/dependency-reuse/reports/D4.3-A.md"
+  },
   "source_and_evidence": {
     "local_sha": "a554d08f914d968a285cc5753340237ceba2a8a5",
     "remote_sha": "a554d08f914d968a285cc5753340237ceba2a8a5",
