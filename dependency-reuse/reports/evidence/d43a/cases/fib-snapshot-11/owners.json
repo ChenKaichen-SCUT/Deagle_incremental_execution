@@ -1,0 +1,7 @@
+{
+  "case": "fib-snapshot-11",
+  "audit_model_sha256": "43f9c7a273dc0944ec112a2ef8f72d42f2ee4fdc419a93723f662d505a59bd22",
+  "ranges_sha256": "b28779b7179dd2fbaa542ffefc716094306ff34e3eb1cd806d6774c809e75efb",
+  "observer_canonical_sha256": "a66138f326ce3fec975858b93a90ef58d35c16c881d06d6dfe5b4444745a43d2",
+  "observer_scopes": 58360
+}

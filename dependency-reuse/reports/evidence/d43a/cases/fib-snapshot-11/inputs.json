@@ -1,0 +1,141 @@
+{
+  "case": "fib-snapshot-11",
+  "plan_sha256": "616988db568ffd83153f83b9a4e34b5fb34d88ec3db8ac650acc2ae9bac45e87",
+  "files": {
+    "functional/fib-snapshot-11/1/reference/P0/native/proof.bin": {
+      "bytes": 816165586,
+      "sha256": "4b2f4a834e229ecc4839ee3c2721c3e6203dc716b7bef00db346ac12f9449ed4"
+    },
+    "functional/fib-snapshot-11/1/reference/P0/native/model.tsv": {
+      "bytes": 29694789,
+      "sha256": "43f9c7a273dc0944ec112a2ef8f72d42f2ee4fdc419a93723f662d505a59bd22"
+    },
+    "functional/fib-snapshot-11/1/reference/P0/native/receipt42.json": {
+      "bytes": 2130,
+      "sha256": "78f6857dfc639a03efa6b54d62782bc4c748f95409e293dda01351ddf3ae3e60"
+    },
+    "functional/fib-snapshot-11/1/stock/P0/run.json": {
+      "bytes": 1227,
+      "sha256": "f93c6b5b2a5554e6db03d6365aff54c1620cd6c60256224d3c1aa61d8ac372c2"
+    },
+    "functional/fib-snapshot-11/1/stock/P0/result.json": {
+      "bytes": 4839,
+      "sha256": "5845d5fa182c017b9ca1b5fe1e4826dd88ff647dfee1b21ff39dda36c21f205f"
+    },
+    "functional/fib-snapshot-11/1/stock/P0/work/program.i": {
+      "bytes": 30856,
+      "sha256": "deae7fd0ef95d67bb618281e50bfba6f50a83de212ef14f46660866b256c6152"
+    },
+    "functional/fib-snapshot-11/1/stock/P1/run.json": {
+      "bytes": 1227,
+      "sha256": "35227f4445d51e883b5dcea97130f1e081d981a340610b05a979482f889b7c11"
+    },
+    "functional/fib-snapshot-11/1/stock/P1/result.json": {
+      "bytes": 4837,
+      "sha256": "0c17570855f3ba7156d23a86b40613597be6aafe5167ca5454da746595a31fdc"
+    },
+    "functional/fib-snapshot-11/1/stock/P1/work/program.i": {
+      "bytes": 30948,
+      "sha256": "c0e681ed69012b0e000ff579cf0a3e27385ce7ab4c28525dd10d6a37e7685181"
+    },
+    "functional/fib-snapshot-11/1/Mapping-only/P1/native/effective-map.tsv": {
+      "bytes": 6822883,
+      "sha256": "697d43353436d5dcbdbffcdc11d8aa51876bdaa5f39d9efdad66cad15af1304c"
+    },
+    "functional/fib-snapshot-11/1/Mapping-only/P1/native/boundary.tsv": {
+      "bytes": 29700075,
+      "sha256": "a5c7cfb8a4326fa4eeb7e17dc56d5481c7762fa6ab8684d21fd9cc680a930ebf"
+    },
+    "functional/fib-snapshot-11/1/Mapping-only/P1/native/inputs42.tsv": {
+      "bytes": 1564043,
+      "sha256": "c8d640b1dba4a0359ddb428a3dc42f68efd4a7dbd5836f5aea8dddb1f8fb8f9b"
+    },
+    "functional/fib-snapshot-11/1/Mapping-only/P1/native/facts42.tsv": {
+      "bytes": 160882,
+      "sha256": "712f45fb44d965b3571867d9ba43db18021941e30edb9f870caaa04eae40513e"
+    },
+    "functional/fib-snapshot-11/1/Mapping-only/P1/native/delta/declarations.txt": {
+      "bytes": 800148,
+      "sha256": "c88b2ce8f8ffbfbd5d8b3573a74f1459f507885e111854a4cf005775a1674fd6"
+    },
+    "functional/fib-snapshot-11/1/Mapping-only/P1/native/catalog42.tsv": {
+      "bytes": 2662848,
+      "sha256": "1741105ac2bd7bc1f1e8aa01bb8416dc0ba58866328090e49c21e522fb7e3a39"
+    }
+  },
+  "B_occurrences_including_scope": 1002193,
+  "registered_T": 13534,
+  "static_graph_T": 28017,
+  "unregistered_static_T_by_rule": {
+    "SameAddress": 14087,
+    "Block": 377,
+    "Schema": 19
+  },
+  "unregistered_dirty_large_slots": [
+    26,
+    59,
+    62,
+    180,
+    194,
+    203,
+    215,
+    227,
+    281,
+    328,
+    334,
+    390,
+    400,
+    428,
+    479,
+    557,
+    564,
+    640,
+    698,
+    786,
+    790,
+    796,
+    824,
+    878,
+    917,
+    943,
+    952,
+    961,
+    996
+  ],
+  "groups": 357,
+  "owner_source": {
+    "ssa": 1001471,
+    "T_decl": 13534
+  },
+  "boolean_assignment": {
+    "direct_checked_SSA": 1001471
+  },
+  "universe": {
+    "allB": 1001471,
+    "auditB": 63990,
+    "auditT": 8885,
+    "allT": 13534
+  },
+  "leaf_verdicts": {
+    "allB:matched": 935496,
+    "auditB:matched": 48525,
+    "allB:unmapped": 65975,
+    "auditB:unmapped": 15465,
+    "auditT:matched": 8875,
+    "allT:matched": 13378,
+    "allT:unknown": 98,
+    "auditT:unknown": 4,
+    "auditT:changed": 6,
+    "allT:changed": 58
+  },
+  "directory_record_bytes": {
+    "allB": 24915915,
+    "auditB": 1540182,
+    "auditT": 222125,
+    "allT": 338350
+  },
+  "used_bitmap_payload_bytes": 126967,
+  "directory_header_bytes": 8,
+  "bitmap_header_bytes": 16,
+  "owner_ranges_sha256": "b28779b7179dd2fbaa542ffefc716094306ff34e3eb1cd806d6774c809e75efb"
+}

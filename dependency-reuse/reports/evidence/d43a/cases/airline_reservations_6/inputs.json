@@ -1,0 +1,265 @@
+{
+  "case": "airline_reservations_6",
+  "plan_sha256": "616988db568ffd83153f83b9a4e34b5fb34d88ec3db8ac650acc2ae9bac45e87",
+  "files": {
+    "functional/airline_reservations_6/1/reference/P0/native/proof.bin": {
+      "bytes": 207722242,
+      "sha256": "5324e7e3fce90c3c93a1c102ce874546511491c8e6a317d56ee3f60ee3e80973"
+    },
+    "functional/airline_reservations_6/1/reference/P0/native/model.tsv": {
+      "bytes": 27993403,
+      "sha256": "230d97a0b7f6f522d7fa5b55de35604ac5ea39c928d4b6c037360412b2b99ae7"
+    },
+    "functional/airline_reservations_6/1/reference/P0/native/receipt42.json": {
+      "bytes": 2243,
+      "sha256": "c24a7d885beffee1d1baed5ae0f9d735b51e915b562efa6afca92334e978c59e"
+    },
+    "functional/airline_reservations_6/1/stock/P0/run.json": {
+      "bytes": 1330,
+      "sha256": "46768ae671923098fab223d9b4876e4f6c7d7f77a612de65576f9e00692f8324"
+    },
+    "functional/airline_reservations_6/1/stock/P0/result.json": {
+      "bytes": 2401,
+      "sha256": "47258576432ae81093ceb68d34ecc457bca562e5bbc9d53c27709c8ac984661e"
+    },
+    "functional/airline_reservations_6/1/stock/P0/work/program.c": {
+      "bytes": 282,
+      "sha256": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34"
+    },
+    "functional/airline_reservations_6/1/stock/P0/work/harness.c": {
+      "bytes": 539,
+      "sha256": "44f40b42442d83b54bea1f4e3420298ad2314d4698b726421fbcf9d81e061fa2"
+    },
+    "functional/airline_reservations_6/1/stock/P1/run.json": {
+      "bytes": 1318,
+      "sha256": "422f8cfbf37724f40282d370b5d1fc52317c2fc3d36b0ab75ba4e8affb6e95d0"
+    },
+    "functional/airline_reservations_6/1/stock/P1/result.json": {
+      "bytes": 2381,
+      "sha256": "3156da36f2d54454fd9a0705ea709ea4c7b6a380f864b6774ae135d9aa8b8c7d"
+    },
+    "functional/airline_reservations_6/1/stock/P1/work/program.c": {
+      "bytes": 210,
+      "sha256": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d"
+    },
+    "functional/airline_reservations_6/1/stock/P1/work/harness.c": {
+      "bytes": 539,
+      "sha256": "44f40b42442d83b54bea1f4e3420298ad2314d4698b726421fbcf9d81e061fa2"
+    },
+    "functional/airline_reservations_6/1/Mapping-only/P1/native/effective-map.tsv": {
+      "bytes": 3660490,
+      "sha256": "a00d4be99c873e64db53bad89e115578b72cda837b83c5818108d90a63417cb5"
+    },
+    "functional/airline_reservations_6/1/Mapping-only/P1/native/boundary.tsv": {
+      "bytes": 9278910,
+      "sha256": "9b5518996c1619c0913100721c6d0b15943a2c50c36e85c57b88ebf29ecf196c"
+    },
+    "functional/airline_reservations_6/1/Mapping-only/P1/native/inputs42.tsv": {
+      "bytes": 449984,
+      "sha256": "77bf30553618fe2901672cdc3eef1a17ea29c2357066635a9e026dcad8f2a55b"
+    },
+    "functional/airline_reservations_6/1/Mapping-only/P1/native/facts42.tsv": {
+      "bytes": 29250,
+      "sha256": "337d48f26bfc0c77797105e41553cebc4b6b5c85257062f763f5a5991202ed83"
+    },
+    "functional/airline_reservations_6/1/Mapping-only/P1/native/delta/declarations.txt": {
+      "bytes": 111633,
+      "sha256": "aadf7a38af56c90dbe61e80d2e8a8b77d3e1f8196f40c360976e74794ed1948a"
+    },
+    "functional/airline_reservations_6/1/Mapping-only/P1/native/catalog42.tsv": {
+      "bytes": 1002391,
+      "sha256": "8391214178d610c825e5dc39fc7bd99a350a1ef66077b8d69b846a183fb1ef98"
+    }
+  },
+  "B_occurrences_including_scope": 910797,
+  "registered_T": 2248,
+  "static_graph_T": 2834,
+  "unregistered_static_T_by_rule": {
+    "SameAddress": 528,
+    "Block": 43,
+    "Schema": 15
+  },
+  "unregistered_dirty_large_slots": [
+    3,
+    23,
+    24,
+    29,
+    31,
+    62,
+    64,
+    87,
+    89,
+    90,
+    91,
+    109,
+    128,
+    134,
+    150,
+    155,
+    162,
+    169,
+    170,
+    183,
+    193,
+    199,
+    218,
+    224,
+    241,
+    248,
+    251,
+    260,
+    263,
+    283,
+    285,
+    289,
+    301,
+    307,
+    321,
+    327,
+    332,
+    339,
+    344,
+    348,
+    353,
+    357,
+    361,
+    364,
+    380,
+    393,
+    396,
+    397,
+    398,
+    407,
+    408,
+    409,
+    410,
+    412,
+    443,
+    457,
+    469,
+    478,
+    484,
+    485,
+    495,
+    496,
+    512,
+    513,
+    517,
+    525,
+    535,
+    537,
+    546,
+    556,
+    561,
+    564,
+    580,
+    594,
+    597,
+    600,
+    602,
+    613,
+    616,
+    618,
+    633,
+    640,
+    655,
+    658,
+    667,
+    668,
+    669,
+    671,
+    675,
+    684,
+    685,
+    687,
+    688,
+    690,
+    691,
+    694,
+    702,
+    708,
+    715,
+    718,
+    721,
+    725,
+    738,
+    744,
+    745,
+    752,
+    772,
+    781,
+    782,
+    786,
+    788,
+    793,
+    805,
+    832,
+    834,
+    846,
+    854,
+    862,
+    863,
+    884,
+    895,
+    897,
+    913,
+    915,
+    925,
+    930,
+    931,
+    938,
+    943,
+    948,
+    954,
+    958,
+    961,
+    967,
+    977,
+    980,
+    982,
+    987,
+    1002,
+    1003,
+    1010,
+    1011,
+    1013,
+    1020,
+    1022
+  ],
+  "groups": 1067,
+  "owner_source": {
+    "ssa": 866692,
+    "T_decl": 2248
+  },
+  "boolean_assignment": {
+    "direct_checked_SSA": 866692
+  },
+  "universe": {
+    "allB": 866692,
+    "auditB": 17411,
+    "auditT": 1542,
+    "allT": 2248
+  },
+  "leaf_verdicts": {
+    "allB:matched": 39112,
+    "allB:unmapped": 827580,
+    "auditB:unmapped": 15574,
+    "auditB:matched": 1837,
+    "auditT:matched": 472,
+    "allT:matched": 801,
+    "allT:unknown": 741,
+    "auditT:unknown": 477,
+    "allT:changed": 706,
+    "auditT:changed": 593
+  },
+  "directory_record_bytes": {
+    "allB": 21614068,
+    "auditB": 419223,
+    "auditT": 38550,
+    "allT": 56200
+  },
+  "used_bitmap_payload_bytes": 114131,
+  "directory_header_bytes": 8,
+  "bitmap_header_bytes": 16,
+  "owner_ranges_sha256": "4b61f4d6d47850c28fb46e0e02566e137d54214e62bce65abe1ccab376cf9aba"
+}

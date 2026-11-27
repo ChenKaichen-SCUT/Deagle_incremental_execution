@@ -1,0 +1,7 @@
+{
+  "case": "fib_updates_8",
+  "audit_model_sha256": "e2dd4386796eeadb274a36f4ccb8e592d1d802efc16f5c82648cfaacdd4da0b1",
+  "ranges_sha256": "dbd83683c81e1f435076f082527960b3e2513c87647b179b403a33fb9183539b",
+  "observer_canonical_sha256": "1c86fe3b2c07d226cf79250199626b8ef416781ef8b0e0e300c70ab40bc23418",
+  "observer_scopes": 5512
+}

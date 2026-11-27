@@ -1,0 +1,1040 @@
+{
+  "fib_updates_8": [
+    {
+      "ordinal": 1,
+      "audit_id": 55080,
+      "sample_roles": [
+        "QUERY",
+        "audit_scope",
+        "all_scope",
+        "first"
+      ],
+      "widths": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "verified_mask": 0,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 6,
+      "audit_id": 55138,
+      "sample_roles": [
+        "M",
+        "audit_eligible",
+        "all_eligible",
+        "all_slot_collision"
+      ],
+      "widths": [
+        7,
+        37,
+        0,
+        0,
+        2,
+        24,
+        2,
+        22,
+        2,
+        24
+      ],
+      "verified_mask": 40960,
+      "unrelated_leaf_examples": {
+        "all_T_small": {
+          "actual_leaf": 383,
+          "actual_group": 113,
+          "dirty_leaf": 650,
+          "dirty_group": 137,
+          "dirty_state": "unknown",
+          "bucket_or_group": 63
+        },
+        "all_T_large": {
+          "actual_leaf": 579,
+          "actual_group": 126,
+          "dirty_leaf": 93,
+          "dirty_group": 76,
+          "dirty_state": "unknown",
+          "bucket_or_group": 656
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        215
+      ]
+    },
+    {
+      "ordinal": 18,
+      "audit_id": 55150,
+      "sample_roles": [
+        "B"
+      ],
+      "widths": [
+        4,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "verified_mask": 0,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 31,
+      "audit_id": 55516,
+      "sample_roles": [
+        "audit_conclusion",
+        "all_conclusion"
+      ],
+      "widths": [
+        41,
+        54,
+        0,
+        0,
+        3,
+        21,
+        3,
+        19,
+        3,
+        21
+      ],
+      "verified_mask": 62803,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 35,
+      "audit_id": 55740,
+      "sample_roles": [
+        "audit_actual_leaf",
+        "all_actual_leaf"
+      ],
+      "widths": [
+        32,
+        64,
+        0,
+        0,
+        3,
+        32,
+        3,
+        29,
+        3,
+        32
+      ],
+      "verified_mask": 62802,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        181
+      ]
+    },
+    {
+      "ordinal": 229,
+      "audit_id": 64854,
+      "sample_roles": [
+        "all_large_mixed"
+      ],
+      "widths": [
+        1,
+        36,
+        0,
+        0,
+        1,
+        11,
+        1,
+        11,
+        1,
+        11
+      ],
+      "verified_mask": 8192,
+      "unrelated_leaf_examples": {
+        "all_T_small": {
+          "actual_leaf": 387,
+          "actual_group": 117,
+          "dirty_leaf": 647,
+          "dirty_group": 134,
+          "dirty_state": "unknown",
+          "bucket_or_group": 77
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        181
+      ]
+    },
+    {
+      "ordinal": 265,
+      "audit_id": 65136,
+      "sample_roles": [
+        "all_large_mixed"
+      ],
+      "widths": [
+        1,
+        30,
+        0,
+        0,
+        1,
+        11,
+        1,
+        11,
+        1,
+        11
+      ],
+      "verified_mask": 8192,
+      "unrelated_leaf_examples": {
+        "all_T_small": {
+          "actual_leaf": 390,
+          "actual_group": 117,
+          "dirty_leaf": 647,
+          "dirty_group": 134,
+          "dirty_state": "unknown",
+          "bucket_or_group": 77
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        181
+      ]
+    },
+    {
+      "ordinal": 298,
+      "audit_id": 65434,
+      "sample_roles": [
+        "audit_same_group",
+        "all_same_group"
+      ],
+      "widths": [
+        32,
+        50,
+        0,
+        0,
+        2,
+        32,
+        2,
+        30,
+        2,
+        32
+      ],
+      "verified_mask": 62800,
+      "unrelated_leaf_examples": {
+        "audit_B_group": {
+          "actual_leaf": 7580,
+          "actual_group": 18,
+          "dirty_leaf": 7586,
+          "dirty_group": 18,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 18
+        },
+        "all_B_group": {
+          "actual_leaf": 7580,
+          "actual_group": 18,
+          "dirty_leaf": 7584,
+          "dirty_group": 18,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 18
+        },
+        "all_T_small": {
+          "actual_leaf": 130,
+          "actual_group": 100,
+          "dirty_leaf": 13,
+          "dirty_group": 45,
+          "dirty_state": "unknown",
+          "bucket_or_group": 9
+        },
+        "all_T_large": {
+          "actual_leaf": 130,
+          "actual_group": 100,
+          "dirty_leaf": 644,
+          "dirty_group": 131,
+          "dirty_state": "unknown",
+          "bucket_or_group": 521
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        181,
+        215
+      ]
+    },
+    {
+      "ordinal": 316,
+      "audit_id": 65919,
+      "sample_roles": [
+        "all_large_mixed"
+      ],
+      "widths": [
+        1,
+        30,
+        0,
+        0,
+        1,
+        11,
+        1,
+        11,
+        1,
+        11
+      ],
+      "verified_mask": 8192,
+      "unrelated_leaf_examples": {
+        "all_T_small": {
+          "actual_leaf": 396,
+          "actual_group": 117,
+          "dirty_leaf": 647,
+          "dirty_group": 134,
+          "dirty_state": "unknown",
+          "bucket_or_group": 77
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        181
+      ]
+    },
+    {
+      "ordinal": 918,
+      "audit_id": 70480,
+      "sample_roles": [
+        "all_large_mixed"
+      ],
+      "widths": [
+        10,
+        28,
+        0,
+        0,
+        1,
+        25,
+        1,
+        23,
+        1,
+        25
+      ],
+      "verified_mask": 8192,
+      "unrelated_leaf_examples": {
+        "all_T_small": {
+          "actual_leaf": 383,
+          "actual_group": 113,
+          "dirty_leaf": 650,
+          "dirty_group": 137,
+          "dirty_state": "unknown",
+          "bucket_or_group": 63
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        181,
+        215
+      ]
+    },
+    {
+      "ordinal": 1442,
+      "audit_id": 72445,
+      "sample_roles": [
+        "last"
+      ],
+      "widths": [
+        981,
+        104,
+        110,
+        0,
+        17,
+        79,
+        16,
+        68,
+        16,
+        77
+      ],
+      "verified_mask": 64521,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    }
+  ],
+  "circular-buffer": [
+    {
+      "ordinal": 1,
+      "audit_id": 1234741,
+      "sample_roles": [
+        "QUERY",
+        "audit_scope",
+        "all_scope",
+        "first"
+      ],
+      "widths": [
+        0,
+        0,
+        4,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "verified_mask": 0,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 9,
+      "audit_id": 1234749,
+      "sample_roles": [
+        "B",
+        "audit_actual_leaf",
+        "all_actual_leaf"
+      ],
+      "widths": [
+        6,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "verified_mask": 21842,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 73,
+      "audit_id": 1234813,
+      "sample_roles": [
+        "audit_same_group",
+        "all_same_group"
+      ],
+      "widths": [
+        4,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "verified_mask": 21840,
+      "unrelated_leaf_examples": {
+        "audit_B_group": {
+          "actual_leaf": 49859,
+          "actual_group": 34,
+          "dirty_leaf": 23338,
+          "dirty_group": 34,
+          "dirty_state": "mapped_absent",
+          "bucket_or_group": 34
+        },
+        "all_B_group": {
+          "actual_leaf": 49859,
+          "actual_group": 34,
+          "dirty_leaf": 9519,
+          "dirty_group": 34,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 34
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 87,
+      "audit_id": 1234827,
+      "sample_roles": [
+        "audit_conclusion",
+        "all_conclusion"
+      ],
+      "widths": [
+        9,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "verified_mask": 21841,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 89,
+      "audit_id": 1234829,
+      "sample_roles": [
+        "M"
+      ],
+      "widths": [
+        6,
+        31,
+        0,
+        0,
+        1,
+        30,
+        1,
+        28,
+        1,
+        29
+      ],
+      "verified_mask": 63440,
+      "unrelated_leaf_examples": {
+        "audit_B_group": {
+          "actual_leaf": 639904,
+          "actual_group": 72,
+          "dirty_leaf": 643367,
+          "dirty_group": 72,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 72
+        },
+        "all_B_group": {
+          "actual_leaf": 639904,
+          "actual_group": 72,
+          "dirty_leaf": 639582,
+          "dirty_group": 72,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 72
+        },
+        "all_T_small": {
+          "actual_leaf": 1,
+          "actual_group": 76,
+          "dirty_leaf": 109,
+          "dirty_group": 123,
+          "dirty_state": "unknown",
+          "bucket_or_group": 87
+        },
+        "all_T_large": {
+          "actual_leaf": 1,
+          "actual_group": 76,
+          "dirty_leaf": 109,
+          "dirty_group": 123,
+          "dirty_state": "unknown",
+          "bucket_or_group": 855
+        },
+        "audit_T_small": {
+          "actual_leaf": 1629,
+          "actual_group": 300,
+          "dirty_leaf": 3162,
+          "dirty_group": 371,
+          "dirty_state": "unknown",
+          "bucket_or_group": 18
+        },
+        "audit_T_large": {
+          "actual_leaf": 1629,
+          "actual_group": 300,
+          "dirty_leaf": 3162,
+          "dirty_group": 371,
+          "dirty_state": "unknown",
+          "bucket_or_group": 786
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        457,
+        855,
+        1010
+      ]
+    },
+    {
+      "ordinal": 115,
+      "audit_id": 1379470,
+      "sample_roles": [
+        "audit_eligible"
+      ],
+      "widths": [
+        10,
+        0,
+        0,
+        0,
+        3,
+        0,
+        3,
+        0,
+        3,
+        0
+      ],
+      "verified_mask": 21504,
+      "unrelated_leaf_examples": {
+        "all_B_group": {
+          "actual_leaf": 2779,
+          "actual_group": 13,
+          "dirty_leaf": 6940,
+          "dirty_group": 13,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 13
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 151,
+      "audit_id": 1579799,
+      "sample_roles": [
+        "T"
+      ],
+      "widths": [
+        0,
+        19,
+        0,
+        0,
+        0,
+        19,
+        0,
+        18,
+        0,
+        19
+      ],
+      "verified_mask": 43688,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        680,
+        855
+      ]
+    },
+    {
+      "ordinal": 343,
+      "audit_id": 1865343,
+      "sample_roles": [
+        "last"
+      ],
+      "widths": [
+        341,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "verified_mask": 21841,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    }
+  ],
+  "airline_reservations_6": [
+    {
+      "ordinal": 1,
+      "audit_id": 933780,
+      "sample_roles": [
+        "QUERY",
+        "audit_scope",
+        "all_scope",
+        "first"
+      ],
+      "widths": [
+        3548,
+        231,
+        88,
+        0,
+        12,
+        97,
+        11,
+        84,
+        12,
+        92
+      ],
+      "verified_mask": 65529,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        170,
+        193,
+        199,
+        218,
+        332,
+        469,
+        640,
+        694,
+        718,
+        786,
+        1011,
+        1013
+      ]
+    },
+    {
+      "ordinal": 36,
+      "audit_id": 934124,
+      "sample_roles": [
+        "M",
+        "audit_conclusion",
+        "all_conclusion"
+      ],
+      "widths": [
+        10,
+        51,
+        0,
+        0,
+        5,
+        44,
+        5,
+        41,
+        5,
+        43
+      ],
+      "verified_mask": 65529,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        29,
+        640,
+        846,
+        977
+      ]
+    },
+    {
+      "ordinal": 72,
+      "audit_id": 935650,
+      "sample_roles": [
+        "B"
+      ],
+      "widths": [
+        3,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "verified_mask": 21841,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 203,
+      "audit_id": 938455,
+      "sample_roles": [
+        "audit_actual_leaf",
+        "all_actual_leaf"
+      ],
+      "widths": [
+        4,
+        14,
+        0,
+        0,
+        1,
+        14,
+        1,
+        13,
+        1,
+        14
+      ],
+      "verified_mask": 65529,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        484,
+        597
+      ]
+    },
+    {
+      "ordinal": 210,
+      "audit_id": 940104,
+      "sample_roles": [
+        "T"
+      ],
+      "widths": [
+        0,
+        14,
+        0,
+        0,
+        0,
+        14,
+        0,
+        14,
+        0,
+        14
+      ],
+      "verified_mask": 43692,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        396,
+        688
+      ]
+    },
+    {
+      "ordinal": 42244,
+      "audit_id": 2516927,
+      "sample_roles": [
+        "last"
+      ],
+      "widths": [
+        0,
+        0,
+        15,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0
+      ],
+      "verified_mask": 0,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    }
+  ],
+  "fib-snapshot-11": [
+    {
+      "ordinal": 1,
+      "audit_id": 1083696,
+      "sample_roles": [
+        "B",
+        "audit_eligible",
+        "all_eligible",
+        "first"
+      ],
+      "widths": [
+        70,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "verified_mask": 0,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 2,
+      "audit_id": 1084750,
+      "sample_roles": [
+        "audit_conclusion",
+        "all_conclusion"
+      ],
+      "widths": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "verified_mask": 21841,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 3,
+      "audit_id": 1086747,
+      "sample_roles": [
+        "M",
+        "audit_actual_leaf",
+        "all_actual_leaf"
+      ],
+      "widths": [
+        2234,
+        588,
+        0,
+        0,
+        7,
+        48,
+        7,
+        44,
+        7,
+        47
+      ],
+      "verified_mask": 65529,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        564,
+        824
+      ]
+    },
+    {
+      "ordinal": 647,
+      "audit_id": 1118071,
+      "sample_roles": [
+        "all_same_group"
+      ],
+      "widths": [
+        6,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "verified_mask": 21504,
+      "unrelated_leaf_examples": {
+        "all_B_small": {
+          "actual_leaf": 50471,
+          "actual_group": 25,
+          "dirty_leaf": 56993,
+          "dirty_group": 34,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 28
+        },
+        "all_B_group": {
+          "actual_leaf": 597269,
+          "actual_group": 44,
+          "dirty_leaf": 539948,
+          "dirty_group": 44,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 44
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 674,
+      "audit_id": 1118404,
+      "sample_roles": [
+        "all_slot_collision"
+      ],
+      "widths": [
+        4,
+        0,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        2,
+        0
+      ],
+      "verified_mask": 20480,
+      "unrelated_leaf_examples": {
+        "all_B_small": {
+          "actual_leaf": 369483,
+          "actual_group": 40,
+          "dirty_leaf": 56993,
+          "dirty_group": 34,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 28
+        },
+        "all_B_large": {
+          "actual_leaf": 369483,
+          "actual_group": 40,
+          "dirty_leaf": 56993,
+          "dirty_group": 34,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 540
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 682,
+      "audit_id": 1131239,
+      "sample_roles": [
+        "audit_same_group"
+      ],
+      "widths": [
+        2,
+        0,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        1,
+        0
+      ],
+      "verified_mask": 21840,
+      "unrelated_leaf_examples": {
+        "audit_B_group": {
+          "actual_leaf": 44210,
+          "actual_group": 24,
+          "dirty_leaf": 38401,
+          "dirty_group": 24,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 24
+        },
+        "all_B_group": {
+          "actual_leaf": 44210,
+          "actual_group": 24,
+          "dirty_leaf": 38399,
+          "dirty_group": 24,
+          "dirty_state": "unmapped",
+          "bucket_or_group": 24
+        }
+      },
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": []
+    },
+    {
+      "ordinal": 1754,
+      "audit_id": 1867816,
+      "sample_roles": [
+        "QUERY",
+        "audit_scope",
+        "all_scope"
+      ],
+      "widths": [
+        18398,
+        4891,
+        5,
+        0,
+        25,
+        157,
+        22,
+        112,
+        23,
+        143
+      ],
+      "verified_mask": 65529,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        215,
+        564,
+        824,
+        917
+      ]
+    },
+    {
+      "ordinal": 108788,
+      "audit_id": 3567081,
+      "sample_roles": [
+        "last"
+      ],
+      "widths": [
+        58263,
+        7070,
+        5,
+        0,
+        27,
+        220,
+        23,
+        142,
+        25,
+        196
+      ],
+      "verified_mask": 65533,
+      "unrelated_leaf_examples": {},
+      "additional_dirty_T_slots_if_entire_static_catalogue_registered": [
+        194,
+        215,
+        564,
+        824,
+        917,
+        961
+      ]
+    }
+  ]
+}

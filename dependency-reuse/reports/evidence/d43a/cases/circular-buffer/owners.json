@@ -1,0 +1,7 @@
+{
+  "case": "circular-buffer",
+  "audit_model_sha256": "91598b6bffe92a99e505d3da0126b29b66d86bd189b42b5c0828b39aac93e117",
+  "ranges_sha256": "e8607bdcaa91d734617cc290d94199ce77a377e0dc34787d0e3be7c46b47d979",
+  "observer_canonical_sha256": "a2a3a587e89edfc97bb6b3c91ffbc58cd8562d7dbc02faa911be630899e6d7a0",
+  "observer_scopes": 31184
+}

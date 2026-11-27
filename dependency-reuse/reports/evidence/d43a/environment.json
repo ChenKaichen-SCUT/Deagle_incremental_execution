@@ -1,0 +1,133 @@
+{
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "machine": "x86_64",
+  "python": "3.10.12",
+  "compiler": "11.4.0",
+  "CPU": "13th Gen Intel(R) Core(TM) i7-13700F",
+  "logical_CPUs": 16,
+  "MemTotal": "MemTotal:       30802092 kB",
+  "source": {
+    "stock": {
+      "path": "/home/deagle/dependency-reuse/stock-build",
+      "sha": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+      "origin": "https://github.com/thufv/Deagle.git"
+    },
+    "D42_release": {
+      "path": "/home/deagle/dependency-reuse/runs/d42/release",
+      "sha": "dae97a351932918b7f172e23e0d93d6e8688e552",
+      "origin": "https://github.com/thufv/Deagle.git"
+    },
+    "base_review": {
+      "path": "/home/deagle/dependency-reuse/native",
+      "sha": "cf3ba64ee5f9cc7b71e6be61117e483ede830b84",
+      "origin": "https://github.com/thufv/Deagle.git"
+    }
+  },
+  "stage_worktree": "/mnt/e/Deagle_dependency_reuse_d43",
+  "stock_binary_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "D42_binary_sha256": "3e2622fc86dfe08e632a1f3d54fe337bff8fe589b4985e188b5e7a14a3315bc6",
+  "observer_build": {
+    "source_sha256": "d5781185b91e22257851390f9997fab2813bcec96e3fdcdf416a5fb2d455dc56",
+    "observer_source_sha256": "69cfed825f7e18ff3583fa31be34c4a56d0e5fc1e729318f2d1bdca07a90570c",
+    "pinned_release_sha256": "3e2622fc86dfe08e632a1f3d54fe337bff8fe589b4985e188b5e7a14a3315bc6",
+    "observer_sha256": "3774a423c1f7295d12187a671ce956062e0a906d6bd2535e2bb8d87b6e37a910",
+    "compile": [
+      "g++",
+      "-c",
+      "-DSATCHECK_MINISAT2",
+      "-MMD",
+      "-MP",
+      "-std=c++11",
+      "-O2",
+      "-DHAVE_MINISAT2",
+      "-Wall",
+      "-pedantic",
+      "-Wno-deprecated-declarations",
+      "-Wswitch-enum",
+      "-I",
+      "..",
+      "-o",
+      "/home/deagle/dependency-reuse/runs/d43a/observer/d43_owner.o",
+      "/home/deagle/dependency-reuse/runs/d43a/observer/symex_target_equation.cpp",
+      "-I",
+      "/home/deagle/dependency-reuse/runs/d42/release/src/goto-symex"
+    ],
+    "link": [
+      "g++",
+      "-o",
+      "/home/deagle/dependency-reuse/runs/d43a/observer/deagle_exe",
+      "/home/deagle/dependency-reuse/runs/d43a/observer/d43_owner.o",
+      "-Wl,--start-group",
+      "../ansi-c/ansi-c.a",
+      "../cpp/cpp.a",
+      "../json/json.a",
+      "../json-symtab-language/json-symtab-language.a",
+      "../statement-list/statement-list.a",
+      "../linking/linking.a",
+      "../big-int/big-int.a",
+      "../goto-checker/goto-checker.a",
+      "../goto-programs/goto-programs.a",
+      "../goto-symex/goto-symex.a",
+      "../pointer-analysis/value_set.o",
+      "../pointer-analysis/value_set_analysis_fi.o",
+      "../pointer-analysis/value_set_domain_fi.o",
+      "../pointer-analysis/value_set_fi.o",
+      "../pointer-analysis/value_set_dereference.o",
+      "../pointer-analysis/add_failed_symbols.o",
+      "../pointer-analysis/rewrite_index.o",
+      "../pointer-analysis/goto_program_dereference.o",
+      "../goto-instrument/source_lines.o",
+      "../goto-instrument/cover.o",
+      "../goto-instrument/cover_basic_blocks.o",
+      "../goto-instrument/cover_filter.o",
+      "../goto-instrument/cover_instrument_assume.o",
+      "../goto-instrument/cover_instrument_branch.o",
+      "../goto-instrument/cover_instrument_condition.o",
+      "../goto-instrument/cover_instrument_decision.o",
+      "../goto-instrument/cover_instrument_location.o",
+      "../goto-instrument/cover_instrument_mcdc.o",
+      "../goto-instrument/cover_instrument_other.o",
+      "../goto-instrument/cover_util.o",
+      "../goto-instrument/reachability_slicer.o",
+      "../goto-instrument/nondet_static.o",
+      "../goto-instrument/full_slicer.o",
+      "../goto-instrument/unwindset.o",
+      "../analyses/analyses.a",
+      "../langapi/langapi.a",
+      "../xmllang/xmllang.a",
+      "../assembler/assembler.a",
+      "../solvers/solvers.a",
+      "../util/util.a",
+      "../cat/cat_parsing_driver.o",
+      "../cat/cat_module.o",
+      "../cat/cat_lexer.yy.o",
+      "../cat/cat_parser.tab.o",
+      "c_test_input_generator.o",
+      "cbmc_languages.o",
+      "cbmc_main.o",
+      "cbmc_parse_options.o",
+      "../jsil/jsil.a",
+      "-Wl,--end-group"
+    ]
+  },
+  "projection_elf_sha256": "756cbbf2772ff81a791b96e90b3876afa00fe8ef8b4bac45663babc2c940938a",
+  "input_index_sha256": "45e21554e55b97dcb64aa68095c19acf7221656c7a18388f261aff78a82a96c2",
+  "sizeof": {
+    "example_abi_bytes": {
+      "small": {
+        "Closure": 40,
+        "SAT": 72
+      },
+      "large": {
+        "Closure": 136,
+        "SAT": 264
+      }
+    },
+    "native_compact_objects_in_A": 0,
+    "production_peak_observed": null
+  },
+  "identical_restored_outputs": {
+    "projection": 44,
+    "summaries": 12
+  }
+}

@@ -16,6 +16,7 @@ d4/** text eol=lf
 tests/d4/** text eol=lf
 reports/evidence/d4/** -text
 reports/evidence/d42/** -text
+reports/evidence/d43a/** -text
 tests/d3/** text eol=lf
 reports/evidence/d3/** -text
 tests/d2/** text eol=lf

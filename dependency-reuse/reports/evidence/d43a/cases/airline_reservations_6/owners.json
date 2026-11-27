@@ -1,0 +1,7 @@
+{
+  "case": "airline_reservations_6",
+  "audit_model_sha256": "230d97a0b7f6f522d7fa5b55de35604ac5ea39c928d4b6c037360412b2b99ae7",
+  "ranges_sha256": "4b61f4d6d47850c28fb46e0e02566e137d54214e62bce65abe1ccab376cf9aba",
+  "observer_canonical_sha256": "e390ba66ae7a38c003ff1e67ddcb0a5eb51998474583bfa5720d503b464c598d",
+  "observer_scopes": 12960
+}

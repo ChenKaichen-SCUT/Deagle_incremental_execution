@@ -1,0 +1,34 @@
+{
+  "fib_updates_8": {
+    "birth_catalogue_agreements": 1442,
+    "exact_candidates": 313,
+    "distinct_D42_hits": 260,
+    "signed_subset_violations": 0,
+    "universe_order_violations": 0,
+    "direct_walk_samples": 11
+  },
+  "circular-buffer": {
+    "birth_catalogue_agreements": 343,
+    "exact_candidates": 35,
+    "distinct_D42_hits": 27,
+    "signed_subset_violations": 0,
+    "universe_order_violations": 0,
+    "direct_walk_samples": 8
+  },
+  "airline_reservations_6": {
+    "birth_catalogue_agreements": 42244,
+    "exact_candidates": 0,
+    "distinct_D42_hits": 0,
+    "signed_subset_violations": 0,
+    "universe_order_violations": 0,
+    "direct_walk_samples": 6
+  },
+  "fib-snapshot-11": {
+    "birth_catalogue_agreements": 108788,
+    "exact_candidates": 40,
+    "distinct_D42_hits": 17,
+    "signed_subset_violations": 0,
+    "universe_order_violations": 0,
+    "direct_walk_samples": 8
+  }
+}
