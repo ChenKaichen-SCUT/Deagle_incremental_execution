@@ -1,0 +1,402 @@
+{
+  "direct/same": {
+    "births": 1,
+    "selected": [
+      15
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "direct/B": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 48,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "direct/T": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "direct/B+T": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 112,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "direct/unrelated": {
+    "births": 1,
+    "selected": [
+      15
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 16,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "block/same": {
+    "births": 1,
+    "selected": [
+      23
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "block/merge": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "block/split": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "competition/same": {
+    "births": 1,
+    "selected": [
+      25
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 48,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "competition/guard": {
+    "births": 1,
+    "selected": [
+      25
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 48,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "competition/add-write": {
+    "births": 1,
+    "selected": [
+      25
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "ws/same": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 80,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "ws/guard": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 80,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "true-guard/same": {
+    "births": 1,
+    "selected": [
+      25
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "true-guard/conditional": {
+    "births": 1,
+    "selected": [
+      25
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 48,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "domain/same": {
+    "births": 2,
+    "selected": [
+      24,
+      25
+    ],
+    "dispositions": {
+      "root_unit": 2
+    },
+    "status": 10,
+    "enumerated_models": 8,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "domain/expanded": {
+    "births": 2,
+    "selected": [
+      25
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 12,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "signed/same": {
+    "births": 2,
+    "selected": [
+      6,
+      7
+    ],
+    "dispositions": {
+      "root_unit": 2
+    },
+    "status": 10,
+    "enumerated_models": 4,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "signed/permuted": {
+    "births": 2,
+    "selected": [
+      6,
+      7
+    ],
+    "dispositions": {
+      "root_unit": 2
+    },
+    "status": 10,
+    "enumerated_models": 4,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "signed/missing": {
+    "births": 2,
+    "selected": [
+      7
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 4,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "Q/remove-and-change-query": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 4,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "U/remove-and-change-query": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 4,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "assume/opposite": {
+    "births": 2,
+    "selected": [
+      6,
+      7
+    ],
+    "dispositions": {
+      "attached": 1,
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 4,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0
+  },
+  "root-chain/same": {
+    "births": 1,
+    "selected": [
+      13
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 0,
+    "enumerated_models": 0,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1
+  },
+  "root-chain/removed": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1
+  },
+  "minimize-gc/same": {
+    "births": 41,
+    "selected": [
+      47,
+      48,
+      49,
+      50,
+      51,
+      52,
+      53,
+      54,
+      55,
+      56,
+      57,
+      58,
+      59,
+      60,
+      61,
+      62,
+      63,
+      64,
+      65,
+      66,
+      67,
+      68,
+      69,
+      70,
+      71,
+      72,
+      73,
+      74,
+      75,
+      76,
+      77,
+      78,
+      79,
+      80,
+      81,
+      82,
+      83,
+      84,
+      85,
+      90,
+      91
+    ],
+    "dispositions": {
+      "attached": 36,
+      "root_unit": 3,
+      "already_inconsistent": 2
+    },
+    "status": 0,
+    "enumerated_models": null,
+    "reasons_retained": 0,
+    "evicted_parents": 29,
+    "gc": 14
+  },
+  "minimize-gc/hidden-parent": {
+    "births": 41,
+    "selected": [
+      50,
+      52,
+      54,
+      63,
+      65,
+      73
+    ],
+    "dispositions": {
+      "attached": 6
+    },
+    "status": 10,
+    "enumerated_models": null,
+    "reasons_retained": 0,
+    "evicted_parents": 29,
+    "gc": 14,
+    "retired_birth": 56,
+    "removed_input": 1
+  }
+}

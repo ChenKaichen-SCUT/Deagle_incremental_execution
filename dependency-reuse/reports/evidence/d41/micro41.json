@@ -1,0 +1,499 @@
+{
+  "deferred-RF/same": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-RF/first-order": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-RF/second-order": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-RF/rf-binding": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 80,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-RF/guard": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-RF/unrelated": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-guard/same": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-guard/first-order": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-guard/second-order": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-guard/rf-binding": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 80,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-guard/guard": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "deferred-guard/unrelated": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "attached": 1
+    },
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-RF/same": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-RF/first-order": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-RF/second-order": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-RF/rf-binding": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-RF/guard": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-RF/unrelated": {
+    "births": 0,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 16,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-guard/same": {
+    "births": 1,
+    "selected": [
+      26
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 16,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-guard/first-order": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 48,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-guard/second-order": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 48,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-guard/rf-binding": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-guard/guard": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 48,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "immediate-guard/unrelated": {
+    "births": 1,
+    "selected": [
+      26
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 8,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 1,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "unit-guard/same": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 32,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "unit-guard/first-order": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "unit-guard/second-order": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 96,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "unit-guard/rf-binding": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "unit-guard/guard": {
+    "births": 1,
+    "selected": [],
+    "dispositions": {},
+    "status": 10,
+    "enumerated_models": 64,
+    "reasons_retained": 0,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "unit-guard/unrelated": {
+    "births": 1,
+    "selected": [
+      24
+    ],
+    "dispositions": {
+      "root_unit": 1
+    },
+    "status": 10,
+    "enumerated_models": 16,
+    "reasons_retained": 1,
+    "evicted_parents": 0,
+    "gc": 0,
+    "triplets": 1,
+    "boundaries": {
+      "C": 0,
+      "A": 1
+    }
+  },
+  "reject": {
+    "repeated-event": "theory node 22 op 18: triplet event roles",
+    "wrong-first-order": "reverse offsets",
+    "rf-instead-of-guard": "reverse consumer differs",
+    "wrong-same-address": "reverse offsets",
+    "actual_clause_polarity": "native theory boundary mismatch at ProofId 23"
+  }
+}

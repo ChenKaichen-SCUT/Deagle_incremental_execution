@@ -1,0 +1,2280 @@
+{
+  "fib_updates_8": {
+    "Opaque": {
+      "birth_ordinal": 1,
+      "clause": [
+        "24874",
+        "24903",
+        "24983",
+        "24942",
+        "24923"
+      ],
+      "dependency": {
+        "variable": 12437,
+        "peer": -1,
+        "role": "Opaque",
+        "reason": "no_semantic_definition"
+      }
+    },
+    "Aux": {
+      "birth_ordinal": 1,
+      "clause": [
+        "24874",
+        "24903",
+        "24983",
+        "24942",
+        "24923"
+      ],
+      "dependency": {
+        "variable": 12451,
+        "peer": -1,
+        "role": "Aux",
+        "reason": "unmapped_gate_input:24810",
+        "definitions": [
+          [
+            "xor",
+            24902,
+            [
+              24810,
+              24858
+            ]
+          ]
+        ],
+        "first_unmatched_operand": {
+          "variable": 12405,
+          "peer": -1,
+          "role": "Opaque",
+          "reason": "no_semantic_definition"
+        }
+      }
+    },
+    "RF": {
+      "birth_ordinal": 339,
+      "clause": [
+        "9195",
+        "7078",
+        "7074",
+        "7070",
+        "7066",
+        "7062",
+        "7058",
+        "7054",
+        "7050",
+        "7046",
+        "7042",
+        "7038",
+        "7034",
+        "7030",
+        "7026",
+        "7022",
+        "7018",
+        "7014",
+        "7010",
+        "7006",
+        "7002",
+        "6998",
+        "5028",
+        "5024",
+        "5020",
+        "5016",
+        "5012",
+        "5008",
+        "5004",
+        "5000",
+        "4996",
+        "4992",
+        "4988",
+        "4984",
+        "4980",
+        "4976",
+        "4972",
+        "4968",
+        "4964",
+        "4960",
+        "4956",
+        "4952",
+        "4948"
+      ],
+      "dependency": {
+        "variable": 4597,
+        "peer": -1,
+        "role": "RF",
+        "reason": "unresolved_rf_endpoint",
+        "atoms": [
+          [
+            "memory_model::choice_rf6",
+            "bool",
+            "0",
+            "9194"
+          ]
+        ],
+        "definitions_at_execution": [],
+        "event_bindings": [
+          [
+            "rf",
+            "__CPROVER_threads_exited#1",
+            "__CPROVER_threads_exited#4",
+            "9194"
+          ]
+        ],
+        "event_origins": [
+          {
+            "symbol": "__CPROVER_threads_exited#1",
+            "role": "write",
+            "object": "6:symbol24:__CPROVER_threads_exited",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "16",
+                "site": {
+                  "function": "__CPROVER_initialize",
+                  "source": "<built-in-additions>",
+                  "line": "7",
+                  "status": "unique"
+                },
+                "thread_origin": "0",
+                "call_origin": "1",
+                "iterations": []
+              },
+              {
+                "context": "1",
+                "site": {
+                  "function": "__CPROVER__start",
+                  "source": "",
+                  "line": "",
+                  "status": "unique"
+                },
+                "thread_origin": "0",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "__CPROVER_threads_exited#4",
+            "role": "read",
+            "object": "6:symbol24:__CPROVER_threads_exited",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "163",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "55",
+                  "status": "unique"
+                },
+                "thread_origin": "33",
+                "call_origin": "84",
+                "iterations": []
+              },
+              {
+                "context": "84",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "33",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "circular-buffer": {
+    "Opaque": {
+      "birth_ordinal": 1,
+      "clause": [
+        "489930",
+        "489979",
+        "489948",
+        "489999",
+        "490019"
+      ],
+      "dependency": {
+        "variable": 244965,
+        "peer": -1,
+        "role": "Opaque",
+        "reason": "no_semantic_definition"
+      }
+    },
+    "Aux": {
+      "birth_ordinal": 1,
+      "clause": [
+        "489930",
+        "489979",
+        "489948",
+        "489999",
+        "490019"
+      ],
+      "dependency": {
+        "variable": 244974,
+        "peer": -1,
+        "role": "Aux",
+        "reason": "unmapped_gate_input:489866",
+        "definitions": [
+          [
+            "xor",
+            489948,
+            [
+              489866,
+              489906
+            ]
+          ]
+        ],
+        "first_unmatched_operand": {
+          "variable": 244933,
+          "peer": -1,
+          "role": "Opaque",
+          "reason": "no_semantic_definition"
+        }
+      }
+    },
+    "Value": {
+      "birth_ordinal": 106,
+      "clause": [
+        "157045",
+        "106708",
+        "31424",
+        "31426",
+        "31428",
+        "31430",
+        "31432",
+        "31418",
+        "31420",
+        "31422",
+        "32056",
+        "32054",
+        "32052",
+        "32050",
+        "32048",
+        "32046",
+        "32044",
+        "32042",
+        "32040",
+        "32038",
+        "32036",
+        "32034",
+        "32032",
+        "32030",
+        "32028",
+        "32026",
+        "32024",
+        "32022",
+        "32020",
+        "32018",
+        "32016",
+        "32014",
+        "32012",
+        "32010",
+        "32008",
+        "32006",
+        "32004",
+        "32002",
+        "32000",
+        "31998",
+        "31996",
+        "31994",
+        "31992",
+        "31990",
+        "31988",
+        "31986",
+        "31984",
+        "31982",
+        "31980",
+        "31978",
+        "31976",
+        "31974",
+        "31972",
+        "31970",
+        "31968",
+        "31966",
+        "31964",
+        "31962",
+        "31960",
+        "31958",
+        "31956",
+        "31954",
+        "31952",
+        "31950",
+        "31948",
+        "31946",
+        "31944",
+        "31942",
+        "31940",
+        "31938",
+        "31936",
+        "31934",
+        "31932",
+        "31930",
+        "31928",
+        "31926",
+        "31924",
+        "31922",
+        "31920",
+        "31918",
+        "31916",
+        "31914",
+        "31912",
+        "31910",
+        "31908",
+        "31906",
+        "31904",
+        "31902",
+        "31900",
+        "31898",
+        "31896",
+        "31894",
+        "31892",
+        "31890",
+        "31888",
+        "31886",
+        "31884",
+        "31882",
+        "31880",
+        "31878",
+        "31876",
+        "31874",
+        "31872",
+        "31870",
+        "31868",
+        "31866",
+        "31864",
+        "31862",
+        "31860",
+        "31858",
+        "31856",
+        "31854",
+        "31852",
+        "31850",
+        "31848",
+        "31846",
+        "31844",
+        "31842",
+        "31840",
+        "31838",
+        "31836",
+        "31834",
+        "31832",
+        "31830",
+        "31828",
+        "31826",
+        "31824",
+        "31822",
+        "31820",
+        "31818",
+        "31816",
+        "31814",
+        "31812",
+        "31810",
+        "31808",
+        "31806",
+        "31804",
+        "31802",
+        "31800",
+        "31798",
+        "31796",
+        "31794",
+        "31792",
+        "31790",
+        "31788",
+        "31786",
+        "31784",
+        "31782",
+        "31780",
+        "31778",
+        "31776",
+        "31774",
+        "31772",
+        "31770",
+        "31768",
+        "31766",
+        "31764",
+        "31762",
+        "31760",
+        "31758",
+        "31756",
+        "31754",
+        "31752",
+        "31750",
+        "31748",
+        "31746",
+        "31744",
+        "31742",
+        "31740",
+        "31738",
+        "31736",
+        "31734",
+        "31732",
+        "31730",
+        "31728",
+        "31726",
+        "31724",
+        "31722",
+        "31720",
+        "31718",
+        "31716",
+        "31714",
+        "31712",
+        "31710",
+        "31708",
+        "31706",
+        "31704",
+        "31702",
+        "31700",
+        "31698",
+        "31696",
+        "31694",
+        "31692",
+        "31690",
+        "31688",
+        "31686",
+        "31684",
+        "31682",
+        "31680",
+        "31678",
+        "31676",
+        "31674",
+        "31672",
+        "31670",
+        "31668",
+        "31666",
+        "31664",
+        "31662",
+        "31660",
+        "31658",
+        "31656",
+        "31654",
+        "31652",
+        "31650",
+        "31648",
+        "31646",
+        "31644",
+        "31642",
+        "31640",
+        "31638",
+        "31636",
+        "31634",
+        "31632",
+        "31630",
+        "31628",
+        "31626",
+        "31624",
+        "31622",
+        "31620",
+        "31618",
+        "31616",
+        "31614",
+        "31612",
+        "31610",
+        "31608",
+        "31606",
+        "31604",
+        "31602",
+        "31600",
+        "31598",
+        "31596",
+        "31594",
+        "31592",
+        "31590",
+        "31588",
+        "31586",
+        "31584",
+        "31582",
+        "31580",
+        "31578",
+        "31576",
+        "31574",
+        "31572",
+        "31570",
+        "31568",
+        "31566",
+        "31564",
+        "31562",
+        "31560",
+        "31558",
+        "31556",
+        "31554",
+        "31552",
+        "31550",
+        "31548",
+        "31546",
+        "31544",
+        "31542",
+        "31540",
+        "31538",
+        "31536",
+        "31534",
+        "31532",
+        "31530",
+        "31528",
+        "31526",
+        "31524",
+        "31522",
+        "31520",
+        "31518",
+        "31516",
+        "31514",
+        "31512",
+        "31510",
+        "31508",
+        "31506",
+        "31504",
+        "31502",
+        "31500",
+        "31498",
+        "31496",
+        "31494",
+        "31492",
+        "31490",
+        "31488",
+        "31486",
+        "31484",
+        "31482",
+        "31480",
+        "31478",
+        "31476",
+        "31474",
+        "31472",
+        "31470",
+        "31468",
+        "31466",
+        "31464",
+        "31462",
+        "31460",
+        "31458",
+        "31456",
+        "31454",
+        "31452",
+        "31450",
+        "31448",
+        "31446",
+        "31444",
+        "31442",
+        "31440",
+        "31438",
+        "31436",
+        "11630",
+        "11628",
+        "11626",
+        "11624",
+        "11622",
+        "11620",
+        "11618",
+        "11616",
+        "11614",
+        "11612",
+        "11610",
+        "11608",
+        "11606",
+        "11604",
+        "11602",
+        "11600",
+        "11598",
+        "11596",
+        "11594",
+        "11592",
+        "11590",
+        "11588",
+        "11586",
+        "11584",
+        "11582",
+        "11580",
+        "11578",
+        "11576",
+        "11574",
+        "11572",
+        "11570",
+        "11568",
+        "11566",
+        "11564",
+        "11562",
+        "11560",
+        "11558",
+        "11556",
+        "11554",
+        "11552",
+        "11550",
+        "11548",
+        "11546",
+        "11544",
+        "11542",
+        "11540",
+        "11538",
+        "11536",
+        "11534",
+        "11532",
+        "11530",
+        "11528",
+        "11526",
+        "11524",
+        "11522",
+        "11520",
+        "11518",
+        "11516",
+        "11514",
+        "11512",
+        "11510",
+        "11508",
+        "11506",
+        "11504",
+        "11502",
+        "11500",
+        "11498",
+        "11496",
+        "11494",
+        "11492",
+        "11490",
+        "11488",
+        "11486",
+        "11484",
+        "11482",
+        "11480",
+        "11478",
+        "11476",
+        "11474",
+        "11472",
+        "11470",
+        "11468",
+        "11466",
+        "11464",
+        "11462",
+        "11460",
+        "11458",
+        "11456",
+        "11454",
+        "11452",
+        "11450",
+        "11448",
+        "11446",
+        "11444",
+        "11442",
+        "11440",
+        "11438",
+        "11436",
+        "11434",
+        "11432",
+        "11430",
+        "11428",
+        "11426",
+        "11424",
+        "11422",
+        "11420",
+        "11418",
+        "11416",
+        "11414",
+        "11412",
+        "11410",
+        "11408",
+        "11406",
+        "11404",
+        "11402",
+        "11400",
+        "11398",
+        "11396",
+        "11394",
+        "11392",
+        "11390",
+        "11388",
+        "11386",
+        "11384",
+        "11382",
+        "11380",
+        "11378",
+        "11376",
+        "11374",
+        "11372",
+        "11370",
+        "11368",
+        "11366",
+        "11364",
+        "11362",
+        "11360",
+        "11358",
+        "11356",
+        "11354",
+        "11352",
+        "11350",
+        "11348",
+        "11346",
+        "11344",
+        "11342",
+        "11340",
+        "11338",
+        "11336",
+        "11334",
+        "11332",
+        "11330",
+        "11328",
+        "11326",
+        "11324",
+        "11322",
+        "11320",
+        "11318",
+        "11316",
+        "11314",
+        "11312",
+        "11310",
+        "11308",
+        "11306",
+        "11304",
+        "11302",
+        "11300",
+        "11298",
+        "11296",
+        "11294",
+        "11292",
+        "11290",
+        "11288",
+        "11286",
+        "11284",
+        "11282",
+        "11280",
+        "11278",
+        "11276",
+        "11274",
+        "11272",
+        "11270",
+        "11268",
+        "11266",
+        "11264",
+        "11262",
+        "11260",
+        "11258",
+        "11256",
+        "11254",
+        "11252",
+        "11250",
+        "11248",
+        "11246",
+        "11244",
+        "11242",
+        "11240",
+        "11238",
+        "11236",
+        "11234",
+        "11232",
+        "11230",
+        "11228",
+        "11226",
+        "11224",
+        "11222",
+        "11220",
+        "11218",
+        "11216",
+        "11214",
+        "11212",
+        "11210",
+        "11208",
+        "11206",
+        "11204",
+        "11202",
+        "11200",
+        "11198",
+        "11196",
+        "11194",
+        "11192",
+        "11190",
+        "11188",
+        "11186",
+        "11184",
+        "11182",
+        "11180",
+        "11178",
+        "11176",
+        "11174",
+        "11172",
+        "11170",
+        "11168",
+        "11166",
+        "11164",
+        "11162",
+        "11160",
+        "11158",
+        "11156",
+        "11154",
+        "11152",
+        "11150",
+        "11148",
+        "11146",
+        "11144",
+        "11142",
+        "11140",
+        "11138",
+        "11136",
+        "11134",
+        "11132",
+        "11130",
+        "11128",
+        "11126",
+        "11124",
+        "11122",
+        "11120",
+        "11118",
+        "11116",
+        "11114",
+        "11112",
+        "11110",
+        "11108",
+        "11106",
+        "11104",
+        "11102",
+        "11100",
+        "11098",
+        "11096",
+        "11094",
+        "11092",
+        "11090",
+        "11088",
+        "11086",
+        "11084",
+        "11082",
+        "11080",
+        "11078",
+        "11076",
+        "11074",
+        "11072",
+        "11070",
+        "11068",
+        "11066",
+        "11064",
+        "11062",
+        "11060",
+        "11058",
+        "11056",
+        "11054",
+        "11052",
+        "11050",
+        "11048",
+        "11046",
+        "11044",
+        "11042",
+        "11040",
+        "11038",
+        "11036",
+        "11034",
+        "11032",
+        "11030",
+        "11028",
+        "11026",
+        "11024",
+        "11022",
+        "11020",
+        "11018",
+        "11016",
+        "11014",
+        "11012",
+        "11010",
+        "297690",
+        "297060",
+        "298950",
+        "298320",
+        "106696",
+        "149486",
+        "106684",
+        "1713",
+        "813",
+        "3259",
+        "2357",
+        "150112"
+      ],
+      "dependency": {
+        "variable": 5528,
+        "peer": -1,
+        "role": "Value",
+        "reason": "aggregate_bit_outside_certified_integer_prefix",
+        "atoms": [
+          [
+            "m#46",
+            "",
+            "32",
+            "11056"
+          ],
+          [
+            "m#47",
+            "",
+            "32",
+            "11056"
+          ]
+        ],
+        "definitions_at_execution": [
+          {
+            "symbol": "m#46",
+            "role": "assign4",
+            "object": "6:symbol1:m",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "394",
+                "site": {
+                  "function": "pthread_mutex_lock",
+                  "source": "<builtin-library-pthread_mutex_lock>",
+                  "line": "38",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "392",
+                "iterations": []
+              },
+              {
+                "context": "392",
+                "site": {
+                  "function": "t2",
+                  "source": "program.i",
+                  "line": "742",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "388",
+                "iterations": [
+                  [
+                    {
+                      "function": "t2",
+                      "source": "program.i",
+                      "line": "740",
+                      "status": "unique"
+                    },
+                    "0"
+                  ]
+                ]
+              },
+              {
+                "context": "388",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "383",
+                "iterations": []
+              },
+              {
+                "context": "383",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "m#47",
+            "role": "assign1",
+            "object": "6:symbol1:m",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "395",
+                "site": {
+                  "function": "pthread_mutex_lock",
+                  "source": "<builtin-library-pthread_mutex_lock>",
+                  "line": "39",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "392",
+                "iterations": []
+              },
+              {
+                "context": "392",
+                "site": {
+                  "function": "t2",
+                  "source": "program.i",
+                  "line": "742",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "388",
+                "iterations": [
+                  [
+                    {
+                      "function": "t2",
+                      "source": "program.i",
+                      "line": "740",
+                      "status": "unique"
+                    },
+                    "0"
+                  ]
+                ]
+              },
+              {
+                "context": "388",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "383",
+                "iterations": []
+              },
+              {
+                "context": "383",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "m#47",
+            "role": "write",
+            "object": "6:symbol1:m",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "395",
+                "site": {
+                  "function": "pthread_mutex_lock",
+                  "source": "<builtin-library-pthread_mutex_lock>",
+                  "line": "39",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "392",
+                "iterations": []
+              },
+              {
+                "context": "392",
+                "site": {
+                  "function": "t2",
+                  "source": "program.i",
+                  "line": "742",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "388",
+                "iterations": [
+                  [
+                    {
+                      "function": "t2",
+                      "source": "program.i",
+                      "line": "740",
+                      "status": "unique"
+                    },
+                    "0"
+                  ]
+                ]
+              },
+              {
+                "context": "388",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "383",
+                "iterations": []
+              },
+              {
+                "context": "383",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "66",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "RF": {
+      "birth_ordinal": 287,
+      "clause": [
+        "12301",
+        "88850",
+        "19021",
+        "469300",
+        "94094",
+        "813",
+        "2357",
+        "88284",
+        "470176",
+        "470198",
+        "470220",
+        "470242",
+        "470264",
+        "18542",
+        "88764",
+        "12297",
+        "11653",
+        "12319"
+      ],
+      "dependency": {
+        "variable": 47047,
+        "peer": -1,
+        "role": "RF",
+        "reason": "unresolved_rf_endpoint",
+        "atoms": [
+          [
+            "memory_model::choice_rf148",
+            "bool",
+            "0",
+            "94094"
+          ]
+        ],
+        "definitions_at_execution": [],
+        "event_bindings": [
+          [
+            "rf",
+            "next#2",
+            "next#11",
+            "94094"
+          ]
+        ],
+        "event_origins": [
+          {
+            "symbol": "next#2",
+            "role": "write",
+            "object": "6:symbol4:next",
+            "type": "unsignedbv:32",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "35",
+                "site": {
+                  "function": "initLog",
+                  "source": "program.i",
+                  "line": "691",
+                  "status": "unique"
+                },
+                "thread_origin": "0",
+                "call_origin": "33",
+                "iterations": []
+              },
+              {
+                "context": "33",
+                "site": {
+                  "function": "main",
+                  "source": "program.i",
+                  "line": "758",
+                  "status": "unique"
+                },
+                "thread_origin": "0",
+                "call_origin": "25",
+                "iterations": []
+              },
+              {
+                "context": "25",
+                "site": {
+                  "function": "__CPROVER__start",
+                  "source": "program.i",
+                  "line": "754",
+                  "status": "unique"
+                },
+                "thread_origin": "0",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "next#11",
+            "role": "read",
+            "object": "6:symbol4:next",
+            "type": "unsignedbv:32",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "158",
+                "site": {
+                  "function": "insertLogElement",
+                  "source": "program.i",
+                  "line": "709",
+                  "status": "unique"
+                },
+                "thread_origin": "50",
+                "call_origin": "156",
+                "iterations": []
+              },
+              {
+                "context": "156",
+                "site": {
+                  "function": "t1",
+                  "source": "program.i",
+                  "line": "729",
+                  "status": "unique"
+                },
+                "thread_origin": "50",
+                "call_origin": "106",
+                "iterations": [
+                  [
+                    {
+                      "function": "t1",
+                      "source": "program.i",
+                      "line": "724",
+                      "status": "unique"
+                    },
+                    "1"
+                  ]
+                ]
+              },
+              {
+                "context": "106",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "50",
+                "call_origin": "100",
+                "iterations": []
+              },
+              {
+                "context": "100",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "50",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "Aux": {
+      "birth_ordinal": 1,
+      "clause": [
+        "42745",
+        "42828",
+        "42840",
+        "42846",
+        "42852",
+        "42834"
+      ],
+      "dependency": {
+        "variable": 21372,
+        "peer": -1,
+        "role": "Aux",
+        "reason": "unmapped_gate_input:146",
+        "definitions": [
+          [
+            "and",
+            42744,
+            [
+              146,
+              296,
+              448,
+              600,
+              752,
+              757,
+              763,
+              2838,
+              3480,
+              42742
+            ]
+          ]
+        ],
+        "first_unmatched_operand": {
+          "variable": 73,
+          "peer": -1,
+          "role": "Aux",
+          "reason": "unmapped_gate_input:144",
+          "definitions": [
+            [
+              "or",
+              146,
+              [
+                144,
+                2
+              ]
+            ]
+          ],
+          "first_unmatched_operand": {
+            "variable": 72,
+            "peer": -1,
+            "role": "Aux",
+            "reason": "unmapped_gate_input:142",
+            "definitions": [
+              [
+                "and",
+                144,
+                [
+                  3,
+                  142
+                ]
+              ]
+            ],
+            "first_unmatched_operand": {
+              "variable": 71,
+              "peer": -1,
+              "role": "Aux",
+              "reason": "unmapped_gate_input:140",
+              "definitions": [
+                [
+                  "or",
+                  142,
+                  [
+                    140,
+                    4
+                  ]
+                ]
+              ],
+              "first_unmatched_operand": {
+                "variable": 70,
+                "peer": -1,
+                "role": "Aux",
+                "reason": "unmapped_gate_input:10",
+                "definitions": [
+                  [
+                    "and",
+                    140,
+                    [
+                      5,
+                      10
+                    ]
+                  ]
+                ],
+                "first_unmatched_operand": {
+                  "variable": 5,
+                  "peer": -1,
+                  "role": "Opaque",
+                  "reason": "no_semantic_definition"
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "RF": {
+      "birth_ordinal": 1,
+      "clause": [
+        "42745",
+        "42828",
+        "42840",
+        "42846",
+        "42852",
+        "42834"
+      ],
+      "dependency": {
+        "variable": 21414,
+        "peer": -1,
+        "role": "RF",
+        "reason": "unresolved_rf_endpoint",
+        "atoms": [
+          [
+            "memory_model::choice_rf49",
+            "bool",
+            "0",
+            "42828"
+          ]
+        ],
+        "definitions_at_execution": [],
+        "event_bindings": [
+          [
+            "rf",
+            "__CPROVER_threads_exited#9",
+            "__CPROVER_threads_exited#10",
+            "42828"
+          ]
+        ],
+        "event_origins": [
+          {
+            "symbol": "__CPROVER_threads_exited#9",
+            "role": "write",
+            "object": "6:symbol24:__CPROVER_threads_exited",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "281",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "55",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "234",
+                "iterations": []
+              },
+              {
+                "context": "234",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "__CPROVER_threads_exited#10",
+            "role": "read",
+            "object": "6:symbol24:__CPROVER_threads_exited",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "335",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "55",
+                  "status": "unique"
+                },
+                "thread_origin": "54",
+                "call_origin": "288",
+                "iterations": []
+              },
+              {
+                "context": "288",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "54",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Opaque": {
+      "birth_ordinal": 5,
+      "clause": [
+        "42806",
+        "43012",
+        "42994",
+        "43000",
+        "43006",
+        "42988",
+        "42788",
+        "42794",
+        "42800",
+        "385817",
+        "42524",
+        "42530",
+        "42536",
+        "42548",
+        "42478",
+        "42484",
+        "42490",
+        "42502",
+        "42948",
+        "42954",
+        "42960",
+        "42972",
+        "42966",
+        "42686",
+        "42692",
+        "42698",
+        "42710"
+      ],
+      "dependency": {
+        "variable": 192908,
+        "peer": -1,
+        "role": "Opaque",
+        "reason": "no_semantic_definition"
+      }
+    },
+    "Guard": {
+      "birth_ordinal": 36,
+      "clause": [
+        "42961",
+        "42941",
+        "42914",
+        "42926",
+        "42932",
+        "42908",
+        "6063",
+        "42868",
+        "42880",
+        "42886",
+        "42892",
+        "42874",
+        "4771"
+      ],
+      "dependency": {
+        "variable": 3031,
+        "peer": -1,
+        "role": "Guard",
+        "reason": "peer_alias_absent,unsupported_object_or_type",
+        "definitions": [
+          [
+            "and",
+            6062,
+            [
+              5418,
+              6060
+            ]
+          ]
+        ],
+        "first_unmatched_operand": {
+          "variable": 2709,
+          "peer": -1,
+          "role": "Guard",
+          "reason": "peer_alias_absent",
+          "definitions": [
+            [
+              "and",
+              5418,
+              [
+                4779,
+                4781,
+                4783,
+                4785,
+                4787,
+                4789,
+                4791,
+                4793
+              ]
+            ]
+          ],
+          "event_bindings": [
+            [
+              "guard",
+              "bookings#40",
+              "5418"
+            ],
+            [
+              "guard",
+              "bookings#43",
+              "5418"
+            ]
+          ],
+          "event_origins": [
+            {
+              "symbol": "bookings#40",
+              "role": "write",
+              "object": "6:symbol8:bookings",
+              "type": "",
+              "storage": "static",
+              "frames": [
+                {
+                  "context": "408",
+                  "site": {
+                    "function": "pthread_mutex_lock",
+                    "source": "<builtin-library-pthread_mutex_lock>",
+                    "line": "39",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "405",
+                  "iterations": []
+                },
+                {
+                  "context": "405",
+                  "site": {
+                    "function": "reserve_seat",
+                    "source": "program.c",
+                    "line": "4",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "403",
+                  "iterations": []
+                },
+                {
+                  "context": "403",
+                  "site": {
+                    "function": "agent",
+                    "source": "harness.c",
+                    "line": "13",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "401",
+                  "iterations": []
+                },
+                {
+                  "context": "401",
+                  "site": {
+                    "function": "__spawned_thread",
+                    "source": "<builtin-library-__spawned_thread>",
+                    "line": "34",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "396",
+                  "iterations": []
+                },
+                {
+                  "context": "396",
+                  "site": {
+                    "function": "pthread_create",
+                    "source": "<builtin-library-pthread_create>",
+                    "line": "49",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "0",
+                  "iterations": []
+                }
+              ]
+            },
+            {
+              "symbol": "bookings#43",
+              "role": "write",
+              "object": "6:symbol8:bookings",
+              "type": "",
+              "storage": "static",
+              "frames": [
+                {
+                  "context": "417",
+                  "site": {
+                    "function": "pthread_mutex_unlock",
+                    "source": "<builtin-library-pthread_mutex_unlock>",
+                    "line": "43",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "414",
+                  "iterations": []
+                },
+                {
+                  "context": "414",
+                  "site": {
+                    "function": "reserve_seat",
+                    "source": "program.c",
+                    "line": "6",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "403",
+                  "iterations": []
+                },
+                {
+                  "context": "403",
+                  "site": {
+                    "function": "agent",
+                    "source": "harness.c",
+                    "line": "13",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "401",
+                  "iterations": []
+                },
+                {
+                  "context": "401",
+                  "site": {
+                    "function": "__spawned_thread",
+                    "source": "<builtin-library-__spawned_thread>",
+                    "line": "34",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "396",
+                  "iterations": []
+                },
+                {
+                  "context": "396",
+                  "site": {
+                    "function": "pthread_create",
+                    "source": "<builtin-library-pthread_create>",
+                    "line": "49",
+                    "status": "unique"
+                  },
+                  "thread_origin": "92",
+                  "call_origin": "0",
+                  "iterations": []
+                }
+              ]
+            }
+          ]
+        },
+        "event_bindings": [
+          [
+            "guard",
+            "__CPROVER_threads_exited#15",
+            "6062"
+          ],
+          [
+            "guard",
+            "bookings#46",
+            "6062"
+          ],
+          [
+            "guard",
+            "bookings#49",
+            "6062"
+          ]
+        ],
+        "event_origins": [
+          {
+            "symbol": "__CPROVER_threads_exited#15",
+            "role": "write",
+            "object": "6:symbol24:__CPROVER_threads_exited",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "443",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "55",
+                  "status": "unique"
+                },
+                "thread_origin": "92",
+                "call_origin": "396",
+                "iterations": []
+              },
+              {
+                "context": "396",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "92",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "bookings#46",
+            "role": "write",
+            "object": "6:symbol8:bookings",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "424",
+                "site": {
+                  "function": "pthread_mutex_lock",
+                  "source": "<builtin-library-pthread_mutex_lock>",
+                  "line": "39",
+                  "status": "unique"
+                },
+                "thread_origin": "92",
+                "call_origin": "421",
+                "iterations": []
+              },
+              {
+                "context": "421",
+                "site": {
+                  "function": "reserve_seat",
+                  "source": "program.c",
+                  "line": "7",
+                  "status": "unique"
+                },
+                "thread_origin": "92",
+                "call_origin": "403",
+                "iterations": []
+              },
+              {
+                "context": "403",
+                "site": {
+                  "function": "agent",
+                  "source": "harness.c",
+                  "line": "13",
+                  "status": "unique"
+                },
+                "thread_origin": "92",
+                "call_origin": "401",
+                "iterations": []
+              },
+              {
+                "context": "401",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "92",
+                "call_origin": "396",
+                "iterations": []
+              },
+              {
+                "context": "396",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "92",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Value": {
+      "birth_ordinal": 204,
+      "clause": [
+        "23246",
+        "4794",
+        "186652",
+        "185392",
+        "189172",
+        "185386",
+        "190432",
+        "187912",
+        "191692",
+        "192952",
+        "194212",
+        "195472",
+        "196732",
+        "197992",
+        "198622",
+        "30228",
+        "28882",
+        "27410",
+        "26064",
+        "24592",
+        "21774",
+        "18956",
+        "17610",
+        "20116",
+        "76969",
+        "63732",
+        "31700",
+        "3816",
+        "3168",
+        "2526",
+        "1236",
+        "8016",
+        "7374",
+        "6726",
+        "6084",
+        "5436",
+        "199253",
+        "16779",
+        "16467",
+        "90837",
+        "76976",
+        "79496",
+        "78236",
+        "80756",
+        "76970",
+        "82016",
+        "83276",
+        "80126",
+        "84536",
+        "85796",
+        "87056",
+        "88316",
+        "89576"
+      ],
+      "dependency": {
+        "variable": 618,
+        "peer": -1,
+        "role": "Value",
+        "reason": "aggregate_bit_outside_certified_integer_prefix",
+        "atoms": [
+          [
+            "bookings#4",
+            "",
+            "164",
+            "1236"
+          ],
+          [
+            "bookings#3",
+            "",
+            "164",
+            "1236"
+          ]
+        ],
+        "definitions_at_execution": [
+          {
+            "symbol": "bookings#4",
+            "role": "assign1",
+            "object": "6:symbol8:bookings",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "246",
+                "site": {
+                  "function": "pthread_mutex_lock",
+                  "source": "<builtin-library-pthread_mutex_lock>",
+                  "line": "39",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "243",
+                "iterations": []
+              },
+              {
+                "context": "243",
+                "site": {
+                  "function": "reserve_seat",
+                  "source": "program.c",
+                  "line": "4",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "241",
+                "iterations": []
+              },
+              {
+                "context": "241",
+                "site": {
+                  "function": "agent",
+                  "source": "harness.c",
+                  "line": "13",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "239",
+                "iterations": []
+              },
+              {
+                "context": "239",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "234",
+                "iterations": []
+              },
+              {
+                "context": "234",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "bookings#4",
+            "role": "write",
+            "object": "6:symbol8:bookings",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "246",
+                "site": {
+                  "function": "pthread_mutex_lock",
+                  "source": "<builtin-library-pthread_mutex_lock>",
+                  "line": "39",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "243",
+                "iterations": []
+              },
+              {
+                "context": "243",
+                "site": {
+                  "function": "reserve_seat",
+                  "source": "program.c",
+                  "line": "4",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "241",
+                "iterations": []
+              },
+              {
+                "context": "241",
+                "site": {
+                  "function": "agent",
+                  "source": "harness.c",
+                  "line": "13",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "239",
+                "iterations": []
+              },
+              {
+                "context": "239",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "234",
+                "iterations": []
+              },
+              {
+                "context": "234",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          },
+          {
+            "symbol": "bookings#3",
+            "role": "assign4",
+            "object": "6:symbol8:bookings",
+            "type": "",
+            "storage": "static",
+            "frames": [
+              {
+                "context": "245",
+                "site": {
+                  "function": "pthread_mutex_lock",
+                  "source": "<builtin-library-pthread_mutex_lock>",
+                  "line": "38",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "243",
+                "iterations": []
+              },
+              {
+                "context": "243",
+                "site": {
+                  "function": "reserve_seat",
+                  "source": "program.c",
+                  "line": "4",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "241",
+                "iterations": []
+              },
+              {
+                "context": "241",
+                "site": {
+                  "function": "agent",
+                  "source": "harness.c",
+                  "line": "13",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "239",
+                "iterations": []
+              },
+              {
+                "context": "239",
+                "site": {
+                  "function": "__spawned_thread",
+                  "source": "<builtin-library-__spawned_thread>",
+                  "line": "34",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "234",
+                "iterations": []
+              },
+              {
+                "context": "234",
+                "site": {
+                  "function": "pthread_create",
+                  "source": "<builtin-library-pthread_create>",
+                  "line": "49",
+                  "status": "unique"
+                },
+                "thread_origin": "35",
+                "call_origin": "0",
+                "iterations": []
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "same_spelling_bookings_9": {
+      "P0": [
+        {
+          "symbol": "bookings#9",
+          "role": "assign4",
+          "object": "6:symbol8:bookings",
+          "type": "",
+          "storage": "static",
+          "frames": [
+            {
+              "context": "261",
+              "site": {
+                "function": "pthread_mutex_lock",
+                "source": "<builtin-library-pthread_mutex_lock>",
+                "line": "38",
+                "status": "unique"
+              },
+              "thread_origin": "35",
+              "call_origin": "259",
+              "iterations": []
+            },
+            {
+              "context": "259",
+              "site": {
+                "function": "reserve_seat",
+                "source": "program.c",
+                "line": "7",
+                "status": "unique"
+              },
+              "thread_origin": "35",
+              "call_origin": "241",
+              "iterations": []
+            },
+            {
+              "context": "241",
+              "site": {
+                "function": "agent",
+                "source": "harness.c",
+                "line": "13",
+                "status": "unique"
+              },
+              "thread_origin": "35",
+              "call_origin": "239",
+              "iterations": []
+            },
+            {
+              "context": "239",
+              "site": {
+                "function": "__spawned_thread",
+                "source": "<builtin-library-__spawned_thread>",
+                "line": "34",
+                "status": "unique"
+              },
+              "thread_origin": "35",
+              "call_origin": "234",
+              "iterations": []
+            },
+            {
+              "context": "234",
+              "site": {
+                "function": "pthread_create",
+                "source": "<builtin-library-pthread_create>",
+                "line": "49",
+                "status": "unique"
+              },
+              "thread_origin": "35",
+              "call_origin": "0",
+              "iterations": []
+            }
+          ]
+        }
+      ],
+      "P1": [
+        {
+          "symbol": "bookings#9",
+          "role": "assign4",
+          "object": "6:symbol8:bookings",
+          "type": "",
+          "storage": "static",
+          "frames": [
+            {
+              "context": "284",
+              "site": {
+                "function": "pthread_mutex_lock",
+                "source": "<builtin-library-pthread_mutex_lock>",
+                "line": "38",
+                "status": "unique"
+              },
+              "thread_origin": "54",
+              "call_origin": "282",
+              "iterations": []
+            },
+            {
+              "context": "282",
+              "site": {
+                "function": "reserve_seat",
+                "source": "program.c",
+                "line": "4",
+                "status": "unique"
+              },
+              "thread_origin": "54",
+              "call_origin": "280",
+              "iterations": []
+            },
+            {
+              "context": "280",
+              "site": {
+                "function": "agent",
+                "source": "harness.c",
+                "line": "13",
+                "status": "unique"
+              },
+              "thread_origin": "54",
+              "call_origin": "278",
+              "iterations": []
+            },
+            {
+              "context": "278",
+              "site": {
+                "function": "__spawned_thread",
+                "source": "<builtin-library-__spawned_thread>",
+                "line": "34",
+                "status": "unique"
+              },
+              "thread_origin": "54",
+              "call_origin": "273",
+              "iterations": []
+            },
+            {
+              "context": "273",
+              "site": {
+                "function": "pthread_create",
+                "source": "<builtin-library-pthread_create>",
+                "line": "49",
+                "status": "unique"
+              },
+              "thread_origin": "54",
+              "call_origin": "0",
+              "iterations": []
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

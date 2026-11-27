@@ -1,0 +1,1766 @@
+{
+  "id": 55139,
+  "family": "M",
+  "P0_proof_sha256": "774a4270531e638748d1a2a517d9038e620ea7c46b11be5380bfbe4a3f303b10",
+  "P1_boundary_sha256": "f1c71035fe5f652322033aa25dd64fbe2a4152e8838dfe1f316df2d08a5f1422",
+  "P1_signed_translation": [
+    20019,
+    20087,
+    20783
+  ],
+  "native_disposition": "attached",
+  "P0_support": {
+    "55139": {
+      "kind": 6,
+      "flags": 8,
+      "parents": [
+        [
+          43045,
+          -1
+        ],
+        [
+          42880,
+          5801
+        ],
+        [
+          41088,
+          5674
+        ],
+        [
+          40926,
+          5418
+        ],
+        [
+          55138,
+          4715
+        ],
+        [
+          50775,
+          21843
+        ]
+      ],
+      "raw_clause": [
+        21011,
+        21079,
+        21775
+      ]
+    },
+    "50775": {
+      "kind": 5,
+      "flags": 8,
+      "parents": [
+        [
+          43170,
+          -1
+        ],
+        [
+          50290,
+          21906
+        ]
+      ],
+      "raw_clause": [
+        21843
+      ]
+    },
+    "50290": {
+      "kind": 5,
+      "flags": 8,
+      "parents": [
+        [
+          43203,
+          -1
+        ],
+        [
+          50273,
+          21840
+        ]
+      ],
+      "raw_clause": [
+        21906
+      ]
+    },
+    "50273": {
+      "kind": 5,
+      "flags": 8,
+      "parents": [
+        [
+          43204,
+          -1
+        ],
+        [
+          50236,
+          21705
+        ],
+        [
+          50237,
+          21773
+        ],
+        [
+          50235,
+          21701
+        ]
+      ],
+      "raw_clause": [
+        21840
+      ]
+    },
+    "50235": {
+      "kind": 14,
+      "flags": 8,
+      "parents": [
+        [
+          50103,
+          -1
+        ]
+      ],
+      "raw_clause": [
+        21701
+      ]
+    },
+    "50103": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49633,
+          -1
+        ],
+        [
+          50102,
+          -1
+        ],
+        [
+          48980,
+          -1
+        ],
+        [
+          48150,
+          -1
+        ],
+        [
+          48701,
+          -1
+        ],
+        [
+          50086,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        18,
+        39,
+        41,
+        60
+      ]
+    },
+    "50086": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        6,
+        39,
+        41,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48701": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        5,
+        41,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48150": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          48149,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        11,
+        41,
+        -1,
+        -1
+      ]
+    },
+    "48149": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        4,
+        41,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48092": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        0,
+        -1,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48980": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          48977,
+          -1
+        ],
+        [
+          48696,
+          -1
+        ],
+        [
+          48978,
+          -1
+        ],
+        [
+          48979,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        10,
+        39,
+        60,
+        -1
+      ]
+    },
+    "48979": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        6,
+        39,
+        60,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48978": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        5,
+        60,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48696": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        5,
+        39,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48977": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        3,
+        39,
+        60,
+        21700
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50102": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50101,
+          -1
+        ],
+        [
+          49164,
+          -1
+        ],
+        [
+          49188,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        41,
+        60,
+        -1
+      ]
+    },
+    "49188": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        7,
+        44,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49164": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        7,
+        41,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50101": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50091,
+          -1
+        ],
+        [
+          50099,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        41,
+        44,
+        -1
+      ]
+    },
+    "50099": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50098,
+          -1
+        ],
+        [
+          49180,
+          -1
+        ],
+        [
+          49188,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        43,
+        44,
+        -1
+      ]
+    },
+    "49180": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        7,
+        43,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50098": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          50097,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        43,
+        34,
+        -1
+      ]
+    },
+    "50097": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        43,
+        34,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50091": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50084,
+          -1
+        ],
+        [
+          50090,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        41,
+        43,
+        -1
+      ]
+    },
+    "50090": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50089,
+          -1
+        ],
+        [
+          49172,
+          -1
+        ],
+        [
+          49180,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        42,
+        43,
+        -1
+      ]
+    },
+    "49172": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        7,
+        42,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50089": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          50088,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        42,
+        33,
+        -1
+      ]
+    },
+    "50088": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        42,
+        33,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50084": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50083,
+          -1
+        ],
+        [
+          49164,
+          -1
+        ],
+        [
+          49172,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        41,
+        42,
+        -1
+      ]
+    },
+    "50083": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          50082,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        41,
+        32,
+        -1
+      ]
+    },
+    "50082": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        41,
+        32,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49633": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49559,
+          -1
+        ],
+        [
+          49572,
+          -1
+        ],
+        [
+          49165,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        39,
+        41,
+        -1
+      ]
+    },
+    "49165": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49162,
+          -1
+        ],
+        [
+          49163,
+          -1
+        ],
+        [
+          49164,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        72,
+        41,
+        -1
+      ]
+    },
+    "49163": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        7,
+        72,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49162": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49161,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        72,
+        31,
+        -1
+      ]
+    },
+    "49161": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        72,
+        31,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49572": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49571,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        70,
+        72,
+        -1
+      ]
+    },
+    "49571": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        70,
+        72,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49559": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49536,
+          -1
+        ],
+        [
+          49553,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        39,
+        70,
+        -1
+      ]
+    },
+    "49553": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49552,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        11,
+        70,
+        -1
+      ]
+    },
+    "49552": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        11,
+        70,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49536": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49408,
+          -1
+        ],
+        [
+          49531,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        39,
+        11,
+        -1
+      ]
+    },
+    "49531": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49529,
+          -1
+        ],
+        [
+          49092,
+          -1
+        ],
+        [
+          49530,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        71,
+        11,
+        -1
+      ]
+    },
+    "49530": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        7,
+        11,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49092": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        7,
+        71,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49529": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49528,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        71,
+        8,
+        -1
+      ]
+    },
+    "49528": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        71,
+        8,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49408": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49355,
+          -1
+        ],
+        [
+          49368,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        39,
+        71,
+        -1
+      ]
+    },
+    "49368": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49367,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        67,
+        71,
+        -1
+      ]
+    },
+    "49367": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        67,
+        71,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49355": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49339,
+          -1
+        ],
+        [
+          49352,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        39,
+        67,
+        -1
+      ]
+    },
+    "49352": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49351,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        9,
+        67,
+        -1
+      ]
+    },
+    "49351": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        9,
+        67,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49339": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49324,
+          -1
+        ],
+        [
+          49337,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        39,
+        9,
+        -1
+      ]
+    },
+    "49337": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49336,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        68,
+        9,
+        -1
+      ]
+    },
+    "49336": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        68,
+        9,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49324": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          49310,
+          -1
+        ],
+        [
+          49323,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        39,
+        68,
+        -1
+      ]
+    },
+    "49323": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49322,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        65,
+        68,
+        -1
+      ]
+    },
+    "49322": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        65,
+        68,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "49310": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          49309,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        8,
+        39,
+        65,
+        -1
+      ]
+    },
+    "49309": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        1,
+        39,
+        65,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50237": {
+      "kind": 14,
+      "flags": 8,
+      "parents": [
+        [
+          50108,
+          -1
+        ]
+      ],
+      "raw_clause": [
+        21773
+      ]
+    },
+    "50108": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50090,
+          -1
+        ],
+        [
+          50106,
+          -1
+        ],
+        [
+          48986,
+          -1
+        ],
+        [
+          48154,
+          -1
+        ],
+        [
+          48709,
+          -1
+        ],
+        [
+          50107,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        18,
+        42,
+        43,
+        60
+      ]
+    },
+    "50107": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        6,
+        42,
+        43,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48709": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        5,
+        43,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48154": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          48153,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        11,
+        43,
+        -1,
+        -1
+      ]
+    },
+    "48153": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        4,
+        43,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48986": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          48984,
+          -1
+        ],
+        [
+          48705,
+          -1
+        ],
+        [
+          48978,
+          -1
+        ],
+        [
+          48985,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        10,
+        42,
+        60,
+        -1
+      ]
+    },
+    "48985": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        6,
+        42,
+        60,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48705": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        5,
+        42,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48984": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        3,
+        42,
+        60,
+        21772
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50106": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50099,
+          -1
+        ],
+        [
+          49180,
+          -1
+        ],
+        [
+          49188,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        43,
+        60,
+        -1
+      ]
+    },
+    "50236": {
+      "kind": 14,
+      "flags": 8,
+      "parents": [
+        [
+          50105,
+          -1
+        ]
+      ],
+      "raw_clause": [
+        21705
+      ]
+    },
+    "50105": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50084,
+          -1
+        ],
+        [
+          50104,
+          -1
+        ],
+        [
+          48983,
+          -1
+        ],
+        [
+          48152,
+          -1
+        ],
+        [
+          48705,
+          -1
+        ],
+        [
+          50095,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        18,
+        41,
+        42,
+        60
+      ]
+    },
+    "50095": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        6,
+        41,
+        42,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48152": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          48151,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        11,
+        42,
+        -1,
+        -1
+      ]
+    },
+    "48151": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        4,
+        42,
+        -1,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48983": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          48092,
+          -1
+        ],
+        [
+          48981,
+          -1
+        ],
+        [
+          48701,
+          -1
+        ],
+        [
+          48978,
+          -1
+        ],
+        [
+          48982,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        10,
+        41,
+        60,
+        -1
+      ]
+    },
+    "48982": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        6,
+        41,
+        60,
+        -1
+      ],
+      "P1_declaration_status": "M"
+    },
+    "48981": {
+      "kind": 12,
+      "flags": 8,
+      "parents": [],
+      "raw_clause": [],
+      "rule": [
+        3,
+        41,
+        60,
+        21704
+      ],
+      "P1_declaration_status": "M"
+    },
+    "50104": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50100,
+          -1
+        ],
+        [
+          49172,
+          -1
+        ],
+        [
+          49188,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        12,
+        42,
+        60,
+        -1
+      ]
+    },
+    "50100": {
+      "kind": 13,
+      "flags": 8,
+      "parents": [
+        [
+          50090,
+          -1
+        ],
+        [
+          50099,
+          -1
+        ]
+      ],
+      "raw_clause": [],
+      "rule": [
+        13,
+        42,
+        44,
+        -1
+      ]
+    },
+    "43204": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        21700,
+        21704,
+        21772,
+        21840
+      ],
+      "P0_input": 42746,
+      "matched_key": 31903,
+      "P1_input": 41010
+    },
+    "43203": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        21841,
+        21906
+      ],
+      "P0_input": 42745,
+      "matched_key": 31902,
+      "P1_input": 41009
+    },
+    "43170": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        21843,
+        21907
+      ],
+      "P0_input": 42712,
+      "matched_key": 31869,
+      "P1_input": 40976
+    },
+    "55138": {
+      "kind": 6,
+      "flags": 8,
+      "parents": [
+        [
+          43044,
+          -1
+        ],
+        [
+          42881,
+          5800
+        ],
+        [
+          41087,
+          5675
+        ],
+        [
+          40925,
+          5419
+        ],
+        [
+          50775,
+          21843
+        ]
+      ],
+      "raw_clause": [
+        4715,
+        21011,
+        21079,
+        21775
+      ]
+    },
+    "40925": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4715,
+        5419,
+        21011
+      ],
+      "P0_input": 40500,
+      "matched_key": 29657,
+      "P1_input": 38764
+    },
+    "41087": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4715,
+        5675,
+        21079
+      ],
+      "P0_input": 40662,
+      "matched_key": 29819,
+      "P1_input": 38926
+    },
+    "42881": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        5800,
+        5418,
+        21775
+      ],
+      "P0_input": 42423,
+      "matched_key": 31580,
+      "P1_input": 40687
+    },
+    "43044": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        5801,
+        5674,
+        21842
+      ],
+      "P0_input": 42586,
+      "matched_key": 31743,
+      "P1_input": 40850
+    },
+    "40926": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4714,
+        5418,
+        21011
+      ],
+      "P0_input": 40501,
+      "matched_key": 29658,
+      "P1_input": 38765
+    },
+    "41088": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4714,
+        5674,
+        21079
+      ],
+      "P0_input": 40663,
+      "matched_key": 29820,
+      "P1_input": 38927
+    },
+    "42880": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        5801,
+        5419,
+        21775
+      ],
+      "P0_input": 42422,
+      "matched_key": 31579,
+      "P1_input": 40686
+    },
+    "43045": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        5800,
+        5675,
+        21842
+      ],
+      "P0_input": 42587,
+      "matched_key": 31744,
+      "P1_input": 40851
+    }
+  },
+  "triplet_nodes": [
+    50103,
+    50108,
+    50105
+  ],
+  "native_uses": [
+    {
+      "id": "55139",
+      "use": "0",
+      "cref": "186195",
+      "level": "985",
+      "raw_literal": "20019",
+      "conflict_counter": "5",
+      "clause": "20019 20087 20783"
+    },
+    {
+      "id": "55139",
+      "use": "2",
+      "cref": "186195",
+      "level": "985",
+      "raw_literal": "20019",
+      "conflict_counter": "7",
+      "clause": "20019 20087 20783"
+    }
+  ]
+}

@@ -1,0 +1,2764 @@
+{
+  "fib_updates_8": {
+    "stock": {
+      "P0": {
+        "wall_s": 0.136099775,
+        "search_s": null,
+        "rss_kib": 19968,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null
+      },
+      "P1": {
+        "wall_s": 2.032406078,
+        "search_s": null,
+        "rss_kib": 29056,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 22702,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": "stock",
+        "cycle_s": 2.168505853
+      }
+    },
+    "off": {
+      "P0": {
+        "wall_s": 0.126032006,
+        "search_s": 0.064218962,
+        "rss_kib": 19840,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null
+      },
+      "P1": {
+        "wall_s": 2.035245246,
+        "search_s": 1.976910725,
+        "rss_kib": 29568,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 22702,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": "off",
+        "cycle_s": 2.161277252
+      }
+    },
+    "clock": {
+      "P1": {
+        "wall_s": 1.983852363,
+        "search_s": 1.926304875,
+        "rss_kib": 28928,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 22702,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": null
+      }
+    },
+    "d4": {
+      "P0": {
+        "wall_s": 0.190793418,
+        "search_s": 0.071068622,
+        "rss_kib": 28800,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 5851826
+      },
+      "P1": {
+        "wall_s": 2.087918407,
+        "search_s": 1.703941583,
+        "rss_kib": 43008,
+        "counts": {
+          "sat_conflicts": 21255,
+          "decisions": 56065,
+          "sat_propagations": 24583047,
+          "theory_propagations": 8224,
+          "theory_cycle_conflicts": 26,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 21255,
+        "root": {
+          "import_ns": 222452,
+          "root_before": 2670,
+          "root_after": 2670
+        },
+        "property": "SUCCESS",
+        "producer": "d4",
+        "families": {
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 13656,
+            "watch_conflict": 25,
+            "analyze": 3690,
+            "minimize": 1662,
+            "rows_used": 30
+          },
+          "M": {
+            "selected": 90,
+            "attached": 90,
+            "watch_unit": 12205,
+            "watch_conflict": 179,
+            "analyze": 5416,
+            "minimize": 22237,
+            "rows_used": 81
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 121,
+          "selected": 121,
+          "nodes": 69796,
+          "edges": 201878,
+          "invalidated_nodes_including_sentinel": 21063,
+          "visited_reverse_edges": 93526,
+          "archive_read_ns": 2152623,
+          "validation_and_binding_ns": 31422613,
+          "reverse_ns": 333197,
+          "selection_ns": 1299021
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 60606308,
+          "anchors_and_boolean_delta_ns": 103286977,
+          "theory_delta_ns": 41922228,
+          "selector_process_ns": 36683853
+        },
+        "cycle_s": 2.2787118250000002
+      }
+    },
+    "legacy": {
+      "P0": {
+        "wall_s": 0.189292652,
+        "search_s": 0.07213721,
+        "rss_kib": 28928,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 5851826
+      },
+      "P1": {
+        "wall_s": 2.115386084,
+        "search_s": 1.720467507,
+        "rss_kib": 43324,
+        "counts": {
+          "sat_conflicts": 21255,
+          "decisions": 56065,
+          "sat_propagations": 24583047,
+          "theory_propagations": 8224,
+          "theory_cycle_conflicts": 26,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 21255,
+        "root": {
+          "import_ns": 220529,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "legacy",
+        "families": {
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 13656,
+            "watch_conflict": 25,
+            "analyze": 3690,
+            "minimize": 1662,
+            "rows_used": 30
+          },
+          "M": {
+            "selected": 90,
+            "attached": 90,
+            "watch_unit": 12205,
+            "watch_conflict": 179,
+            "analyze": 5416,
+            "minimize": 22237,
+            "rows_used": 81
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 121,
+          "selected": 121,
+          "nodes": 69796,
+          "edges": 201878,
+          "invalidated_nodes_including_sentinel": 21063,
+          "visited_reverse_edges": 93526,
+          "archive_read_ns": 2159357,
+          "validation_and_binding_ns": 32756933,
+          "reverse_ns": 691125,
+          "selection_ns": 1378460
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 60239080,
+          "anchors_and_boolean_delta_ns": 104921506,
+          "theory_delta_ns": 40940488,
+          "selector_process_ns": 38801718
+        },
+        "cycle_s": 2.3046787359999996
+      }
+    },
+    "A": {
+      "P0": {
+        "wall_s": 0.187675681,
+        "search_s": 0.072972606,
+        "rss_kib": 29056,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 6142730
+      },
+      "P1": {
+        "wall_s": 2.691404987,
+        "search_s": 2.303741799,
+        "rss_kib": 42948,
+        "counts": {
+          "sat_conflicts": 23737,
+          "decisions": 65702,
+          "sat_propagations": 31756528,
+          "theory_propagations": 5368,
+          "theory_cycle_conflicts": 42,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 23737,
+        "root": {
+          "import_ns": 502879,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "A",
+        "families": {
+          "M": {
+            "selected": 282,
+            "attached": 282,
+            "watch_unit": 30135,
+            "watch_conflict": 394,
+            "analyze": 15873,
+            "minimize": 64274,
+            "rows_used": 229
+          },
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 12211,
+            "watch_conflict": 7,
+            "analyze": 3438,
+            "minimize": 1858,
+            "rows_used": 31
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 72514,
+          "edges": 217060,
+          "invalidated_nodes_including_sentinel": 18712,
+          "visited_reverse_edges": 70115,
+          "archive_read_ns": 2151487,
+          "validation_and_binding_ns": 33625880,
+          "reverse_ns": 676755,
+          "selection_ns": 1864674
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 61269362,
+          "anchors_and_boolean_delta_ns": 102351559,
+          "theory_delta_ns": 43642081,
+          "selector_process_ns": 40402251
+        },
+        "cycle_s": 2.879080668
+      }
+    },
+    "eager": {
+      "P0": {
+        "wall_s": 0.187410589,
+        "search_s": 0.073750372,
+        "rss_kib": 29568,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 6728930
+      }
+    },
+    "AB": {
+      "P0": {
+        "wall_s": 0.191561465,
+        "search_s": 0.073442658,
+        "rss_kib": 29056,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 6142730
+      },
+      "P1": {
+        "wall_s": 2.695179751,
+        "search_s": 2.284545794,
+        "rss_kib": 43204,
+        "counts": {
+          "sat_conflicts": 23737,
+          "decisions": 65702,
+          "sat_propagations": 31756528,
+          "theory_propagations": 5368,
+          "theory_cycle_conflicts": 42,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 23737,
+        "root": {
+          "import_ns": 699327,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "AB",
+        "families": {
+          "M": {
+            "selected": 282,
+            "attached": 282,
+            "watch_unit": 30135,
+            "watch_conflict": 394,
+            "analyze": 15873,
+            "minimize": 64274,
+            "rows_used": 229
+          },
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 12211,
+            "watch_conflict": 7,
+            "analyze": 3438,
+            "minimize": 1858,
+            "rows_used": 31
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 72514,
+          "edges": 217060,
+          "invalidated_nodes_including_sentinel": 18712,
+          "visited_reverse_edges": 70115,
+          "archive_read_ns": 2170365,
+          "validation_and_binding_ns": 32686844,
+          "reverse_ns": 700139,
+          "selection_ns": 1411253
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 63231047,
+          "anchors_and_boolean_delta_ns": 123285095,
+          "theory_delta_ns": 42572959,
+          "selector_process_ns": 38893591
+        },
+        "cycle_s": 2.886741216
+      }
+    },
+    "compact": {
+      "P0": {
+        "wall_s": 0.18704398,
+        "search_s": 0.076260973,
+        "rss_kib": 28928,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 1442,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 2260678
+      }
+    },
+    "AB-old": {
+      "P1": {
+        "wall_s": 2.6662376,
+        "search_s": 2.278515634,
+        "rss_kib": 43204,
+        "counts": {
+          "sat_conflicts": 23737,
+          "decisions": 65702,
+          "sat_propagations": 31756528,
+          "theory_propagations": 5368,
+          "theory_cycle_conflicts": 42,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 23737,
+        "root": {
+          "import_ns": 504899,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "AB",
+        "families": {
+          "M": {
+            "selected": 282,
+            "attached": 282,
+            "watch_unit": 30135,
+            "watch_conflict": 394,
+            "analyze": 15873,
+            "minimize": 64274,
+            "rows_used": 229
+          },
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 12211,
+            "watch_conflict": 7,
+            "analyze": 3438,
+            "minimize": 1858,
+            "rows_used": 31
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 72514,
+          "edges": 217060,
+          "invalidated_nodes_including_sentinel": 18712,
+          "visited_reverse_edges": 70115,
+          "archive_read_ns": 2262077,
+          "validation_and_binding_ns": 32886018,
+          "reverse_ns": 667844,
+          "selection_ns": 1529790
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 60189204,
+          "anchors_and_boolean_delta_ns": 104667950,
+          "theory_delta_ns": 41688592,
+          "selector_process_ns": 39342489
+        },
+        "cycle_s": 2.857799065
+      }
+    },
+    "compact-full": {
+      "P1": {
+        "wall_s": 2.695319081,
+        "search_s": 2.299619492,
+        "rss_kib": 43200,
+        "counts": {
+          "sat_conflicts": 23737,
+          "decisions": 65702,
+          "sat_propagations": 31756528,
+          "theory_propagations": 5368,
+          "theory_cycle_conflicts": 42,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 23737,
+        "root": {
+          "import_ns": 489536,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "M": {
+            "selected": 282,
+            "attached": 282,
+            "watch_unit": 30135,
+            "watch_conflict": 394,
+            "analyze": 15873,
+            "minimize": 64274,
+            "rows_used": 229
+          },
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 12211,
+            "watch_conflict": 7,
+            "analyze": 3438,
+            "minimize": 1858,
+            "rows_used": 31
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 17248,
+          "edges": 105293,
+          "invalidated_nodes_including_sentinel": 4068,
+          "visited_reverse_edges": 29033,
+          "archive_read_ns": 890325,
+          "validation_and_binding_ns": 26108933,
+          "reverse_ns": 478850,
+          "selection_ns": 2047210
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 60439407,
+          "anchors_and_boolean_delta_ns": 122183319,
+          "theory_delta_ns": 43151497,
+          "selector_process_ns": 31292283
+        },
+        "cycle_s": 2.882363061
+      }
+    },
+    "none": {
+      "P1": {
+        "wall_s": 2.287090309,
+        "search_s": 1.976401613,
+        "rss_kib": 43456,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 22702,
+        "root": {
+          "import_ns": 653,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 17248,
+          "edges": 105293,
+          "invalidated_nodes_including_sentinel": 4068,
+          "visited_reverse_edges": 29033,
+          "archive_read_ns": 1128596,
+          "validation_and_binding_ns": 12036697,
+          "reverse_ns": 169892,
+          "selection_ns": 1394103
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 59742737,
+          "anchors_and_boolean_delta_ns": 86746197,
+          "theory_delta_ns": 11467917,
+          "selector_process_ns": 16395899
+        },
+        "cycle_s": 2.4741342889999998
+      }
+    },
+    "boolean": {
+      "P1": {
+        "wall_s": 2.394345798,
+        "search_s": 2.086616941,
+        "rss_kib": 43456,
+        "counts": {
+          "sat_conflicts": 23775,
+          "decisions": 61169,
+          "sat_propagations": 28588568,
+          "theory_propagations": 9607,
+          "theory_cycle_conflicts": 33,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 23775,
+        "root": {
+          "import_ns": 94641,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 16459,
+            "watch_conflict": 21,
+            "analyze": 4929,
+            "minimize": 2941,
+            "rows_used": 30
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 17248,
+          "edges": 105293,
+          "invalidated_nodes_including_sentinel": 4068,
+          "visited_reverse_edges": 29033,
+          "archive_read_ns": 917134,
+          "validation_and_binding_ns": 12196996,
+          "reverse_ns": 162506,
+          "selection_ns": 1357065
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 57738668,
+          "anchors_and_boolean_delta_ns": 84924583,
+          "theory_delta_ns": 11265307,
+          "selector_process_ns": 16680364
+        },
+        "cycle_s": 2.5813897779999997
+      }
+    },
+    "mixed": {
+      "P1": {
+        "wall_s": 2.39584608,
+        "search_s": 2.089791721,
+        "rss_kib": 43460,
+        "counts": {
+          "sat_conflicts": 24832,
+          "decisions": 59791,
+          "sat_propagations": 28562817,
+          "theory_propagations": 3954,
+          "theory_cycle_conflicts": 20,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 24832,
+        "root": {
+          "import_ns": 435752,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "M": {
+            "selected": 282,
+            "attached": 282,
+            "watch_unit": 27974,
+            "watch_conflict": 381,
+            "analyze": 13296,
+            "minimize": 72492,
+            "rows_used": 245
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 17248,
+          "edges": 105293,
+          "invalidated_nodes_including_sentinel": 4068,
+          "visited_reverse_edges": 29033,
+          "archive_read_ns": 920504,
+          "validation_and_binding_ns": 12410055,
+          "reverse_ns": 163715,
+          "selection_ns": 1391923
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 57020145,
+          "anchors_and_boolean_delta_ns": 85893753,
+          "theory_delta_ns": 10945875,
+          "selector_process_ns": 16596374
+        },
+        "cycle_s": 2.58289006
+      }
+    },
+    "theory": {
+      "P1": {
+        "wall_s": 2.277719181,
+        "search_s": 1.971142157,
+        "rss_kib": 43456,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 22702,
+        "root": {
+          "import_ns": 748,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 17248,
+          "edges": 105293,
+          "invalidated_nodes_including_sentinel": 4068,
+          "visited_reverse_edges": 29033,
+          "archive_read_ns": 980189,
+          "validation_and_binding_ns": 12454026,
+          "reverse_ns": 150118,
+          "selection_ns": 1329520
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 60113164,
+          "anchors_and_boolean_delta_ns": 83941420,
+          "theory_delta_ns": 10830821,
+          "selector_process_ns": 16590282
+        },
+        "cycle_s": 2.464763161
+      }
+    },
+    "all": {
+      "P1": {
+        "wall_s": 2.593720204,
+        "search_s": 2.283044431,
+        "rss_kib": 43456,
+        "counts": {
+          "sat_conflicts": 23737,
+          "decisions": 65702,
+          "sat_propagations": 31756528,
+          "theory_propagations": 5368,
+          "theory_cycle_conflicts": 42,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 23737,
+        "root": {
+          "import_ns": 537669,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "M": {
+            "selected": 282,
+            "attached": 282,
+            "watch_unit": 30135,
+            "watch_conflict": 394,
+            "analyze": 15873,
+            "minimize": 64274,
+            "rows_used": 229
+          },
+          "B": {
+            "selected": 31,
+            "attached": 31,
+            "watch_unit": 12211,
+            "watch_conflict": 7,
+            "analyze": 3438,
+            "minimize": 1858,
+            "rows_used": 31
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 17248,
+          "edges": 105293,
+          "invalidated_nodes_including_sentinel": 4068,
+          "visited_reverse_edges": 29033,
+          "archive_read_ns": 918737,
+          "validation_and_binding_ns": 12142312,
+          "reverse_ns": 181277,
+          "selection_ns": 1380747
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 58173495,
+          "anchors_and_boolean_delta_ns": 88462742,
+          "theory_delta_ns": 11527680,
+          "selector_process_ns": 16283964
+        },
+        "cycle_s": 2.7807641839999997
+      }
+    },
+    "short": {
+      "P1": {
+        "wall_s": 2.210568083,
+        "search_s": 1.902162355,
+        "rss_kib": 43332,
+        "counts": {
+          "sat_conflicts": 22994,
+          "decisions": 58395,
+          "sat_propagations": 27232158,
+          "theory_propagations": 4746,
+          "theory_cycle_conflicts": 14,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 22994,
+        "root": {
+          "import_ns": 89383,
+          "root_before": 2670,
+          "root_after": 2670,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "M": {
+            "selected": 42,
+            "attached": 42,
+            "watch_unit": 2878,
+            "watch_conflict": 18,
+            "analyze": 1200,
+            "minimize": 30559,
+            "rows_used": 29
+          }
+        },
+        "selection": {
+          "births": 1442,
+          "surviving": 313,
+          "selected": 313,
+          "nodes": 17248,
+          "edges": 105293,
+          "invalidated_nodes_including_sentinel": 4068,
+          "visited_reverse_edges": 29033,
+          "archive_read_ns": 865697,
+          "validation_and_binding_ns": 12149514,
+          "reverse_ns": 202598,
+          "selection_ns": 1815353
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 58467625,
+          "anchors_and_boolean_delta_ns": 84660201,
+          "theory_delta_ns": 11479461,
+          "selector_process_ns": 16633957
+        },
+        "cycle_s": 2.397612063
+      }
+    }
+  },
+  "circular-buffer": {
+    "stock": {
+      "P0": {
+        "wall_s": 0.518091378,
+        "search_s": null,
+        "rss_kib": 123136,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null
+      },
+      "P1": {
+        "wall_s": 8.648197709,
+        "search_s": null,
+        "rss_kib": 144768,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 7525,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": "stock",
+        "cycle_s": 9.166289087
+      }
+    },
+    "off": {
+      "P0": {
+        "wall_s": 0.551819796,
+        "search_s": 0.256859339,
+        "rss_kib": 123264,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null
+      },
+      "P1": {
+        "wall_s": 8.985642632,
+        "search_s": 8.706939016,
+        "rss_kib": 144768,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 7525,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": "off",
+        "cycle_s": 9.537462428
+      }
+    },
+    "clock": {
+      "P1": {
+        "wall_s": 8.758348624,
+        "search_s": 8.488397175,
+        "rss_kib": 144128,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 7525,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": null
+      }
+    },
+    "d4": {
+      "P0": {
+        "wall_s": 1.128453104,
+        "search_s": 0.413783127,
+        "rss_kib": 269156,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 108297172
+      },
+      "P1": {
+        "wall_s": 13.919625658,
+        "search_s": 10.031348132,
+        "rss_kib": 137112,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69274082,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 73138,
+          "root_before": 6056,
+          "root_after": 6056
+        },
+        "property": "SUCCESS",
+        "producer": "d4",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 12,
+          "selected": 12,
+          "nodes": 1860479,
+          "edges": 2033984,
+          "invalidated_nodes_including_sentinel": 1721900,
+          "visited_reverse_edges": 1870099,
+          "archive_read_ns": 38923059,
+          "validation_and_binding_ns": 534384427,
+          "reverse_ns": 13985415,
+          "selection_ns": 1139704
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 425724013,
+          "anchors_and_boolean_delta_ns": 1758842089,
+          "theory_delta_ns": 414447104,
+          "selector_process_ns": 593318390
+        },
+        "cycle_s": 15.048078762
+      }
+    },
+    "legacy": {
+      "P0": {
+        "wall_s": 1.116121395,
+        "search_s": 0.40672257,
+        "rss_kib": 268828,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 108297172
+      },
+      "P1": {
+        "wall_s": 13.870938343,
+        "search_s": 9.98820893,
+        "rss_kib": 136848,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69274082,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 67632,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "legacy",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 12,
+          "selected": 12,
+          "nodes": 1860479,
+          "edges": 2033984,
+          "invalidated_nodes_including_sentinel": 1721900,
+          "visited_reverse_edges": 1870099,
+          "archive_read_ns": 36821646,
+          "validation_and_binding_ns": 542695280,
+          "reverse_ns": 16914790,
+          "selection_ns": 1357357
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 432196802,
+          "anchors_and_boolean_delta_ns": 1735690115,
+          "theory_delta_ns": 406068553,
+          "selector_process_ns": 602627754
+        },
+        "cycle_s": 14.987059738000001
+      }
+    },
+    "A": {
+      "P0": {
+        "wall_s": 1.137438192,
+        "search_s": 0.415327418,
+        "rss_kib": 269284,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 108841844
+      },
+      "P1": {
+        "wall_s": 13.873877683,
+        "search_s": 9.97786971,
+        "rss_kib": 137392,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69274082,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 68557,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "A",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 12,
+          "selected": 12,
+          "nodes": 1865343,
+          "edges": 2063160,
+          "invalidated_nodes_including_sentinel": 1726666,
+          "visited_reverse_edges": 1896718,
+          "archive_read_ns": 37711955,
+          "validation_and_binding_ns": 535273147,
+          "reverse_ns": 17486507,
+          "selection_ns": 1124813
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 419188954,
+          "anchors_and_boolean_delta_ns": 1752834657,
+          "theory_delta_ns": 410815812,
+          "selector_process_ns": 596320442
+        },
+        "cycle_s": 15.011315875
+      }
+    },
+    "eager": {
+      "P0": {
+        "wall_s": 1.152095518,
+        "search_s": 0.431648759,
+        "rss_kib": 285992,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 110127036
+      }
+    },
+    "AB": {
+      "P0": {
+        "wall_s": 1.130221814,
+        "search_s": 0.403444633,
+        "rss_kib": 269480,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 108841844
+      },
+      "P1": {
+        "wall_s": 14.51591187,
+        "search_s": 10.127840443,
+        "rss_kib": 137136,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69326467,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 81406,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "AB",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          },
+          "M": {
+            "selected": 3,
+            "attached": 3,
+            "watch_unit": 117,
+            "watch_conflict": 0,
+            "analyze": 0,
+            "minimize": 0,
+            "rows_used": 3
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 1865343,
+          "edges": 2063160,
+          "invalidated_nodes_including_sentinel": 1640350,
+          "visited_reverse_edges": 788639,
+          "archive_read_ns": 46382962,
+          "validation_and_binding_ns": 549828234,
+          "reverse_ns": 17205103,
+          "selection_ns": 1297361
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 426746756,
+          "anchors_and_boolean_delta_ns": 2185884256,
+          "theory_delta_ns": 450838908,
+          "selector_process_ns": 619567639
+        },
+        "cycle_s": 15.646133684
+      }
+    },
+    "compact": {
+      "P0": {
+        "wall_s": 1.039561514,
+        "search_s": 0.417180237,
+        "rss_kib": 269284,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 343,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 1089944
+      }
+    },
+    "AB-old": {
+      "P1": {
+        "wall_s": 14.089824973,
+        "search_s": 10.164526049,
+        "rss_kib": 137388,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69274082,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 67632,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "AB",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 12,
+          "selected": 12,
+          "nodes": 1865343,
+          "edges": 2063160,
+          "invalidated_nodes_including_sentinel": 1726666,
+          "visited_reverse_edges": 1896718,
+          "archive_read_ns": 36585597,
+          "validation_and_binding_ns": 544067295,
+          "reverse_ns": 19483846,
+          "selection_ns": 1374460
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 415820899,
+          "anchors_and_boolean_delta_ns": 1802940454,
+          "theory_delta_ns": 397375090,
+          "selector_process_ns": 607098088
+        },
+        "cycle_s": 15.220046787000001
+      }
+    },
+    "compact-full": {
+      "P1": {
+        "wall_s": 13.938719766,
+        "search_s": 9.898948278,
+        "rss_kib": 134980,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69326467,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 74803,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          },
+          "M": {
+            "selected": 3,
+            "attached": 3,
+            "watch_unit": 117,
+            "watch_conflict": 0,
+            "analyze": 0,
+            "minimize": 0,
+            "rows_used": 3
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 12688,
+          "edges": 18476,
+          "invalidated_nodes_including_sentinel": 8975,
+          "visited_reverse_edges": 10997,
+          "archive_read_ns": 446371,
+          "validation_and_binding_ns": 404832993,
+          "reverse_ns": 1638739,
+          "selection_ns": 947739
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 380285492,
+          "anchors_and_boolean_delta_ns": 2170532997,
+          "theory_delta_ns": 432678190,
+          "selector_process_ns": 409953387
+        },
+        "cycle_s": 14.978281280000001
+      }
+    },
+    "none": {
+      "P1": {
+        "wall_s": 11.507585725,
+        "search_s": 8.507856626,
+        "rss_kib": 144896,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 7525,
+        "root": {
+          "import_ns": 686,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 12688,
+          "edges": 18476,
+          "invalidated_nodes_including_sentinel": 8975,
+          "visited_reverse_edges": 10997,
+          "archive_read_ns": 465829,
+          "validation_and_binding_ns": 167252301,
+          "reverse_ns": 82913,
+          "selection_ns": 475990
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 387125472,
+          "anchors_and_boolean_delta_ns": 1692482424,
+          "theory_delta_ns": 127299365,
+          "selector_process_ns": 170216223
+        },
+        "cycle_s": 12.547147239000001
+      }
+    },
+    "boolean": {
+      "P1": {
+        "wall_s": 12.882223968,
+        "search_s": 9.900078556,
+        "rss_kib": 136776,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69274082,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 66703,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 12688,
+          "edges": 18476,
+          "invalidated_nodes_including_sentinel": 8975,
+          "visited_reverse_edges": 10997,
+          "archive_read_ns": 488660,
+          "validation_and_binding_ns": 165694453,
+          "reverse_ns": 72179,
+          "selection_ns": 421585
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 392439499,
+          "anchors_and_boolean_delta_ns": 1675271361,
+          "theory_delta_ns": 128342747,
+          "selector_process_ns": 168589103
+        },
+        "cycle_s": 13.921785482
+      }
+    },
+    "mixed": {
+      "P1": {
+        "wall_s": 11.650640317,
+        "search_s": 8.651502022,
+        "rss_kib": 145024,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 55029230,
+          "theory_propagations": 118095,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 7525,
+        "root": {
+          "import_ns": 15134,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "M": {
+            "selected": 3,
+            "attached": 3,
+            "watch_unit": 120,
+            "watch_conflict": 0,
+            "analyze": 0,
+            "minimize": 0,
+            "rows_used": 3
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 12688,
+          "edges": 18476,
+          "invalidated_nodes_including_sentinel": 8975,
+          "visited_reverse_edges": 10997,
+          "archive_read_ns": 447030,
+          "validation_and_binding_ns": 170380530,
+          "reverse_ns": 73977,
+          "selection_ns": 399124
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 371578799,
+          "anchors_and_boolean_delta_ns": 1697647599,
+          "theory_delta_ns": 138952026,
+          "selector_process_ns": 173245491
+        },
+        "cycle_s": 12.690201831000001
+      }
+    },
+    "theory": {
+      "P1": {
+        "wall_s": 11.565341875,
+        "search_s": 8.540846656,
+        "rss_kib": 145024,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 7525,
+        "root": {
+          "import_ns": 588,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 12688,
+          "edges": 18476,
+          "invalidated_nodes_including_sentinel": 8975,
+          "visited_reverse_edges": 10997,
+          "archive_read_ns": 1008652,
+          "validation_and_binding_ns": 169250250,
+          "reverse_ns": 107358,
+          "selection_ns": 424566
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 397518327,
+          "anchors_and_boolean_delta_ns": 1687983624,
+          "theory_delta_ns": 139031517,
+          "selector_process_ns": 172856856
+        },
+        "cycle_s": 12.604903389
+      }
+    },
+    "all": {
+      "P1": {
+        "wall_s": 12.946718863,
+        "search_s": 9.957532917,
+        "rss_kib": 137028,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69326467,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 8679,
+        "root": {
+          "import_ns": 78474,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "B": {
+            "selected": 12,
+            "attached": 12,
+            "watch_unit": 2287,
+            "watch_conflict": 3,
+            "analyze": 403,
+            "minimize": 24095,
+            "rows_used": 11
+          },
+          "M": {
+            "selected": 3,
+            "attached": 3,
+            "watch_unit": 117,
+            "watch_conflict": 0,
+            "analyze": 0,
+            "minimize": 0,
+            "rows_used": 3
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 12688,
+          "edges": 18476,
+          "invalidated_nodes_including_sentinel": 8975,
+          "visited_reverse_edges": 10997,
+          "archive_read_ns": 472439,
+          "validation_and_binding_ns": 166074657,
+          "reverse_ns": 114227,
+          "selection_ns": 524589
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 380669998,
+          "anchors_and_boolean_delta_ns": 1687010984,
+          "theory_delta_ns": 138022760,
+          "selector_process_ns": 169126533
+        },
+        "cycle_s": 13.986280377
+      }
+    },
+    "short": {
+      "P1": {
+        "wall_s": 13.106913102,
+        "search_s": 10.099221729,
+        "rss_kib": 137024,
+        "counts": {
+          "sat_conflicts": 7834,
+          "decisions": 34023,
+          "sat_propagations": 76204938,
+          "theory_propagations": 119767,
+          "theory_cycle_conflicts": 53,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 7834,
+        "root": {
+          "import_ns": 45491,
+          "root_before": 6056,
+          "root_after": 6056,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {
+          "B": {
+            "selected": 9,
+            "attached": 9,
+            "watch_unit": 1588,
+            "watch_conflict": 1,
+            "analyze": 183,
+            "minimize": 21275,
+            "rows_used": 9
+          }
+        },
+        "selection": {
+          "births": 343,
+          "surviving": 15,
+          "selected": 15,
+          "nodes": 12688,
+          "edges": 18476,
+          "invalidated_nodes_including_sentinel": 8975,
+          "visited_reverse_edges": 10997,
+          "archive_read_ns": 443287,
+          "validation_and_binding_ns": 169385125,
+          "reverse_ns": 73514,
+          "selection_ns": 416113
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 393433624,
+          "anchors_and_boolean_delta_ns": 1695845162,
+          "theory_delta_ns": 124790575,
+          "selector_process_ns": 172464359
+        },
+        "cycle_s": 14.146474616
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "stock": {
+      "P0": {
+        "wall_s": 5.515157638,
+        "search_s": null,
+        "rss_kib": 110848,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null
+      },
+      "P1": {
+        "wall_s": 20.947381669,
+        "search_s": null,
+        "rss_kib": 68736,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": "stock",
+        "cycle_s": 26.462539307
+      }
+    },
+    "off": {
+      "P0": {
+        "wall_s": 5.805143326,
+        "search_s": 5.635276785,
+        "rss_kib": 110976,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null
+      },
+      "P1": {
+        "wall_s": 22.360796142,
+        "search_s": 22.262085449,
+        "rss_kib": 69376,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": "off",
+        "cycle_s": 28.165939468
+      }
+    },
+    "clock": {
+      "P1": {
+        "wall_s": 21.3173114,
+        "search_s": 21.220259036,
+        "rss_kib": 69120,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {},
+        "property": "SUCCESS",
+        "producer": null
+      }
+    },
+    "d4": {
+      "P0": {
+        "wall_s": 7.868616235,
+        "search_s": 7.202277451,
+        "rss_kib": 342796,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 191851094
+      },
+      "P1": {
+        "wall_s": 23.91624898,
+        "search_s": 21.585329434,
+        "rss_kib": 228820,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 711,
+          "root_before": 15417,
+          "root_after": 15417
+        },
+        "property": "SUCCESS",
+        "producer": "d4",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 2385063,
+          "edges": 6732225,
+          "invalidated_nodes_including_sentinel": 2357314,
+          "visited_reverse_edges": 6685803,
+          "archive_read_ns": 72233985,
+          "validation_and_binding_ns": 403232493,
+          "reverse_ns": 38390484,
+          "selection_ns": 9344401
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 338512815,
+          "anchors_and_boolean_delta_ns": 935680474,
+          "theory_delta_ns": 132959867,
+          "selector_process_ns": 529284926
+        },
+        "cycle_s": 31.784865215
+      }
+    },
+    "legacy": {
+      "P0": {
+        "wall_s": 7.806558274,
+        "search_s": 7.155844398,
+        "rss_kib": 343040,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 191851094
+      },
+      "P1": {
+        "wall_s": 24.799999605,
+        "search_s": 22.483685779,
+        "rss_kib": 229328,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 789,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "legacy",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 2385063,
+          "edges": 6732225,
+          "invalidated_nodes_including_sentinel": 2357314,
+          "visited_reverse_edges": 6685803,
+          "archive_read_ns": 63461121,
+          "validation_and_binding_ns": 425803757,
+          "reverse_ns": 42927760,
+          "selection_ns": 9598782
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 338423921,
+          "anchors_and_boolean_delta_ns": 922126397,
+          "theory_delta_ns": 135963664,
+          "selector_process_ns": 548284487
+        },
+        "cycle_s": 32.606557879
+      }
+    },
+    "A": {
+      "P0": {
+        "wall_s": 8.07863518,
+        "search_s": 7.418940169,
+        "rss_kib": 369784,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 207722242
+      },
+      "P1": {
+        "wall_s": 24.590447229,
+        "search_s": 22.169530825,
+        "rss_kib": 244820,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 636,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "A",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 2516927,
+          "edges": 7615274,
+          "invalidated_nodes_including_sentinel": 2489114,
+          "visited_reverse_edges": 7556545,
+          "archive_read_ns": 90449004,
+          "validation_and_binding_ns": 434381448,
+          "reverse_ns": 46090674,
+          "selection_ns": 9240330
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 344329173,
+          "anchors_and_boolean_delta_ns": 974488161,
+          "theory_delta_ns": 134405646,
+          "selector_process_ns": 586750404
+        },
+        "cycle_s": 32.669082409
+      }
+    },
+    "eager": {
+      "P0": {
+        "wall_s": 9.221839464,
+        "search_s": 8.429554008,
+        "rss_kib": 539240,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 315062954
+      }
+    },
+    "AB": {
+      "P0": {
+        "wall_s": 8.209416078,
+        "search_s": 7.549479828,
+        "rss_kib": 359904,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 207722242
+      },
+      "P1": {
+        "wall_s": 24.620722292,
+        "search_s": 22.041879449,
+        "rss_kib": 245340,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 669,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "AB",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 2516927,
+          "edges": 7615274,
+          "invalidated_nodes_including_sentinel": 2478137,
+          "visited_reverse_edges": 6886428,
+          "archive_read_ns": 93447258,
+          "validation_and_binding_ns": 426318980,
+          "reverse_ns": 39584511,
+          "selection_ns": 11231094
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 339604887,
+          "anchors_and_boolean_delta_ns": 1141686709,
+          "theory_delta_ns": 141401938,
+          "selector_process_ns": 577222636
+        },
+        "cycle_s": 32.83013837
+      }
+    },
+    "compact": {
+      "P0": {
+        "wall_s": 8.045904708,
+        "search_s": 7.510836995,
+        "rss_kib": 359748,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 42244,
+        "root": {},
+        "property": "FAILURE",
+        "producer": null,
+        "proof_bytes": 60535794
+      }
+    },
+    "AB-old": {
+      "P1": {
+        "wall_s": 24.609857006,
+        "search_s": 22.131823442,
+        "rss_kib": 244824,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 721,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "AB",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 2516927,
+          "edges": 7615274,
+          "invalidated_nodes_including_sentinel": 2489114,
+          "visited_reverse_edges": 7556545,
+          "archive_read_ns": 118608525,
+          "validation_and_binding_ns": 440755279,
+          "reverse_ns": 49983417,
+          "selection_ns": 9830634
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 355076495,
+          "anchors_and_boolean_delta_ns": 970579047,
+          "theory_delta_ns": 139460918,
+          "selector_process_ns": 625893292
+        },
+        "cycle_s": 32.819273084
+      }
+    },
+    "compact-full": {
+      "P1": {
+        "wall_s": 24.319070623,
+        "search_s": 22.098620023,
+        "rss_kib": 94668,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 603,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 220841,
+          "edges": 3893220,
+          "invalidated_nodes_including_sentinel": 218589,
+          "visited_reverse_edges": 3736653,
+          "archive_read_ns": 21538544,
+          "validation_and_binding_ns": 303309084,
+          "reverse_ns": 5986419,
+          "selection_ns": 8817746
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 282038124,
+          "anchors_and_boolean_delta_ns": 1139019686,
+          "theory_delta_ns": 142759641,
+          "selector_process_ns": 342627053
+        },
+        "cycle_s": 32.364975331000004
+      }
+    },
+    "none": {
+      "P1": {
+        "wall_s": 23.415525083,
+        "search_s": 21.804547891,
+        "rss_kib": 95428,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 571,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 220841,
+          "edges": 3893220,
+          "invalidated_nodes_including_sentinel": 218589,
+          "visited_reverse_edges": 3736653,
+          "archive_read_ns": 21802061,
+          "validation_and_binding_ns": 82600292,
+          "reverse_ns": 5696797,
+          "selection_ns": 8320971
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 278851839,
+          "anchors_and_boolean_delta_ns": 925687828,
+          "theory_delta_ns": 19124593,
+          "selector_process_ns": 121610637
+        },
+        "cycle_s": 31.461429791
+      }
+    },
+    "boolean": {
+      "P1": {
+        "wall_s": 23.294949302,
+        "search_s": 21.708610339,
+        "rss_kib": 95428,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 742,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 220841,
+          "edges": 3893220,
+          "invalidated_nodes_including_sentinel": 218589,
+          "visited_reverse_edges": 3736653,
+          "archive_read_ns": 20905933,
+          "validation_and_binding_ns": 81121731,
+          "reverse_ns": 5515347,
+          "selection_ns": 8488564
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 273184593,
+          "anchors_and_boolean_delta_ns": 921965302,
+          "theory_delta_ns": 19443893,
+          "selector_process_ns": 118948710
+        },
+        "cycle_s": 31.34085401
+      }
+    },
+    "mixed": {
+      "P1": {
+        "wall_s": 23.321314514,
+        "search_s": 21.719784678,
+        "rss_kib": 95432,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 742,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 220841,
+          "edges": 3893220,
+          "invalidated_nodes_including_sentinel": 218589,
+          "visited_reverse_edges": 3736653,
+          "archive_read_ns": 20865006,
+          "validation_and_binding_ns": 84024303,
+          "reverse_ns": 6685289,
+          "selection_ns": 8225653
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 277093176,
+          "anchors_and_boolean_delta_ns": 918584078,
+          "theory_delta_ns": 18834384,
+          "selector_process_ns": 122726944
+        },
+        "cycle_s": 31.367219222000003
+      }
+    },
+    "theory": {
+      "P1": {
+        "wall_s": 23.214323648,
+        "search_s": 21.652379049,
+        "rss_kib": 95428,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 714,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 220841,
+          "edges": 3893220,
+          "invalidated_nodes_including_sentinel": 218589,
+          "visited_reverse_edges": 3736653,
+          "archive_read_ns": 23424300,
+          "validation_and_binding_ns": 83837132,
+          "reverse_ns": 5722066,
+          "selection_ns": 8162928
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 278900436,
+          "anchors_and_boolean_delta_ns": 896728625,
+          "theory_delta_ns": 19097534,
+          "selector_process_ns": 123969197
+        },
+        "cycle_s": 31.260228356
+      }
+    },
+    "all": {
+      "P1": {
+        "wall_s": 23.763408529,
+        "search_s": 22.190852662,
+        "rss_kib": 95432,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 2757,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 220841,
+          "edges": 3893220,
+          "invalidated_nodes_including_sentinel": 218589,
+          "visited_reverse_edges": 3736653,
+          "archive_read_ns": 22521890,
+          "validation_and_binding_ns": 83285174,
+          "reverse_ns": 5726127,
+          "selection_ns": 8312308
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 282768130,
+          "anchors_and_boolean_delta_ns": 898291952,
+          "theory_delta_ns": 19621866,
+          "selector_process_ns": 122705186
+        },
+        "cycle_s": 31.809313236999998
+      }
+    },
+    "short": {
+      "P1": {
+        "wall_s": 24.484040052,
+        "search_s": 22.852273195,
+        "rss_kib": 95432,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "total_conflicts": 101226,
+        "root": {
+          "import_ns": 882,
+          "root_before": 15417,
+          "root_after": 15417,
+          "root_conflicts": 0,
+          "root_conflicts_counter_delta": 0,
+          "root_decisions_counter_delta": 0,
+          "root_propagations_counter_delta": 0,
+          "root_theory_propagations_counter_delta": 0,
+          "root_theory_cycles_counter_delta": 0
+        },
+        "property": "SUCCESS",
+        "producer": "compact",
+        "families": {},
+        "selection": {
+          "births": 42244,
+          "surviving": 0,
+          "selected": 0,
+          "nodes": 220841,
+          "edges": 3893220,
+          "invalidated_nodes_including_sentinel": 218589,
+          "visited_reverse_edges": 3736653,
+          "archive_read_ns": 22262109,
+          "validation_and_binding_ns": 84463826,
+          "reverse_ns": 5989547,
+          "selection_ns": 8437395
+        },
+        "preparation_ns": {
+          "validate_and_read_models_ns": 297110846,
+          "anchors_and_boolean_delta_ns": 929098698,
+          "theory_delta_ns": 18805415,
+          "selector_process_ns": 124100787
+        },
+        "cycle_s": 32.52994476
+      }
+    }
+  }
+}

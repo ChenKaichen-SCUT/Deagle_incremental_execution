@@ -1,0 +1,3882 @@
+{
+  "fib_updates_8": {
+    "stock/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": []
+    },
+    "stock/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": []
+    },
+    "off/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "off/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "clock/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "d4/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "d4/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "legacy/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "legacy/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "A/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "A/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "eager/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "compact/P0": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 187,
+          "different_positions": 6,
+          "spans": [
+            {
+              "first_zero_based": 36,
+              "last_zero_based": 41,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB-old/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "compact-full/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "none/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "boolean/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "mixed/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "theory/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "all/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "short/P1": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    }
+  },
+  "circular-buffer": {
+    "stock/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": []
+    },
+    "stock/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": []
+    },
+    "off/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "off/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "clock/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "d4/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "d4/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "legacy/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "legacy/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "A/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "A/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "eager/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "compact/P0": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "reach_error.assertion.1": {
+          "total_steps": 357,
+          "different_positions": 12,
+          "spans": [
+            {
+              "first_zero_based": 67,
+              "last_zero_based": 72,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB-old/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "compact-full/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "none/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "boolean/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "mixed/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "theory/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "all/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "short/P1": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    }
+  },
+  "airline_reservations_6": {
+    "stock/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": []
+    },
+    "stock/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": []
+    },
+    "off/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 0,
+          "spans": [],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "off/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "clock/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "d4/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "d4/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "legacy/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "legacy/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "A/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "A/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "eager/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "compact/P0": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {
+        "main.assertion.1": {
+          "total_steps": 516,
+          "different_positions": 30,
+          "spans": [
+            {
+              "first_zero_based": 38,
+              "last_zero_based": 43,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 92,
+              "last_zero_based": 97,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 119,
+              "last_zero_based": 124,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 146,
+              "last_zero_based": 151,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            },
+            {
+              "first_zero_based": 173,
+              "last_zero_based": 178,
+              "same_step_multiset": true,
+              "hidden_assignments": true
+            }
+          ],
+          "visible_steps_equal": true
+        }
+      }
+    },
+    "AB-old/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "compact-full/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "none/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "boolean/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "mixed/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "theory/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "all/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    },
+    "short/P1": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "trace_vs_stock": {}
+    }
+  }
+}

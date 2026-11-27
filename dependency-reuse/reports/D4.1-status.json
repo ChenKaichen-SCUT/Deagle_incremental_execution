@@ -1,0 +1,41 @@
+{
+  "stage": "D4.1",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/dependency-reuse",
+  "fixed_baseline": "78d909da845966744908a111a389b883ea2fc81b",
+  "implementation_sha": "0da0f58cc2066f4b182d00d6d33b44ea520f053d",
+  "native_elf_sha256": "7194f74c7ce55abe6c66c9935dba10c7e4c9ceb3810d60de0792bddc14eb5040",
+  "observations": {
+    "frozen_pairs": 3,
+    "observations_per_arm": 1,
+    "version_processes": 69,
+    "live_preparations": 36,
+    "native_proof_archives": 18
+  },
+  "results": {
+    "all_births": 44029,
+    "complete_permanent_boolean": 390,
+    "complete_permanent_mixed": 42608,
+    "complete_permanent_theory_only": 297,
+    "query_scoped": 734,
+    "descendants_of_unknown_theory": 0,
+    "complete_native_triplet_reasons": 160175,
+    "all_policy_eligible": 328,
+    "all_policy_attached": 328,
+    "all_policy_distinct_hits": 274,
+    "airline_cross_mappable": 2,
+    "airline_cross_eligible": 0,
+    "cases_beating_stock_wall": 0,
+    "cases_beating_stock_cycle": 0
+  },
+  "evidence": {
+    "raw_files": 3497,
+    "raw_bytes": 5298115557,
+    "unique_gzip_chunks": 1983,
+    "raw_index_sha256": "2c28921b9f88203567eba2ed65533b1e785ef96159f4d80d11bc249fba5994f0",
+    "matrix_sha256": "d5ce62da281e3a7d3550fb071e1c8588bf2d60d0b9d0c43584184ae5d868cf02",
+    "audit_sha256": "6051b833326339add597e3370e96b5a5f0415284ffe23d2a4fdc02ab600c741d",
+    "properties_sha256": "faded84fbdc0592452dcb9f7e0a551662293961bbf6fae0d4d88152401d746e0"
+  },
+  "next_stage_requires_explicit_review": true
+}

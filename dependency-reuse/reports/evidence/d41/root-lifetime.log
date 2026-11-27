@@ -1,0 +1,7 @@
+ClosureSolver finishes with 0 conflicts, 8 decisions, and 12 propagations. 1 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 1.
+branch RF excludes guard, undo clears both, guard branch excludes RF, native SAT
+ClosureSolver finishes with 0 conflicts, 7 decisions, and 8 propagations. 1 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 1.
+root_import	0	BCP	2	theory	1	root_conflicts	0	native_conflict_delta	0
+root_import	1	BCP	2	theory	1	root_conflicts	1	native_conflict_delta	0
