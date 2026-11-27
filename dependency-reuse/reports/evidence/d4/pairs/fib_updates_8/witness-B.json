@@ -1,0 +1,197 @@
+{
+  "id": 55009,
+  "family": "B",
+  "P0_proof_sha256": "14b82f93f3b8267ec86aea1f9ff194dc4db67ce2bbf07401fc83357f1395f043",
+  "P1_boundary_sha256": "6ece1cc5b4efbb70158caa1ff7fe25fc8c8b3deb8b5c991447341198075752e2",
+  "P1_signed_translation": [
+    20020,
+    20089,
+    20993,
+    21061,
+    22024,
+    20293,
+    22296
+  ],
+  "native_disposition": "attached",
+  "P0_support": {
+    "55009": {
+      "kind": 6,
+      "flags": 0,
+      "parents": [
+        [
+          43568,
+          -1
+        ],
+        [
+          43405,
+          6059
+        ],
+        [
+          41091,
+          5679
+        ],
+        [
+          40931,
+          5422
+        ],
+        [
+          55008,
+          4716
+        ]
+      ],
+      "raw_clause": [
+        21012,
+        21081,
+        21985,
+        22053,
+        23016,
+        21285,
+        23288
+      ]
+    },
+    "55008": {
+      "kind": 6,
+      "flags": 0,
+      "parents": [
+        [
+          46591,
+          -1
+        ],
+        [
+          45942,
+          6827
+        ],
+        [
+          41578,
+          6446
+        ],
+        [
+          40932,
+          5423
+        ]
+      ],
+      "raw_clause": [
+        4716,
+        21012,
+        23016,
+        21285,
+        23288
+      ]
+    },
+    "40932": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4716,
+        5423,
+        21012
+      ],
+      "P0_input": 40507,
+      "matched_key": 29664,
+      "P1_input": 38771
+    },
+    "41578": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4716,
+        6446,
+        21285
+      ],
+      "P0_input": 41153,
+      "matched_key": 30310,
+      "P1_input": 39417
+    },
+    "45942": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        6827,
+        5422,
+        23016
+      ],
+      "P0_input": 45484,
+      "matched_key": 34641,
+      "P1_input": 43748
+    },
+    "46591": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        6826,
+        6447,
+        23288
+      ],
+      "P0_input": 46133,
+      "matched_key": 35290,
+      "P1_input": 44397
+    },
+    "40931": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4717,
+        5422,
+        21012
+      ],
+      "P0_input": 40506,
+      "matched_key": 29663,
+      "P1_input": 38770
+    },
+    "41091": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        4717,
+        5679,
+        21081
+      ],
+      "P0_input": 40666,
+      "matched_key": 29823,
+      "P1_input": 38930
+    },
+    "43405": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        6059,
+        5423,
+        21985
+      ],
+      "P0_input": 42947,
+      "matched_key": 32104,
+      "P1_input": 41211
+    },
+    "43568": {
+      "kind": 1,
+      "flags": 0,
+      "parents": [],
+      "raw_clause": [
+        6058,
+        5678,
+        22053
+      ],
+      "P0_input": 43110,
+      "matched_key": 32267,
+      "P1_input": 41374
+    }
+  },
+  "first_native_uses": [
+    {
+      "id": "55009",
+      "use": "0",
+      "cref": "186196",
+      "level": "959",
+      "raw_literal": "20020",
+      "conflict_counter": "17",
+      "clause": "20020 20089 20293 20993 21061 22024 22296"
+    }
+  ]
+}

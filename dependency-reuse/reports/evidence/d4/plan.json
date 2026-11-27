@@ -1,0 +1,156 @@
+{
+  "policy": {
+    "stage": "D4",
+    "cpu": 0,
+    "repeats": 1,
+    "order": [
+      "fib_updates_8",
+      "circular-buffer",
+      "airline_reservations_6"
+    ],
+    "modes": [
+      "stock",
+      "off",
+      "record-cold",
+      "reuse"
+    ],
+    "versions": [
+      "P0",
+      "P1"
+    ],
+    "recorded_arms": "each arm independently records and seals its own P0; read first installed P1 query only",
+    "selection": "all permanent native CDCL births in ascending ProofId whose original proof survives and whose full conclusion has a signed translation; no length or count cap",
+    "normalization": "sort signed literals; remove repeated literals; reject tautologies, batch duplicates, root-satisfied clauses and exact resident residual duplicates; root units enqueue and propagate, ordinary clauses enter the reducible learnt database",
+    "metrics": "unfiltered wall time for complete P0 and P1 processes, including source hashing, manifest capture, signed mapping/delta, receipt binding, reverse traversal, import, receipts and verification; native search timer surrounds restart loop",
+    "stock_search_observer": "separate timer-only upstream process on each P1 with native counts/properties checked; primary stock wall/counters always from unmodified locked ELF",
+    "cache": "new process, new work directory for each side and arm; OS caches unmanaged",
+    "no_d5": true
+  },
+  "diagnostic": false,
+  "schedule": [
+    [
+      "fib_updates_8",
+      "stock",
+      "P0"
+    ],
+    [
+      "fib_updates_8",
+      "stock",
+      "P1"
+    ],
+    [
+      "fib_updates_8",
+      "off",
+      "P0"
+    ],
+    [
+      "fib_updates_8",
+      "off",
+      "P1"
+    ],
+    [
+      "fib_updates_8",
+      "record-cold",
+      "P0"
+    ],
+    [
+      "fib_updates_8",
+      "record-cold",
+      "P1"
+    ],
+    [
+      "fib_updates_8",
+      "reuse",
+      "P0"
+    ],
+    [
+      "fib_updates_8",
+      "reuse",
+      "P1"
+    ],
+    [
+      "circular-buffer",
+      "stock",
+      "P0"
+    ],
+    [
+      "circular-buffer",
+      "stock",
+      "P1"
+    ],
+    [
+      "circular-buffer",
+      "off",
+      "P0"
+    ],
+    [
+      "circular-buffer",
+      "off",
+      "P1"
+    ],
+    [
+      "circular-buffer",
+      "record-cold",
+      "P0"
+    ],
+    [
+      "circular-buffer",
+      "record-cold",
+      "P1"
+    ],
+    [
+      "circular-buffer",
+      "reuse",
+      "P0"
+    ],
+    [
+      "circular-buffer",
+      "reuse",
+      "P1"
+    ],
+    [
+      "airline_reservations_6",
+      "stock",
+      "P0"
+    ],
+    [
+      "airline_reservations_6",
+      "stock",
+      "P1"
+    ],
+    [
+      "airline_reservations_6",
+      "off",
+      "P0"
+    ],
+    [
+      "airline_reservations_6",
+      "off",
+      "P1"
+    ],
+    [
+      "airline_reservations_6",
+      "record-cold",
+      "P0"
+    ],
+    [
+      "airline_reservations_6",
+      "record-cold",
+      "P1"
+    ],
+    [
+      "airline_reservations_6",
+      "reuse",
+      "P0"
+    ],
+    [
+      "airline_reservations_6",
+      "reuse",
+      "P1"
+    ]
+  ],
+  "stock_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "native_sha256": "9a6afc640d2a1c0c424136530c05a3a373d5bd2b488d6998ac78e3a2c172d599",
+  "stock_timer_sha256": "d6c999a0a529673ac146947da620fc00352d1577c4e80bb907745d888ef4ca37",
+  "input_lock_sha256": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206"
+}

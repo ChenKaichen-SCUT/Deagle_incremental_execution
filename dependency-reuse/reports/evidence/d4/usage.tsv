@@ -1,0 +1,10 @@
+case	family	candidates	attached	root_unit	root_satisfied	root_conflict	duplicate_batch	duplicate_resident	tautology	watch_unit	watch_conflict	analyze	minimize	rows_used	rows_moved	rows_removed	root_false_removed
+fib_updates_8	B	31	31	0	0	0	0	0	0	13656	25	3690	1662	30	30	1	0
+fib_updates_8	M	90	90	0	0	0	0	0	0	12205	179	5416	22237	81	31	59	0
+fib_updates_8	T	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+circular-buffer	B	12	12	0	0	0	0	0	0	2287	3	403	24095	11	0	0	0
+circular-buffer	M	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+circular-buffer	T	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+airline_reservations_6	B	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+airline_reservations_6	M	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0
+airline_reservations_6	T	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0

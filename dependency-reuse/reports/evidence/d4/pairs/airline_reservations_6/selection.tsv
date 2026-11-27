@@ -1,0 +1,11 @@
+births	42244
+surviving	0
+selected	0
+nodes	2385063
+edges	6732225
+invalidated_nodes_including_sentinel	2357314
+visited_reverse_edges	6685803
+archive_read_ns	68908418
+validation_and_binding_ns	404001373
+reverse_ns	37366674
+selection_ns	9291482

@@ -1,0 +1,536 @@
+{
+  "fib_updates_8": {
+    "stock": {
+      "P0": {
+        "wall_s": 0.13939178,
+        "peak_rss_kib": 19584,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.0614519,
+        "search_ns": null,
+        "restarts": null
+      },
+      "P1": {
+        "wall_s": 2.004070532,
+        "peak_rss_kib": 29568,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 1.94803,
+        "search_ns": null,
+        "restarts": null
+      },
+      "cycle_s": 2.143462312
+    },
+    "off": {
+      "P0": {
+        "wall_s": 0.126999546,
+        "peak_rss_kib": 19712,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.06217,
+        "search_ns": 61377542,
+        "restarts": 10
+      },
+      "P1": {
+        "wall_s": 1.997947027,
+        "peak_rss_kib": 29440,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 1.94299,
+        "search_ns": 1942534786,
+        "restarts": 81
+      },
+      "cycle_s": 2.124946573
+    },
+    "record-cold": {
+      "P0": {
+        "wall_s": 0.193558667,
+        "peak_rss_kib": 28800,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.0713535,
+        "search_ns": 69971631,
+        "restarts": 10
+      },
+      "P1": {
+        "wall_s": 2.332368182,
+        "peak_rss_kib": 43092,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 2.22917,
+        "search_ns": 1946881116,
+        "restarts": 81
+      },
+      "cycle_s": 2.525926849
+    },
+    "reuse": {
+      "P0": {
+        "wall_s": 0.190891777,
+        "peak_rss_kib": 29056,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 1442,
+          "decisions": 7652,
+          "sat_propagations": 1103863,
+          "theory_propagations": 3708,
+          "theory_cycle_conflicts": 25,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.0730288,
+        "search_ns": 71715573,
+        "restarts": 10
+      },
+      "P1": {
+        "wall_s": 2.063780575,
+        "peak_rss_kib": 43008,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 21255,
+          "decisions": 56065,
+          "sat_propagations": 24583047,
+          "theory_propagations": 8224,
+          "theory_cycle_conflicts": 26,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 1.96198,
+        "search_ns": 1681378316,
+        "restarts": 76
+      },
+      "cycle_s": 2.254672352
+    },
+    "stock-search-observer": {
+      "P1": {
+        "wall_s": 2.027132436,
+        "peak_rss_kib": 28928,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 22702,
+          "decisions": 60369,
+          "sat_propagations": 28170688,
+          "theory_propagations": 7979,
+          "theory_cycle_conflicts": 23,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 1.97043,
+        "search_ns": 1969934394,
+        "restarts": 81
+      }
+    }
+  },
+  "circular-buffer": {
+    "stock": {
+      "P0": {
+        "wall_s": 0.518197128,
+        "peak_rss_kib": 123008,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.239882,
+        "search_ns": null,
+        "restarts": null
+      },
+      "P1": {
+        "wall_s": 8.595164776,
+        "peak_rss_kib": 144640,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 8.32501,
+        "search_ns": null,
+        "restarts": null
+      },
+      "cycle_s": 9.113361904000001
+    },
+    "off": {
+      "P0": {
+        "wall_s": 0.510915924,
+        "peak_rss_kib": 123264,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.234433,
+        "search_ns": 230983908,
+        "restarts": 3
+      },
+      "P1": {
+        "wall_s": 8.622502934,
+        "peak_rss_kib": 144768,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 8.3528,
+        "search_ns": 8352334392,
+        "restarts": 31
+      },
+      "cycle_s": 9.133418858
+    },
+    "record-cold": {
+      "P0": {
+        "wall_s": 1.118359996,
+        "peak_rss_kib": 268868,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.408037,
+        "search_ns": 404123887,
+        "restarts": 3
+      },
+      "P1": {
+        "wall_s": 12.340940302,
+        "peak_rss_kib": 144896,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 11.7637,
+        "search_ns": 8515852109,
+        "restarts": 31
+      },
+      "cycle_s": 13.459300298
+    },
+    "reuse": {
+      "P0": {
+        "wall_s": 1.128885914,
+        "peak_rss_kib": 268868,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 343,
+          "decisions": 115443,
+          "sat_propagations": 1371484,
+          "theory_propagations": 11457,
+          "theory_cycle_conflicts": 18,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 0.413816,
+        "search_ns": 409762446,
+        "restarts": 3
+      },
+      "P1": {
+        "wall_s": 13.862599142,
+        "peak_rss_kib": 137236,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 8679,
+          "decisions": 34965,
+          "sat_propagations": 69274082,
+          "theory_propagations": 109664,
+          "theory_cycle_conflicts": 75,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 13.2729,
+        "search_ns": 9975230025,
+        "restarts": 37
+      },
+      "cycle_s": 14.991485056
+    },
+    "stock-search-observer": {
+      "P1": {
+        "wall_s": 8.807133422,
+        "peak_rss_kib": 144128,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 7525,
+          "decisions": 30512,
+          "sat_propagations": 54998143,
+          "theory_propagations": 118100,
+          "theory_cycle_conflicts": 56,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 8.53026,
+        "search_ns": 8529757551,
+        "restarts": 31
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "stock": {
+      "P0": {
+        "wall_s": 5.620466714,
+        "peak_rss_kib": 111104,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 5.45619,
+        "search_ns": null,
+        "restarts": null
+      },
+      "P1": {
+        "wall_s": 20.690554886,
+        "peak_rss_kib": 68736,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 20.5999,
+        "search_ns": null,
+        "restarts": null
+      },
+      "cycle_s": 26.3110216
+    },
+    "off": {
+      "P0": {
+        "wall_s": 5.695574928,
+        "peak_rss_kib": 110976,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 5.53668,
+        "search_ns": 5528892190,
+        "restarts": 127
+      },
+      "P1": {
+        "wall_s": 21.347201322,
+        "peak_rss_kib": 69120,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 21.2538,
+        "search_ns": 21246135250,
+        "restarts": 255
+      },
+      "cycle_s": 27.04277625
+    },
+    "record-cold": {
+      "P0": {
+        "wall_s": 7.728677205,
+        "peak_rss_kib": 342656,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 7.13435,
+        "search_ns": 7118541504,
+        "restarts": 127
+      },
+      "P1": {
+        "wall_s": 23.43580673,
+        "peak_rss_kib": 228820,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 23.1489,
+        "search_ns": 21129058281,
+        "restarts": 255
+      },
+      "cycle_s": 31.164483935
+    },
+    "reuse": {
+      "P0": {
+        "wall_s": 8.307976671,
+        "peak_rss_kib": 342668,
+        "verifier_status": "FAILURE",
+        "exit_code": 10,
+        "counts": {
+          "sat_conflicts": 42244,
+          "decisions": 87181,
+          "sat_propagations": 58423777,
+          "theory_propagations": 307192,
+          "theory_cycle_conflicts": 2782,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 7.69655,
+        "search_ns": 7680291087,
+        "restarts": 127
+      },
+      "P1": {
+        "wall_s": 23.814828699,
+        "peak_rss_kib": 228816,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 23.5292,
+        "search_ns": 21512260855,
+        "restarts": 255
+      },
+      "cycle_s": 32.12280537
+    },
+    "stock-search-observer": {
+      "P1": {
+        "wall_s": 21.430775907,
+        "peak_rss_kib": 68864,
+        "verifier_status": "SUCCESS",
+        "exit_code": 0,
+        "counts": {
+          "sat_conflicts": 101226,
+          "decisions": 141770,
+          "sat_propagations": 630353027,
+          "theory_propagations": 140936,
+          "theory_cycle_conflicts": 6514,
+          "dynamic_co_batches_added": 0,
+          "dynamic_co_pairs_added": 0
+        },
+        "property_decider_s": 21.3398,
+        "search_ns": 21332913694,
+        "restarts": 255
+      }
+    }
+  }
+}

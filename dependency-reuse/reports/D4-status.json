@@ -1,0 +1,65 @@
+{
+  "stage": "D4",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/dependency-reuse",
+  "reviewed_parent_sha": "e00da97595b3faee1adc2124c58473c4b1c0002c",
+  "implementation_sha": "b1b22fbe26a4754091074669bc49d2f0d27cca89",
+  "upstream_sha": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "native_elf_sha256": "9a6afc640d2a1c0c424136530c05a3a373d5bd2b488d6998ac78e3a2c172d599",
+  "stock_elf_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "stock_search_observer_sha256": "d6c999a0a529673ac146947da620fc00352d1577c4e80bb907745d888ef4ca37",
+  "primary_matrix": {
+    "frozen_pairs": 3,
+    "modes": [
+      "stock",
+      "off",
+      "record-cold",
+      "reuse"
+    ],
+    "versions": [
+      "P0",
+      "P1"
+    ],
+    "observations_per_cell": 1,
+    "total_process_observations": 24,
+    "extra_stock_search_clock_observations": 3
+  },
+  "outcomes": {
+    "old_proofs_survive": 133,
+    "selected": 133,
+    "attached": 133,
+    "distinct_imports_with_use": 122,
+    "watcher_unit": 28148,
+    "watcher_conflict": 207,
+    "uip_parent_visits": 9509,
+    "successful_minimization_parent_visits": 47994,
+    "root_units_on_frozen_pairs": 0,
+    "permanent_mixed_survivors": 90,
+    "permanent_boolean_survivors": 43,
+    "pairs_with_search_reduction_against_record_cold": 1,
+    "pairs_with_wall_reduction_against_stock": 0,
+    "pairs_with_cycle_reduction_against_stock": 0
+  },
+  "proof_classification": {
+    "births": 44029,
+    "permanent_boolean": 390,
+    "permanent_mixed": 2160,
+    "permanent_theory_only": 289,
+    "query_without_opaque": 66,
+    "opaque_theory": 41124,
+    "additional_incomplete": 0
+  },
+  "correctness": {
+    "independent_full_P0_replays": 6,
+    "production_selector_import_scenarios": 27,
+    "additional_D3_joint_scenarios": 16,
+    "D3_corruptions_rejected": 6,
+    "CLI_bad_libraries_rejected": 4,
+    "multi_query_fixture_P0_native_boundaries": 3,
+    "frozen_property_or_unwind_discrepancies": 0
+  },
+  "raw_files": 1612,
+  "raw_bytes": 1194205037,
+  "evidence_index_sha256": "b485adf4199045ad12f61dead2fe9433db48a08cde89b0c6c05e7dd321caab00",
+  "next_phase_requires_explicit_approval": true
+}
