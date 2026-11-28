@@ -28,4 +28,5 @@ tests/d43b/** text eol=lf
 reports/evidence/d43c/** -text
 tests/d43c/** text eol=lf
 reports/evidence/d43d/** -text
+reports/evidence/d43e/** -text
 tests/d43d/** text eol=lf
