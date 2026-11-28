@@ -1,0 +1,53 @@
+{
+  "stage": "SI-1B-value",
+  "branch": "codex/stable-model-identity",
+  "reviewed_commit": "d764b47976574a9302dd82bb9442b0e62c7466fa",
+  "reviewed_tree": "042ca76897e831f6a19e628b33f2548f3790df78",
+  "final_review": {
+    "delivery": "ACCEPTED",
+    "correctness": "PASSED",
+    "experimental_execution": "PASSED",
+    "identity_coverage": "PARTIAL_IDENTITY_COVERAGE",
+    "recovery_of_valid_prior_learnts": "CONFIRMED",
+    "real_repair_search_value": "SEARCH_VALUE_GATE_NOT_MET"
+  },
+  "status": "CURRENT_STABLE_IDENTITY_ROUTE_FROZEN",
+  "timing": {
+    "metric": "batch read + native import + search",
+    "comparison": "median of paired (New - reference) / reference, in percent",
+    "pairs_per_comparison": 3,
+    "new_identity_maintenance_cost_included": false
+  },
+  "fib_updates_8": {
+    "additional_compact_candidates": 94,
+    "additional_mixed_candidates": 70,
+    "additional_candidates_hit": 72,
+    "additional_mixed_candidates_hit": 48,
+    "median_time_increase_pct": {"Cold": 26.00, "A": 16.28},
+    "rounds_with_improvement": {"Cold": 0, "A": 0},
+    "affordable_additional_identity_cost_ns": {"Cold": 0, "A": 0}
+  },
+  "fib-snapshot-11": {
+    "classification": "INCOMPLETE_UNWINDING",
+    "selection": "first512",
+    "median_time_increase_pct": {"Cold": 81.07, "A": 67.72},
+    "rounds_with_improvement": {"Cold": 0, "A": 0}
+  },
+  "freeze_scope": {
+    "identity_implementation": ["identity catalog", "pointer layout certification", "auxiliary Boolean gate coverage"],
+    "learnt_selection": ["ranking", "count", "import order", "LBD threshold"],
+    "closed_to_automatic_continuation": ["SI-1C", "SI-1D", "SI-1E", "D4.4", "other algorithm implementation or experiments"],
+    "unimplemented_research_lead": "Independent certification of local encoding template roots",
+    "next_action": "AWAIT_NEW_USER_RESEARCH_DIRECTION"
+  },
+  "evidence": {
+    "identity_diagnosis": "SI-1B-review.md",
+    "accepted_report": "SI-1B-value.md",
+    "original_review_submission": "SI-1B-value-status.json",
+    "preregistration": "../configs/si1b-value.json",
+    "results": "evidence/si1b-value/summary.json",
+    "index": "evidence/si1b-value/files.json",
+    "index_sha256": "f80997e376c92e2e710a1a1407cfbc89053bbd303ee0e5be32893973a3ef92b6",
+    "recalculation_script": "../scripts/si1b_value_analyze.py"
+  }
+}
