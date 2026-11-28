@@ -1,0 +1,67 @@
+{
+  "stage": "SI-1B",
+  "baseline": "be3064304254e516ed37a27944d7a208a7971453",
+  "branch": "codex/stable-model-identity",
+  "cohort": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6",
+    "fib-snapshot-11"
+  ],
+  "history": "fib-snapshot-11 is INCOMPLETE_UNWINDING",
+  "experiment": "One P0/P1 shadow solve per case at the frozen native configuration; compare off/frozen receipts, supplement an off solve where needed. No import, selection, Dirty computation or performance matrix.",
+  "identity": {
+    "source": "Authenticate inputs and actual patch, lex source tokens, persistent file lineage, scoped declaration and site plus unique parent/derived role. New monotonically allocated IDs; reject ambiguous edits, duplicated origins, unexplained macros or missing token provenance. Unique assignment outer LHS may survive an RHS-only edit.",
+    "occurrence": "Thread birth by parent spawn occurrence; call chain by call-site occurrence; nesting of identified loops and local iteration; current site. Ambiguous duplicate occurrence under one tuple is unsupported. Initial static occurrence, PHI, hidden definition, read/write and object roles distinct.",
+    "port": "Typed owner, occurrence, role including field/bit/layout. Outer result independent of RHS; internal role includes operation, lowering branch, width/sign and explicit bit/operand role. No global allocation ordinals as keys.",
+    "theory": "Native write-to-read and event guard payloads are authoritative. Require all interface roles to agree. No expansion of dynamic CO or theory validity decision.",
+    "alias": "LocalValue literal/constant/unavailable. Compare full typed keys. Reject complete connected conflict components for local multibind, splitting, merging, sign or kind conflict or incompatible theory interface. XOR the two polarities.",
+    "layout": "Certify actual type shape, ABI, object and field path. Common integer representation across union views; explicit exclusions for padding, incompatible views and pointer encoding lacking object interpretation. Distinguish offset from object bits only if certified.",
+    "cache": "Record actual conversion instances and direct roles once. Share typed child references, attach owners on actual returns/hits, expand lazily with exact uniqueness checking. Track cache clearing/rebuild; cached addresses are local handles. No re-lowering.",
+    "sources": [
+      "original named Boolean/BV and aliases",
+      "true source/IR/site/SSA instance",
+      "full-adder/carry/sum and prefix comparator",
+      "conditional and supported direct CNF roles, array index fresh results",
+      "pointer/struct/union roles",
+      "RF/Guard installed signed bindings"
+    ],
+    "unsupported": "Reject every unhandled generator/ambiguous role; no old mapping fallback, SAT/RUP/Closure checks or per-clause choices."
+  },
+  "representation": "Versioned compact binary pool of interned native strings and typed rows/role references; stable source/inheritance catalog, signed map with source witnesses, integrity receipts. Audit native manifest/old mu/UsedLeaf used only in independent comparisons.",
+  "controls": [
+    "cwd-only independent build",
+    "unrelated insertion with genuine atom renumbering",
+    "similar call deletion including airline lock pair",
+    "thread/call/loop/PHI multiplicity",
+    "hidden signed permutation held outside join",
+    "first cache owner swap with nested template",
+    "negative alias/constant",
+    "duplicate gate or multibind",
+    "object/layout change",
+    "RF reorder/reversal and Guard sign"
+  ],
+  "clocks": [
+    "source scan and source/IR inheritance",
+    "P0/P1 native registration",
+    "cache storage and owner association",
+    "directory serialization/seal",
+    "read/validation",
+    "template expansion and direct join/conflict resolution",
+    "total end-to-end preparation, artifact bytes, peak RSS"
+  ],
+  "denominators": [
+    "all SAT atoms (both sides)",
+    "P0 actual UsedLeaf Boolean plus theory ports",
+    "P0 permanent conclusion atoms",
+    "native theory ports"
+  ],
+  "coverage": "By exclusive SI-1A roles; old/new same, added, lost, differently signed/different peer, neither; all 58464 prior missing UsedLeaf atoms, including 34754 auxiliary and 22732 pointer/aggregate.",
+  "gates": [
+    "all eight native input/gate/graph/scope streams and no-import property/unwind/search counts match",
+    "known permutation errors 0, injectivity and interface quarantine",
+    "same-version unambiguous supported ports stable",
+    "complete statuses for every atom"
+  ],
+  "stopping": "Report actual coverage and full shadow costs. Mark PARTIAL_IDENTITY_COVERAGE if most priority gaps persist. READY_FOR_REVIEW; stop before SI-1C."
+}
