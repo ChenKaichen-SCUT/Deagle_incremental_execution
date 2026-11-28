@@ -1,0 +1,59 @@
+{
+  "status": "MIXED_REUSE_CONFIRMED",
+  "repair_cases": [
+    "circular-buffer",
+    "fib_updates_8"
+  ],
+  "totals": {
+    "born": 152817,
+    "permanent": 97901,
+    "translated": 20520,
+    "exact": 395,
+    "tags_passed": 322,
+    "selected": 322,
+    "attached": 322,
+    "distinct_hits": 274,
+    "mixed_attached": 268,
+    "mixed_hits": 228
+  },
+  "independent_false_admissions": 0,
+  "fail_closed_checks": 18,
+  "overflow": {
+    "complete": {
+      "eligible": 514,
+      "selected": 512,
+      "dirty": [
+        0,
+        0
+      ]
+    },
+    "unseen-B": {
+      "eligible": 0,
+      "selected": 0,
+      "dirty": [
+        1,
+        0
+      ]
+    },
+    "unseen-T": {
+      "eligible": 0,
+      "selected": 0,
+      "dirty": [
+        0,
+        1
+      ]
+    }
+  },
+  "observed_production_files": [
+    "dense.bin",
+    "library.json",
+    "library.sha256",
+    "model.tsv"
+  ],
+  "dynamic_proof_nodes": 0,
+  "parent_edges": 0,
+  "duplicate_theory_condition_DAGs": 0,
+  "per_candidate_reproofs": 0,
+  "actual_stock_ELF": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "formal_performance_rounds": 0
+}

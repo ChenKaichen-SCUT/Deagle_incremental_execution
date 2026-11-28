@@ -1,0 +1,92 @@
+{
+  "format": {
+    "expected": "incompatible producer",
+    "exit": 6,
+    "published": false
+  },
+  "producer": {
+    "expected": "incompatible producer",
+    "exit": 6,
+    "published": false
+  },
+  "rules": {
+    "expected": "incompatible producer",
+    "exit": 6,
+    "published": false
+  },
+  "tools": {
+    "expected": "incompatible producer",
+    "exit": 6,
+    "published": false
+  },
+  "memory-model": {
+    "expected": "incompatible ABI or memory model",
+    "exit": 6,
+    "published": false
+  },
+  "ABI": {
+    "expected": "incompatible native configuration",
+    "exit": 6,
+    "published": false
+  },
+  "audit-payload": {
+    "expected": "incompatible producer",
+    "exit": 6,
+    "published": false
+  },
+  "ordinal": {
+    "expected": "discontinuous birth ordinal",
+    "exit": 6,
+    "published": false
+  },
+  "late-literal": {
+    "expected": "birth literal outside producer model",
+    "exit": 6,
+    "published": false
+  },
+  "scope": {
+    "expected": "invalid scoped disposition",
+    "exit": 6,
+    "published": false
+  },
+  "old-slot": {
+    "expected": "old dense slot",
+    "exit": 6,
+    "published": false
+  },
+  "used-length": {
+    "expected": "UsedLeaf length",
+    "exit": 6,
+    "published": false
+  },
+  "capacity": {
+    "expected": "compact format or capacity",
+    "exit": 6,
+    "published": false
+  },
+  "truncated": {
+    "expected": "truncated compact file",
+    "exit": 6,
+    "published": false
+  },
+  "out-of-registry-tag": {
+    "expected": "tag scope or unobserved slot",
+    "exit": 6,
+    "published": false
+  },
+  "sealed-bytes": {
+    "expected": "P0 payload checksum",
+    "exit": 6,
+    "published": false
+  },
+  "stale-receipt": {
+    "expected": "P0 seal checksum",
+    "exit": 6,
+    "published": false
+  },
+  "no-recorder": {
+    "expected": "D4 load requires",
+    "exit": 6,
+    "published": false
+  }
+}

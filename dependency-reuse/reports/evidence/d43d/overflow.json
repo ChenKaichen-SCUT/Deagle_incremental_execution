@@ -1,0 +1,26 @@
+{
+  "complete": {
+    "eligible": 514,
+    "selected": 512,
+    "dirty": [
+      0,
+      0
+    ]
+  },
+  "unseen-B": {
+    "eligible": 0,
+    "selected": 0,
+    "dirty": [
+      1,
+      0
+    ]
+  },
+  "unseen-T": {
+    "eligible": 0,
+    "selected": 0,
+    "dirty": [
+      0,
+      1
+    ]
+  }
+}

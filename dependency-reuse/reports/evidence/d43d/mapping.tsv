@@ -1,0 +1,5 @@
+case	previous_mapped	actual_mapped	added	lost	reassigned	previous_exact	actual_exact	exact_gained	exact_lost	previous_compact	actual_compact	compact_gained	compact_lost
+fib_updates_8	10062	10416	354	0	0	313	313	0	0	295	295	0	0
+circular-buffer	36495	37067	572	0	0	35	42	7	0	0	11	11	0
+airline_reservations_6	14154	15310	1156	0	0	0	0	0	0	0	0	0	0
+fib-snapshot-11	191410	191450	40	0	0	40	40	0	0	16	16	0	0

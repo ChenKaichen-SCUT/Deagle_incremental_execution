@@ -1,0 +1,74 @@
+{
+  "review_base": "fbe5f8029c9bbf438b5331993be29fdd9c69024e",
+  "implementation": "90dd3cc687a31dbeb2b591b25f51fdd9d0ce1287",
+  "upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "production_elf_sha256": "91a531d0c311f63de4a18f0aca443399ca7c817bfaf3bdcf5a6adfc3c299fc0a",
+  "unmodified_stock_elf_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "stock_clock_observer_elf_sha256": "159ee8814a16fb1556772d8d531042fc3b60ccb4a1f06d3fb9d1fc7fe05ed856",
+  "native_tree": {
+    "source": "90dd3cc687a31dbeb2b591b25f51fdd9d0ce1287",
+    "git_blobs_compared": 1922,
+    "mismatches": 0,
+    "roots": [
+      "src",
+      "minisat-2.2.1"
+    ],
+    "command": "make -C src -j7 cbmc.dir"
+  },
+  "production_worker": {
+    "command": "bash dependency-reuse/scripts/build43d.sh <repo> <new-directory>",
+    "names_and_sha256": {
+      "boolean-diff": "5a7bb5f4f9fb71866654c48ac88bb8249871047c17512eea10485c57c2023912",
+      "compact-structure": "03955cee4cb70f8a3018b4141ecb871a2ada7e89e62836929d3135279603e153",
+      "compact43.py": "0261620d9dd2292fe10f62e7bcd1a234eb94f817facbffe51eeae803bc9e04c0",
+      "d1_identity.py": "895bcd680fcb8c548b85fc6536d7ddc3d91b703f2172e11b34bab3a774766eac",
+      "d1_theory.py": "90e00cec40d661665af7459d26c62082d811e4565d4e9885695e7f622f25514a",
+      "d41_identity.py": "d9fef56de77946812439bfec1878ba85945da8cdebee1be5089bef574e1c0616",
+      "d42_events.py": "181f8e6c7867caaacf8e9e630104cf3230d7ac4d67a7b01b6138716e2c74e08a",
+      "d43_prepare.py": "38529ae6d6811f26a2d1cfb8ffbee3bcfea04c24d1e106d17b177b1b8e4d1e1d",
+      "diff_d1.py": "df310cb403cf1f4cd3814fb9ffa6bf7f19aff1dff5207f844b2d00500ffe2585",
+      "prepare_d3.py": "494cdc512a654d3640e205dbdc6be8cc808056c9a936e1e9aeaf75115aeabad2"
+    },
+    "byte_identical_on_rebuild": true
+  },
+  "fixed_inputs_and_configuration": {
+    "dependency-reuse/bench/manifest.json": "2247d7493bcee1b6a18d554c36bf35270a0f367d59caa7c840939457dd8b1206",
+    "dependency-reuse/configs/d42-plan.json": "0d0e4453524cd1ba15ae9b87bd4a2a191d9ac9b6106e7e714be9e833879e1045",
+    "dependency-reuse/configs/d43-plan.json": "616988db568ffd83153f83b9a4e34b5fb34d88ec3db8ac650acc2ae9bac45e87",
+    "dependency-reuse/configs/d43b-revision.json": "44a37584e17c6998c52913d2439273036d1f722245bf475a57cca00d8736349b",
+    "dependency-reuse/configs/build.json": "370841f9852b1b46dea9ab66949c1dab5adbecaf03ec9068b2f9a297723b731b",
+    "dependency-reuse/configs/source.json": "4957fbe97834d6317f2507f980f7dfa998751b2ef7ce37d70d7e0ccc72d9c413"
+  },
+  "resource_limits": {
+    "fib_updates_8": {
+      "memory_bytes": 21474836480,
+      "timeout_seconds": 300
+    },
+    "circular-buffer": {
+      "timeout_seconds": 660,
+      "memory_bytes": 7516192768
+    },
+    "airline_reservations_6": {
+      "memory_bytes": 21474836480,
+      "timeout_seconds": 300
+    },
+    "fib-snapshot-11": {
+      "timeout_seconds": 660,
+      "memory_bytes": 7516192768
+    }
+  },
+  "kernel": "6.6.87.2-microsoft-standard-WSL2",
+  "python": "3.10.12",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "platform": "Ubuntu 22.04.5 LTS",
+  "cpu_affinity": [
+    0
+  ],
+  "production_P0_seal_by_case": {
+    "fib_updates_8": "6a0b2bab082f406571c54c077b15db1adae27c4f8b90d25b42240008b34037a9",
+    "circular-buffer": "57f78230afab36d2603c9c245ce8421055c107aa3f3e02bb46f5f5bee6141dee",
+    "airline_reservations_6": "728d464e6de5f46371a07be1e71188bd20de5077d04052aa80234da00fc72228",
+    "fib-snapshot-11": "60ca5a2160b3865537fd555271fdc1b47acb5f120bc7d91424375b467c11ff76"
+  },
+  "measurement": "Serial single functional matrix. Unmodified stock wall, RSS and native counts; same-trajectory timing-only companion for stock search and model-to-root clocks. RSS max from wait4, not a simultaneous sum."
+}

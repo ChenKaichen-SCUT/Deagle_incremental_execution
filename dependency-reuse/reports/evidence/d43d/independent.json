@@ -1,0 +1,329 @@
+{
+  "fib_updates_8": {
+    "case": "fib_updates_8",
+    "births": 1442,
+    "registered_groups": [
+      33,
+      166
+    ],
+    "static_checked": {
+      "B_matched": 8382,
+      "B_unmapped": 4446,
+      "B_mapped_absent": 30,
+      "T_M": 779,
+      "T_U": 72
+    },
+    "mapped_old": 10062,
+    "mapped_current": 10416,
+    "changed_images": {
+      "added": 354
+    },
+    "previous_exact": 313,
+    "actual_exact": 313,
+    "previous_compact": 295,
+    "actual_compact": 295,
+    "exact_gained": [],
+    "exact_lost": [],
+    "compact_gained": [],
+    "compact_lost": [],
+    "classes": {
+      "M": {
+        "permanent": 1181,
+        "mapped": 876,
+        "exact": 282,
+        "unmapped_conclusion": 305,
+        "mapped_but_exact_dead": 594,
+        "logical_Uaudit": 264,
+        "same_group_loss": 18,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 264,
+        "compact": 264,
+        "selected": 264,
+        "hit": 224
+      },
+      "B": {
+        "permanent": 126,
+        "mapped": 80,
+        "exact": 31,
+        "unmapped_conclusion": 46,
+        "mapped_but_exact_dead": 49,
+        "logical_Uaudit": 31,
+        "same_group_loss": 0,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 31,
+        "compact": 31,
+        "selected": 31,
+        "hit": 31
+      }
+    },
+    "overlapping_Audit_cause_masks_for_mapped_dead": {
+      "1": 643
+    },
+    "selected": 295,
+    "hit": 255,
+    "false_admissions": 0,
+    "independent_replay_equal": true,
+    "actual_mu_sha256": "6dd610c1c8d7d336d13ddbb98e3de70e778f01c9a1c1970494b47aefc3480c21"
+  },
+  "circular-buffer": {
+    "case": "circular-buffer",
+    "births": 343,
+    "registered_groups": [
+      75,
+      696
+    ],
+    "static_checked": {
+      "B_matched": 6385,
+      "B_unmapped": 28928,
+      "B_mapped_absent": 54,
+      "T_M": 4692,
+      "T_U": 1722
+    },
+    "mapped_old": 36495,
+    "mapped_current": 37067,
+    "changed_images": {
+      "added": 572
+    },
+    "previous_exact": 35,
+    "actual_exact": 42,
+    "previous_compact": 0,
+    "actual_compact": 11,
+    "exact_gained": [
+      110,
+      136,
+      195,
+      277,
+      281,
+      283,
+      297
+    ],
+    "exact_lost": [],
+    "compact_gained": [
+      110,
+      115,
+      136,
+      137,
+      144,
+      270,
+      277,
+      281,
+      289,
+      297,
+      318
+    ],
+    "compact_lost": [],
+    "classes": {
+      "B": {
+        "permanent": 131,
+        "mapped": 97,
+        "exact": 20,
+        "unmapped_conclusion": 34,
+        "mapped_but_exact_dead": 77,
+        "logical_Uaudit": 13,
+        "same_group_loss": 7,
+        "extra_UsedLeaf_loss": 6,
+        "overflow_loss": 0,
+        "logical_Uactual": 7,
+        "compact": 7,
+        "selected": 7,
+        "hit": 6
+      },
+      "M": {
+        "permanent": 52,
+        "mapped": 44,
+        "exact": 22,
+        "unmapped_conclusion": 8,
+        "mapped_but_exact_dead": 22,
+        "logical_Uaudit": 4,
+        "same_group_loss": 18,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 4,
+        "compact": 4,
+        "selected": 4,
+        "hit": 4
+      },
+      "T": {
+        "permanent": 5,
+        "mapped": 5,
+        "exact": 0,
+        "unmapped_conclusion": 0,
+        "mapped_but_exact_dead": 5,
+        "logical_Uaudit": 0,
+        "same_group_loss": 0,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 0,
+        "compact": 0,
+        "selected": 0,
+        "hit": 0
+      }
+    },
+    "overlapping_Audit_cause_masks_for_mapped_dead": {
+      "1": 77,
+      "512": 26,
+      "513": 1
+    },
+    "selected": 11,
+    "hit": 10,
+    "false_admissions": 0,
+    "independent_replay_equal": true,
+    "actual_mu_sha256": "e9d980740d705051ea1c6a413fa39971614f85a85972d68e568e43bec5c609ec"
+  },
+  "airline_reservations_6": {
+    "case": "airline_reservations_6",
+    "births": 42244,
+    "registered_groups": [
+      110,
+      957
+    ],
+    "static_checked": {
+      "B_matched": 8343,
+      "B_unmapped": 24887,
+      "T_M": 801,
+      "T_U": 741,
+      "T_C": 706
+    },
+    "mapped_old": 14154,
+    "mapped_current": 15310,
+    "changed_images": {
+      "added": 1156
+    },
+    "previous_exact": 0,
+    "actual_exact": 0,
+    "previous_compact": 0,
+    "actual_compact": 0,
+    "exact_gained": [],
+    "exact_lost": [],
+    "compact_gained": [],
+    "compact_lost": [],
+    "classes": {
+      "M": {
+        "permanent": 41375,
+        "mapped": 2,
+        "exact": 0,
+        "unmapped_conclusion": 41373,
+        "mapped_but_exact_dead": 2,
+        "logical_Uaudit": 0,
+        "same_group_loss": 0,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 0,
+        "compact": 0,
+        "selected": 0,
+        "hit": 0
+      },
+      "B": {
+        "permanent": 133,
+        "mapped": 0,
+        "exact": 0,
+        "unmapped_conclusion": 133,
+        "mapped_but_exact_dead": 0,
+        "logical_Uaudit": 0,
+        "same_group_loss": 0,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 0,
+        "compact": 0,
+        "selected": 0,
+        "hit": 0
+      },
+      "T": {
+        "permanent": 292,
+        "mapped": 0,
+        "exact": 0,
+        "unmapped_conclusion": 292,
+        "mapped_but_exact_dead": 0,
+        "logical_Uaudit": 0,
+        "same_group_loss": 0,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 0,
+        "compact": 0,
+        "selected": 0,
+        "hit": 0
+      }
+    },
+    "overlapping_Audit_cause_masks_for_mapped_dead": {
+      "513": 1,
+      "769": 1
+    },
+    "selected": 0,
+    "hit": 0,
+    "false_admissions": 0,
+    "independent_replay_equal": true,
+    "actual_mu_sha256": "6cd1d4b2b3b25aba90e20912cbb791317489f56cc02e2f9b0b7fdbff02d6f8e0"
+  },
+  "fib-snapshot-11": {
+    "case": "fib-snapshot-11",
+    "births": 108788,
+    "registered_groups": [
+      50,
+      307
+    ],
+    "static_checked": {
+      "B_matched": 120203,
+      "B_unmapped": 18243,
+      "T_M": 13378,
+      "T_U": 98,
+      "T_C": 58
+    },
+    "mapped_old": 191410,
+    "mapped_current": 191450,
+    "changed_images": {
+      "added": 40
+    },
+    "previous_exact": 40,
+    "actual_exact": 40,
+    "previous_compact": 16,
+    "actual_compact": 16,
+    "exact_gained": [],
+    "exact_lost": [],
+    "compact_gained": [],
+    "compact_lost": [],
+    "classes": {
+      "B": {
+        "permanent": 1723,
+        "mapped": 995,
+        "exact": 40,
+        "unmapped_conclusion": 728,
+        "mapped_but_exact_dead": 955,
+        "logical_Uaudit": 31,
+        "same_group_loss": 9,
+        "extra_UsedLeaf_loss": 15,
+        "overflow_loss": 0,
+        "logical_Uactual": 16,
+        "compact": 16,
+        "selected": 16,
+        "hit": 9
+      },
+      "M": {
+        "permanent": 52883,
+        "mapped": 18421,
+        "exact": 0,
+        "unmapped_conclusion": 34462,
+        "mapped_but_exact_dead": 18421,
+        "logical_Uaudit": 0,
+        "same_group_loss": 0,
+        "extra_UsedLeaf_loss": 0,
+        "overflow_loss": 0,
+        "logical_Uactual": 0,
+        "compact": 0,
+        "selected": 0,
+        "hit": 0
+      }
+    },
+    "overlapping_Audit_cause_masks_for_mapped_dead": {
+      "513": 18242,
+      "512": 179,
+      "1": 955
+    },
+    "selected": 16,
+    "hit": 9,
+    "false_admissions": 0,
+    "independent_replay_equal": true,
+    "actual_mu_sha256": "c2868d2f9009cdcdff750696131200f555df98ce2c4835a6722e0f8cb3169f09"
+  }
+}

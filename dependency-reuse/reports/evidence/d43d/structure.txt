@@ -1,0 +1,1 @@
+signed inverse checked; differing polarity, symmetric alternatives, theory aliases and unknown role rejected

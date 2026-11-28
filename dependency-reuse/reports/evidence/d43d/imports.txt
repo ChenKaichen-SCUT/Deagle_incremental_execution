@@ -1,0 +1,9 @@
+ClosureSolver finishes with 0 conflicts, 6 decisions, and 12 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 0.
+root dispositions 7, root unit with implication, watcher propagation, fresh query SAT
+ClosureSolver finishes with 0 conflicts, 6 decisions, and 14 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 0.
+reduceDB removals 3 relocated rows 3 collection count 1 propagated ID 10 at current reference 68
+ClosureSolver finishes with 0 conflicts, 5 decisions, and 4 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 0.
+rejected missing graph, unbound literal, repeated ID, query family and repeated import; empty and root UNSAT verified

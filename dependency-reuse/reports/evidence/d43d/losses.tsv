@@ -1,0 +1,13 @@
+case	family	permanent	unmapped_conclusion	mapped	mapped_but_exact_dead	exact	same_group_loss	logical_Uaudit	extra_UsedLeaf_loss	logical_Uactual	overflow_loss	compact
+fib_updates_8	B	126	46	80	49	31	0	31	0	31	0	31
+fib_updates_8	M	1181	305	876	594	282	18	264	0	264	0	264
+fib_updates_8	T	0	0	0	0	0	0	0	0	0	0	0
+circular-buffer	B	131	34	97	77	20	7	13	6	7	0	7
+circular-buffer	M	52	8	44	22	22	18	4	0	4	0	4
+circular-buffer	T	5	0	5	5	0	0	0	0	0	0	0
+airline_reservations_6	B	133	133	0	0	0	0	0	0	0	0	0
+airline_reservations_6	M	41375	41373	2	2	0	0	0	0	0	0	0
+airline_reservations_6	T	292	292	0	0	0	0	0	0	0	0	0
+fib-snapshot-11	B	1723	728	995	955	40	9	31	15	16	0	16
+fib-snapshot-11	M	52883	34462	18421	18421	0	0	0	0	0	0	0
+fib-snapshot-11	T	0	0	0	0	0	0	0	0	0	0	0

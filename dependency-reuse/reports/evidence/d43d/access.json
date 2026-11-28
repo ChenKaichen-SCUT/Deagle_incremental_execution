@@ -1,0 +1,12 @@
+{
+  "open_trace_sha256": "96af61660508c7b5f7c83dafa94c20ab92d85a35a480e04d9a8983a3fcb77b2f",
+  "P0_library_files": [
+    "dense.bin",
+    "library.json",
+    "library.sha256",
+    "model.tsv"
+  ],
+  "archived_proof_reads": 0,
+  "old_mapping_reads": 0,
+  "selected": 295
+}

@@ -1,0 +1,41 @@
+{
+  "source": "90dd3cc687a31dbeb2b591b25f51fdd9d0ce1287",
+  "raw_commit": "8438620279e6c0a10a10ba73dbe5936726bd2f58",
+  "index": "raw/files.json",
+  "index_sha256": "fc323b1764078073b641a28d3f16b914984889ccb804760c455997b02c3e28c5",
+  "format": "D43B-raw-v1",
+  "chunk_bytes": 4194304,
+  "parents": {
+    "D42": [
+      "d42/raw/release",
+      "45e21554e55b97dcb64aa68095c19acf7221656c7a18388f261aff78a82a96c2"
+    ],
+    "D43A": [
+      "d43a/raw",
+      "571c0203ef13f9bf614c6b12687c58a0638254cc869c27e28d3854c08b50619d"
+    ]
+  },
+  "chunk_owners": {
+    "B": 611,
+    "D42": 137
+  },
+  "owner_B": "New objects in this archive, per the existing D43B-raw-v1 format.",
+  "files_verified": 912,
+  "original_bytes_verified": 1074076692,
+  "new_compressed_objects": 611,
+  "new_compressed_bytes": 124152850,
+  "restored_summary_files_identical": 11,
+  "independent_exact_replay": [
+    "audit.json",
+    "survivors.tsv",
+    "actual-mu-births.tsv"
+  ],
+  "independently_replayed_cases": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6",
+    "fib-snapshot-11"
+  ],
+  "archived_tools_and_ELFs": "native/stock, native/production, stock-clock/, tools/, offline-tools/",
+  "restore": "python3 dependency-reuse/scripts/d43b_archive.py restore dependency-reuse/reports/evidence/d43d/raw NEW_DIRECTORY"
+}

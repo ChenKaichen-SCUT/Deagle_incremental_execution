@@ -1,0 +1,5 @@
+912 files, 1074076692 original bytes verified
+912 files, 1074076692 original bytes verified
+Complete restore reproduced all summary tables byte for byte.
+Independent exact replay from restored archives reproduced audit.json, survivors.tsv and actual-mu-births.tsv for each of the four actual mappings.
+All ten restored production worker files matched a clean rebuild byte for byte.
