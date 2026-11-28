@@ -1,0 +1,112 @@
+{
+  "stage": "D4.3-D",
+  "gate": "MIXED_REUSE_CONFIRMED",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/compact-dependency-d43",
+  "review_base": "fbe5f8029c9bbf438b5331993be29fdd9c69024e",
+  "implementation": "90dd3cc687a31dbeb2b591b25f51fdd9d0ce1287",
+  "raw_capture": "8438620279e6c0a10a10ba73dbe5936726bd2f58",
+  "evidence": {
+    "commit": "38e3b26938eed1654fcfdeefe0cd116e8d849caf",
+    "index": "evidence/d43d/files.json",
+    "index_sha256": "79de8dab5b3aa4a92c2fb6959941a3d73314adf23c96967f01c417e8f5387faa",
+    "raw_index_sha256": "fc323b1764078073b641a28d3f16b914984889ccb804760c455997b02c3e28c5",
+    "verified_original_files": 912,
+    "verified_original_bytes": 1074076692,
+    "restored_summary_files_identical": 11,
+    "restored_independent_exact_replays": 4
+  },
+  "published_report": {
+    "verified_remote_sha": "077175497d73cf995e2414778b38721369b671b8",
+    "verified_ref": "refs/heads/codex/compact-dependency-d43",
+    "url": "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution/blob/077175497d73cf995e2414778b38721369b671b8/dependency-reuse/reports/D4.3-D.md"
+  },
+  "github_verified_blobs": {
+    "D4.3-D.md": "e207672c8160ee9d4fc4de717ea3267c81b74dcf",
+    "gate.json": "e958083d1787ada7ecaf452c99abfb1de931386e",
+    "archive.json": "73844ceef24087723c213698a088d200cf957d1b"
+  },
+  "results": {
+    "born": 152817,
+    "permanent": 97901,
+    "query": 54916,
+    "unknown": 0,
+    "complete_mapped_conclusions": 20520,
+    "exact_under_actual_mu": 395,
+    "eligible": 322,
+    "selected": 322,
+    "attached": 322,
+    "distinct_hits": 274,
+    "pure_Boolean_attached": 54,
+    "pure_Boolean_distinct_hits": 46,
+    "mixed_attached": 268,
+    "mixed_distinct_hits": 228,
+    "pure_theory_attached": 0,
+    "pure_theory_distinct_hits": 0,
+    "independent_false_admissions": 0,
+    "old_proof_archive_reads_in_production": 0,
+    "old_mapping_file_reads_in_production": 0,
+    "added_dynamic_proof_nodes": 0,
+    "added_parent_edges": 0,
+    "added_duplicate_theory_condition_DAGs": 0,
+    "normal_per_clause_SAT_RUP_Closure": 0,
+    "real_overflow_losses": 0,
+    "failed_closed_invalid_native_loads": 18,
+    "cases": {
+      "fib_updates_8": {
+        "P1": "BOUNDED_PASS",
+        "exact": 313,
+        "attached": 295,
+        "distinct_hits": 255,
+        "mixed_attached": 264,
+        "mixed_distinct_hits": 224
+      },
+      "circular-buffer": {
+        "P1": "BOUNDED_PASS",
+        "exact": 42,
+        "attached": 11,
+        "distinct_hits": 10,
+        "mixed_attached": 4,
+        "mixed_distinct_hits": 4
+      },
+      "airline_reservations_6": {
+        "P1": "BOUNDED_PASS",
+        "exact": 0,
+        "attached": 0,
+        "distinct_hits": 0,
+        "mixed_attached": 0,
+        "mixed_distinct_hits": 0
+      },
+      "fib-snapshot-11": {
+        "P1": "INCOMPLETE_UNWINDING",
+        "exact": 40,
+        "attached": 16,
+        "distinct_hits": 9,
+        "mixed_attached": 0,
+        "mixed_distinct_hits": 0,
+        "counted_as_repair": false
+      }
+    },
+    "all_properties_unwinding_and_visible_traces_match_stock": true
+  },
+  "performance": {
+    "functional_rounds_per_case": 1,
+    "formal_repeated_rounds": 0,
+    "P1_and_two_version_net_speedups_over_unmodified_stock": 0,
+    "stock_wall_RSS_and_counters": "Unmodified frozen stock ELF",
+    "stock_model_to_root_and_search_only": "Separate timing observer checked against the stock trajectory",
+    "later_fair_references": [
+      "stock",
+      "off",
+      "Light-quality",
+      "Light-no-quality",
+      "compact-cold",
+      "compact-reuse"
+    ]
+  },
+  "boundaries": {
+    "D43E_started": false,
+    "D5_started": false,
+    "awaiting_review": true
+  }
+}
