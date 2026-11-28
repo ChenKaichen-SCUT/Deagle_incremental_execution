@@ -1,0 +1,365 @@
+{
+  "stage": "PI-0",
+  "branch": "codex/persistent-minisat-closure",
+  "upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "research": "d764b47976574a9302dd82bb9442b0e62c7466fa",
+  "reference_path": "dependency-reuse/reports/evidence/si1a/frozen-inputs.json",
+  "reference_sha256": "952b01ba03aedee6f4ba69f576cb5c009630d148bc06d788ea1eec1e63440a6e",
+  "stop_after_each_stage": true,
+  "frontend_mode": "full_rebuild",
+  "memory_model": "SC",
+  "solver": "eager Deagle Closure",
+  "cases": {
+    "fib_updates_8": {
+      "role": "repair_SAT_to_UNSAT",
+      "target": "main.assertion.1",
+      "workers": 2,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "10",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "harness.c"
+      ],
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "staged": {
+        "P0": {
+          "program.c": "old/program.c",
+          "harness.c": "harness.c"
+        },
+        "P1": {
+          "program.c": "candidate/program.c",
+          "harness.c": "harness.c"
+        }
+      },
+      "files_sha256": {
+        "candidate/program.c": "949c2a8d3de15f27a039e99cf44642d12ba53fa236b9f230ac38ddfa408d6c4f",
+        "gamma.json": "f9884dd280e5d841d58ef5759d23839c9a209260cd02c0dc9d13480e484f13f4",
+        "harness.c": "a83ec85d1a3105f26025be5de55bc9c102ae78e8cad6e2b9dbcaf0182032928a",
+        "old/program.c": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+        "patch.diff": "beaa70d06d3fa8b78724cf9355a3969b8b2adc1a448652c614e412c8ba140e49",
+        "phi.json": "8c6ab0595538b2150f0db28c7189244a82ccff4bfd29ba849cad68b065927c1b",
+        "task.yaml": "a033281a4e2247ca89720262c58424378441157f317d204f66ed4e594e3cd56c"
+      },
+      "round_order": [
+        [
+          "Stock",
+          "Reset-active",
+          "Reset-union",
+          "Persistent"
+        ],
+        [
+          "Reset-active",
+          "Reset-union",
+          "Persistent",
+          "Stock"
+        ],
+        [
+          "Reset-union",
+          "Persistent",
+          "Stock",
+          "Reset-active"
+        ]
+      ]
+    },
+    "circular-buffer": {
+      "role": "repair_SAT_to_UNSAT",
+      "target": "reach_error.assertion.1",
+      "workers": 2,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "staged": {
+        "P0": {
+          "program.i": "old/program.i"
+        },
+        "P1": {
+          "program.i": "new/program.i"
+        }
+      },
+      "files_sha256": {
+        "new/program.i": "45d0532015299cbea6251779c55f20bc70cd28eb2933c8ada200deed7fd901e3",
+        "new/upstream.yml": "82e7a0357e70d0b79d339db3e6e51b99bda378f1039b77b07f21f612e6d7c63a",
+        "old/program.i": "a5ee9b9286f55973fff2cea9c449f3602c5be2a48fed2e7e6cce6beebc18d9bc",
+        "old/upstream.yml": "82e7a0357e70d0b79d339db3e6e51b99bda378f1039b77b07f21f612e6d7c63a",
+        "patch.diff": "d75bf2d49578dd9a25f922fb1bbda7f92bc801a2fc4a1cd38c431e7ffe4602b9",
+        "provenance.json": "121998c40d88991fe6bdf7d59c8b0bbba341784ad47a9b2bcc48bf7a468920eb",
+        "task.yaml": "25c9e386f67bb40fb96bc1b6f919d2ca8b01da9610e77f6a687951e61777dc4c",
+        "unreach-call.prp": "0c6a90cfc3ad4545225a0537ddc37b8a11ea5a37b906c053bb298b748f810150"
+      },
+      "round_order": [
+        [
+          "Reset-active",
+          "Reset-union",
+          "Persistent",
+          "Stock"
+        ],
+        [
+          "Reset-union",
+          "Persistent",
+          "Stock",
+          "Reset-active"
+        ],
+        [
+          "Persistent",
+          "Stock",
+          "Reset-active",
+          "Reset-union"
+        ]
+      ]
+    },
+    "airline_reservations_6": {
+      "role": "repair_SAT_to_UNSAT",
+      "target": "main.assertion.1",
+      "workers": 6,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--64",
+        "--unwind",
+        "8",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "harness.c"
+      ],
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "staged": {
+        "P0": {
+          "program.c": "old/program.c",
+          "harness.c": "harness.c"
+        },
+        "P1": {
+          "program.c": "candidate/program.c",
+          "harness.c": "harness.c"
+        }
+      },
+      "files_sha256": {
+        "candidate/program.c": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+        "gamma.json": "bc631cb9642b4166f90511c64691c38bec69aeb804a1c0bdb93d2e316b255785",
+        "harness.c": "44f40b42442d83b54bea1f4e3420298ad2314d4698b726421fbcf9d81e061fa2",
+        "old/program.c": "62b5b24c79c87886162fb6af46fbc269dab8ee398e680350d3c6bda2fdb7ee34",
+        "patch.diff": "68b02b3904285624bf0d56d4859e5e9683769d45b199961f0204a72bec101407",
+        "phi.json": "ae6fc0ba25f346cf0f69f9d92e6c223a37ff6aed564c27d6455416b29054ea93",
+        "task.yaml": "ebba08aadccd9070dda682e8e508070c1b7e020a421742293cf3f73a5f0b9411"
+      },
+      "round_order": [
+        [
+          "Reset-union",
+          "Persistent",
+          "Stock",
+          "Reset-active"
+        ],
+        [
+          "Persistent",
+          "Stock",
+          "Reset-active",
+          "Reset-union"
+        ],
+        [
+          "Stock",
+          "Reset-active",
+          "Reset-union",
+          "Persistent"
+        ]
+      ]
+    },
+    "fib-snapshot-11": {
+      "role": "historical_INCOMPLETE_UNWINDING",
+      "target": "reach_error.assertion.1",
+      "workers": 2,
+      "argv": [
+        "--function",
+        "main",
+        "--deagle-closure",
+        "--mm",
+        "sc",
+        "--32",
+        "--unwind",
+        "25",
+        "--unwinding-assertions",
+        "--trace",
+        "--json-ui",
+        "program.i"
+      ],
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "staged": {
+        "P0": {
+          "program.i": "old/program.i"
+        },
+        "P1": {
+          "program.i": "new/program.i"
+        }
+      },
+      "files_sha256": {
+        "new/program.i": "c0e681ed69012b0e000ff579cf0a3e27385ce7ab4c28525dd10d6a37e7685181",
+        "old/program.i": "deae7fd0ef95d67bb618281e50bfba6f50a83de212ef14f46660866b256c6152"
+      },
+      "round_order": [
+        [
+          "Persistent",
+          "Stock",
+          "Reset-active",
+          "Reset-union"
+        ],
+        [
+          "Stock",
+          "Reset-active",
+          "Reset-union",
+          "Persistent"
+        ],
+        [
+          "Reset-active",
+          "Reset-union",
+          "Persistent",
+          "Stock"
+        ]
+      ]
+    }
+  },
+  "execution": {
+    "cpu": [
+      0
+    ],
+    "serial": true,
+    "formal_paired_rounds": 3,
+    "sessions_per_arm_and_round": 1,
+    "cold_start": "fresh process per arm; OS manages page cache",
+    "schedule": "round outermost; fixed case order; arm order below",
+    "limits": "original per-case process address-space limit and monotonic process-group timeout; no overlapping builds or audits",
+    "native_defaults": {
+      "random_seed": 91648253,
+      "random_frequency": 0,
+      "ccmin_mode": 2,
+      "phase_saving": 2,
+      "luby": true,
+      "restart_first": 100,
+      "restart_increase": 2,
+      "native_reduceDB_and_GC": true
+    },
+    "P0_visibility": "Only deliver P1 after actual P0 result. Each arm pays its own P0; stock uses separate original processes.",
+    "failure_policy": "retain timeout, UNKNOWN, interruption, OOM, fallback and all elapsed costs; no imputation",
+    "timed_audit": "detailed reason logs only in a companion run with matched model, results and work counters",
+    "resource_accounting": "per-process peak RSS plus a process-tree peak for concurrent frontend/backend; do not add disjoint historical maxima",
+    "PI1_assumption_control": "activate, propagate and roll back without ordinary search; report decision levels, graph push/pop/replay, time and RSS as diagnostic_only; pause if assumption cost dominates"
+  },
+  "selector_policy": {
+    "B": "one selector per full canonical global clause and scope",
+    "Q": "each scoped CNF plus its query control",
+    "query_reuse": "only on full certified descriptor equality",
+    "epoch": "full immutable graph and rules; otherwise new selector",
+    "global_variables": "signed injective per version; fresh on any unproven correspondence",
+    "dynamic_CO": "fresh allocator in the owning epoch",
+    "assumption_order": [
+      "context selectors including disabled contexts",
+      "Boolean input selectors",
+      "query selectors and scoped inputs",
+      "native query assumptions"
+    ],
+    "within_type_order": "ascending registry ID; explicit negative assumptions for inactive selectors",
+    "initial_local_whitelist": [
+      "PO seeds, authenticated RF/Guard bindings",
+      "plain transitivity and cycles",
+      "WS/FR and trinary only upon independent local support verification; otherwise epoch"
+    ]
+  },
+  "comparators": {
+    "Stock": "original ELF, independent full P0/P1, no selectors",
+    "Reset-active": "new P1 solver with only current active inputs, active context and query; ordinary decision variables as actually referenced",
+    "Reset-union": "new P1 solver, identical global base union, assumptions and input order; no P0 search-generated CO, reason clauses, learnts or copied root facts",
+    "Persistent": "one new session per pair, true P0 solve, native resident clauses and legal permanent roots at the P1 boundary"
+  },
+  "clock": {
+    "P0": [
+      "frontend0",
+      "identity0",
+      "install0",
+      "solve0",
+      "result0"
+    ],
+    "P1": [
+      "frontend1",
+      "identity_diff1",
+      "transition1",
+      "solve1",
+      "result1"
+    ],
+    "cycle": [
+      "startup",
+      "P0",
+      "P1",
+      "shutdown"
+    ],
+    "complete_wall": "external monotonic entry through final result and teardown",
+    "nested": "assumption installation, Boolean/theory BCP, replay, restart, search inside solve; root work during installation or transition charged there",
+    "input_output": "include IPC, model lists, identities, serialization, projection and required witness checks; human repair waiting separate",
+    "PI3": "frozen models and certified mapping are diagnostic_only; matched stock backend boundary required for a budget",
+    "PI4": "independent unmodified stock wall for each full P1 and two-version cycle"
+  },
+  "gates": {
+    "L1": "complete guarded exits, lawful query equivalence, independent Boolean/order oracle, all properties/unwinding/visible witnesses, lifecycle/failure controls",
+    "L2": "one SAT solver, real P0, live database preserved, actual old use; zero exports/imports and per-learnt reproof",
+    "L3": "G0 != G1, audited local mixed learnt persists, remains active and hits; separate real and model-only evidence",
+    "L4": {
+      "population": "at least one real repair",
+      "reference": "Reset-active same-boundary full P1",
+      "paired_median_fraction_saved_min": 0.05,
+      "paired_median_seconds_saved_min": 0.2,
+      "positive_pairs_min": 2,
+      "of": 3,
+      "additional_condition": "positive signed budget against a comparable stock backend after accounted costs; positive Reset-union alone insufficient"
+    },
+    "L5": {
+      "reference": "unmodified stock",
+      "populations": [
+        "real repair full P1",
+        "real repair full cycle"
+      ],
+      "paired_median_fraction_saved_min": 0.05,
+      "paired_median_seconds_saved_min": 0.2,
+      "positive_pairs_min": 2,
+      "of": 3
+    },
+    "historical_counts_toward_gates": false,
+    "requires_user_approval_for_further_rounds": true
+  },
+  "PI0_stock_controls": [
+    "smoke/worker_violation/smoke",
+    "fib_updates_8/P0",
+    "fib_updates_8/P1"
+  ]
+}

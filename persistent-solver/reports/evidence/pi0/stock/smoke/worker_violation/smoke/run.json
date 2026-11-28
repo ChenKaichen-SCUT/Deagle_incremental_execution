@@ -1,0 +1,48 @@
+{
+  "case": "smoke/worker_violation",
+  "side": "smoke",
+  "argv": [
+    "/home/deagle/pi0-stock/src/cbmc/deagle_exe",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "3",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "worker_violation.c"
+  ],
+  "cwd": "/tmp/tmppevfy_4y/smoke/worker_violation/smoke/work",
+  "binary_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "input_sha256": {
+    "worker_violation.c": "cee552cd63d7b6e0757417afad2351a116d6987bbff51a2a3e5dbfd501816332"
+  },
+  "limits": {
+    "timeout_seconds": 60,
+    "memory_bytes": 1073741824
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "target": "worker.assertion.1",
+  "started_utc": "2026-11-28T09:40:13.641973+00:00",
+  "monotonic_start_ns": 277376742221202,
+  "exit_code": 10,
+  "timed_out": false,
+  "wall_ns": 58198199,
+  "user_s": 0.028863999999999997,
+  "system_s": 0.014665,
+  "peak_rss_kib": 15488,
+  "stdout_sha256": "70a1c19460519c93ea5f7c997e92069ee5e0d27e0639efdd031bd56420f5530d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

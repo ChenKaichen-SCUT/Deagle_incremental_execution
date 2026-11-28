@@ -1,0 +1,8 @@
+LAYOUT 4 4 4 8 8 16 1 8 4
+ClosureSolver finishes with 0 conflicts, 0 decisions, and 2 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 0.
+ASSUMPTION_UNSAT 1 1 2 1 1
+ClosureSolver finishes with 0 conflicts, 1 decisions, and 4 propagations. 0 theory propagations and 0 cycles included.
+Attempts to add co clauses: 0. Added co clauses: 0. Total co pairs: 0.
+NEXT_QUERY_SAT x=false y=true
+PERMANENT_EMPTY_CLAUSE ok=false UNSAT

@@ -1,0 +1,12 @@
+{
+  "valuations": 1024,
+  "permanent_models": 162,
+  "projected_assignments_checked_per_version": 16,
+  "guarded_consequence": "!e0 || !rf",
+  "P1_counterexample_to_old_x_and_old_not_rf": {
+    "x": false,
+    "y": true,
+    "rf": true,
+    "order": "b<a"
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "os": "Microsoft Windows 11 家庭版 中文版",
+  "build": "26200",
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+  "host_logical_processors": 24,
+  "host_ram_bytes": 34163974144,
+  "disks": [
+    {
+      "DriveLetter": "E",
+      "Size": 474316009472,
+      "SizeRemaining": 26635026432
+    },
+    {
+      "DriveLetter": "D",
+      "Size": 429496725504,
+      "SizeRemaining": 271620743168
+    }
+  ],
+  "project_remote": "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution.git",
+  "worktrees_before_PI0_commit": [
+    "worktree E:/Deagle_incremental_execution",
+    "HEAD efaca29d9fa74777e5d1224efec3a95539030ff2",
+    "branch refs/heads/stage-12-hard-pairs",
+    "",
+    "worktree D:/Deagle_persistent_solver",
+    "HEAD d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+    "branch refs/heads/codex/persistent-minisat-closure",
+    "",
+    "worktree D:/Deagle_stable_identity",
+    "HEAD 86bbdfa88574d09cfa13637294b039c57cd7fd89",
+    "branch refs/heads/codex/stable-model-identity",
+    "",
+    "worktree E:/Deagle_dependency_reuse",
+    "HEAD cf3ba64ee5f9cc7b71e6be61117e483ede830b84",
+    "branch refs/heads/codex/dependency-reuse",
+    "",
+    "worktree E:/Deagle_dependency_reuse_d43",
+    "HEAD b3803564e0c9badedbdd8ca0ad8acd85a002081f",
+    "branch refs/heads/codex/compact-dependency-d43",
+    ""
+  ],
+  "guide_filename": "deagle_PI_persistent_minisat_closure_guide.md",
+  "guide_sha256": "b3db574dd0d7eea2888c7ad8edfd8c9f7d1fc10ad364472763b7a760ead93f7d",
+  "official_commit": "https://github.com/thufv/Deagle/commit/d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e"
+}

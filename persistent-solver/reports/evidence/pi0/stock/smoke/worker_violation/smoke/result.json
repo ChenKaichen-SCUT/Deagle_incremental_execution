@@ -1,0 +1,84 @@
+{
+  "classification": "VIOLATION",
+  "cProverStatus": "failure",
+  "target_status": "FAILURE",
+  "properties": [
+    {
+      "description": "assertion flag == 0",
+      "property": "worker.assertion.1",
+      "sourceLocation": {
+        "file": "worker_violation.c",
+        "function": "worker",
+        "line": "10",
+        "workingDirectory": "/tmp/tmppevfy_4y/smoke/worker_violation/smoke/work"
+      },
+      "status": "FAILURE"
+    }
+  ],
+  "trace_step_counts": {
+    "worker.assertion.1": 66
+  },
+  "unwinding_property_ids": [],
+  "unwinding_iterations": {},
+  "unwinding_stop_or_warning": [],
+  "enabled_unwinding_assertions": true,
+  "vcc_messages": [
+    "Generated 1 VCC(s), 1 remaining after simplification"
+  ],
+  "adapter_query_count": 1,
+  "closure_completion_count": 1,
+  "queries": [
+    {
+      "query": 1,
+      "adapter_message": "SAT checker: instance is SATISFIABLE",
+      "reported_variables": 623,
+      "live_clauses": 1131,
+      "property_decider_solve_s": 0.000158618,
+      "early_adapter_return": false,
+      "native_cumulative": {
+        "sat_conflicts": 0,
+        "decisions": 140,
+        "sat_propagations": 624,
+        "theory_propagations": 3,
+        "theory_cycle_conflicts": 0,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      },
+      "native_delta_from_previous_snapshot": {
+        "sat_conflicts": 0,
+        "decisions": 140,
+        "sat_propagations": 624,
+        "theory_propagations": 3,
+        "theory_cycle_conflicts": 0,
+        "dynamic_co_batches_added": 0,
+        "dynamic_co_pairs_added": 0
+      },
+      "adapter_entry_to_exit_delta": null,
+      "restarts": null,
+      "search_only_s": null,
+      "co_pairs_in_graph_at_return": 4
+    }
+  ],
+  "native_timers_s": {
+    "Symex": [
+      0.00158103
+    ],
+    "Postprocess Equation": [
+      0.00100417
+    ],
+    "Convert SSA": [
+      0.000217451
+    ],
+    "Post-process": [
+      8.1084e-05
+    ],
+    "Solver": [
+      0.000158618
+    ],
+    "decision procedure": [
+      0.00130298
+    ]
+  },
+  "warnings": [],
+  "native_warning_lines": []
+}

@@ -1,0 +1,122 @@
+{
+  "matched_D0": true,
+  "finite_oracle": {
+    "schedules": 12870,
+    "old_max_component": 4180,
+    "candidate_max_component": 2584
+  },
+  "controls": [
+    {
+      "case": "smoke/worker_violation",
+      "side": "smoke",
+      "result": "VIOLATION",
+      "native_query": "SAT checker: instance is SATISFIABLE",
+      "properties": 1,
+      "target": "worker.assertion.1",
+      "steps": {
+        "worker.assertion.1": 66
+      },
+      "visible": {
+        "assignment": "flag=1",
+        "failed_property": "worker.assertion.1"
+      },
+      "wall_ns": 58198199,
+      "peak_rss_kib": 15488
+    },
+    {
+      "case": "fib_updates_8",
+      "side": "P0",
+      "result": "VIOLATION",
+      "native_query": "SAT checker: instance is SATISFIABLE",
+      "properties": 1,
+      "target": "main.assertion.1",
+      "steps": {
+        "main.assertion.1": 187
+      },
+      "visible": {
+        "actions": [
+          [
+            "R",
+            2
+          ],
+          [
+            "L",
+            4
+          ],
+          [
+            "R",
+            6
+          ],
+          [
+            "R",
+            10
+          ],
+          [
+            "L",
+            15
+          ],
+          [
+            "R",
+            25
+          ],
+          [
+            "L",
+            41
+          ],
+          [
+            "R",
+            66
+          ],
+          [
+            "L",
+            108
+          ],
+          [
+            "R",
+            174
+          ],
+          [
+            "L",
+            283
+          ],
+          [
+            "L",
+            458
+          ],
+          [
+            "R",
+            632
+          ],
+          [
+            "L",
+            1091
+          ],
+          [
+            "R",
+            1723
+          ],
+          [
+            "L",
+            2815
+          ]
+        ],
+        "final_left": 2815,
+        "final_right": 1723
+      },
+      "wall_ns": 119039636,
+      "peak_rss_kib": 19584
+    },
+    {
+      "case": "fib_updates_8",
+      "side": "P1",
+      "result": "BOUNDED_PASS",
+      "native_query": "SAT checker: instance is UNSATISFIABLE",
+      "properties": 1,
+      "target": "main.assertion.1",
+      "steps": {},
+      "visible": null,
+      "wall_ns": 2009537107,
+      "peak_rss_kib": 29056
+    }
+  ]
+}

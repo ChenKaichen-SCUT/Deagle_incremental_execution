@@ -1,0 +1,40 @@
+2026-11-28T09:47:22Z
+PRETTY_NAME="Ubuntu 22.04.5 LTS"
+NAME="Ubuntu"
+VERSION_ID="22.04"
+VERSION="22.04.5 LTS (Jammy Jellyfish)"
+VERSION_CODENAME=jammy
+ID=ubuntu
+ID_LIKE=debian
+HOME_URL="https://www.ubuntu.com/"
+SUPPORT_URL="https://help.ubuntu.com/"
+BUG_REPORT_URL="https://bugs.launchpad.net/ubuntu/"
+PRIVACY_POLICY_URL="https://www.ubuntu.com/legal/terms-and-policies/privacy-policy"
+UBUNTU_CODENAME=jammy
+Linux 6.6.87.2-microsoft-standard-WSL2 x86_64 GNU/Linux
+Architecture:                         x86_64
+CPU(s):                               16
+On-line CPU(s) list:                  0-15
+Model name:                           13th Gen Intel(R) Core(TM) i7-13700F
+MemTotal:       30802092 kB
+SwapTotal:      33554432 kB
+Filesystem         1B-blocks         Used    Available Use% Mounted on
+/dev/sdg       1081101176832 120512679936 905596141568  12% /
+D:\             429496725504 157875957760 271620767744  37% /mnt/d
+E:\             474316009472 447680983040  26635026432  95% /mnt/e
+gcc (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0
+GNU Make 4.3
+bison (GNU Bison) 3.8.2
+flex 2.6.4
+GNU ld (GNU Binutils for Ubuntu) 2.38
+ldd (Ubuntu GLIBC 2.35-0ubuntu3.8) 2.35
+Python 3.10.12
+git version 2.34.1
+pid 116's current affinity list: 0-15
+origin	https://github.com/thufv/Deagle.git (fetch)
+origin	https://github.com/thufv/Deagle.git (push)
+project	https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution.git (fetch)
+project	https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution.git (push)
+d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e
+ee983048136026478a6af5774ab20077b273db2f

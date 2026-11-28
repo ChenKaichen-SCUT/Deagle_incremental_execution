@@ -1,0 +1,646 @@
+{
+  "research_sha": "d764b47976574a9302dd82bb9442b0e62c7466fa",
+  "layout_bytes": [
+    4,
+    4,
+    4,
+    8,
+    8,
+    16,
+    1,
+    8,
+    4
+  ],
+  "cases": {
+    "fib_updates_8": {
+      "P0": {
+        "model": "reports/evidence/si1b/fib_updates_8/native/P0/audit/model.tsv.gz",
+        "compressed_sha256": "91f8f240de67e4513642aa5d9f236f1540510d07ebe1a6ec91899875a7c00c7d",
+        "native_nvars": 12554,
+        "native_assumptions": [],
+        "targets": [
+          "main.assertion.1"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 47493,
+            "unique": 47493,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 23,
+            "unique_literal_words": 141871
+          },
+          "Q": {
+            "occurrences": 2572,
+            "unique": 2560,
+            "duplicate_occurrences": 12,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 75,
+            "unique_literal_words": 7252
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "edge_rf": 256,
+          "edge_po": 95,
+          "edge_apo": 35,
+          "GUARD": 36
+        },
+        "archived_graph_stream_sha256": "93cca1719f4a9252c1464f6a63d59bb4f36dc553e9a16e8e0aeb01136e688031",
+        "query_boundaries": 1
+      },
+      "P1": {
+        "model": "reports/evidence/si1b/fib_updates_8/native/P1/audit/model.tsv.gz",
+        "compressed_sha256": "fea1ce088a9819a1fe28228e19cd9992998698ea710b226f8b6e1bb4a0957eb6",
+        "native_nvars": 12058,
+        "native_assumptions": [],
+        "targets": [
+          "main.assertion.1"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 45757,
+            "unique": 45757,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 23,
+            "unique_literal_words": 137159
+          },
+          "Q": {
+            "occurrences": 2572,
+            "unique": 2560,
+            "duplicate_occurrences": 12,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 75,
+            "unique_literal_words": 7252
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "edge_rf": 256,
+          "edge_po": 95,
+          "edge_apo": 35,
+          "GUARD": 36
+        },
+        "archived_graph_stream_sha256": "4e204f22d2f7f5e5c8b954f8bf724c57dc363744d0d326d47172c4106ec3979b",
+        "query_boundaries": 1
+      },
+      "map_path": "reports/evidence/si1b/fib_updates_8/join/direct-map.tsv.gz",
+      "map_sha256": "6291edd4090169a4ffe87b4155aeb73e8abe3c07a63eb007b5158d9683a78acd",
+      "mapped_atoms": 8953,
+      "certified_shared_B": 35234,
+      "shared_B_literal_words": 105385,
+      "distinct_local_graph_streams": 2,
+      "P0_epoch_plan": {
+        "registered_B": 47493,
+        "registered_Q": 2560,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 50055,
+        "bytes": {
+          "guarded_clauses_and_watches": 2008216,
+          "selector_arrays": 2953245,
+          "one_assumption_vector": 200220,
+          "six_level_limits_if_all_installed": 1201320,
+          "proposed_registry_offsets_sizes_ids_flags": 800848,
+          "proposed_registry_payloads": 596492
+        },
+        "modeled_subtotal_bytes": 7760341
+      },
+      "P1_active_only": {
+        "registered_B": 45757,
+        "registered_Q": 2560,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 48319,
+        "bytes": {
+          "guarded_clauses_and_watches": 1940760,
+          "selector_arrays": 2850821,
+          "one_assumption_vector": 193276,
+          "six_level_limits_if_all_installed": 1159656,
+          "proposed_registry_offsets_sizes_ids_flags": 773072,
+          "proposed_registry_payloads": 577644
+        },
+        "modeled_subtotal_bytes": 7495229
+      },
+      "P1_union_with_diagnostic_map": {
+        "registered_B": 58016,
+        "registered_Q": 5120,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 63140,
+        "bytes": {
+          "guarded_clauses_and_watches": 2540884,
+          "selector_arrays": 3725260,
+          "one_assumption_vector": 252560,
+          "six_level_limits_if_all_installed": 1515360,
+          "proposed_registry_offsets_sizes_ids_flags": 1010176,
+          "proposed_registry_payloads": 752596
+        },
+        "modeled_subtotal_bytes": 9796836
+      },
+      "P1_union_with_fresh_atoms": {
+        "registered_B": 93250,
+        "registered_Q": 5120,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 98374,
+        "bytes": {
+          "guarded_clauses_and_watches": 3948976,
+          "selector_arrays": 5804066,
+          "one_assumption_vector": 393496,
+          "six_level_limits_if_all_installed": 2360976,
+          "proposed_registry_offsets_sizes_ids_flags": 1573920,
+          "proposed_registry_payloads": 1174136
+        },
+        "modeled_subtotal_bytes": 15255570
+      }
+    },
+    "circular-buffer": {
+      "P0": {
+        "model": "reports/evidence/si1b/circular-buffer/native/P0/audit/model.tsv.gz",
+        "compressed_sha256": "71be86728c14e7da84d5208dea3a45717f77b59821cd20914cd50a72a5766e4a",
+        "native_nvars": 245082,
+        "native_assumptions": [],
+        "targets": [
+          "reach_error.assertion.1"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 1160134,
+            "unique": 1160134,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 3921,
+            "unique_literal_words": 3442429
+          },
+          "Q": {
+            "occurrences": 1845,
+            "unique": 1833,
+            "duplicate_occurrences": 12,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 73,
+            "unique_literal_words": 5088
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "edge_rf": 2227,
+          "edge_po": 871,
+          "edge_apo": 31,
+          "GUARD": 190
+        },
+        "archived_graph_stream_sha256": "fa79f2d4e3ecf89a0fa48ed77ca090d4c9f88aec6b4aeb9ada17381396876f54",
+        "query_boundaries": 1
+      },
+      "P1": {
+        "model": "reports/evidence/si1b/circular-buffer/native/P1/audit/model.tsv.gz",
+        "compressed_sha256": "c7d7826e731ac68ebd0c033e9fad3c66a1ebb615a57e568ea4ef893a8c28f760",
+        "native_nvars": 245473,
+        "native_assumptions": [],
+        "targets": [
+          "reach_error.assertion.1"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 1161265,
+            "unique": 1161265,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 4092,
+            "unique_literal_words": 3446194
+          },
+          "Q": {
+            "occurrences": 1845,
+            "unique": 1833,
+            "duplicate_occurrences": 12,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 73,
+            "unique_literal_words": 5088
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "edge_rf": 2227,
+          "edge_po": 871,
+          "edge_apo": 31,
+          "GUARD": 190
+        },
+        "archived_graph_stream_sha256": "c133cdd54cd4af9bf989b0c11a2cd51b7094fd91506a9482715f82272fb1cab3",
+        "query_boundaries": 1
+      },
+      "map_path": "reports/evidence/si1b/circular-buffer/join/direct-map.tsv.gz",
+      "map_sha256": "a4100462bd4566a6740d2634e916ab455158440ee289d8f4936a476541795b95",
+      "mapped_atoms": 473,
+      "certified_shared_B": 394,
+      "shared_B_literal_words": 1041,
+      "distinct_local_graph_streams": 2,
+      "P0_epoch_plan": {
+        "registered_B": 1160134,
+        "registered_Q": 1833,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 1161969,
+        "bytes": {
+          "guarded_clauses_and_watches": 46332476,
+          "selector_arrays": 68556171,
+          "one_assumption_vector": 4647876,
+          "six_level_limits_if_all_installed": 27887256,
+          "proposed_registry_offsets_sizes_ids_flags": 18591472,
+          "proposed_registry_payloads": 13790068
+        },
+        "modeled_subtotal_bytes": 179805319
+      },
+      "P1_active_only": {
+        "registered_B": 1161265,
+        "registered_Q": 1833,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 1163100,
+        "bytes": {
+          "guarded_clauses_and_watches": 46379204,
+          "selector_arrays": 68622900,
+          "one_assumption_vector": 4652400,
+          "six_level_limits_if_all_installed": 27914400,
+          "proposed_registry_offsets_sizes_ids_flags": 18609568,
+          "proposed_registry_payloads": 13805128
+        },
+        "modeled_subtotal_bytes": 179983600
+      },
+      "P1_union_with_diagnostic_map": {
+        "registered_B": 2321005,
+        "registered_Q": 3666,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 2324675,
+        "bytes": {
+          "guarded_clauses_and_watches": 92696484,
+          "selector_arrays": 137155825,
+          "one_assumption_vector": 9298700,
+          "six_level_limits_if_all_installed": 55792200,
+          "proposed_registry_offsets_sizes_ids_flags": 37194736,
+          "proposed_registry_payloads": 27591032
+        },
+        "modeled_subtotal_bytes": 359728977
+      },
+      "P1_union_with_fresh_atoms": {
+        "registered_B": 2321399,
+        "registered_Q": 3666,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 2325069,
+        "bytes": {
+          "guarded_clauses_and_watches": 92711680,
+          "selector_arrays": 137179071,
+          "one_assumption_vector": 9300276,
+          "six_level_limits_if_all_installed": 55801656,
+          "proposed_registry_offsets_sizes_ids_flags": 37201040,
+          "proposed_registry_payloads": 27595196
+        },
+        "modeled_subtotal_bytes": 359788919
+      }
+    },
+    "airline_reservations_6": {
+      "P0": {
+        "model": "reports/evidence/si1b/airline_reservations_6/native/P0/audit/model.tsv.gz",
+        "compressed_sha256": "2cd162dceb994a5929609a95330166bd252dd53764a73e60924a9a45e6eba425",
+        "native_nvars": 199091,
+        "native_assumptions": [],
+        "targets": [
+          "main.assertion.1"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 866692,
+            "unique": 866692,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 94,
+            "unique_literal_words": 2586768
+          },
+          "Q": {
+            "occurrences": 44105,
+            "unique": 44021,
+            "duplicate_occurrences": 84,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 1801,
+            "unique_literal_words": 123311
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 132,
+          "NODE": 132,
+          "IN": 35,
+          "OUT": 35,
+          "EDGE": 931,
+          "edge_rf": 734,
+          "edge_po": 162,
+          "edge_apo": 35,
+          "GUARD": 66
+        },
+        "archived_graph_stream_sha256": "48f08f54b54979741ecc1b3d4caf7291d377f87649e0a50329dbad1883eb21db",
+        "query_boundaries": 1
+      },
+      "P1": {
+        "model": "reports/evidence/si1b/airline_reservations_6/native/P1/audit/model.tsv.gz",
+        "compressed_sha256": "ee64a13f080453f644a24d66f4cb1e2be6f08295c358bd3ca99f8fe940b5b70a",
+        "native_nvars": 69635,
+        "native_assumptions": [],
+        "targets": [
+          "main.assertion.1"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 243406,
+            "unique": 243406,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 82,
+            "unique_literal_words": 722820
+          },
+          "Q": {
+            "occurrences": 44105,
+            "unique": 44021,
+            "duplicate_occurrences": 84,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 1801,
+            "unique_literal_words": 123311
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 108,
+          "NODE": 108,
+          "IN": 23,
+          "OUT": 23,
+          "EDGE": 481,
+          "edge_rf": 332,
+          "edge_po": 126,
+          "edge_apo": 23,
+          "GUARD": 54
+        },
+        "archived_graph_stream_sha256": "f377f70a1ed8710c900ec41539772b02c9d9aad1a43f43d63869992c34ff1c05",
+        "query_boundaries": 1
+      },
+      "map_path": "reports/evidence/si1b/airline_reservations_6/join/direct-map.tsv.gz",
+      "map_sha256": "e2540a25d2c76d4a8a7f9d0b52290595159e4847283500d06b4987f19e3cb707",
+      "mapped_atoms": 3319,
+      "certified_shared_B": 2959,
+      "shared_B_literal_words": 7696,
+      "distinct_local_graph_streams": 2,
+      "P0_epoch_plan": {
+        "registered_B": 866692,
+        "registered_Q": 44021,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 910715,
+        "bytes": {
+          "guarded_clauses_and_watches": 36516364,
+          "selector_arrays": 53732185,
+          "one_assumption_vector": 3642860,
+          "six_level_limits_if_all_installed": 21857160,
+          "proposed_registry_offsets_sizes_ids_flags": 14571408,
+          "proposed_registry_payloads": 10840316
+        },
+        "modeled_subtotal_bytes": 141160293
+      },
+      "P1_active_only": {
+        "registered_B": 243406,
+        "registered_Q": 44021,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 287429,
+        "bytes": {
+          "guarded_clauses_and_watches": 11608564,
+          "selector_arrays": 16958311,
+          "one_assumption_vector": 1149716,
+          "six_level_limits_if_all_installed": 6898296,
+          "proposed_registry_offsets_sizes_ids_flags": 4598832,
+          "proposed_registry_payloads": 3384524
+        },
+        "modeled_subtotal_bytes": 44598243
+      },
+      "P1_union_with_diagnostic_map": {
+        "registered_B": 1107139,
+        "registered_Q": 88042,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 1195185,
+        "bytes": {
+          "guarded_clauses_and_watches": 48011292,
+          "selector_arrays": 70515915,
+          "one_assumption_vector": 4780740,
+          "six_level_limits_if_all_installed": 28684440,
+          "proposed_registry_offsets_sizes_ids_flags": 19122896,
+          "proposed_registry_payloads": 14194056
+        },
+        "modeled_subtotal_bytes": 185309339
+      },
+      "P1_union_with_fresh_atoms": {
+        "registered_B": 1110098,
+        "registered_Q": 88042,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 1198144,
+        "bytes": {
+          "guarded_clauses_and_watches": 48124928,
+          "selector_arrays": 70690496,
+          "one_assumption_vector": 4792576,
+          "six_level_limits_if_all_installed": 28755456,
+          "proposed_registry_offsets_sizes_ids_flags": 19170240,
+          "proposed_registry_payloads": 14224840
+        },
+        "modeled_subtotal_bytes": 185758536
+      }
+    },
+    "fib-snapshot-11": {
+      "P0": {
+        "model": "reports/evidence/si1b/fib-snapshot-11/native/P0/audit/model.tsv.gz",
+        "compressed_sha256": "719c7bd8e09cdf421ad06b87d599bd8ec51b00e755d94209391ab360ceb7568d",
+        "native_nvars": 200361,
+        "native_assumptions": [],
+        "targets": [
+          "reach_error.assertion.1",
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 1001471,
+            "unique": 1001471,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 93,
+            "unique_literal_words": 2974198
+          },
+          "Q": {
+            "occurrences": 722,
+            "unique": 714,
+            "duplicate_occurrences": 8,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 15,
+            "unique_literal_words": 2004
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 590,
+          "NODE": 590,
+          "OUT": 153,
+          "IN": 153,
+          "EDGE": 6454,
+          "edge_rf": 5561,
+          "edge_po": 790,
+          "edge_apo": 103,
+          "GUARD": 232
+        },
+        "archived_graph_stream_sha256": "6c45f38b50d4e15ecd4304ca2613761e82b55ae34ed8f3a61747273a3071b18e",
+        "query_boundaries": 1
+      },
+      "P1": {
+        "model": "reports/evidence/si1b/fib-snapshot-11/native/P1/audit/model.tsv.gz",
+        "compressed_sha256": "9b9f42375d08e80ea0d898f2e5988687d367f35e9870639f844f3d163f1d78ed",
+        "native_nvars": 200370,
+        "native_assumptions": [],
+        "targets": [
+          "reach_error.assertion.1",
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "scopes": {
+          "B": {
+            "occurrences": 1001473,
+            "unique": 1001473,
+            "duplicate_occurrences": 0,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 93,
+            "unique_literal_words": 2974202
+          },
+          "Q": {
+            "occurrences": 722,
+            "unique": 714,
+            "duplicate_occurrences": 8,
+            "true_or_tautological": 0,
+            "empty": 0,
+            "unit": 15,
+            "unique_literal_words": 2004
+          }
+        },
+        "installed_graph": {
+          "MEMBER": 590,
+          "NODE": 590,
+          "OUT": 154,
+          "IN": 154,
+          "EDGE": 6454,
+          "edge_rf": 5561,
+          "edge_po": 789,
+          "edge_apo": 104,
+          "GUARD": 232
+        },
+        "archived_graph_stream_sha256": "6a4abd24df82744973c873c12a5a5bbdafb0204f565b4dceecb5bda9820e06ec",
+        "query_boundaries": 1
+      },
+      "map_path": "reports/evidence/si1b/fib-snapshot-11/join/direct-map.tsv.gz",
+      "map_sha256": "88e98325810b6d1e4753aa53595b69af15e668bfe1d3142f18ab7b42df2f1c21",
+      "mapped_atoms": 29404,
+      "certified_shared_B": 60280,
+      "shared_B_literal_words": 179743,
+      "distinct_local_graph_streams": 2,
+      "P0_epoch_plan": {
+        "registered_B": 1001471,
+        "registered_Q": 714,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 1002187,
+        "bytes": {
+          "guarded_clauses_and_watches": 39968844,
+          "selector_arrays": 59129033,
+          "one_assumption_vector": 4008748,
+          "six_level_limits_if_all_installed": 24052488,
+          "proposed_registry_offsets_sizes_ids_flags": 16034960,
+          "proposed_registry_payloads": 11904808
+        },
+        "modeled_subtotal_bytes": 155098881
+      },
+      "P1_active_only": {
+        "registered_B": 1001473,
+        "registered_Q": 714,
+        "epoch_selectors": 1,
+        "query_selectors": 1,
+        "assumptions": 1002189,
+        "bytes": {
+          "guarded_clauses_and_watches": 39968916,
+          "selector_arrays": 59129151,
+          "one_assumption_vector": 4008756,
+          "six_level_limits_if_all_installed": 24052536,
+          "proposed_registry_offsets_sizes_ids_flags": 16034992,
+          "proposed_registry_payloads": 11904824
+        },
+        "modeled_subtotal_bytes": 155099175
+      },
+      "P1_union_with_diagnostic_map": {
+        "registered_B": 1942664,
+        "registered_Q": 1428,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 1944096,
+        "bytes": {
+          "guarded_clauses_and_watches": 77530948,
+          "selector_arrays": 114701664,
+          "one_assumption_vector": 7776384,
+          "six_level_limits_if_all_installed": 46658304,
+          "proposed_registry_offsets_sizes_ids_flags": 31105472,
+          "proposed_registry_payloads": 23090660
+        },
+        "modeled_subtotal_bytes": 300863432
+      },
+      "P1_union_with_fresh_atoms": {
+        "registered_B": 2002944,
+        "registered_Q": 1428,
+        "epoch_selectors": 2,
+        "query_selectors": 2,
+        "assumptions": 2004376,
+        "bytes": {
+          "guarded_clauses_and_watches": 79937760,
+          "selector_arrays": 118258184,
+          "one_assumption_vector": 8017504,
+          "six_level_limits_if_all_installed": 48105024,
+          "proposed_registry_offsets_sizes_ids_flags": 32069952,
+          "proposed_registry_payloads": 23809632
+        },
+        "modeled_subtotal_bytes": 310198056
+      }
+    }
+  }
+}

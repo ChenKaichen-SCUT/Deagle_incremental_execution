@@ -1,0 +1,840 @@
+{
+  "upstream": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "files": {
+    "minisat-2.2.1/minisat/core/Solver.cc": {
+      "source_sha256": "1c1db284ada160cae95caa2431e9029f3a34283d464a5f6aa4e9b418839c6e2b",
+      "entries": [
+        [
+          118,
+          "Var Solver::newVar(lbool upol, bool dvar)"
+        ],
+        [
+          137,
+          "bool Solver::addClause_(vec<Lit>& ps)"
+        ],
+        [
+          153,
+          "return ok = false;"
+        ],
+        [
+          156,
+          "return ok = (propagate() == CRef_Undef);"
+        ],
+        [
+          193,
+          "void Solver::removeClause(CRef cr) {"
+        ],
+        [
+          374,
+          "bool Solver::litRedundant(Lit p, uint32_t abstract_levels)"
+        ],
+        [
+          412,
+          "void Solver::analyzeFinal(Lit p, vec<Lit>& out_conflict)"
+        ],
+        [
+          464,
+          "CRef Solver::propagate()"
+        ],
+        [
+          542,
+          "void Solver::reduceDB()"
+        ],
+        [
+          594,
+          "bool Solver::simplify()"
+        ],
+        [
+          599,
+          "return ok = false;"
+        ],
+        [
+          771,
+          "lbool Solver::solve_()"
+        ],
+        [
+          809,
+          "ok = false;"
+        ],
+        [
+          898,
+          "void Solver::relocAll(ClauseAllocator& to)"
+        ],
+        [
+          934,
+          "void Solver::garbageCollect()"
+        ]
+      ]
+    },
+    "minisat-2.2.1/minisat/core/Solver.h": {
+      "source_sha256": "0ec0e68b568da2f5906f111d3316da7c93f52e5edda1b3e80a160d871348c228",
+      "entries": [
+        [
+          62,
+          "bool    simplify     ();"
+        ],
+        [
+          151,
+          "struct VarData { CRef reason; int level; };"
+        ],
+        [
+          154,
+          "struct Watcher {"
+        ],
+        [
+          224,
+          "void     newDecisionLevel ();"
+        ],
+        [
+          227,
+          "CRef     propagate        ();"
+        ]
+      ]
+    },
+    "minisat-2.2.1/minisat/core/ClosureSolver.h": {
+      "source_sha256": "b57f605c49c905827bb02122e8a63d843a588a205f86ea8f3c989a6fa1b90416",
+      "entries": [
+        [
+          25,
+          "closure graph;"
+        ],
+        [
+          42,
+          "void cancelUntil(int level);"
+        ],
+        [
+          43,
+          "void newDecisionLevel();"
+        ],
+        [
+          55,
+          "inline lbool solveLimited(const vec<Lit>& assumps){ assumps.copyTo(assumptions); return solve_(); }"
+        ],
+        [
+          71,
+          "std::map<std::string, int>* oc_result_order;"
+        ]
+      ]
+    },
+    "minisat-2.2.1/minisat/core/ClosureSolver.cc": {
+      "source_sha256": "dfe9852cd628059530d03ee342ec0ae9f68624dff42cc2a6d1c5dc2da5fb8b71",
+      "entries": [
+        [
+          23,
+          "ClosureSolver::ClosureSolver()"
+        ],
+        [
+          28,
+          "void ClosureSolver::init()"
+        ],
+        [
+          34,
+          "void ClosureSolver::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order)"
+        ],
+        [
+          39,
+          "oc_result_order = &_oc_result_order;"
+        ],
+        [
+          44,
+          "void ClosureSolver::set_graph()"
+        ],
+        [
+          99,
+          "ok = false;"
+        ],
+        [
+          150,
+          "ok = false;"
+        ],
+        [
+          218,
+          "lbool ClosureSolver::search(int nof_conflicts)"
+        ],
+        [
+          228,
+          "if(graph.use_available_info())"
+        ],
+        [
+          231,
+          "return l_False;"
+        ],
+        [
+          239,
+          "if (decisionLevel() == 0) return l_False;"
+        ],
+        [
+          247,
+          "uncheckedEnqueue(learnt_clause[0]);"
+        ],
+        [
+          249,
+          "CRef cr = ca.alloc(learnt_clause, true);"
+        ],
+        [
+          253,
+          "uncheckedEnqueue(learnt_clause[0], cr);"
+        ],
+        [
+          276,
+          "cancelUntil(0);"
+        ],
+        [
+          281,
+          "return l_False;"
+        ],
+        [
+          295,
+          "analyzeFinal(~p, conflict);"
+        ],
+        [
+          296,
+          "return l_False;"
+        ],
+        [
+          320,
+          "uncheckedEnqueue(next);"
+        ],
+        [
+          341,
+          "lbool ClosureSolver::solve_()"
+        ],
+        [
+          345,
+          "if (!ok) return l_False;"
+        ],
+        [
+          379,
+          "graph.final_check();"
+        ],
+        [
+          384,
+          "ok = false;"
+        ],
+        [
+          389,
+          "cancelUntil(0);"
+        ],
+        [
+          393,
+          "CRef ClosureSolver::propagate()"
+        ],
+        [
+          471,
+          "uncheckedEnqueue(first, cr);"
+        ],
+        [
+          490,
+          "graph.remove_rf(edge.from, edge.to, edge.reason[0]);"
+        ],
+        [
+          526,
+          "confl = ca.alloc(minisat_lv, true);"
+        ],
+        [
+          553,
+          "void ClosureSolver::cancelUntil(int level)"
+        ],
+        [
+          570,
+          "graph.pop_scope(level);"
+        ],
+        [
+          574,
+          "void ClosureSolver::newDecisionLevel()"
+        ],
+        [
+          580,
+          "void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)"
+        ],
+        [
+          674,
+          "void ClosureSolver::show_rf()"
+        ],
+        [
+          679,
+          "void ClosureSolver::assign_literal(Lit l, literal_set& lv)"
+        ],
+        [
+          688,
+          "void ClosureSolver::assign_literal(Lit l, literal_vector& lv)"
+        ],
+        [
+          697,
+          "void ClosureSolver::apply_literal_assignment()"
+        ],
+        [
+          725,
+          "uncheckedEnqueue(learnt_clause[0]);"
+        ],
+        [
+          730,
+          "CRef cr = ca.alloc(learnt_clause, true);"
+        ],
+        [
+          739,
+          "uncheckedEnqueue(learnt_clause[0], cr);"
+        ],
+        [
+          757,
+          "void ClosureSolver::addOC(std::string from, std::string to, std::string type, Lit related_lit)"
+        ],
+        [
+          762,
+          "void ClosureSolver::addGuard(std::string node, Lit guard)"
+        ],
+        [
+          767,
+          "void ClosureSolver::setRawGraph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map)"
+        ],
+        [
+          773,
+          "void ClosureSolver::addMissingCoClauses()"
+        ],
+        [
+          787,
+          "Var var12 = newVar(), var21 = newVar();"
+        ],
+        [
+          799,
+          "CRef cr = ca.alloc(co_clause, false);"
+        ]
+      ]
+    },
+    "minisat-2.2.1/minisat/core/Closure.cc": {
+      "source_sha256": "cfb5e648997160d9f27eef89c68e8f879865b9023900b8e9a9ca14f8cee77c2b",
+      "entries": [
+        [
+          22,
+          "#define PROPAGATE_INTENSITY 1"
+        ],
+        [
+          57,
+          "void closure::refine_atomic_atoms()"
+        ],
+        [
+          72,
+          "void closure::union_join(int m, int n)"
+        ],
+        [
+          133,
+          "void closure::init(ClosureSolver* _solver)"
+        ],
+        [
+          179,
+          "void closure::init_reasonable_edge(int u, int v, edge_kindt kind, Lit l)"
+        ],
+        [
+          205,
+          "void closure::init_race(int u, int v, Lit l)"
+        ],
+        [
+          216,
+          "bool closure::add_guard_literal(Lit guard_literal, int u)"
+        ],
+        [
+          254,
+          "void closure::add_trinary_pattern(int w1, int w2, int r)"
+        ],
+        [
+          281,
+          "void closure::check_trinary_pattern()"
+        ],
+        [
+          308,
+          "solver->assign_literal(~guard_lit, unit_lv);"
+        ],
+        [
+          321,
+          "solver->assign_literal(~rf_lit, unit_lv);"
+        ],
+        [
+          338,
+          "bool closure::activate_edge(int vi, int wi, edge_kindt kind, literal_vector& reason)"
+        ],
+        [
+          369,
+          "solver->assign_literal(~guard_lit, unit_lv);"
+        ],
+        [
+          385,
+          "bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)"
+        ],
+        [
+          505,
+          "conflict_lv = edge.reason;"
+        ],
+        [
+          514,
+          "conflict_lv = edge.reason;"
+        ],
+        [
+          560,
+          "conflict_lv = conflict_reason;"
+        ],
+        [
+          570,
+          "solver->assign_literal(~race_lit, conflict_reason);"
+        ],
+        [
+          636,
+          "solver->assign_literal(~rf_lit_cand, unit_lv);"
+        ],
+        [
+          766,
+          "bool closure::activate_apo(int u, int v)"
+        ],
+        [
+          785,
+          "bool closure::light_guard(int u)"
+        ],
+        [
+          1034,
+          "solver->assign_literal(~rf_lit, unit_lv);"
+        ],
+        [
+          1048,
+          "void closure::push_scope()"
+        ],
+        [
+          1057,
+          "void closure::pop_scope(int new_level)"
+        ],
+        [
+          1241,
+          "void closure::get_co_pairs()"
+        ],
+        [
+          1253,
+          "std::vector<std::pair<int, int>> closure::find_incomplete_co_pairs()"
+        ],
+        [
+          1280,
+          "void closure::final_check()"
+        ],
+        [
+          1295,
+          "write_order.clear();"
+        ],
+        [
+          1329,
+          "write_order.push_back(name);"
+        ],
+        [
+          1330,
+          "solver->oc_result_order->insert(std::make_pair(name, node_order));"
+        ],
+        [
+          1475,
+          "bool closure::use_available_info()"
+        ],
+        [
+          1525,
+          "bool closure::remove_rf(int from, int to, Lit p)"
+        ]
+      ]
+    },
+    "minisat-2.2.1/minisat/core/Closure.h": {
+      "source_sha256": "afdbf74da1369e807765b7d4993cb154cf4ed69beb3ab10a7ba06acd66905da2",
+      "entries": [
+        [
+          30,
+          "std::map<Lit, decide_entryt> lit_to_edge;"
+        ],
+        [
+          31,
+          "std::multimap<Lit, int> guard_lit_to_node;"
+        ],
+        [
+          33,
+          "std::vector<std::string> id_to_address;"
+        ],
+        [
+          37,
+          "vec<int> trail_edge_lim;"
+        ],
+        [
+          39,
+          "vec<int> trail_rf_lim;"
+        ],
+        [
+          41,
+          "vec<int> trail_vital_lim;"
+        ],
+        [
+          43,
+          "vec<int> trail_light_guard_lim;"
+        ],
+        [
+          45,
+          "vec<int> trail_triplet_lim;"
+        ],
+        [
+          60,
+          "std::vector<triplett> triplets_to_check;"
+        ],
+        [
+          63,
+          "std::map<Lit, std::vector<triplett>> rf_to_triplets;"
+        ],
+        [
+          64,
+          "std::map<Lit, std::vector<triplett>> guard_to_triplets;"
+        ],
+        [
+          73,
+          "typedef std::pair<std::pair<int, int>, Lit> inactive_edge_t;"
+        ],
+        [
+          75,
+          "std::vector<std::vector<inactive_edge_t>> tail_to_inactive_edges;"
+        ],
+        [
+          76,
+          "std::vector<std::vector<inactive_edge_t>> head_to_inactive_edges;"
+        ],
+        [
+          77,
+          "std::vector<std::vector<Lit>> tail_head_to_inactive_lit;"
+        ],
+        [
+          79,
+          "typedef std::pair<int, Lit> inactive_race_t;"
+        ],
+        [
+          81,
+          "std::map<std::pair<int, int>, Lit> pair_to_inactive_races;"
+        ],
+        [
+          83,
+          "Lit check_tail_head_to_inactive_lit(int a, int b);"
+        ],
+        [
+          124,
+          "std::vector<std::pair<int, int>> co_pairs;"
+        ],
+        [
+          125,
+          "void get_co_pairs();"
+        ],
+        [
+          126,
+          "std::vector<std::pair<int, int>> find_incomplete_co_pairs();"
+        ],
+        [
+          133,
+          "literal_vector conflict_lv;"
+        ]
+      ]
+    },
+    "minisat-2.2.1/minisat/core/GraphTypes.cc": {
+      "source_sha256": "f4656e0e391d55a219448c335128a60701d64349086813859af33372bdade240",
+      "entries": [
+        [
+          6,
+          "edge_kindt str_to_kind(const std::string& str)"
+        ],
+        [
+          50,
+          "std::string get_address(std::string name)"
+        ]
+      ]
+    },
+    "src/goto-checker/solver_factory.cpp": {
+      "source_sha256": "ac4a0389970aa6fcf416e0f2fdfcf56f8e2920ec543a2e941c7a2884db0cac61",
+      "entries": [
+        [
+          118,
+          "void solver_factoryt::solvert::set_decision_procedure("
+        ],
+        [
+          134,
+          "std::unique_ptr<solver_factoryt::solvert> solver_factoryt::get_solver()"
+        ],
+        [
+          218,
+          "std::unique_ptr<solver_factoryt::solvert> solver_factoryt::get_default()"
+        ],
+        [
+          229,
+          "solver->set_prop(make_satcheck_prop<deagle_closure_solvert>(message_handler, options));"
+        ],
+        [
+          267,
+          "solver->set_decision_procedure(std::move(bv_pointers));"
+        ]
+      ]
+    },
+    "src/goto-checker/bmc_util.cpp": {
+      "source_sha256": "d63283d95c6f78ccc764a0a70e7b50743f695cbf48b1cb9b47627a81733b5ae4",
+      "entries": [
+        [
+          56,
+          "build_goto_trace(symex_target_equation, decision_procedure, ns, goto_trace);"
+        ],
+        [
+          424,
+          "std::chrono::duration<double> prepare_property_decider("
+        ],
+        [
+          442,
+          "property_decider.convert_goals();"
+        ],
+        [
+          506,
+          "deagle_closure_solver.save_raw_graph(oc_edge_table, oc_guard_map, oc_location_map, equation.oc_result_order);"
+        ],
+        [
+          568,
+          "void run_property_decider("
+        ],
+        [
+          584,
+          "property_decider.add_constraint_from_goals("
+        ],
+        [
+          591,
+          "decision_proceduret::resultt dec_result = property_decider.solve();"
+        ],
+        [
+          599,
+          "property_decider.update_properties_status_from_goals("
+        ]
+      ]
+    },
+    "src/goto-checker/goto_symex_property_decider.cpp": {
+      "source_sha256": "315c378b7b809abf284b35c8ff03f71517e1d92c3cbb48a1eafa4e7e585cd55e",
+      "entries": [
+        [
+          71,
+          "void goto_symex_property_decidert::convert_goals()"
+        ],
+        [
+          82,
+          "void goto_symex_property_decidert::add_constraint_from_goals("
+        ],
+        [
+          101,
+          "decision_proceduret::resultt goto_symex_property_decidert::solve()"
+        ],
+        [
+          123,
+          "void goto_symex_property_decidert::update_properties_status_from_goals("
+        ]
+      ]
+    },
+    "src/solvers/sat/satcheck_minisat2.cpp": {
+      "source_sha256": "caca85099e0ac67624dc8eaf2f7a9ce9383346d7ac9edf39d7598d44327868a4",
+      "entries": [
+        [
+          46,
+          "tvt satcheck_minisat2_baset<T>::l_get(literalt a) const"
+        ],
+        [
+          74,
+          "void satcheck_minisat2_baset<T>::set_polarity(literalt a, bool value)"
+        ],
+        [
+          94,
+          "void satcheck_minisat2_baset<T>::interrupt()"
+        ],
+        [
+          100,
+          "void satcheck_minisat2_baset<T>::clear_interrupt()"
+        ],
+        [
+          138,
+          "void satcheck_minisat2_baset<T>::add_variables()"
+        ],
+        [
+          141,
+          "solver->newVar();"
+        ],
+        [
+          145,
+          "void satcheck_minisat2_baset<T>::lcnf(const bvt &bv)"
+        ],
+        [
+          170,
+          "solver->addClause_(c);"
+        ],
+        [
+          214,
+          "propt::resultt satcheck_minisat2_baset<T>::do_prop_solve()"
+        ],
+        [
+          225,
+          "if(!solver->okay())"
+        ],
+        [
+          264,
+          "lbool solver_result = solver->solveLimited(solver_assumptions);"
+        ],
+        [
+          313,
+          "void satcheck_minisat2_baset<T>::set_assignment(literalt a, bool value)"
+        ],
+        [
+          336,
+          "satcheck_minisat2_baset<T>::satcheck_minisat2_baset("
+        ],
+        [
+          339,
+          "solver(util_make_unique<T>()),"
+        ],
+        [
+          345,
+          "satcheck_minisat2_baset<T>::~satcheck_minisat2_baset() = default;"
+        ],
+        [
+          348,
+          "bool satcheck_minisat2_baset<T>::is_in_conflict(literalt a) const"
+        ],
+        [
+          360,
+          "void satcheck_minisat2_baset<T>::set_assumptions(const bvt &bv)"
+        ],
+        [
+          408,
+          "solver->save_raw_graph(_oc_edge_table, _oc_guard_map, _oc_location_map, _oc_result_order);"
+        ],
+        [
+          413,
+          "solver->save_raw_graph(_oc_edge_table, _oc_result_order);"
+        ],
+        [
+          418,
+          "solver->save_raw_graph(_oc_edge_table, _oc_guard_map, _oc_location_map, _oc_result_order);"
+        ],
+        [
+          423,
+          "solver->save_raw_graph(_oc_edge_table, _oc_label_table, _cat_module);"
+        ]
+      ]
+    },
+    "src/solvers/prop/prop_conv_solver.cpp": {
+      "source_sha256": "21419a67cbb19aa324ea10af93dabe0ad132a00a429b47b442d260caf076364f",
+      "entries": [
+        [
+          440,
+          "void prop_conv_solvert::finish_eager_conversion()"
+        ],
+        [
+          444,
+          "decision_proceduret::resultt prop_conv_solvert::dec_solve()"
+        ],
+        [
+          447,
+          "if(!post_processing_done)"
+        ],
+        [
+          452,
+          "finish_eager_conversion();"
+        ],
+        [
+          453,
+          "post_processing_done = true;"
+        ],
+        [
+          464,
+          "switch(prop.prop_solve())"
+        ],
+        [
+          529,
+          "void prop_conv_solvert::push(const std::vector<exprt> &assumptions)"
+        ],
+        [
+          540,
+          "void prop_conv_solvert::push()"
+        ],
+        [
+          552,
+          "void prop_conv_solvert::pop()"
+        ]
+      ]
+    },
+    "src/solvers/flattening/bv_pointers.cpp": {
+      "source_sha256": "5bbea6b4ea411f681fa39e1b170fe0df8a89eb35682b086b721e461bf1ec2d33",
+      "entries": [
+        [
+          987,
+          "void bv_pointerst::finish_eager_conversion()"
+        ]
+      ]
+    },
+    "src/solvers/flattening/arrays.h": {
+      "source_sha256": "673f161ddcf3f8b5ad09fbfc9684164e68dc60fc424c063471aaa146bedcbffe",
+      "entries": [
+        [
+          41,
+          "void finish_eager_conversion() override"
+        ],
+        [
+          43,
+          "finish_eager_conversion_arrays();"
+        ],
+        [
+          44,
+          "SUB::finish_eager_conversion();"
+        ],
+        [
+          60,
+          "virtual void finish_eager_conversion_arrays()"
+        ]
+      ]
+    },
+    "src/goto-symex/build_goto_trace.cpp": {
+      "source_sha256": "e8256b071ab33760117f4d9f80e59ae91cc2ff8efb7a09d3c8db273abede9b10",
+      "entries": [
+        [
+          271,
+          "if(target.oc_result_order.find(name) != target.oc_result_order.end())"
+        ],
+        [
+          272,
+          "current_time = target.oc_result_order.at(name);"
+        ]
+      ]
+    },
+    "src/goto-symex/memory_model_sc.cpp": {
+      "source_sha256": "2447715ad4521c439518ad28987ad09ea7f68c5a7162740df3bcd48cf424717e",
+      "entries": [
+        [
+          36,
+          "read_from(equation);"
+        ],
+        [
+          41,
+          "program_order(equation);"
+        ],
+        [
+          170,
+          "void memory_model_sct::program_order("
+        ]
+      ]
+    },
+    "src/goto-symex/partial_order_concurrency.cpp": {
+      "source_sha256": "a34cc4f3240304b32e15afa6ffa68fce357629ce2b38661e7f1f66740dbd5e25",
+      "entries": [
+        [
+          74,
+          "void partial_order_concurrencyt::build_event_lists("
+        ]
+      ]
+    }
+  },
+  "old_reference": "d764b47976574a9302dd82bb9442b0e62c7466fa",
+  "old_importer": {
+    "source_sha256": "ccd2d80381c2f820eff93f1df9d21597b2449ed5ba3455c579978ee4c0500772",
+    "entries": [
+      [
+        78,
+        "void ClosureSolver::importAtRoot(ClauseImports &batch,bool reuse)"
+      ],
+      [
+        80,
+        "if(!graph_ready || solves || decisionLevel()!=0 || import_boundary_used || proof || dense)"
+      ]
+    ]
+  }
+}

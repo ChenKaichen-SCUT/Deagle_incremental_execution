@@ -1,0 +1,100 @@
+{
+  "source_commit": "d8c79eaba5df03b1a013dc6ffbb3a1e249485c1e",
+  "source_tree": "ee983048136026478a6af5774ab20077b273db2f",
+  "tracked_source_diff": false,
+  "binary_path": "/home/deagle/pi0-stock/src/cbmc/deagle_exe",
+  "binary_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "binary_bytes": 16108880,
+  "binary_version": "4.2.0",
+  "build_command": [
+    "make",
+    "-C",
+    "src",
+    "-j12",
+    "cbmc.dir"
+  ],
+  "patches": [],
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "bison": "bison (GNU Bison) 3.8.2",
+  "flex": "flex 2.6.4",
+  "make": "GNU Make 4.3",
+  "linker": "GNU ld (GNU Binutils for Ubuntu) 2.38",
+  "libraries": [
+    "linux-vdso.so.1 (0x00007ffef5d9f000)",
+    "\tlibstdc++.so.6 => /lib/x86_64-linux-gnu/libstdc++.so.6 (0x000078c8d9200000)",
+    "\tlibm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000078c8da3c3000)",
+    "\tlibgcc_s.so.1 => /lib/x86_64-linux-gnu/libgcc_s.so.1 (0x000078c8da3a3000)",
+    "\tlibc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000078c8d8e00000)",
+    "\t/lib64/ld-linux-x86-64.so.2 (0x000078c8da4b0000)"
+  ],
+  "closure_compile": "g++ -c -DSATCHECK_MINISAT2 -DHAVE_MINISAT2 -D__STDC_FORMAT_MACROS -D__STDC_LIMIT_MACROS -MMD -MP -std=c++11 -O2 -DHAVE_MINISAT2 -Wall -pedantic -Wno-deprecated-declarations -Wswitch-enum  -I ..    -I ../../minisat-2.2.1        -o ../../minisat-2.2.1/minisat/core/ClosureSolver.o ../../minisat-2.2.1/minisat/core/ClosureSolver.cc",
+  "final_link": "g++  -o deagle_exe -Wl,--start-group ../ansi-c/ansi-c.a ../cpp/cpp.a ../json/json.a ../json-symtab-language/json-symtab-language.a ../statement-list/statement-list.a ../linking/linking.a ../big-int/big-int.a ../goto-checker/goto-checker.a ../goto-programs/goto-programs.a ../goto-symex/goto-symex.a ../pointer-analysis/value_set.o ../pointer-analysis/value_set_analysis_fi.o ../pointer-analysis/value_set_domain_fi.o ../pointer-analysis/value_set_fi.o ../pointer-analysis/value_set_dereference.o ../pointer-analysis/add_failed_symbols.o ../pointer-analysis/rewrite_index.o ../pointer-analysis/goto_program_dereference.o ../goto-instrument/source_lines.o ../goto-instrument/cover.o ../goto-instrument/cover_basic_blocks.o ../goto-instrument/cover_filter.o ../goto-instrument/cover_instrument_assume.o ../goto-instrument/cover_instrument_branch.o ../goto-instrument/cover_instrument_condition.o ../goto-instrument/cover_instrument_decision.o ../goto-instrument/cover_instrument_location.o ../goto-instrument/cover_instrument_mcdc.o ../goto-instrument/cover_instrument_other.o ../goto-instrument/cover_util.o ../goto-instrument/reachability_slicer.o ../goto-instrument/nondet_static.o ../goto-instrument/full_slicer.o ../goto-instrument/unwindset.o ../analyses/analyses.a ../langapi/langapi.a ../xmllang/xmllang.a ../assembler/assembler.a ../solvers/solvers.a ../util/util.a ../cat/cat_parsing_driver.o ../cat/cat_module.o ../cat/cat_lexer.yy.o ../cat/cat_parser.tab.o c_test_input_generator.o cbmc_languages.o cbmc_main.o cbmc_parse_options.o ../jsil/jsil.a -Wl,--end-group ",
+  "thin_archive": "src/solvers/solvers.a",
+  "archive_member_count": 149,
+  "members": {
+    "satcheck_minisat2": {
+      "object": "src/solvers/sat/satcheck_minisat2.o",
+      "sha256": "1c0f8f778e4dd9ab656e89f49b64b91a2a3575ccd83589b1e08c50ede7893edb",
+      "source": "src/solvers/sat/satcheck_minisat2.cpp",
+      "source_sha256": "caca85099e0ac67624dc8eaf2f7a9ce9383346d7ac9edf39d7598d44327868a4"
+    },
+    "ClosureSolver": {
+      "object": "minisat-2.2.1/minisat/core/ClosureSolver.o",
+      "sha256": "1dfbba0207a47191f02cbc5424fb661777973df58d01c280133ee9875f82fbd4",
+      "source": "minisat-2.2.1/minisat/core/ClosureSolver.cc",
+      "source_sha256": "dfe9852cd628059530d03ee342ec0ae9f68624dff42cc2a6d1c5dc2da5fb8b71"
+    },
+    "Closure": {
+      "object": "minisat-2.2.1/minisat/core/Closure.o",
+      "sha256": "a104b235277c7e2b06d412ff5b73746768647e992b64431defd91a8ede8a3ed4",
+      "source": "minisat-2.2.1/minisat/core/Closure.cc",
+      "source_sha256": "cfb5e648997160d9f27eef89c68e8f879865b9023900b8e9a9ca14f8cee77c2b"
+    },
+    "ClosureTypes": {
+      "object": "minisat-2.2.1/minisat/core/ClosureTypes.o",
+      "sha256": "f800848e2069ace7715a9f49ac6c0aeb5e947127057d431524c94fa82c734fd6",
+      "source": "minisat-2.2.1/minisat/core/ClosureTypes.cc",
+      "source_sha256": "d027e12efb0b545f779779ecfeadd7ad1c62b339856ae5bd3bbcb6407fa67e2d"
+    },
+    "Solver": {
+      "object": "minisat-2.2.1/minisat/core/Solver.o",
+      "sha256": "7888445ab5951b9f61db947b9e3e94b790a6bb8a01d5da079905ae00fa49a565",
+      "source": "minisat-2.2.1/minisat/core/Solver.cc",
+      "source_sha256": "1c1db284ada160cae95caa2431e9029f3a34283d464a5f6aa4e9b418839c6e2b"
+    }
+  },
+  "defined_symbols": [
+    "000000000095b170 T Minisat::ClosureSolver::search(int)",
+    "000000000095b7a0 T Minisat::ClosureSolver::solve_()",
+    "0000000000958080 T Minisat::ClosureSolver::analyze(unsigned int, Minisat::vec<Minisat::Lit>&, int&)",
+    "000000000095a7b0 T Minisat::ClosureSolver::propagate()"
+  ],
+  "start_utc": "2026-11-28T09:35:34Z",
+  "end_utc": "2026-11-28T09:36:54Z",
+  "build_log_sha256": "032dc5a53fd23909b94bb3e2e0476d44cf3b23d0aae4f90f015306458fc54ad3",
+  "gnu_time": [
+    "\tCommand being timed: \"make -C src -j12 cbmc.dir\"",
+    "\tUser time (seconds): 830.76",
+    "\tSystem time (seconds): 59.05",
+    "\tPercent of CPU this job got: 1109%",
+    "\tElapsed (wall clock) time (h:mm:ss or m:ss): 1:20.16",
+    "\tAverage shared text size (kbytes): 0",
+    "\tAverage unshared data size (kbytes): 0",
+    "\tAverage stack size (kbytes): 0",
+    "\tAverage total size (kbytes): 0",
+    "\tMaximum resident set size (kbytes): 600960",
+    "\tAverage resident set size (kbytes): 0",
+    "\tMajor (requiring I/O) page faults: 514",
+    "\tMinor (reclaiming a frame) page faults: 31129971",
+    "\tVoluntary context switches: 10865",
+    "\tInvoluntary context switches: 3018",
+    "\tSwaps: 0",
+    "\tFile system inputs: 81184",
+    "\tFile system outputs: 654600",
+    "\tSocket messages sent: 0",
+    "\tSocket messages received: 0",
+    "\tSignals delivered: 0",
+    "\tPage size (bytes): 4096",
+    "\tExit status: 0"
+  ]
+}
