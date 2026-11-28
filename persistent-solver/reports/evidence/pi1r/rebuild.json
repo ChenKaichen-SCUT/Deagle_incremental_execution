@@ -1,0 +1,14 @@
+{
+  "source": "8e0c39f3934da0a1f28dacbea0a30c9a3e948f8a",
+  "mode": "clean extraction of committed Git objects, same build script and compiler, different DWARF build directory",
+  "timed_elf_sha256": "b27c4704999c6755880c1c491ecafbb16f1f2bee026700df6b5c3009184c870f",
+  "rebuilt_elf_sha256": "f6cc22e2e1d6032cf82ea90f6adb6cbe15eec4c6a0da2ade1b99d09634c50fca",
+  "matching_sections_sha256": {
+    ".text": "9f5c995a67d1d97f673983b7848d63ca06cd499e4604de197cb72b0ea56611f1",
+    ".rodata": "5a19b5ac619c6f9d6e41d602c968cfc035dd7ec2fd01289ddae17b6835d0e0a6",
+    ".data": "0f6239e9ad4bad9be03f292497b9219d1a691d1422a6fd5421275bc7f7b08280",
+    ".init_array": "651c7066001584732f6f5f5d63b5f9be2064699c83c0ae49a0299452c6bc0561",
+    ".eh_frame": "353318b5aea4ad272d3c52fed0f151d6121e0f44ec8e7d4ba7b47add036a99b4",
+    ".gcc_except_table": "78f1fe4f15c45fc8b630de51cd7f928d16552b4336da8f77c7e1cb34d734a470"
+  }
+}

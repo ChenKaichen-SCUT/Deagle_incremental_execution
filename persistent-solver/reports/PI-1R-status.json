@@ -1,0 +1,116 @@
+{
+  "stage": "PI-1R",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/persistent-minisat-closure",
+  "review_baseline": "06c1560c17a3c36fc5f90817680a654a0af0c857",
+  "preregistration_commit": "6f8b1de4daaece2172e3bba3b0bd5210a034ede1",
+  "native_source_commit": "8e0c39f3934da0a1f28dacbea0a30c9a3e948f8a",
+  "evidence_commit": "3bb5973e39cf38b5b2ae851969364a6d08dbb2c1",
+  "native_binary_sha256": "b27c4704999c6755880c1c491ecafbb16f1f2bee026700df6b5c3009184c870f",
+  "correctness": {
+    "accepted_session_status": "PERSISTENT_SESSION_CORRECT",
+    "sessions_with_one_solver": 28,
+    "old_learnt_export_count": 0,
+    "old_learnt_import_count": 0,
+    "per_clause_reproof_count": 0,
+    "sets_equal_to_stock": true,
+    "separate_native_unwinding_obligations_checked": true,
+    "sat_witnesses_rechecked": 9,
+    "r0_reproduces_pi1_trajectory": true,
+    "r1_r2_same_work_and_model": true
+  },
+  "experiment": {
+    "paired_timing_rounds": 1,
+    "timed_sessions": 12,
+    "detailed_database_replays": 12,
+    "observer_off_sessions": 4,
+    "per_session_versions": 2,
+    "cpus": [
+      0
+    ],
+    "frozen_stock_full_reference": "PI-1 observed, CPU 0, separate frontend-to-result wall",
+    "frozen_certified_mapping": true
+  },
+  "mechanism": {
+    "p1_ordinary_restarts_kept_in_R1": 732,
+    "p1_ordinary_restarts_kept_in_R2": 732,
+    "p1_graph_builds_R0": 607,
+    "p1_graph_builds_R2": 4,
+    "p1_actual_reinstalled_frames_R0": 882252168,
+    "p1_actual_reinstalled_frames_R2": 2515262,
+    "progress_equivalence_fixtures": 216,
+    "p1_progress_levels_R1": 1014133025,
+    "p1_progress_levels_R2": 40034,
+    "database_predicate_checks": 1312947422,
+    "database_predicate_true": 0,
+    "shadow_predicate_true_ignoring_selector_subtraction": 0,
+    "watcher_and_allocator_inventory": true
+  },
+  "cases": {
+    "fib_updates_8": {
+      "R0_P1_backend_s": 3.459520577976946,
+      "R1_P1_backend_s": 4.0593262879992835,
+      "R2_P1_backend_s": 3.9742343630059622,
+      "R2_percent_change_vs_R0": 14.87818249458166,
+      "stock_P1_full_s": 2.069892288011033,
+      "R2_P1_restarts_kept": 77,
+      "R2_P1_native_ledger_cost_s": 0.5622609819984064,
+      "classification": "BOUNDED_PASS"
+    },
+    "circular-buffer": {
+      "R0_P1_backend_s": 28.83300721499836,
+      "R1_P1_backend_s": 24.28864587499993,
+      "R2_P1_backend_s": 23.81547622900689,
+      "R2_percent_change_vs_R0": -17.40203839501504,
+      "stock_P1_full_s": 8.485427341016475,
+      "R2_P1_restarts_kept": 32,
+      "R2_P1_native_ledger_cost_s": 6.678384120983537,
+      "classification": "BOUNDED_PASS"
+    },
+    "airline_reservations_6": {
+      "R0_P1_backend_s": 82.59414785302943,
+      "R1_P1_backend_s": 95.4244149220176,
+      "R2_P1_backend_s": 92.8180906699854,
+      "R2_percent_change_vs_R0": 12.378531751606392,
+      "stock_P1_full_s": 19.563356355007272,
+      "R2_P1_restarts_kept": 369,
+      "R2_P1_native_ledger_cost_s": 50.01100095995935,
+      "classification": "BOUNDED_PASS"
+    },
+    "fib-snapshot-11": {
+      "R0_P1_backend_s": 91.98104208498262,
+      "R1_P1_backend_s": 50.94980244297767,
+      "R2_P1_backend_s": 47.77572510601021,
+      "R2_percent_change_vs_R0": -48.059160862877015,
+      "stock_P1_full_s": 36.70697607198963,
+      "R2_P1_restarts_kept": 254,
+      "R2_P1_native_ledger_cost_s": 7.414640171977226,
+      "classification": "INCOMPLETE_UNWINDING"
+    }
+  },
+  "assessment": {
+    "real_repairs_with_lower_R2_P1_backend_than_R0": [
+      "circular-buffer"
+    ],
+    "real_repairs_with_higher_R2_P1_backend_than_R0": [
+      "fib_updates_8",
+      "airline_reservations_6"
+    ],
+    "historical_control": "INCOMPLETE_UNWINDING",
+    "formal_speedup_claim": false,
+    "production_identity_cost_measured": false,
+    "next_stage": "await_user_review",
+    "PI_2_started": false
+  },
+  "evidence": {
+    "raw": "evidence/pi1r/raw-index.json",
+    "clean_rebuild": "evidence/pi1r/rebuild.json",
+    "checks": "evidence/pi1r/checks.json",
+    "properties": "evidence/pi1r/properties.json",
+    "timings_and_uses": "evidence/pi1r/runs.json",
+    "inventory_and_predicates": "evidence/pi1r/database.json",
+    "ledger": "evidence/pi1r/ledger.json",
+    "comparison": "evidence/pi1r/comparison.json",
+    "report": "PI-1R.md"
+  }
+}

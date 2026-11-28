@@ -37,6 +37,14 @@ def sections(d):
         ns=[runs[k][m]["P1"]["native"]["restart_study"] for m in modes]
         rows.append([label,trip(z["progress_calls"][0] for z in ns),trip(z["progress_visits"][0] for z in ns),
                      " / ".join(ms(z["progress_seconds"][0]) for z in ns)])
+    timing=[]
+    for k,label in case_names.items():
+        for side in ("P0","P1"):
+            row=runs[k]["R2"][side]; n=row["native"]; s=n["restart_study"]
+            timing.append([label,side,sec(row["install_seconds"]),sec(s["query_switch_s"]),sec(s["prefix_first_s"]),
+                           sec(n["boundary"]),ms(n["rollback"]),sec(row["elapsed_backend_transaction_s"]),f"{row['rss_kib']:,}"])
+    res["timing"]=table(["R2 病例","版本","输入安装 s","查询准备 s","首次安装区间 s",
+                         "原生查询 s","退出回退 ms","完整后端事务 s","峰值 RSS KiB"],timing)
     res["progress"]=table(["P1 病例","调用 R0 / R1 / R2","实际遍历层数 R0 / R1 / R2","实测 ms R0 / R1 / R2"],rows)
     rows=[]
     for k,label in case_names.items():
