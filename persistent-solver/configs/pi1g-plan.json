@@ -1,0 +1,45 @@
+{
+  "stage": "PI-1G",
+  "baseline": "f8f470468786d018f6c32c9653815df13345492b",
+  "branch": "codex/persistent-minisat-closure",
+  "group_size": 128,
+  "policy": "Unique normalized permanent B clauses in original first-occurrence order. No selector for an empty list. An empty clause is a member. Freeze each group's entire signed payload. Reuse every old group whose complete payload belongs to current B. Re-cover uncovered inputs in first-occurrence order. QueryDescriptor is an independent immutable scope with one query guard in grouped arms; native assumptions retain polarity. R2, whole-graph EPOCH, dynamic CO, native CDCL and database policy fixed.",
+  "arms": [
+    "Fine-Persistent",
+    "Grouped-Persistent",
+    "Grouped-Reset-active"
+  ],
+  "reset": "Solve P0 in its own grouped solver. After receipt, authenticate P1 with the same mapping and compute the identical active partition. Create a second fresh solver in P1 native-local variable order; install active groups only (kept groups in registry/member order, then new groups), current epoch and query only. Carry no trail, clauses, activities or obsolete variables. Charge validating and constructing the partition, destruction/recreation, and P1 setup to this arm.",
+  "ordered_sessions": [
+    [
+      "fib_updates_8",
+      "Fine-Persistent",
+      "Grouped-Persistent",
+      "Grouped-Reset-active"
+    ],
+    [
+      "circular-buffer",
+      "Grouped-Persistent",
+      "Grouped-Reset-active",
+      "Fine-Persistent"
+    ],
+    [
+      "airline_reservations_6",
+      "Grouped-Reset-active",
+      "Fine-Persistent",
+      "Grouped-Persistent"
+    ],
+    [
+      "fib-snapshot-11",
+      "Fine-Persistent",
+      "Grouped-Reset-active",
+      "Grouped-Persistent"
+    ]
+  ],
+  "limits": "Same PI-0 frozen source/configuration and PI-1 sealed B/Q/T/SC models, certified signed matches, CPU 0, timeout and AS cap per side. One serial timed P0→P1 per arm/case; P1 and its correspondence are supplied after P0 result. NativeLedger off, R2 common counters, identical control recording. No detailed trace during timings. Retain failures and negative results.",
+  "audit": "One separate ledger-on replay per arm and case. Collect length/selector joint distributions from live native clauses and units, allocator/watcher snapshots; no reduce predicate stream. Check controls, inputs, native counters, complete properties, SAT assignments and event orders match timed arms. Record actual guarded signed literals passed to addClause_ before simplification plus compact immutable group members/occurrences and enabled signed controls; independently reconstruct B and Q and check in local coordinates. Separate positive, negative and fault-injected controls on small models.",
+  "offline": "Before native implementation, inventory the four sealed pairs in one pass per side, certify signed proposals against the complete interface and events, count full/partial/absent old groups, fine/shared group membership, uncovered reinstallation, new groups, selectors, assumptions and epoch retention. P0 partition created before inspecting P1.",
+  "stock": "Report same-host accepted stock full verification walls. Also run one same-model unguarded cold transaction per side/case with the frozen pristine native kernel control if capable; include parse/installation/solve, separate source verification boundary.",
+  "decision": "A repaired SAT→UNSAT case requires P1 Grouped-Persistent at least 5% and 0.2 s faster than Fine-Persistent, AND below stock full P1 wall. Separately report comparison to Grouped-Reset-active. Historical fib-snapshot-11 kept INCOMPLETE_UNWINDING, excluded from repair signal. Single observations, no end-to-end speedup claim.",
+  "stop": "READY_FOR_REVIEW, no PI-2, alternate group widths, selector heuristics or changes to native deletion/minimization."
+}
