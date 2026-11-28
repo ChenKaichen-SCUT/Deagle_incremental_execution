@@ -52,6 +52,17 @@ def model_gates(case,side,folder,d,source,expected,tap):
     check(audit.allocation_hash==alloc,"legacy manifest allocation changed")
     observed=read(tap/"receipt.json")
     check(observed["shadow"]["allocation_ranges"]==shadow.allocation_hash,"release allocation differs from passive observation")
+    actual_ports=defaultdict(set)
+    for name,typ,*lits in shadow.rows["B"]:
+        for bit,l in enumerate(lits):actual_ports[shadow.strings[name],bit].add(shadow.lit(l))
+    checked_ports=0
+    with (tap/"shadow/work/tap.tsv").open() as f:
+        for ln in f:
+            if ln.startswith("A\t"):
+                _,name,typ,bit,l=ln.rstrip("\n").split("\t")
+                check(int(l) in actual_ports[name,int(bit)],"native installed Boolean binding absent from shadow")
+                checked_ports+=1
+    check(checked_ports==observed["shadow"]["rows"]["A"] and checked_ports>0,"Boolean port audit empty")
     # The no-manifest and older manifest encodings of the historical query are distinct.
     # The passive same-configuration comparisons test every scoped input, gate, graph and cache access.
     same_catalog=(audit.rows==shadow.rows and audit.allocated==shadow.allocated and audit.strings==shadow.strings)
@@ -64,7 +75,7 @@ def model_gates(case,side,folder,d,source,expected,tap):
     restarts=lambda p:[int(l.split()[1]) for l in p.read_text().splitlines()]
     check(restarts(off/"search.tsv")==restarts(sh/"search.tsv"),"native restarts differ")
     q=metrics(interpret(read(sh/"run.json"),(sh/"stdout").read_text())[0])
-    return dict(models=fp,full_manifest_sha256=sha(af/"model.tsv"),allocation_order_sha256=alloc,
+    return dict(checked_actual_boolean_port_rows=checked_ports,models=fp,full_manifest_sha256=sha(af/"model.tsv"),allocation_order_sha256=alloc,
                 legacy_cache_order_sha256=cache,legacy_same_opcode_order=(audit.cache_hash==cache),observer_rows=counts,native_atoms=audit.n-1,
                 same_configuration_passive=observed,manifest_and_default_shadow_catalog_byte_fields_equal=same_catalog,audit_raw_sha256=audit.seal["body"],
                 audit_row_counts=audit.metrics,checks=pairs,native=q,restarts=restarts(sh/"search.tsv"),

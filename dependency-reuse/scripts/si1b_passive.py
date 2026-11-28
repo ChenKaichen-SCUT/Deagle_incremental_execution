@@ -22,6 +22,10 @@ def patch(name,t):
         block=t[first:end].replace("literalt guard = decision_procedure.convert(e_it->guard);",
         'std::fprintf(si_tap::log(),"[\\t%s\\n",name.c_str());\n        literalt guard = decision_procedure.convert(e_it->guard);\n        std::fputs("]\\n",si_tap::log());')
         t=t[:first]+block+t[end:]
+        mark="if(dependency_manifest::stream)\n  {\n    auto &bv = dynamic_cast<const boolbvt &>(property_decider.get_decision_procedure());"
+        check(t.count(mark)==1,"installed Boolean port anchor")
+        t=t.replace(mark,mark.replace("if(dependency_manifest::stream)","if(true)"))
+        t=t.replace('dependency_manifest::row("A",','si_tap::graph("A",')
     if name.endswith("cnf.cpp"):
         t=t.replace("if(dependency_manifest::stream)","if(true)").replace("dependency_manifest::gate(","si_tap::gate(")
         for sig,width in [("literalt cnft::new_variable()","1"),("bvt cnft::new_variables(std::size_t width)","width")]:

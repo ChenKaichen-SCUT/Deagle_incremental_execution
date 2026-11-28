@@ -50,7 +50,8 @@ def copy_controls(root,out):
         shutil.copytree(root/name,out/name,dirs_exist_ok=True)
     shutil.copyfile(root/"edit.patch",out/"edit.patch")
 
-def publish(z,out,development=False):
+def publish(z,out,development=False,passive=None):
+    passive=passive or z/"passive"
     out.mkdir(exist_ok=True,parents=True);cohorts=[];clock=[];cache=[];scope_summary=[];used=Counter();origins=Counter();signed=Counter();refs={}
     for case in load():
         p=z/"release"/case;g=z/"verified"/case;j=z/"dr"/case;to=out/case;to.mkdir(exist_ok=True)
@@ -68,7 +69,7 @@ def publish(z,out,development=False):
         for (side,scope),t in tallies.items():
             scope_summary.append([case,side,scope,*[t[k] for k in DISP],sum(t.values()),t["same"]+t["different"]+t["lost"],t["same"]+t["different"]+t["added"]])
         for i,side in enumerate(("P0","P1")):
-            obs=z/"passive"/case/side
+            obs=passive/case/side
             for mode in ("off","shadow","audit"):raw_files(p/mode/side,to/"native"/side/mode)
             for mode in ("original","off","shadow"):
                 folder=to/"passive"/side/mode;folder.mkdir(exist_ok=True,parents=True)
@@ -115,5 +116,5 @@ def publish(z,out,development=False):
     files={str(f.relative_to(out)):dict(bytes=f.stat().st_size,sha256=sha(f)) for f in sorted(out.rglob("*")) if f.is_file() and f not in (out/"files.json",out/"replay.json")}
     save(out/"files.json",files)
 if __name__=="__main__":
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument("scratch",type=Path);p.add_argument("output",type=Path);p.add_argument("--development",action="store_true")
-    a=p.parse_args();publish(a.scratch,a.output,a.development)
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument("scratch",type=Path);p.add_argument("output",type=Path);p.add_argument("--development",action="store_true");p.add_argument("--passive-root",type=Path)
+    a=p.parse_args();publish(a.scratch,a.output,a.development,a.passive_root)
