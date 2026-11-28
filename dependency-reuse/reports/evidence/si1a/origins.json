@@ -1,0 +1,1536 @@
+{
+  "fib_updates_8": {
+    "P0": {
+      "case": "fib_updates_8",
+      "side": "P0",
+      "atoms": 12553,
+      "scopes": {
+        "all": {
+          "RF": 256,
+          "Guard": 0,
+          "pointer_aggregate": 384,
+          "ssa_bit": 2815,
+          "ordinary_bool": 4,
+          "fresh_free": 40,
+          "auxiliary": 8862,
+          "unknown": 192,
+          "total": 12553
+        },
+        "final_unmapped": {
+          "RF": 10,
+          "Guard": 0,
+          "pointer_aggregate": 384,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 40,
+          "auxiliary": 1575,
+          "unknown": 128,
+          "total": 2137
+        },
+        "semantic_mapped": {
+          "RF": 246,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 2559,
+          "ordinary_bool": 4,
+          "fresh_free": 0,
+          "auxiliary": 7253,
+          "unknown": 0,
+          "total": 10062
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 256,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 34,
+          "unknown": 64,
+          "total": 354
+        },
+        "used_boolean": {
+          "RF": 256,
+          "Guard": 0,
+          "pointer_aggregate": 384,
+          "ssa_bit": 2349,
+          "ordinary_bool": 4,
+          "fresh_free": 2,
+          "auxiliary": 5003,
+          "unknown": 64,
+          "total": 8062
+        },
+        "used_theory_ports": {
+          "RF": 256,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 0,
+          "unknown": 0,
+          "total": 256
+        },
+        "used_union": {
+          "RF": 256,
+          "Guard": 0,
+          "pointer_aggregate": 384,
+          "ssa_bit": 2349,
+          "ordinary_bool": 4,
+          "fresh_free": 2,
+          "auxiliary": 5003,
+          "unknown": 64,
+          "total": 8062
+        },
+        "used_unmapped": {
+          "RF": 10,
+          "Guard": 0,
+          "pointer_aggregate": 384,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 2,
+          "auxiliary": 1151,
+          "unknown": 0,
+          "total": 1547
+        },
+        "permanent_conclusion": {
+          "RF": 144,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 829,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 945,
+          "unknown": 0,
+          "total": 1918
+        },
+        "permanent_conclusion_unmapped": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 326,
+          "unknown": 0,
+          "total": 326
+        }
+      },
+      "cache": {
+        "BOOL_M": 864,
+        "BOOL_H": 454,
+        "BOOL_other_owner_hits": 99,
+        "BV_M": 165,
+        "BV_H": 615,
+        "BV_other_owner_hits": 537,
+        "boundaries": 1
+      },
+      "births": {
+        "permanent": 1307,
+        "translated": 956,
+        "touch_other_owner_interval": 942,
+        "touch_missing_other_owner_interval": 0
+      },
+      "native_symbol_types": {
+        "unsignedbv": 156,
+        "pointer": 35,
+        "array": 2,
+        "signedbv": 5
+      },
+      "named_port_rows_by_type": {
+        "unsignedbv": 6624,
+        "pointer": 2240,
+        "signedbv": 160,
+        "bool": 261
+      },
+      "constant_port_rows_by_type": {
+        "unsignedbv": 2080,
+        "pointer": 1856,
+        "signedbv": 160,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 5174,
+        "negative": 14
+      },
+      "gates": {
+        "and": 780,
+        "or": 83,
+        "xor": 7431,
+        "ite": 128
+      },
+      "sizes": {
+        "permanent_C": 47493,
+        "permanent_C_literals": 141871,
+        "used_C": 12858,
+        "used_C_literals": 34958,
+        "rf_port_rows": 256,
+        "guard_port_rows": 36
+      },
+      "example_unmapped_gate_chain": {
+        "start": 70,
+        "chain": [
+          {
+            "variable": 70,
+            "gate": "and",
+            "signed_output": 140,
+            "inputs": [
+              5,
+              10
+            ],
+            "allocation": [
+              "solvers/sat/cnf.cpp:296",
+              "and"
+            ],
+            "final_peer": -1,
+            "semantic_reason": "unmapped_gate_input:10"
+          }
+        ],
+        "end": {
+          "variable": 5,
+          "category": "fresh_free",
+          "allocation": [
+            "solvers/flattening/boolbv_index.cpp:68",
+            "index"
+          ],
+          "final_peer": -1,
+          "semantic_reason": "no_semantic_definition"
+        }
+      }
+    },
+    "P1": {
+      "case": "fib_updates_8",
+      "side": "P1",
+      "atoms": 12057,
+      "scopes": {
+        "all": {
+          "RF": 256,
+          "Guard": 0,
+          "pointer_aggregate": 384,
+          "ssa_bit": 2815,
+          "ordinary_bool": 4,
+          "fresh_free": 40,
+          "auxiliary": 8366,
+          "unknown": 192,
+          "total": 12057
+        },
+        "final_unmapped": {
+          "RF": 10,
+          "Guard": 0,
+          "pointer_aggregate": 384,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 40,
+          "auxiliary": 1079,
+          "unknown": 128,
+          "total": 1641
+        },
+        "semantic_mapped": {
+          "RF": 246,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 2559,
+          "ordinary_bool": 4,
+          "fresh_free": 0,
+          "auxiliary": 7253,
+          "unknown": 0,
+          "total": 10062
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 256,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 34,
+          "unknown": 64,
+          "total": 354
+        }
+      },
+      "cache": {
+        "BOOL_M": 864,
+        "BOOL_H": 454,
+        "BOOL_other_owner_hits": 99,
+        "BV_M": 165,
+        "BV_H": 607,
+        "BV_other_owner_hits": 529,
+        "boundaries": 1
+      },
+      "births": {},
+      "native_symbol_types": {
+        "unsignedbv": 156,
+        "pointer": 35,
+        "array": 2,
+        "signedbv": 5
+      },
+      "named_port_rows_by_type": {
+        "unsignedbv": 6624,
+        "pointer": 2240,
+        "signedbv": 160,
+        "bool": 261
+      },
+      "constant_port_rows_by_type": {
+        "unsignedbv": 2080,
+        "pointer": 1856,
+        "signedbv": 160,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 5182,
+        "negative": 6
+      },
+      "gates": {
+        "and": 532,
+        "or": 83,
+        "xor": 7183,
+        "ite": 128
+      },
+      "sizes": {
+        "permanent_C": 45757,
+        "permanent_C_literals": 137159,
+        "rf_port_rows": 256,
+        "guard_port_rows": 36
+      },
+      "example_unmapped_gate_chain": {}
+    },
+    "support": {
+      "boolean": {
+        "member": 8382,
+        "untranslated": 4446,
+        "translated_absent": 30
+      },
+      "theory": {
+        "M": 779,
+        "U": 72
+      },
+      "theory_by_rule": {
+        "Config": {
+          "M": 1
+        },
+        "Guard": {
+          "U": 8,
+          "M": 28
+        },
+        "APO": {
+          "M": 33,
+          "U": 2
+        },
+        "RF": {
+          "U": 10,
+          "M": 246
+        },
+        "Schema": {
+          "U": 13,
+          "M": 58
+        },
+        "SameAddress": {
+          "U": 19,
+          "M": 316
+        },
+        "PO": {
+          "M": 77,
+          "U": 18
+        },
+        "Block": {
+          "M": 20,
+          "U": 2
+        }
+      },
+      "boolean_examples": {
+        "member": {
+          "occurrence": 2,
+          "old_literals": [
+            4,
+            7
+          ],
+          "translated_literals": [
+            4,
+            7
+          ],
+          "unmatched_variables": [],
+          "production_receipt": 2
+        },
+        "untranslated": {
+          "occurrence": 8,
+          "old_literals": [
+            10,
+            141
+          ],
+          "translated_literals": null,
+          "unmatched_variables": [
+            5,
+            70
+          ],
+          "production_receipt": -1
+        },
+        "translated_absent": {
+          "occurrence": 2315,
+          "old_literals": [
+            1991,
+            2055,
+            2121
+          ],
+          "translated_literals": [
+            1991,
+            2055,
+            2120
+          ],
+          "unmatched_variables": [],
+          "production_receipt": 0
+        }
+      }
+    }
+  },
+  "circular-buffer": {
+    "P0": {
+      "case": "circular-buffer",
+      "side": "P0",
+      "atoms": 245081,
+      "scopes": {
+        "all": {
+          "RF": 2227,
+          "Guard": 126,
+          "pointer_aggregate": 15440,
+          "ssa_bit": 6784,
+          "ordinary_bool": 46,
+          "fresh_free": 40,
+          "auxiliary": 220322,
+          "unknown": 96,
+          "total": 245081
+        },
+        "final_unmapped": {
+          "RF": 108,
+          "Guard": 2,
+          "pointer_aggregate": 14096,
+          "ssa_bit": 1240,
+          "ordinary_bool": 0,
+          "fresh_free": 40,
+          "auxiliary": 192464,
+          "unknown": 64,
+          "total": 208014
+        },
+        "semantic_mapped": {
+          "RF": 2119,
+          "Guard": 124,
+          "pointer_aggregate": 1344,
+          "ssa_bit": 5480,
+          "ordinary_bool": 44,
+          "fresh_free": 0,
+          "auxiliary": 27246,
+          "unknown": 0,
+          "total": 36357
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 64,
+          "ordinary_bool": 2,
+          "fresh_free": 0,
+          "auxiliary": 612,
+          "unknown": 32,
+          "total": 710
+        },
+        "used_boolean": {
+          "RF": 852,
+          "Guard": 38,
+          "pointer_aggregate": 12523,
+          "ssa_bit": 1913,
+          "ordinary_bool": 35,
+          "fresh_free": 0,
+          "auxiliary": 19611,
+          "unknown": 32,
+          "total": 35004
+        },
+        "used_theory_ports": {
+          "RF": 2227,
+          "Guard": 126,
+          "pointer_aggregate": 0,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 0,
+          "unknown": 0,
+          "total": 2353
+        },
+        "used_union": {
+          "RF": 2227,
+          "Guard": 126,
+          "pointer_aggregate": 12523,
+          "ssa_bit": 1913,
+          "ordinary_bool": 35,
+          "fresh_free": 0,
+          "auxiliary": 19611,
+          "unknown": 32,
+          "total": 36467
+        },
+        "used_unmapped": {
+          "RF": 108,
+          "Guard": 2,
+          "pointer_aggregate": 11489,
+          "ssa_bit": 194,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 15814,
+          "unknown": 0,
+          "total": 27607
+        },
+        "permanent_conclusion": {
+          "RF": 269,
+          "Guard": 14,
+          "pointer_aggregate": 957,
+          "ssa_bit": 321,
+          "ordinary_bool": 1,
+          "fresh_free": 0,
+          "auxiliary": 2464,
+          "unknown": 0,
+          "total": 4026
+        },
+        "permanent_conclusion_unmapped": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 866,
+          "ssa_bit": 3,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 1977,
+          "unknown": 0,
+          "total": 2846
+        }
+      },
+      "cache": {
+        "BOOL_M": 8401,
+        "BOOL_H": 29727,
+        "BOOL_other_owner_hits": 28654,
+        "BV_M": 878,
+        "BV_H": 5306,
+        "BV_other_owner_hits": 4851,
+        "boundaries": 1
+      },
+      "births": {
+        "permanent": 188,
+        "translated": 146,
+        "touch_other_owner_interval": 93,
+        "touch_missing_other_owner_interval": 10
+      },
+      "native_symbol_types": {
+        "signedbv": 347,
+        "pointer": 94,
+        "unsignedbv": 133,
+        "union_tag": 87,
+        "c_bool": 46,
+        "array": 10
+      },
+      "named_port_rows_by_type": {
+        "signedbv": 5416,
+        "pointer": 3008,
+        "unsignedbv": 4256,
+        "union_tag": 27840,
+        "c_bool": 368,
+        "array": 640,
+        "bool": 2274
+      },
+      "constant_port_rows_by_type": {
+        "signedbv": 1296,
+        "union_tag": 864,
+        "pointer": 1888,
+        "c_bool": 256,
+        "unsignedbv": 864,
+        "array": 80,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 38540,
+        "negative": 13
+      },
+      "gates": {
+        "and": 13908,
+        "or": 1187,
+        "xor": 195380,
+        "ite": 256
+      },
+      "sizes": {
+        "permanent_C": 1160134,
+        "permanent_C_literals": 3442429,
+        "used_C": 35367,
+        "used_C_literals": 87360,
+        "rf_port_rows": 2227,
+        "guard_port_rows": 190
+      },
+      "example_unmapped_gate_chain": {
+        "start": 8344,
+        "chain": [
+          {
+            "variable": 8344,
+            "gate": "xor",
+            "signed_output": 16688,
+            "inputs": [
+              2,
+              16687
+            ],
+            "allocation": [
+              "solvers/sat/cnf.cpp:334",
+              "="
+            ],
+            "final_peer": -1,
+            "semantic_reason": "unmapped_gate_input:16687"
+          }
+        ],
+        "end": {
+          "variable": 8343,
+          "category": "auxiliary",
+          "allocation": [
+            "solvers/flattening/bv_utils.cpp:1220",
+            ">="
+          ],
+          "final_peer": -1,
+          "semantic_reason": "no_semantic_definition"
+        }
+      }
+    },
+    "P1": {
+      "case": "circular-buffer",
+      "side": "P1",
+      "atoms": 245472,
+      "scopes": {
+        "all": {
+          "RF": 2227,
+          "Guard": 126,
+          "pointer_aggregate": 15440,
+          "ssa_bit": 6944,
+          "ordinary_bool": 44,
+          "fresh_free": 40,
+          "auxiliary": 220363,
+          "unknown": 288,
+          "total": 245472
+        },
+        "final_unmapped": {
+          "RF": 108,
+          "Guard": 2,
+          "pointer_aggregate": 14096,
+          "ssa_bit": 1398,
+          "ordinary_bool": 0,
+          "fresh_free": 40,
+          "auxiliary": 192505,
+          "unknown": 256,
+          "total": 208405
+        },
+        "semantic_mapped": {
+          "RF": 2119,
+          "Guard": 124,
+          "pointer_aggregate": 1344,
+          "ssa_bit": 5480,
+          "ordinary_bool": 44,
+          "fresh_free": 0,
+          "auxiliary": 27246,
+          "unknown": 0,
+          "total": 36357
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 66,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 612,
+          "unknown": 32,
+          "total": 710
+        }
+      },
+      "cache": {
+        "BOOL_M": 8403,
+        "BOOL_H": 29743,
+        "BOOL_other_owner_hits": 28675,
+        "BV_M": 943,
+        "BV_H": 5339,
+        "BV_other_owner_hits": 4872,
+        "boundaries": 1
+      },
+      "births": {},
+      "native_symbol_types": {
+        "signedbv": 385,
+        "pointer": 94,
+        "unsignedbv": 133,
+        "union_tag": 87,
+        "c_bool": 46,
+        "array": 10
+      },
+      "named_port_rows_by_type": {
+        "signedbv": 6632,
+        "pointer": 3008,
+        "unsignedbv": 4256,
+        "union_tag": 27840,
+        "c_bool": 368,
+        "array": 640,
+        "bool": 2274
+      },
+      "constant_port_rows_by_type": {
+        "signedbv": 2125,
+        "union_tag": 864,
+        "pointer": 1888,
+        "c_bool": 256,
+        "unsignedbv": 864,
+        "array": 80,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 38915,
+        "negative": 25
+      },
+      "gates": {
+        "and": 13710,
+        "or": 1007,
+        "xor": 195431,
+        "ite": 718
+      },
+      "sizes": {
+        "permanent_C": 1161265,
+        "permanent_C_literals": 3446194,
+        "rf_port_rows": 2227,
+        "guard_port_rows": 190
+      },
+      "example_unmapped_gate_chain": {}
+    },
+    "support": {
+      "boolean": {
+        "member": 6385,
+        "untranslated": 28928,
+        "translated_absent": 54
+      },
+      "theory": {
+        "M": 4692,
+        "U": 1722
+      },
+      "theory_by_rule": {
+        "Config": {
+          "M": 1
+        },
+        "Guard": {
+          "U": 148,
+          "M": 42
+        },
+        "APO": {
+          "M": 29,
+          "U": 2
+        },
+        "RF": {
+          "U": 108,
+          "M": 2119
+        },
+        "Schema": {
+          "U": 271,
+          "M": 198
+        },
+        "SameAddress": {
+          "U": 1110,
+          "M": 1466
+        },
+        "PO": {
+          "M": 790,
+          "U": 81
+        },
+        "Block": {
+          "M": 47,
+          "U": 2
+        }
+      },
+      "boolean_examples": {
+        "member": {
+          "occurrence": 2,
+          "old_literals": [
+            4,
+            7
+          ],
+          "translated_literals": [
+            4,
+            7
+          ],
+          "unmatched_variables": [],
+          "production_receipt": 2
+        },
+        "untranslated": {
+          "occurrence": 166,
+          "old_literals": [
+            957,
+            822,
+            1025
+          ],
+          "translated_literals": null,
+          "unmatched_variables": [
+            478,
+            411,
+            512
+          ],
+          "production_receipt": -1
+        },
+        "translated_absent": {
+          "occurrence": 23338,
+          "old_literals": [
+            25273,
+            25676
+          ],
+          "translated_literals": [
+            25273,
+            25676
+          ],
+          "unmatched_variables": [],
+          "production_receipt": 0
+        }
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "P0": {
+      "case": "airline_reservations_6",
+      "side": "P0",
+      "atoms": 199090,
+      "scopes": {
+        "all": {
+          "RF": 734,
+          "Guard": 18,
+          "pointer_aggregate": 14912,
+          "ssa_bit": 4309,
+          "ordinary_bool": 18,
+          "fresh_free": 312,
+          "auxiliary": 177699,
+          "unknown": 1088,
+          "total": 199090
+        },
+        "final_unmapped": {
+          "RF": 485,
+          "Guard": 12,
+          "pointer_aggregate": 14336,
+          "ssa_bit": 320,
+          "ordinary_bool": 0,
+          "fresh_free": 312,
+          "auxiliary": 167547,
+          "unknown": 768,
+          "total": 183780
+        },
+        "semantic_mapped": {
+          "RF": 249,
+          "Guard": 6,
+          "pointer_aggregate": 576,
+          "ssa_bit": 3221,
+          "ordinary_bool": 18,
+          "fresh_free": 0,
+          "auxiliary": 9907,
+          "unknown": 0,
+          "total": 13977
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 768,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 245,
+          "unknown": 320,
+          "total": 1333
+        },
+        "used_boolean": {
+          "RF": 715,
+          "Guard": 17,
+          "pointer_aggregate": 11034,
+          "ssa_bit": 2836,
+          "ordinary_bool": 17,
+          "fresh_free": 6,
+          "auxiliary": 16893,
+          "unknown": 320,
+          "total": 31838
+        },
+        "used_theory_ports": {
+          "RF": 734,
+          "Guard": 18,
+          "pointer_aggregate": 0,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 0,
+          "unknown": 0,
+          "total": 752
+        },
+        "used_union": {
+          "RF": 734,
+          "Guard": 18,
+          "pointer_aggregate": 11034,
+          "ssa_bit": 2836,
+          "ordinary_bool": 17,
+          "fresh_free": 6,
+          "auxiliary": 16893,
+          "unknown": 320,
+          "total": 31858
+        },
+        "used_unmapped": {
+          "RF": 485,
+          "Guard": 12,
+          "pointer_aggregate": 10635,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 6,
+          "auxiliary": 12580,
+          "unknown": 0,
+          "total": 23718
+        },
+        "permanent_conclusion": {
+          "RF": 592,
+          "Guard": 16,
+          "pointer_aggregate": 4142,
+          "ssa_bit": 3,
+          "ordinary_bool": 1,
+          "fresh_free": 0,
+          "auxiliary": 2951,
+          "unknown": 0,
+          "total": 7705
+        },
+        "permanent_conclusion_unmapped": {
+          "RF": 424,
+          "Guard": 12,
+          "pointer_aggregate": 3948,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 2886,
+          "unknown": 0,
+          "total": 7270
+        }
+      },
+      "cache": {
+        "BOOL_M": 7578,
+        "BOOL_H": 11482,
+        "BOOL_other_owner_hits": 2516,
+        "BV_M": 378,
+        "BV_H": 2083,
+        "BV_other_owner_hits": 1584,
+        "boundaries": 1
+      },
+      "births": {
+        "permanent": 41800,
+        "translated": 2,
+        "touch_other_owner_interval": 41549,
+        "touch_missing_other_owner_interval": 41522
+      },
+      "native_symbol_types": {
+        "unsignedbv": 199,
+        "pointer": 143,
+        "array": 7,
+        "union_tag": 74,
+        "signedbv": 9
+      },
+      "named_port_rows_by_type": {
+        "unsignedbv": 11360,
+        "pointer": 9152,
+        "array": 384,
+        "union_tag": 23680,
+        "signedbv": 288,
+        "bool": 753
+      },
+      "constant_port_rows_by_type": {
+        "union_tag": 512,
+        "pointer": 6464,
+        "unsignedbv": 3456,
+        "signedbv": 288,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 34860,
+        "negative": 36
+      },
+      "gates": {
+        "and": 2545,
+        "or": 1870,
+        "xor": 173306,
+        "ite": 384
+      },
+      "sizes": {
+        "permanent_C": 866692,
+        "permanent_C_literals": 2586768,
+        "used_C": 33230,
+        "used_C_literals": 86955,
+        "rf_port_rows": 734,
+        "guard_port_rows": 66
+      },
+      "example_unmapped_gate_chain": {
+        "start": 70,
+        "chain": [
+          {
+            "variable": 70,
+            "gate": "and",
+            "signed_output": 140,
+            "inputs": [
+              5,
+              10
+            ],
+            "allocation": [
+              "solvers/sat/cnf.cpp:296",
+              "and"
+            ],
+            "final_peer": -1,
+            "semantic_reason": "unmapped_gate_input:10"
+          }
+        ],
+        "end": {
+          "variable": 5,
+          "category": "fresh_free",
+          "allocation": [
+            "solvers/flattening/boolbv_index.cpp:68",
+            "index"
+          ],
+          "final_peer": -1,
+          "semantic_reason": "no_semantic_definition"
+        }
+      }
+    },
+    "P1": {
+      "case": "airline_reservations_6",
+      "side": "P1",
+      "atoms": 69634,
+      "scopes": {
+        "all": {
+          "RF": 332,
+          "Guard": 12,
+          "pointer_aggregate": 8384,
+          "ssa_bit": 4309,
+          "ordinary_bool": 18,
+          "fresh_free": 312,
+          "auxiliary": 55179,
+          "unknown": 1088,
+          "total": 69634
+        },
+        "final_unmapped": {
+          "RF": 83,
+          "Guard": 6,
+          "pointer_aggregate": 7808,
+          "ssa_bit": 320,
+          "ordinary_bool": 0,
+          "fresh_free": 312,
+          "auxiliary": 45027,
+          "unknown": 768,
+          "total": 54324
+        },
+        "semantic_mapped": {
+          "RF": 249,
+          "Guard": 6,
+          "pointer_aggregate": 576,
+          "ssa_bit": 3221,
+          "ordinary_bool": 18,
+          "fresh_free": 0,
+          "auxiliary": 9907,
+          "unknown": 0,
+          "total": 13977
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 768,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 245,
+          "unknown": 320,
+          "total": 1333
+        }
+      },
+      "cache": {
+        "BOOL_M": 6324,
+        "BOOL_H": 10090,
+        "BOOL_other_owner_hits": 1142,
+        "BV_M": 312,
+        "BV_H": 1243,
+        "BV_other_owner_hits": 744,
+        "boundaries": 1
+      },
+      "births": {},
+      "native_symbol_types": {
+        "unsignedbv": 199,
+        "pointer": 119,
+        "array": 7,
+        "union_tag": 38,
+        "signedbv": 9
+      },
+      "named_port_rows_by_type": {
+        "unsignedbv": 11360,
+        "pointer": 7616,
+        "array": 384,
+        "union_tag": 12160,
+        "signedbv": 288,
+        "bool": 351
+      },
+      "constant_port_rows_by_type": {
+        "union_tag": 416,
+        "pointer": 5696,
+        "unsignedbv": 3456,
+        "signedbv": 288,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 22266,
+        "negative": 36
+      },
+      "gates": {
+        "and": 1717,
+        "or": 1852,
+        "xor": 51626,
+        "ite": 384
+      },
+      "sizes": {
+        "permanent_C": 243406,
+        "permanent_C_literals": 722820,
+        "rf_port_rows": 332,
+        "guard_port_rows": 54
+      },
+      "example_unmapped_gate_chain": {}
+    },
+    "support": {
+      "boolean": {
+        "member": 8343,
+        "untranslated": 24887
+      },
+      "theory": {
+        "M": 801,
+        "U": 741,
+        "C": 706
+      },
+      "theory_by_rule": {
+        "Config": {
+          "M": 1
+        },
+        "Guard": {
+          "U": 48,
+          "M": 18
+        },
+        "APO": {
+          "M": 17,
+          "C": 12,
+          "U": 6
+        },
+        "RF": {
+          "U": 485,
+          "M": 249
+        },
+        "Schema": {
+          "U": 36,
+          "M": 57,
+          "C": 24
+        },
+        "SameAddress": {
+          "U": 115,
+          "M": 348,
+          "C": 616
+        },
+        "PO": {
+          "M": 75,
+          "C": 42,
+          "U": 45
+        },
+        "Block": {
+          "M": 36,
+          "C": 12,
+          "U": 6
+        }
+      },
+      "boolean_examples": {
+        "member": {
+          "occurrence": 2,
+          "old_literals": [
+            4,
+            7
+          ],
+          "translated_literals": [
+            4,
+            7
+          ],
+          "unmatched_variables": [],
+          "production_receipt": 2
+        },
+        "untranslated": {
+          "occurrence": 8,
+          "old_literals": [
+            10,
+            141
+          ],
+          "translated_literals": null,
+          "unmatched_variables": [
+            5,
+            70
+          ],
+          "production_receipt": -1
+        }
+      }
+    }
+  },
+  "fib-snapshot-11": {
+    "P0": {
+      "case": "fib-snapshot-11",
+      "side": "P0",
+      "atoms": 200360,
+      "scopes": {
+        "all": {
+          "RF": 5561,
+          "Guard": 77,
+          "pointer_aggregate": 224,
+          "ssa_bit": 16372,
+          "ordinary_bool": 73,
+          "fresh_free": 80,
+          "auxiliary": 177877,
+          "unknown": 96,
+          "total": 200360
+        },
+        "final_unmapped": {
+          "RF": 58,
+          "Guard": 2,
+          "pointer_aggregate": 224,
+          "ssa_bit": 128,
+          "ordinary_bool": 0,
+          "fresh_free": 80,
+          "auxiliary": 8354,
+          "unknown": 64,
+          "total": 8910
+        },
+        "semantic_mapped": {
+          "RF": 5503,
+          "Guard": 75,
+          "pointer_aggregate": 0,
+          "ssa_bit": 16244,
+          "ordinary_bool": 73,
+          "fresh_free": 0,
+          "auxiliary": 169494,
+          "unknown": 0,
+          "total": 191389
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 29,
+          "unknown": 32,
+          "total": 61
+        },
+        "used_boolean": {
+          "RF": 5557,
+          "Guard": 77,
+          "pointer_aggregate": 224,
+          "ssa_bit": 11624,
+          "ordinary_bool": 72,
+          "fresh_free": 0,
+          "auxiliary": 88348,
+          "unknown": 34,
+          "total": 105936
+        },
+        "used_theory_ports": {
+          "RF": 5561,
+          "Guard": 77,
+          "pointer_aggregate": 0,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 0,
+          "unknown": 0,
+          "total": 5638
+        },
+        "used_union": {
+          "RF": 5561,
+          "Guard": 77,
+          "pointer_aggregate": 224,
+          "ssa_bit": 11624,
+          "ordinary_bool": 72,
+          "fresh_free": 0,
+          "auxiliary": 88348,
+          "unknown": 34,
+          "total": 105940
+        },
+        "used_unmapped": {
+          "RF": 58,
+          "Guard": 2,
+          "pointer_aggregate": 224,
+          "ssa_bit": 97,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 5209,
+          "unknown": 2,
+          "total": 5592
+        },
+        "permanent_conclusion": {
+          "RF": 1181,
+          "Guard": 32,
+          "pointer_aggregate": 0,
+          "ssa_bit": 2861,
+          "ordinary_bool": 48,
+          "fresh_free": 0,
+          "auxiliary": 8198,
+          "unknown": 0,
+          "total": 12320
+        },
+        "permanent_conclusion_unmapped": {
+          "RF": 24,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 38,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 1294,
+          "unknown": 0,
+          "total": 1356
+        }
+      },
+      "cache": {
+        "BOOL_M": 17875,
+        "BOOL_H": 2845,
+        "BOOL_other_owner_hits": 2348,
+        "BV_M": 862,
+        "BV_H": 11153,
+        "BV_other_owner_hits": 11121,
+        "boundaries": 1
+      },
+      "births": {
+        "permanent": 54606,
+        "translated": 19416,
+        "touch_other_owner_interval": 46023,
+        "touch_missing_other_owner_interval": 295
+      },
+      "native_symbol_types": {
+        "signedbv": 680,
+        "pointer": 35,
+        "unsignedbv": 38
+      },
+      "named_port_rows_by_type": {
+        "signedbv": 21760,
+        "pointer": 1120,
+        "unsignedbv": 1216,
+        "bool": 5638
+      },
+      "constant_port_rows_by_type": {
+        "pointer": 896,
+        "unsignedbv": 736,
+        "signedbv": 576,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 27444,
+        "negative": 81
+      },
+      "gates": {
+        "and": 13786,
+        "or": 579,
+        "xor": 161011
+      },
+      "sizes": {
+        "permanent_C": 1001471,
+        "permanent_C_literals": 2974198,
+        "used_C": 138446,
+        "used_C_literals": 393055,
+        "rf_port_rows": 5561,
+        "guard_port_rows": 232
+      },
+      "example_unmapped_gate_chain": {
+        "start": 494,
+        "chain": [
+          {
+            "variable": 494,
+            "gate": "xor",
+            "signed_output": 988,
+            "inputs": [
+              2,
+              987
+            ],
+            "allocation": [
+              "solvers/sat/cnf.cpp:334",
+              "="
+            ],
+            "final_peer": -1,
+            "semantic_reason": "unmapped_gate_input:987"
+          }
+        ],
+        "end": {
+          "variable": 493,
+          "category": "auxiliary",
+          "allocation": [
+            "solvers/flattening/bv_utils.cpp:1220",
+            ">="
+          ],
+          "final_peer": -1,
+          "semantic_reason": "no_semantic_definition"
+        }
+      }
+    },
+    "P1": {
+      "case": "fib-snapshot-11",
+      "side": "P1",
+      "atoms": 200369,
+      "scopes": {
+        "all": {
+          "RF": 5561,
+          "Guard": 77,
+          "pointer_aggregate": 224,
+          "ssa_bit": 16381,
+          "ordinary_bool": 73,
+          "fresh_free": 80,
+          "auxiliary": 177877,
+          "unknown": 96,
+          "total": 200369
+        },
+        "final_unmapped": {
+          "RF": 58,
+          "Guard": 2,
+          "pointer_aggregate": 224,
+          "ssa_bit": 137,
+          "ordinary_bool": 0,
+          "fresh_free": 80,
+          "auxiliary": 8354,
+          "unknown": 64,
+          "total": 8919
+        },
+        "semantic_mapped": {
+          "RF": 5503,
+          "Guard": 75,
+          "pointer_aggregate": 0,
+          "ssa_bit": 16244,
+          "ordinary_bool": 73,
+          "fresh_free": 0,
+          "auxiliary": 169494,
+          "unknown": 0,
+          "total": 191389
+        },
+        "structurally_added": {
+          "RF": 0,
+          "Guard": 0,
+          "pointer_aggregate": 0,
+          "ssa_bit": 0,
+          "ordinary_bool": 0,
+          "fresh_free": 0,
+          "auxiliary": 29,
+          "unknown": 32,
+          "total": 61
+        }
+      },
+      "cache": {
+        "BOOL_M": 17877,
+        "BOOL_H": 2852,
+        "BOOL_other_owner_hits": 2354,
+        "BV_M": 869,
+        "BV_H": 11155,
+        "BV_other_owner_hits": 11122,
+        "boundaries": 1
+      },
+      "births": {},
+      "native_symbol_types": {
+        "signedbv": 682,
+        "pointer": 35,
+        "unsignedbv": 38,
+        "c_bool": 2
+      },
+      "named_port_rows_by_type": {
+        "signedbv": 21824,
+        "pointer": 1120,
+        "unsignedbv": 1216,
+        "c_bool": 16,
+        "bool": 5638
+      },
+      "constant_port_rows_by_type": {
+        "unsignedbv": 736,
+        "pointer": 896,
+        "signedbv": 576,
+        "c_bool": 7,
+        "bool": 1
+      },
+      "signed_named_ports": {
+        "positive": 27517,
+        "negative": 81
+      },
+      "gates": {
+        "and": 13787,
+        "or": 579,
+        "xor": 161011
+      },
+      "sizes": {
+        "permanent_C": 1001473,
+        "permanent_C_literals": 2974202,
+        "rf_port_rows": 5561,
+        "guard_port_rows": 232
+      },
+      "example_unmapped_gate_chain": {}
+    },
+    "support": {
+      "boolean": {
+        "member": 120203,
+        "untranslated": 18243
+      },
+      "theory": {
+        "M": 13378,
+        "U": 98,
+        "C": 58
+      },
+      "theory_by_rule": {
+        "Config": {
+          "M": 1
+        },
+        "Guard": {
+          "U": 9,
+          "M": 223
+        },
+        "APO": {
+          "M": 101,
+          "U": 2
+        },
+        "RF": {
+          "U": 58,
+          "M": 5503
+        },
+        "Schema": {
+          "U": 5,
+          "M": 564,
+          "C": 2
+        },
+        "SameAddress": {
+          "U": 6,
+          "M": 6106,
+          "C": 54
+        },
+        "PO": {
+          "M": 772,
+          "U": 16,
+          "C": 2
+        },
+        "Block": {
+          "M": 108,
+          "U": 2
+        }
+      },
+      "boolean_examples": {
+        "member": {
+          "occurrence": 3,
+          "old_literals": [
+            3,
+            5,
+            6
+          ],
+          "translated_literals": [
+            3,
+            5,
+            6
+          ],
+          "unmatched_variables": [],
+          "production_receipt": 3
+        },
+        "untranslated": {
+          "occurrence": 988,
+          "old_literals": [
+            393,
+            394
+          ],
+          "translated_literals": null,
+          "unmatched_variables": [
+            197
+          ],
+          "production_receipt": -1
+        }
+      }
+    }
+  }
+}

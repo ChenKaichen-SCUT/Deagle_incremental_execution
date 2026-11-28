@@ -1,0 +1,46 @@
+{
+  "fib_updates_8": {
+    "reuse_P1_ns": 2512212375,
+    "stock_P1_ns": 1992292290,
+    "worker_ns": 273370769,
+    "residual_P1_ns": 245269895,
+    "cycle_residual_ns": 272514062,
+    "semantic_variables_models_ns": 130456650,
+    "structural_ns": 1772185,
+    "pure_search_gain_ns": -162639396,
+    "observed_P1_gap_ns": 520082735
+  },
+  "circular-buffer": {
+    "reuse_P1_ns": 13649083643,
+    "stock_P1_ns": 8432867226,
+    "worker_ns": 3505433412,
+    "residual_P1_ns": 1710783005,
+    "cycle_residual_ns": 2103563554,
+    "semantic_variables_models_ns": 2017059161,
+    "structural_ns": 31564137,
+    "pure_search_gain_ns": 361736217,
+    "observed_P1_gap_ns": 5216216417
+  },
+  "airline_reservations_6": {
+    "reuse_P1_ns": 24113993006,
+    "stock_P1_ns": 20106801209,
+    "worker_ns": 2239500812,
+    "residual_P1_ns": 1767690985,
+    "cycle_residual_ns": 3890430780,
+    "semantic_variables_models_ns": 1127910544,
+    "structural_ns": 7691092,
+    "pure_search_gain_ns": -97680888,
+    "observed_P1_gap_ns": 4007191797
+  },
+  "fib-snapshot-11": {
+    "reuse_P1_ns": 48320137468,
+    "stock_P1_ns": 37861273684,
+    "worker_ns": 4295654063,
+    "residual_P1_ns": 5885375852,
+    "cycle_residual_ns": 15317510906,
+    "semantic_variables_models_ns": 1984944102,
+    "structural_ns": 31504674,
+    "pure_search_gain_ns": -3006579898,
+    "observed_P1_gap_ns": 10181029915
+  }
+}

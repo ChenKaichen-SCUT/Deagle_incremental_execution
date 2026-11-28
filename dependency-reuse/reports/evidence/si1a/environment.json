@@ -1,0 +1,33 @@
+{
+  "base_commit": "b3803564e0c9badedbdd8ca0ad8acd85a002081f",
+  "linux": "6.6.87.2-microsoft-standard-WSL2",
+  "distro": "PRETTY_NAME=\"Ubuntu 22.04.5 LTS\"\nNAME=\"Ubuntu\"\nVERSION_ID=\"22.04\"\nVERSION=\"22.04.5 LTS (Jammy Jellyfish)\"\nVERSION_CODENAME=jammy\nID=ubuntu\nID_LIKE=debian\nHOME_URL=\"https://www.ubuntu.com/\"\nSUPPORT_URL=\"https://help.ubuntu.com/\"\nBUG_REPORT_URL=\"https://bugs.launchpad.net/ubuntu/\"\nPRIVACY_POLICY_URL=\"https://www.ubuntu.com/legal/terms-and-policies/privacy-policy\"\nUBUNTU_CODENAME=jammy\n",
+  "python": "3.10.12",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "affinity_available": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15
+  ],
+  "model_cpu": 0,
+  "cpu": "13th Gen Intel(R) Core(TM) i7-13700F",
+  "mem_total_kib": 30802092,
+  "stock_sha256": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "production_sha256": "91a531d0c311f63de4a18f0aca443399ca7c817bfaf3bdcf5a6adfc3c299fc0a",
+  "probe_sha256": "d7cb3a91fa67948c05625d856577e627fb81f631f02d9068f649cda13de11ec0",
+  "old_library_version": "D43DNS2",
+  "source_guide_sha256": "dcbd127ed092536ba94f0ee8d88538811aefafc4cab253b11fb2988bcfbd1ec5"
+}

@@ -1,0 +1,24 @@
+{
+  "recomputed": {
+    "allocation-sites.tsv": "efa0fa069c409e90c4e98c2dc9b0afa2ade6c7e4372c116aa22429b8500ee2bf",
+    "cohorts.tsv": "17c43333cefb4e71906a466a76b1e0ab1ac08ed3c53a9c1ed25f109d20328281",
+    "frozen-inputs.json": "952b01ba03aedee6f4ba69f576cb5c009630d148bc06d788ea1eec1e63440a6e",
+    "frozen-model-fingerprints.json": "8f44712eca635c4e48bab133345de1f81f596d1b47cf830593fdb211934c9a51",
+    "mapping-reasons.tsv": "ed92437258a04f23089bada263099feefae62fce7b278627ae0cc716ddbae874",
+    "origins.json": "1e2aa6881f4a243579fabafab436e67013448f56a224291f9c044b8ebc240a73",
+    "overlapping-roles.tsv": "d4f7dd7c7c0fd1666c0eaac59f674de8c343038318cf289926926689d9dc220b",
+    "proof/airline_reservations_6.tsv.gz": "fa4bf6ea9e8b4eddeb54fba223304c3182797f0e0212a15a09609b607a7def48",
+    "proof/circular-buffer.tsv.gz": "7bea21ec78b2e8a6b8aa4601d724933641db401d3b28615a8607a0bbbf5996e2",
+    "proof/fib-snapshot-11.tsv.gz": "1c446018e81fc3d3ef255a82838576c95786f6fa47da94ea7b45e0424fa11843",
+    "proof/fib_updates_8.tsv.gz": "be3fa4d787337f60c5adec7608b738504402d3989a8c70667b7d57dfeecd550c",
+    "proof-dispositions.tsv": "134846916f6a75e1ad9be4b0ad8c496b596b4464418b1bb5067e54bd1a5c0cdc",
+    "proof-read-receipts.json": "b4537a356708478b056d11ec3dc68f43a63fa1a6b7f87011e57ce07072c59984",
+    "source-sha256.json": "877c9ae09758caf2b7b6016319b7ecd85b5d97db882ec40c445f9754efb60c45",
+    "wire-size-scenarios.tsv": "e1e81d3c02bed88fc6ff648793afd0b84a66e1fa7a877345c7e1169dc6b04eb3",
+    "zero-worker-medians.json": "71b4001c0ffcd23ac01dc0fd441a5b83084d58416b1e994e4a36328a30be2a1b",
+    "zero-worker-pairs.tsv": "1fd329e9b0b9fe831ab9f0a561951d9b9e91f6dfd9d2d910edb77e474926431f"
+  },
+  "paired_native_prefixes": 8,
+  "immutable_e_models": true,
+  "cohort_searches_this_stage": 0
+}

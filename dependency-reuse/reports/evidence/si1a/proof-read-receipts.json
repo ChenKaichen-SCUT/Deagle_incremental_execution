@@ -1,0 +1,57 @@
+{
+  "fib_updates_8": {
+    "audit_archive": "accepted/fib_updates_8/compact-audit/native/proof.bin",
+    "audit_sha256": "9371ee472b864625fb130adb53aca96561114d7fb837ee94bae98289443fd038",
+    "reference_tables": {
+      "inputs42.tsv": "0feed11f9bb73236dee973e24b2fe4890196ef25b6a073ff69a29156d705770d",
+      "facts42.tsv": "c8498589cb92040f86371f7b4b0003f557ca0a7e2778f2d05ac693b1e91e3385",
+      "catalog42.tsv": "b3a48386fd68b579d7c06d09579f93b4cd1a22d987787793ed6c06fe131e731e"
+    },
+    "masks_sha256": "be3fa4d787337f60c5adec7608b738504402d3989a8c70667b7d57dfeecd550c",
+    "mapped_airline_examples": []
+  },
+  "circular-buffer": {
+    "audit_archive": "accepted/circular-buffer/compact-audit/native/proof.bin",
+    "audit_sha256": "bc245a96e88e9b35ca8d6ae4921d61bb413ef3b7267087423eea1d71b5f8b1df",
+    "reference_tables": {
+      "inputs42.tsv": "dfc3781f830521f60b2931cc64d61618eb6109041e5b07c2f467b1b3df6e3f19",
+      "facts42.tsv": "746ceb85ea3e9cc0c8cf91e2748267c7d41a3c156d3ef926facf8fdc27939a18",
+      "catalog42.tsv": "9321c3276f93a1aacae4cc67d14adf52c026fd7922d0fcc00fe5da9bd58ef220"
+    },
+    "masks_sha256": "7bea21ec78b2e8a6b8aa4601d724933641db401d3b28615a8607a0bbbf5996e2",
+    "mapped_airline_examples": []
+  },
+  "airline_reservations_6": {
+    "audit_archive": "accepted/airline_reservations_6/compact-audit/native/proof.bin",
+    "audit_sha256": "196f5fbda91aa4003ce4441078469212425b78be4b7eb22a1cf28455e001982a",
+    "reference_tables": {
+      "inputs42.tsv": "a7fe1fafb99a8f57f607de0eeedb122ad653fd174eb31a2ecc05fb631dfc5a64",
+      "facts42.tsv": "337d48f26bfc0c77797105e41553cebc4b6b5c85257062f763f5a5991202ed83",
+      "catalog42.tsv": "8391214178d610c825e5dc39fc7bd99a350a1ef66077b8d69b846a183fb1ef98"
+    },
+    "masks_sha256": "fa4bf6ea9e8b4eddeb54fba223304c3182797f0e0212a15a09609b607a7def48",
+    "mapped_airline_examples": [
+      {
+        "ordinal": 203,
+        "loss_mask": 5,
+        "category": "uncertified_only"
+      },
+      {
+        "ordinal": 553,
+        "loss_mask": 13,
+        "category": "both"
+      }
+    ]
+  },
+  "fib-snapshot-11": {
+    "audit_archive": "accepted/fib-snapshot-11/compact-audit/native/proof.bin",
+    "audit_sha256": "d8b50f4d09e9e8d1e8aaa5d31075bfa1140f84be9952d907d28dc82dd84ddeae",
+    "reference_tables": {
+      "inputs42.tsv": "c8d640b1dba4a0359ddb428a3dc42f68efd4a7dbd5836f5aea8dddb1f8fb8f9b",
+      "facts42.tsv": "712f45fb44d965b3571867d9ba43db18021941e30edb9f870caaa04eae40513e",
+      "catalog42.tsv": "1741105ac2bd7bc1f1e8aa01bb8416dc0ba58866328090e49c21e522fb7e3a39"
+    },
+    "masks_sha256": "1c446018e81fc3d3ef255a82838576c95786f6fa47da94ea7b45e0424fa11843",
+    "mapped_airline_examples": []
+  }
+}

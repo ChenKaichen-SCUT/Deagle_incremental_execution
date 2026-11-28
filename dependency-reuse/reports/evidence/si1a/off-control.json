@@ -1,0 +1,98 @@
+{
+  "release": {
+    "binary_sha256": "91a531d0c311f63de4a18f0aca443399ca7c817bfaf3bdcf5a6adfc3c299fc0a",
+    "stdout_sha256": "9d336827a725d58dbec2ef6f1680482a78dafa2b0c649b256f60cdb9f2b28f70",
+    "exit_code": 10,
+    "input_sha256": {
+      "worker_violation.c": "cee552cd63d7b6e0757417afad2351a116d6987bbff51a2a3e5dbfd501816332"
+    },
+    "result": {
+      "properties": [
+        {
+          "description": "assertion flag == 0",
+          "property": "worker.assertion.1",
+          "sourceLocation": {
+            "file": "worker_violation.c",
+            "function": "worker",
+            "line": "10",
+            "workingDirectory": "@WORK@"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {},
+      "unwinding_stop_or_warning": [],
+      "trace_step_counts": {
+        "worker.assertion.1": 66
+      },
+      "search": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is SATISFIABLE",
+          "reported_variables": 623,
+          "live_clauses": 1131,
+          "native_cumulative": {
+            "sat_conflicts": 0,
+            "decisions": 140,
+            "sat_propagations": 624,
+            "theory_propagations": 3,
+            "theory_cycle_conflicts": 0,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          }
+        }
+      ]
+    }
+  },
+  "probe_off": {
+    "binary_sha256": "d7cb3a91fa67948c05625d856577e627fb81f631f02d9068f649cda13de11ec0",
+    "stdout_sha256": "dacb24902a7a588f452d6fae1f2fb80a1247baa49279004c63376aa4509554a6",
+    "exit_code": 10,
+    "input_sha256": {
+      "worker_violation.c": "cee552cd63d7b6e0757417afad2351a116d6987bbff51a2a3e5dbfd501816332"
+    },
+    "result": {
+      "properties": [
+        {
+          "description": "assertion flag == 0",
+          "property": "worker.assertion.1",
+          "sourceLocation": {
+            "file": "worker_violation.c",
+            "function": "worker",
+            "line": "10",
+            "workingDirectory": "@WORK@"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {},
+      "unwinding_stop_or_warning": [],
+      "trace_step_counts": {
+        "worker.assertion.1": 66
+      },
+      "search": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is SATISFIABLE",
+          "reported_variables": 623,
+          "live_clauses": 1131,
+          "native_cumulative": {
+            "sat_conflicts": 0,
+            "decisions": 140,
+            "sat_propagations": 624,
+            "theory_propagations": 3,
+            "theory_cycle_conflicts": 0,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          }
+        }
+      ]
+    }
+  }
+}
