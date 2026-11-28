@@ -1,0 +1,9 @@
+{
+  "baseline": "ae7295a885448e928c51ab8ffd387aa9629fca1e",
+  "order": ["fib_updates_8", "airline_reservations_6", "fib-snapshot-11", "circular-buffer"],
+  "comparison": "Use the median of frozen D4.3-E unmodified stock P1 full wall times on the same WSL machine. Also record a contemporary stock cross-check.",
+  "warning": "Flag a boundary at or above half the reference P1 wall time (within a factor of two), a frozen resource limit, or repeated barrier rebuilds without ordinary search. Report both raw times and ratios. Stop expansion of full searches at the first warning.",
+  "boundary_work": "One sequential P0/P1 session per case, no ordinary branch, no inferred SAT. Time assumptions processing, joint fixpoint and rollback, excluding input installation and assumption vector construction.",
+  "selectors": "One per distinct canonical nontrivial clause in its scope plus query and epoch. Order: epoch controls by first registration, query controls by first registration, clause selectors by first registration, native assumptions in input order.",
+  "search": "Only after small correctness controls and boundary cost gate. No parameter search."
+}

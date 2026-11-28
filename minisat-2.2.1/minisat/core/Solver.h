@@ -28,6 +28,10 @@ OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWA
 #include "../../minisat/core/SolverTypes.h"
 
 #include <string>
+#ifdef DEAGLE_PI1
+#include "EpochSession.h"
+#endif
+
 
 namespace Minisat {
 
@@ -36,6 +40,10 @@ namespace Minisat {
 
 class Solver {
 public:
+#ifdef DEAGLE_PI1
+    NativeLedger *piLedger = nullptr;
+#endif
+
 
     // Constructor/Destructor:
     //

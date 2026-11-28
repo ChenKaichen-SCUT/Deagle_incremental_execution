@@ -2,6 +2,9 @@
 
 #include "ClosureSolver.h"
 #include "GraphTypes.h"
+#ifdef DEAGLE_PI1
+#include <atomic>
+#endif
 
 #include "../../minisat/mtl/Vec.h"
 #include "../../minisat/mtl/Heap.h"
@@ -22,7 +25,11 @@ inline bool oc_reasonable(edge_kindt kind) //for initially existing edges
 
 ClosureSolver::ClosureSolver()
 {
-    Solver();
+    // C++ has already constructed the native Solver base.
+#ifdef DEAGLE_PI1
+    static std::atomic<uint64_t> born(0);
+    instanceSerial = ++born;
+#endif
 }
 
 void ClosureSolver::init()
@@ -43,6 +50,10 @@ void ClosureSolver::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt
 
 void ClosureSolver::set_graph()
 {
+#ifdef DEAGLE_PI1
+    closure &graph = work ? *work : this->graph;
+#endif
+
     oc_edge_tablet race_table;
     oc_edge_tablet apo_table;
     oc_edge_tablet po_table;
@@ -95,6 +106,10 @@ void ClosureSolver::set_graph()
 
         if(graph.add_guard_literal(guard_literal, u))
         {
+#ifdef DEAGLE_PI1
+            if (image) { initialCycle = true; return; }
+#endif
+
             std::cout << "WARNING: find cycle during set_graph\n";
             ok = false;
         }
@@ -146,6 +161,10 @@ void ClosureSolver::set_graph()
 
         if(graph.activate_edge(u, v, OC_PO, closure_empty_reason))
         {
+#ifdef DEAGLE_PI1
+            if (image) { initialCycle = true; return; }
+#endif
+
             std::cout << "WARNING: Find cycle during set_graph\n";
             ok = false;
         }
@@ -176,6 +195,10 @@ void ClosureSolver::set_graph()
     if(OC_VERBOSITY >= 1)
         std::cout << "apply literal assignment after setting graph\n";
 
+
+#ifdef DEAGLE_PI1
+    if (!image)
+#endif
     apply_literal_assignment();
 
     //sort atomic_items by write and read
@@ -225,6 +248,10 @@ lbool ClosureSolver::search(int nof_conflicts)
 
     //initialize nodes
 
+
+#ifdef DEAGLE_PI1
+    if (!image)
+#endif
     if(graph.use_available_info())
     {
         std::cout << "WARNING: use_available_info find cycle at the very start\n";
@@ -236,17 +263,42 @@ lbool ClosureSolver::search(int nof_conflicts)
         if (confl != CRef_Undef){
             // CONFLICT
             conflicts++; conflictC++;
+
+#ifdef DEAGLE_PI1
+            if (image) {
+                int top = 0;
+                for (int i=0; i<ca[confl].size(); ++i) top = std::max(top, level(var(ca[confl][i])));
+                if (top < decisionLevel()) { ++meter.delayed_conflicts; cancelUntil(top); }
+                piLedger->mixed = (confl == temporary);
+            }
+#endif
             if (decisionLevel() == 0) return l_False;
 
             learnt_clause.clear();
             analyze(confl, learnt_clause, backtrack_level);
 
+
+#ifdef DEAGLE_PI1
+            if (image) releaseTemporary();
+#endif
             cancelUntil(backtrack_level);
 
             if (learnt_clause.size() == 1){
+
+#ifdef DEAGLE_PI1
+                if (image) {
+                    piLedger->born(CRef_Undef, piLedger->mixed ? ClauseFamily::mixed : ClauseFamily::boolean, var(learnt_clause[0]));
+                    piLedger->root_theory.resize(nVars(), 0);
+                    piLedger->root_theory[var(learnt_clause[0])] = piLedger->mixed;
+                }
+#endif
                 uncheckedEnqueue(learnt_clause[0]);
             }else{
                 CRef cr = ca.alloc(learnt_clause, true);
+
+#ifdef DEAGLE_PI1
+                if (image) piLedger->born(cr, piLedger->mixed ? ClauseFamily::mixed : ClauseFamily::boolean);
+#endif
                 learnts.push(cr);
                 attachClause(cr);
                 claBumpActivity(ca[cr]);
@@ -288,9 +340,16 @@ lbool ClosureSolver::search(int nof_conflicts)
             while (decisionLevel() < assumptions.size()){
                 // Perform user provided assumption:
                 Lit p = assumptions[decisionLevel()];
+#ifdef DEAGLE_PI1
+                if (image) { ++meter.processed; meter.prefix = std::max(meter.prefix, uint64_t(decisionLevel()+1)); }
+#endif
+
                 if (value(p) == l_True){
                     // Dummy decision level:
                     newDecisionLevel();
+#ifdef DEAGLE_PI1
+                    if (image) { ++meter.empty; if (!work && decisionLevel() == barrier) break; }
+#endif
                 }else if (value(p) == l_False){
                     analyzeFinal(~p, conflict);
                     return l_False;
@@ -300,12 +359,20 @@ lbool ClosureSolver::search(int nof_conflicts)
                 }
             }
 
+
+#ifdef DEAGLE_PI1
+            if (image && !work && decisionLevel() >= barrier && next == lit_Undef) continue;
+#endif
             if (next == lit_Undef){
                 // New variable decision:
                 decisions++;
                 next = pickBranchLit();
 
                 if (next == lit_Undef) {
+
+#ifdef DEAGLE_PI1
+                    if (image) installCo(); else
+#endif
                     addMissingCoClauses();
                     next = pickBranchLit();
                     if(next == lit_Undef) {
@@ -376,22 +443,44 @@ lbool ClosureSolver::solve_()
         model.growTo(nVars());
         for (int i = 0; i < nVars(); i++) model[i] = value(i);
 
+
+#ifdef DEAGLE_PI1
+        if (image) { work->final_check(); } else
+#endif
         graph.final_check();
-        graph.show_rf();
-        graph.show_model();
+
+#ifdef DEAGLE_PI1
+        if (!image)
+#endif
+        { graph.show_rf(); graph.show_model(); }
     }
     else if (status == l_False && conflict.size() == 0)
         ok = false;
 
+
+#ifdef DEAGLE_PI1
+    if (!image) {
+#endif
     std::cout << "ClosureSolver finishes with " << conflicts << " conflicts, " << decisions << " decisions, and " << propagations << " propagations. " << theory_propagation << " theory propagations and " << conflict_cycle << " cycles included.\n";
     std::cout << "Attempts to add co clauses: " << attempt_adding_co << ". Added co clauses: " << added_co_clauses << ". Total co pairs: " << graph.co_pairs.size() << ".\n";
 
+
+#ifdef DEAGLE_PI1
+    }
+    if (image) {
+        releaseTemporary();const double t=epochClock();cancelUntil(0);meter.rollback+=epochClock()-t;
+    } else
+#endif
     cancelUntil(0);
     return status;
 }
 
 CRef ClosureSolver::propagate()
 {
+#ifdef DEAGLE_PI1
+    if (image) return epochPropagate();
+#endif
+
     literals_to_assign.clear();
     assigned_literals.clear();
 
@@ -567,6 +656,24 @@ void ClosureSolver::cancelUntil(int level)
         trail_lim.shrink(trail_lim.size() - level);
 
         //Our new operation
+
+#ifdef DEAGLE_PI1
+        if (image) {
+            // A cycle may interrupt native Closure after an earlier callback has queued a unit.
+            // No pending consequence of the abandoned trail may survive this rollback.
+            meter.discarded_queued += literals_to_assign.size();
+            literals_to_assign.clear();
+            assigned_literals.clear();
+            queuedSite.clear();
+            if (work) {
+                work->triplets_to_check.clear();
+                meter.pops += workDepth - level;
+                if (level < workFloor) { meter.pops += level; dropGraph(); }
+                else { work->pop_scope(level); workDepth = level; }
+            }
+            cursor = std::min(cursor, trail.size());
+        } else
+#endif
         graph.pop_scope(level);
     }
 }
@@ -574,6 +681,14 @@ void ClosureSolver::cancelUntil(int level)
 void ClosureSolver::newDecisionLevel()
 {
     trail_lim.push(trail.size());
+
+#ifdef DEAGLE_PI1
+    if (image) {
+        ++meter.frames;
+        meter.max_level = std::max(meter.max_level, uint64_t(decisionLevel()));
+        if (work) { work->push_scope(); ++workDepth; ++meter.pushes; }
+    } else
+#endif
     graph.push_scope();
 }
 
@@ -590,12 +705,20 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
     do{
         assert(confl != CRef_Undef); // (otherwise should be UIP)
         Clause& c = ca[confl];
+#ifdef DEAGLE_PI1
+        if (image) piLedger->use(confl, NativeUse::analysis);
+#endif
+
 
         if (c.learnt())
             claBumpActivity(c);
 
         for (int j = (p == lit_Undef) ? 0 : 1; j < c.size(); j++){
             Lit q = c[j];
+#ifdef DEAGLE_PI1
+            if (image && level(var(q)) == 0) piLedger->root(var(q), NativeUse::analysis);
+#endif
+
 
             if (!seen[var(q)] && level(var(q)) > 0){
                 varBumpActivity(var(q));

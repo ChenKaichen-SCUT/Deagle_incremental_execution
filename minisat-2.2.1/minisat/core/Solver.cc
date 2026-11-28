@@ -191,6 +191,10 @@ void Solver::detachClause(CRef cr, bool strict) {
 
 
 void Solver::removeClause(CRef cr) {
+#ifdef DEAGLE_PI1
+    if (piLedger) { piLedger->resident.erase(cr); piLedger->co_axioms.erase(cr); }
+#endif
+
     Clause& c = ca[cr];
     detachClause(cr);
     // Don't leave pointers to free'd memory!
@@ -373,14 +377,25 @@ void Solver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
 // visiting literals at levels that cannot be removed later.
 bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
 {
+
+#ifdef DEAGLE_PI1
+    std::vector<CRef> visited; std::vector<Var> roots;
+#endif
     analyze_stack.clear(); analyze_stack.push(p);
     int top = analyze_toclear.size();
     while (analyze_stack.size() > 0){
         assert(reason(var(analyze_stack.last())) != CRef_Undef);
+
+#ifdef DEAGLE_PI1
+        if (piLedger) visited.push_back(reason(var(analyze_stack.last())));
+#endif
         Clause& c = ca[reason(var(analyze_stack.last()))]; analyze_stack.pop();
 
         for (int i = 1; i < c.size(); i++){
             Lit p  = c[i];
+#ifdef DEAGLE_PI1
+            if (piLedger && level(var(p)) == 0) roots.push_back(var(p));
+#endif
             if (!seen[var(p)] && level(var(p)) > 0){
                 if (reason(var(p)) != CRef_Undef && (abstractLevel(var(p)) & abstract_levels) != 0){
                     seen[var(p)] = 1;
@@ -395,6 +410,13 @@ bool Solver::litRedundant(Lit p, uint32_t abstract_levels)
             }
         }
     }
+
+#ifdef DEAGLE_PI1
+    if (piLedger) {
+        for (auto cr : visited) piLedger->use(cr, NativeUse::minimization);
+        for (auto v : roots) piLedger->root(v, NativeUse::minimization);
+    }
+#endif
 
     return true;
 }
@@ -426,6 +448,10 @@ void Solver::analyzeFinal(Lit p, vec<Lit>& out_conflict)
                 assert(level(x) > 0);
                 out_conflict.push(~trail[i]);
             }else{
+
+#ifdef DEAGLE_PI1
+                if (piLedger) piLedger->use(reason(x), NativeUse::analysis);
+#endif
                 Clause& c = ca[reason(x)];
                 for (int j = 1; j < c.size(); j++)
                     if (level(var(c[j])) > 0)
@@ -443,6 +469,20 @@ void Solver::analyzeFinal(Lit p, vec<Lit>& out_conflict)
 void Solver::uncheckedEnqueue(Lit p, CRef from)
 {
     assert(value(p) == l_Undef);
+
+#ifdef DEAGLE_PI1
+    if (piLedger && decisionLevel() == 0) {
+        auto &flags = piLedger->root_theory;
+        flags.resize(nVars(), 0);
+        if (from != CRef_Undef) {
+            auto it = piLedger->resident.find(from);
+            bool theory = piLedger->co_axioms.count(from) || (it != piLedger->resident.end() && piLedger->births[it->second].family != ClauseFamily::boolean);
+            const Clause &c = ca[from];
+            for (int i = 1; i < c.size(); ++i) theory |= flags[var(c[i])] != 0;
+            flags[var(p)] = theory;
+        }
+    }
+#endif
     assigns[var(p)] = lbool(!sign(p));
     vardata[var(p)] = mkVarData(from, decisionLevel());
     trail.push_(p);
@@ -506,13 +546,21 @@ CRef Solver::propagate()
             // Did not find watch -- clause is unit under assignment:
             *j++ = w;
             if (value(first) == l_False){
+
+#ifdef DEAGLE_PI1
+                if (piLedger) piLedger->use(cr, NativeUse::conflict);
+#endif
                 confl = cr;
                 qhead = trail.size();
                 // Copy the remaining watches:
                 while (i < end)
                     *j++ = *i++;
-            }else
+            }else {
+#ifdef DEAGLE_PI1
+                if (piLedger) piLedger->use(cr, NativeUse::watcher);
+#endif
                 uncheckedEnqueue(first, cr);
+            }
 
         NextClause:;
         }
@@ -541,6 +589,10 @@ struct reduceDB_lt {
 };
 void Solver::reduceDB()
 {
+#ifdef DEAGLE_PI1
+    if (piLedger) ++piLedger->reductions;
+#endif
+
     int     i, j;
     double  extra_lim = cla_inc / learnts.size();    // Remove any clause below this activity
 
@@ -938,6 +990,10 @@ void Solver::garbageCollect()
     ClauseAllocator to(ca.size() - ca.wasted()); 
 
     relocAll(to);
+#ifdef DEAGLE_PI1
+    if (piLedger) piLedger->relocate(ca);
+#endif
+
     if (verbosity >= 2)
         printf("|  Garbage collection:   %12d bytes => %12d bytes             |\n", 
                ca.size()*ClauseAllocator::Unit_Size, to.size()*ClauseAllocator::Unit_Size);

@@ -1,9 +1,11 @@
 #ifndef DEAGLE_PI_SESSION_CONTRACT_H
 #define DEAGLE_PI_SESSION_CONTRACT_H
 
-// PI-0 interface specification. No backend, wire codec or production call sites in this stage.
+// Native PI-1 backend. Transactions own all local model data.
 #include <cstdint>
 #include <memory>
+#include <mutex>
+#include <ostream>
 #include <string>
 #include <utility>
 #include <vector>
@@ -84,6 +86,11 @@ struct ModelTransaction
     std::vector<AtomDescription> atoms;
     std::vector<InputOccurrence> inputs;
     TheorySpec graph;
+    struct Match { LocalVar previous; LocalLit positive_image; std::string certificate; };
+    // Receipts supplied by the authenticated model reader. Pair certificates name the actual predecessor.
+    std::string model_receipt, predecessor_receipt;
+    std::vector<Match> certified_matches; // Arrive with the new transaction only.
+    std::vector<std::pair<EventId,EventId>> certified_events;
     QueryDescriptor first_query; // Sealed after eager conversion at the actual SAT boundary.
 };
 
@@ -118,10 +125,29 @@ public:
     VersionId append_version(ModelTransaction transaction);
     QueryResult solve_query(VersionId version, QueryId query);
     QueryId append_query(VersionId version, QueryDescriptor descriptor);
+    struct Statistics {
+        std::uint64_t solver_construct_count = 0, old_learnt_export_count = 0, old_learnt_import_count = 0, per_clause_reproof_count = 0;
+        std::uint64_t global_vars = 0, program_vars = 0, selectors = 0, co_vars = 0, reused = 0, fresh = 0, rejected_ports = 0;
+        std::uint64_t occurrences = 0, unique_inputs = 0, skipped = 0, graph_generations = 0;
+        double install_seconds = 0, assumption_build_seconds = 0;
+        std::string receipt; // Per-query native counters and resident/hit populations (JSON).
+    };
     SessionState state() const;
+    Statistics statistics() const;
+    void close();
+    void probe_boundary(VersionId version, QueryId query); // No ordinary decisions or SAT result.
+    void set_audit_output(std::ostream *owned_by_caller);
+    void set_assumption_output(std::ostream *owned_by_caller);
+    void first_restart_for_test(int conflicts);
+    void collect_at_boundary();
+    void interrupt_next_query();
+    void clear_interrupt();
 private:
     struct Backend; // Sole owner of one ClosureSolver. Owns a replaceable Closure runtime generation.
     std::unique_ptr<Backend> backend;
+    Backend &live() const;
+    mutable std::mutex access;
+    Statistics final_statistics;
 };
 }
 #endif

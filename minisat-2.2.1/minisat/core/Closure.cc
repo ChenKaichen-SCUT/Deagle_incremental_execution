@@ -19,6 +19,12 @@ const int OC_VERBOSITY = 0;
 
 #define neg(lv) {for(auto& l : lv) l = ~l;}
 
+#ifdef DEAGLE_PI1
+#define EMIT_CLOSURE_REASON(l,r) solver->assignGenerated(l,r,__LINE__)
+#else
+#define EMIT_CLOSURE_REASON(l,r) solver->assign_literal(l,r)
+#endif
+
 #define PROPAGATE_INTENSITY 1 //-1: nothing; 0: only rf; 1: and ws, fr
 
 using namespace Minisat;
@@ -305,7 +311,7 @@ void closure::check_trinary_pattern()
             push_need(unit_lv, guard_lit);
             neg(unit_lv);
 
-            solver->assign_literal(~guard_lit, unit_lv);
+            EMIT_CLOSURE_REASON(~guard_lit, unit_lv);
 
             if(OC_VERBOSITY >= 1)
                 std::cout << "using pattern, propagate guard " << w2 << " false\n";
@@ -318,7 +324,7 @@ void closure::check_trinary_pattern()
             push_need(unit_lv, guard_lit);
             neg(unit_lv);
 
-            solver->assign_literal(~rf_lit, unit_lv);
+            EMIT_CLOSURE_REASON(~rf_lit, unit_lv);
 
             if(OC_VERBOSITY >= 1)
                 std::cout << "using pattern, propagate rf " << w1 << " " << r << " false\n";
@@ -366,7 +372,7 @@ bool closure::activate_edge(int vi, int wi, edge_kindt kind, literal_vector& rea
                 push_need(unit_lv, guard_lit);
                 neg(unit_lv);
 
-                solver->assign_literal(~guard_lit, unit_lv);
+                EMIT_CLOSURE_REASON(~guard_lit, unit_lv);
 
                 if(OC_VERBOSITY >= 1)
                     std::cout << "revisiting pattern, propagate guard " << w2 << " false\n";
@@ -567,7 +573,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                     if(OC_VERBOSITY >= 1)
                         std::cout << "set race" << from << " " << to << " false\n";
 
-                    solver->assign_literal(~race_lit, conflict_reason);
+                    EMIT_CLOSURE_REASON(~race_lit, conflict_reason);
                 }
                 else
                 {
@@ -633,7 +639,7 @@ bool closure::activate_directed_edge(closure_edget &edge, bool need_closure)
                     if(OC_VERBOSITY >= 1)
                         std::cout << "before preventive propagation, set rf" << to << " " << from << " false\n";
 
-                    solver->assign_literal(~rf_lit_cand, unit_lv);
+                    EMIT_CLOSURE_REASON(~rf_lit_cand, unit_lv);
                 }
             }
 #endif // (PROPAGATE_INTENSITY >= 0)
@@ -1031,7 +1037,7 @@ bool closure::light_guard(int u)
                 push_need(unit_lv, guard_lit);
                 neg(unit_lv);
 
-                solver->assign_literal(~rf_lit, unit_lv);
+                EMIT_CLOSURE_REASON(~rf_lit, unit_lv);
 
                 if(OC_VERBOSITY >= 1)
                     std::cout << "revisiting pattern, propagate rf " << w1 << " " << r << " false\n";
@@ -1279,6 +1285,9 @@ std::vector<std::pair<int, int>> closure::find_incomplete_co_pairs()
 
 void closure::final_check()
 {
+#ifdef DEAGLE_PI1
+    auto &write_order = solver->sessionWrites(::write_order);
+#endif
     // get model
     std::vector<simple_nodet> simple_nodes;
     for(int i = 0; i < int(nodes.size()); i++)

@@ -4,6 +4,10 @@
 #define CLOSURESOLVER_H
 
 #include <map>
+#ifdef DEAGLE_PI1
+#include <memory>
+#endif
+
 
 #include "../../minisat/mtl/Queue.h"
 #include "../../minisat/core/Solver.h"
@@ -23,6 +27,46 @@ namespace Minisat
 class ClosureSolver : public Solver
 {
     closure graph;
+#ifdef DEAGLE_PI1
+    std::unique_ptr<closure> work;
+    uint64_t instanceSerial = 0;
+    EpochImage *image = nullptr;
+    int barrier = 0, cursor = 0, workFloor = 0, workDepth = 0;
+    bool initialCycle = false, probing = false;
+    CRef temporary = CRef_Undef;
+    std::map<int,int> queuedSite;
+    int currentSite=0;
+public:
+    template<class Range> void assignGenerated(Lit p, Range &reason, int site) {
+        if(image && assigned_literals.count(p)==0) queuedSite[p.x]=site;
+        assign_literal(p,reason);
+    }
+private:
+    EpochMeter meter;
+    std::ostream *reasonAudit = nullptr;
+    std::map<std::string,int> ownedOrder;
+    std::vector<std::string> ownedWrites;
+    CRef epochPropagate();
+    CRef materialize(Lit conclusion, const literal_set& conditions, bool cycle);
+    void releaseTemporary();
+    void startGraph();
+    void dropGraph();
+    void installCo();
+public:
+    uint64_t nativeInstance() const { return instanceSerial; }
+    void epochContext(EpochImage &spec, int barrierFrames, unsigned version, NativeLedger &ledger);
+    lbool runEpoch(const vec<Lit> &args, bool probe);
+    const EpochMeter& epochMetrics() const { return meter; }
+    const std::map<std::string,int>& resultOrder() const { return ownedOrder; }
+    std::vector<std::string> &sessionWrites(std::vector<std::string> &stock) { return image ? ownedWrites : stock; }
+    void auditTo(std::ostream *stream) { reasonAudit = stream; }
+    int currentLevel() const { return decisionLevel(); }
+    void collectForTest() { reduceDB(); garbageCollect(); }
+    void classifyResident(const std::set<int> &off);
+    std::vector<Var> allocatedCO;
+private:
+#endif
+
 
     oc_edge_tablet oc_edge_table;
     oc_guard_mapt oc_guard_map;
