@@ -1,0 +1,8 @@
+{
+  "format": "SI1B-value-diagnostic-v1",
+  "plan_sha256": "a9cfc78a2a33cf4defa5e705577a8dc1eccc6244e237c10c3c9c6296c3376261",
+  "seals": {
+    "fib-snapshot-11": "86ee7def870dfa6e3cb648dd2e924de7ab8cc307d9161d1a55d1e534b6f1a466",
+    "fib_updates_8": "74d40a9012ddfdda12767927faeaec559c8f4f2f10245a8292ff321ab97eb18e"
+  }
+}

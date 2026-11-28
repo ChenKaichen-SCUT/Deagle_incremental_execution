@@ -1,0 +1,62 @@
+{
+  "ABI_flags": {
+    "published": false,
+    "rejection": "live native configuration or binary mismatch"
+  },
+  "B_content": {
+    "published": false,
+    "rejection": "live P1 model differs from admission model"
+  },
+  "Guard_binding": {
+    "published": false,
+    "rejection": "live P1 model differs from admission model"
+  },
+  "Q_content": {
+    "published": false,
+    "rejection": "live P1 model differs from admission model"
+  },
+  "RF_binding": {
+    "published": false,
+    "rejection": "live P1 model differs from admission model"
+  },
+  "batch_literal": {
+    "published": false,
+    "rejection": "fixed batch checksum"
+  },
+  "batch_truncated": {
+    "published": false,
+    "rejection": "fixed batch checksum"
+  },
+  "missing_READY": {
+    "published": false,
+    "rejection": "incomplete native model"
+  },
+  "native_gate": {
+    "published": false,
+    "rejection": "live P1 model differs from admission model"
+  },
+  "positive": {
+    "published": true,
+    "rejection": null
+  },
+  "seal_tampered": {
+    "published": false,
+    "rejection": "untrusted diagnostic seal"
+  },
+  "source": {
+    "published": false,
+    "rejection": "live source checksum"
+  },
+  "variable_count": {
+    "published": false,
+    "rejection": "live P1 model differs from admission model"
+  },
+  "wrong_ELF": {
+    "published": false,
+    "rejection": "live native configuration or binary mismatch"
+  },
+  "wrong_arm": {
+    "published": false,
+    "rejection": "diagnostic input only"
+  }
+}

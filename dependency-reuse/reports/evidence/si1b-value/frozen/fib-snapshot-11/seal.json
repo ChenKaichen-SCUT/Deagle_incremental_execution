@@ -1,0 +1,121 @@
+{
+  "A_selected_outside_new_first512": [
+    54669,
+    82921,
+    82922,
+    99037,
+    99038,
+    100970
+  ],
+  "P0_compact": "44a4577d512e64e094da9aa8e9b1b2edd0f677e9cb331c69788fb276ddc100cb",
+  "P0_full_audit": "d8b50f4d09e9e8d1e8aaa5d31075bfa1140f84be9952d907d28dc82dd84ddeae",
+  "P0_solver_calls": 0,
+  "argv": [
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "25",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "batches": {
+    "A": {
+      "eligible": 16,
+      "mu": "A",
+      "selected": 16,
+      "selected_family": {
+        "B": 16
+      },
+      "sha256": "c108e64e204a5df58d4370111190c81f8b0caf3ffbb43da264f34fb38d63da7d",
+      "withheld": 0
+    },
+    "new": {
+      "eligible": 1660,
+      "mu": "C",
+      "selected": 512,
+      "selected_family": {
+        "B": 512
+      },
+      "sha256": "a41a3280f8f36c2f9f0cfcb8aa2b8281d0488d50311de3ddb9bd31eef4a88117",
+      "withheld": 1148
+    }
+  },
+  "case": "fib-snapshot-11",
+  "format": "SI1B-value-diagnostic-v1",
+  "inputs": {
+    "program.i": "c0e681ed69012b0e000ff579cf0a3e27385ce7ab4c28525dd10d6a37e7685181"
+  },
+  "limits": {
+    "memory_bytes": 7516192768,
+    "timeout_seconds": 660
+  },
+  "model": {
+    "canonical": "08829eeb62f2cb1adcd7ac2e22987ee4cfaebf92af6a374dbcb3c4abc4f749c2",
+    "counts": {
+      "boundary": 1,
+      "gates": 175377,
+      "installed_graph": 8174,
+      "named_ports": 29814,
+      "permanent": 1001473,
+      "query_inputs": 722
+    },
+    "nvars": 200370,
+    "query": [],
+    "streams": {
+      "boundary": "d5a947b8eaaf25286f9eb1b0a7f19a9165fbfadeacf408aa0fc392d73103c2aa",
+      "gates": "3cd8d83439bba2141cb6ff8b4d605b0f064a2026939130e8c430dae953a736a3",
+      "installed_graph": "6a4abd24df82744973c873c12a5a5bbdafb0204f565b4dceecb5bda9820e06ec",
+      "named_ports": "d0fe4bc276fae37d9d0a93f64cf013c0494560f46b6e7c6c4b4fa97e6c1a30ce",
+      "permanent": "b299280bdb06d010a0618b0f207c0c02e16760faa5d417338245b476d7e97c4c",
+      "query_inputs": "4745d253a4a6a3f055ae985de80a334a8a27ae3e825d02013f25083b735bce91"
+    }
+  },
+  "native_elf": "91a531d0c311f63de4a18f0aca443399ca7c817bfaf3bdcf5a6adfc3c299fc0a",
+  "new_selected_outside_A": 502,
+  "review_base": "85065a8729fe7547f56e7b55048a1222338d7ddf",
+  "review_births": "e5632877871918b3e8f301b6e197b754b50b1943a75a736e3f4ac12816a83d70",
+  "selected_birth_intersection": [
+    1,
+    672,
+    673,
+    674,
+    675,
+    1552,
+    1553,
+    9489,
+    9490,
+    9818
+  ],
+  "signed_maps": {
+    "A": {
+      "all_logical": 16,
+      "exact_union": 40,
+      "family": {
+        "B": 16
+      },
+      "mapped": 191450,
+      "negative_images": 0,
+      "pool_sha256": "c108e64e204a5df58d4370111190c81f8b0caf3ffbb43da264f34fb38d63da7d",
+      "reference_catalog_sha256": "1741105ac2bd7bc1f1e8aa01bb8416dc0ba58866328090e49c21e522fb7e3a39",
+      "signed_map_sha256": "553b92ae65a3b54574c2e024b4d76115548c1e8adec60471303702e7af372cc8"
+    },
+    "C": {
+      "all_logical": 1660,
+      "exact_union": 1722,
+      "family": {
+        "B": 1660
+      },
+      "mapped": 196314,
+      "negative_images": 0,
+      "pool_sha256": "d3cd5cfa82b9550b6af3b3aaf51cdc40ba5b7475e0e5d01961ffa37e84a7f755",
+      "reference_catalog_sha256": "bf623d2e808abb6ed30eba12005c8ee35875a562faab50a1ccc5dd3a491b7f9c",
+      "signed_map_sha256": "2c595330553212af398b84f05972c4a8ca6783db1d3f387d382d10a813b0b582"
+    }
+  }
+}

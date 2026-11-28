@@ -1,0 +1,55 @@
+{
+  "stage": "SI-1B-value",
+  "review_base": "85065a8729fe7547f56e7b55048a1222338d7ddf",
+  "cases": [
+    "fib_updates_8",
+    "fib-snapshot-11"
+  ],
+  "round_orders": [
+    [
+      "stock",
+      "cold",
+      "A",
+      "new"
+    ],
+    [
+      "A",
+      "new",
+      "stock",
+      "cold"
+    ],
+    [
+      "new",
+      "A",
+      "cold",
+      "stock"
+    ]
+  ],
+  "execution": "Round first, then case in listed order, then arm. Serial, CPU 0, fresh processes and work directories, frozen per-case inputs/flags/limits. No P0 solver. No concurrent offline audits. Retain failed attempts. No discretionary replacement, fourth round or selection changes.",
+  "knowledge": {
+    "fib_updates_8": {
+      "A": "A",
+      "new": "B",
+      "expected_compact": [
+        295,
+        389
+      ],
+      "require_B_C_identical": true
+    },
+    "fib-snapshot-11": {
+      "A": "A",
+      "new": "C",
+      "expected_compact": [
+        16,
+        1660
+      ],
+      "classification": "INCOMPLETE_UNWINDING"
+    }
+  },
+  "selection": "First 512 in native birth order, before any P1 result. Independently certify the entire logical pool. Compute intersections by ordinal and compare signed images explicitly.",
+  "cold": "All diagnostic arms authenticate the same case bundle, all A/New batch bytes, executable, P1 flags, source files, first-root model and native signed interface. Cold passes the New selected batch to ClauseImports in its native record-cold check-only mode. The A and New arms use native reuse mode.",
+  "clock": "Primary import-plus-search = native selected-batch read + native importAtRoot + sum of CDCL restart-loop search clocks. Include check-only read/import for cold. Also report narrow importAtRoot + search, root deltas and inclusive conflicts. A root-only exit has zero search if the search loop never entered. Report full worker process, setup, fresh process wall and peak RSS. Stock wall and counters come only from pristine stock. Six separate serial stock-clock companions after the 24 main samples provide stock search and restarts only after trajectory checks.",
+  "gate": "For fib_updates_8 separately against cold and A, median of the three paired fractions (baseline - new)/baseline on primary import-plus-search >= 0.05 and at least two strictly positive pairs, for both. No claim of end-to-end speedup. Historical case evaluated separately.",
+  "headroom": "For each comparison and round, signed headroom = baseline import-plus-search minus new import-plus-search. All extra P0 identity registration, I/O and P1 identity preparation share this single budget. Also show measured full diagnostic wall difference, prep differences, and end-to-end remaining margin against same-round pristine stock P1. No combining stock observer search with stock wall into a synthetic time.",
+  "controls": "Offline reject modified scope/input/clause, theory port, variable allocation, query boundary, incomplete/modified batch and incompatible flags before publication. No additional P1 search for controls."
+}
