@@ -29,6 +29,7 @@ for case in fib_updates_8 circular-buffer airline_reservations_6 fib-snapshot-11
     python3 "$scripts/pi1-real.py" "$repo" "$out/final/pi1" "$stock/src/cbmc/deagle_exe" "$out" solve "$case"
     python3 "$scripts/pi1-witness.py" "$repo" "$out" "$case"
 done
+python3 "$scripts/pi1-scope-check.py" "$out/owner/owner-probe" "$out" "$out/small-checks/scope-calls.json"
 python3 "$scripts/pi1-evidence.py" collect "$repo" "$out" "$out" "$out/small-checks" "$out/final/pi1" \
     "$out/bin/stock-control" "$out/evidence" "$source_sha"
 python3 "$scripts/pi1-evidence.py" verify "$out/evidence"

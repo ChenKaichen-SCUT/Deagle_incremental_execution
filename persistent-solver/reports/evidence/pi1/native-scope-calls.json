@@ -1,0 +1,94 @@
+{
+  "fib_updates_8": {
+    "native": [
+      {
+        "version": 1,
+        "push_calls": 50055,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 50055
+      },
+      {
+        "version": 2,
+        "push_calls": 63140,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 63140
+      }
+    ],
+    "raw": [
+      "SCOPE version=1 push_calls=50055 pop_calls=0 popped_frames=0 destroyed_frames=50055",
+      "SCOPE version=2 push_calls=63140 pop_calls=0 popped_frames=0 destroyed_frames=63140",
+      "OWNER closure=1 minisat=1 queries=2 same_this=1"
+    ]
+  },
+  "airline_reservations_6": {
+    "native": [
+      {
+        "version": 1,
+        "push_calls": 910715,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 910715
+      },
+      {
+        "version": 2,
+        "push_calls": 1195185,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 1195185
+      }
+    ],
+    "raw": [
+      "SCOPE version=1 push_calls=910715 pop_calls=0 popped_frames=0 destroyed_frames=910715",
+      "SCOPE version=2 push_calls=1195185 pop_calls=0 popped_frames=0 destroyed_frames=1195185",
+      "OWNER closure=1 minisat=1 queries=2 same_this=1"
+    ]
+  },
+  "fib-snapshot-11": {
+    "native": [
+      {
+        "version": 1,
+        "push_calls": 1002187,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 1002187
+      },
+      {
+        "version": 2,
+        "push_calls": 1944096,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 1944096
+      }
+    ],
+    "raw": [
+      "SCOPE version=1 push_calls=1002187 pop_calls=0 popped_frames=0 destroyed_frames=1002187",
+      "SCOPE version=2 push_calls=1944096 pop_calls=0 popped_frames=0 destroyed_frames=1944096",
+      "OWNER closure=1 minisat=1 queries=2 same_this=1"
+    ]
+  },
+  "circular-buffer": {
+    "native": [
+      {
+        "version": 1,
+        "push_calls": 1161969,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 1161969
+      },
+      {
+        "version": 2,
+        "push_calls": 2324675,
+        "pop_calls": 0,
+        "popped_frames": 0,
+        "destroyed_frames": 2324675
+      }
+    ],
+    "raw": [
+      "SCOPE version=1 push_calls=1161969 pop_calls=0 popped_frames=0 destroyed_frames=1161969",
+      "SCOPE version=2 push_calls=2324675 pop_calls=0 popped_frames=0 destroyed_frames=2324675",
+      "OWNER closure=1 minisat=1 queries=2 same_this=1"
+    ]
+  }
+}

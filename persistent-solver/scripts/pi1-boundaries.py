@@ -73,7 +73,18 @@ def run(binary,out):
         if kind=="cycle":assert native["delayed_conflicts"]==1
         else:assert native["rebuilds"]>=2 and native["theory_props"]>=1
         delayed[kind]=native
-    d=dict(statuses=statuses,rejections=rejects,allocator_faults_rejected=failures,delayed=delayed)
+    probes={}
+    for label,m in (("false_control",small.model(b=[[],[0],[2]])),
+                    ("graph_conflict",small.model(nodes=nodes,edges=[("po",0,1,-1),("po",1,0,-1)],b=[[0]]))):
+        f=out/(label+".txn");small.write(f,small.encode(m))
+        steps=out/(label+".protocol");steps.write_text(f"APPEND\t{f}\nPROBE\t1\n")
+        rr=subprocess.run([binary,steps],capture_output=True,text=True,timeout=10)
+        (out/(label+".output")).write_text(rr.stdout+rr.stderr)
+        row=small.parse(rr.stdout)[0];mtr=row["native"]
+        assert rr.returncode==0 and row["status"]=="DIAGNOSTIC" and mtr["decisions"]==0
+        assert mtr["boundary_status"] in ("BOUNDARY_FALSE_ASSUMPTION","BOUNDARY_CONFLICT") and mtr["prefix"]<mtr["assumptions"]
+        probes[label]={"checked":mtr["prefix"],"total":mtr["assumptions"],"status":mtr["boundary_status"]}
+    d=dict(statuses=statuses,rejections=rejects,allocator_faults_rejected=failures,delayed=delayed,partial_probes=probes)
     (out/"checks.json").write_text(json.dumps(d,indent=2)+"\n")
     return d
 

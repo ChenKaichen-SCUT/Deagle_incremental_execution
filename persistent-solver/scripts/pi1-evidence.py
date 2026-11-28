@@ -79,6 +79,7 @@ def archive(args):
                                 stock_witness_steps=parsed["trace_step_counts"],stock_wall_s=meta["wall"])
             cohort[case]=data;props[case]=pc
     save(dest/"runs.json",cohort);save(dest/"properties.json",props)
+    save(dest/"native-scope-calls.json",read(args.small/"scope-calls.json"))
     small_bundle(args.small,dest/"native-small.tar.gz")
     for name in ("staging-failure.log","nonunit-failure.log","debug-site.txt","fib-snapshot-11-solve.log"):
         p=dev/"raw"/name
@@ -106,7 +107,7 @@ def verify(dest):
     for k in assets:load(k)
     core={}
     with tarfile.open(dest/"native-small.tar.gz","r:gz") as tar:
-        require(tar.extractfile("owner.txt").read().strip()==b"OWNER closure=1 minisat=1 queries=2 same_this=1","native construction count")
+        require(tar.extractfile("owner.txt").read().splitlines()[-1]==b"OWNER closure=1 minisat=1 queries=2 same_this=1","native construction count")
         for name in ("small/small.json","exhaustive/checks.json","boundaries/checks.json"):
             core[name]=json.load(tar.extractfile(name))
     finite=core["small/small.json"]
@@ -116,6 +117,7 @@ def verify(dest):
     for name,entry in core["exhaustive/checks.json"].items():
         require(entry["actual"]==entry["expected"]==entry["stock"],"order enumeration "+name)
     cases={}
+    scope_calls=read(dest/"native-scope-calls.json")
     for case in REG["order"]:
         data=runs[case];cfg=PLAN["cases"][case];sid={}
         for mode in ("boundary","solve"):
@@ -134,6 +136,8 @@ def verify(dest):
                 require(m["pushes"]==m["pops"] and r["rss_kib"]*1024<cfg["limits"]["memory_bytes"],"resource/scope")
                 if mode=="boundary":
                     require(r["status"]=="DIAGNOSTIC" and m["decisions"]==0 and m["prefix"]<=n,"boundary diagnosis")
+                    direct=scope_calls[case]["native"][i]
+                    require(direct["push_calls"]==m["pushes"] and direct["popped_frames"]+direct["destroyed_frames"]==m["pops"],"scope calls versus released frames")
                 else:
                     require(m["solver_instance"]==raw[0]["native"]["solver_instance"],"solver identity changed")
                     require(r["properties"]==props[case][side]["persistent"],"property mismatch")
@@ -148,6 +152,7 @@ def verify(dest):
     result=dict(stage="PI-1",observed_native_constructors={"ClosureSolver":1,"Solver":1,"queries_on_same_object":2},small_sequences=len(finite),finite_versions=sum(len(v["statuses"]) for v in finite.values()),
         forced_port_valuations=sum(len(v["actual"]) for v in core["exhaustive/checks.json"].values()),
         transaction_rejections=core["boundaries/checks.json"]["rejections"],allocator_faults=core["boundaries/checks.json"]["allocator_faults_rejected"],
+        partial_boundary_prefixes=core["boundaries/checks.json"]["partial_probes"],
         late_conflict_normalizations=core["boundaries/checks.json"]["delayed"]["cycle"]["delayed_conflicts"],
         raw_entries=len(assets),unique_raw_objects=len({v["object"] for v in assets.values()}),cases=cases)
     print(json.dumps(result,ensure_ascii=False,indent=2))

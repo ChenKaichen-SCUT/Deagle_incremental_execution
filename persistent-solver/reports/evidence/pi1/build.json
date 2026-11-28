@@ -1,0 +1,45 @@
+{
+  "source_commit": "73a6cd7d365692e1f75e4855837c564866e0866e",
+  "baseline": "ae7295a885448e928c51ab8ffd387aa9629fca1e",
+  "stock": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "executable_sha256": "40dd96cc60a339798feec90381592927341206e493308735018d15551432f6e8",
+  "stock_control_sha256": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "os": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "cpu": [
+    0
+  ],
+  "native_source": "minisat-2.2.1/minisat/core",
+  "build_command": "bash persistent-solver/scripts/build-pi1.sh OUT",
+  "build_log": "40dd96cc60a339798feec90381592927341206e493308735018d15551432f6e8  /home/deagle/pi1-work/final/pi1\n",
+  "caps": {
+    "fib_updates_8": {
+      "memory_bytes": 21474836480,
+      "timeout_seconds": 300
+    },
+    "circular-buffer": {
+      "timeout_seconds": 660,
+      "memory_bytes": 7516192768
+    },
+    "airline_reservations_6": {
+      "memory_bytes": 21474836480,
+      "timeout_seconds": 300
+    },
+    "fib-snapshot-11": {
+      "timeout_seconds": 660,
+      "memory_bytes": 7516192768
+    }
+  },
+  "core_objects": {
+    "Closure.o": "c6db229829edc5bc685e33f3492b886469609381fdb43daaf7dc9b316c9a1231",
+    "ClosureSolver.o": "4df8ca4d588e52b302626604d3f1996ed0a2b9dc7ae432a05723ffff6ee22be1",
+    "ClosureTypes.o": "c37043a088a7efc7e6bf8e7350dd4536c1e20ebd3cf4e57ca1e2daae043b02ac",
+    "EpochSession.o": "dd93b8f5d870ca2004862ebc65a78910a3c4d7a70d3e256147ada0fb2f6ee674",
+    "GraphTypes.o": "cf9622ace7951a86fddea90bb430a2f4028b322fec3ec3eb1cab9cfad9ab3cc5",
+    "Options.o": "5068674e597bd8e71ad3658287d56eb402a378bbca3345f7c5736d367fb12036",
+    "Solver.o": "95ed36a875d71b607d87e48ddc4fa75ec45c63b99d3d9f1b97496ac15d4a22b8",
+    "System.o": "464281af1bb16b0f373560303a3598b5491fbb9404a0201271949d8f78449c9d",
+    "pi1-driver.o": "e1f1815c271a73a29e0b7c4b078b6a3dd7e12ae433b59c5291fcc51048a1a349",
+    "session.o": "912c5745b626f735febb93e0db49cd5a84017bfbd2d537becdb8f51403e3b3b6"
+  }
+}

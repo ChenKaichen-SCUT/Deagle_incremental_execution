@@ -1,0 +1,73 @@
+{
+  "stage": "PI-1",
+  "observed_native_constructors": {
+    "ClosureSolver": 1,
+    "Solver": 1,
+    "queries_on_same_object": 2
+  },
+  "small_sequences": 21,
+  "finite_versions": 51,
+  "forced_port_valuations": 48,
+  "transaction_rejections": [
+    "REJECTED \"unsafe transaction boundary\"",
+    "REJECTED \"unsealed trailing records or truncated line\"",
+    "REJECTED \"out-of-space local literal\"",
+    "REJECTED \"invalid signed atom certificate\"",
+    "REJECTED \"certificate names a different predecessor model\"",
+    "REJECTED \"incomplete RF candidate domain\""
+  ],
+  "allocator_faults": [
+    "drop_epoch",
+    "wrong_polarity",
+    "nonfalse_antecedent"
+  ],
+  "partial_boundary_prefixes": {
+    "false_control": {
+      "checked": 3,
+      "total": 5,
+      "status": "BOUNDARY_FALSE_ASSUMPTION"
+    },
+    "graph_conflict": {
+      "checked": 1,
+      "total": 3,
+      "status": "BOUNDARY_CONFLICT"
+    }
+  },
+  "late_conflict_normalizations": 1,
+  "raw_entries": 80,
+  "unique_raw_objects": 54,
+  "cases": {
+    "fib_updates_8": {
+      "statuses": [
+        "SAT",
+        "UNSAT"
+      ],
+      "effective_old_hits": 45,
+      "boundary_ratio": 0.003787518027156547
+    },
+    "airline_reservations_6": {
+      "statuses": [
+        "SAT",
+        "UNSAT"
+      ],
+      "effective_old_hits": 0,
+      "boundary_ratio": 0.00451828200028334
+    },
+    "fib-snapshot-11": {
+      "statuses": [
+        "UNSAT",
+        "UNSAT"
+      ],
+      "effective_old_hits": 10,
+      "boundary_ratio": 0.005276180106572032
+    },
+    "circular-buffer": {
+      "statuses": [
+        "SAT",
+        "UNSAT"
+      ],
+      "effective_old_hits": 0,
+      "boundary_ratio": 0.022486899520526137
+    }
+  }
+}
