@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// CNF Generation, via Tseitin
 
+#include <util/stable_identity.h>
 #include "cnf.h"
 
 #include <algorithm>
@@ -154,6 +155,7 @@ void cnft::gate_nor(literalt a, literalt b, literalt o)
 /// \par parameters: Two input signals to the EQUAL gate, one output
 void cnft::gate_equal(literalt a, literalt b, literalt o)
 {
+  if(stable_identity::enabled) stable_identity::role("equal-negative-xor",0,0,(!o).get());
   gate_xor(a, b, !o);
 }
 
@@ -286,54 +288,66 @@ literalt cnft::lxor(const bvt &bv)
 /// \return Output signal of the AND gate as literal
 literalt cnft::land(literalt a, literalt b)
 {
+  auto observed=[&](literalt out) {
+    if(stable_identity::enabled) stable_identity::cnf_result("and",out.get(),{a.get(),b.get()});
+    return out;
+  };
   if(a.is_true() || b.is_false())
-    return b;
+    return observed(b);
   if(b.is_true() || a.is_false())
-    return a;
+    return observed(a);
   if(a==b)
-    return a;
+    return observed(a);
 
   literalt o=new_variable();
   gate_and(a, b, o);
-  return o;
+  return observed(o);
 }
 
 /// \par parameters: Two inputs to the OR gate
 /// \return Output signal of the OR gate as literal
 literalt cnft::lor(literalt a, literalt b)
 {
+  auto observed=[&](literalt out) {
+    if(stable_identity::enabled) stable_identity::cnf_result("or",out.get(),{a.get(),b.get()});
+    return out;
+  };
   if(a.is_false() || b.is_true())
-    return b;
+    return observed(b);
   if(b.is_false() || a.is_true())
-    return a;
+    return observed(a);
   if(a==b)
-    return a;
+    return observed(a);
 
   literalt o=new_variable();
   gate_or(a, b, o);
-  return o;
+  return observed(o);
 }
 
 /// \par parameters: Two inputs to the XOR gate
 /// \return Output signal of the XOR gate as literal
 literalt cnft::lxor(literalt a, literalt b)
 {
+  auto observed=[&](literalt out) {
+    if(stable_identity::enabled) stable_identity::cnf_result("xor",out.get(),{a.get(),b.get()});
+    return out;
+  };
   if(a.is_false())
-    return b;
+    return observed(b);
   if(b.is_false())
-    return a;
+    return observed(a);
   if(a.is_true())
-    return !b;
+    return observed(!b);
   if(b.is_true())
-    return !a;
+    return observed(!a);
   if(a==b)
-    return const_literal(false);
+    return observed(const_literal(false));
   if(a==!b)
-    return const_literal(true);
+    return observed(const_literal(true));
 
   literalt o=new_variable();
   gate_xor(a, b, o);
-  return o;
+  return observed(o);
 }
 
 /// \par parameters: Two inputs to the NAND gate
@@ -367,16 +381,20 @@ literalt cnft::limplies(literalt a, literalt b)
 
 literalt cnft::lselect(literalt a, literalt b, literalt c)
 {
+  auto observed=[&](literalt out) {
+    if(stable_identity::enabled) stable_identity::cnf_result("if",out.get(),{a.get(),b.get(),c.get()});
+    return out;
+  };
   // a?b:c = (a AND b) OR (/a AND c)
   if(a.is_constant())
-    return a.sign() ? b : c;
+    return observed(a.sign() ? b : c);
   if(b==c)
-    return b;
+    return observed(b);
 
   if(b.is_constant())
-    return b.sign() ? lor(a, c) : land(!a, c);
+    return observed(b.sign() ? lor(a, c) : land(!a, c));
   if(c.is_constant())
-    return c.sign() ? lor(!a, b) : land(a, b);
+    return observed(c.sign() ? lor(!a, b) : land(a, b));
 
   #ifdef COMPACT_ITE
 
@@ -399,10 +417,10 @@ literalt cnft::lselect(literalt a, literalt b, literalt c)
   lcnf(!b, !c,  o);
   #endif
 
-  return o;
+  return observed(o);
 
   #else
-  return lor(land(a, b), land(!a, c));
+  return observed(lor(land(a, b), land(!a, c)));
   #endif
 }
 
@@ -410,6 +428,7 @@ literalt cnft::lselect(literalt a, literalt b, literalt c)
 /// \return New variable as literal
 literalt cnft::new_variable()
 {
+  if(stable_identity::enabled) stable_identity::allocation(_no_variables,1);
   literalt l(_no_variables, false);
 
   set_no_variables(_no_variables+1);
@@ -421,6 +440,7 @@ literalt cnft::new_variable()
 /// \return Vector of new variables.
 bvt cnft::new_variables(std::size_t width)
 {
+  if(stable_identity::enabled) stable_identity::allocation(_no_variables,width);
   bvt result;
   result.reserve(width);
 

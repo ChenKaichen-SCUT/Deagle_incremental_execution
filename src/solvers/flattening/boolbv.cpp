@@ -6,6 +6,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
+#include <util/stable_identity.h>
 #include "boolbv.h"
 
 #include <algorithm>
@@ -45,6 +46,7 @@ boolbvt::convert_bv(const exprt &expr, optionalt<std::size_t> expected_width)
   // get a reference to the cache entry
   auto &cache_entry = cache_result.first->second;
 
+  stable_identity::Frame port(this,2,&cache_entry,expr,!cache_result.second);
   if(!cache_result.second)
   {
     // Found in cache
@@ -55,6 +57,7 @@ boolbvt::convert_bv(const exprt &expr, optionalt<std::size_t> expected_width)
   // more elements recursively. C++11 §23.2.5/13
   // However, the _reference_ to the entry does!
   cache_entry = convert_bitvector(expr);
+  port.bits(cache_entry);
 
   INVARIANT_WITH_DIAGNOSTICS(
     !expected_width || cache_entry.size() == *expected_width,

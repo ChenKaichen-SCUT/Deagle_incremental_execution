@@ -1,7 +1,9 @@
+#include <util/stable_identity.h>
 #include "dependency_context.h"
 #include "goto_symex_state.h"
 #include <goto-programs/goto_functions.h>
 #include <util/std_expr.h>
+#include <algorithm>
 #include <map>
 #include <set>
 #include <limits>
@@ -19,6 +21,7 @@ struct loopt
 {
   unsigned first, last;
   irep_idt id;
+  std::string observed_loop_name;
   int site;
 };
 static std::map<const instructiont *, int> sites;
@@ -168,9 +171,9 @@ void index_sites(const goto_functionst &functions)
     for(const auto &ins : body)
     {
       ops.push_back(operation(ins));
-      ++count[ops.back()];
+      if(stream) ++count[ops.back()];
     }
-    for(size_t i = 0; i < ops.size(); ++i)
+    for(size_t i = 0; stream && i < ops.size(); ++i)
     {
       std::vector<std::string> key{id2string(f.first), ops[i]};
       if(count[ops[i]] > 1)
@@ -186,7 +189,9 @@ void index_sites(const goto_functionst &functions)
     {
       int id = int(sites.size())+1;
       sites.emplace(&ins, id);
-      row("S", {std::to_string(id), keys[i], key_count[keys[i]] == 1 ? "unique" : "ambiguous",
+      if(stable_identity::enabled)
+        stable_identity::site(id,ins.stable_origin,id2string(f.first),ins.source_location(),ops[i]+(ins.is_goto() ? (ins.condition().is_true()?".unconditional":".conditional") : ""));
+      if(stream) row("S", {std::to_string(id), keys[i], key_count[keys[i]] == 1 ? "unique" : "ambiguous",
                 id2string(f.first), id2string(ins.source_location().get_file()),
                 id2string(ins.source_location().get_line())});
       if(identities41)
@@ -199,7 +204,8 @@ void index_sites(const goto_functionst &functions)
       }
       if(ins.is_backwards_goto() && ins.targets.size() == 1)
         loops[f.first].push_back({ins.get_target()->location_number, ins.location_number,
-                                  goto_programt::loop_id(f.first, ins), id});
+                                  stream ? goto_programt::loop_id(f.first, ins) : irep_idt(),
+                                  id2string(f.first)+"."+std::to_string(ins.loop_number), id});
       ++i;
     }
   }
@@ -238,10 +244,19 @@ void context(goto_symex_statet &state)
   for(const auto &loop : loops[source.function_id])
     if(loop.first <= pos && pos <= loop.last)
     {
-      auto it = frame.loop_iterations.find(loop.id);
+      // A shadow observation must never intern a future native loop identifier.
+      auto it = stream ? frame.loop_iterations.find(loop.id) : std::find_if(
+        frame.loop_iterations.begin(), frame.loop_iterations.end(),
+        [&](const decltype(frame.loop_iterations)::value_type &item) {return id2string(item.first)==loop.observed_loop_name;});
       fields.push_back(std::to_string(loop.site));
       fields.push_back(std::to_string(it == frame.loop_iterations.end() ? 0 : it->second.count));
     }
-  row("X", fields);
+  if(stable_identity::enabled)
+  {
+    stable_identity::Words numeric;
+    for(const auto &s:fields) numeric.push_back(stable_identity::Word(std::stoi(s)));
+    stable_identity::row('X',numeric);
+  }
+  if(stream) row("X", fields);
 }
 }

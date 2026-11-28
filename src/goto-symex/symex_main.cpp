@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// Symbolic Execution
 
+#include <util/stable_identity_fwd.h>
 #include "goto_symex.h"
 #include "dependency_context.h"
 
@@ -619,7 +620,7 @@ void goto_symext::symex_step(
     overall_value_set.make_union(state.value_set);
   // __SZH_ADD_END__
 
-  if(dependency_manifest::stream)
+  if(dependency_manifest::stream || stable_identity::enabled)
     dependency_manifest::context(state);
 
   // Print debug statements if they've been enabled.

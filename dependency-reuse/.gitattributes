@@ -32,3 +32,5 @@ reports/evidence/d43e/** -text
 reports/evidence/si1a/** -text
 stable-identity/** text eol=lf
 tests/d43d/** text eol=lf
+reports/evidence/si1b/** -text
+tests/si1b/** text eol=lf

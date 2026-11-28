@@ -9,6 +9,7 @@ Author: Daniel Kroening, Peter Schrammel
 /// \file
 /// Goto Checker using Multi-Path Symbolic Execution only (no SAT solving)
 
+#include <util/stable_identity_fwd.h>
 #include "multi_path_symex_only_checker.h"
 
 #include <util/ui_message.h>
@@ -77,7 +78,7 @@ operator()(propertiest &properties)
 void multi_path_symex_only_checkert::generate_equation()
 {
   const auto symex_start = std::chrono::steady_clock::now();
-  if(dependency_manifest::stream)
+  if(dependency_manifest::stream || stable_identity::enabled)
     dependency_manifest::index_sites(goto_model.get_goto_functions());
 
   // __WP_ADD_BEGIN__

@@ -12,6 +12,7 @@ Author: Daniel Kroening, kroening@kroening.com
 #ifndef CPROVER_GOTO_PROGRAMS_GOTO_PROGRAM_H
 #define CPROVER_GOTO_PROGRAMS_GOTO_PROGRAM_H
 
+#include <util/stable_identity_fwd.h>
 #include "goto_instruction_code.h"
 
 #include <iosfwd>
@@ -184,6 +185,9 @@ public:
     goto_instruction_codet _code;
 
   public:
+    // Side metadata is never part of native instruction or expression equality.
+    unsigned stable_origin = stable_identity::current_origin;
+
     /// Get the code represented by this instruction
     DEPRECATED(SINCE(2021, 10, 12, "Use code() instead"))
     const goto_instruction_codet &get_code() const
@@ -513,6 +517,7 @@ public:
     void swap(instructiont &instruction)
     {
       using std::swap;
+      swap(instruction.stable_origin, stable_origin);
       swap(instruction._code, _code);
       swap(instruction._source_location, _source_location);
       swap(instruction._type, _type);

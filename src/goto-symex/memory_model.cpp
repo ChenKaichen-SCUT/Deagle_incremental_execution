@@ -9,6 +9,7 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
 /// \file
 /// Memory model for partial order concurrency
 
+#include <util/stable_identity.h>
 #include "memory_model.h"
 #include <iostream>
 
@@ -162,6 +163,9 @@ symbol_exprt memory_model_baset::register_read_from_choice_symbol(
 
   // record the symbol
   choice_symbols.emplace(std::make_pair(r, w), s);
+  if(stable_identity::enabled)
+    stable_identity::row('F',{stable_identity::text(id2string(s.get_identifier())),
+      stable_identity::text(get_name(w)),stable_identity::text(get_name(r))});
 
   // __SZH_ADD_BEGIN__ : completely different when using deagle
   if(use_deagle)

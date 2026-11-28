@@ -9,6 +9,7 @@ Author: Michael Tautschnig, michael.tautschnig@cs.ox.ac.uk
 /// \file
 /// Memory model for partial order concurrency
 
+#include <util/stable_identity.h>
 #include "memory_model_sc.h"
 #include "dependency_context.h"
 
@@ -27,7 +28,7 @@ operator()(symex_target_equationt &equation, message_handlert &message_handler)
   log.statistics() << "Adding SC constraints" << messaget::eom;
 
   build_event_lists(equation, message_handler);
-  if(dependency_manifest::stream)
+  if(dependency_manifest::stream || stable_identity::enabled)
   {
     namespace dm = dependency_manifest;
     // Use the exact graph endpoint spelling, including the native spawn/fence clocks.
@@ -51,6 +52,17 @@ operator()(symex_target_equationt &equation, message_handlert &message_handler)
                  !base->is_thread_local && lhs.get_level_0().empty() && lhs.get_level_1().empty();
       }
       int ctx = it->source.d1_context == -2 ? -2 : dm::checked_context(it->source);
+      if(stable_identity::enabled)
+      {
+        if(lhs.is_not_nil())
+        {
+          const symbolt *decl=nullptr;
+          if(!ns.lookup(lhs.get_object_name(),decl)) stable_identity::declaration(*decl);
+        }
+        stable_identity::value(symbol,event ? get_name(it) : "",ctx,role,object,
+          lhs.is_nil() ? "" : id2string(lhs.get_object_name()),lhs.type(),global);
+      }
+      if(!dm::stream) continue;
       if(dm::record_layouts && global && type.empty() && !symbol.empty())
       {
         const unsigned layout=dm::aggregate_layout(lhs.type(),ns);

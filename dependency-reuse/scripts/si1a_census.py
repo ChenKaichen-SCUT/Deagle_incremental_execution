@@ -141,7 +141,7 @@ def kind(site, op):
 CATEGORIES = ("RF", "Guard", "pointer_aggregate", "ssa_bit", "ordinary_bool", "fresh_free", "auxiliary", "unknown")
 
 
-def scan(case, side, model, trace, lib, mu, pre, exact):
+def scan(case, side, model, trace, lib, mu, pre, exact, atom_details=None):
     allocation, types, type_counts, cache, revisited = trace_data(trace)
     types = {local_escape(k): v for k, v in types.items()}
     n = len(allocation)
@@ -264,6 +264,8 @@ def scan(case, side, model, trace, lib, mu, pre, exact):
                       used_unmapped=union & missing, permanent_conclusion=conclusion,
                       permanent_conclusion_unmapped=conclusion & missing)
     categories = {v: next((c for c in CATEGORIES[:-1] if v in flags[c]), "unknown") for v in allvars}
+    if atom_details is not None:
+        atom_details.update(categories=categories, scopes=scopes, flags=flags, allocation=allocation)
     stats, alloc_rows, reason_rows, flag_rows = {}, [], [], []
     for scope, subset in scopes.items():
         counts = Counter(categories[v] for v in subset)

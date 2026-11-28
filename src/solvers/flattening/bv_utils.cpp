@@ -6,6 +6,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
+#include <util/stable_identity.h>
 #include "bv_utils.h"
 
 bvt bv_utilst::build_constant(const mp_integer &n, std::size_t width)
@@ -302,7 +303,16 @@ void bv_utilst::adder(
 
   for(std::size_t i=0; i<sum.size(); i++)
   {
+    unsigned branch=0;
+    if(stable_identity::enabled)
+      branch=sum[i].is_constant() ? (1+sum[i].sign()) : op[i].is_constant() ?
+        (3+op[i].sign()) : carry_out.is_constant() ? (5+carry_out.sign()) : 0;
     sum[i] = full_adder(sum[i], op[i], carry_out, carry_out);
+    if(stable_identity::enabled)
+    {
+      stable_identity::role("adder-sum",i,branch,sum[i].get());
+      stable_identity::role("adder-carry",i,branch,carry_out.get());
+    }
   }
 }
 
@@ -1181,7 +1191,11 @@ literalt bv_utilst::equal(const bvt &op0, const bvt &op1)
   equal_bv.resize(op0.size());
 
   for(std::size_t i=0; i<op0.size(); i++)
+  {
     equal_bv[i]=prop.lequal(op0[i], op1[i]);
+    if(stable_identity::enabled)
+      stable_identity::role("equal-bit",i,op0.size(),equal_bv[i].get());
+  }
 
   return prop.land(equal_bv);
 }
@@ -1218,6 +1232,13 @@ literalt bv_utilst::lt_or_le(
 
     compareBelow = prop.new_variables(bv0.size());
     result = prop.new_variable();
+    if(stable_identity::enabled)
+    {
+      const unsigned mode=(rep==representationt::SIGNED ? 2u:0u)+unsigned(or_equal);
+      for(unsigned k=0;k<compareBelow.size();++k)
+        stable_identity::role("compare-prefix",k,mode,compareBelow[k].get());
+      stable_identity::role("compare-result",compareBelow.size(),mode,result.get());
+    }
 
     if(rep == representationt::SIGNED)
     {

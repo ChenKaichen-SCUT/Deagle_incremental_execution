@@ -6,6 +6,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
+#include <util/stable_identity.h>
 #include "boolbv.h"
 
 #include <algorithm>
@@ -66,6 +67,8 @@ bvt boolbvt::convert_index(const index_exprt &expr)
       {
         // free variables
         bv = prop.new_variables(boolbv_width(expr.type()));
+        if(stable_identity::enabled)
+          for(unsigned bit=0;bit<bv.size();++bit) stable_identity::role("array-index-fresh",bit,bv.size(),bv[bit].get());
 
         record_array_index(expr);
 

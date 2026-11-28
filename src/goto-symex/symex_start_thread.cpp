@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// Symbolic Execution
 
+#include <util/stable_identity_fwd.h>
 #include "goto_symex.h"
 #include "dependency_context.h"
 
@@ -42,7 +43,7 @@ void goto_symext::symex_start_thread(statet &state)
 
   // put into thread vector
   const std::size_t new_thread_nr = state.threads.size();
-  if(dependency_manifest::stream)
+  if(dependency_manifest::stream || stable_identity::enabled)
     dependency_manifest::birth(new_thread_nr, state.source);
   if(state.call_stack().top().function_identifier == "pthread_create")
     target.witness_spawn_events.push_back(

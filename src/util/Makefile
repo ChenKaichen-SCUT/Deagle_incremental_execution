@@ -1,4 +1,4 @@
-SRC = dependency_group_sources.cpp dependency_manifest.cpp \
+SRC = stable_identity.cpp dependency_group_sources.cpp dependency_manifest.cpp \
       arith_tools.cpp \
       array_element_from_pointer.cpp \
       array_name.cpp \

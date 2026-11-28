@@ -14,6 +14,7 @@ Author: Daniel Kroening, kroening@kroening.com
 // convert expression to boolean formula
 //
 
+#include <util/stable_identity_fwd.h>
 #include <util/endianness_map.h>
 #include <util/expr.h>
 #include <util/mp_arith.h>
@@ -74,6 +75,7 @@ public:
   void clear_cache() override
   {
     SUB::clear_cache();
+    if(stable_identity::enabled) stable_identity::clear_cache(this,2);
     bv_cache.clear();
   }
 
@@ -93,6 +95,9 @@ public:
   }
 
   mp_integer get_value(const bvt &bv, std::size_t offset, std::size_t width);
+
+  void describe_stable_layouts() const;
+  ~boolbvt() override { if(stable_identity::enabled) stable_identity::clear_cache(this,2); }
 
   const boolbv_mapt &get_map() const
   {

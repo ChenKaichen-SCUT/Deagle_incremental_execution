@@ -9,6 +9,7 @@ Author: Daniel Kroening, Peter Schrammel
 /// \file
 /// Bounded Model Checking Utilities
 
+#include <util/stable_identity.h>
 #include "bmc_util.h"
 
 #include <iostream>
@@ -629,6 +630,8 @@ void run_property_decider(
       return is_property_to_check(properties.at(property_id).status);
     });
 
+  if(stable_identity::enabled)
+    dynamic_cast<const boolbvt &>(property_decider.get_decision_procedure()).describe_stable_layouts();
   if(dependency_manifest::stream)
   {
     auto &bv = dynamic_cast<const boolbvt &>(property_decider.get_decision_procedure());

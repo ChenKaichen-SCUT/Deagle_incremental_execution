@@ -6,6 +6,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
+#include <util/stable_identity.h>
 #include "prop_conv_solver.h"
 
 #include <util/range.h>
@@ -65,13 +66,17 @@ literalt prop_conv_solvert::get_literal(const irep_idt &identifier)
     symbols.insert(std::pair<irep_idt, literalt>(identifier, literalt()));
 
   if(!result.second)
+  {
+    if(stable_identity::enabled) stable_identity::named_bool(id2string(identifier),result.first->second.get());
     return result.first->second;
+  }
 
   literalt literal = prop.new_variable();
   prop.set_variable_name(literal, identifier);
 
   // insert
   result.first->second = literal;
+  if(stable_identity::enabled) stable_identity::named_bool(id2string(identifier),literal.get());
 
   return literal;
 }
@@ -157,7 +162,9 @@ literalt prop_conv_solvert::convert(const exprt &expr)
 {
   if(!use_cache || expr.id() == ID_symbol || expr.id() == ID_constant)
   {
+    stable_identity::Frame port(this,1,nullptr,expr,false);
     literalt literal = convert_bool(expr);
+    port.scalar(literal.get());
     if(freeze_all && !literal.is_constant())
       prop.set_frozen(literal);
     return literal;
@@ -169,6 +176,7 @@ literalt prop_conv_solvert::convert(const exprt &expr)
   // get a reference to the cache entry
   auto &cache_entry = result.first->second;
 
+  stable_identity::Frame port(this,1,&cache_entry,expr,!result.second);
   if(!result.second) // found in cache
     return cache_entry;
 
@@ -178,6 +186,7 @@ literalt prop_conv_solvert::convert(const exprt &expr)
 
   // store the literal in the cache using the reference
   cache_entry = literal;
+  port.scalar(literal.get());
 
   if(freeze_all && !literal.is_constant())
     prop.set_frozen(literal);
@@ -336,6 +345,7 @@ bool prop_conv_solvert::set_equality_to_true(const equal_exprt &expr)
     std::pair<symbolst::iterator, bool> result =
       symbols.insert(std::pair<irep_idt, literalt>(identifier, tmp));
 
+    if(stable_identity::enabled) stable_identity::named_bool(id2string(identifier),result.first->second.get());
     if(result.second)
       return false; // ok, inserted!
 

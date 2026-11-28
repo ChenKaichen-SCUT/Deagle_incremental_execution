@@ -6,6 +6,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
+#include <util/stable_identity.h>
 #include "boolbv_map.h"
 
 #include <util/threeval.h>
@@ -69,6 +70,7 @@ const bvt &boolbv_mapt::get_literals(
     map_entry.literal_map.size() == width,
     "number of literals in the literal map shall equal the bitvector width");
 
+  if(stable_identity::enabled) stable_identity::named_bits(id2string(identifier),type,map_entry.literal_map);
   return map_entry.literal_map;
 }
 
@@ -113,6 +115,7 @@ void boolbv_mapt::set_literals(
       prop.set_equal(map_entry.literal_map[bit], literal);
     }
   }
+  if(stable_identity::enabled) stable_identity::named_bits(id2string(identifier),type,map_entry.literal_map);
 }
 
 void boolbv_mapt::erase_literals(

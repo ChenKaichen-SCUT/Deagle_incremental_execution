@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// Program Transformation
 
+#include <util/stable_identity.h>
 #include "goto_convert.h"
 
 #include <util/arith_tools.h>
@@ -432,6 +433,7 @@ void goto_convertt::convert(
   goto_programt &dest,
   const irep_idt &mode)
 {
+  stable_identity::Lower origin(code.source_location(), id2string(code.get_statement()));
   const irep_idt &statement=code.get_statement();
 
   if(statement==ID_block)

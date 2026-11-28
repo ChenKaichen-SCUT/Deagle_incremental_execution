@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// ANSI-C Conversion / Type Checking
 
+#include <util/stable_identity.h>
 #include "c_typecheck_base.h"
 
 #include <util/c_types.h>
@@ -47,6 +48,7 @@ void c_typecheck_baset::move_symbol(symbolt &symbol, symbolt *&new_symbol)
 
 void c_typecheck_baset::typecheck_symbol(symbolt &symbol)
 {
+  if(stable_identity::enabled) stable_identity::declaration(symbol);
   bool is_function=symbol.type.id()==ID_code;
 
   const typet &final_type=follow(symbol.type);

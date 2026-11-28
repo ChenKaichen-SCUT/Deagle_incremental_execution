@@ -10,6 +10,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// Symbolic Execution
 /// Implementation of functions to build SSA equation.
 
+#include <util/stable_identity.h>
 #include "symex_target_equation.h"
 #include <util/dependency_manifest.h>
 #include <util/dependency_group_sources.h>
@@ -55,6 +56,9 @@ void symex_target_equationt::shared_read(
   unsigned atomic_section_id,
   const sourcet &source)
 {
+  if(stable_identity::enabled)
+    stable_identity::row('b',{stable_identity::text(id2string(ssa_object.get_identifier())),
+      unsigned(source.d1_context==-2 ? -2 : dependency_manifest::checked_context(source)),stable_identity::text("read")});
   SSA_steps.emplace_back(source, goto_trace_stept::typet::SHARED_READ);
   SSA_stept &SSA_step=SSA_steps.back();
 
@@ -71,6 +75,9 @@ void symex_target_equationt::shared_write(
   unsigned atomic_section_id,
   const sourcet &source)
 {
+  if(stable_identity::enabled)
+    stable_identity::row('b',{stable_identity::text(id2string(ssa_object.get_identifier())),
+      unsigned(source.d1_context==-2 ? -2 : dependency_manifest::checked_context(source)),stable_identity::text("write")});
   SSA_steps.emplace_back(source, goto_trace_stept::typet::SHARED_WRITE);
   SSA_stept &SSA_step=SSA_steps.back();
 
@@ -141,6 +148,9 @@ void symex_target_equationt::assignment(
   const sourcet &source,
   assignment_typet assignment_type)
 {
+  if(stable_identity::enabled)
+    stable_identity::row('b',{stable_identity::text(id2string(ssa_lhs.get_identifier())),
+      unsigned(source.d1_context==-2 ? -2 : dependency_manifest::checked_context(source)),stable_identity::text("assign"+std::to_string(int(assignment_type)))});
   PRECONDITION(ssa_lhs.is_not_nil());
 
   SSA_steps.emplace_back(SSA_assignment_stept{source,
@@ -161,6 +171,9 @@ void symex_target_equationt::decl(
   const sourcet &source,
   assignment_typet assignment_type)
 {
+  if(stable_identity::enabled)
+    stable_identity::row('b',{stable_identity::text(id2string(ssa_lhs.get_identifier())),
+      unsigned(source.d1_context==-2 ? -2 : dependency_manifest::checked_context(source)),stable_identity::text("decl")});
   PRECONDITION(ssa_lhs.is_not_nil());
 
   SSA_steps.emplace_back(source, goto_trace_stept::typet::DECL);
@@ -386,6 +399,10 @@ void symex_target_equationt::convert_assignments(
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("assignments",step.source);
+    stable_identity::Owner port_owner("assignments",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(step.is_assignment() && !step.ignore && !step.converted)
     {
       log.conditional_output(log.debug(), [&step](messaget::mstreamt &mstream) {
@@ -409,6 +426,10 @@ void symex_target_equationt::convert_decls(
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("decls",step.source);
+    stable_identity::Owner port_owner("decls",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(step.is_decl() && !step.ignore && !step.converted)
     {
       // The result is not used, these have no impact on
@@ -431,6 +452,10 @@ void symex_target_equationt::convert_guards(
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("guards",step.source);
+    stable_identity::Owner port_owner("guards",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(step.ignore)
       step.guard_handle = false_exprt();
     else
@@ -455,6 +480,10 @@ void symex_target_equationt::convert_assumptions(
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("assumptions",step.source);
+    stable_identity::Owner port_owner("assumptions",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(step.is_assume())
     {
       if(step.ignore)
@@ -484,6 +513,10 @@ void symex_target_equationt::convert_goto_instructions(
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("goto_instructions",step.source);
+    stable_identity::Owner port_owner("goto_instructions",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(step.is_goto())
     {
       if(step.ignore)
@@ -512,6 +545,10 @@ void symex_target_equationt::convert_constraints(
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("constraints",step.source);
+    stable_identity::Owner port_owner("constraints",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(step.is_constraint() && !step.ignore && !step.converted)
     {
       log.conditional_output(log.debug(), [&step](messaget::mstreamt &mstream) {
@@ -649,6 +686,10 @@ void symex_target_equationt::convert_function_calls(
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("function_calls",step.source);
+    stable_identity::Owner port_owner("function_calls",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(!step.ignore)
     {
       and_exprt::operandst conjuncts;
@@ -689,6 +730,10 @@ void symex_target_equationt::convert_io(decision_proceduret &decision_procedure)
   for(auto &step : SSA_steps)
   {
     dense_owner_scope owner("io",step.source);
+    stable_identity::Owner port_owner("io",
+      stable_identity::enabled ? dependency_manifest::checked_context(step.source) : -1,
+      unsigned(step.type),unsigned(step.assignment_type),
+      stable_identity::enabled && step.ssa_lhs.is_not_nil() ? id2string(step.ssa_lhs.get_identifier()) : "");
     if(!step.ignore)
     {
       and_exprt::operandst conjuncts;

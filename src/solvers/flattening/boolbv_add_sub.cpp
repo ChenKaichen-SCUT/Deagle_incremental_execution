@@ -6,6 +6,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
+#include <util/stable_identity.h>
 #include "boolbv.h"
 
 #include <util/bitvector_types.h>
@@ -63,6 +64,7 @@ bvt boolbvt::convert_add_sub(const exprt &expr)
       it=operands.begin()+1;
       it!=operands.end(); it++)
   {
+    stable_identity::Path operand("add-sub-operand",unsigned(it-operands.begin()),unsigned(subtract));
     DATA_INVARIANT(
       it->type() == type, "add/sub with mixed types:\n" + expr.pretty());
 

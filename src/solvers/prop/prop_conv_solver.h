@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 #ifndef CPROVER_SOLVERS_PROP_PROP_CONV_SOLVER_H
 #define CPROVER_SOLVERS_PROP_PROP_CONV_SOLVER_H
 
+#include <util/stable_identity_fwd.h>
 #include <map>
 #include <string>
 
@@ -34,7 +35,7 @@ public:
   {
   }
 
-  virtual ~prop_conv_solvert() = default;
+  virtual ~prop_conv_solvert() { if(stable_identity::enabled) stable_identity::clear_cache(this,1); }
 
   // non-iterative eager conversion
   virtual void finish_eager_conversion();
@@ -77,6 +78,7 @@ public:
 
   virtual void clear_cache()
   {
+    if(stable_identity::enabled) stable_identity::clear_cache(this,1);
     cache.clear();
   }
 

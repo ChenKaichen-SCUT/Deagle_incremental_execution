@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// Program Transformation
 
+#include <util/stable_identity.h>
 #include "remove_function_pointers.h"
 
 #include <util/arith_tools.h>
@@ -383,6 +384,7 @@ void remove_function_pointer(
   goto_programt::targett target,
   const std::unordered_set<symbol_exprt, irep_hash> &functions)
 {
+  stable_identity::Lower dispatch(target->stable_origin,"indirect-call-dispatch");
   const exprt &function = target->call_function();
   const exprt &pointer = to_dereference_expr(function).pointer();
 
@@ -399,6 +401,8 @@ void remove_function_pointer(
 
   for(const auto &fun : functions)
   {
+    stable_identity::Lower target_origin(stable_identity::current_origin,
+      stable_identity::enabled ? "target:"+id2string(fun.get_identifier()) : "");
     // call function
     auto new_call =
       code_function_callt(target->call_lhs(), fun, target->call_arguments());

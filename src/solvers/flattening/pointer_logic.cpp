@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// Pointer Logic
 
+#include <util/stable_identity.h>
 #include "pointer_logic.h"
 
 #include <util/arith_tools.h>
@@ -54,7 +55,9 @@ mp_integer pointer_logict::add_object(const exprt &expr)
     return add_object(to_member_expr(expr).compound());
   }
 
-  return objects.number(expr);
+  auto n=objects.number(expr);
+  if(stable_identity::enabled) stable_identity::row('Q',{unsigned(n),stable_identity::term(expr)});
+  return n;
 }
 
 exprt pointer_logict::pointer_expr(
@@ -163,6 +166,11 @@ pointer_logict::pointer_logict(const namespacet &_ns):ns(_ns)
 
   // add INVALID
   invalid_object=objects.number(exprt("INVALID"));
+  if(stable_identity::enabled)
+  {
+    stable_identity::row('q',{0,stable_identity::text("NULL")});
+    stable_identity::row('q',{1,stable_identity::text("INVALID")});
+  }
 }
 
 pointer_logict::~pointer_logict()

@@ -9,6 +9,7 @@ Author: Daniel Kroening, kroening@kroening.com
 /// \file
 /// Program Transformation
 
+#include <util/stable_identity.h>
 #include "goto_program.h"
 
 #include "validate_code.h"
@@ -714,6 +715,8 @@ void goto_programt::copy_from(const goto_programt &src)
     auto new_instruction=add_instruction();
     targets_mapping[it]=new_instruction;
     *new_instruction=*it;
+    if(stable_identity::enabled)
+      new_instruction->stable_origin=stable_identity::copy_origin(it->stable_origin);
   }
 
   // Loop over program - 2nd time updates targets

@@ -85,6 +85,7 @@ SRC = $(BOOLEFORCE_SRC) \
       $(CADICAL_SRC) \
       decision_procedure.cpp \
       flattening/arrays.cpp \
+      flattening/stable_layout.cpp \
       flattening/boolbv.cpp \
       flattening/boolbv_abs.cpp \
       flattening/boolbv_add_sub.cpp \

@@ -6,6 +6,7 @@ Author: Daniel Kroening, kroening@kroening.com
 
 \*******************************************************************/
 
+#include <util/stable_identity.h>
 #include "satcheck_minisat2.h"
 
 #ifndef _WIN32
@@ -360,6 +361,7 @@ propt::resultt satcheck_minisat2_baset<T>::do_prop_solve()
       stamp.exceptions(std::ios::badbit|std::ios::failbit);
       stamp<<std::chrono::duration_cast<std::chrono::nanoseconds>(ready).count()<<'\n';
     }
+    if(stable_identity::enabled) stable_identity::seal(no_variables());
     if(!dependency_manifest::d4_library.empty()) at_root_boundary();
 
     if(!solver->okay())
@@ -546,6 +548,23 @@ bool satcheck_minisat_simplifiert::is_eliminated(literalt a) const
 void deagle_closure_solvert::save_raw_graph(oc_edge_tablet& _oc_edge_table, oc_guard_mapt& _oc_guard_map, oc_location_mapt& _oc_location_map, std::map<std::string, int>& _oc_result_order)
 {
   solver->save_raw_graph(_oc_edge_table, _oc_guard_map, _oc_location_map, _oc_result_order);
+  if(stable_identity::enabled)
+  {
+    const auto &graph=solver->declaration_graph();
+    for(const auto &edge:_oc_edge_table)
+      if(edge.second.second=="rf")
+      {
+        const auto bound=graph.observed_binding(edge.second.first);
+        const auto a=bound.first.first, b=bound.first.second;
+        bool ok=a>=0 && b>=0 && size_t(a)<graph.nodes.size() && size_t(b)<graph.nodes.size() &&
+          graph.nodes[a].name==edge.first.first && graph.nodes[b].name==edge.first.second &&
+          graph.observed_pair_binding(a,b)==edge.second.first;
+        stable_identity::row('H',{stable_identity::text(edge.first.first),stable_identity::text(edge.first.second),
+          unsigned(edge.second.first.x),unsigned(ok)});
+      }
+    for(const auto &g:_oc_guard_map)
+      stable_identity::row('G',{stable_identity::text(g.first),unsigned(g.second.x)});
+  }
   auto *store=solver->proof;
   if(dependency_manifest::stream || (store && store->d3))
   {
