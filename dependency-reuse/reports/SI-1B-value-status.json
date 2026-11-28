@@ -1,0 +1,36 @@
+{
+  "SI_1C_production_integration": false,
+  "affordable_joint_new_identity_cost_ns": {
+    "fib-snapshot-11": {
+      "A": 0,
+      "cold": 0
+    },
+    "fib_updates_8": {
+      "A": 0,
+      "cold": 0
+    }
+  },
+  "all_property_and_unwinding_controls_passed": true,
+  "audited_native_admissions": true,
+  "branch": "codex/stable-model-identity",
+  "code_and_evidence_commit": "d12c7076395aa99e0daa45d4e5b547f2dbaec05c",
+  "companion_P1_runs": 6,
+  "evidence_index": {
+    "path": "evidence/si1b-value/files.json",
+    "sha256": "f80997e376c92e2e710a1a1407cfbc89053bbd303ee0e5be32893973a3ef92b6"
+  },
+  "historical_classification": "INCOMPLETE_UNWINDING",
+  "new_P0_runs": 0,
+  "pre_P1_batch_and_order_commit": "644b3d9632ca547cecb533af5c9ef1b1871942bc",
+  "pre_P1_checkout": "1663bcaae68fa8bc3ca87cc4509a4d98cb232e5b",
+  "primary_P1_runs": 24,
+  "real_repair_search_value_gate": "NOT_MET",
+  "results": {
+    "path": "evidence/si1b-value/summary.json",
+    "sha256": "70b6f27bebb8398d11d8103d689af7159b9cff125e6984868671ce48ddd535fc"
+  },
+  "review_base": "85065a8729fe7547f56e7b55048a1222338d7ddf",
+  "scope": "search value of the two preregistered P1 candidate batches",
+  "stage": "SI-1B-value",
+  "status": "READY_FOR_REVIEW"
+}
