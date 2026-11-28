@@ -1,0 +1,10 @@
+--- a/ports.c
++++ b/ports.c
+@@ -1,6 +1,6 @@
+ #define TAKE(x) (x)
+ unsigned f(unsigned a) {
+  unsigned x;
+- x = a + 1;
++ x = a + 2;
+  return TAKE(x);
+ }

@@ -1,0 +1,77 @@
+{
+  "timing": {
+    "read_validate_ns": [
+      219479,
+      216351
+    ],
+    "source_ir_finalize_ns": [
+      70546,
+      48765
+    ],
+    "port_template_read_index_ns": [
+      137167,
+      118353
+    ],
+    "join_conflict_ns": 611338,
+    "process_to_outputs_ns": 2514460,
+    "process_peak_RSS_KiB": 96220
+  },
+  "join": {
+    "shared_signed_proposals": 144,
+    "accepted": 64,
+    "unique_signed_proposals": 112,
+    "visited_template_pairs": 10,
+    "rejected_components": 48
+  },
+  "cache": [
+    {
+      "templates": 10,
+      "explicit_role_positions": 64,
+      "physical_value_entries": 144,
+      "logical_first_owner_entries": 144,
+      "logical_all_owner_entries": 288,
+      "additional_owner_role_bindings": 144,
+      "unique_owner_template_associations": 20,
+      "shared_child_references": 8,
+      "unique_native_owner_roots": 4,
+      "cache_hits": 2,
+      "reused_templates": 2,
+      "reused_uncaptured_allocations": 0,
+      "uncertified_cached_path_values": 0,
+      "cache_descendant_atoms": 112
+    },
+    {
+      "templates": 10,
+      "explicit_role_positions": 64,
+      "physical_value_entries": 144,
+      "logical_first_owner_entries": 144,
+      "logical_all_owner_entries": 288,
+      "additional_owner_role_bindings": 144,
+      "unique_owner_template_associations": 20,
+      "shared_child_references": 8,
+      "unique_native_owner_roots": 4,
+      "cache_hits": 2,
+      "reused_templates": 2,
+      "reused_uncaptured_allocations": 0,
+      "uncertified_cached_path_values": 0,
+      "cache_descendant_atoms": 112
+    }
+  ],
+  "sources": [
+    {
+      "ambiguous_declaration": 0,
+      "ambiguous_or_unsourced_sites": 0,
+      "ambiguous_or_unsourced_contexts": 0,
+      "ambiguous_event": 0,
+      "CACHED_INTERNAL_ORIGIN_MISSING": 0
+    },
+    {
+      "ambiguous_declaration": 0,
+      "ambiguous_or_unsourced_sites": 0,
+      "ambiguous_or_unsourced_contexts": 0,
+      "ambiguous_event": 0,
+      "CACHED_INTERNAL_ORIGIN_MISSING": 0
+    }
+  ],
+  "digest": "95ac7af617e88287a90f894692bfabc01374790e0a8c1bd9261c8fab518c3964"
+}

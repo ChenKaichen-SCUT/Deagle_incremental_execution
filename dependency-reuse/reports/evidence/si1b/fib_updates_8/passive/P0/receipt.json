@@ -1,0 +1,137 @@
+{
+  "original": {
+    "allocation_ranges": "c6fe3dcb2cbb394cac2981f6724c197221e101d3b78f17587fbc753f146872ad",
+    "scope_counts": {
+      "B": 47493,
+      "Q": 2572
+    },
+    "scope_streams": {
+      "B": "c13b5c5a988358f84caef7b8da82f340a7a86a9b5f2a52b2b7586afac630a4cd",
+      "Q": "630bce09186a1393afd8580ac0f9434a60fe05ae526d65a76ff4bb8d40587fbc"
+    },
+    "ordered_outside_guard": "4b7239332c74f386e7928740d10a8b529eaf7859561976221caf53644f3eef7f",
+    "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+    "guard_visit_order": "f0a089c2c9580148f76a2a36eae65ad481929202a832b8fb52452f449aae2c5d",
+    "guard_events": 36,
+    "guard_hits": 0,
+    "rows": {
+      "NVAR": 12319,
+      "K": 2098,
+      "G": 8422,
+      "C": 50065,
+      "MEMBER": 81,
+      "NODE": 81,
+      "IN": 51,
+      "OUT": 51,
+      "EDGE": 386,
+      "GUARD": 36,
+      "A": 9285,
+      "QUERY": 1
+    },
+    "cache_instances": 1029,
+    "streams": {
+      "NVAR": "bdbc99b39a5d10ff15a5b19f8c6ff1bcbf60b1b27cc3afdbf8a688770744033b",
+      "K": "327f26cea83b6928c56bc94c737e1839f570b932bb12720777ce0575f0532ff5",
+      "G": "c0a8d501793fb9ad32115383a4102c11159b4b2c23725438c50b2a5afe59c7f1",
+      "C": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+      "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+      "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+      "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+      "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+      "EDGE": "c99633edd37ccacc26287210fcc00fceb1845a7d95132fd27d42ea0dd00db828",
+      "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+      "A": "2f7395fefd80a6006d732504a3536f6809f8eec8bfaac4660845cf8bd4ad5368",
+      "QUERY": "80867fcf3459a320b270a4ddcc8fbaaf6b6394b19fc829ef5caf84f2edbb3afa"
+    }
+  },
+  "off": {
+    "allocation_ranges": "c6fe3dcb2cbb394cac2981f6724c197221e101d3b78f17587fbc753f146872ad",
+    "scope_counts": {
+      "B": 47493,
+      "Q": 2572
+    },
+    "scope_streams": {
+      "B": "c13b5c5a988358f84caef7b8da82f340a7a86a9b5f2a52b2b7586afac630a4cd",
+      "Q": "630bce09186a1393afd8580ac0f9434a60fe05ae526d65a76ff4bb8d40587fbc"
+    },
+    "ordered_outside_guard": "4b7239332c74f386e7928740d10a8b529eaf7859561976221caf53644f3eef7f",
+    "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+    "guard_visit_order": "2a3690831ab2defdcc99d995e22958257eaa8d3adf0bda0eeb7aee65041301b4",
+    "guard_events": 36,
+    "guard_hits": 0,
+    "rows": {
+      "NVAR": 12319,
+      "K": 2098,
+      "G": 8422,
+      "C": 50065,
+      "MEMBER": 81,
+      "NODE": 81,
+      "IN": 51,
+      "OUT": 51,
+      "EDGE": 386,
+      "GUARD": 36,
+      "A": 9285,
+      "QUERY": 1
+    },
+    "cache_instances": 1029,
+    "streams": {
+      "NVAR": "bdbc99b39a5d10ff15a5b19f8c6ff1bcbf60b1b27cc3afdbf8a688770744033b",
+      "K": "327f26cea83b6928c56bc94c737e1839f570b932bb12720777ce0575f0532ff5",
+      "G": "c0a8d501793fb9ad32115383a4102c11159b4b2c23725438c50b2a5afe59c7f1",
+      "C": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+      "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+      "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+      "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+      "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+      "EDGE": "c99633edd37ccacc26287210fcc00fceb1845a7d95132fd27d42ea0dd00db828",
+      "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+      "A": "2f7395fefd80a6006d732504a3536f6809f8eec8bfaac4660845cf8bd4ad5368",
+      "QUERY": "80867fcf3459a320b270a4ddcc8fbaaf6b6394b19fc829ef5caf84f2edbb3afa"
+    }
+  },
+  "shadow": {
+    "allocation_ranges": "c6fe3dcb2cbb394cac2981f6724c197221e101d3b78f17587fbc753f146872ad",
+    "scope_counts": {
+      "B": 47493,
+      "Q": 2572
+    },
+    "scope_streams": {
+      "B": "c13b5c5a988358f84caef7b8da82f340a7a86a9b5f2a52b2b7586afac630a4cd",
+      "Q": "630bce09186a1393afd8580ac0f9434a60fe05ae526d65a76ff4bb8d40587fbc"
+    },
+    "ordered_outside_guard": "4b7239332c74f386e7928740d10a8b529eaf7859561976221caf53644f3eef7f",
+    "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+    "guard_visit_order": "143cddfcb11b95c197ab13d140b1ff44d0570a8731d82ccb5194f8dfd9190805",
+    "guard_events": 36,
+    "guard_hits": 0,
+    "rows": {
+      "NVAR": 12319,
+      "K": 2098,
+      "G": 8422,
+      "C": 50065,
+      "MEMBER": 81,
+      "NODE": 81,
+      "IN": 51,
+      "OUT": 51,
+      "EDGE": 386,
+      "GUARD": 36,
+      "A": 9285,
+      "QUERY": 1
+    },
+    "cache_instances": 1029,
+    "streams": {
+      "NVAR": "bdbc99b39a5d10ff15a5b19f8c6ff1bcbf60b1b27cc3afdbf8a688770744033b",
+      "K": "327f26cea83b6928c56bc94c737e1839f570b932bb12720777ce0575f0532ff5",
+      "G": "c0a8d501793fb9ad32115383a4102c11159b4b2c23725438c50b2a5afe59c7f1",
+      "C": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+      "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+      "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+      "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+      "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+      "EDGE": "c99633edd37ccacc26287210fcc00fceb1845a7d95132fd27d42ea0dd00db828",
+      "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+      "A": "2f7395fefd80a6006d732504a3536f6809f8eec8bfaac4660845cf8bd4ad5368",
+      "QUERY": "80867fcf3459a320b270a4ddcc8fbaaf6b6394b19fc829ef5caf84f2edbb3afa"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "case": "fib_updates_8",
+  "side": "P0",
+  "argv": [
+    "/home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe",
+    "--d4-search-log",
+    "/home/deagle/dependency-reuse/runs/si1b/release/fib_updates_8/audit/P0/search.tsv",
+    "--d1-manifest",
+    "/home/deagle/dependency-reuse/runs/si1b/release/fib_updates_8/audit/P0/model.tsv",
+    "--d3-layouts",
+    "--d41-identities",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--64",
+    "--unwind",
+    "10",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "harness.c"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/si1b/release/fib_updates_8/audit/P0/work",
+  "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+  "input_sha256": {
+    "program.c": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "harness.c": "a83ec85d1a3105f26025be5de55bc9c102ae78e8cad6e2b9dbcaf0182032928a"
+  },
+  "limits": {
+    "memory_bytes": 21474836480,
+    "timeout_seconds": 300
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC",
+    "DEAGLE_SI1B_CATALOG": "/home/deagle/dependency-reuse/runs/si1b/release/fib_updates_8/audit/P0/native.bin",
+    "DEAGLE_SI1B_TOKENS": "/home/deagle/dependency-reuse/runs/si1b/release/fib_updates_8/source/P0.tokens",
+    "DEAGLE_SI1B_AUDIT": "1",
+    "DEAGLE_SI1B_MODEL_ONLY": "1"
+  },
+  "target": "main.assertion.1",
+  "started_utc": "2026-11-28T06:24:18.684922+00:00",
+  "monotonic_start_ns": 265621784840851,
+  "exit_code": 77,
+  "timed_out": false,
+  "wall_ns": 85410815,
+  "user_s": 0.068829,
+  "system_s": 0.015993999999999998,
+  "peak_rss_kib": 27720,
+  "stdout_sha256": "b170e3a3fac36f4abb434041cbf071d25d2b389405701281c437279158aaf96c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

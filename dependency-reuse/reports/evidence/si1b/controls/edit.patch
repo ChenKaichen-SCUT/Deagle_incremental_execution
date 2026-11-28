@@ -1,0 +1,22 @@
+--- a/model.c
++++ b/model.c
+@@ -1,6 +1,7 @@
+ #include <assert.h>
+ #include <pthread.h>
+ extern unsigned nondet_uint(void);
++static volatile unsigned unrelated;
+ static unsigned a, b, sink;
+ struct pair { unsigned low; unsigned high; };
+ union word { unsigned complete; unsigned char bytes[4]; };
+@@ -24,10 +25,10 @@
+ {
+   pthread_t t[2];
+   a = nondet_uint();
++  unrelated = nondet_uint();
+   b = nondet_uint();
+   repeated();
+   sink = a;
+-  repeated();
+   pair.low = a;
+   saved.complete = b;
+   ptr = &pair.low;

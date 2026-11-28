@@ -1,0 +1,50 @@
+{
+  "used_union/auxiliary/added": {
+    "old_atom": 8547,
+    "old_image": -1,
+    "new_positive_image": 11950,
+    "witness": 23259,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:1219",
+    "operation": ">=",
+    "port_role": [
+      "lowering-role",
+      22256,
+      [
+        0,
+        "compare-prefix",
+        2,
+        1
+      ]
+    ],
+    "operand_route": [],
+    "owner": [
+      "owner",
+      1945,
+      "goto_instructions",
+      4,
+      0,
+      0
+    ],
+    "occurrence": [
+      "occurrence",
+      1731,
+      1922,
+      [],
+      1678
+    ],
+    "native_sites": [
+      [
+        "program.c",
+        8,
+        "reserve_seat",
+        "1:16:branch.conditional"
+      ],
+      [
+        "program.c",
+        6,
+        "reserve_seat",
+        "1:16:branch.conditional"
+      ]
+    ]
+  }
+}

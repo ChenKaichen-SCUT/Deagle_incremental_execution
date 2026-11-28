@@ -1,0 +1,1185 @@
+{
+  "P0": {
+    "checked_actual_boolean_port_rows": 9285,
+    "models": {
+      "canonical_sha256": "a5c8ee39813c506e72f87f8193f21dcd2e057a65e102e835eae781a1ef79c57e",
+      "rows": {
+        "A": 9285,
+        "C": 50065,
+        "DEAGLE-D1": 1,
+        "E": 83,
+        "EDGE": 386,
+        "F": 256,
+        "G": 8422,
+        "GUARD": 36,
+        "H": 36,
+        "IN": 51,
+        "K": 1,
+        "MEMBER": 81,
+        "N": 1,
+        "NODE": 81,
+        "OUT": 51,
+        "QUERY": 1,
+        "S": 100,
+        "SITE41": 100,
+        "TARGET": 1,
+        "TERM": 145,
+        "V": 239,
+        "VALUE_DEF": 152,
+        "X": 239
+      },
+      "ordered_stream_sha256": {
+        "C": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+        "A": "9cb312a7f87ef4181bff719d3ddd5fa1f71c2a68c73d292c0ab53e8e65547a80",
+        "G": "c0a8d501793fb9ad32115383a4102c11159b4b2c23725438c50b2a5afe59c7f1",
+        "EDGE": "c99633edd37ccacc26287210fcc00fceb1845a7d95132fd27d42ea0dd00db828",
+        "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+        "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+        "N": "b7e6c6153962046075515b7600287e6fe3926875002f676aed7d39adac29e366"
+      }
+    },
+    "full_manifest_sha256": "0f3d1a7fd253cc8ddede2b8837fc4e432b73a1555f8917c0ba0b6191d1c3542b",
+    "allocation_order_sha256": "c6fe3dcb2cbb394cac2981f6724c197221e101d3b78f17587fbc753f146872ad",
+    "legacy_cache_order_sha256": "79821f2700b990d7de87d61059d7d841143d0f3595b6656b00953707e1e02bc5",
+    "legacy_same_opcode_order": true,
+    "observer_rows": {
+      "R": 12319,
+      "M": 1029,
+      "H": 1069
+    },
+    "native_atoms": 12553,
+    "same_configuration_passive": {
+      "original": {
+        "allocation_ranges": "c6fe3dcb2cbb394cac2981f6724c197221e101d3b78f17587fbc753f146872ad",
+        "scope_counts": {
+          "B": 47493,
+          "Q": 2572
+        },
+        "scope_streams": {
+          "B": "c13b5c5a988358f84caef7b8da82f340a7a86a9b5f2a52b2b7586afac630a4cd",
+          "Q": "630bce09186a1393afd8580ac0f9434a60fe05ae526d65a76ff4bb8d40587fbc"
+        },
+        "ordered_outside_guard": "4b7239332c74f386e7928740d10a8b529eaf7859561976221caf53644f3eef7f",
+        "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+        "guard_visit_order": "f0a089c2c9580148f76a2a36eae65ad481929202a832b8fb52452f449aae2c5d",
+        "guard_events": 36,
+        "guard_hits": 0,
+        "rows": {
+          "NVAR": 12319,
+          "K": 2098,
+          "G": 8422,
+          "C": 50065,
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "GUARD": 36,
+          "A": 9285,
+          "QUERY": 1
+        },
+        "cache_instances": 1029,
+        "streams": {
+          "NVAR": "bdbc99b39a5d10ff15a5b19f8c6ff1bcbf60b1b27cc3afdbf8a688770744033b",
+          "K": "327f26cea83b6928c56bc94c737e1839f570b932bb12720777ce0575f0532ff5",
+          "G": "c0a8d501793fb9ad32115383a4102c11159b4b2c23725438c50b2a5afe59c7f1",
+          "C": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+          "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+          "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+          "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+          "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+          "EDGE": "c99633edd37ccacc26287210fcc00fceb1845a7d95132fd27d42ea0dd00db828",
+          "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+          "A": "2f7395fefd80a6006d732504a3536f6809f8eec8bfaac4660845cf8bd4ad5368",
+          "QUERY": "80867fcf3459a320b270a4ddcc8fbaaf6b6394b19fc829ef5caf84f2edbb3afa"
+        }
+      },
+      "off": {
+        "allocation_ranges": "c6fe3dcb2cbb394cac2981f6724c197221e101d3b78f17587fbc753f146872ad",
+        "scope_counts": {
+          "B": 47493,
+          "Q": 2572
+        },
+        "scope_streams": {
+          "B": "c13b5c5a988358f84caef7b8da82f340a7a86a9b5f2a52b2b7586afac630a4cd",
+          "Q": "630bce09186a1393afd8580ac0f9434a60fe05ae526d65a76ff4bb8d40587fbc"
+        },
+        "ordered_outside_guard": "4b7239332c74f386e7928740d10a8b529eaf7859561976221caf53644f3eef7f",
+        "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+        "guard_visit_order": "2a3690831ab2defdcc99d995e22958257eaa8d3adf0bda0eeb7aee65041301b4",
+        "guard_events": 36,
+        "guard_hits": 0,
+        "rows": {
+          "NVAR": 12319,
+          "K": 2098,
+          "G": 8422,
+          "C": 50065,
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "GUARD": 36,
+          "A": 9285,
+          "QUERY": 1
+        },
+        "cache_instances": 1029,
+        "streams": {
+          "NVAR": "bdbc99b39a5d10ff15a5b19f8c6ff1bcbf60b1b27cc3afdbf8a688770744033b",
+          "K": "327f26cea83b6928c56bc94c737e1839f570b932bb12720777ce0575f0532ff5",
+          "G": "c0a8d501793fb9ad32115383a4102c11159b4b2c23725438c50b2a5afe59c7f1",
+          "C": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+          "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+          "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+          "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+          "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+          "EDGE": "c99633edd37ccacc26287210fcc00fceb1845a7d95132fd27d42ea0dd00db828",
+          "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+          "A": "2f7395fefd80a6006d732504a3536f6809f8eec8bfaac4660845cf8bd4ad5368",
+          "QUERY": "80867fcf3459a320b270a4ddcc8fbaaf6b6394b19fc829ef5caf84f2edbb3afa"
+        }
+      },
+      "shadow": {
+        "allocation_ranges": "c6fe3dcb2cbb394cac2981f6724c197221e101d3b78f17587fbc753f146872ad",
+        "scope_counts": {
+          "B": 47493,
+          "Q": 2572
+        },
+        "scope_streams": {
+          "B": "c13b5c5a988358f84caef7b8da82f340a7a86a9b5f2a52b2b7586afac630a4cd",
+          "Q": "630bce09186a1393afd8580ac0f9434a60fe05ae526d65a76ff4bb8d40587fbc"
+        },
+        "ordered_outside_guard": "4b7239332c74f386e7928740d10a8b529eaf7859561976221caf53644f3eef7f",
+        "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+        "guard_visit_order": "143cddfcb11b95c197ab13d140b1ff44d0570a8731d82ccb5194f8dfd9190805",
+        "guard_events": 36,
+        "guard_hits": 0,
+        "rows": {
+          "NVAR": 12319,
+          "K": 2098,
+          "G": 8422,
+          "C": 50065,
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "GUARD": 36,
+          "A": 9285,
+          "QUERY": 1
+        },
+        "cache_instances": 1029,
+        "streams": {
+          "NVAR": "bdbc99b39a5d10ff15a5b19f8c6ff1bcbf60b1b27cc3afdbf8a688770744033b",
+          "K": "327f26cea83b6928c56bc94c737e1839f570b932bb12720777ce0575f0532ff5",
+          "G": "c0a8d501793fb9ad32115383a4102c11159b4b2c23725438c50b2a5afe59c7f1",
+          "C": "0f4d090c6dc211c6e06e0e99b78804ebb34a8908e5e4e5d7a15399b92886ea4e",
+          "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+          "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+          "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+          "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+          "EDGE": "c99633edd37ccacc26287210fcc00fceb1845a7d95132fd27d42ea0dd00db828",
+          "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+          "A": "2f7395fefd80a6006d732504a3536f6809f8eec8bfaac4660845cf8bd4ad5368",
+          "QUERY": "80867fcf3459a320b270a4ddcc8fbaaf6b6394b19fc829ef5caf84f2edbb3afa"
+        }
+      }
+    },
+    "manifest_and_default_shadow_catalog_byte_fields_equal": false,
+    "audit_raw_sha256": "cc0ae37a8bd96f40a9324e12b3c3d7a545205f9e0f6c5d25d6f7e1bfd1d0f69b",
+    "audit_row_counts": {
+      "J": 773,
+      "D": 421,
+      "O": 106,
+      "q": 2,
+      "I": 100,
+      "X": 239,
+      "b": 241,
+      "V": 243,
+      "F": 256,
+      "U": 3328,
+      "W": 141,
+      "E": 1314,
+      "T": 2695,
+      "A": 1647,
+      "L": 2695,
+      "N": 12319,
+      "B": 464,
+      "C": 1471,
+      "Y": 2098,
+      "R": 12372,
+      "Q": 4,
+      "P": 2,
+      "H": 256,
+      "G": 36,
+      "K": 17,
+      "M": 10,
+      "h": 188,
+      "Z": 1
+    },
+    "checks": {
+      "stock": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 187,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "frozen_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 187,
+            "different_positions": 6,
+            "spans": [
+              {
+                "first_zero_based": 36,
+                "last_zero_based": 41,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              }
+            ],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "stock_off_search": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 187,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      },
+      "shadow_vs_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 187,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      }
+    },
+    "native": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "trace_step_counts": {
+        "main.assertion.1": 187
+      },
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "queries": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is SATISFIABLE",
+          "reported_variables": 12553,
+          "live_clauses": 48363,
+          "early_adapter_return": false,
+          "native_cumulative": {
+            "sat_conflicts": 1442,
+            "decisions": 7652,
+            "sat_propagations": 1103863,
+            "theory_propagations": 3708,
+            "theory_cycle_conflicts": 25,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "native_delta_from_previous_snapshot": {
+            "sat_conflicts": 1442,
+            "decisions": 7652,
+            "sat_propagations": 1103863,
+            "theory_propagations": 3708,
+            "theory_cycle_conflicts": 25,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "adapter_entry_to_exit_delta": null,
+          "restarts": null,
+          "search_only_s": null,
+          "co_pairs_in_graph_at_return": 80
+        }
+      ]
+    },
+    "restarts": [
+      10
+    ],
+    "timing": {
+      "off": {
+        "wall_ns": 121806424,
+        "peak_rss_kib": 20224,
+        "user_s": 0.116307,
+        "system_s": 0.004672,
+        "exit_code": 10,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a"
+      },
+      "shadow": {
+        "wall_ns": 140201221,
+        "peak_rss_kib": 27716,
+        "user_s": 0.137561,
+        "system_s": 0.0020729999999999998,
+        "exit_code": 10,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 4905854,
+        "cache_role_ns": 8598667,
+        "serialize_ns": 368393,
+        "dedup_rows": 1704,
+        "bool_hits": 454,
+        "bool_misses": 864,
+        "bv_hits": 615,
+        "bv_misses": 165,
+        "missing_child_or_template": 0,
+        "owner_associations": 1656,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 11443094,
+        "catalog_bytes": 1156498
+      },
+      "audit": {
+        "wall_ns": 85410815,
+        "peak_rss_kib": 27720,
+        "user_s": 0.068829,
+        "system_s": 0.015993999999999998,
+        "exit_code": 77,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 5509776,
+        "cache_role_ns": 9152923,
+        "serialize_ns": 386283,
+        "dedup_rows": 1704,
+        "bool_hits": 454,
+        "bool_misses": 864,
+        "bv_hits": 615,
+        "bv_misses": 165,
+        "missing_child_or_template": 0,
+        "owner_associations": 1656,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 11483648,
+        "catalog_bytes": 1215242
+      }
+    }
+  },
+  "P1": {
+    "checked_actual_boolean_port_rows": 9285,
+    "models": {
+      "canonical_sha256": "bdbe7da287fad9ac9b5ad516818bb14bfca9de806b1830e0c14ff8f3457fe34a",
+      "rows": {
+        "A": 9285,
+        "C": 48329,
+        "DEAGLE-D1": 1,
+        "E": 83,
+        "EDGE": 386,
+        "F": 256,
+        "G": 7926,
+        "GUARD": 36,
+        "H": 36,
+        "IN": 51,
+        "K": 1,
+        "MEMBER": 81,
+        "N": 1,
+        "NODE": 81,
+        "OUT": 51,
+        "QUERY": 1,
+        "S": 100,
+        "SITE41": 100,
+        "TARGET": 1,
+        "TERM": 145,
+        "V": 239,
+        "VALUE_DEF": 152,
+        "X": 239
+      },
+      "ordered_stream_sha256": {
+        "C": "9292d490bf0c33e6b6ab8902edda7423132d8c7370238b2eb8b9d4f934ff44ea",
+        "A": "aa1d358465a893e96fcd6663aab989a919dfe411a7352df5cebe46661acfb15f",
+        "G": "6bcfc848de538c7dfa0878986abe28e40e9b99b2746e9f979f5b70edd7c542a0",
+        "EDGE": "d9b846a787236e3cf6f69f17cf7cc7f18acf131477349163a827174e228b98e0",
+        "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+        "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+        "N": "f68ed734124883f812469e22630b353c07c6a3bba6f433641bb3ec399583d096"
+      }
+    },
+    "full_manifest_sha256": "f7b93e7e65def056db1cde186dc9a8b10258106f838bf2fabcb403ab558eb0e2",
+    "allocation_order_sha256": "e363944f989bff1298c7f7c46bff6262b3bd0c92e8f4c3e6af8cf08c3882e54f",
+    "legacy_cache_order_sha256": "845bb060e240b7670d950bcfcc390c11f43d989de803a09406b1036cc91cb19b",
+    "legacy_same_opcode_order": true,
+    "observer_rows": {
+      "R": 11823,
+      "M": 1029,
+      "H": 1061
+    },
+    "native_atoms": 12057,
+    "same_configuration_passive": {
+      "original": {
+        "allocation_ranges": "e363944f989bff1298c7f7c46bff6262b3bd0c92e8f4c3e6af8cf08c3882e54f",
+        "scope_counts": {
+          "B": 45757,
+          "Q": 2572
+        },
+        "scope_streams": {
+          "B": "8b57f8c31dfc9f85c251bca48be2fdbe925ec27249db260afe79dc925ccc595b",
+          "Q": "b89bb1bb2354ece1ae100496cb82dcc2857f49002c98bcd9ced235fd4b0bff69"
+        },
+        "ordered_outside_guard": "c3cd0037603ad9360084d53b58654c09ff0d30d177f38c66ac89af38d073de5c",
+        "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+        "guard_visit_order": "b064587b7b260e1fa51dfcebeeea3281dacd904d8db166eac826e67125a74261",
+        "guard_events": 36,
+        "guard_hits": 0,
+        "rows": {
+          "NVAR": 11823,
+          "K": 2090,
+          "G": 7926,
+          "C": 48329,
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "GUARD": 36,
+          "A": 9285,
+          "QUERY": 1
+        },
+        "cache_instances": 1029,
+        "streams": {
+          "NVAR": "91b5be1934b7920579a090d1ae8f3908130734440454803e517ecc6506b98629",
+          "K": "f6d6e30e0d57d3cc7ae58cb409c40eefa093b6593b00e80e2cc7504089a9e734",
+          "G": "6bcfc848de538c7dfa0878986abe28e40e9b99b2746e9f979f5b70edd7c542a0",
+          "C": "9292d490bf0c33e6b6ab8902edda7423132d8c7370238b2eb8b9d4f934ff44ea",
+          "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+          "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+          "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+          "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+          "EDGE": "d9b846a787236e3cf6f69f17cf7cc7f18acf131477349163a827174e228b98e0",
+          "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+          "A": "93512c02f4a3f72f20a40437c8f1faff4a96f54309cc1fc26c9d83c294a3164f",
+          "QUERY": "e371f1f921e7a92f0f5841a53e3cdaeeb82079a90920a1b7cd1cbe7fa907663a"
+        }
+      },
+      "off": {
+        "allocation_ranges": "e363944f989bff1298c7f7c46bff6262b3bd0c92e8f4c3e6af8cf08c3882e54f",
+        "scope_counts": {
+          "B": 45757,
+          "Q": 2572
+        },
+        "scope_streams": {
+          "B": "8b57f8c31dfc9f85c251bca48be2fdbe925ec27249db260afe79dc925ccc595b",
+          "Q": "b89bb1bb2354ece1ae100496cb82dcc2857f49002c98bcd9ced235fd4b0bff69"
+        },
+        "ordered_outside_guard": "c3cd0037603ad9360084d53b58654c09ff0d30d177f38c66ac89af38d073de5c",
+        "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+        "guard_visit_order": "a9bb5a7f1e836e72f971afb878db7b290257e79c11cbf77fbf897e1b36576b61",
+        "guard_events": 36,
+        "guard_hits": 0,
+        "rows": {
+          "NVAR": 11823,
+          "K": 2090,
+          "G": 7926,
+          "C": 48329,
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "GUARD": 36,
+          "A": 9285,
+          "QUERY": 1
+        },
+        "cache_instances": 1029,
+        "streams": {
+          "NVAR": "91b5be1934b7920579a090d1ae8f3908130734440454803e517ecc6506b98629",
+          "K": "f6d6e30e0d57d3cc7ae58cb409c40eefa093b6593b00e80e2cc7504089a9e734",
+          "G": "6bcfc848de538c7dfa0878986abe28e40e9b99b2746e9f979f5b70edd7c542a0",
+          "C": "9292d490bf0c33e6b6ab8902edda7423132d8c7370238b2eb8b9d4f934ff44ea",
+          "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+          "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+          "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+          "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+          "EDGE": "d9b846a787236e3cf6f69f17cf7cc7f18acf131477349163a827174e228b98e0",
+          "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+          "A": "93512c02f4a3f72f20a40437c8f1faff4a96f54309cc1fc26c9d83c294a3164f",
+          "QUERY": "e371f1f921e7a92f0f5841a53e3cdaeeb82079a90920a1b7cd1cbe7fa907663a"
+        }
+      },
+      "shadow": {
+        "allocation_ranges": "e363944f989bff1298c7f7c46bff6262b3bd0c92e8f4c3e6af8cf08c3882e54f",
+        "scope_counts": {
+          "B": 45757,
+          "Q": 2572
+        },
+        "scope_streams": {
+          "B": "8b57f8c31dfc9f85c251bca48be2fdbe925ec27249db260afe79dc925ccc595b",
+          "Q": "b89bb1bb2354ece1ae100496cb82dcc2857f49002c98bcd9ced235fd4b0bff69"
+        },
+        "ordered_outside_guard": "c3cd0037603ad9360084d53b58654c09ff0d30d177f38c66ac89af38d073de5c",
+        "guard_hits_by_named_event": "6f00cb9dc245a71418bb21c06583afaae8ac5064ef892487d1b49fefc09e6b0d",
+        "guard_visit_order": "abcae33f0ffa2adace4a7aaed22230b615ff55ff310fb67912b770282db6771e",
+        "guard_events": 36,
+        "guard_hits": 0,
+        "rows": {
+          "NVAR": 11823,
+          "K": 2090,
+          "G": 7926,
+          "C": 48329,
+          "MEMBER": 81,
+          "NODE": 81,
+          "IN": 51,
+          "OUT": 51,
+          "EDGE": 386,
+          "GUARD": 36,
+          "A": 9285,
+          "QUERY": 1
+        },
+        "cache_instances": 1029,
+        "streams": {
+          "NVAR": "91b5be1934b7920579a090d1ae8f3908130734440454803e517ecc6506b98629",
+          "K": "f6d6e30e0d57d3cc7ae58cb409c40eefa093b6593b00e80e2cc7504089a9e734",
+          "G": "6bcfc848de538c7dfa0878986abe28e40e9b99b2746e9f979f5b70edd7c542a0",
+          "C": "9292d490bf0c33e6b6ab8902edda7423132d8c7370238b2eb8b9d4f934ff44ea",
+          "MEMBER": "17a7e140fca9f7dc5dda1aff5d496289aaed229d23c66e57f3e1ce2721e1b31b",
+          "NODE": "8ca2e8c435b4173d6885e71b2eb5e7a1d27b0aa1fbec2dc1bfd3318cb93c9e3c",
+          "IN": "644e9c5e959c5faf54ed569cde041ccf4d469583eb38d84691445e3f748a14c7",
+          "OUT": "664d21854ef32c6ff8d9ab40081e8ead6f2d8c6ae850cc5ae83a045bdbcfae0c",
+          "EDGE": "d9b846a787236e3cf6f69f17cf7cc7f18acf131477349163a827174e228b98e0",
+          "GUARD": "639fb9d1d5616237090f09c16a85622587c22410f2ac222662501815afdd5a21",
+          "A": "93512c02f4a3f72f20a40437c8f1faff4a96f54309cc1fc26c9d83c294a3164f",
+          "QUERY": "e371f1f921e7a92f0f5841a53e3cdaeeb82079a90920a1b7cd1cbe7fa907663a"
+        }
+      }
+    },
+    "manifest_and_default_shadow_catalog_byte_fields_equal": false,
+    "audit_raw_sha256": "0e5f9e7dc7b295a41457c5ab7f29f77b07c858d3e7acc38add0417c29c47c8f4",
+    "audit_row_counts": {
+      "J": 773,
+      "D": 421,
+      "O": 106,
+      "q": 2,
+      "I": 100,
+      "X": 239,
+      "b": 241,
+      "V": 243,
+      "F": 256,
+      "U": 3328,
+      "W": 141,
+      "E": 1314,
+      "T": 2695,
+      "A": 1647,
+      "L": 2695,
+      "N": 11823,
+      "B": 464,
+      "C": 1463,
+      "Y": 2090,
+      "R": 11860,
+      "Q": 4,
+      "P": 1,
+      "H": 256,
+      "G": 36,
+      "K": 17,
+      "M": 10,
+      "h": 188,
+      "Z": 1
+    },
+    "checks": {
+      "stock": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "frozen_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "stock_off_search": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      },
+      "shadow_vs_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion left <= 2584u && right <= 2584u",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "40"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ],
+            "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      }
+    },
+    "native": {
+      "properties": [
+        {
+          "description": "assertion left <= 2584u && right <= 2584u",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "40"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "trace_step_counts": {},
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "left_worker.0 file harness.c line 13 function left_worker thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "right_worker.0 file harness.c line 24 function right_worker thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "queries": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+          "reported_variables": 12057,
+          "live_clauses": 46627,
+          "early_adapter_return": false,
+          "native_cumulative": {
+            "sat_conflicts": 22702,
+            "decisions": 60369,
+            "sat_propagations": 28170688,
+            "theory_propagations": 7979,
+            "theory_cycle_conflicts": 23,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "native_delta_from_previous_snapshot": {
+            "sat_conflicts": 22702,
+            "decisions": 60369,
+            "sat_propagations": 28170688,
+            "theory_propagations": 7979,
+            "theory_cycle_conflicts": 23,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "adapter_entry_to_exit_delta": null,
+          "restarts": null,
+          "search_only_s": null,
+          "co_pairs_in_graph_at_return": 80
+        }
+      ]
+    },
+    "restarts": [
+      81
+    ],
+    "timing": {
+      "off": {
+        "wall_ns": 2039613023,
+        "peak_rss_kib": 30080,
+        "user_s": 2.018879,
+        "system_s": 0.020145,
+        "exit_code": 0,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a"
+      },
+      "shadow": {
+        "wall_ns": 2061161814,
+        "peak_rss_kib": 34176,
+        "user_s": 2.047159,
+        "system_s": 0.011984999999999999,
+        "exit_code": 0,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 4844307,
+        "cache_role_ns": 8491001,
+        "serialize_ns": 330791,
+        "dedup_rows": 1704,
+        "bool_hits": 454,
+        "bool_misses": 864,
+        "bv_hits": 607,
+        "bv_misses": 165,
+        "missing_child_or_template": 0,
+        "owner_associations": 1656,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 11265868,
+        "catalog_bytes": 1129942
+      },
+      "audit": {
+        "wall_ns": 82536630,
+        "peak_rss_kib": 27720,
+        "user_s": 0.081993,
+        "system_s": 0.0,
+        "exit_code": 77,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 5288622,
+        "cache_role_ns": 8708035,
+        "serialize_ns": 373481,
+        "dedup_rows": 1704,
+        "bool_hits": 454,
+        "bool_misses": 864,
+        "bv_hits": 607,
+        "bv_misses": 165,
+        "missing_child_or_template": 0,
+        "owner_associations": 1656,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 11258964,
+        "catalog_bytes": 1188462
+      }
+    }
+  }
+}

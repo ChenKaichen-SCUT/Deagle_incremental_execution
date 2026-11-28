@@ -1,0 +1,49 @@
+{
+  "direct_per_case": {
+    "fib_updates_8": 8953,
+    "circular-buffer": 473,
+    "airline_reservations_6": 3319,
+    "fib-snapshot-11": 29404
+  },
+  "used": {
+    "same": 26189,
+    "added": 3679,
+    "lost": 97674,
+    "different": 0,
+    "neither": 54785
+  },
+  "old_used_gaps": {
+    "RF": {
+      "old_gaps": 661,
+      "recovered": 0
+    },
+    "Guard": {
+      "old_gaps": 16,
+      "recovered": 0
+    },
+    "pointer_aggregate": {
+      "old_gaps": 22732,
+      "recovered": 0
+    },
+    "ssa_bit": {
+      "old_gaps": 291,
+      "recovered": 33
+    },
+    "ordinary_bool": {
+      "old_gaps": 0,
+      "recovered": 0
+    },
+    "fresh_free": {
+      "old_gaps": 8,
+      "recovered": 0
+    },
+    "auxiliary": {
+      "old_gaps": 34754,
+      "recovered": 3646
+    },
+    "unknown": {
+      "old_gaps": 2,
+      "recovered": 0
+    }
+  }
+}

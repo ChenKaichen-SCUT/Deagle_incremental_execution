@@ -1,0 +1,103 @@
+{
+  "used_union/ssa_bit/added": {
+    "old_atom": 330,
+    "old_image": -1,
+    "new_positive_image": 660,
+    "witness": 10964,
+    "allocation_site": "solvers/flattening/boolbv_map.cpp:59",
+    "operation": "symbol",
+    "port_role": [
+      "outer",
+      3222,
+      10356,
+      10419,
+      31
+    ],
+    "operand_route": [],
+    "owner": [
+      "producer",
+      2652,
+      "assign2",
+      [
+        "symbol",
+        2335
+      ],
+      7,
+      0
+    ],
+    "occurrence": [
+      "occurrence",
+      0,
+      0,
+      [],
+      2613
+    ],
+    "native_sites": [
+      [
+        "program.i",
+        713,
+        "__CPROVER__start",
+        "2:1614:6:symbol4:main15:6:symbol5:argc'71:10:address_of55:5:index15:6:symbol5:argv'27:8:constant1:011:signedbv:32"
+      ],
+      [
+        "program.i",
+        713,
+        "__CPROVER__start",
+        "2:1614:6:symbol4:main15:6:symbol5:argc'71:10:address_of55:5:index15:6:symbol5:argv'27:8:constant1:011:signedbv:32"
+      ]
+    ]
+  },
+  "used_union/auxiliary/added": {
+    "old_atom": 461,
+    "old_image": -1,
+    "new_positive_image": 922,
+    "witness": 111223,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:1219",
+    "operation": ">=",
+    "port_role": [
+      "lowering-role",
+      71055,
+      [
+        0,
+        "compare-prefix",
+        0,
+        3
+      ]
+    ],
+    "operand_route": [],
+    "owner": [
+      "owner",
+      2695,
+      "goto_instructions",
+      4,
+      0,
+      0
+    ],
+    "occurrence": [
+      "occurrence",
+      0,
+      2693,
+      [
+        [
+          2609,
+          0
+        ]
+      ],
+      2604
+    ],
+    "native_sites": [
+      [
+        "program.i",
+        706,
+        "fib",
+        "1:16:branch.conditional"
+      ],
+      [
+        "program.i",
+        706,
+        "fib",
+        "1:16:branch.conditional"
+      ]
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "version": "SI1B-shadow-1",
+  "elf": "af07dcf4b5f1c0cd547e116724c9313e2d0d580ef16a5f6a8a739f36880eeecd",
+  "body": "73c5dd7fe10e8e534f44840feb35486ac32644f78f349098f43ce9d73d069b90",
+  "bytes": 6687,
+  "source_sha256": "a27b9c5b7e94ccbc743536790bca99570e53d1bcaaaab652ad4e27e6c1674449",
+  "tokens": "74c7e72428fe9239b84c50cc14d911582c834e6d1f9ec4f0e4c6e5651d8ee23e",
+  "abi_args": [
+    "/home/deagle/dependency-reuse/runs/si1b/cache-control-final",
+    "AB"
+  ],
+  "inputs": {
+    "ports.c": "75ee09e6a84531c8f51bcb79bb8bd148ea9e8cdd21d3918d9cc75ba91134b9f7"
+  }
+}

@@ -1,0 +1,14 @@
+0x11d1 /home/deagle/dependency-reuse/runs/si1b/crash.so 
+0x424b0 /lib/x86_64-linux-gnu/libc.so.6 
+0x7f96c /lib/x86_64-linux-gnu/libc.so.6 fputs
+0xa735ec /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x6ef999 /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x5967c8 /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x594d44 /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x36b1f2 /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x3661ba /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x19e07f /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x18e629 /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 
+0x29d90 /lib/x86_64-linux-gnu/libc.so.6 
+0x29e40 /lib/x86_64-linux-gnu/libc.so.6 __libc_start_main
+0x19ec45 /home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe 

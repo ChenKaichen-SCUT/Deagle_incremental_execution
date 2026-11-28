@@ -1,0 +1,90 @@
+{
+  "accepted": 8953,
+  "wrong": 0,
+  "roles": {
+    "outer": 2304,
+    "returned": 221,
+    "lowering-role/adder-carry": 256,
+    "RF-write-read": 220,
+    "lowering-role/equal-bit": 5952
+  },
+  "examples": {
+    "outer": {
+      "old": 6,
+      "positive_image": 12,
+      "typed_witness": 1971,
+      "native_local_values": [
+        12,
+        12
+      ],
+      "templates": [
+        [],
+        []
+      ]
+    },
+    "returned": {
+      "old": 541,
+      "positive_image": 1082,
+      "typed_witness": 25305,
+      "native_local_values": [
+        1083,
+        1083
+      ],
+      "templates": [
+        [
+          866
+        ],
+        [
+          866
+        ]
+      ]
+    },
+    "lowering-role/adder-carry": {
+      "old": 2580,
+      "positive_image": 4168,
+      "typed_witness": 27721,
+      "native_local_values": [
+        5160,
+        4168
+      ],
+      "templates": [
+        [
+          806
+        ],
+        [
+          806
+        ]
+      ]
+    },
+    "RF-write-read": {
+      "old": 5074,
+      "positive_image": 9156,
+      "typed_witness": 1716,
+      "native_local_values": [
+        10148,
+        9156
+      ],
+      "templates": [
+        [],
+        []
+      ]
+    },
+    "lowering-role/equal-bit": {
+      "old": 5079,
+      "positive_image": 9166,
+      "typed_witness": 24904,
+      "native_local_values": [
+        10159,
+        9167
+      ],
+      "templates": [
+        [
+          1081
+        ],
+        [
+          1081
+        ]
+      ]
+    }
+  }
+}

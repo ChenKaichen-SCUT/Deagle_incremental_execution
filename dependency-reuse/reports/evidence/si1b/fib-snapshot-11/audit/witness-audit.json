@@ -1,0 +1,104 @@
+{
+  "accepted": 29404,
+  "wrong": 0,
+  "roles": {
+    "Guard": 75,
+    "outer": 16277,
+    "lowering-role/compare-prefix": 2400,
+    "returned": 426,
+    "lowering-role/adder-carry": 4725,
+    "RF-write-read": 5501
+  },
+  "examples": {
+    "Guard": {
+      "old": 1,
+      "positive_image": 2,
+      "typed_witness": 9720,
+      "native_local_values": [
+        2,
+        2
+      ],
+      "templates": [
+        [],
+        []
+      ]
+    },
+    "outer": {
+      "old": 299,
+      "positive_image": 598,
+      "typed_witness": 10933,
+      "native_local_values": [
+        598,
+        598
+      ],
+      "templates": [
+        [],
+        []
+      ]
+    },
+    "lowering-role/compare-prefix": {
+      "old": 461,
+      "positive_image": 922,
+      "typed_witness": 111223,
+      "native_local_values": [
+        922,
+        922
+      ],
+      "templates": [
+        [
+          7652
+        ],
+        [
+          7652
+        ]
+      ]
+    },
+    "returned": {
+      "old": 493,
+      "positive_image": 986,
+      "typed_witness": 111222,
+      "native_local_values": [
+        986,
+        986
+      ],
+      "templates": [
+        [
+          7652
+        ],
+        [
+          7652
+        ]
+      ]
+    },
+    "lowering-role/adder-carry": {
+      "old": 559,
+      "positive_image": 1118,
+      "typed_witness": 138528,
+      "native_local_values": [
+        1118,
+        1118
+      ],
+      "templates": [
+        [
+          7657
+        ],
+        [
+          7657
+        ]
+      ]
+    },
+    "RF-write-read": {
+      "old": 25488,
+      "positive_image": 50994,
+      "typed_witness": 4173,
+      "native_local_values": [
+        50976,
+        50994
+      ],
+      "templates": [
+        [],
+        []
+      ]
+    }
+  }
+}

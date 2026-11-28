@@ -1,0 +1,26 @@
+{
+  "all/auxiliary/added": {
+    "old_atom": 2582,
+    "old_image": -1,
+    "new_positive_image": 4172,
+    "witness": 27722,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:185",
+    "operation": "+"
+  },
+  "used_union/auxiliary/added": {
+    "old_atom": 2582,
+    "old_image": -1,
+    "new_positive_image": 4172,
+    "witness": 27722,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:185",
+    "operation": "+"
+  },
+  "permanent_conclusion/auxiliary/added": {
+    "old_atom": 3264,
+    "old_image": -1,
+    "new_positive_image": 5536,
+    "witness": 26773,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:185",
+    "operation": "+"
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "timing": {
+    "read_validate_ns": [
+      625705544,
+      625632703
+    ],
+    "source_ir_finalize_ns": [
+      7533933,
+      6774449
+    ],
+    "port_template_read_index_ns": [
+      544402950,
+      577721278
+    ],
+    "join_conflict_ns": 1628563127,
+    "process_to_outputs_ns": 4833123983,
+    "process_peak_RSS_KiB": 953068
+  },
+  "join": {
+    "shared_signed_proposals": 82202,
+    "accepted": 29404,
+    "unique_signed_proposals": 29404,
+    "visited_template_pairs": 18058,
+    "rejected_components": 128
+  },
+  "cache": [
+    {
+      "templates": 146869,
+      "explicit_role_positions": 191176,
+      "physical_value_entries": 364767,
+      "logical_first_owner_entries": 357849,
+      "logical_all_owner_entries": 582627,
+      "additional_owner_role_bindings": 224778,
+      "unique_owner_template_associations": 172421,
+      "shared_child_references": 134258,
+      "unique_native_owner_roots": 19774,
+      "cache_hits": 13998,
+      "reused_templates": 1004,
+      "reused_uncaptured_allocations": 0,
+      "uncertified_cached_path_values": 6887,
+      "cache_descendant_atoms": 19265
+    },
+    {
+      "templates": 146878,
+      "explicit_role_positions": 191217,
+      "physical_value_entries": 364914,
+      "logical_first_owner_entries": 357996,
+      "logical_all_owner_entries": 583661,
+      "additional_owner_role_bindings": 225665,
+      "unique_owner_template_associations": 173160,
+      "shared_child_references": 134265,
+      "unique_native_owner_roots": 19784,
+      "cache_hits": 14007,
+      "reused_templates": 1007,
+      "reused_uncaptured_allocations": 0,
+      "uncertified_cached_path_values": 6887,
+      "cache_descendant_atoms": 19208
+    }
+  ],
+  "sources": [
+    {
+      "ambiguous_declaration": 9,
+      "ambiguous_or_unsourced_sites": 14,
+      "ambiguous_or_unsourced_contexts": 18,
+      "ambiguous_event": 0,
+      "CACHED_INTERNAL_ORIGIN_MISSING": 1
+    },
+    {
+      "ambiguous_declaration": 9,
+      "ambiguous_or_unsourced_sites": 14,
+      "ambiguous_or_unsourced_contexts": 18,
+      "ambiguous_event": 0,
+      "CACHED_INTERNAL_ORIGIN_MISSING": 1
+    }
+  ],
+  "digest": "88e98325810b6d1e4753aa53595b69af15e668bfe1d3142f18ab7b42df2f1c21"
+}

@@ -1,0 +1,1177 @@
+{
+  "P0": {
+    "checked_actual_boolean_port_rows": 45617,
+    "models": {
+      "canonical_sha256": "ce045adf42c23b11dc0d0741af7fd59fc33eee2f43d0a2ca9f5ca20f8a6bb85c",
+      "rows": {
+        "A": 45617,
+        "A_LAYOUT": 74,
+        "C": 910797,
+        "DEAGLE-D1": 1,
+        "E": 162,
+        "EDGE": 931,
+        "EVENT_LAYOUT": 49,
+        "F": 734,
+        "G": 178105,
+        "GUARD": 66,
+        "H": 66,
+        "IN": 35,
+        "K": 1,
+        "LAYOUT": 1,
+        "MEMBER": 132,
+        "N": 1,
+        "NODE": 132,
+        "OUT": 35,
+        "QUERY": 1,
+        "S": 106,
+        "SITE41": 106,
+        "TARGET": 1,
+        "TERM": 315,
+        "V": 473,
+        "VALUE_DEF": 326,
+        "V_LAYOUT": 98,
+        "X": 557
+      },
+      "ordered_stream_sha256": {
+        "C": "e035f90a0fcd6ff14443072fc46a3641637f2d4275a27e1c2b55428f30ece1ed",
+        "A": "22521faf97d4f2692c27a39ec5f886bf3a1a16428d7abf3176daf6d2657677c5",
+        "G": "5da6ef0ff6b5ce7ee557fb2906c34fcd186d0e14b10ecfa338bb33c51456e605",
+        "EDGE": "42b390e76f01c73b316249ea9ca77db65eb81e12e52f3d2172e6c2e3ef8402f6",
+        "GUARD": "e50bd77bff7a8eab3287597aa8e86ce3fdc0d4a7abb40ffa93b64d2b230bd0a8",
+        "NODE": "52f61c62c6c60203502a8955b65f45ff2a42c655cc1509233492bb28f95d8245",
+        "N": "3d75df0f8d94b7cee1d7498d294590b28b4bc7e869b2cc06d74a83371aff896b"
+      }
+    },
+    "full_manifest_sha256": "d2922e16eccda4326269e30fc9c61707e12715b6f1706f82cf5939b406691866",
+    "allocation_order_sha256": "41f383c8cf83e64ccbb68e4644d63b1eb8abde14d15e5fc43520a0f52dc5da3b",
+    "legacy_cache_order_sha256": "44d9d75ae99875160ed605a1c334f7f9cd0e807c7d366464936709381d14e0ff",
+    "legacy_same_opcode_order": false,
+    "observer_rows": {
+      "R": 198374,
+      "M": 7956,
+      "H": 13565
+    },
+    "native_atoms": 199090,
+    "same_configuration_passive": {
+      "original": {
+        "allocation_ranges": "41f383c8cf83e64ccbb68e4644d63b1eb8abde14d15e5fc43520a0f52dc5da3b",
+        "scope_counts": {
+          "B": 866692,
+          "Q": 44105
+        },
+        "scope_streams": {
+          "B": "e418c4b523f536752780337a3a9054ac12247380a077ca406048d093adbe06b6",
+          "Q": "1e2b5a4b8d54ae18e621a22d2b7731caec4e31997a9b2272f9ff166b3c0dee32"
+        },
+        "ordered_outside_guard": "fcd4d6a6996751d86d931210d27379dd222eb5b236aef995dcbafede46f457ff",
+        "guard_hits_by_named_event": "2d40336c14e11656cd008db269cda0ee9ad281cd65079f9944a9fd5abd0d3001",
+        "guard_visit_order": "42b61575fbb11347ff571b6926af0c0dc8ad7911bbce4e24be92dc58e94ff2cf",
+        "guard_events": 66,
+        "guard_hits": 36,
+        "rows": {
+          "NVAR": 198374,
+          "K": 21521,
+          "G": 178105,
+          "C": 910797,
+          "MEMBER": 132,
+          "NODE": 132,
+          "IN": 35,
+          "OUT": 35,
+          "EDGE": 931,
+          "GUARD": 66,
+          "A": 45617,
+          "QUERY": 1
+        },
+        "cache_instances": 7956,
+        "streams": {
+          "NVAR": "a651a14978abacc7edd7f835d6ccccdd1b7dbf8fb6854b64b40f0dd12ed30a1b",
+          "K": "10c6a6e755d999a16905b7615aaf188eaf9ce016bcd7aad63146c28d75fb3d0f",
+          "G": "5da6ef0ff6b5ce7ee557fb2906c34fcd186d0e14b10ecfa338bb33c51456e605",
+          "C": "e035f90a0fcd6ff14443072fc46a3641637f2d4275a27e1c2b55428f30ece1ed",
+          "MEMBER": "55102d4d578c8ad1b03d127fc0a861c2428d9269c179e4bb8a2a2cea367a8585",
+          "NODE": "52f61c62c6c60203502a8955b65f45ff2a42c655cc1509233492bb28f95d8245",
+          "IN": "1e6493b82791c99a6019df095961d503c6e002b1e686062567df83770742b932",
+          "OUT": "2c78e0bdd1fed33086c68a1b52a45e51414eb5e98f9afe36a4f4deff93e526e0",
+          "EDGE": "42b390e76f01c73b316249ea9ca77db65eb81e12e52f3d2172e6c2e3ef8402f6",
+          "GUARD": "e50bd77bff7a8eab3287597aa8e86ce3fdc0d4a7abb40ffa93b64d2b230bd0a8",
+          "A": "4df3762510d825450b476b1f39014f0037c736aaf5468efa7599ad4defb1cae1",
+          "QUERY": "0acc472dbc9c3e906f84e599f7b46217c301e6de26107757273d40066f383f07"
+        }
+      },
+      "off": {
+        "allocation_ranges": "41f383c8cf83e64ccbb68e4644d63b1eb8abde14d15e5fc43520a0f52dc5da3b",
+        "scope_counts": {
+          "B": 866692,
+          "Q": 44105
+        },
+        "scope_streams": {
+          "B": "e418c4b523f536752780337a3a9054ac12247380a077ca406048d093adbe06b6",
+          "Q": "1e2b5a4b8d54ae18e621a22d2b7731caec4e31997a9b2272f9ff166b3c0dee32"
+        },
+        "ordered_outside_guard": "fcd4d6a6996751d86d931210d27379dd222eb5b236aef995dcbafede46f457ff",
+        "guard_hits_by_named_event": "2d40336c14e11656cd008db269cda0ee9ad281cd65079f9944a9fd5abd0d3001",
+        "guard_visit_order": "42b61575fbb11347ff571b6926af0c0dc8ad7911bbce4e24be92dc58e94ff2cf",
+        "guard_events": 66,
+        "guard_hits": 36,
+        "rows": {
+          "NVAR": 198374,
+          "K": 21521,
+          "G": 178105,
+          "C": 910797,
+          "MEMBER": 132,
+          "NODE": 132,
+          "IN": 35,
+          "OUT": 35,
+          "EDGE": 931,
+          "GUARD": 66,
+          "A": 45617,
+          "QUERY": 1
+        },
+        "cache_instances": 7956,
+        "streams": {
+          "NVAR": "a651a14978abacc7edd7f835d6ccccdd1b7dbf8fb6854b64b40f0dd12ed30a1b",
+          "K": "10c6a6e755d999a16905b7615aaf188eaf9ce016bcd7aad63146c28d75fb3d0f",
+          "G": "5da6ef0ff6b5ce7ee557fb2906c34fcd186d0e14b10ecfa338bb33c51456e605",
+          "C": "e035f90a0fcd6ff14443072fc46a3641637f2d4275a27e1c2b55428f30ece1ed",
+          "MEMBER": "55102d4d578c8ad1b03d127fc0a861c2428d9269c179e4bb8a2a2cea367a8585",
+          "NODE": "52f61c62c6c60203502a8955b65f45ff2a42c655cc1509233492bb28f95d8245",
+          "IN": "1e6493b82791c99a6019df095961d503c6e002b1e686062567df83770742b932",
+          "OUT": "2c78e0bdd1fed33086c68a1b52a45e51414eb5e98f9afe36a4f4deff93e526e0",
+          "EDGE": "42b390e76f01c73b316249ea9ca77db65eb81e12e52f3d2172e6c2e3ef8402f6",
+          "GUARD": "e50bd77bff7a8eab3287597aa8e86ce3fdc0d4a7abb40ffa93b64d2b230bd0a8",
+          "A": "4df3762510d825450b476b1f39014f0037c736aaf5468efa7599ad4defb1cae1",
+          "QUERY": "0acc472dbc9c3e906f84e599f7b46217c301e6de26107757273d40066f383f07"
+        }
+      },
+      "shadow": {
+        "allocation_ranges": "41f383c8cf83e64ccbb68e4644d63b1eb8abde14d15e5fc43520a0f52dc5da3b",
+        "scope_counts": {
+          "B": 866692,
+          "Q": 44105
+        },
+        "scope_streams": {
+          "B": "e418c4b523f536752780337a3a9054ac12247380a077ca406048d093adbe06b6",
+          "Q": "1e2b5a4b8d54ae18e621a22d2b7731caec4e31997a9b2272f9ff166b3c0dee32"
+        },
+        "ordered_outside_guard": "fcd4d6a6996751d86d931210d27379dd222eb5b236aef995dcbafede46f457ff",
+        "guard_hits_by_named_event": "2d40336c14e11656cd008db269cda0ee9ad281cd65079f9944a9fd5abd0d3001",
+        "guard_visit_order": "38952c024417968cf0ad987805477dfc838aabc16c852ae30510238707107bee",
+        "guard_events": 66,
+        "guard_hits": 36,
+        "rows": {
+          "NVAR": 198374,
+          "K": 21521,
+          "G": 178105,
+          "C": 910797,
+          "MEMBER": 132,
+          "NODE": 132,
+          "IN": 35,
+          "OUT": 35,
+          "EDGE": 931,
+          "GUARD": 66,
+          "A": 45617,
+          "QUERY": 1
+        },
+        "cache_instances": 7956,
+        "streams": {
+          "NVAR": "a651a14978abacc7edd7f835d6ccccdd1b7dbf8fb6854b64b40f0dd12ed30a1b",
+          "K": "f99835da7b4630280dd72076127cbc867575f4ff9ca1226671ef1d10635302d9",
+          "G": "5da6ef0ff6b5ce7ee557fb2906c34fcd186d0e14b10ecfa338bb33c51456e605",
+          "C": "e035f90a0fcd6ff14443072fc46a3641637f2d4275a27e1c2b55428f30ece1ed",
+          "MEMBER": "55102d4d578c8ad1b03d127fc0a861c2428d9269c179e4bb8a2a2cea367a8585",
+          "NODE": "52f61c62c6c60203502a8955b65f45ff2a42c655cc1509233492bb28f95d8245",
+          "IN": "1e6493b82791c99a6019df095961d503c6e002b1e686062567df83770742b932",
+          "OUT": "2c78e0bdd1fed33086c68a1b52a45e51414eb5e98f9afe36a4f4deff93e526e0",
+          "EDGE": "42b390e76f01c73b316249ea9ca77db65eb81e12e52f3d2172e6c2e3ef8402f6",
+          "GUARD": "e50bd77bff7a8eab3287597aa8e86ce3fdc0d4a7abb40ffa93b64d2b230bd0a8",
+          "A": "4df3762510d825450b476b1f39014f0037c736aaf5468efa7599ad4defb1cae1",
+          "QUERY": "0acc472dbc9c3e906f84e599f7b46217c301e6de26107757273d40066f383f07"
+        }
+      }
+    },
+    "manifest_and_default_shadow_catalog_byte_fields_equal": false,
+    "audit_raw_sha256": "9f1df87f4beca46386e4fe978aa7949a5bb65b447d81e571aa62c8af2252cfbf",
+    "audit_row_counts": {
+      "J": 962,
+      "D": 424,
+      "O": 116,
+      "q": 2,
+      "I": 106,
+      "X": 557,
+      "b": 534,
+      "V": 509,
+      "F": 734,
+      "U": 7088,
+      "W": 325,
+      "E": 8757,
+      "T": 11812,
+      "A": 3823,
+      "L": 11812,
+      "N": 198374,
+      "B": 1198,
+      "C": 15770,
+      "Y": 21521,
+      "R": 195619,
+      "Q": 3,
+      "P": 1,
+      "H": 734,
+      "G": 66,
+      "K": 28,
+      "M": 30,
+      "h": 855,
+      "Z": 1
+    },
+    "checks": {
+      "stock": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 516,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "frozen_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 516,
+            "different_positions": 30,
+            "spans": [
+              {
+                "first_zero_based": 38,
+                "last_zero_based": 43,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              },
+              {
+                "first_zero_based": 92,
+                "last_zero_based": 97,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              },
+              {
+                "first_zero_based": 119,
+                "last_zero_based": 124,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              },
+              {
+                "first_zero_based": 146,
+                "last_zero_based": 151,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              },
+              {
+                "first_zero_based": 173,
+                "last_zero_based": 178,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              }
+            ],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "stock_off_search": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 516,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      },
+      "shadow_vs_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "main.assertion.1": {
+            "total_steps": 516,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      }
+    },
+    "native": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "trace_step_counts": {
+        "main.assertion.1": 516
+      },
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "queries": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is SATISFIABLE",
+          "reported_variables": 199090,
+          "live_clauses": 880094,
+          "early_adapter_return": false,
+          "native_cumulative": {
+            "sat_conflicts": 42244,
+            "decisions": 87181,
+            "sat_propagations": 58423777,
+            "theory_propagations": 307192,
+            "theory_cycle_conflicts": 2782,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "native_delta_from_previous_snapshot": {
+            "sat_conflicts": 42244,
+            "decisions": 87181,
+            "sat_propagations": 58423777,
+            "theory_propagations": 307192,
+            "theory_cycle_conflicts": 2782,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "adapter_entry_to_exit_delta": null,
+          "restarts": null,
+          "search_only_s": null,
+          "co_pairs_in_graph_at_return": 368
+        }
+      ]
+    },
+    "restarts": [
+      127
+    ],
+    "timing": {
+      "off": {
+        "wall_ns": 5927312461,
+        "peak_rss_kib": 113280,
+        "user_s": 5.833572,
+        "system_s": 0.084534,
+        "exit_code": 10,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a"
+      },
+      "shadow": {
+        "wall_ns": 6180291233,
+        "peak_rss_kib": 150152,
+        "user_s": 6.094554,
+        "system_s": 0.08358299999999999,
+        "exit_code": 10,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 17579887,
+        "cache_role_ns": 128385129,
+        "serialize_ns": 4573520,
+        "dedup_rows": 4674,
+        "bool_hits": 11482,
+        "bool_misses": 7578,
+        "bv_hits": 2083,
+        "bv_misses": 378,
+        "missing_child_or_template": 1,
+        "owner_associations": 3843,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 17407334,
+        "catalog_bytes": 12284420
+      },
+      "audit": {
+        "wall_ns": 484205258,
+        "peak_rss_kib": 124860,
+        "user_s": 0.421709,
+        "system_s": 0.061888,
+        "exit_code": 77,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 16983654,
+        "cache_role_ns": 140271883,
+        "serialize_ns": 3961175,
+        "dedup_rows": 4674,
+        "bool_hits": 11482,
+        "bool_misses": 7578,
+        "bv_hits": 2083,
+        "bv_misses": 378,
+        "missing_child_or_template": 1,
+        "owner_associations": 3843,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 17910355,
+        "catalog_bytes": 12887008
+      }
+    }
+  },
+  "P1": {
+    "checked_actual_boolean_port_rows": 32159,
+    "models": {
+      "canonical_sha256": "bf3a923a3cfd5222081aafb655054e6801dfa7f8cc57e221e1f26e057eb731b7",
+      "rows": {
+        "A": 32159,
+        "A_LAYOUT": 38,
+        "C": 287511,
+        "DEAGLE-D1": 1,
+        "E": 126,
+        "EDGE": 481,
+        "EVENT_LAYOUT": 25,
+        "F": 332,
+        "G": 55579,
+        "GUARD": 54,
+        "H": 54,
+        "IN": 23,
+        "K": 1,
+        "LAYOUT": 1,
+        "MEMBER": 108,
+        "N": 1,
+        "NODE": 108,
+        "OUT": 23,
+        "QUERY": 1,
+        "S": 104,
+        "SITE41": 104,
+        "TARGET": 1,
+        "TERM": 261,
+        "V": 413,
+        "VALUE_DEF": 290,
+        "V_LAYOUT": 50,
+        "X": 467
+      },
+      "ordered_stream_sha256": {
+        "C": "b0d6387dbcd56d4975d742e251dde88c82db3057cef4c1922749d3a71811960d",
+        "A": "415bdd809806603aa346691d5143e56b5877232b19f44636cb44a04be4ca0765",
+        "G": "07e83505afe713cfbae071e0dc82d9c763fbd5bb496c6c338cf361f5438d5ec6",
+        "EDGE": "2c222563d302623c69a26df36563fba8cee7998a18418a16ca7c8c61e86f3d64",
+        "GUARD": "40e5afef237d1625e141b32cbe1960cc9383d91952fb3f3cdc5d2e633059f3ee",
+        "NODE": "db7f43ebbb6c929a32f5c0906bc137737040bfa1b77e6b79853fab9264e84903",
+        "N": "4217681409a75325a542b7c497d11939e3092bc64428272c4b945429ccb42f8f"
+      }
+    },
+    "full_manifest_sha256": "63e593be3493ea928fc96de65df5d3dcd950a26b4a768f99cc082df40abfd74f",
+    "allocation_order_sha256": "2d0eacd37bbb8c25181765cfb9b422a09c5a012a6f77a757ce70acc17436a321",
+    "legacy_cache_order_sha256": "78a2b25b0e7571d75e697ec67e15b40bfe946e1cf4b85a2fd4b0cbad1ea85052",
+    "legacy_same_opcode_order": false,
+    "observer_rows": {
+      "R": 68918,
+      "M": 6636,
+      "H": 11333
+    },
+    "native_atoms": 69634,
+    "same_configuration_passive": {
+      "original": {
+        "allocation_ranges": "2d0eacd37bbb8c25181765cfb9b422a09c5a012a6f77a757ce70acc17436a321",
+        "scope_counts": {
+          "B": 243406,
+          "Q": 44105
+        },
+        "scope_streams": {
+          "B": "142781043e5810032c5cf6017a66a9eb71ccc0893a3e4423ae2482c12d005cf2",
+          "Q": "80777ace6f29e7f8f7c4d0c2168d49e97cf35bc1335df5a8e8dc9f2c58e59c97"
+        },
+        "ordered_outside_guard": "c63f7a75eef0c40cf7fadb2a1e1360ccbfb4e9580a4695b2f446081402b4f708",
+        "guard_hits_by_named_event": "eed7fbfa114607962752af157d7d70ec89081ee1af85d009f64f7f7d42fda4a7",
+        "guard_visit_order": "3953ca23df9ea70216fce42608b34cda890234c01e1ef4dd8cbc7ebae26d873f",
+        "guard_events": 54,
+        "guard_hits": 24,
+        "rows": {
+          "NVAR": 68918,
+          "K": 17969,
+          "G": 55579,
+          "C": 287511,
+          "MEMBER": 108,
+          "NODE": 108,
+          "IN": 23,
+          "OUT": 23,
+          "EDGE": 481,
+          "GUARD": 54,
+          "A": 32159,
+          "QUERY": 1
+        },
+        "cache_instances": 6636,
+        "streams": {
+          "NVAR": "31be119a3673fabfb972baa59051df22d47aa0a6e0afa010b851ce73576c4cb1",
+          "K": "15455b78bf2fba013d1f7ea6d17c3cdf0ea355770bde1c8829b38f55201c331a",
+          "G": "07e83505afe713cfbae071e0dc82d9c763fbd5bb496c6c338cf361f5438d5ec6",
+          "C": "b0d6387dbcd56d4975d742e251dde88c82db3057cef4c1922749d3a71811960d",
+          "MEMBER": "923c566ef2eef379c845e092bd25247deeb6cc2b6ddbd798e74df510ea2fa074",
+          "NODE": "db7f43ebbb6c929a32f5c0906bc137737040bfa1b77e6b79853fab9264e84903",
+          "IN": "1bb620a6d2bc490a957df66a1b7a53bb3e9cd2f68f0c9d0484aed0281788e5c8",
+          "OUT": "0693f69420a0d81fd9ada88dc5004b9839e3d00e7dc7989312d63fa058296958",
+          "EDGE": "2c222563d302623c69a26df36563fba8cee7998a18418a16ca7c8c61e86f3d64",
+          "GUARD": "40e5afef237d1625e141b32cbe1960cc9383d91952fb3f3cdc5d2e633059f3ee",
+          "A": "f1f0e48933e7983811e602da9f3a23c3223ae5b805bbf89532add1b978eeb82d",
+          "QUERY": "e4684908846308e905ffdc278d0307965b02a6523abdb99c74c200f5a307f79d"
+        }
+      },
+      "off": {
+        "allocation_ranges": "2d0eacd37bbb8c25181765cfb9b422a09c5a012a6f77a757ce70acc17436a321",
+        "scope_counts": {
+          "B": 243406,
+          "Q": 44105
+        },
+        "scope_streams": {
+          "B": "142781043e5810032c5cf6017a66a9eb71ccc0893a3e4423ae2482c12d005cf2",
+          "Q": "80777ace6f29e7f8f7c4d0c2168d49e97cf35bc1335df5a8e8dc9f2c58e59c97"
+        },
+        "ordered_outside_guard": "c63f7a75eef0c40cf7fadb2a1e1360ccbfb4e9580a4695b2f446081402b4f708",
+        "guard_hits_by_named_event": "eed7fbfa114607962752af157d7d70ec89081ee1af85d009f64f7f7d42fda4a7",
+        "guard_visit_order": "3953ca23df9ea70216fce42608b34cda890234c01e1ef4dd8cbc7ebae26d873f",
+        "guard_events": 54,
+        "guard_hits": 24,
+        "rows": {
+          "NVAR": 68918,
+          "K": 17969,
+          "G": 55579,
+          "C": 287511,
+          "MEMBER": 108,
+          "NODE": 108,
+          "IN": 23,
+          "OUT": 23,
+          "EDGE": 481,
+          "GUARD": 54,
+          "A": 32159,
+          "QUERY": 1
+        },
+        "cache_instances": 6636,
+        "streams": {
+          "NVAR": "31be119a3673fabfb972baa59051df22d47aa0a6e0afa010b851ce73576c4cb1",
+          "K": "15455b78bf2fba013d1f7ea6d17c3cdf0ea355770bde1c8829b38f55201c331a",
+          "G": "07e83505afe713cfbae071e0dc82d9c763fbd5bb496c6c338cf361f5438d5ec6",
+          "C": "b0d6387dbcd56d4975d742e251dde88c82db3057cef4c1922749d3a71811960d",
+          "MEMBER": "923c566ef2eef379c845e092bd25247deeb6cc2b6ddbd798e74df510ea2fa074",
+          "NODE": "db7f43ebbb6c929a32f5c0906bc137737040bfa1b77e6b79853fab9264e84903",
+          "IN": "1bb620a6d2bc490a957df66a1b7a53bb3e9cd2f68f0c9d0484aed0281788e5c8",
+          "OUT": "0693f69420a0d81fd9ada88dc5004b9839e3d00e7dc7989312d63fa058296958",
+          "EDGE": "2c222563d302623c69a26df36563fba8cee7998a18418a16ca7c8c61e86f3d64",
+          "GUARD": "40e5afef237d1625e141b32cbe1960cc9383d91952fb3f3cdc5d2e633059f3ee",
+          "A": "f1f0e48933e7983811e602da9f3a23c3223ae5b805bbf89532add1b978eeb82d",
+          "QUERY": "e4684908846308e905ffdc278d0307965b02a6523abdb99c74c200f5a307f79d"
+        }
+      },
+      "shadow": {
+        "allocation_ranges": "2d0eacd37bbb8c25181765cfb9b422a09c5a012a6f77a757ce70acc17436a321",
+        "scope_counts": {
+          "B": 243406,
+          "Q": 44105
+        },
+        "scope_streams": {
+          "B": "142781043e5810032c5cf6017a66a9eb71ccc0893a3e4423ae2482c12d005cf2",
+          "Q": "80777ace6f29e7f8f7c4d0c2168d49e97cf35bc1335df5a8e8dc9f2c58e59c97"
+        },
+        "ordered_outside_guard": "c63f7a75eef0c40cf7fadb2a1e1360ccbfb4e9580a4695b2f446081402b4f708",
+        "guard_hits_by_named_event": "eed7fbfa114607962752af157d7d70ec89081ee1af85d009f64f7f7d42fda4a7",
+        "guard_visit_order": "1fb7303658bc6567191a6fa5e9e0cb388d8e67966f60e77a292e93e7b83e616e",
+        "guard_events": 54,
+        "guard_hits": 24,
+        "rows": {
+          "NVAR": 68918,
+          "K": 17969,
+          "G": 55579,
+          "C": 287511,
+          "MEMBER": 108,
+          "NODE": 108,
+          "IN": 23,
+          "OUT": 23,
+          "EDGE": 481,
+          "GUARD": 54,
+          "A": 32159,
+          "QUERY": 1
+        },
+        "cache_instances": 6636,
+        "streams": {
+          "NVAR": "31be119a3673fabfb972baa59051df22d47aa0a6e0afa010b851ce73576c4cb1",
+          "K": "d02efaf9ecb620423f0306b0b63f011b88ac9ac07329751fe38ca0ce5080d807",
+          "G": "07e83505afe713cfbae071e0dc82d9c763fbd5bb496c6c338cf361f5438d5ec6",
+          "C": "b0d6387dbcd56d4975d742e251dde88c82db3057cef4c1922749d3a71811960d",
+          "MEMBER": "923c566ef2eef379c845e092bd25247deeb6cc2b6ddbd798e74df510ea2fa074",
+          "NODE": "db7f43ebbb6c929a32f5c0906bc137737040bfa1b77e6b79853fab9264e84903",
+          "IN": "1bb620a6d2bc490a957df66a1b7a53bb3e9cd2f68f0c9d0484aed0281788e5c8",
+          "OUT": "0693f69420a0d81fd9ada88dc5004b9839e3d00e7dc7989312d63fa058296958",
+          "EDGE": "2c222563d302623c69a26df36563fba8cee7998a18418a16ca7c8c61e86f3d64",
+          "GUARD": "40e5afef237d1625e141b32cbe1960cc9383d91952fb3f3cdc5d2e633059f3ee",
+          "A": "f1f0e48933e7983811e602da9f3a23c3223ae5b805bbf89532add1b978eeb82d",
+          "QUERY": "e4684908846308e905ffdc278d0307965b02a6523abdb99c74c200f5a307f79d"
+        }
+      }
+    },
+    "manifest_and_default_shadow_catalog_byte_fields_equal": false,
+    "audit_raw_sha256": "e1f55284df13635ec5054dcd96e22773328225a09b37fb0eea852fc2c609d129",
+    "audit_row_counts": {
+      "J": 930,
+      "D": 424,
+      "O": 114,
+      "q": 2,
+      "I": 104,
+      "X": 467,
+      "b": 474,
+      "V": 437,
+      "F": 332,
+      "U": 5936,
+      "W": 289,
+      "E": 7035,
+      "T": 8824,
+      "A": 2341,
+      "L": 8824,
+      "N": 68918,
+      "B": 736,
+      "C": 12494,
+      "Y": 17969,
+      "R": 66145,
+      "Q": 3,
+      "P": 1,
+      "H": 332,
+      "G": 54,
+      "K": 28,
+      "M": 30,
+      "h": 807,
+      "Z": 1
+    },
+    "checks": {
+      "stock": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "frozen_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "stock_off_search": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      },
+      "shadow_vs_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion sold == capacity",
+              "property": "main.assertion.1",
+              "sourceLocation": {
+                "file": "harness.c",
+                "function": "main",
+                "line": "24"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "main.0 file harness.c line 20 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ],
+            "main.1 file harness.c line 22 function main thread 0": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 1 VCC(s), 1 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      }
+    },
+    "native": {
+      "properties": [
+        {
+          "description": "assertion sold == capacity",
+          "property": "main.assertion.1",
+          "sourceLocation": {
+            "file": "harness.c",
+            "function": "main",
+            "line": "24"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "trace_step_counts": {},
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "main.0 file harness.c line 20 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "main.1 file harness.c line 22 function main thread 0": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 1 VCC(s), 1 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [],
+      "native_warning_lines": [],
+      "queries": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+          "reported_variables": 69634,
+          "live_clauses": 256820,
+          "early_adapter_return": false,
+          "native_cumulative": {
+            "sat_conflicts": 101226,
+            "decisions": 141770,
+            "sat_propagations": 630353027,
+            "theory_propagations": 140936,
+            "theory_cycle_conflicts": 6514,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "native_delta_from_previous_snapshot": {
+            "sat_conflicts": 101226,
+            "decisions": 141770,
+            "sat_propagations": 630353027,
+            "theory_propagations": 140936,
+            "theory_cycle_conflicts": 6514,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "adapter_entry_to_exit_delta": null,
+          "restarts": null,
+          "search_only_s": null,
+          "co_pairs_in_graph_at_return": 146
+        }
+      ]
+    },
+    "restarts": [
+      255
+    ],
+    "timing": {
+      "off": {
+        "wall_ns": 21859380315,
+        "peak_rss_kib": 71168,
+        "user_s": 21.804136,
+        "system_s": 0.052286,
+        "exit_code": 0,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a"
+      },
+      "shadow": {
+        "wall_ns": 22678184270,
+        "peak_rss_kib": 87552,
+        "user_s": 22.496747,
+        "system_s": 0.084574,
+        "exit_code": 0,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 9491238,
+        "cache_role_ns": 87041908,
+        "serialize_ns": 1649615,
+        "dedup_rows": 3786,
+        "bool_hits": 10090,
+        "bool_misses": 6324,
+        "bv_hits": 1243,
+        "bv_misses": 312,
+        "missing_child_or_template": 1,
+        "owner_associations": 2361,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 13643121,
+        "catalog_bytes": 5070472
+      },
+      "audit": {
+        "wall_ns": 259908893,
+        "peak_rss_kib": 54528,
+        "user_s": 0.239614,
+        "system_s": 0.019705,
+        "exit_code": 77,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 10663435,
+        "cache_role_ns": 90455405,
+        "serialize_ns": 1846731,
+        "dedup_rows": 3786,
+        "bool_hits": 10090,
+        "bool_misses": 6324,
+        "bv_hits": 1243,
+        "bv_misses": 312,
+        "missing_child_or_template": 1,
+        "owner_associations": 2361,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 14114792,
+        "catalog_bytes": 5573604
+      }
+    }
+  }
+}

@@ -1,0 +1,13 @@
+register_ns 17579887
+cache_role_ns 128385129
+serialize_ns 4573520
+dedup_rows 4674
+bool_hits 11482
+bool_misses 7578
+bv_hits 2083
+bv_misses 378
+missing_child_or_template 1
+owner_associations 3843
+reserved7 0
+reserved8 0
+cache_clears 0

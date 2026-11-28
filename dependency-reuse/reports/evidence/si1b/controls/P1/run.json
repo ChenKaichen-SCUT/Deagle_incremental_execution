@@ -1,0 +1,25 @@
+{
+  "argv": [
+    "/home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe",
+    "--d1-manifest",
+    "/home/deagle/dependency-reuse/runs/si1b/accepted-controls/P1/model.tsv",
+    "--d3-layouts",
+    "--d41-identities",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "4",
+    "--unwinding-assertions",
+    "--json-ui",
+    "model.c"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/si1b/accepted-controls/P1/work",
+  "exit_code": 77,
+  "input_sha256": {
+    "model.c": "28787a0b29ddbebd847bb2e12109b5557cadae7828d53bb5cca2c56714af3779"
+  }
+}

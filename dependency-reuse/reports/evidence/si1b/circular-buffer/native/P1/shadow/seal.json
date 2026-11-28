@@ -1,0 +1,28 @@
+{
+  "version": "SI1B-shadow-1",
+  "elf": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+  "body": "803204a15e6c5d99dd3269c971527d5a2ea195a2f091e4f8662e31b1a33675ce",
+  "bytes": 16888072,
+  "source_sha256": "87e481b150ff97ce02a36ae1bc364dcccf78e1160a7e155df50df82df3c59049",
+  "tokens": "dcfaa1d573dd7f8faf591718679e486c89e7901aca879b7a58fb5a1ac5c9ccd8",
+  "abi_args": [
+    "/home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe",
+    "--d4-search-log",
+    "/home/deagle/dependency-reuse/runs/si1b/release/circular-buffer/shadow/P1/search.tsv",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "8",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "inputs": {
+    "program.i": "45d0532015299cbea6251779c55f20bc70cd28eb2933c8ada200deed7fd901e3"
+  }
+}

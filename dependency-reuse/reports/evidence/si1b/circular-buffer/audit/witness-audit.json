@@ -1,0 +1,72 @@
+{
+  "accepted": 473,
+  "wrong": 0,
+  "roles": {
+    "outer": 432,
+    "returned": 5,
+    "RF-write-read": 4,
+    "lowering-role/equal-bit": 32
+  },
+  "examples": {
+    "outer": {
+      "old": 6,
+      "positive_image": 12,
+      "typed_witness": 6399,
+      "native_local_values": [
+        12,
+        12
+      ],
+      "templates": [
+        [],
+        []
+      ]
+    },
+    "returned": {
+      "old": 8345,
+      "positive_image": 16690,
+      "typed_witness": 75358,
+      "native_local_values": [
+        16691,
+        16691
+      ],
+      "templates": [
+        [
+          4925
+        ],
+        [
+          5018
+        ]
+      ]
+    },
+    "RF-write-read": {
+      "old": 244496,
+      "positive_image": 489774,
+      "typed_witness": 6206,
+      "native_local_values": [
+        488992,
+        489774
+      ],
+      "templates": [
+        [],
+        []
+      ]
+    },
+    "lowering-role/equal-bit": {
+      "old": 244497,
+      "positive_image": 489776,
+      "typed_witness": 75180,
+      "native_local_values": [
+        488995,
+        489777
+      ],
+      "templates": [
+        [
+          21392
+        ],
+        [
+          21491
+        ]
+      ]
+    }
+  }
+}

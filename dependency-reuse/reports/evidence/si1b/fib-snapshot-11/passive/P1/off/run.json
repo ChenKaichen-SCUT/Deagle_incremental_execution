@@ -1,0 +1,48 @@
+{
+  "case": "fib-snapshot-11",
+  "side": "P1",
+  "argv": [
+    "/home/deagle/dependency-reuse/runs/si1b/tap-si/deagle",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "25",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/si1b/port-observations/fib-snapshot-11/P1/off/work",
+  "binary_sha256": "e2e41f416920674ae3611d5df632f775018189789dd229fb070e6fbafc040582",
+  "input_sha256": {
+    "program.i": "c0e681ed69012b0e000ff579cf0a3e27385ce7ab4c28525dd10d6a37e7685181"
+  },
+  "limits": {
+    "timeout_seconds": 660,
+    "memory_bytes": 7516192768
+  },
+  "cpu_affinity": [
+    2
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "target": "reach_error.assertion.1",
+  "started_utc": "2026-11-28T06:36:11.724566+00:00",
+  "monotonic_start_ns": 266334824482129,
+  "exit_code": 75,
+  "timed_out": false,
+  "wall_ns": 454859767,
+  "user_s": 0.410949,
+  "system_s": 0.043186999999999996,
+  "peak_rss_kib": 134784,
+  "stdout_sha256": "c59a8d16188ea90dbe2082ad91c0b144ee67fc8320291039a93412dcfd90293a",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

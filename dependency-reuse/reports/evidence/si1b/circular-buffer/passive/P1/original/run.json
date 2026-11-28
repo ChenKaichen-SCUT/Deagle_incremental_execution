@@ -1,0 +1,48 @@
+{
+  "case": "circular-buffer",
+  "side": "P1",
+  "argv": [
+    "/home/deagle/dependency-reuse/runs/si1b/tap-stock/deagle",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "8",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/si1b/port-observations/circular-buffer/P1/original/work",
+  "binary_sha256": "fd2418f233f49747e9b81d9903b9ba58e81e70bdc71b1b9814d5f61591fd647d",
+  "input_sha256": {
+    "program.i": "45d0532015299cbea6251779c55f20bc70cd28eb2933c8ada200deed7fd901e3"
+  },
+  "limits": {
+    "timeout_seconds": 660,
+    "memory_bytes": 7516192768
+  },
+  "cpu_affinity": [
+    2
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC"
+  },
+  "target": "reach_error.assertion.1",
+  "started_utc": "2026-11-28T06:35:54.641098+00:00",
+  "monotonic_start_ns": 266317741016038,
+  "exit_code": 75,
+  "timed_out": false,
+  "wall_ns": 480801877,
+  "user_s": 0.437776,
+  "system_s": 0.040598999999999996,
+  "peak_rss_kib": 124800,
+  "stdout_sha256": "2102f0d14338225a87511ca52fc0e327717a94932d4b6585f05b5c05b0393c47",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

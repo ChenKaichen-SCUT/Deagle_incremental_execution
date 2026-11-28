@@ -1,0 +1,52 @@
+{
+  "case": "fib-snapshot-11",
+  "side": "P0",
+  "argv": [
+    "/home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe",
+    "--d4-search-log",
+    "/home/deagle/dependency-reuse/runs/si1b/final-matrix/fib-snapshot-11/shadow/P0/search.tsv",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "25",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "program.i"
+  ],
+  "cwd": "/home/deagle/dependency-reuse/runs/si1b/final-matrix/fib-snapshot-11/shadow/P0/work",
+  "binary_sha256": "2e610d2587f5fe57632fe92553d8d2d1a368a503d3443a4451dc8b4f84e23d4b",
+  "input_sha256": {
+    "program.i": "deae7fd0ef95d67bb618281e50bfba6f50a83de212ef14f46660866b256c6152"
+  },
+  "limits": {
+    "timeout_seconds": 660,
+    "memory_bytes": 7516192768
+  },
+  "cpu_affinity": [
+    0
+  ],
+  "env": {
+    "PATH": "/usr/bin:/bin",
+    "LC_ALL": "C",
+    "LANG": "C",
+    "TZ": "UTC",
+    "DEAGLE_SI1B_CATALOG": "/home/deagle/dependency-reuse/runs/si1b/final-matrix/fib-snapshot-11/shadow/P0/native.bin",
+    "DEAGLE_SI1B_TOKENS": "/home/deagle/dependency-reuse/runs/si1b/final-matrix/fib-snapshot-11/source/P0.tokens"
+  },
+  "target": "reach_error.assertion.1",
+  "started_utc": "2026-11-28T06:13:59.044178+00:00",
+  "monotonic_start_ns": 265002144097265,
+  "exit_code": 0,
+  "timed_out": false,
+  "wall_ns": 30991306876,
+  "user_s": 30.710936,
+  "system_s": 0.228312,
+  "peak_rss_kib": 330424,
+  "stdout_sha256": "5d4f4665cc561ea2c26670fc6f657d83627badf9e1a7347144831e5fbf07f01d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+}

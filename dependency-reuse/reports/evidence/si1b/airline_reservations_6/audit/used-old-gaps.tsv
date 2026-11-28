@@ -1,0 +1,17 @@
+case	category	disposition	native_allocation_site	opcode	atoms
+airline_reservations_6	Guard	neither	solvers/sat/cnf.cpp:189	=	6
+airline_reservations_6	Guard	neither	solvers/sat/cnf.cpp:296	and	6
+airline_reservations_6	RF	neither	solvers/prop/prop_conv_solver.cpp:70	symbol	485
+airline_reservations_6	auxiliary	added	solvers/flattening/bv_utils.cpp:1219	>=	152
+airline_reservations_6	auxiliary	added	solvers/flattening/bv_utils.cpp:1220	>=	6
+airline_reservations_6	auxiliary	neither	solvers/flattening/bv_utils.cpp:1219	>=	380
+airline_reservations_6	auxiliary	neither	solvers/flattening/bv_utils.cpp:1220	>=	6
+airline_reservations_6	auxiliary	neither	solvers/flattening/equality.cpp:77	=	90
+airline_reservations_6	auxiliary	neither	solvers/sat/cnf.cpp:189	=	414
+airline_reservations_6	auxiliary	neither	solvers/sat/cnf.cpp:189	and	424
+airline_reservations_6	auxiliary	neither	solvers/sat/cnf.cpp:238	or	29
+airline_reservations_6	auxiliary	neither	solvers/sat/cnf.cpp:296	and	69
+airline_reservations_6	auxiliary	neither	solvers/sat/cnf.cpp:312	or	32
+airline_reservations_6	auxiliary	neither	solvers/sat/cnf.cpp:334	=	10978
+airline_reservations_6	fresh_free	neither	solvers/flattening/boolbv_index.cpp:68	index	6
+airline_reservations_6	pointer_aggregate	neither	solvers/flattening/boolbv_map.cpp:59	symbol	10635

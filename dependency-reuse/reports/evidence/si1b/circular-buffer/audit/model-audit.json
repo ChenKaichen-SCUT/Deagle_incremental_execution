@@ -1,0 +1,1229 @@
+{
+  "P0": {
+    "checked_actual_boolean_port_rows": 43802,
+    "models": {
+      "canonical_sha256": "919d3ceb5de28849086d7d5fb46115e74cd6ae0ba584538e7f5aa5c5680ad72e",
+      "rows": {
+        "A": 43802,
+        "A_LAYOUT": 87,
+        "C": 1161979,
+        "DEAGLE-D1": 1,
+        "E": 511,
+        "EDGE": 3129,
+        "EVENT_LAYOUT": 58,
+        "F": 2227,
+        "G": 210731,
+        "GUARD": 190,
+        "H": 190,
+        "IN": 31,
+        "K": 1,
+        "LAYOUT": 1,
+        "MEMBER": 481,
+        "N": 1,
+        "NODE": 481,
+        "OUT": 31,
+        "QUERY": 1,
+        "S": 161,
+        "SITE41": 161,
+        "TARGET": 1,
+        "TERM": 1339,
+        "V": 907,
+        "VALUE_DEF": 413,
+        "V_LAYOUT": 116,
+        "X": 683
+      },
+      "ordered_stream_sha256": {
+        "C": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+        "A": "db847cf8ca3c5a7048821ec4eb5297b87488b14123d07e5d1fe8532bd2d6ae31",
+        "G": "9167446ba5c3a38d69ae144dbb86390e895e929af57870ddc235f64fe8bb84e9",
+        "EDGE": "c33639de6c41fc9dcbacadf9a4165b39a68e90f2215d29153b9741c67a60a112",
+        "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+        "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+        "N": "abe32806fd34957deb8702a9fb6f7f64f1c59611917f5a50dee2437ce4f4c63a"
+      }
+    },
+    "full_manifest_sha256": "963e7e3a15b4c684664bea75f81d26dcbc9a655a2dffc5a198b6b7656705616e",
+    "allocation_order_sha256": "ac458b37e18d222db2ae1a56f2176db5cd802aa66fd7a8e5708bcb0ba4bd39f4",
+    "legacy_cache_order_sha256": "e012c6832aedbd22f3ac54f4165e86f79f6404b61e1fc4b85a775271fd03b180",
+    "legacy_same_opcode_order": false,
+    "observer_rows": {
+      "M": 9279,
+      "H": 35033,
+      "R": 240479
+    },
+    "native_atoms": 245081,
+    "same_configuration_passive": {
+      "original": {
+        "allocation_ranges": "ac458b37e18d222db2ae1a56f2176db5cd802aa66fd7a8e5708bcb0ba4bd39f4",
+        "scope_counts": {
+          "B": 1160134,
+          "Q": 1845
+        },
+        "scope_streams": {
+          "B": "ef720a05ce05f3d397ffd77b9f1557a830fa496891fc2d0f45a96fcced5d40c4",
+          "Q": "7380ca809f01ee33b00efc23f2e1b1a5150b02290744ef0d5122f1ee82e9a0de"
+        },
+        "ordered_outside_guard": "3c4a100af204573e74036dca8eaef791d291d4b6698e2941b8b88250a8c07e11",
+        "guard_hits_by_named_event": "4ce929b55854339584f5529b8f594f21a939faf0bc76ed1291dabfdc6aa959dd",
+        "guard_visit_order": "c894679768513e611994e586de937cbf75b79db8a77758971b581e91bb992c69",
+        "guard_events": 190,
+        "guard_hits": 152,
+        "rows": {
+          "K": 44312,
+          "NVAR": 240479,
+          "G": 210731,
+          "C": 1161979,
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "GUARD": 190,
+          "A": 43802,
+          "QUERY": 1
+        },
+        "cache_instances": 9279,
+        "streams": {
+          "K": "2b382f506a6ae907e064ddaf7a65b36a140d88d6a709374e3a4fd05b64a7a9dd",
+          "NVAR": "0390b7feb9d1f162024ab04418c29f1474595a74f38e5f1d4a61f5c5cb4a70f8",
+          "G": "9167446ba5c3a38d69ae144dbb86390e895e929af57870ddc235f64fe8bb84e9",
+          "C": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+          "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+          "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+          "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+          "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+          "EDGE": "c33639de6c41fc9dcbacadf9a4165b39a68e90f2215d29153b9741c67a60a112",
+          "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+          "A": "7b75ada77fa323f8d2124a344eb50f1b9dff4f164e3634c362e0ef5f25391b18",
+          "QUERY": "b28eea39dfe3c4a24834e0bdd32d00a2154117af0ffc722ec7262916d1864f65"
+        }
+      },
+      "off": {
+        "allocation_ranges": "ac458b37e18d222db2ae1a56f2176db5cd802aa66fd7a8e5708bcb0ba4bd39f4",
+        "scope_counts": {
+          "B": 1160134,
+          "Q": 1845
+        },
+        "scope_streams": {
+          "B": "ef720a05ce05f3d397ffd77b9f1557a830fa496891fc2d0f45a96fcced5d40c4",
+          "Q": "7380ca809f01ee33b00efc23f2e1b1a5150b02290744ef0d5122f1ee82e9a0de"
+        },
+        "ordered_outside_guard": "3c4a100af204573e74036dca8eaef791d291d4b6698e2941b8b88250a8c07e11",
+        "guard_hits_by_named_event": "4ce929b55854339584f5529b8f594f21a939faf0bc76ed1291dabfdc6aa959dd",
+        "guard_visit_order": "a833cee8925a4b7fbc02488abf707cb1c44926d35dca981fcf4ca428dea556a8",
+        "guard_events": 190,
+        "guard_hits": 152,
+        "rows": {
+          "K": 44312,
+          "NVAR": 240479,
+          "G": 210731,
+          "C": 1161979,
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "GUARD": 190,
+          "A": 43802,
+          "QUERY": 1
+        },
+        "cache_instances": 9279,
+        "streams": {
+          "K": "30a7ec90cd061b151b57cab562db71792496f3dd438c0bdd521d3ac51991e243",
+          "NVAR": "0390b7feb9d1f162024ab04418c29f1474595a74f38e5f1d4a61f5c5cb4a70f8",
+          "G": "9167446ba5c3a38d69ae144dbb86390e895e929af57870ddc235f64fe8bb84e9",
+          "C": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+          "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+          "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+          "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+          "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+          "EDGE": "c33639de6c41fc9dcbacadf9a4165b39a68e90f2215d29153b9741c67a60a112",
+          "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+          "A": "7b75ada77fa323f8d2124a344eb50f1b9dff4f164e3634c362e0ef5f25391b18",
+          "QUERY": "b28eea39dfe3c4a24834e0bdd32d00a2154117af0ffc722ec7262916d1864f65"
+        }
+      },
+      "shadow": {
+        "allocation_ranges": "ac458b37e18d222db2ae1a56f2176db5cd802aa66fd7a8e5708bcb0ba4bd39f4",
+        "scope_counts": {
+          "B": 1160134,
+          "Q": 1845
+        },
+        "scope_streams": {
+          "B": "ef720a05ce05f3d397ffd77b9f1557a830fa496891fc2d0f45a96fcced5d40c4",
+          "Q": "7380ca809f01ee33b00efc23f2e1b1a5150b02290744ef0d5122f1ee82e9a0de"
+        },
+        "ordered_outside_guard": "3c4a100af204573e74036dca8eaef791d291d4b6698e2941b8b88250a8c07e11",
+        "guard_hits_by_named_event": "4ce929b55854339584f5529b8f594f21a939faf0bc76ed1291dabfdc6aa959dd",
+        "guard_visit_order": "0d675560450eb9107a7529db268c438fb8a8c83aad265fa022ffaa53f72cfd5b",
+        "guard_events": 190,
+        "guard_hits": 152,
+        "rows": {
+          "K": 44312,
+          "NVAR": 240479,
+          "G": 210731,
+          "C": 1161979,
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "GUARD": 190,
+          "A": 43802,
+          "QUERY": 1
+        },
+        "cache_instances": 9279,
+        "streams": {
+          "K": "b771649e1fc305dbd47a8c461800a06ee1592026007dd82186655132c7cd1590",
+          "NVAR": "0390b7feb9d1f162024ab04418c29f1474595a74f38e5f1d4a61f5c5cb4a70f8",
+          "G": "9167446ba5c3a38d69ae144dbb86390e895e929af57870ddc235f64fe8bb84e9",
+          "C": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+          "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+          "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+          "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+          "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+          "EDGE": "c33639de6c41fc9dcbacadf9a4165b39a68e90f2215d29153b9741c67a60a112",
+          "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+          "A": "7b75ada77fa323f8d2124a344eb50f1b9dff4f164e3634c362e0ef5f25391b18",
+          "QUERY": "b28eea39dfe3c4a24834e0bdd32d00a2154117af0ffc722ec7262916d1864f65"
+        }
+      }
+    },
+    "manifest_and_default_shadow_catalog_byte_fields_equal": false,
+    "audit_raw_sha256": "c1721a1fb84f92d642f0c353f7d0ed8165d87a5bafab9422da313ebd966653a7",
+    "audit_row_counts": {
+      "J": 1032,
+      "D": 715,
+      "O": 175,
+      "q": 2,
+      "I": 161,
+      "X": 683,
+      "b": 899,
+      "V": 939,
+      "F": 2227,
+      "U": 11856,
+      "W": 627,
+      "E": 11585,
+      "T": 24899,
+      "A": 9386,
+      "L": 24899,
+      "C": 46785,
+      "R": 250197,
+      "Y": 44312,
+      "N": 240479,
+      "B": 2996,
+      "Q": 5,
+      "P": 1,
+      "H": 2227,
+      "G": 190,
+      "K": 34,
+      "M": 40,
+      "h": 1270,
+      "Z": 1
+    },
+    "checks": {
+      "stock": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 724 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 740 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "reach_error.assertion.1": {
+            "total_steps": 357,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "frozen_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 724 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 740 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "reach_error.assertion.1": {
+            "total_steps": 357,
+            "different_positions": 12,
+            "spans": [
+              {
+                "first_zero_based": 67,
+                "last_zero_based": 72,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              },
+              {
+                "first_zero_based": 92,
+                "last_zero_based": 97,
+                "same_step_multiset": true,
+                "hidden_assignments": true
+              }
+            ],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "stock_off_search": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 724 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 740 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "reach_error.assertion.1": {
+            "total_steps": 357,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      },
+      "shadow_vs_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "FAILURE"
+            }
+          ],
+          "cProverStatus": "failure",
+          "classification": "VIOLATION",
+          "target_status": "FAILURE",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 724 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 740 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {
+          "reach_error.assertion.1": {
+            "total_steps": 357,
+            "different_positions": 0,
+            "spans": [],
+            "visible_steps_equal": true
+          }
+        },
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      }
+    },
+    "native": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "FAILURE"
+        }
+      ],
+      "cProverStatus": "failure",
+      "classification": "VIOLATION",
+      "target_status": "FAILURE",
+      "trace_step_counts": {
+        "reach_error.assertion.1": 357
+      },
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 724 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 740 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "queries": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is SATISFIABLE",
+          "reported_variables": 245081,
+          "live_clauses": 1157324,
+          "early_adapter_return": false,
+          "native_cumulative": {
+            "sat_conflicts": 343,
+            "decisions": 115443,
+            "sat_propagations": 1371484,
+            "theory_propagations": 11457,
+            "theory_cycle_conflicts": 18,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "native_delta_from_previous_snapshot": {
+            "sat_conflicts": 343,
+            "decisions": 115443,
+            "sat_propagations": 1371484,
+            "theory_propagations": 11457,
+            "theory_cycle_conflicts": 18,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "adapter_entry_to_exit_delta": null,
+          "restarts": null,
+          "search_only_s": null,
+          "co_pairs_in_graph_at_return": 1116
+        }
+      ]
+    },
+    "restarts": [
+      3
+    ],
+    "timing": {
+      "off": {
+        "wall_ns": 599137008,
+        "peak_rss_kib": 165504,
+        "user_s": 0.5298419999999999,
+        "system_s": 0.068701,
+        "exit_code": 10,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a"
+      },
+      "shadow": {
+        "wall_ns": 920515255,
+        "peak_rss_kib": 217176,
+        "user_s": 0.8412069999999999,
+        "system_s": 0.078722,
+        "exit_code": 10,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 26597704,
+        "cache_role_ns": 246455228,
+        "serialize_ns": 5081619,
+        "dedup_rows": 17960,
+        "bool_hits": 29727,
+        "bool_misses": 8401,
+        "bv_hits": 5306,
+        "bv_misses": 878,
+        "missing_child_or_template": 147,
+        "owner_associations": 9590,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 22602012,
+        "catalog_bytes": 16772489
+      },
+      "audit": {
+        "wall_ns": 788947924,
+        "peak_rss_kib": 177480,
+        "user_s": 0.724016,
+        "system_s": 0.06437999999999999,
+        "exit_code": 77,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 28638307,
+        "cache_role_ns": 255682842,
+        "serialize_ns": 6822766,
+        "dedup_rows": 17960,
+        "bool_hits": 29727,
+        "bool_misses": 8401,
+        "bv_hits": 5306,
+        "bv_misses": 878,
+        "missing_child_or_template": 147,
+        "owner_associations": 9590,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 23546429,
+        "catalog_bytes": 18013225
+      }
+    }
+  },
+  "P1": {
+    "checked_actual_boolean_port_rows": 45018,
+    "models": {
+      "canonical_sha256": "367152d848afe9e34073c222d850d00937b2b06c3f4a473ac90c9a23487b2414",
+      "rows": {
+        "A": 45018,
+        "A_LAYOUT": 87,
+        "C": 1163110,
+        "DEAGLE-D1": 1,
+        "E": 511,
+        "EDGE": 3129,
+        "EVENT_LAYOUT": 58,
+        "F": 2227,
+        "G": 210866,
+        "GUARD": 190,
+        "H": 190,
+        "IN": 31,
+        "K": 1,
+        "LAYOUT": 1,
+        "MEMBER": 481,
+        "N": 1,
+        "NODE": 481,
+        "OUT": 31,
+        "QUERY": 1,
+        "S": 169,
+        "SITE41": 169,
+        "TARGET": 1,
+        "TERM": 1396,
+        "V": 939,
+        "VALUE_DEF": 443,
+        "V_LAYOUT": 116,
+        "X": 704
+      },
+      "ordered_stream_sha256": {
+        "C": "5b8b52992f911fca1522d2a7ff9e23befbf13e41dd52c7f085297a4e17f1a0ba",
+        "A": "23c849475113658e9a06eae35097c7b9b0bac9b7cfc2fae4ad4f729e1a807eb6",
+        "G": "14e9eda54d5ce6dac15ecbabdaf4f76cc49ad63c1b3019c6477340249954add8",
+        "EDGE": "4a16c615d6bffa79670e2e8ab22f580af3d44215b699ce5ab816067ebe1d6d58",
+        "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+        "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+        "N": "8eca355c0542aa7ae647000e54c9757823ecaf2744d0332dfca39982a600ef34"
+      }
+    },
+    "full_manifest_sha256": "73d67a671590e0d8c1f1c36d67ac114203eb10cfe9a2a111982b648518177b61",
+    "allocation_order_sha256": "8b534e241ae7be9c749e03639c62200d58a0663c943c9d257995d31ce8e7661b",
+    "legacy_cache_order_sha256": "0a5373b9d0a3e74c5edb54a3845d747267a13fbd3f20fac9023387bb80ab1fb3",
+    "legacy_same_opcode_order": false,
+    "observer_rows": {
+      "M": 9346,
+      "H": 35082,
+      "R": 240870
+    },
+    "native_atoms": 245472,
+    "same_configuration_passive": {
+      "original": {
+        "allocation_ranges": "8b534e241ae7be9c749e03639c62200d58a0663c943c9d257995d31ce8e7661b",
+        "scope_counts": {
+          "B": 1161265,
+          "Q": 1845
+        },
+        "scope_streams": {
+          "B": "a84808ad99ed8616ac21ac2972279055206ecc561edc3e104ebfbf400709e94b",
+          "Q": "c711d7e8db3cb5cb3cbb370d655576ebb190dd0d4f9ddc6e4e84e0110bdb67cc"
+        },
+        "ordered_outside_guard": "1206091bc48fa1dd9197650098ecb5a41a4c1dd550b873556576d6136641f951",
+        "guard_hits_by_named_event": "7b5986d0018fe1a39a1a457c44d02eeb0457e865159df71dbaa3c8a761a0d28a",
+        "guard_visit_order": "a5cb2db6c9bf19f43df5087e4fe48042dfb944734ee01a6f7a0b1ab45a741a25",
+        "guard_events": 190,
+        "guard_hits": 152,
+        "rows": {
+          "K": 44428,
+          "NVAR": 240870,
+          "G": 210866,
+          "C": 1163110,
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "GUARD": 190,
+          "A": 45018,
+          "QUERY": 1
+        },
+        "cache_instances": 9346,
+        "streams": {
+          "K": "3f7a5f3cfb8399d9159296ae01ec4fe984300dfa86f269f313d5d490ec887113",
+          "NVAR": "5762f4242e54b65f559eb7b90d12fe5eeb30d662f9416da34ddb9285eff49d6b",
+          "G": "14e9eda54d5ce6dac15ecbabdaf4f76cc49ad63c1b3019c6477340249954add8",
+          "C": "5b8b52992f911fca1522d2a7ff9e23befbf13e41dd52c7f085297a4e17f1a0ba",
+          "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+          "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+          "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+          "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+          "EDGE": "4a16c615d6bffa79670e2e8ab22f580af3d44215b699ce5ab816067ebe1d6d58",
+          "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+          "A": "d960dd7dc103f1bcf317b2befac6782f67659507c286000913f98a8376e4589f",
+          "QUERY": "fef820f56f2696468bfa1a9410a334dddaf0583d866256f300179a9486456731"
+        }
+      },
+      "off": {
+        "allocation_ranges": "8b534e241ae7be9c749e03639c62200d58a0663c943c9d257995d31ce8e7661b",
+        "scope_counts": {
+          "B": 1161265,
+          "Q": 1845
+        },
+        "scope_streams": {
+          "B": "a84808ad99ed8616ac21ac2972279055206ecc561edc3e104ebfbf400709e94b",
+          "Q": "c711d7e8db3cb5cb3cbb370d655576ebb190dd0d4f9ddc6e4e84e0110bdb67cc"
+        },
+        "ordered_outside_guard": "1206091bc48fa1dd9197650098ecb5a41a4c1dd550b873556576d6136641f951",
+        "guard_hits_by_named_event": "7b5986d0018fe1a39a1a457c44d02eeb0457e865159df71dbaa3c8a761a0d28a",
+        "guard_visit_order": "b56e5d0ee8fa1e48302af4aa0f7ec86fa144d5fc1af3d884dcf1e42e00693fc4",
+        "guard_events": 190,
+        "guard_hits": 152,
+        "rows": {
+          "K": 44428,
+          "NVAR": 240870,
+          "G": 210866,
+          "C": 1163110,
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "GUARD": 190,
+          "A": 45018,
+          "QUERY": 1
+        },
+        "cache_instances": 9346,
+        "streams": {
+          "K": "b35cc642ee9c48c80fa86f1e6f993d38a856a6c350bf997d945f58f82034ec20",
+          "NVAR": "5762f4242e54b65f559eb7b90d12fe5eeb30d662f9416da34ddb9285eff49d6b",
+          "G": "14e9eda54d5ce6dac15ecbabdaf4f76cc49ad63c1b3019c6477340249954add8",
+          "C": "5b8b52992f911fca1522d2a7ff9e23befbf13e41dd52c7f085297a4e17f1a0ba",
+          "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+          "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+          "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+          "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+          "EDGE": "4a16c615d6bffa79670e2e8ab22f580af3d44215b699ce5ab816067ebe1d6d58",
+          "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+          "A": "d960dd7dc103f1bcf317b2befac6782f67659507c286000913f98a8376e4589f",
+          "QUERY": "fef820f56f2696468bfa1a9410a334dddaf0583d866256f300179a9486456731"
+        }
+      },
+      "shadow": {
+        "allocation_ranges": "8b534e241ae7be9c749e03639c62200d58a0663c943c9d257995d31ce8e7661b",
+        "scope_counts": {
+          "B": 1161265,
+          "Q": 1845
+        },
+        "scope_streams": {
+          "B": "a84808ad99ed8616ac21ac2972279055206ecc561edc3e104ebfbf400709e94b",
+          "Q": "c711d7e8db3cb5cb3cbb370d655576ebb190dd0d4f9ddc6e4e84e0110bdb67cc"
+        },
+        "ordered_outside_guard": "1206091bc48fa1dd9197650098ecb5a41a4c1dd550b873556576d6136641f951",
+        "guard_hits_by_named_event": "7b5986d0018fe1a39a1a457c44d02eeb0457e865159df71dbaa3c8a761a0d28a",
+        "guard_visit_order": "71b6eeddd346e7856a8a05e38c2729b592486079433c57068a2440a96db04238",
+        "guard_events": 190,
+        "guard_hits": 152,
+        "rows": {
+          "K": 44428,
+          "NVAR": 240870,
+          "G": 210866,
+          "C": 1163110,
+          "MEMBER": 481,
+          "NODE": 481,
+          "IN": 31,
+          "OUT": 31,
+          "EDGE": 3129,
+          "GUARD": 190,
+          "A": 45018,
+          "QUERY": 1
+        },
+        "cache_instances": 9346,
+        "streams": {
+          "K": "2c6f0289bd8b4807db20fe70efef87788083185587989911d34968ad6f2b4894",
+          "NVAR": "5762f4242e54b65f559eb7b90d12fe5eeb30d662f9416da34ddb9285eff49d6b",
+          "G": "14e9eda54d5ce6dac15ecbabdaf4f76cc49ad63c1b3019c6477340249954add8",
+          "C": "5b8b52992f911fca1522d2a7ff9e23befbf13e41dd52c7f085297a4e17f1a0ba",
+          "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+          "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+          "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+          "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+          "EDGE": "4a16c615d6bffa79670e2e8ab22f580af3d44215b699ce5ab816067ebe1d6d58",
+          "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+          "A": "d960dd7dc103f1bcf317b2befac6782f67659507c286000913f98a8376e4589f",
+          "QUERY": "fef820f56f2696468bfa1a9410a334dddaf0583d866256f300179a9486456731"
+        }
+      }
+    },
+    "manifest_and_default_shadow_catalog_byte_fields_equal": false,
+    "audit_raw_sha256": "286606f56e5eb0cac38ec41a1e83091e4795d434c1fbb43ad9fb8d0b083c58d8",
+    "audit_row_counts": {
+      "J": 1046,
+      "D": 717,
+      "O": 181,
+      "q": 2,
+      "I": 169,
+      "X": 704,
+      "b": 931,
+      "V": 971,
+      "F": 2227,
+      "U": 12112,
+      "W": 659,
+      "E": 11652,
+      "T": 24998,
+      "A": 9456,
+      "L": 24998,
+      "C": 46861,
+      "R": 252387,
+      "Y": 44428,
+      "N": 240870,
+      "B": 3034,
+      "Q": 5,
+      "P": 1,
+      "H": 2227,
+      "G": 190,
+      "K": 34,
+      "M": 40,
+      "h": 1287,
+      "Z": 1
+    },
+    "checks": {
+      "stock": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 725 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 743 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "frozen_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 725 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 743 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": false,
+        "verified_query_renaming": false
+      },
+      "stock_off_search": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 725 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 743 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      },
+      "shadow_vs_off": {
+        "properties": {
+          "properties": [
+            {
+              "description": "assertion 0",
+              "property": "reach_error.assertion.1",
+              "sourceLocation": {
+                "file": "program.i",
+                "function": "reach_error",
+                "line": "681"
+              },
+              "status": "SUCCESS"
+            }
+          ],
+          "cProverStatus": "success",
+          "classification": "BOUNDED_PASS",
+          "target_status": "SUCCESS",
+          "unwinding_property_ids": [],
+          "unwinding_iterations": {
+            "t1.0 file program.i line 725 function t1 thread 1": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ],
+            "t2.0 file program.i line 743 function t2 thread 2": [
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7
+            ]
+          },
+          "unwinding_stop_or_warning": [],
+          "enabled_unwinding_assertions": true,
+          "vcc_messages": [
+            "Generated 14 VCC(s), 14 remaining after simplification"
+          ],
+          "adapter_query_count": 1,
+          "warnings": [
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+            "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+          ],
+          "native_warning_lines": []
+        },
+        "traces": {},
+        "cold_trajectory_checked": true,
+        "verified_query_renaming": false
+      }
+    },
+    "native": {
+      "properties": [
+        {
+          "description": "assertion 0",
+          "property": "reach_error.assertion.1",
+          "sourceLocation": {
+            "file": "program.i",
+            "function": "reach_error",
+            "line": "681"
+          },
+          "status": "SUCCESS"
+        }
+      ],
+      "cProverStatus": "success",
+      "classification": "BOUNDED_PASS",
+      "target_status": "SUCCESS",
+      "trace_step_counts": {},
+      "unwinding_property_ids": [],
+      "unwinding_iterations": {
+        "t1.0 file program.i line 725 function t1 thread 1": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "t2.0 file program.i line 743 function t2 thread 2": [
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ]
+      },
+      "unwinding_stop_or_warning": [],
+      "enabled_unwinding_assertions": true,
+      "vcc_messages": [
+        "Generated 14 VCC(s), 14 remaining after simplification"
+      ],
+      "adapter_query_count": 1,
+      "closure_completion_count": 1,
+      "warnings": [
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_unlock\"\nold definition in module program file program.i line 511\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_unlock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_lock\"\nold definition in module program file program.i line 506\nsigned int (pthread_mutex_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_lock> line 17\nsigned int (pthread_mutex_t *mutex)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_mutex_init\"\nold definition in module program file program.i line 499\nsigned int (pthread_mutex_t *, const pthread_mutexattr_t *)\nnew definition in module <built-in-library> file <builtin-library-pthread_mutex_init> line 27\nsigned int (pthread_mutex_t *mutex, const pthread_mutexattr_t *mutexattr)",
+        "warning: pointer parameter types differ between declaration and definition \"pthread_create\"\nold definition in module program file program.i line 392\nsigned int (pthread_t *, const pthread_attr_t *, void * (*)(void *), void *)\nnew definition in module <built-in-library> file <builtin-library-pthread_create> line 20\nsigned int (pthread_t *thread, const pthread_attr_t *attr, void * (*start_routine)(void *), void *arg)"
+      ],
+      "native_warning_lines": [],
+      "queries": [
+        {
+          "query": 1,
+          "adapter_message": "SAT checker: instance is UNSATISFIABLE",
+          "reported_variables": 245472,
+          "live_clauses": 1158284,
+          "early_adapter_return": false,
+          "native_cumulative": {
+            "sat_conflicts": 7525,
+            "decisions": 30512,
+            "sat_propagations": 54998143,
+            "theory_propagations": 118100,
+            "theory_cycle_conflicts": 56,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "native_delta_from_previous_snapshot": {
+            "sat_conflicts": 7525,
+            "decisions": 30512,
+            "sat_propagations": 54998143,
+            "theory_propagations": 118100,
+            "theory_cycle_conflicts": 56,
+            "dynamic_co_batches_added": 0,
+            "dynamic_co_pairs_added": 0
+          },
+          "adapter_entry_to_exit_delta": null,
+          "restarts": null,
+          "search_only_s": null,
+          "co_pairs_in_graph_at_return": 1116
+        }
+      ]
+    },
+    "restarts": [
+      31
+    ],
+    "timing": {
+      "off": {
+        "wall_ns": 10128815759,
+        "peak_rss_kib": 188544,
+        "user_s": 10.025454,
+        "system_s": 0.096631,
+        "exit_code": 0,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a"
+      },
+      "shadow": {
+        "wall_ns": 10544091938,
+        "peak_rss_kib": 240376,
+        "user_s": 10.453165,
+        "system_s": 0.088631,
+        "exit_code": 0,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 26872715,
+        "cache_role_ns": 246908566,
+        "serialize_ns": 5036342,
+        "dedup_rows": 18044,
+        "bool_hits": 29743,
+        "bool_misses": 8403,
+        "bv_hits": 5339,
+        "bv_misses": 943,
+        "missing_child_or_template": 147,
+        "owner_associations": 9662,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 22718101,
+        "catalog_bytes": 16888072
+      },
+      "audit": {
+        "wall_ns": 820958123,
+        "peak_rss_kib": 178084,
+        "user_s": 0.740421,
+        "system_s": 0.077675,
+        "exit_code": 77,
+        "binary_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+        "register_ns": 32461415,
+        "cache_role_ns": 256645611,
+        "serialize_ns": 9088781,
+        "dedup_rows": 18044,
+        "bool_hits": 29743,
+        "bool_misses": 8403,
+        "bv_hits": 5339,
+        "bv_misses": 943,
+        "missing_child_or_template": 147,
+        "owner_associations": 9662,
+        "reserved7": 0,
+        "reserved8": 0,
+        "cache_clears": 0,
+        "seal_ns": 24233361,
+        "catalog_bytes": 18132056
+      }
+    }
+  }
+}

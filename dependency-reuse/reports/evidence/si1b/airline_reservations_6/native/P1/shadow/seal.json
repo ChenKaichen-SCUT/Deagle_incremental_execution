@@ -1,0 +1,29 @@
+{
+  "version": "SI1B-shadow-1",
+  "elf": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+  "body": "55a65879c1983bfa8c2a2b87ab7af8419c8ab47ea7ef1b55fae13e1aff0a9c28",
+  "bytes": 5070472,
+  "source_sha256": "5e8481ced5727e2e65b9293258f04feb7c6af044853a5888262fea2d250cbb95",
+  "tokens": "6abee92016f74c9d6d2bf866b85c282c61a2848eb57f46dab0cd4325c3cf980b",
+  "abi_args": [
+    "/home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe",
+    "--d4-search-log",
+    "/home/deagle/dependency-reuse/runs/si1b/release/airline_reservations_6/shadow/P1/search.tsv",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--64",
+    "--unwind",
+    "8",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "harness.c"
+  ],
+  "inputs": {
+    "program.c": "36b13725c6af194007cb0c287dcc2db90baf2e01ea04c0dd042610e61e2d510d",
+    "harness.c": "44f40b42442d83b54bea1f4e3420298ad2314d4698b726421fbcf9d81e061fa2"
+  }
+}

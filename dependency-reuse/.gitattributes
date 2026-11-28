@@ -34,3 +34,4 @@ stable-identity/** text eol=lf
 tests/d43d/** text eol=lf
 reports/evidence/si1b/** -text
 tests/si1b/** text eol=lf
+reports/evidence/si1b/development/early-shadow-stack.txt -whitespace

@@ -1,0 +1,29 @@
+{
+  "version": "SI1B-shadow-1",
+  "elf": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+  "body": "dbbc7869a432073199e481e6f8ee010b6a1fe95fd269ec2e60a3e4b85a4a7c04",
+  "bytes": 1156498,
+  "source_sha256": "35db2546f6d294a79cf0843d5abc1a4ed00acd0387dbeb038d115f09703fb452",
+  "tokens": "ccbf6c08a2038e47a75a2825e52ae8fd81dc3d38572eddbc30668a8996bf7be1",
+  "abi_args": [
+    "/home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe",
+    "--d4-search-log",
+    "/home/deagle/dependency-reuse/runs/si1b/release/fib_updates_8/shadow/P0/search.tsv",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--64",
+    "--unwind",
+    "10",
+    "--unwinding-assertions",
+    "--trace",
+    "--json-ui",
+    "harness.c"
+  ],
+  "inputs": {
+    "program.c": "c7d6837383e9139202a5d6daf0ab33fb62f5689870a5ca24320708d2f005525f",
+    "harness.c": "a83ec85d1a3105f26025be5de55bc9c102ae78e8cad6e2b9dbcaf0182032928a"
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "phase": "SI-1B",
+  "verified_files": 421,
+  "integrity": true,
+  "cases": {
+    "fib_updates_8": {
+      "accepted": 8953,
+      "incorrect": 0,
+      "recomputed_tables": [
+        "direct-map.tsv.gz",
+        "typed-keys.json.gz",
+        "P0-ir.json.gz",
+        "P1-ir.json.gz",
+        "P0-atoms.tsv.gz",
+        "P1-atoms.tsv.gz"
+      ],
+      "passive_guard_events": [
+        36,
+        36
+      ]
+    },
+    "circular-buffer": {
+      "accepted": 473,
+      "incorrect": 0,
+      "recomputed_tables": [
+        "direct-map.tsv.gz",
+        "typed-keys.json.gz",
+        "P0-ir.json.gz",
+        "P1-ir.json.gz",
+        "P0-atoms.tsv.gz",
+        "P1-atoms.tsv.gz"
+      ],
+      "passive_guard_events": [
+        190,
+        190
+      ]
+    },
+    "airline_reservations_6": {
+      "accepted": 3319,
+      "incorrect": 0,
+      "recomputed_tables": [
+        "direct-map.tsv.gz",
+        "typed-keys.json.gz",
+        "P0-ir.json.gz",
+        "P1-ir.json.gz",
+        "P0-atoms.tsv.gz",
+        "P1-atoms.tsv.gz"
+      ],
+      "passive_guard_events": [
+        66,
+        54
+      ]
+    },
+    "fib-snapshot-11": {
+      "accepted": 29404,
+      "incorrect": 0,
+      "recomputed_tables": [
+        "direct-map.tsv.gz",
+        "typed-keys.json.gz",
+        "P0-ir.json.gz",
+        "P1-ir.json.gz",
+        "P0-atoms.tsv.gz",
+        "P1-atoms.tsv.gz"
+      ],
+      "passive_guard_events": [
+        232,
+        232
+      ]
+    }
+  }
+}

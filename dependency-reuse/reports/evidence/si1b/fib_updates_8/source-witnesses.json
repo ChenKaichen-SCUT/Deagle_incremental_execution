@@ -1,0 +1,55 @@
+{
+  "used_union/auxiliary/added": {
+    "old_atom": 2582,
+    "old_image": -1,
+    "new_positive_image": 4172,
+    "witness": 27722,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:185",
+    "operation": "+",
+    "port_role": [
+      "lowering-role",
+      13954,
+      [
+        10803,
+        "adder-carry",
+        1,
+        0
+      ]
+    ],
+    "operand_route": [],
+    "owner": [
+      "owner",
+      1461,
+      "assignments",
+      1,
+      0,
+      1660
+    ],
+    "occurrence": [
+      "occurrence",
+      1346,
+      1455,
+      [
+        [
+          1280,
+          0
+        ]
+      ],
+      1277
+    ],
+    "native_sites": [
+      [
+        "harness.c",
+        26,
+        "right_worker",
+        "2:1315:6:symbol5:right"
+      ],
+      [
+        "harness.c",
+        26,
+        "right_worker",
+        "2:1315:6:symbol5:right"
+      ]
+    ]
+  }
+}

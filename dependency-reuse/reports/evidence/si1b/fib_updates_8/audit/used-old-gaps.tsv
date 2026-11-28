@@ -1,0 +1,16 @@
+case	category	disposition	native_allocation_site	opcode	atoms
+fib_updates_8	RF	neither	solvers/prop/prop_conv_solver.cpp:70	symbol	10
+fib_updates_8	auxiliary	added	solvers/flattening/bv_utils.cpp:185	+	245
+fib_updates_8	auxiliary	neither	solvers/flattening/bv_utils.cpp:1219	>=	128
+fib_updates_8	auxiliary	neither	solvers/flattening/bv_utils.cpp:1220	>=	2
+fib_updates_8	auxiliary	neither	solvers/flattening/bv_utils.cpp:185	+	242
+fib_updates_8	auxiliary	neither	solvers/flattening/bv_utils.cpp:186	+	248
+fib_updates_8	auxiliary	neither	solvers/flattening/equality.cpp:77	=	19
+fib_updates_8	auxiliary	neither	solvers/sat/cnf.cpp:189	=	6
+fib_updates_8	auxiliary	neither	solvers/sat/cnf.cpp:189	and	7
+fib_updates_8	auxiliary	neither	solvers/sat/cnf.cpp:296	+	240
+fib_updates_8	auxiliary	neither	solvers/sat/cnf.cpp:296	and	6
+fib_updates_8	auxiliary	neither	solvers/sat/cnf.cpp:312	or	6
+fib_updates_8	auxiliary	neither	solvers/sat/cnf.cpp:334	=	2
+fib_updates_8	fresh_free	neither	solvers/flattening/boolbv_index.cpp:68	index	2
+fib_updates_8	pointer_aggregate	neither	solvers/flattening/boolbv_map.cpp:59	symbol	384

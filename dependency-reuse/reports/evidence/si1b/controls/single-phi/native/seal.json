@@ -1,0 +1,25 @@
+{
+  "version": "SI1B-shadow-1",
+  "elf": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+  "body": "456b287d01e2ccad9440ce3bc7295afb826cd19c92d5fe5b4acd4840f3987b5a",
+  "bytes": 212490,
+  "source_sha256": "8ba9ed4288fff97c741000901ffda5a47c075307e77d2c8842d3358a45be3cbe",
+  "tokens": "82cda5bbc59f4dec2bcc7052f540c7f3e2ec6bda6298b74c018e6ac386269694",
+  "abi_args": [
+    "/home/deagle/dependency-reuse/runs/si1b/native/src/cbmc/deagle_exe",
+    "--function",
+    "main",
+    "--deagle-closure",
+    "--mm",
+    "sc",
+    "--32",
+    "--unwind",
+    "4",
+    "--unwinding-assertions",
+    "--json-ui",
+    "phi.c"
+  ],
+  "inputs": {
+    "phi.c": "c178d983084c0d796dd7d557528b610f989feddc0fab8953799260ebcdeba82e"
+  }
+}

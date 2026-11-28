@@ -1,0 +1,137 @@
+{
+  "original": {
+    "allocation_ranges": "ac458b37e18d222db2ae1a56f2176db5cd802aa66fd7a8e5708bcb0ba4bd39f4",
+    "scope_counts": {
+      "B": 1160134,
+      "Q": 1845
+    },
+    "scope_streams": {
+      "B": "ef720a05ce05f3d397ffd77b9f1557a830fa496891fc2d0f45a96fcced5d40c4",
+      "Q": "7380ca809f01ee33b00efc23f2e1b1a5150b02290744ef0d5122f1ee82e9a0de"
+    },
+    "ordered_outside_guard": "3c4a100af204573e74036dca8eaef791d291d4b6698e2941b8b88250a8c07e11",
+    "guard_hits_by_named_event": "4ce929b55854339584f5529b8f594f21a939faf0bc76ed1291dabfdc6aa959dd",
+    "guard_visit_order": "c894679768513e611994e586de937cbf75b79db8a77758971b581e91bb992c69",
+    "guard_events": 190,
+    "guard_hits": 152,
+    "rows": {
+      "K": 44312,
+      "NVAR": 240479,
+      "G": 210731,
+      "C": 1161979,
+      "MEMBER": 481,
+      "NODE": 481,
+      "IN": 31,
+      "OUT": 31,
+      "EDGE": 3129,
+      "GUARD": 190,
+      "A": 43802,
+      "QUERY": 1
+    },
+    "cache_instances": 9279,
+    "streams": {
+      "K": "2b382f506a6ae907e064ddaf7a65b36a140d88d6a709374e3a4fd05b64a7a9dd",
+      "NVAR": "0390b7feb9d1f162024ab04418c29f1474595a74f38e5f1d4a61f5c5cb4a70f8",
+      "G": "9167446ba5c3a38d69ae144dbb86390e895e929af57870ddc235f64fe8bb84e9",
+      "C": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+      "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+      "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+      "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+      "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+      "EDGE": "c33639de6c41fc9dcbacadf9a4165b39a68e90f2215d29153b9741c67a60a112",
+      "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+      "A": "7b75ada77fa323f8d2124a344eb50f1b9dff4f164e3634c362e0ef5f25391b18",
+      "QUERY": "b28eea39dfe3c4a24834e0bdd32d00a2154117af0ffc722ec7262916d1864f65"
+    }
+  },
+  "off": {
+    "allocation_ranges": "ac458b37e18d222db2ae1a56f2176db5cd802aa66fd7a8e5708bcb0ba4bd39f4",
+    "scope_counts": {
+      "B": 1160134,
+      "Q": 1845
+    },
+    "scope_streams": {
+      "B": "ef720a05ce05f3d397ffd77b9f1557a830fa496891fc2d0f45a96fcced5d40c4",
+      "Q": "7380ca809f01ee33b00efc23f2e1b1a5150b02290744ef0d5122f1ee82e9a0de"
+    },
+    "ordered_outside_guard": "3c4a100af204573e74036dca8eaef791d291d4b6698e2941b8b88250a8c07e11",
+    "guard_hits_by_named_event": "4ce929b55854339584f5529b8f594f21a939faf0bc76ed1291dabfdc6aa959dd",
+    "guard_visit_order": "a833cee8925a4b7fbc02488abf707cb1c44926d35dca981fcf4ca428dea556a8",
+    "guard_events": 190,
+    "guard_hits": 152,
+    "rows": {
+      "K": 44312,
+      "NVAR": 240479,
+      "G": 210731,
+      "C": 1161979,
+      "MEMBER": 481,
+      "NODE": 481,
+      "IN": 31,
+      "OUT": 31,
+      "EDGE": 3129,
+      "GUARD": 190,
+      "A": 43802,
+      "QUERY": 1
+    },
+    "cache_instances": 9279,
+    "streams": {
+      "K": "30a7ec90cd061b151b57cab562db71792496f3dd438c0bdd521d3ac51991e243",
+      "NVAR": "0390b7feb9d1f162024ab04418c29f1474595a74f38e5f1d4a61f5c5cb4a70f8",
+      "G": "9167446ba5c3a38d69ae144dbb86390e895e929af57870ddc235f64fe8bb84e9",
+      "C": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+      "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+      "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+      "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+      "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+      "EDGE": "c33639de6c41fc9dcbacadf9a4165b39a68e90f2215d29153b9741c67a60a112",
+      "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+      "A": "7b75ada77fa323f8d2124a344eb50f1b9dff4f164e3634c362e0ef5f25391b18",
+      "QUERY": "b28eea39dfe3c4a24834e0bdd32d00a2154117af0ffc722ec7262916d1864f65"
+    }
+  },
+  "shadow": {
+    "allocation_ranges": "ac458b37e18d222db2ae1a56f2176db5cd802aa66fd7a8e5708bcb0ba4bd39f4",
+    "scope_counts": {
+      "B": 1160134,
+      "Q": 1845
+    },
+    "scope_streams": {
+      "B": "ef720a05ce05f3d397ffd77b9f1557a830fa496891fc2d0f45a96fcced5d40c4",
+      "Q": "7380ca809f01ee33b00efc23f2e1b1a5150b02290744ef0d5122f1ee82e9a0de"
+    },
+    "ordered_outside_guard": "3c4a100af204573e74036dca8eaef791d291d4b6698e2941b8b88250a8c07e11",
+    "guard_hits_by_named_event": "4ce929b55854339584f5529b8f594f21a939faf0bc76ed1291dabfdc6aa959dd",
+    "guard_visit_order": "0d675560450eb9107a7529db268c438fb8a8c83aad265fa022ffaa53f72cfd5b",
+    "guard_events": 190,
+    "guard_hits": 152,
+    "rows": {
+      "K": 44312,
+      "NVAR": 240479,
+      "G": 210731,
+      "C": 1161979,
+      "MEMBER": 481,
+      "NODE": 481,
+      "IN": 31,
+      "OUT": 31,
+      "EDGE": 3129,
+      "GUARD": 190,
+      "A": 43802,
+      "QUERY": 1
+    },
+    "cache_instances": 9279,
+    "streams": {
+      "K": "b771649e1fc305dbd47a8c461800a06ee1592026007dd82186655132c7cd1590",
+      "NVAR": "0390b7feb9d1f162024ab04418c29f1474595a74f38e5f1d4a61f5c5cb4a70f8",
+      "G": "9167446ba5c3a38d69ae144dbb86390e895e929af57870ddc235f64fe8bb84e9",
+      "C": "c916668e1e725212ea8eb370587caa88fe4c5504b2439fe9c73b8c937e12a8e8",
+      "MEMBER": "d01435351a3a589a5d84c814b5b94b5799bb3e1dd2a96040cfde496a68ce81a0",
+      "NODE": "452a51b1d08af8e47b81ed2ac4b684699ed5d08ff2b95eb89daedf054c886249",
+      "IN": "0590cafda33e7726300f28c61d83626ea4783d8e81ca74e235fdaf216f37ec05",
+      "OUT": "dd8954f888dec41ac1034440c7fc7d01bdc99b9962c05e74783a82453802bbab",
+      "EDGE": "c33639de6c41fc9dcbacadf9a4165b39a68e90f2215d29153b9741c67a60a112",
+      "GUARD": "eb9a16628604f9e163aaaf36ba96dcfcc617c53257b66f1714ad6eebccf6930d",
+      "A": "7b75ada77fa323f8d2124a344eb50f1b9dff4f164e3634c362e0ef5f25391b18",
+      "QUERY": "b28eea39dfe3c4a24834e0bdd32d00a2154117af0ffc722ec7262916d1864f65"
+    }
+  }
+}

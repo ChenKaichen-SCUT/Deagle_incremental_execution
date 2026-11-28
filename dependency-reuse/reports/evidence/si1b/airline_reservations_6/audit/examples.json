@@ -1,0 +1,34 @@
+{
+  "all/auxiliary/added": {
+    "old_atom": 8545,
+    "old_image": -1,
+    "new_positive_image": 11946,
+    "witness": 23257,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:1219",
+    "operation": ">="
+  },
+  "all/pointer_aggregate/added": {
+    "old_atom": 16007,
+    "old_image": -1,
+    "new_positive_image": 20470,
+    "witness": 14472,
+    "allocation_site": "solvers/flattening/boolbv_map.cpp:59",
+    "operation": "symbol"
+  },
+  "used_union/auxiliary/added": {
+    "old_atom": 8547,
+    "old_image": -1,
+    "new_positive_image": 11950,
+    "witness": 23259,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:1219",
+    "operation": ">="
+  },
+  "permanent_conclusion/auxiliary/added": {
+    "old_atom": 9963,
+    "old_image": -1,
+    "new_positive_image": 13502,
+    "witness": 23197,
+    "allocation_site": "solvers/flattening/bv_utils.cpp:1219",
+    "operation": ">="
+  }
+}
