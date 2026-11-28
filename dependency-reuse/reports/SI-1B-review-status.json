@@ -1,0 +1,26 @@
+{
+  "stage": "SI-1B-review",
+  "status": "READY_FOR_REVIEW",
+  "stable_identity_classification": "PARTIAL_IDENTITY_COVERAGE",
+  "branch": "codex/stable-model-identity",
+  "review_baseline": "4ddaf2843f6f51f1d0621ef2fa155783d402dac2",
+  "evidence_commit": "d502b6e06f121e70cefe77c99ecfdcf7ba1bf327",
+  "evidence_index": {
+    "path": "evidence/si1b-review/files.json",
+    "sha256": "a8dca5db50d26dc7b7b0da74b988d5705f3749545f918160f17225c95134c589",
+    "indexed_files": 70
+  },
+  "results": {
+    "path": "evidence/si1b-review/summary.json",
+    "sha256": "4c949607691dca53189e0b74e8a44eee16ed56ee2007156d077d90b40246bbab"
+  },
+  "new_native_runs": 0,
+  "admission_checks": [
+    "verified_common_coordinates",
+    "signed_injection",
+    "independently_recomputed_exact",
+    "compact_subset_exact",
+    "historical_A_reproduced"
+  ],
+  "native_encoder_modified": false
+}
