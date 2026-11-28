@@ -14,6 +14,7 @@ Author: Daniel Kroening, kroening@kroening.com
 #endif
 
 #include <limits>
+#include <chrono>
 
 #include <util/invariant.h>
 #include <util/dependency_manifest.h>
@@ -195,19 +196,25 @@ void deagle_closure_solvert::at_root_boundary()
   solver->observe_input=nullptr;
   solver->observe_co=nullptr;
   const auto &dir=dm::d4_out;
-  const std::string worker=dm::d4_tools+"/d4_prepare.py";
+  const std::string worker=dm::d4_tools+(dm::compact_load43?"/d43_prepare.py":"/d4_prepare.py");
+  const auto worker_start=std::chrono::steady_clock::now();
   if(run("python3",{"python3",worker,dm::d4_library,dir,dm::d4_tools},
          "",dir+"/prepare.stdout",dir+"/prepare.stderr")!=0)
     throw std::runtime_error("D4 live model preparation failed; see "+dir+"/prepare.stderr");
 
+  const auto worker_end=std::chrono::steady_clock::now();
   imported.reset(new Minisat::ClauseImports);
   imported->read(dir+"/ready.tsv",solver->nVars());
+  const auto batch_read_end=std::chrono::steady_clock::now();
   const int roots=solver->nAssigns();
   const bool was_ok=solver->okay();
   const auto before=solver->work();
   solver->importAtRoot(*imported,dm::d4_mode=="reuse");
   std::ofstream log(dir+"/import-time.tsv");
   log.exceptions(std::ios::failbit|std::ios::badbit);
+  log<<"worker_process_ns\t"<<std::chrono::duration_cast<std::chrono::nanoseconds>(worker_end-worker_start).count()<<"\n";
+  log<<"native_batch_read_ns\t"<<std::chrono::duration_cast<std::chrono::nanoseconds>(batch_read_end-worker_end).count()<<"\n";
+  log<<"P1_proof_recorder\t"<<int(solver->proof!=nullptr)<<"\nP1_dense_recorder\t"<<int(solver->dense!=nullptr)<<"\n";
   log<<"import_ns\t"<<imported->import_ns<<"\nroot_before\t"<<roots<<"\nroot_after\t"<<solver->nAssigns()<<"\n";
   log<<"root_conflicts\t"<<(was_ok && !solver->okay())<<"\n";
   const auto after=solver->work();
@@ -346,6 +353,13 @@ propt::resultt satcheck_minisat2_baset<T>::do_prop_solve()
   try
   {
     add_variables();
+    if(!dependency_manifest::search_log.empty())
+    {
+      const auto ready=std::chrono::steady_clock::now().time_since_epoch();
+      std::ofstream stamp(dependency_manifest::search_log+".root-clock",std::ios::app);
+      stamp.exceptions(std::ios::badbit|std::ios::failbit);
+      stamp<<std::chrono::duration_cast<std::chrono::nanoseconds>(ready).count()<<'\n';
+    }
     if(!dependency_manifest::d4_library.empty()) at_root_boundary();
 
     if(!solver->okay())

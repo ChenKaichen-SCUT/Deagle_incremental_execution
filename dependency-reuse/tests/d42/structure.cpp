@@ -1,4 +1,5 @@
 #include "../../d4/structure42.h"
+#include "../../d4/transport_graph.h"
 #include <iostream>
 #include <sstream>
 using namespace d42;
@@ -7,8 +8,8 @@ int main(int argc,char **argv){
     Graph g(argv[1]);
     // Isolate matching from native allocation. The P0 premise is in the permanent slice.
     auto model=[&](){
-        Models m(8,8,g);
-        m.used={0,2,2};m.input_node={0,1,2};
+        Models m(8,8,2);
+        m.use={0,2,2};
         m.a.peer[1]=4;m.b.peer[2]=2;
         m.a.ordinary[3]=1;m.b.ordinary[4]=m.b.ordinary[5]=1;
         m.old.add({2,6},1);m.now.add({4,9},1);

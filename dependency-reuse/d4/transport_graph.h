@@ -3,6 +3,7 @@
 #ifndef DEAGLE_TRANSPORT_GRAPH_H
 #define DEAGLE_TRANSPORT_GRAPH_H
 #include "minisat/core/SupportStore.h"
+#include "transport_check.h"
 #include <algorithm>
 #include <array>
 #include <cstring>
@@ -14,7 +15,6 @@ namespace d42 {
 using namespace Minisat;
 using Id=uint32_t;
 using Fact=std::array<int,4>;
-inline void need(bool ok,const char *m){if(!ok)throw std::runtime_error(m);}
 enum Type : uint8_t { MissingLeaf,InputLeaf,FactLeaf,OpaqueLeaf,Group,Learn };
 struct Node { Id end,payload; uint8_t type,flags,has_b; };
 struct Birth {Id node,end,original;};

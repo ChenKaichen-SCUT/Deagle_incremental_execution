@@ -1,5 +1,6 @@
 // No solver is linked. Match the premises once, then invalidate over reverse edges.
 #include "structure42.h"
+#include "transport_graph.h"
 #include <iostream>
 #include <sstream>
 using namespace d42;
@@ -25,12 +26,12 @@ static std::map<Fact,char> bindings(const Graph &g,const std::string &path){
     need(in.eof() && receipt.size()==g.receipt.size() && std::equal(receipt.begin(),receipt.end(),g.receipt.begin()),"wrong installed graph");
     return out;
 }
-static void membership(const Graph &g,Models &m,std::vector<uint8_t> &dead,Counts &counts,const std::string &out){
+static void membership(const Graph &g,Models &m,const std::vector<Id> &input_node,std::vector<uint8_t> &dead,Counts &counts,const std::string &out){
     std::unordered_map<Literals,std::vector<Id>,d42::Hash> wanted;
     std::vector<uint32_t> witness(g.nodes.size());
     std::vector<uint8_t> translated(g.nodes.size());Literals c;
     for(size_t i=0;i<m.old.ordinals.size();++i){
-        Id node=m.input_node[m.old.ordinals[i]];m.old.get(i,c);
+        Id node=input_node[m.old.ordinals[i]];m.old.get(i,c);
         for(int &l:c)l=m.a.translate(l);
         if(std::find(c.begin(),c.end(),INT_MIN)!=c.end())continue;
         normalize(c);wanted[c].push_back(node);translated[node]=1;
@@ -41,13 +42,13 @@ static void membership(const Graph &g,Models &m,std::vector<uint8_t> &dead,Count
         wanted.erase(it);
     }
     auto report=output(out,"inputs42.tsv");report<<"occurrence\tuse\tstatus\tp1_permanent_occurrence\n";
-    for(size_t i=1;i<m.input_node.size();++i){
-        Id n=m.input_node[i];if(!n)continue;
+    for(size_t i=1;i<input_node.size();++i){
+        Id n=input_node[i];if(!n)continue;
         const char *why=g.nodes[n].flags?"scope":witness[n]?"matched":translated[n]?"mapped_absent":"unmapped";
         dead[n]=!witness[n];
         ++counts[std::string("used_input_")+why];
-        if(m.used[n]&2)++counts[std::string("permanent_input_")+why];
-        report<<i<<'\t'<<int(m.used[n])<<'\t'<<why<<'\t'<<witness[n]<<'\n';
+        if(m.use[i]&2)++counts[std::string("permanent_input_")+why];
+        report<<i<<'\t'<<int(m.use[i])<<'\t'<<why<<'\t'<<witness[n]<<'\n';
     }
 }
 static void invalidate(const Graph &g,std::vector<uint8_t> &dead,Counts &counts){
@@ -68,8 +69,13 @@ int main(int argc,char **argv){
     if(argc!=10){std::cerr<<"usage: select42 proof old new variables declarations out n0 n1 semantic|structure\n";return 2;}
     try{
         std::string out=argv[6],mode=argv[9];need(mode=="semantic" || mode=="structure","unknown mapping");
-        Counts c;auto start=Clock::now();Graph g(argv[1]);Models m(std::stoi(argv[7]),std::stoi(argv[8]),g);
-        m.map(argv[4]);m.read(argv[2],false,g);m.read(argv[3],true,g);auto decl=bindings(g,argv[5]);
+        Counts c;auto start=Clock::now();Graph g(argv[1]);Models m(std::stoi(argv[7]),std::stoi(argv[8]),g.occurrence_count);
+        auto reached=g.reach();std::vector<Id> input_node(size_t(g.occurrence_count)+1);
+        for(Id i=1;i<g.nodes.size();++i)if(g.nodes[i].type==InputLeaf && reached[i]){
+            const Id occurrence=g.nodes[i].payload;input_node.at(occurrence)=i;m.use.at(occurrence)=reached[i];
+            m.scope.at(occurrence)=g.nodes[i].flags==0?'B':g.nodes[i].flags==Query?'Q':'U';
+        }
+        m.map(argv[4]);m.read(argv[2],false);m.read(argv[3],true);auto decl=bindings(g,argv[5]);
         c["read_ns"]=elapsed(start);c["p0_inputs"]=m.p0_rows;c["p1_inputs"]=m.p1_rows;
         auto witness=output(out,"structure.tsv");witness<<"round\told_var\tnew_signed_positive\told_occurrence\tnew_occurrence\n";
         Refinement r;auto t=Clock::now();if(mode=="structure")r.run(m,witness);witness.close();
@@ -82,15 +88,15 @@ int main(int argc,char **argv){
             }
         }
         map.close();std::vector<uint8_t> dead(g.nodes.size());dead[0]=1;t=Clock::now();
-        membership(g,m,dead,c,out);
+        membership(g,m,input_node,dead,c,out);
         auto facts=output(out,"facts42.tsv");facts<<"op\ta\tb\tc\tuse\tstatus\n";
         for(Id i=1;i<g.nodes.size();++i){auto &n=g.nodes[i];
             if(n.type==FactLeaf){
                 const auto &f=g.facts[n.payload];auto it=decl.find(f);need(it!=decl.end(),"missing P0 declaration");
                 char state=it->second;
                 if(state=='M' && (f[0]==RFDecl||f[0]==GuardDecl) && f[3]>=2)need(m.a.translate(f[3])!=INT_MIN,"unmapped theory port");
-                dead[i]=state!='M';if(m.used[i])++c[std::string("used_theory_")+state];
-                if(m.used[i])facts<<f[0]<<'\t'<<f[1]<<'\t'<<f[2]<<'\t'<<f[3]<<'\t'<<int(m.used[i])<<'\t'<<state<<'\n';
+                dead[i]=state!='M';if(reached[i])++c[std::string("used_theory_")+state];
+                if(reached[i])facts<<f[0]<<'\t'<<f[1]<<'\t'<<f[2]<<'\t'<<f[3]<<'\t'<<int(reached[i])<<'\t'<<state<<'\n';
             }else if(n.type==OpaqueLeaf || (n.type==InputLeaf && n.flags))dead[i]=1;
         }
         facts.close();c["membership_ns"]=elapsed(t);t=Clock::now();invalidate(g,dead,c);c["reverse_ns"]=elapsed(t);

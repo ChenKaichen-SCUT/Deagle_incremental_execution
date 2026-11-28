@@ -9,7 +9,7 @@ char scope = 'U';
 bool record_layouts = false;
 bool triplets=false, compact_proof=false, identities41=false, eager_triplets=false, light42=false, quality42=false;
 std::string proof_path, dense_path, boundary_trace;
-bool no_quality43=false, opaque43=false;
+bool no_quality43=false, opaque43=false, compact_load43=false;
 bool (*finish_dense)(int)=nullptr;
 bool (*finish_boundaries)()=nullptr;
 std::string d4_library, d4_out, d4_tools, d4_mode, search_log;

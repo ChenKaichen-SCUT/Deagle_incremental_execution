@@ -66,7 +66,7 @@ def run(binary, spec, name, side, directory, build_hash):
                 proc.returncode = os.waitstatus_to_exitcode(status)
             finally:
                 os.close(fd)
-    meta.update(exit_code=proc.returncode, timed_out=timed_out, wall_ns=elapsed, user_s=usage.ru_utime,
+    meta.update(monotonic_start_ns=start, exit_code=proc.returncode, timed_out=timed_out, wall_ns=elapsed, user_s=usage.ru_utime,
                 system_s=usage.ru_stime, peak_rss_kib=usage.ru_maxrss, stdout_sha256=sha(directory / "stdout"),
                 stderr_sha256=sha(directory / "stderr"))
     save(directory / "run.json", meta)

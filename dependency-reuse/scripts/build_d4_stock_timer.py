@@ -12,6 +12,7 @@ from diff_d1 import digest
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument("output",type=Path)
+    p.add_argument("--root-clock",action="store_true")
     args=p.parse_args()
     out=args.output.resolve()
     info=json.loads((Path(__file__).resolve().parents[1]/"configs/build.json").read_text())
@@ -34,6 +35,15 @@ def main():
        std::fclose(clock_output)!=0) std::abort();''')):
         if text.count(old)!=1:raise ValueError("ambiguous stock timer location: "+old)
         text=text.replace(old,new)
+    if args.root_clock:
+        entry="lbool ClosureSolver::solve_()\n{"
+        assert text.count(entry)==1
+        text=text.replace(entry,entry+"""
+    const auto root=std::chrono::steady_clock::now().time_since_epoch();
+    FILE *stamp=std::fopen("stock-root-clock","ab");
+    if(!stamp || std::fprintf(stamp,"%lld\\n",(long long)std::chrono::duration_cast<std::chrono::nanoseconds>(root).count())<0 ||
+       std::fclose(stamp)!=0) std::abort();
+""")
     copy=out/"ClosureSolver.cc";copy.write_text(text)
     obj=out/"ClosureSolver.o"
     cc=shlex.split(info["closure_compile"])

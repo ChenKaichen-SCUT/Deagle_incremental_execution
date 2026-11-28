@@ -1,6 +1,14 @@
 #ifndef DEAGLE_STRUCTURE42_H
 #define DEAGLE_STRUCTURE42_H
-#include "transport_graph.h"
+#include "transport_check.h"
+#include <algorithm>
+#include <array>
+#include <climits>
+#include <cstdint>
+#include <fstream>
+#include <map>
+#include <string>
+#include <vector>
 #include <chrono>
 #include <cstdlib>
 #include <unordered_map>
@@ -25,12 +33,12 @@ struct Atoms {
     void theory(int raw){if(raw>=2 && size_t(raw/2)<ordinary.size())ordinary[raw/2]=0;}
 };
 struct Models {
-    Flat old,now;Atoms a,b;std::vector<uint8_t> used;
-    std::vector<unsigned> input_node;uint64_t p0_rows=0,p1_rows=0;
-    Models(int n,int m,const Graph &g):a(n),b(m),used(g.reach()),input_node(size_t(g.occurrence_count)+1){
-        for(Id i=1;i<g.nodes.size();++i)if(g.nodes[i].type==InputLeaf && used[i])
-            input_node.at(g.nodes[i].payload)=i;
-    }
+    Flat old,now;Atoms a,b;
+    // One entry per old input occurrence. Bit 1 admits structural proposals.
+    std::vector<uint8_t> use;
+    std::vector<char> scope;
+    uint64_t p0_rows=0,p1_rows=0;
+    Models(int n,int m,size_t occurrences):a(n),b(m),use(occurrences+1),scope(occurrences+1){}
     void map(const std::string &path){
         std::ifstream in(path);need(bool(in),"missing semantic map");int side,var,to;std::string role,reason,key;
         std::array<std::vector<uint8_t>,2> seen{{std::vector<uint8_t>(a.peer.size()),std::vector<uint8_t>(b.peer.size())}};
@@ -53,15 +61,14 @@ struct Models {
         out.clear();const char *p=line.c_str()+start;char *end;
         while(*p){auto v=std::strtol(p,&end,10);need(end!=p&&v>=INT_MIN&&v<=INT_MAX,"invalid native number");out.push_back(int(v));p=end;}
     }
-    void read(const std::string &path,bool newer,const Graph &g){
+    void read(const std::string &path,bool newer){
         auto &side=newer?b:a;auto &flat=newer?now:old;
         std::ifstream in(path);need(bool(in),"model open");std::string l;Literals xs;unsigned seq=0;
         while(std::getline(in,l)){
             if(l.compare(0,2,"C\t")==0){
                 ++seq;need(l.size()>=3,"bad CNF row");
-                Id node=newer?0:input_node.at(seq);
-                if(!newer && node){const auto flags=g.nodes[node].flags;need(l[2]==(flags==0?'B':flags==Query?'Q':'U'),"scope/ordinal mismatch");}
-                if(l[2]!='B'||(!newer&&!node))continue;
+                if(!newer && scope.at(seq))need(l[2]==scope[seq],"scope/ordinal mismatch");
+                if(l[2]!='B'||(!newer&&!use.at(seq)))continue;
                 parse(l,3,xs);normalize(xs);flat.add(xs,seq);
             }else if(l.compare(0,6,"GUARD\t")==0){side.theory(std::stoi(l.substr(l.rfind('\t')+1)));}
             else if(l.compare(0,5,"EDGE\t")==0){
@@ -70,7 +77,7 @@ struct Models {
             }else if(l.compare(0,3,"CO\t")==0){parse(l,3,xs);need(xs.size()==6,"CO fields");for(size_t j=2;j<xs.size();++j)side.theory(xs[j]);}
         }
         need(in.eof(),"CNF read failure");
-        if(newer)p1_rows=seq;else{p0_rows=seq;need(seq==g.occurrence_count,"old model/occurrence mismatch");}
+        if(newer)p1_rows=seq;else{p0_rows=seq;need(size_t(seq)+1==use.size(),"old model/occurrence mismatch");}
     }
 };
 struct Refinement {
@@ -100,7 +107,7 @@ struct Refinement {
             auto collect=[&](const Flat &f,bool left){
                 for(size_t i=0;i<f.ordinals.size();++i){
                     if((i&1023)==0 && Clock::now()>=end){stop="time-budget";return false;}
-                    if(left && !(m.used[m.input_node[f.ordinals[i]]]&2))continue;
+                    if(left && !(m.use.at(f.ordinals[i])&2))continue;
                     f.get(i,c);int u;
                     if(!signature(c,left?m.a:m.b,left,key,u))continue;
                     if(checks==1000000){stop="candidate-budget";return false;}++checks;

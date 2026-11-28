@@ -29,3 +29,9 @@ g++ -std=c++17 -O2 -ffunction-sections -fdata-sections -I src -I minisat-2.2.1 \
 ```
 
 `scripts/audit_d43c.py` 将四例逐一对齐到冻结的 B 图和原生文字流；`scripts/control_d43c.py` 检查三种整模型置换；`tests/d43c/check.py` 从未损坏的原生夹具生成故障并核对具体拒绝原因；`scripts/gate_d43c.py` 汇总边界、准入、UsedLeaf、旧回归和生产检查。数据恢复、复核命令和固定提交见 [D4.3-C 报告](reports/D4.3-C.md)。
+
+## D4.3-D 生产复用
+
+从仓库根目录用 `make -C src -j7 cbmc.dir` 构建默认原生 ELF，用 `bash dependency-reuse/scripts/build43d.sh "$PWD" /tmp/compact-tools` 构建独立生产工具目录。P0 使用 `--d43-record` 和 B 阶段相同的身份清单，`scripts/run_d43d.py` 为其生成 D43D 生产封存回执。P1 使用 `--d43-load LIB --d4-mode reuse --d4-out OUT --d4-tools TOOLS --d41-identities`；`record-cold` 在相同 root boundary 完成相同验证和选择后跳过附着。每次准备全新的 OUT，其 `control43.json` 绑定指定 P0 回执的 SHA-256。生产库中的 `dense.bin` 和 `model.tsv` 与回执在一起。airline 的已认证源行对应还使用两版源码和冻结补丁。
+
+`compact-structure` 接收原始 occurrence 的 UsedLeaf/overflow 标志及两份静态模型。输出 `input-matches.tsv` 给出完整 P1 永久子句的首个对应 occurrence；0 表示完整译出但缺少成员，−1 表示无法译全。读取旧组目录、校验整库并筛完所有出生后，worker 用一次重命名发布按出生序选择的 `ready.tsv`。P1 自己分配和监测导入子句。独立图检查器、历史映射和完整 Audit 均只在离线复核命令中使用。四例运行、回执、恢复与复核步骤见 [D4.3-D 报告](reports/D4.3-D.md)。

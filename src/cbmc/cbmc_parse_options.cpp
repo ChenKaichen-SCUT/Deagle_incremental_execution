@@ -444,7 +444,11 @@ int cbmc_parse_optionst::doit()
 
   optionst options;
   get_command_line_options(options);
-  const bool loading=cmdline.isset("d4-load");
+  dependency_manifest::compact_load43=cmdline.isset("d43-load");
+  const bool loading=cmdline.isset("d4-load") || dependency_manifest::compact_load43;
+  if(dependency_manifest::compact_load43 && (cmdline.isset("d4-load") || !cmdline.isset("d41-identities") ||
+       cmdline.isset("d43-boundaries") || cmdline.isset("d43-opaque-theory")))
+    throw std::runtime_error("compact load requires its exclusive production identity mode");
   if(cmdline.isset("d43-record"))
   {
     if(loading || cmdline.isset("d2-proof") || cmdline.isset("d42-light") || cmdline.isset("d41-compact") ||
@@ -483,7 +487,7 @@ int cbmc_parse_optionst::doit()
        (cmdline.get_value("d4-mode")!="reuse" && cmdline.get_value("d4-mode")!="record-cold") ||
        cmdline.isset("d3-proof") || cmdline.isset("d2-proof") || cmdline.isset("d1-manifest"))
       throw std::runtime_error("D4 load requires its mode, fresh output directory and matching tools");
-    dependency_manifest::d4_library=cmdline.get_value("d4-load");
+    dependency_manifest::d4_library=cmdline.get_value(dependency_manifest::compact_load43?"d43-load":"d4-load");
     dependency_manifest::d4_out=cmdline.get_value("d4-out");
     dependency_manifest::d4_tools=cmdline.get_value("d4-tools");
     dependency_manifest::d4_mode=cmdline.get_value("d4-mode");
@@ -1079,6 +1083,7 @@ void cbmc_parse_optionst::help()
     "\n"
     "Backend options:\n"
     HELP_CONFIG_BACKEND
+    " --d43-load LIB                 load a sealed dense production library at the first root boundary\n"
     " --d4-load LIB --d4-mode reuse|record-cold --d4-out DIR --d4-tools DIR\n"
     "                              bind a recorded P0 to this SC solver at its first root boundary\n"
     " --d4-search-log FILE         record time inside the native restart/search loop\n"
