@@ -211,7 +211,11 @@ def main(binary, out, stock=None):
         all_results[name]={"statuses":[r["status"] for r in rows],"actual_reasons":checked,"co_clauses":co_checked,"independent_stock":stock_rows,
                             "metrics":[r["native"] for r in rows]}
     assert all_results["native_learning"]["metrics"][1]["families"][0]["hits"][0]>0
-    assert all_results["restart_theory_replay"]["metrics"][0]["rebuilds"]>=2
+    restart=all_results["restart_theory_replay"]["metrics"][0]
+    if os.environ.get("PI1R_MODE","R0")=="R0":
+        assert restart["rebuilds"]>=2
+    else:
+        assert restart["restart_study"]["ordinary"]>=1
     assert all_results["surviving_binary_gc"]["metrics"][1]["collections"] and all_results["surviving_binary_gc"]["metrics"][1]["families"][2]["hits"][0]>0
     assert all_results["dynamic_co"]["co_clauses"]==1
     assert all_results["changed_endpoint"]["metrics"][1]["families"][2]["dormant"]==1

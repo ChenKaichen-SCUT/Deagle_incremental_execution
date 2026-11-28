@@ -2,6 +2,7 @@
 #define MINISAT_EPOCH_SESSION_H
 
 #include "SolverTypes.h"
+#include "RestartStudy.h"
 #include <array>
 #include <chrono>
 #include <cstdint>

@@ -10,7 +10,8 @@ void ClosureSolver::epochContext(EpochImage &spec, int frames, unsigned version,
         throw std::logic_error("unsafe epoch boundary");
     image = &spec;
     barrier = frames;
-    piLedger = &ledger;
+    piLedger = restartStudy.ledger ? &ledger : nullptr;
+    epochVersion = version;
     ledger.version = version;
     for(auto &b:ledger.births)b.hits.fill(0);
     ownedOrder.clear();
@@ -94,7 +95,7 @@ CRef ClosureSolver::materialize(Lit conclusion, const literal_set &conditions, b
     CRef cr = ca.alloc(lits, true);
     if (reasonAudit) {
         auto &out = *reasonAudit;
-        out << "REASON " << piLedger->version << ' ' << meter.rebuilds << ' ' << (conflictNow ? 'C' : 'P')
+        out << "REASON " << epochVersion << ' ' << meter.rebuilds << ' ' << (conflictNow ? 'C' : 'P')
             << ' ' << image->control.x << ' ' << (cycle ? -3 : conclusion.x) << ' ' << decisionLevel();
         const Clause &actual = ca[cr];
         for (int i=0; i<actual.size(); ++i)
@@ -109,11 +110,13 @@ CRef ClosureSolver::materialize(Lit conclusion, const literal_set &conditions, b
         return cr;
     }
     if (supportLevel < decisionLevel()) {
-        cancelUntil(supportLevel);
+        restartStudy.sample.timePrefix(0);
+        restartStudy.sample.jump(decisionLevel(),supportLevel,2);
+        restartAudit("support",supportLevel); cancelUntil(supportLevel);
         if (work) { meter.pops += workDepth; dropGraph(); }
     }
     learnts.push(cr); attachClause(cr); claBumpActivity(ca[cr]);
-    piLedger->born(cr, ClauseFamily::theory);
+    if (piLedger) piLedger->born(cr, ClauseFamily::theory);
     uncheckedEnqueue(conclusion, cr);
     if (reasonAudit) {
         *reasonAudit<<"ENQUEUE "<<cr<<' '<<conclusion.x<<' '<<trail.size()-1;
@@ -177,6 +180,7 @@ void ClosureSolver::installCo()
             if (old.from == pair.first && old.to == pair.second)
                 throw std::logic_error("existing CO binding failed completeness check");
         Lit a = mkLit(newVar()), b = mkLit(newVar());
+        restartStudy.tag(var(a),DynamicCO); restartStudy.tag(var(b),DynamicCO);
         allocatedCO.push_back(var(a)); allocatedCO.push_back(var(b));
         vec<Lit> clause;
         clause.push(a); clause.push(b); clause.push(~image->control);
@@ -186,9 +190,9 @@ void ClosureSolver::installCo()
             else if (guard.x != -1) throw std::logic_error("unlit CO guard");
         }
         CRef cr = ca.alloc(clause);
-        clauses.push(cr); attachClause(cr); piLedger->co_axioms.insert(cr);
+        clauses.push(cr); attachClause(cr); if (piLedger) piLedger->co_axioms.insert(cr);
         if (reasonAudit) {
-            *reasonAudit << "CO " << piLedger->version << ' ' << image->control.x;
+            *reasonAudit << "CO " << epochVersion << ' ' << image->control.x;
             for (int j=0; j<ca[cr].size(); ++j) *reasonAudit << ' ' << ca[cr][j].x;
             *reasonAudit << '\n';
         }
@@ -201,6 +205,7 @@ void ClosureSolver::installCo()
 
 void ClosureSolver::classifyResident(const std::set<int> &off)
 {
+    if (!piLedger) return;
     for (const auto &entry : piLedger->resident) {
         auto &birth = piLedger->births[entry.second];
         if (birth.version >= piLedger->version) continue;
@@ -217,6 +222,10 @@ lbool ClosureSolver::runEpoch(const vec<Lit> &args, bool probe)
 {
     args.copyTo(assumptions);
     meter = EpochMeter();
+    auto &s=restartStudy;
+    s.sample=RestartSample(); s.measuring=true; s.assigned.fill(0);
+    for(int i=0;i<trail.size();++i) ++s.assigned[s.roles[var(trail[i])]];
+    s.db.open(s.dbPath,epochVersion);
     meter.assumptions = args.size();
     for (int i=0; i<args.size(); ++i) (sign(args[i]) ? meter.negative : meter.positive)++;
     auto previousDecisions = decisions, previousConflicts = conflicts, previousProps = propagations;
@@ -246,6 +255,7 @@ lbool ClosureSolver::runEpoch(const vec<Lit> &args, bool probe)
         meter.rollback = epochClock() - start;
     }
     meter.boundary = epochClock() - begin;
+    s.measuring=false; s.db.finish();
     meter.restarts = starts>previousStarts ? starts-previousStarts-1 : 0;
     meter.decisions = decisions - previousDecisions;
     meter.conflicts = conflicts - previousConflicts;

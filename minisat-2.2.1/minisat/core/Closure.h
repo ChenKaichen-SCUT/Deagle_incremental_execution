@@ -45,6 +45,13 @@ private:
     vec<int> trail_triplet_lim;
 
 public:
+#ifdef DEAGLE_PI1
+    bool scopesAt(int depth) const {
+        return trail_edge_lim.size()==depth && trail_rf_lim.size()==depth && trail_vital_lim.size()==depth &&
+               trail_light_guard_lim.size()==depth && trail_triplet_lim.size()==depth;
+    }
+    void auditScopes(std::ostream &out) const;
+#endif
     struct triplett
     {
         int w1;

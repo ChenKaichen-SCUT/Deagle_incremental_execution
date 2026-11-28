@@ -266,10 +266,14 @@ lbool ClosureSolver::search(int nof_conflicts)
 
 #ifdef DEAGLE_PI1
             if (image) {
+                restartStudy.sample.timePrefix(0);
                 int top = 0;
                 for (int i=0; i<ca[confl].size(); ++i) top = std::max(top, level(var(ca[confl][i])));
-                if (top < decisionLevel()) { ++meter.delayed_conflicts; cancelUntil(top); }
-                piLedger->mixed = (confl == temporary);
+                if (top < decisionLevel()) {
+                    ++meter.delayed_conflicts; restartStudy.sample.jump(decisionLevel(),top,1);
+                    restartAudit("late",top); cancelUntil(top);
+                }
+                if (piLedger) piLedger->mixed = (confl == temporary);
             }
 #endif
             if (decisionLevel() == 0) return l_False;
@@ -279,14 +283,17 @@ lbool ClosureSolver::search(int nof_conflicts)
 
 
 #ifdef DEAGLE_PI1
-            if (image) releaseTemporary();
+            if (image) {
+                restartStudy.sample.jump(decisionLevel(),backtrack_level,0);
+                restartAudit("uip",backtrack_level); releaseTemporary();
+            }
 #endif
             cancelUntil(backtrack_level);
 
             if (learnt_clause.size() == 1){
 
 #ifdef DEAGLE_PI1
-                if (image) {
+                if (piLedger) {
                     piLedger->born(CRef_Undef, piLedger->mixed ? ClauseFamily::mixed : ClauseFamily::boolean, var(learnt_clause[0]));
                     piLedger->root_theory.resize(nVars(), 0);
                     piLedger->root_theory[var(learnt_clause[0])] = piLedger->mixed;
@@ -297,7 +304,7 @@ lbool ClosureSolver::search(int nof_conflicts)
                 CRef cr = ca.alloc(learnt_clause, true);
 
 #ifdef DEAGLE_PI1
-                if (image) piLedger->born(cr, piLedger->mixed ? ClauseFamily::mixed : ClauseFamily::boolean);
+                if (piLedger) piLedger->born(cr, piLedger->mixed ? ClauseFamily::mixed : ClauseFamily::boolean);
 #endif
                 learnts.push(cr);
                 attachClause(cr);
@@ -322,6 +329,27 @@ lbool ClosureSolver::search(int nof_conflicts)
 
         }else{
             // NO CONFLICT
+#ifdef DEAGLE_PI1
+            if (image) {
+                auto &m=restartStudy.sample;
+                if (m.installed==assumptions.size()) m.timePrefix(0);
+                bool exit=!withinBudget();
+                if (exit || (nof_conflicts>=0 && conflictC>=nof_conflicts)) {
+                    m.timePrefix(0); progress_estimate=measuredProgress(exit);
+                    int target=0;
+                    if (exit) ++m.budgets;
+                    else {
+                        ++m.ordinary;
+                        if (prefixSafe()) {
+                            if (restartStudy.retain) { target=assumptions.size(); ++m.kept; }
+                        } else if (m.installed<assumptions.size()) ++m.incomplete;
+                        else ++m.unsafe;
+                    }
+                    restartAudit(exit?"budget":"restart",target); cancelUntil(target); restartAudit("after",target);
+                    return l_Undef;
+                }
+            } else
+#endif
             if ((nof_conflicts >= 0 && conflictC >= nof_conflicts) || !withinBudget()){
                 // Reached bound on number of conflicts:
                 progress_estimate = progressEstimate();
@@ -332,6 +360,13 @@ lbool ClosureSolver::search(int nof_conflicts)
             if (decisionLevel() == 0 && !simplify())
                 return l_False;
 
+#ifdef DEAGLE_PI1
+            if (image && restartStudy.db.active()) {
+                const auto &a=restartStudy.assigned;
+                restartStudy.db.add(learnts.size(),a[Program],a[Selector],a[DynamicCO]+a[Constant],nAssigns(),
+                                    clauses_literals+learnts_literals,max_learnts);
+            }
+#endif
             if (learnts.size()-nAssigns() >= max_learnts)
                 // Reduce the set of learnt clauses:
                 reduceDB();
@@ -341,16 +376,21 @@ lbool ClosureSolver::search(int nof_conflicts)
                 // Perform user provided assumption:
                 Lit p = assumptions[decisionLevel()];
 #ifdef DEAGLE_PI1
-                if (image) { ++meter.processed; meter.prefix = std::max(meter.prefix, uint64_t(decisionLevel()+1)); }
+                if (image) {
+                    auto &m=restartStudy.sample; m.timePrefix(m.installed<m.high?2:1);
+                    ++meter.processed; meter.prefix = std::max(meter.prefix, uint64_t(decisionLevel()+1)); }
 #endif
 
                 if (value(p) == l_True){
                     // Dummy decision level:
                     newDecisionLevel();
 #ifdef DEAGLE_PI1
-                    if (image) { ++meter.empty; if (!work && decisionLevel() == barrier) break; }
+                    if (image) { restartStudy.sample.installedFrame(); ++meter.empty; if (!work && decisionLevel() == barrier) break; }
 #endif
                 }else if (value(p) == l_False){
+#ifdef DEAGLE_PI1
+                    if (image) { restartStudy.sample.timePrefix(0); restartAudit("failed",decisionLevel()); }
+#endif
                     analyzeFinal(~p, conflict);
                     return l_False;
                 }else{
@@ -364,6 +404,9 @@ lbool ClosureSolver::search(int nof_conflicts)
             if (image && !work && decisionLevel() >= barrier && next == lit_Undef) continue;
 #endif
             if (next == lit_Undef){
+#ifdef DEAGLE_PI1
+                if (image) restartStudy.sample.timePrefix(0);
+#endif
                 // New variable decision:
                 decisions++;
                 next = pickBranchLit();
@@ -383,6 +426,9 @@ lbool ClosureSolver::search(int nof_conflicts)
             }
 
             // Increase decision level and enqueue 'next'
+#ifdef DEAGLE_PI1
+            if (image && decisionLevel()<assumptions.size()) restartStudy.sample.installedFrame();
+#endif
             newDecisionLevel();
             uncheckedEnqueue(next);
         }
@@ -468,6 +514,7 @@ lbool ClosureSolver::solve_()
 #ifdef DEAGLE_PI1
     }
     if (image) {
+        restartStudy.sample.timePrefix(0); restartAudit("query",0);
         releaseTemporary();const double t=epochClock();cancelUntil(0);meter.rollback+=epochClock()-t;
     } else
 #endif
@@ -646,6 +693,9 @@ void ClosureSolver::cancelUntil(int level)
         for (int c = trail.size()-1; c >= trail_lim[level]; c--)
         {
             Var x  = var(trail[c]);
+#ifdef DEAGLE_PI1
+            if (restartStudy.measuring) --restartStudy.assigned[restartStudy.roles[x]];
+#endif
             assigns [x] = l_Undef;
             if (phase_saving > 1 || ((phase_saving == 1) && c > trail_lim.last()))
                 polarity[x] = sign(trail[c]);
@@ -661,6 +711,7 @@ void ClosureSolver::cancelUntil(int level)
         if (image) {
             // A cycle may interrupt native Closure after an earlier callback has queued a unit.
             // No pending consequence of the abandoned trail may survive this rollback.
+            restartStudy.sample.installed=std::min(restartStudy.sample.installed,level);
             meter.discarded_queued += literals_to_assign.size();
             literals_to_assign.clear();
             assigned_literals.clear();
@@ -706,7 +757,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
         assert(confl != CRef_Undef); // (otherwise should be UIP)
         Clause& c = ca[confl];
 #ifdef DEAGLE_PI1
-        if (image) piLedger->use(confl, NativeUse::analysis);
+        if (piLedger) piLedger->use(confl, NativeUse::analysis);
 #endif
 
 
@@ -716,7 +767,7 @@ void ClosureSolver::analyze(CRef confl, vec<Lit>& out_learnt, int& out_btlevel)
         for (int j = (p == lit_Undef) ? 0 : 1; j < c.size(); j++){
             Lit q = c[j];
 #ifdef DEAGLE_PI1
-            if (image && level(var(q)) == 0) piLedger->root(var(q), NativeUse::analysis);
+            if (piLedger && level(var(q)) == 0) piLedger->root(var(q), NativeUse::analysis);
 #endif
 
 

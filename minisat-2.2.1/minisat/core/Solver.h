@@ -41,6 +41,8 @@ namespace Minisat {
 class Solver {
 public:
 #ifdef DEAGLE_PI1
+    RestartStudy restartStudy;
+    double zeroTailProgress(int &visited) const;
     NativeLedger *piLedger = nullptr;
 #endif
 

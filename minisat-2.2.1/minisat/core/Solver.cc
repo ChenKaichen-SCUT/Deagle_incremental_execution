@@ -471,6 +471,7 @@ void Solver::uncheckedEnqueue(Lit p, CRef from)
     assert(value(p) == l_Undef);
 
 #ifdef DEAGLE_PI1
+    if (restartStudy.measuring) ++restartStudy.assigned[restartStudy.roles[var(p)]];
     if (piLedger && decisionLevel() == 0) {
         auto &flags = piLedger->root_theory;
         flags.resize(nVars(), 0);
@@ -511,6 +512,9 @@ CRef Solver::propagate()
         Lit            p   = trail[qhead++];     // 'p' is enqueued fact to propagate.
         vec<Watcher>&  ws  = watches[p];
         Watcher        *i, *j, *end;
+#ifdef DEAGLE_PI1
+        if (restartStudy.measuring) ++restartStudy.sample.dequeued[restartStudy.roles[var(p)]];
+#endif
         num_props++;
 
         
@@ -557,6 +561,7 @@ CRef Solver::propagate()
                     *j++ = *i++;
             }else {
 #ifdef DEAGLE_PI1
+                if (restartStudy.measuring) ++restartStudy.sample.watcher[restartStudy.roles[var(first)]];
                 if (piLedger) piLedger->use(cr, NativeUse::watcher);
 #endif
                 uncheckedEnqueue(first, cr);

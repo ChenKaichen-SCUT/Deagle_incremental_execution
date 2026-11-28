@@ -139,6 +139,7 @@ public:
     void set_audit_output(std::ostream *owned_by_caller);
     void set_assumption_output(std::ostream *owned_by_caller);
     void first_restart_for_test(int conflicts);
+    void conflict_budget_for_test(int conflicts);
     void collect_at_boundary();
     void interrupt_next_query();
     void clear_interrupt();

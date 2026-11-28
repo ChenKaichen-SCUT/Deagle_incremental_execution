@@ -55,6 +55,9 @@ class RegionAllocator
 
     uint32_t size      () const      { return sz; }
     uint32_t wasted    () const      { return wasted_; }
+#ifdef DEAGLE_PI1
+    uint32_t reservedWords() const { return cap; }
+#endif
 
     Ref      alloc     (int size); 
     void     free      (int size)    { wasted_ += size; }

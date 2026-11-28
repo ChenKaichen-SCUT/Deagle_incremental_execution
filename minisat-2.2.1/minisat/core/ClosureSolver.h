@@ -43,6 +43,15 @@ public:
     }
 private:
     EpochMeter meter;
+    unsigned epochVersion = 0;
+    bool prefixSafe() const;
+    double measuredProgress(bool exit);
+    void restartAudit(const char *name, int target);
+public:
+    void configureRestartStudy(const char *mode, const char *ledger, const char *db);
+    void databaseSnapshot(const std::set<int>& off, unsigned active, unsigned total, const char *phase);
+    std::string restartReceipt() const;
+private:
     std::ostream *reasonAudit = nullptr;
     std::map<std::string,int> ownedOrder;
     std::vector<std::string> ownedWrites;

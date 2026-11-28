@@ -73,7 +73,7 @@ def stock_run(repo,stock,case,side,out):
     return meta
 
 
-def session(repo,binary,fixtures,case,mode,out):
+def session(repo,binary,fixtures,case,mode,out,prepare=frozen.prepare):
     cfg=PLAN["cases"][case];out.mkdir(parents=True,exist_ok=True)
     controls=out/"assumptions.i32le";env=dict(os.environ,PI1_ASSUMPTION_FILE=str(controls))
     transcript=out/"native.txt"; rows=[];seals=[]
@@ -84,7 +84,7 @@ def session(repo,binary,fixtures,case,mode,out):
             text=True,env=env,start_new_session=True,preexec_fn=lambda:limits(cfg))
         try:
             for side in ("P0","P1"):
-                seal=frozen.prepare(repo,fixtures,case,side);seals.append(seal)
+                seal=prepare(repo,fixtures,case,side);seals.append(seal)
                 begin=time.monotonic()
                 signal.setitimer(signal.ITIMER_REAL,cfg["limits"]["timeout_seconds"])
                 child.stdin.write("APPEND\t"+str(fixtures/(side+".txn"))+"\n"+("PROBE" if mode=="boundary" else "SOLVE")+"\t1\n")

@@ -156,10 +156,11 @@ struct PersistentClosureSession::Backend {
     Var truth;
     uint64_t published=0;
     bool saved=true;
-    Backend() {stats.solver_construct_count=1;truth=solver.newVar(l_Undef,false);check(solver.addClause(mkLit(truth)),"constant root");}
+    Backend() {stats.solver_construct_count=1;solver.configureRestartStudy(std::getenv("PI1R_MODE"),std::getenv("PI1R_LEDGER"),std::getenv("PI1R_DATABASE"));
+        truth=solver.newVar(l_Undef,false);solver.restartStudy.tag(truth,Minisat::Constant);check(solver.addClause(mkLit(truth)),"constant root");}
     void boundary() const {check(saved && solver.currentLevel()==0 && (state==SessionState::ready || state==SessionState::idle),"unsafe transaction boundary");}
-    Var freshProgram() {++stats.program_vars;return solver.newVar();}
-    Var control() {++stats.selectors;return solver.newVar(l_Undef,false);}
+    Var freshProgram() {++stats.program_vars;auto v=solver.newVar();solver.restartStudy.tag(v,Minisat::Program);return v;}
+    Var control() {++stats.selectors;auto v=solver.newVar(l_Undef,false);solver.restartStudy.tag(v,Minisat::Selector);return v;}
     void remember(const InputOccurrence &c,Var query,std::vector<unsigned>& active,const std::vector<int>& mu) {
         ++stats.occurrences;
         std::vector<int> v;
@@ -230,6 +231,7 @@ struct PersistentClosureSession::Backend {
         FIELD(restarts);FIELD(discarded_queued);FIELD(delayed_conflicts);FIELD(positive);FIELD(negative);FIELD(max_level);FIELD(decisions);FIELD(conflicts);
         FIELD(propagations);FIELD(activation);FIELD(joint);FIELD(rollback);FIELD(boundary);
 #undef FIELD
+        o<<",\"restart_study\":"<<solver.restartReceipt();
         o<<",\"solver_instance\":"<<solver.nativeInstance();
         o<<",\"collections\":"<<ledger.collections<<",\"reductions\":"<<ledger.reductions<<",\"families\":[";
         for(unsigned f=0;f<3;++f){
@@ -289,9 +291,17 @@ struct PersistentClosureSession::Backend {
             auto f=unsigned(b.family);++phys[f];inactive[f]+=b.dormant;oldUnits[f]+=b.unit;}};
         for(const auto &kv:ledger.resident)count(kv.second);
         for(const auto &kv:ledger.root_units)count(kv.second);
+        unsigned active=0;
+        if(!solver.restartStudy.dbPath.empty()) {
+            active=std::count(enabled.begin(),enabled.end(),1);
+            solver.databaseSnapshot(off,active,selectors.size(),"entry");
+        }
+        const double switchTime=epochClock()-t;
         state=SessionState::solving;
         try {
             lbool status=solver.runEpoch(args,probe);
+            solver.restartStudy.sample.switchSeconds=switchTime;
+            solver.databaseSnapshot(off,active,selectors.size(),"exit");
             if(status==l_True) {
                 result.status=QueryResult::Status::sat;
                 for(unsigned i=0;i<q.desc.native_variable_count_at_boundary;++i){auto value=solver.modelValue(lit(v.mu[i]));
@@ -419,5 +429,10 @@ void PersistentClosureSession::first_restart_for_test(int conflicts){std::lock_g
 void PersistentClosureSession::collect_at_boundary(){std::lock_guard<std::mutex> guard(access);auto &b=live();b.boundary();b.solver.collectForTest();}
 void PersistentClosureSession::interrupt_next_query(){std::lock_guard<std::mutex> guard(access);live().solver.interrupt();}
 void PersistentClosureSession::clear_interrupt(){std::lock_guard<std::mutex> guard(access);live().solver.clearInterrupt();}
+void PersistentClosureSession::conflict_budget_for_test(int conflicts){
+    std::lock_guard<std::mutex> guard(access);
+    auto &b=live();b.boundary();
+    if(conflicts<0)b.solver.budgetOff();else b.solver.setConfBudget(conflicts);
+}
 void PersistentClosureSession::close(){std::lock_guard<std::mutex> guard(access);if(backend){final_statistics=backend->stats;backend.reset();}}
 }

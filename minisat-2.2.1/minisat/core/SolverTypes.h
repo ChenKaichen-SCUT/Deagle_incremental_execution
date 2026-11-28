@@ -254,6 +254,9 @@ class ClauseAllocator
 
     uint32_t size      () const      { return ra.size(); }
     uint32_t wasted    () const      { return ra.wasted(); }
+#ifdef DEAGLE_PI1
+    uint32_t reservedWords() const { return ra.reservedWords(); }
+#endif
 
     // Deref, Load Effective Address (LEA), Inverse of LEA (AEL):
     Clause&       operator[](CRef r)         { return (Clause&)ra[r]; }

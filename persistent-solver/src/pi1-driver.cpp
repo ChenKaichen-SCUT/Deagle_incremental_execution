@@ -21,6 +21,7 @@ int main(int argc,char**argv){
             }else if(cmd=="QUERY"){auto t=readTransaction(f.at(1));session.append_query(version,std::move(t.first_query));}
             else if(cmd=="GC")session.collect_at_boundary();
             else if(cmd=="RESTART")session.first_restart_for_test(num(f.at(1)));
+            else if(cmd=="BUDGET")session.conflict_budget_for_test(num(f.at(1)));
             else if(cmd=="INTERRUPT")session.interrupt_next_query();
             else if(cmd=="RESUME")session.clear_interrupt();
             else if(cmd=="PROBE"||cmd=="SOLVE"){
