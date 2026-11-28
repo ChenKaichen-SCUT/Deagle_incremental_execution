@@ -1,0 +1,29 @@
+{
+  "stage": "PI-1R",
+  "reviewed_baseline": "06c1560c17a3c36fc5f90817680a654a0af0c857",
+  "branch": "codex/persistent-minisat-closure",
+  "locks": ["configs/frozen-pairs.json", "reports/evidence/pi0/scale.json", "reports/evidence/pi1/build.json", "reports/evidence/pi1/properties.json", "reports/evidence/pi1/raw-index.json"],
+  "modes": {
+    "R0": {"retain_complete_query_prefix": false, "skip_zero_progress_tail": false},
+    "R1": {"retain_complete_query_prefix": true, "skip_zero_progress_tail": false},
+    "R2": {"retain_complete_query_prefix": true, "skip_zero_progress_tail": true}
+  },
+  "progress_policy": "Run all three arms if original and optimized progress estimates agree on the finite and floating-point boundary controls. Count calls, actual loop iterations, available levels and elapsed monotonic seconds separately at restarts and exits.",
+  "restart_rule": "A is the entire current signed assumptions vector. At a conflict-budget restart after a joint fixpoint, retain A only when the installed prefix, Boolean trail, epoch, independent replay cursor, work floor and every native scope are valid. Use the original zero return on an unsafe or incomplete prefix. UIP backjumps and delayed-conflict level normalization keep their actual targets. Query exit, global budgets and interrupts clean to zero.",
+  "frozen_parameters": ["global allocator", "signed diagnostic map", "one selector per canonical clause", "query scope", "whole graph EPOCH", "dynamic CO", "learnt admission", "UIP and minimization", "reduceDB threshold and ordering", "native solver defaults"],
+  "gate_before_real_models": ["PI-1 finite sequences and pristine stock", "Boolean and SC order oracle", "actual reason, CRef, trail and graph projection across restart", "prefix-internal UIP and false assumption", "dummy levels and RF/Guard from non-epoch assumptions", "late conflict, barrier teardown and replay", "dynamic CO after restart", "GC, forced reduction, interruption, queries and versions", "bitwise progress estimate controls"],
+  "ordered_timed_sessions": [
+    ["fib_updates_8", "R0", "R1", "R2"],
+    ["circular-buffer", "R1", "R2", "R0"],
+    ["airline_reservations_6", "R2", "R0", "R1"],
+    ["fib-snapshot-11", "R0", "R2", "R1"]
+  ],
+  "execution": "One serial CPU-0 P0/P1 timing per case and mode, identical optimized binary, options and observation intensity, original per-side resource caps. Each process solves its own P0 before P1 data or the certified correspondence is supplied. Every outcome is retained. A failed measurement is distinguishable from a repair or a diagnostic replay.",
+  "reference": "Compare R1 and R2 with the same-case R0 backend transaction. Also show independently measured unmodified stock P1 full verification from the fixed PI-1 evidence on this host. These boundaries differ.",
+  "timed_metrics": ["assumptions, checks, first installations and reinstallations", "restart outcomes, real backjumps and query/budget exits by cause", "actual prefix installation/propagation intervals", "graph generations and replays", "progress estimate", "input install, query switch, native solve, complete backend transaction", "RSS", "decisions, conflicts, BCP dequeues and watcher enqueues by selector/program/CO/constant role", "surviving, dormant and actually used old learning"],
+  "database_diagnostic": "A separate deterministic replay of each arm observes every native reduceDB predicate including non-triggers. Encode the tuple sequence losslessly with affine runs of learnt count, program/selector/other assignments, nAssigns, native max_learnts and database literals. Report active/union canonical inputs, resident lengths, number of selectors per learnt, dormancy, allocator and watcher capacity. Compare semantic and work-counter receipts with each timed session. Diagnostic wall times are excluded from mode comparisons.",
+  "ledger_diagnostic": "One additional R2 observer-off session per case measures NativeLedger cost against ordinary R2 with the same lightweight counters. Disable only the observation paths and compare native work, results and signed assumptions. Report signed time/RSS differences and observed data sizes. Fixed samples do not give a general cost bound.",
+  "timing_boundary": "Measure actual contiguous assumption-install and joint-propagation intervals. Record repeated intervals separately from first installation and exclude ordinary branches. Report nested timers explicitly; no extrapolation from the PI-1 boundary microbenchmark.",
+  "correctness": "All properties and unfolding obligations agree with independent stock; all necessary SAT witnesses independently validate against the original B/Q/SC model. Historical fib-snapshot-11 remains INCOMPLETE_UNWINDING. Dynamic proof export, import and per-clause reproof remain zero.",
+  "stop": "READY_FOR_REVIEW after PI-1R. No next-stage implementation, selector search, learning policy change or formal repeat matrix."
+}
