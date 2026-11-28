@@ -1,0 +1,28 @@
+{
+  "stage": "D4.3-E",
+  "review_base": "ef76e75467b011058e7ff46d4fbc9552f499bf1d",
+  "parent_preregistration": "configs/d43-plan.json#timing_future",
+  "accepted_build": "reports/evidence/d43d/build.json",
+  "case_order": [
+    "fib_updates_8",
+    "circular-buffer",
+    "airline_reservations_6",
+    "fib-snapshot-11"
+  ],
+  "modes": [
+    "stock",
+    "off",
+    "light-quality",
+    "light-no-quality",
+    "compact-cold",
+    "compact-reuse"
+  ],
+  "light_slot": "Expand the original light42 slot in place. Odd rounds quality then no-quality, even rounds reversed. Both measure P0 only, with the D4.3-B Light capture and sealing procedure. Stock-clock observes only search/restarts/model clocks in separate serial runs after primary measurements. It supplies no stock wall, RSS or decisions.",
+  "compact_P0": "Record once in the first Compact slot in each case/round; charge that full P0 including seal to both cycles. Both arms independently build P1 and run identical preparation.",
+  "order": "Round outermost, frozen case order within round. Use all five archived rotations in order as needed. One immutable D production binary for both Light arms, Compact and same-encoding off. Native processes, worker, sealing and controller pinned to CPU 0; fresh process/work directory, natural caches.",
+  "confirmation": "Test Compact-reuse versus genuine stock only; for each case and metric use paired median fractional saving >=0.05 and >=2 positive of the first 3. Any trigger including history extends the entire four-case cohort for rotations 4 and 5. Five-round confirmation requires median >=0.05 and >=4 positive. No passing claim from incomplete pairs.",
+  "recording": "Use per-round 1 - (CompactP0 - offP0)/(LightP0 - offP0), reported separately versus quality and no-quality. A substantial case is one of circular-buffer, airline or snapshot, the previous three with >=0.70s Light extra versus 0.055s for fib. Count >=50% median and improvement in at least 2/3 of rounds. Show signed absolute differences for every round. For a denominator at or below max(clock resolution, observed range of same-build P0 off within the case), publish absolute costs; no fractional claim for an incomplete or noise-limited series.",
+  "cost_scope": "P0 solve and sealed production payload, P1 full native process plus production control receipt setup. Exclude frozen repair and independent audits. Capture reported propositions, unwind obligations, witnesses, counts, root-work, RSS, phases, and first-use receipts. Full Audit/offline archive checks only after all timed processes have ended.",
+  "ablation": "Only after confirmed P1 or full cycle net benefit >=5% with >=4/5 positives on a real repair, one B-only/B+M control using the same library, map, birth order and candidate pool. Historical gain alone never triggers ablation.",
+  "failure": "Preserve every started run and its failure. Mark affected pairs incomplete, with no replacement samples. Preserve all signed mappings and candidate differences, including time-budget changes."
+}
