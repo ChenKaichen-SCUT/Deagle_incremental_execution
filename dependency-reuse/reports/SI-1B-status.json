@@ -1,0 +1,59 @@
+{
+  "stage": "SI-1B",
+  "status": "READY_FOR_REVIEW",
+  "coverage": "PARTIAL_IDENTITY_COVERAGE",
+  "branch": "codex/stable-model-identity",
+  "baseline_sha": "be3064304254e516ed37a27944d7a208a7971453",
+  "preregistration_sha": "8eaf081461c3e1c9f5d513916be99188fae8f46b",
+  "source_and_checks_sha": "8fdad1cd27da7201db52755da78135e4f39366c1",
+  "report_and_evidence_sha": "6debdfcadd9e251362ad3fd61bb03b6f4269f7f1",
+  "native_elf_sha256": "418d5e656c4f26c4cf46c07a8501561f0c1af1801fa9060fe1e956b6fbe83f1a",
+  "report": "SI-1B.md",
+  "report_sha256": "b61ca25da544d07f22c96e0d22cf613494b634b78070a3cdfd528ae86523cb0a",
+  "evidence_index_sha256": "1cfbe17f1b995ae3450d5b6eca03d2cb310df718033c110d11a6639a36b6835d",
+  "replay_sha256": "47c8ca74e2d59f16b35ae0722e952d9744637f9e35fe90e07653bca8c7067656",
+  "correctness": {
+    "frozen_models": 8,
+    "original_off_shadow_same_encoding_models_verified": 8,
+    "frozen_manifest_models_verified": 8,
+    "full_no_import_search_trajectories_verified": 8,
+    "installed_boolean_port_rows_verified": 244714,
+    "accepted_signed_pairs_verified": 42149,
+    "incorrect_accepted_source_witnesses": 0,
+    "hidden_signed_permutation_expected": 1957,
+    "hidden_signed_permutation_errors": 0,
+    "historical_control": "INCOMPLETE_UNWINDING",
+    "per_event_guard_cache_replays_passed": true
+  },
+  "used_leaf": {
+    "all_P0_atoms_in_scope": 182327,
+    "old_mapped": 123863,
+    "direct_mapped": 29868,
+    "same_signed_image": 26189,
+    "old_gaps": 58464,
+    "added": 3679,
+    "lost": 97674,
+    "different_signed_image_or_peer": 0,
+    "neither": 54785,
+    "previously_missing_auxiliary": 34754,
+    "recovered_auxiliary": 3646,
+    "previously_missing_pointer_aggregate": 22732,
+    "recovered_pointer_aggregate": 0,
+    "recovered_ssa": 33,
+    "new_in_three_repair_cases": 403,
+    "new_in_historical_control": 3276
+  },
+  "cost": {
+    "eight_native_catalog_bytes": 96569630,
+    "max_pair_process_rss_kib": 953068,
+    "measurement": "exploratory"
+  },
+  "scope": {
+    "old_mu_in_production_join": false,
+    "native_learning_imports": 0,
+    "per_variable_equivalence_calls": 0,
+    "dirty_or_admission_run": false,
+    "SI_1C_started": false,
+    "next_action": "wait_for_user_review"
+  }
+}
