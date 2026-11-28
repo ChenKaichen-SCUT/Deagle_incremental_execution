@@ -1,0 +1,113 @@
+{
+  "stage": "D4.3-E",
+  "status": "READY_FOR_REVIEW",
+  "conclusion": "RECORDING_CHEAPER_NO_NET_GAIN",
+  "branch": "codex/compact-dependency-d43",
+  "review_base": "ef76e75467b011058e7ff46d4fbc9552f499bf1d",
+  "native_algorithms": "Unchanged from the D review baseline",
+  "native_implementation": "90dd3cc687a31dbeb2b591b25f51fdd9d0ce1287",
+  "locked_schedule": "28a0647e06d3b455d97eb5ba6eb6e25301e00c63",
+  "measurement_and_recalculation": "0cbb69697c0d201ad887aaa1e06ddac7bab19230",
+  "raw_capture": "ec5397b93b78206b831d13653b179b27d078382d",
+  "evidence": {
+    "commit": "3cbcc43e0ab5ef8b3f1325c1fc74db2deba51509",
+    "index": "evidence/d43e/files.json",
+    "index_sha256": "5089a0b85cd7f5c4f14f86050a16eb2dea1ce49765fa401a6b7ca8c437da3a55",
+    "raw_index_sha256": "f4a6ac8492c7ff6598ec25a3be77c39fec6bf3995db54a4cd368e5de004a3de9",
+    "raw_files": 1861,
+    "raw_bytes": 4210169949,
+    "restored_recalculation_identical": true
+  },
+  "published_report": {
+    "verified_remote_sha": "8df2765c56320c4d02e24cc4b92291a521309a90",
+    "verified_ref": "refs/heads/codex/compact-dependency-d43",
+    "url": "https://github.com/ChenKaichen-SCUT/Deagle_incremental_execution/blob/8df2765c56320c4d02e24cc4b92291a521309a90/dependency-reuse/reports/D4.3-E.md"
+  },
+  "github_verified_blobs": {
+    "D4.3-E.md": "1c4976f5e942332e6eea16e9ffcb9a26a01cfc1e",
+    "gate.json": "2061d88cdfdd14031504e4f41d16e554ef5961d5",
+    "archive.json": "f7aa8d808fecb05477ca735afc7325fb19becf83"
+  },
+  "acceptance": {
+    "L1": "PASS",
+    "L2_B": "PASS",
+    "mixed_repair_cases": [
+      "circular-buffer",
+      "fib_updates_8"
+    ],
+    "L2_C": "PASS",
+    "L2_C_vs_original_Light_quality": [
+      "airline_reservations_6",
+      "circular-buffer",
+      "fib-snapshot-11"
+    ],
+    "controlled_L2_C_vs_Light_no_quality": [
+      "circular-buffer"
+    ],
+    "L3_1": "NOT_ACHIEVED",
+    "L3_2": "NOT_ACHIEVED",
+    "real_net_benefit_cases": {
+      "P1": [],
+      "cycle": []
+    },
+    "historical_confirmations": [],
+    "ablation_required": false,
+    "conclusion": "RECORDING_CHEAPER_NO_NET_GAIN",
+    "rounds": 3,
+    "primary_samples": 108,
+    "observer_samples": 24,
+    "trigger": false,
+    "failed_samples": 0,
+    "exact_false_admissions": 0,
+    "changed_maps_vs_D": 0
+  },
+  "per_round_use": {
+    "attached": 322,
+    "distinct_used": 274,
+    "mixed_attached": 268,
+    "mixed_distinct_used": 228
+  },
+  "median_paired_fractions": {
+    "fib_updates_8": {
+      "P1_fraction": -0.2604012747420535,
+      "cycle_fraction": -0.25784960328933476,
+      "recording_reduction_vs_quality": 0.44977221521465927,
+      "recording_reduction_vs_no_quality": -0.6260065673467521
+    },
+    "circular-buffer": {
+      "P1_fraction": -0.6185578732838928,
+      "cycle_fraction": -0.6252157740741475,
+      "recording_reduction_vs_quality": 0.6610543349091555,
+      "recording_reduction_vs_no_quality": 0.6659305696040396
+    },
+    "airline_reservations_6": {
+      "P1_fraction": -0.1992953406833476,
+      "cycle_fraction": -0.24047214991690136,
+      "recording_reduction_vs_quality": 0.6561327762840907,
+      "recording_reduction_vs_no_quality": 0.25561780285414426
+    },
+    "fib-snapshot-11": {
+      "P1_fraction": -0.2689035239536185,
+      "cycle_fraction": -0.29986645659032723,
+      "recording_reduction_vs_quality": 0.6326382163406048,
+      "recording_reduction_vs_no_quality": 0.3941008758813983
+    }
+  },
+  "historical_case": {
+    "name": "fib-snapshot-11",
+    "classification": "INCOMPLETE_UNWINDING",
+    "included_in_repair_success": false
+  },
+  "stock_measurement": {
+    "complete_wall_RSS_counters": "Unmodified stock ELF",
+    "search_restart_and_root_clocks": "Separate serial timing observer matched to each round and trajectory"
+  },
+  "confirmation_rounds_executed": 0,
+  "ablation_runs": 0,
+  "boundaries": {
+    "algorithm_changed": false,
+    "D44_started": false,
+    "D5_started": false,
+    "awaiting_final_review": true
+  }
+}
