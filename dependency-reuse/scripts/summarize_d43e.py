@@ -124,7 +124,7 @@ def summarize_costs(samples,resolution_ns):
     return result
 
 
-def evaluate(all_pairs,funnels,checks,trial_count):
+def evaluate(all_pairs,funnels,trial_count,initial):
     p=math.ceil(trial_count*2/3)
     recording={}
     for ref in ("quality","no_quality"):
@@ -139,14 +139,15 @@ def evaluate(all_pairs,funnels,checks,trial_count):
         increased[key]=[]
         for case,o in all_pairs.items():
             x=o[key+"_fraction"]
-            if case!="fib-snapshot-11" and trial_count==5 and x["median"]>=.05 and x["positive"]>=4:
+            if (case!="fib-snapshot-11" and trial_count==5 and initial[case][key]["trigger"]
+                    and x["median"]>=.05 and x["positive"]>=4):
                 increased[key].append(case)
     hist=all_pairs["fib-snapshot-11"]
-    history=[s for s in ("P1","cycle") if trial_count==5 and hist[s+"_fraction"]["median"]>=.05
-             and hist[s+"_fraction"]["positive"]>=4]
+    history=[s for s in ("P1","cycle") if trial_count==5 and initial["fib-snapshot-11"][s]["trigger"]
+             and hist[s+"_fraction"]["median"]>=.05 and hist[s+"_fraction"]["positive"]>=4]
     real={r["case"] for r in funnels if r["family"]=="M" and r["attached"] and r["distinct_hits"]
           and r["case"]!="fib-snapshot-11"}
-    return dict(L1="PASS" if checks else "FAIL",L2_B="PASS" if real else "NOT_ACHIEVED",
+    return dict(L1="PASS",L2_B="PASS" if real else "NOT_ACHIEVED",
         mixed_repair_cases=sorted(real),L2_C="PASS" if recording["quality"] else "NOT_ACHIEVED",
         L2_C_vs_original_Light_quality=recording["quality"],controlled_L2_C_vs_Light_no_quality=recording["no_quality"],
         L3_1="PASS" if increased["P1"] else "NOT_ACHIEVED",L3_2="PASS" if increased["cycle"] else "NOT_ACHIEVED",
@@ -162,6 +163,16 @@ def summarize(root,d_raw,B,old,out):
     require(rounds in (3,5),"wrong round count")
     sched=verify_schedule(root,cases,rounds); save(out/"schedule-check.json",sched)
     if sched["failures"]:
+        retained=[]
+        for outcome in sorted((root/"matrix").glob("*/*/*/*/outcome.json")):
+            f=outcome.parent; row=read(outcome)
+            if (f/"run.json").is_file():
+                meta=read(f/"run.json")
+                row.update({k:meta.get(k) for k in ("exit_code","timed_out","wall_ns","seal_ns","setup_ns","peak_rss_kib")})
+            if (f/"cost.json").is_file():
+                row["seal_ns"]=read(f/"cost.json")["seal_ns"]
+            retained.append(row)
+        write(out,"all-sample-outcomes.tsv",retained)
         save(out/"gate.json",dict(L1="INCOMPLETE",failures=sched["failures"],performance_claims=False))
         raise ValueError("incomplete timed samples; all failures retained")
     dec=trigger(root/"matrix",cases)
@@ -226,7 +237,7 @@ def summarize(root,d_raw,B,old,out):
         summaries[c]=summarize_costs(series,ns)
         record_rss[c]={m:describe([v["peak_rss_KiB"] for v in runs if v["case"]==c and v["side"]=="P0" and v["mode"]==m])
                        for m in ("stock","off","light-quality","light-no-quality","compact")}
-    gate=evaluate(summaries,funnel,True,rounds)
+    gate=evaluate(summaries,funnel,rounds,dec["cases"])
     gate.update(rounds=rounds,primary_samples=sched["primary_samples"],observer_samples=sched["clock_only_samples"],
         trigger=dec["extend"],failed_samples=len(sched["failures"]),
         exact_false_admissions=sum(o["independent_false_admissions"] for v in provenance.values() for o in v.values()),

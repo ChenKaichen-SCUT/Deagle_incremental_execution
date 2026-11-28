@@ -54,8 +54,9 @@ def recalibrate(directory):
                 fields[key].append(Fraction(den-extra,den) if den>floor else None)
         for j,k in enumerate(("P1","cycle")):
             v=fields[k]
-            trigger |= median(v[:3])>=Fraction(1,20) and sum(x>0 for x in v[:3])>=2
-            if case!="fib-snapshot-11" and n==5 and median(v)>=Fraction(1,20) and sum(x>0 for x in v)>=4:
+            initial=median(v[:3])>=Fraction(1,20) and sum(x>0 for x in v[:3])>=2
+            trigger |= initial
+            if case!="fib-snapshot-11" and initial and n==5 and median(v)>=Fraction(1,20) and sum(x>0 for x in v)>=4:
                 success[j].append(case)
         for j,k in enumerate(("quality","no_quality")):
             v=fields[k]
