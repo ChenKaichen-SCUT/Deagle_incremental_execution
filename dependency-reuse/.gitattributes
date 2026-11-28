@@ -35,3 +35,5 @@ tests/d43d/** text eol=lf
 reports/evidence/si1b/** -text
 tests/si1b/** text eol=lf
 reports/evidence/si1b/development/early-shadow-stack.txt -whitespace
+reports/evidence/si1b-value/** -text
+diagnostics/si1b-value/*.py text eol=lf
