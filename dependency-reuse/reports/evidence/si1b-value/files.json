@@ -1,0 +1,106 @@
+{
+  "description": "The raw index authenticates all native files and losslessly reconstructible chunks. Other entries index the frozen batches and fully replayed analysis.",
+  "files": {
+    "batch-membership-use.tsv": {
+      "bytes": 3056,
+      "sha256": "0abd495b4c8adc24b68f98c2ab5f125b56ab295fb34f89b139a7595507cd70bb"
+    },
+    "family-use.tsv": {
+      "bytes": 2765,
+      "sha256": "b436f47c445181f466c5d4cd9a5f9cf8dadd910502af94b3aeb1f212ea5cd5b4"
+    },
+    "first-uses.tsv.gz": {
+      "bytes": 227737,
+      "sha256": "1b686d586c8a7804465cff3eb3b296527a08e3150f7b3e0e74bf2fbeb203e343"
+    },
+    "frozen/batches.json": {
+      "bytes": 325,
+      "sha256": "457e559b230f869507d8ca0e600b717c23d4d9e08570b260d17bd45e922addde"
+    },
+    "frozen/fib-snapshot-11/A.pool.tsv.gz": {
+      "bytes": 1408,
+      "sha256": "47e49967b9d4e77db225e79f170b4093df02e8baa0a5e4dfbd12980b0a20c87d"
+    },
+    "frozen/fib-snapshot-11/A.ready.tsv": {
+      "bytes": 2406,
+      "sha256": "c108e64e204a5df58d4370111190c81f8b0caf3ffbb43da264f34fb38d63da7d"
+    },
+    "frozen/fib-snapshot-11/new.pool.tsv.gz": {
+      "bytes": 63620,
+      "sha256": "883df13bbe6857866087e5632eea26f2093d06ea17a83cbfba7a269edc0bda18"
+    },
+    "frozen/fib-snapshot-11/new.ready.tsv": {
+      "bytes": 27623,
+      "sha256": "a41a3280f8f36c2f9f0cfcb8aa2b8281d0488d50311de3ddb9bd31eef4a88117"
+    },
+    "frozen/fib-snapshot-11/seal.json": {
+      "bytes": 3458,
+      "sha256": "86ee7def870dfa6e3cb648dd2e924de7ab8cc307d9161d1a55d1e534b6f1a466"
+    },
+    "frozen/fib_updates_8/A.pool.tsv.gz": {
+      "bytes": 9256,
+      "sha256": "9c5fd83e06fd30de2aa3faab8c8fcf2001ce4f0b3a918b9d7fda441ecfa0d653"
+    },
+    "frozen/fib_updates_8/A.ready.tsv": {
+      "bytes": 17671,
+      "sha256": "61ac5a4f7a9d4e5b12e35391580bc9a9786d92e54328a65890cf19d4413803f8"
+    },
+    "frozen/fib_updates_8/new.pool.tsv.gz": {
+      "bytes": 13677,
+      "sha256": "32835ccf17c3354ff1a30d0bb6f0345354eadf41b538ced4c65d9199c92c3fbf"
+    },
+    "frozen/fib_updates_8/new.ready.tsv": {
+      "bytes": 25434,
+      "sha256": "61bdb3f81f5281ae7560fbffb96d2c1cacb613b886e5e26529aa8f8275491a46"
+    },
+    "frozen/fib_updates_8/seal.json": {
+      "bytes": 6557,
+      "sha256": "74d40a9012ddfdda12767927faeaec559c8f4f2f10245a8292ff321ab97eb18e"
+    },
+    "native-imports.tsv.gz": {
+      "bytes": 200397,
+      "sha256": "1430a7b2efe5e2b24c6be371b26885ce24491e496312d25acb1cc6a8bf672bf6"
+    },
+    "paired-baseline-minus-new.tsv": {
+      "bytes": 3536,
+      "sha256": "f1ebea04cf549525e479306e2ef8bc47aa5f592903957921f0738742490352a6"
+    },
+    "preflight-controls.json": {
+      "bytes": 1489,
+      "sha256": "f9899a983e2d68f022bf7cb4f269c88733472d18ec774554e6dde680b645fb22"
+    },
+    "property-model-checks.json": {
+      "bytes": 94755,
+      "sha256": "bf276b4d6daf2e978a8eea1b5e9b200b0bc65fbd028f880570235e5c02d916cc"
+    },
+    "raw/files.json": {
+      "bytes": 133916,
+      "sha256": "a27174494ce26aeaf60ead4cf068bc468d4fe68241e2ae3c0ecb47097e0aecf9"
+    },
+    "replay.json": {
+      "bytes": 2237,
+      "sha256": "571e804e633350dc68b79ac97881f179c897aece5dc7180c33915894d0ab42f8"
+    },
+    "runs.tsv": {
+      "bytes": 7419,
+      "sha256": "5a07338c2ec91994308585b28387087c3a4d45d7aaa11c0989bc2cecfc301123"
+    },
+    "summary.json": {
+      "bytes": 14772,
+      "sha256": "70b6f27bebb8398d11d8103d689af7159b9cff125e6984868671ce48ddd535fc"
+    }
+  },
+  "raw_chunk_owners": {
+    "D42": [
+      "d42/raw/release",
+      "45e21554e55b97dcb64aa68095c19acf7221656c7a18388f261aff78a82a96c2"
+    ],
+    "D43A": [
+      "d43a/raw",
+      "571c0203ef13f9bf614c6b12687c58a0638254cc869c27e28d3854c08b50619d"
+    ]
+  },
+  "raw_index": "raw/files.json",
+  "raw_records": 426,
+  "stage": "SI-1B-value"
+}

@@ -1,0 +1,33 @@
+{
+  "P0_solver_runs": 0,
+  "offline_negative_rejections": 14,
+  "positive_diagnostic_publish": 1,
+  "primary_P1_runs": 24,
+  "raw_source_files": 426,
+  "raw_uncompressed_bytes": 294807981,
+  "recomputed_from_restored": {
+    "batch-membership-use.tsv": "0abd495b4c8adc24b68f98c2ab5f125b56ab295fb34f89b139a7595507cd70bb",
+    "family-use.tsv": "b436f47c445181f466c5d4cd9a5f9cf8dadd910502af94b3aeb1f212ea5cd5b4",
+    "first-uses.tsv.gz": "1b686d586c8a7804465cff3eb3b296527a08e3150f7b3e0e74bf2fbeb203e343",
+    "native-imports.tsv.gz": "1430a7b2efe5e2b24c6be371b26885ce24491e496312d25acb1cc6a8bf672bf6",
+    "paired-baseline-minus-new.tsv": "f1ebea04cf549525e479306e2ef8bc47aa5f592903957921f0738742490352a6",
+    "property-model-checks.json": "bf276b4d6daf2e978a8eea1b5e9b200b0bc65fbd028f880570235e5c02d916cc",
+    "runs.tsv": "5a07338c2ec91994308585b28387087c3a4d45d7aaa11c0989bc2cecfc301123",
+    "summary.json": "70b6f27bebb8398d11d8103d689af7159b9cff125e6984868671ce48ddd535fc"
+  },
+  "rederived_from_full_P0_Audit_and_Compact": {
+    "batches.json": "457e559b230f869507d8ca0e600b717c23d4d9e08570b260d17bd45e922addde",
+    "fib-snapshot-11/A.pool.tsv.gz": "47e49967b9d4e77db225e79f170b4093df02e8baa0a5e4dfbd12980b0a20c87d",
+    "fib-snapshot-11/A.ready.tsv": "c108e64e204a5df58d4370111190c81f8b0caf3ffbb43da264f34fb38d63da7d",
+    "fib-snapshot-11/new.pool.tsv.gz": "883df13bbe6857866087e5632eea26f2093d06ea17a83cbfba7a269edc0bda18",
+    "fib-snapshot-11/new.ready.tsv": "a41a3280f8f36c2f9f0cfcb8aa2b8281d0488d50311de3ddb9bd31eef4a88117",
+    "fib-snapshot-11/seal.json": "86ee7def870dfa6e3cb648dd2e924de7ab8cc307d9161d1a55d1e534b6f1a466",
+    "fib_updates_8/A.pool.tsv.gz": "9c5fd83e06fd30de2aa3faab8c8fcf2001ce4f0b3a918b9d7fda441ecfa0d653",
+    "fib_updates_8/A.ready.tsv": "61ac5a4f7a9d4e5b12e35391580bc9a9786d92e54328a65890cf19d4413803f8",
+    "fib_updates_8/new.pool.tsv.gz": "32835ccf17c3354ff1a30d0bb6f0345354eadf41b538ced4c65d9199c92c3fbf",
+    "fib_updates_8/new.ready.tsv": "61bdb3f81f5281ae7560fbffb96d2c1cacb613b886e5e26529aa8f8275491a46",
+    "fib_updates_8/seal.json": "74d40a9012ddfdda12767927faeaec559c8f4f2f10245a8292ff321ab97eb18e"
+  },
+  "restored_and_checked_every_raw_sha256": true,
+  "stock_clock_companions": 6
+}
