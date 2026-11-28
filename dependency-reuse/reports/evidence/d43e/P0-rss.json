@@ -1,0 +1,150 @@
+{
+  "fib_updates_8": {
+    "stock": {
+      "median": 19840,
+      "minimum": 19584,
+      "maximum": 19840,
+      "positive": 3,
+      "n": 3
+    },
+    "off": {
+      "median": 20480,
+      "minimum": 20480,
+      "maximum": 20608,
+      "positive": 3,
+      "n": 3
+    },
+    "light-quality": {
+      "median": 24192,
+      "minimum": 24192,
+      "maximum": 24320,
+      "positive": 3,
+      "n": 3
+    },
+    "light-no-quality": {
+      "median": 24064,
+      "minimum": 24064,
+      "maximum": 24192,
+      "positive": 3,
+      "n": 3
+    },
+    "compact": {
+      "median": 27008,
+      "minimum": 27008,
+      "maximum": 27136,
+      "positive": 3,
+      "n": 3
+    }
+  },
+  "circular-buffer": {
+    "stock": {
+      "median": 123008,
+      "minimum": 122752,
+      "maximum": 123008,
+      "positive": 3,
+      "n": 3
+    },
+    "off": {
+      "median": 165504,
+      "minimum": 165376,
+      "maximum": 165504,
+      "positive": 3,
+      "n": 3
+    },
+    "light-quality": {
+      "median": 209840,
+      "minimum": 209712,
+      "maximum": 209964,
+      "positive": 3,
+      "n": 3
+    },
+    "light-no-quality": {
+      "median": 209328,
+      "minimum": 209328,
+      "maximum": 209580,
+      "positive": 3,
+      "n": 3
+    },
+    "compact": {
+      "median": 200908,
+      "minimum": 200904,
+      "maximum": 201036,
+      "positive": 3,
+      "n": 3
+    }
+  },
+  "airline_reservations_6": {
+    "stock": {
+      "median": 110976,
+      "minimum": 110848,
+      "maximum": 111232,
+      "positive": 3,
+      "n": 3
+    },
+    "off": {
+      "median": 113408,
+      "minimum": 113408,
+      "maximum": 113408,
+      "positive": 3,
+      "n": 3
+    },
+    "light-quality": {
+      "median": 193492,
+      "minimum": 193364,
+      "maximum": 193496,
+      "positive": 3,
+      "n": 3
+    },
+    "light-no-quality": {
+      "median": 191192,
+      "minimum": 191192,
+      "maximum": 191196,
+      "positive": 3,
+      "n": 3
+    },
+    "compact": {
+      "median": 283408,
+      "minimum": 283404,
+      "maximum": 283788,
+      "positive": 3,
+      "n": 3
+    }
+  },
+  "fib-snapshot-11": {
+    "stock": {
+      "median": 208436,
+      "minimum": 208436,
+      "maximum": 208564,
+      "positive": 3,
+      "n": 3
+    },
+    "off": {
+      "median": 266868,
+      "minimum": 266864,
+      "maximum": 267120,
+      "positive": 3,
+      "n": 3
+    },
+    "light-quality": {
+      "median": 449644,
+      "minimum": 449520,
+      "maximum": 449772,
+      "positive": 3,
+      "n": 3
+    },
+    "light-no-quality": {
+      "median": 441996,
+      "minimum": 441868,
+      "maximum": 442256,
+      "positive": 3,
+      "n": 3
+    },
+    "compact": {
+      "median": 533308,
+      "minimum": 533052,
+      "maximum": 533432,
+      "positive": 3,
+      "n": 3
+    }
+  }
+}

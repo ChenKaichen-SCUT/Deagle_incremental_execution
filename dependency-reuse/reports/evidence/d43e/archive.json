@@ -1,0 +1,52 @@
+{
+  "format": "D43B-raw-v1",
+  "raw_index_sha256": "f4a6ac8492c7ff6598ec25a3be77c39fec6bf3995db54a4cd368e5de004a3de9",
+  "raw_commit": "ec5397b93b78206b831d13653b179b27d078382d",
+  "review_base": "ef76e75467b011058e7ff46d4fbc9552f499bf1d",
+  "runner": "28a0647e06d3b455d97eb5ba6eb6e25301e00c63",
+  "stage_sources": "0cbb69697c0d201ad887aaa1e06ddac7bab19230",
+  "verified_original_files": 1861,
+  "verified_original_bytes": 4210169949,
+  "archive_parents": {
+    "D42": [
+      "d42/raw/release",
+      "45e21554e55b97dcb64aa68095c19acf7221656c7a18388f261aff78a82a96c2"
+    ],
+    "D43A": [
+      "d43a/raw",
+      "571c0203ef13f9bf614c6b12687c58a0638254cc869c27e28d3854c08b50619d"
+    ]
+  },
+  "chunk_bytes": 4194304,
+  "chunk_owners": {
+    "B": 1172,
+    "D42": 135
+  },
+  "new_gzip_objects": 1172,
+  "new_gzip_bytes": 134752727,
+  "primary_native_processes": 108,
+  "clock_only_native_processes": 24,
+  "formal_rounds": 3,
+  "independent_same_mu_false_admissions": 0,
+  "raw_contents": [
+    "formal/manifest.json",
+    "formal/preflight.json",
+    "formal/schedule.jsonl",
+    "formal/confirmation.json",
+    "formal/primary-complete.json",
+    "formal/timing-complete.json",
+    "formal/matrix/<case>/<round>/<mode>/<side>",
+    "matrix.log"
+  ],
+  "replay": {
+    "raw_original_integrity": "verified before and during restore",
+    "recomputed_summary_files": 13,
+    "all_byte_identical": true,
+    "rational_recompute_identical": true
+  },
+  "required_exact_reference": {
+    "stage": "D4.3-D",
+    "index_sha256": "fc323b1764078073b641a28d3f16b914984889ccb804760c455997b02c3e28c5",
+    "location": "reports/evidence/d43d/raw"
+  }
+}

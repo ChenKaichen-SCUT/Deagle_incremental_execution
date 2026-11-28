@@ -1,0 +1,430 @@
+{
+  "rounds": 3,
+  "trigger": false,
+  "confirmed_real_P1": [],
+  "confirmed_real_cycle": [],
+  "recording_vs_quality": [
+    "airline_reservations_6",
+    "circular-buffer",
+    "fib-snapshot-11"
+  ],
+  "recording_vs_no_quality": [
+    "circular-buffer"
+  ],
+  "mixed_attached_and_hit_by_round": {
+    "fib_updates_8": [
+      [
+        1,
+        264,
+        224
+      ],
+      [
+        2,
+        264,
+        224
+      ],
+      [
+        3,
+        264,
+        224
+      ]
+    ],
+    "circular-buffer": [
+      [
+        1,
+        4,
+        4
+      ],
+      [
+        2,
+        4,
+        4
+      ],
+      [
+        3,
+        4,
+        4
+      ]
+    ],
+    "airline_reservations_6": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ]
+    ],
+    "fib-snapshot-11": [
+      [
+        1,
+        0,
+        0
+      ],
+      [
+        2,
+        0,
+        0
+      ],
+      [
+        3,
+        0,
+        0
+      ]
+    ]
+  },
+  "paired_summary": {
+    "fib_updates_8": {
+      "quality_abs": {
+        "median": 15638033.0,
+        "minimum": 11303180.0,
+        "maximum": 16919797.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality_abs": {
+        "median": -7365269.0,
+        "minimum": -7458696.0,
+        "maximum": -5742449.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "quality_cost": {
+        "median": 22662246.0,
+        "minimum": 18761876.0,
+        "maximum": 23003302.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "P1_abs": {
+        "median": -520082735.0,
+        "minimum": -541768355.0,
+        "maximum": -510996441.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle_abs": {
+        "median": -546438115.0,
+        "minimum": -547326902.0,
+        "maximum": -526409037.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "P1": {
+        "median": -0.2604012747420535,
+        "minimum": -0.27494734663916004,
+        "maximum": -0.2564866829856577,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle": {
+        "median": -0.25784960328933476,
+        "minimum": -0.2589772111329732,
+        "maximum": -0.2463474096672005,
+        "positive": 0,
+        "rounds": 3
+      },
+      "search_abs": {
+        "median": -162639396.0,
+        "minimum": -167115573.0,
+        "maximum": -140265323.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cold_reuse_abs": {
+        "median": -160367732.0,
+        "minimum": -176962340.0,
+        "maximum": -142802335.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "compact_extra": {
+        "median": 19024373.0,
+        "minimum": 18132052.0,
+        "maximum": 19130751.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "quality": {
+        "median": 0.4497722152146592,
+        "minimum": 0.3840017296279506,
+        "maximum": 0.47072437616447954,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality": {
+        "median": -0.6260065673467521,
+        "minimum": -0.6988145059529542,
+        "maximum": -0.43235068955371225,
+        "positive": 0,
+        "rounds": 3
+      }
+    },
+    "circular-buffer": {
+      "quality_abs": {
+        "median": 354231269.0,
+        "minimum": 341517550.0,
+        "maximum": 367135828.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality_abs": {
+        "median": 329842961.0,
+        "minimum": 305604992.0,
+        "maximum": 362052905.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "quality_cost": {
+        "median": 35912558.0,
+        "minimum": -7821636.0,
+        "maximum": 37292867.0,
+        "positive": 2,
+        "rounds": 3
+      },
+      "P1_abs": {
+        "median": -5216216417.0,
+        "minimum": -5223282179.0,
+        "maximum": -5052937427.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle_abs": {
+        "median": -5608996966.0,
+        "minimum": -5662506654.0,
+        "maximum": -5486399276.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "P1": {
+        "median": -0.6185578732838928,
+        "minimum": -0.6214298480604608,
+        "maximum": -0.5873243246905689,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle": {
+        "median": -0.6252157740741475,
+        "minimum": -0.634313942549465,
+        "maximum": -0.6012522846845993,
+        "positive": 0,
+        "rounds": 3
+      },
+      "search_abs": {
+        "median": 361736217.0,
+        "minimum": 341521590.0,
+        "maximum": 442712604.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "cold_reuse_abs": {
+        "median": 365939242.0,
+        "minimum": 323644114.0,
+        "maximum": 380234186.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "compact_extra": {
+        "median": 181626754.0,
+        "minimum": 146791600.0,
+        "maximum": 184132371.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "quality": {
+        "median": 0.6610543349091555,
+        "minimum": 0.6497053197502526,
+        "maximum": 0.7143729016930382,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality": {
+        "median": 0.6659305696040396,
+        "minimum": 0.6240181270384306,
+        "maximum": 0.6920248508794141,
+        "positive": 3,
+        "rounds": 3
+      }
+    },
+    "airline_reservations_6": {
+      "quality_abs": {
+        "median": 2619743404.0,
+        "minimum": 2613912920.0,
+        "maximum": 2650219667.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality_abs": {
+        "median": 456769803.0,
+        "minimum": 377499440.0,
+        "maximum": 492783730.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "quality_cost": {
+        "median": 2193449864.0,
+        "minimum": 2126959674.0,
+        "maximum": 2236413480.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "P1_abs": {
+        "median": -4007191797.0,
+        "minimum": -4177984169.0,
+        "maximum": -3743497950.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle_abs": {
+        "median": -6129931592.0,
+        "minimum": -6190766143.0,
+        "maximum": -5733503789.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "P1": {
+        "median": -0.1992953406833476,
+        "minimum": -0.20937895622250674,
+        "maximum": -0.18511843127692634,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle": {
+        "median": -0.24047214991690136,
+        "minimum": -0.24445536235293447,
+        "maximum": -0.22344424456790923,
+        "positive": 0,
+        "rounds": 3
+      },
+      "search_abs": {
+        "median": -97680888.0,
+        "minimum": -159358118.0,
+        "maximum": 108521603.0,
+        "positive": 1,
+        "rounds": 3
+      },
+      "cold_reuse_abs": {
+        "median": -144271587.0,
+        "minimum": -152698278.0,
+        "maximum": 81516090.0,
+        "positive": 1,
+        "rounds": 3
+      },
+      "compact_extra": {
+        "median": 1372959748.0,
+        "minimum": 1330155043.0,
+        "maximum": 1416873752.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "quality": {
+        "median": 0.6561327762840907,
+        "minimum": 0.6484870405466102,
+        "maximum": 0.6658216525046708,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality": {
+        "median": 0.2556178028541442,
+        "minimum": 0.21037955854614662,
+        "maximum": 0.2641219094750602,
+        "positive": 3,
+        "rounds": 3
+      }
+    },
+    "fib-snapshot-11": {
+      "quality_abs": {
+        "median": 12370313615.0,
+        "minimum": 11895590764.0,
+        "maximum": 13143182950.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality_abs": {
+        "median": 4848581991.0,
+        "minimum": 4672252847.0,
+        "maximum": 4861453898.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "quality_cost": {
+        "median": 7698060768.0,
+        "minimum": 7034136866.0,
+        "maximum": 8294600959.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "P1_abs": {
+        "median": -10181029915.0,
+        "minimum": -10932793893.0,
+        "maximum": -10044590392.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle_abs": {
+        "median": -19618116055.0,
+        "minimum": -20765768260.0,
+        "maximum": -19143250189.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "P1": {
+        "median": -0.2689035239536185,
+        "minimum": -0.28956974503100924,
+        "maximum": -0.26242839513320193,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cycle": {
+        "median": -0.29986645659032723,
+        "minimum": -0.32111375411057597,
+        "maximum": -0.2940343585637053,
+        "positive": 0,
+        "rounds": 3
+      },
+      "search_abs": {
+        "median": -3006579898.0,
+        "minimum": -3304359509.0,
+        "maximum": -2623605160.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "cold_reuse_abs": {
+        "median": -3060558332.0,
+        "minimum": -3267434405.0,
+        "maximum": -2618594505.0,
+        "positive": 0,
+        "rounds": 3
+      },
+      "compact_extra": {
+        "median": 7183221558.0,
+        "minimum": 6992699684.0,
+        "maximum": 7570238132.0,
+        "positive": 3,
+        "rounds": 3
+      },
+      "quality": {
+        "median": 0.6326382163406048,
+        "minimum": 0.6111011674639966,
+        "maximum": 0.6527244516119383,
+        "positive": 3,
+        "rounds": 3
+      },
+      "no_quality": {
+        "median": 0.39410087588139836,
+        "minimum": 0.3910532762771473,
+        "maximum": 0.409464289768278,
+        "positive": 3,
+        "rounds": 3
+      }
+    }
+  }
+}

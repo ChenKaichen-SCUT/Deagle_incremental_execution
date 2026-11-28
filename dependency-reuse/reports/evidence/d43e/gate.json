@@ -1,0 +1,33 @@
+{
+  "L1": "PASS",
+  "L2_B": "PASS",
+  "mixed_repair_cases": [
+    "circular-buffer",
+    "fib_updates_8"
+  ],
+  "L2_C": "PASS",
+  "L2_C_vs_original_Light_quality": [
+    "airline_reservations_6",
+    "circular-buffer",
+    "fib-snapshot-11"
+  ],
+  "controlled_L2_C_vs_Light_no_quality": [
+    "circular-buffer"
+  ],
+  "L3_1": "NOT_ACHIEVED",
+  "L3_2": "NOT_ACHIEVED",
+  "real_net_benefit_cases": {
+    "P1": [],
+    "cycle": []
+  },
+  "historical_confirmations": [],
+  "ablation_required": false,
+  "conclusion": "RECORDING_CHEAPER_NO_NET_GAIN",
+  "rounds": 3,
+  "primary_samples": 108,
+  "observer_samples": 24,
+  "trigger": false,
+  "failed_samples": 0,
+  "exact_false_admissions": 0,
+  "changed_maps_vs_D": 0
+}

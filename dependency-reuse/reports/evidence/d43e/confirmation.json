@@ -1,0 +1,85 @@
+{
+  "cases": {
+    "fib_updates_8": {
+      "P1": {
+        "paired": [
+          -0.27494734663916004,
+          -0.2604012747420535,
+          -0.2564866829856577
+        ],
+        "complete": true,
+        "trigger": false
+      },
+      "cycle": {
+        "paired": [
+          -0.2463474096672005,
+          -0.25784960328933476,
+          -0.2589772111329732
+        ],
+        "complete": true,
+        "trigger": false
+      }
+    },
+    "circular-buffer": {
+      "P1": {
+        "paired": [
+          -0.6185578732838928,
+          -0.5873243246905689,
+          -0.6214298480604608
+        ],
+        "complete": true,
+        "trigger": false
+      },
+      "cycle": {
+        "paired": [
+          -0.6252157740741475,
+          -0.6012522846845993,
+          -0.634313942549465
+        ],
+        "complete": true,
+        "trigger": false
+      }
+    },
+    "airline_reservations_6": {
+      "P1": {
+        "paired": [
+          -0.20937895622250674,
+          -0.1992953406833476,
+          -0.18511843127692634
+        ],
+        "complete": true,
+        "trigger": false
+      },
+      "cycle": {
+        "paired": [
+          -0.24445536235293447,
+          -0.24047214991690136,
+          -0.22344424456790923
+        ],
+        "complete": true,
+        "trigger": false
+      }
+    },
+    "fib-snapshot-11": {
+      "P1": {
+        "paired": [
+          -0.28956974503100924,
+          -0.2689035239536185,
+          -0.26242839513320193
+        ],
+        "complete": true,
+        "trigger": false
+      },
+      "cycle": {
+        "paired": [
+          -0.32111375411057597,
+          -0.2940343585637053,
+          -0.29986645659032723
+        ],
+        "complete": true,
+        "trigger": false
+      }
+    }
+  },
+  "extend": false
+}

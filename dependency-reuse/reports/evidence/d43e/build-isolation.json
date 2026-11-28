@@ -1,0 +1,113 @@
+{
+  "manifest": {
+    "build": "91a531d0c311f63de4a18f0aca443399ca7c817bfaf3bdcf5a6adfc3c299fc0a",
+    "stock": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+    "observer": "159ee8814a16fb1556772d8d531042fc3b60ccb4a1f06d3fb9d1fc7fe05ed856",
+    "workers": {
+      "boolean-diff": "5a7bb5f4f9fb71866654c48ac88bb8249871047c17512eea10485c57c2023912",
+      "compact-structure": "03955cee4cb70f8a3018b4141ecb871a2ada7e89e62836929d3135279603e153",
+      "compact43.py": "0261620d9dd2292fe10f62e7bcd1a234eb94f817facbffe51eeae803bc9e04c0",
+      "d43_prepare.py": "38529ae6d6811f26a2d1cfb8ffbee3bcfea04c24d1e106d17b177b1b8e4d1e1d",
+      "d1_identity.py": "895bcd680fcb8c548b85fc6536d7ddc3d91b703f2172e11b34bab3a774766eac",
+      "d1_theory.py": "90e00cec40d661665af7459d26c62082d811e4565d4e9885695e7f622f25514a",
+      "d41_identity.py": "d9fef56de77946812439bfec1878ba85945da8cdebee1be5089bef574e1c0616",
+      "d42_events.py": "181f8e6c7867caaacf8e9e630104cf3230d7ac4d67a7b01b6138716e2c74e08a",
+      "diff_d1.py": "df310cb403cf1f4cd3814fb9ffa6bf7f19aff1dff5207f844b2d00500ffe2585",
+      "prepare_d3.py": "494cdc512a654d3640e205dbdc6be8cc808056c9a936e1e9aeaf75115aeabad2"
+    },
+    "case_order": [
+      "fib_updates_8",
+      "circular-buffer",
+      "airline_reservations_6",
+      "fib-snapshot-11"
+    ],
+    "orders": [
+      [
+        "stock",
+        "off",
+        "light-quality",
+        "light-no-quality",
+        "compact-cold",
+        "compact-reuse"
+      ],
+      [
+        "off",
+        "compact-reuse",
+        "stock",
+        "light-no-quality",
+        "light-quality",
+        "compact-cold"
+      ],
+      [
+        "light-quality",
+        "light-no-quality",
+        "compact-cold",
+        "off",
+        "compact-reuse",
+        "stock"
+      ],
+      [
+        "compact-cold",
+        "stock",
+        "compact-reuse",
+        "off",
+        "light-no-quality",
+        "light-quality"
+      ],
+      [
+        "compact-reuse",
+        "light-quality",
+        "light-no-quality",
+        "compact-cold",
+        "stock",
+        "off"
+      ]
+    ],
+    "approved_base": "ef76e75467b011058e7ff46d4fbc9552f499bf1d",
+    "plan_sha256": "469b2fd99313c57cd8e04124c2ef6f4f8add81fd15536511b6770bdeb9ae93c1",
+    "parent_plan_sha256": "616988db568ffd83153f83b9a4e34b5fb34d88ec3db8ac650acc2ae9bac45e87",
+    "cpu_affinity": [
+      0
+    ],
+    "limits": {
+      "fib_updates_8": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "circular-buffer": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "airline_reservations_6": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "fib-snapshot-11": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      }
+    },
+    "monotonic_resolution_s": 1e-09
+  },
+  "inherited_gate_sha256": {
+    "D4.3-C-status.json": "fc7beda10a9bd1b0921bfc659ce52642df0283885f5d5aa83872e4e84fe61961",
+    "D4.3-D-status.json": "fda04a48e76cab22eefa6bb7aa37535da63af7dd1daf161e21edac3f38d83b95",
+    "evidence/d43d/gate.json": "0492afe206ae58b713741e8cc69b51415b3fc8c5454f1ec7f5d843af0918073c",
+    "evidence/d43d/access.json": "174de3913c5d59dd562839c423245c909ea41eb84d8685572d527f862f9b693d"
+  },
+  "C_gate": "CORRECTNESS_GATE_PASSED",
+  "D_gate": "MIXED_REUSE_CONFIRMED",
+  "inherited_D_access": {
+    "open_trace_sha256": "96af61660508c7b5f7c83dafa94c20ab92d85a35a480e04d9a8983a3fcb77b2f",
+    "P0_library_files": [
+      "dense.bin",
+      "library.json",
+      "library.sha256",
+      "model.tsv"
+    ],
+    "archived_proof_reads": 0,
+    "old_mapping_reads": 0,
+    "selected": 295
+  },
+  "stock_clocks": "Phase clocks/restarts only from a separately executed trajectory-matched observer."
+}
