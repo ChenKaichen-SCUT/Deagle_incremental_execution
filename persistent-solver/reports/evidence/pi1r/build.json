@@ -1,0 +1,27 @@
+{
+  "source": "8e0c39f3934da0a1f28dacbea0a30c9a3e948f8a",
+  "baseline": "06c1560c17a3c36fc5f90817680a654a0af0c857",
+  "preregistration": "6f8b1de4daaece2172e3bba3b0bd5210a034ede1",
+  "binary": "b27c4704999c6755880c1c491ecafbb16f1f2bee026700df6b5c3009184c870f",
+  "object_sha256": {
+    "Closure.o": "65a5c56c12d6d00c038eb3e30f8ea15031c7fa46b0963ec308477e8535a03291",
+    "ClosureSolver.o": "6e05f2b285c3be8bf873f7fbfefc9335c60955b1e19d08271ebd44831d2a47c6",
+    "ClosureTypes.o": "240c471198bab4982c15f962a738ca07f95809442c368ba61867abf49b7a8ede",
+    "EpochSession.o": "220274a25e3b19fbc7d29a30e9ea4d371ebf7d1db41c8d39a75be687152b0bea",
+    "GraphTypes.o": "e454ea19a01129efb6f5d02a205bec9bdf0e8382000f5e1b84f295654e37be03",
+    "Options.o": "5068674e597bd8e71ad3658287d56eb402a378bbca3345f7c5736d367fb12036",
+    "RestartStudy.o": "ce13cb6855494823820baf1d2053f88e3ea08716074f5cf7809a86be33c3859d",
+    "Solver.o": "6ca340227fb092f4c9388f4a98860d6a069a84b609aab455cc4da0d9b7eea54f",
+    "System.o": "464281af1bb16b0f373560303a3598b5491fbb9404a0201271949d8f78449c9d",
+    "pi1-driver.o": "e2b9e84cd81daf601e1dba11878f26fd3425779d2a69f4c142bd67df43b568ae",
+    "session.o": "830ae4d510752228d2c13af13a38a17864ae9aa1f0ffd95155d07a8dbcd90137"
+  },
+  "small_archive_sha256": "1ed8cfa4bb5fd28d4dddd2ef6a01a2c9dd7479826b7c1a49aa470f42f6ea97e6",
+  "build_log": "b27c4704999c6755880c1c491ecafbb16f1f2bee026700df6b5c3009184c870f  /home/deagle/pi1r-work/bin/pi1\n",
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "system": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "cpu": 0,
+  "stock": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "stock_control": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+  "plan_sha256": "8abc897c6475c67c5779bb3fbc585f54d802e18f71a1ffc10f01c22222c6e296"
+}

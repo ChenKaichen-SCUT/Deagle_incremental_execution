@@ -56,6 +56,10 @@ def sections(d):
             rows.append([label,side,trip([inv["active_inputs"],inv["union_inputs"]]),f"{p['checks']:,}",
                          f"{p['native_true']:,}",f"{p['only_shadow_true']:,}",trip([population,sum(x[3] for x in hist)]),
                          f"{mean(0):.1f} / {mean(1):.1f}",f"{inv['allocator_reserved']/1048576:.1f} / {inv['watcher_reserved']/1048576:.1f}"])
+    res["resident"]=table(["P1 R2 病例","旧物理驻留","被停用 selector 满足","仍可约束","不同旧条目回执","其中休眠回执"],[
+        [label,f"{z['P1_old_physical']:,}",f"{z['P1_old_dormant']:,}",
+         f"{z['P1_old_physical']-z['P1_old_dormant']:,}",f"{z['P1_old_distinct_used']:,}",f"{z['P1_old_dormant_distinct_used']:,}"]
+        for k,label in case_names.items() for z in [c[k]["R2"]]])
     res["database"]=table(["R2 病例","版本","启用 / 联合基础输入","reduceDB 判断","实际触发","仅去掉 selector 扣减会触发",
                            "驻留 / 休眠","平均长度 / selector 个数","分配器 / watcher 容量 MiB"],rows)
     rows=[]

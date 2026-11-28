@@ -1,0 +1,173 @@
+{
+  "arms": {
+    "R0": {
+      "sequences": 21,
+      "versions": 51,
+      "forced": 48,
+      "controls": [
+        "rf_projection",
+        "guard_propagation",
+        "failed_prefix",
+        "restart_co",
+        "budget",
+        "after_collection",
+        "triplet_pruned",
+        "triplet_retained"
+      ],
+      "transaction_rejections": 6,
+      "interrupted": [
+        "SAT",
+        "UNSAT",
+        "SAT",
+        "UNKNOWN",
+        "SAT",
+        "SAT"
+      ],
+      "corruptions": [
+        "drop_epoch",
+        "wrong_polarity",
+        "nonfalse_antecedent"
+      ],
+      "projections": []
+    },
+    "R1": {
+      "sequences": 21,
+      "versions": 51,
+      "forced": 48,
+      "controls": [
+        "rf_projection",
+        "guard_propagation",
+        "failed_prefix",
+        "restart_co",
+        "budget",
+        "after_collection",
+        "triplet_pruned",
+        "triplet_retained",
+        "retained_theory_CRef"
+      ],
+      "transaction_rejections": 6,
+      "interrupted": [
+        "SAT",
+        "UNSAT",
+        "SAT",
+        "UNKNOWN",
+        "SAT",
+        "SAT"
+      ],
+      "corruptions": [
+        "drop_epoch",
+        "wrong_polarity",
+        "nonfalse_antecedent"
+      ],
+      "projections": [
+        {
+          "A": 7,
+          "removed_assignments": 2,
+          "removed_edges": [
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "kept_edges": [
+            [
+              2,
+              3,
+              4
+            ]
+          ],
+          "kept_guards": [
+            [
+              0,
+              -1
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "dummy": true,
+          "retained_reasons": 0
+        }
+      ]
+    },
+    "R2": {
+      "sequences": 21,
+      "versions": 51,
+      "forced": 48,
+      "controls": [
+        "rf_projection",
+        "guard_propagation",
+        "failed_prefix",
+        "restart_co",
+        "budget",
+        "after_collection",
+        "triplet_pruned",
+        "triplet_retained",
+        "retained_theory_CRef"
+      ],
+      "transaction_rejections": 6,
+      "interrupted": [
+        "SAT",
+        "UNSAT",
+        "SAT",
+        "UNKNOWN",
+        "SAT",
+        "SAT"
+      ],
+      "corruptions": [
+        "drop_epoch",
+        "wrong_polarity",
+        "nonfalse_antecedent"
+      ],
+      "projections": [
+        {
+          "A": 7,
+          "removed_assignments": 2,
+          "removed_edges": [
+            [
+              0,
+              1,
+              3
+            ]
+          ],
+          "kept_edges": [
+            [
+              2,
+              3,
+              4
+            ]
+          ],
+          "kept_guards": [
+            [
+              0,
+              -1
+            ],
+            [
+              2,
+              6
+            ]
+          ],
+          "dummy": true,
+          "retained_reasons": 0
+        }
+      ]
+    }
+  },
+  "progress_cases": 216,
+  "constructor_probe": "OWNER closure=1 minisat=1 queries=2 same_this=1",
+  "signed_control_vectors_equal_across_modes": {
+    "fib_updates_8": true,
+    "circular-buffer": true,
+    "airline_reservations_6": true,
+    "fib-snapshot-11": true
+  },
+  "timed_sessions": 12,
+  "database_sessions": 12,
+  "ledger_off_sessions": 4,
+  "sat_native_witnesses": 9,
+  "obligations_source": "PI-1 fixed native stock full traces and sealed unchanged per-side query catalogue",
+  "r0_equal_reviewed_trajectory": true,
+  "r1_r2_equal_work_and_model": true
+}

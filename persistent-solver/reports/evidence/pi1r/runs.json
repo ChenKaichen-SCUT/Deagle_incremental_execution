@@ -1,0 +1,5236 @@
+{
+  "fib_updates_8": {
+    "R0": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 28300,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 50055,
+          "processed": 653911,
+          "prefix": 50055,
+          "frames": 661940,
+          "empty": 0,
+          "bcp": 664003,
+          "pushes": 661940,
+          "pops": 661940,
+          "rebuilds": 13,
+          "replay": 13,
+          "replay_literals": 782,
+          "theory_props": 3329,
+          "cycles": 42,
+          "co_pairs": 0,
+          "restarts": 12,
+          "discarded_queued": 272,
+          "delayed_conflicts": 0,
+          "positive": 50055,
+          "negative": 0,
+          "max_level": 51082,
+          "decisions": 8030,
+          "conflicts": 1826,
+          "propagations": 2415324,
+          "activation": 0.0423112069839,
+          "joint": 0,
+          "rollback": 0.000221260997932,
+          "boundary": 0.198435198981,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 50055,
+            "reinstalled": 603856,
+            "ordinary": 12,
+            "kept": 0,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.00058070296654478,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.0047212180215865,
+            "prefix_repeat_s": 0.055723263008986,
+            "jumps": [
+              1826,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              4,
+              0,
+              0
+            ],
+            "jump_removed": [
+              3196,
+              0,
+              0
+            ],
+            "progress_calls": [
+              12,
+              0
+            ],
+            "progress_available": [
+              601610,
+              0
+            ],
+            "progress_visits": [
+              601610,
+              0
+            ],
+            "progress_seconds": [
+              0.004322583146859,
+              0
+            ],
+            "bcp_roles": [
+              1761413,
+              653911,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              1886911,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 257,
+              "resident_end": 257,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 1569,
+              "resident_end": 1569,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 3329,
+              "resident_end": 3329,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 62610,
+        "program_vars": 12554,
+        "selectors": 50055,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 12554,
+        "rejected_ports": 0,
+        "occurrences": 50065,
+        "unique_inputs": 50053,
+        "skipped": 0,
+        "install_seconds": 0.0183696310269,
+        "assumption_build_seconds": 9.71470144577e-05,
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 0.23252291296375915,
+        "side": "P0",
+        "native_vars": 12554
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 298764,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 63140,
+          "processed": 3986184,
+          "prefix": 63140,
+          "frames": 4046581,
+          "empty": 0,
+          "bcp": 4064756,
+          "pushes": 4046581,
+          "pops": 4046581,
+          "rebuilds": 63,
+          "replay": 63,
+          "replay_literals": 4095,
+          "theory_props": 4137,
+          "cycles": 27,
+          "co_pairs": 0,
+          "restarts": 62,
+          "discarded_queued": 443,
+          "delayed_conflicts": 0,
+          "positive": 48319,
+          "negative": 14821,
+          "max_level": 64323,
+          "decisions": 60398,
+          "conflicts": 17623,
+          "propagations": 20730049,
+          "activation": 0.208525330876,
+          "joint": 0,
+          "rollback": 0.000140076968819,
+          "boundary": 3.42665229202,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 63140,
+            "reinstalled": 3923043,
+            "ordinary": 62,
+            "kept": 0,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.0020442939712666,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.0053337159915827,
+            "prefix_repeat_s": 0.31731976306764,
+            "jumps": [
+              17623,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              10,
+              0,
+              0
+            ],
+            "jump_removed": [
+              9597,
+              0,
+              0
+            ],
+            "progress_calls": [
+              62,
+              0
+            ],
+            "progress_available": [
+              3920740,
+              0
+            ],
+            "progress_visits": [
+              3920740,
+              0
+            ],
+            "progress_seconds": [
+              0.024912583059631,
+              0
+            ],
+            "bcp_roles": [
+              16743865,
+              3986184,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              18072034,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 1851,
+              "resident_end": 1851,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 257,
+              "dormant": 185,
+              "constraining": 72,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 45,
+              "dormant_distinct_used": 0,
+              "hits": [
+                6176,
+                17,
+                2043,
+                345
+              ]
+            },
+            {
+              "family": "M",
+              "births": 15772,
+              "resident_end": 15772,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 1569,
+              "dormant": 1569,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 4137,
+              "resident_end": 4137,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 3329,
+              "dormant": 3329,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 78800,
+        "program_vars": 15659,
+        "selectors": 63140,
+        "co_vars": 0,
+        "reused": 8953,
+        "fresh": 3105,
+        "rejected_ports": 0,
+        "occurrences": 98394,
+        "unique_inputs": 63136,
+        "skipped": 0,
+        "install_seconds": 0.0131935219979,
+        "assumption_build_seconds": 0.000713503977749,
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 3.459520577976946,
+        "side": "P1",
+        "native_vars": 12058
+      }
+    },
+    "R1": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 23640,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 50055,
+          "processed": 50854,
+          "prefix": 50055,
+          "frames": 56178,
+          "empty": 0,
+          "bcp": 57630,
+          "pushes": 56178,
+          "pops": 56178,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 3477,
+          "cycles": 37,
+          "co_pairs": 0,
+          "restarts": 7,
+          "discarded_queued": 339,
+          "delayed_conflicts": 0,
+          "positive": 50055,
+          "negative": 0,
+          "max_level": 51082,
+          "decisions": 5325,
+          "conflicts": 1216,
+          "propagations": 961768,
+          "activation": 0.0034476610017,
+          "joint": 0,
+          "rollback": 0.000237040978391,
+          "boundary": 0.0739072990254,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 50055,
+            "reinstalled": 799,
+            "ordinary": 7,
+            "kept": 7,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.0006456520059146,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.0049508879892528,
+            "prefix_repeat_s": 2.7886999305338e-05,
+            "jumps": [
+              1216,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              1,
+              0,
+              0
+            ],
+            "jump_removed": [
+              799,
+              0,
+              0
+            ],
+            "progress_calls": [
+              7,
+              0
+            ],
+            "progress_available": [
+              350960,
+              0
+            ],
+            "progress_visits": [
+              350960,
+              0
+            ],
+            "progress_seconds": [
+              0.0022320550633594,
+              0
+            ],
+            "bcp_roles": [
+              910914,
+              50854,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              973344,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 170,
+              "resident_end": 170,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 1046,
+              "resident_end": 1046,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 3477,
+              "resident_end": 3477,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 62610,
+        "program_vars": 12554,
+        "selectors": 50055,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 12554,
+        "rejected_ports": 0,
+        "occurrences": 50065,
+        "unique_inputs": 50053,
+        "skipped": 0,
+        "install_seconds": 0.0171388279996,
+        "assumption_build_seconds": 0.000126711034682,
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 0.1063177979667671,
+        "side": "P0",
+        "native_vars": 12554
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 323728,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 63140,
+          "processed": 71165,
+          "prefix": 63140,
+          "frames": 135384,
+          "empty": 0,
+          "bcp": 157746,
+          "pushes": 135384,
+          "pops": 135384,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 4619,
+          "cycles": 18,
+          "co_pairs": 0,
+          "restarts": 77,
+          "discarded_queued": 97,
+          "delayed_conflicts": 0,
+          "positive": 48319,
+          "negative": 14821,
+          "max_level": 64766,
+          "decisions": 64220,
+          "conflicts": 21764,
+          "propagations": 20617165,
+          "activation": 0.00342569802888,
+          "joint": 0,
+          "rollback": 0.000301539956126,
+          "boundary": 4.02868853003,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 63140,
+            "reinstalled": 8024,
+            "ordinary": 77,
+            "kept": 77,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.0016266740276478,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.0053208809695207,
+            "prefix_repeat_s": 0.00036026193993166,
+            "jumps": [
+              21764,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              13,
+              0,
+              0
+            ],
+            "jump_removed": [
+              9248,
+              0,
+              0
+            ],
+            "progress_calls": [
+              77,
+              0
+            ],
+            "progress_available": [
+              4866062,
+              0
+            ],
+            "progress_visits": [
+              4866062,
+              0
+            ],
+            "progress_seconds": [
+              0.029130304697901,
+              0
+            ],
+            "bcp_roles": [
+              20546000,
+              71165,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              22387719,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 2734,
+              "resident_end": 2734,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 170,
+              "dormant": 115,
+              "constraining": 55,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 42,
+              "dormant_distinct_used": 0,
+              "hits": [
+                6646,
+                8,
+                2597,
+                712
+              ]
+            },
+            {
+              "family": "M",
+              "births": 19030,
+              "resident_end": 19030,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 1046,
+              "dormant": 1046,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 4619,
+              "resident_end": 4619,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 3477,
+              "dormant": 3477,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 78800,
+        "program_vars": 15659,
+        "selectors": 63140,
+        "co_vars": 0,
+        "reused": 8953,
+        "fresh": 3105,
+        "rejected_ports": 0,
+        "occurrences": 98394,
+        "unique_inputs": 63136,
+        "skipped": 0,
+        "install_seconds": 0.0119939469732,
+        "assumption_build_seconds": 0.000725960009731,
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 4.0593262879992835,
+        "side": "P1",
+        "native_vars": 12058
+      }
+    },
+    "R2": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 23640,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 50055,
+          "processed": 50854,
+          "prefix": 50055,
+          "frames": 56178,
+          "empty": 0,
+          "bcp": 57630,
+          "pushes": 56178,
+          "pops": 56178,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 3477,
+          "cycles": 37,
+          "co_pairs": 0,
+          "restarts": 7,
+          "discarded_queued": 339,
+          "delayed_conflicts": 0,
+          "positive": 50055,
+          "negative": 0,
+          "max_level": 51082,
+          "decisions": 5325,
+          "conflicts": 1216,
+          "propagations": 961768,
+          "activation": 0.00332136900397,
+          "joint": 0,
+          "rollback": 0.000229507975746,
+          "boundary": 0.0720340210246,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 50055,
+            "reinstalled": 799,
+            "ordinary": 7,
+            "kept": 7,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.00058754399651662,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.0048424929846078,
+            "prefix_repeat_s": 2.8698996175081e-05,
+            "jumps": [
+              1216,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              1,
+              0,
+              0
+            ],
+            "jump_removed": [
+              799,
+              0,
+              0
+            ],
+            "progress_calls": [
+              7,
+              0
+            ],
+            "progress_available": [
+              350960,
+              0
+            ],
+            "progress_visits": [
+              483,
+              0
+            ],
+            "progress_seconds": [
+              1.7620914150029e-05,
+              0
+            ],
+            "bcp_roles": [
+              910914,
+              50854,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              973344,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 170,
+              "resident_end": 170,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 1046,
+              "resident_end": 1046,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 3477,
+              "resident_end": 3477,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 62610,
+        "program_vars": 12554,
+        "selectors": 50055,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 12554,
+        "rejected_ports": 0,
+        "occurrences": 50065,
+        "unique_inputs": 50053,
+        "skipped": 0,
+        "install_seconds": 0.0171205539955,
+        "assumption_build_seconds": 9.56800067797e-05,
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 0.10476887901313603,
+        "side": "P0",
+        "native_vars": 12554
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 323724,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 63140,
+          "processed": 71165,
+          "prefix": 63140,
+          "frames": 135384,
+          "empty": 0,
+          "bcp": 157746,
+          "pushes": 135384,
+          "pops": 135384,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 4619,
+          "cycles": 18,
+          "co_pairs": 0,
+          "restarts": 77,
+          "discarded_queued": 97,
+          "delayed_conflicts": 0,
+          "positive": 48319,
+          "negative": 14821,
+          "max_level": 64766,
+          "decisions": 64220,
+          "conflicts": 21764,
+          "propagations": 20617165,
+          "activation": 0.00341608200688,
+          "joint": 0,
+          "rollback": 0.0001490249997,
+          "boundary": 3.94280571799,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 63140,
+            "reinstalled": 8024,
+            "ordinary": 77,
+            "kept": 77,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.001969168020878,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.0052935419953428,
+            "prefix_repeat_s": 0.00035759306047112,
+            "jumps": [
+              21764,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              13,
+              0,
+              0
+            ],
+            "jump_removed": [
+              9248,
+              0,
+              0
+            ],
+            "progress_calls": [
+              77,
+              0
+            ],
+            "progress_available": [
+              4866062,
+              0
+            ],
+            "progress_visits": [
+              5236,
+              0
+            ],
+            "progress_seconds": [
+              0.00019325385801494,
+              0
+            ],
+            "bcp_roles": [
+              20546000,
+              71165,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              22387719,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 2734,
+              "resident_end": 2734,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 170,
+              "dormant": 115,
+              "constraining": 55,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 42,
+              "dormant_distinct_used": 0,
+              "hits": [
+                6646,
+                8,
+                2597,
+                712
+              ]
+            },
+            {
+              "family": "M",
+              "births": 19030,
+              "resident_end": 19030,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 1046,
+              "dormant": 1046,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 4619,
+              "resident_end": 4619,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 3477,
+              "dormant": 3477,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 78800,
+        "program_vars": 15659,
+        "selectors": 63140,
+        "co_vars": 0,
+        "reused": 8953,
+        "fresh": 3105,
+        "rejected_ports": 0,
+        "occurrences": 98394,
+        "unique_inputs": 63136,
+        "skipped": 0,
+        "install_seconds": 0.0119395309594,
+        "assumption_build_seconds": 0.000747770012822,
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 3.9742343630059622,
+        "side": "P1",
+        "native_vars": 12058
+      }
+    }
+  },
+  "circular-buffer": {
+    "R1": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 470036,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1161969,
+          "processed": 1163801,
+          "prefix": 1161969,
+          "frames": 1272708,
+          "empty": 0,
+          "bcp": 1273050,
+          "pushes": 1272708,
+          "pops": 1272708,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 5894,
+          "cycles": 5,
+          "co_pairs": 0,
+          "restarts": 2,
+          "discarded_queued": 220,
+          "delayed_conflicts": 0,
+          "positive": 1161969,
+          "negative": 0,
+          "max_level": 1257513,
+          "decisions": 108908,
+          "conflicts": 254,
+          "propagations": 2037458,
+          "activation": 0.0251496569836,
+          "joint": 0,
+          "rollback": 0.0048367039999,
+          "boundary": 0.23415439704,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 1161969,
+            "reinstalled": 1832,
+            "ordinary": 2,
+            "kept": 2,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.013473884027917,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.065235735033639,
+            "prefix_repeat_s": 7.7799952123314e-05,
+            "jumps": [
+              254,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              1,
+              0,
+              0
+            ],
+            "jump_removed": [
+              1832,
+              0,
+              0
+            ],
+            "progress_calls": [
+              2,
+              0
+            ],
+            "progress_available": [
+              2418243,
+              0
+            ],
+            "progress_visits": [
+              2418243,
+              0
+            ],
+            "progress_seconds": [
+              0.01572991500143,
+              0
+            ],
+            "bcp_roles": [
+              873657,
+              1163801,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              813073,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 183,
+              "resident_end": 183,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 71,
+              "resident_end": 71,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 5894,
+              "resident_end": 5894,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1407052,
+        "program_vars": 245082,
+        "selectors": 1161969,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 245082,
+        "rejected_ports": 0,
+        "occurrences": 1161979,
+        "unique_inputs": 1161967,
+        "skipped": 0,
+        "install_seconds": 0.786627174006,
+        "assumption_build_seconds": 0.00249291700311,
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 1.367315697018057,
+        "side": "P0",
+        "native_vars": 245082
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 1048100,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 2324675,
+          "processed": 4372811,
+          "prefix": 2324675,
+          "frames": 4503073,
+          "empty": 0,
+          "bcp": 4513259,
+          "pushes": 4503073,
+          "pops": 4503073,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 56340,
+          "cycles": 92,
+          "co_pairs": 0,
+          "restarts": 32,
+          "discarded_queued": 2822,
+          "delayed_conflicts": 0,
+          "positive": 1163100,
+          "negative": 1161575,
+          "max_level": 2424905,
+          "decisions": 130263,
+          "conflicts": 8146,
+          "propagations": 181332706,
+          "activation": 0.0257162440103,
+          "joint": 0,
+          "rollback": 0.0042548259953,
+          "boundary": 22.875622805,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 2324675,
+            "reinstalled": 2048135,
+            "ordinary": 32,
+            "kept": 32,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.15112927102018,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.11165466799866,
+            "prefix_repeat_s": 0.065706764056813,
+            "jumps": [
+              8146,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              6,
+              0,
+              0
+            ],
+            "jump_removed": [
+              2049968,
+              0,
+              0
+            ],
+            "progress_calls": [
+              32,
+              0
+            ],
+            "progress_available": [
+              74391448,
+              0
+            ],
+            "progress_visits": [
+              74391448,
+              0
+            ],
+            "progress_seconds": [
+              0.47106245602481,
+              0
+            ],
+            "bcp_roles": [
+              176959895,
+              4372811,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              178590525,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 579,
+              "resident_end": 579,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 183,
+              "dormant": 183,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 7567,
+              "resident_end": 7567,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 71,
+              "dormant": 71,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 56340,
+              "resident_end": 56340,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 5894,
+              "dormant": 5894,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 2814758,
+        "program_vars": 490082,
+        "selectors": 2324675,
+        "co_vars": 0,
+        "reused": 473,
+        "fresh": 245000,
+        "rejected_ports": 0,
+        "occurrences": 2325089,
+        "unique_inputs": 2324671,
+        "skipped": 0,
+        "install_seconds": 0.931506827008,
+        "assumption_build_seconds": 0.127275813022,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 24.28864587499993,
+        "side": "P1",
+        "native_vars": 245473
+      }
+    },
+    "R2": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 470036,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1161969,
+          "processed": 1163801,
+          "prefix": 1161969,
+          "frames": 1272708,
+          "empty": 0,
+          "bcp": 1273050,
+          "pushes": 1272708,
+          "pops": 1272708,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 5894,
+          "cycles": 5,
+          "co_pairs": 0,
+          "restarts": 2,
+          "discarded_queued": 220,
+          "delayed_conflicts": 0,
+          "positive": 1161969,
+          "negative": 0,
+          "max_level": 1257513,
+          "decisions": 108908,
+          "conflicts": 254,
+          "propagations": 2037458,
+          "activation": 0.0246143789846,
+          "joint": 0,
+          "rollback": 0.00536133704009,
+          "boundary": 0.223098259012,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 1161969,
+            "reinstalled": 1832,
+            "ordinary": 2,
+            "kept": 2,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.013520574953873,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.068440500006545,
+            "prefix_repeat_s": 8.5660954937339e-05,
+            "jumps": [
+              254,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              1,
+              0,
+              0
+            ],
+            "jump_removed": [
+              1832,
+              0,
+              0
+            ],
+            "progress_calls": [
+              2,
+              0
+            ],
+            "progress_available": [
+              2418243,
+              0
+            ],
+            "progress_visits": [
+              108,
+              0
+            ],
+            "progress_seconds": [
+              1.0830990504473e-05,
+              0
+            ],
+            "bcp_roles": [
+              873657,
+              1163801,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              813073,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 183,
+              "resident_end": 183,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 71,
+              "resident_end": 71,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 5894,
+              "resident_end": 5894,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1407052,
+        "program_vars": 245082,
+        "selectors": 1161969,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 245082,
+        "rejected_ports": 0,
+        "occurrences": 1161979,
+        "unique_inputs": 1161967,
+        "skipped": 0,
+        "install_seconds": 0.841315822036,
+        "assumption_build_seconds": 0.00265629298519,
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 1.4119420259958133,
+        "side": "P0",
+        "native_vars": 245082
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 1048100,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 2324675,
+          "processed": 4372811,
+          "prefix": 2324675,
+          "frames": 4503073,
+          "empty": 0,
+          "bcp": 4513259,
+          "pushes": 4503073,
+          "pops": 4503073,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 56340,
+          "cycles": 92,
+          "co_pairs": 0,
+          "restarts": 32,
+          "discarded_queued": 2822,
+          "delayed_conflicts": 0,
+          "positive": 1163100,
+          "negative": 1161575,
+          "max_level": 2424905,
+          "decisions": 130263,
+          "conflicts": 8146,
+          "propagations": 181332706,
+          "activation": 0.0250491379993,
+          "joint": 0,
+          "rollback": 0.00476880097995,
+          "boundary": 22.403937822,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 2324675,
+            "reinstalled": 2048135,
+            "ordinary": 32,
+            "kept": 32,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.14418937900336,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.11162281397264,
+            "prefix_repeat_s": 0.065607317024842,
+            "jumps": [
+              8146,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              6,
+              0,
+              0
+            ],
+            "jump_removed": [
+              2049968,
+              0,
+              0
+            ],
+            "progress_calls": [
+              32,
+              0
+            ],
+            "progress_available": [
+              74391448,
+              0
+            ],
+            "progress_visits": [
+              1664,
+              0
+            ],
+            "progress_seconds": [
+              9.7657961305231e-05,
+              0
+            ],
+            "bcp_roles": [
+              176959895,
+              4372811,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              178590525,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 579,
+              "resident_end": 579,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 183,
+              "dormant": 183,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 7567,
+              "resident_end": 7567,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 71,
+              "dormant": 71,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 56340,
+              "resident_end": 56340,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 5894,
+              "dormant": 5894,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 2814758,
+        "program_vars": 490082,
+        "selectors": 2324675,
+        "co_vars": 0,
+        "reused": 473,
+        "fresh": 245000,
+        "rejected_ports": 0,
+        "occurrences": 2325089,
+        "unique_inputs": 2324671,
+        "skipped": 0,
+        "install_seconds": 0.942374103004,
+        "assumption_build_seconds": 0.121551838994,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 23.81547622900689,
+        "side": "P1",
+        "native_vars": 245473
+      }
+    },
+    "R0": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 470036,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1161969,
+          "processed": 4649708,
+          "prefix": 1161969,
+          "frames": 4768672,
+          "empty": 0,
+          "bcp": 4769184,
+          "pushes": 4768672,
+          "pops": 4768672,
+          "rebuilds": 4,
+          "replay": 4,
+          "replay_literals": 869,
+          "theory_props": 3924,
+          "cycles": 0,
+          "co_pairs": 0,
+          "restarts": 3,
+          "discarded_queued": 0,
+          "delayed_conflicts": 0,
+          "positive": 1161969,
+          "negative": 0,
+          "max_level": 1257513,
+          "decisions": 118965,
+          "conflicts": 437,
+          "propagations": 5725271,
+          "activation": 0.103240703058,
+          "joint": 0,
+          "rollback": 0.00455540500116,
+          "boundary": 0.454093615001,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 1161969,
+            "reinstalled": 3487739,
+            "ordinary": 3,
+            "kept": 0,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.014335426036268,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.066819138010032,
+            "prefix_repeat_s": 0.19879731693072,
+            "jumps": [
+              437,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              1,
+              0,
+              0
+            ],
+            "jump_removed": [
+              1832,
+              0,
+              0
+            ],
+            "progress_calls": [
+              3,
+              0
+            ],
+            "progress_available": [
+              3585257,
+              0
+            ],
+            "progress_visits": [
+              3585257,
+              0
+            ],
+            "progress_seconds": [
+              0.022682127077132,
+              0
+            ],
+            "bcp_roles": [
+              1075563,
+              4649708,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              1013565,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 391,
+              "resident_end": 391,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 46,
+              "resident_end": 46,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 3924,
+              "resident_end": 3924,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1407052,
+        "program_vars": 245082,
+        "selectors": 1161969,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 245082,
+        "rejected_ports": 0,
+        "occurrences": 1161979,
+        "unique_inputs": 1161967,
+        "skipped": 0,
+        "install_seconds": 0.84058764996,
+        "assumption_build_seconds": 0.00243210600456,
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 1.6409369900356978,
+        "side": "P0",
+        "native_vars": 245082
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 1079192,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 2324675,
+          "processed": 83188412,
+          "prefix": 2324675,
+          "frames": 83316837,
+          "empty": 0,
+          "bcp": 83327425,
+          "pushes": 83316837,
+          "pops": 83316837,
+          "rebuilds": 34,
+          "replay": 34,
+          "replay_literals": 9573,
+          "theory_props": 65803,
+          "cycles": 75,
+          "co_pairs": 0,
+          "restarts": 33,
+          "discarded_queued": 3612,
+          "delayed_conflicts": 0,
+          "positive": 1163100,
+          "negative": 1161575,
+          "max_level": 2424926,
+          "decisions": 128426,
+          "conflicts": 8424,
+          "propagations": 252744023,
+          "activation": 0.905677308037,
+          "joint": 0,
+          "rollback": 0.00453621003544,
+          "boundary": 27.444973128,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 2324675,
+            "reinstalled": 80863736,
+            "ordinary": 33,
+            "kept": 0,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.1470135669806,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.11310015799245,
+            "prefix_repeat_s": 3.4757884600549,
+            "jumps": [
+              8424,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              7,
+              0,
+              0
+            ],
+            "jump_removed": [
+              4151294,
+              0,
+              0
+            ],
+            "progress_calls": [
+              33,
+              0
+            ],
+            "progress_available": [
+              76716322,
+              0
+            ],
+            "progress_visits": [
+              76716322,
+              0
+            ],
+            "progress_seconds": [
+              0.48185159784043,
+              0
+            ],
+            "bcp_roles": [
+              169555611,
+              83188412,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              171263934,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 525,
+              "resident_end": 525,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 391,
+              "dormant": 391,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 7899,
+              "resident_end": 7899,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 46,
+              "dormant": 46,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 65803,
+              "resident_end": 65803,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 3924,
+              "dormant": 3924,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 2814758,
+        "program_vars": 490082,
+        "selectors": 2324675,
+        "co_vars": 0,
+        "reused": 473,
+        "fresh": 245000,
+        "rejected_ports": 0,
+        "occurrences": 2325089,
+        "unique_inputs": 2324671,
+        "skipped": 0,
+        "install_seconds": 0.915084833046,
+        "assumption_build_seconds": 0.123385193001,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 28.83300721499836,
+        "side": "P1",
+        "native_vars": 245473
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "R2": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 409732,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 910715,
+          "processed": 910715,
+          "prefix": 910715,
+          "frames": 1017697,
+          "empty": 0,
+          "bcp": 1075937,
+          "pushes": 1017697,
+          "pops": 1017697,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 184579,
+          "cycles": 3436,
+          "co_pairs": 0,
+          "restarts": 149,
+          "discarded_queued": 37982,
+          "delayed_conflicts": 0,
+          "positive": 910715,
+          "negative": 0,
+          "max_level": 917926,
+          "decisions": 106983,
+          "conflicts": 49344,
+          "propagations": 53571082,
+          "activation": 0.00595953501761,
+          "joint": 0,
+          "rollback": 0.00246132502798,
+          "boundary": 7.97411341895,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 910715,
+            "reinstalled": 0,
+            "ordinary": 149,
+            "kept": 149,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.011346876970492,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.035114969010465,
+            "prefix_repeat_s": 0,
+            "jumps": [
+              49344,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              0,
+              0,
+              0
+            ],
+            "jump_removed": [
+              0,
+              0,
+              0
+            ],
+            "progress_calls": [
+              149,
+              0
+            ],
+            "progress_available": [
+              135707809,
+              0
+            ],
+            "progress_visits": [
+              8195,
+              0
+            ],
+            "progress_seconds": [
+              0.00046808127081022,
+              0
+            ],
+            "bcp_roles": [
+              52660367,
+              910715,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              59481752,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 497,
+              "resident_end": 497,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 48847,
+              "resident_end": 48847,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 184579,
+              "resident_end": 184579,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1109807,
+        "program_vars": 199091,
+        "selectors": 910715,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 199091,
+        "rejected_ports": 0,
+        "occurrences": 910797,
+        "unique_inputs": 910713,
+        "skipped": 0,
+        "install_seconds": 0.637521453958,
+        "assumption_build_seconds": 0.00210915098432,
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 8.897581155993976,
+        "side": "P0",
+        "native_vars": 199091
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 1696132,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1195185,
+          "processed": 1210260,
+          "prefix": 1195185,
+          "frames": 1428038,
+          "empty": 0,
+          "bcp": 1577984,
+          "pushes": 1428038,
+          "pops": 1428038,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 98228,
+          "cycles": 11277,
+          "co_pairs": 0,
+          "restarts": 369,
+          "discarded_queued": 32892,
+          "delayed_conflicts": 0,
+          "positive": 287429,
+          "negative": 907756,
+          "max_level": 1213137,
+          "decisions": 217779,
+          "conflicts": 133733,
+          "propagations": 860180943,
+          "activation": 0.00456933298847,
+          "joint": 0,
+          "rollback": 0.00240303197643,
+          "boundary": 92.316726517,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 1195185,
+            "reinstalled": 15074,
+            "ordinary": 369,
+            "kept": 369,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.15211488399655,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.05566195899155,
+            "prefix_repeat_s": 0.00055064709158614,
+            "jumps": [
+              133733,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              7,
+              0,
+              0
+            ],
+            "jump_removed": [
+              18089,
+              0,
+              0
+            ],
+            "progress_calls": [
+              369,
+              0
+            ],
+            "progress_available": [
+              441038283,
+              0
+            ],
+            "progress_visits": [
+              19926,
+              0
+            ],
+            "progress_seconds": [
+              0.0010548036079854,
+              0
+            ],
+            "bcp_roles": [
+              858970683,
+              1210260,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              892895134,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 851,
+              "resident_end": 851,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 497,
+              "dormant": 497,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 132882,
+              "resident_end": 132882,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 48847,
+              "dormant": 48847,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 98228,
+              "resident_end": 98228,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 184579,
+              "dormant": 184579,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1460593,
+        "program_vars": 265407,
+        "selectors": 1195185,
+        "co_vars": 0,
+        "reused": 3319,
+        "fresh": 66316,
+        "rejected_ports": 0,
+        "occurrences": 1198308,
+        "unique_inputs": 1195181,
+        "skipped": 0,
+        "install_seconds": 0.191892502015,
+        "assumption_build_seconds": 0.0851862829877,
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 92.8180906699854,
+        "side": "P1",
+        "native_vars": 69635
+      }
+    },
+    "R0": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 392708,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 910715,
+          "processed": 115660805,
+          "prefix": 910715,
+          "frames": 115810074,
+          "empty": 0,
+          "bcp": 115859630,
+          "pushes": 115810074,
+          "pops": 115810074,
+          "rebuilds": 127,
+          "replay": 127,
+          "replay_literals": 7310,
+          "theory_props": 136916,
+          "cycles": 2594,
+          "co_pairs": 0,
+          "restarts": 126,
+          "discarded_queued": 24571,
+          "delayed_conflicts": 0,
+          "positive": 910715,
+          "negative": 0,
+          "max_level": 918397,
+          "decisions": 149270,
+          "conflicts": 40672,
+          "propagations": 172772795,
+          "activation": 0.735685023654,
+          "joint": 0,
+          "rollback": 0.00250287697418,
+          "boundary": 13.133104524,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 910715,
+            "reinstalled": 114750090,
+            "ordinary": 126,
+            "kept": 0,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.010760116972961,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.035089262994006,
+            "prefix_repeat_s": 4.3387790980632,
+            "jumps": [
+              40672,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              0,
+              0,
+              0
+            ],
+            "jump_removed": [
+              0,
+              0,
+              0
+            ],
+            "progress_calls": [
+              126,
+              0
+            ],
+            "progress_available": [
+              114764100,
+              0
+            ],
+            "progress_visits": [
+              114764100,
+              0
+            ],
+            "progress_seconds": [
+              0.71789420821005,
+              0
+            ],
+            "bcp_roles": [
+              57111990,
+              115660805,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              63998261,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 602,
+              "resident_end": 602,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 40070,
+              "resident_end": 40070,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 136916,
+              "resident_end": 136916,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1109807,
+        "program_vars": 199091,
+        "selectors": 910715,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 199091,
+        "rejected_ports": 0,
+        "occurrences": 910797,
+        "unique_inputs": 910713,
+        "skipped": 0,
+        "install_seconds": 0.55653270398,
+        "assumption_build_seconds": 0.00204230495729,
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 13.978879214031622,
+        "side": "P0",
+        "native_vars": 199091
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 1228932,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1195185,
+          "processed": 304852725,
+          "prefix": 1195185,
+          "frames": 305034183,
+          "empty": 0,
+          "bcp": 305139039,
+          "pushes": 305034183,
+          "pops": 305034183,
+          "rebuilds": 255,
+          "replay": 255,
+          "replay_literals": 14989,
+          "theory_props": 85055,
+          "cycles": 6778,
+          "co_pairs": 0,
+          "restarts": 254,
+          "discarded_queued": 25107,
+          "delayed_conflicts": 0,
+          "positive": 287429,
+          "negative": 907756,
+          "max_level": 1204412,
+          "decisions": 181459,
+          "conflicts": 89846,
+          "propagations": 946366147,
+          "activation": 1.18880546209,
+          "joint": 0,
+          "rollback": 0.00183447799645,
+          "boundary": 82.128789935,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 1195185,
+            "reinstalled": 303657539,
+            "ordinary": 254,
+            "kept": 0,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.13892189698527,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.054250649001915,
+            "prefix_repeat_s": 10.161121992802,
+            "jumps": [
+              89846,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              7,
+              0,
+              0
+            ],
+            "jump_removed": [
+              83492,
+              0,
+              0
+            ],
+            "progress_calls": [
+              254,
+              0
+            ],
+            "progress_available": [
+              303590497,
+              0
+            ],
+            "progress_visits": [
+              303590497,
+              0
+            ],
+            "progress_seconds": [
+              1.910883187782,
+              0
+            ],
+            "bcp_roles": [
+              641513422,
+              304852725,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              666992586,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 1038,
+              "resident_end": 1038,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 602,
+              "dormant": 602,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 88808,
+              "resident_end": 88808,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 40070,
+              "dormant": 40070,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 85055,
+              "resident_end": 85055,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 136916,
+              "dormant": 136916,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1460593,
+        "program_vars": 265407,
+        "selectors": 1195185,
+        "co_vars": 0,
+        "reused": 3319,
+        "fresh": 66316,
+        "rejected_ports": 0,
+        "occurrences": 1198308,
+        "unique_inputs": 1195181,
+        "skipped": 0,
+        "install_seconds": 0.179277343967,
+        "assumption_build_seconds": 0.0845186829683,
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 82.59414785302943,
+        "side": "P1",
+        "native_vars": 69635
+      }
+    },
+    "R1": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "SAT",
+        "rss_kib": 409860,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 910715,
+          "processed": 910715,
+          "prefix": 910715,
+          "frames": 1017697,
+          "empty": 0,
+          "bcp": 1075937,
+          "pushes": 1017697,
+          "pops": 1017697,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 184579,
+          "cycles": 3436,
+          "co_pairs": 0,
+          "restarts": 149,
+          "discarded_queued": 37982,
+          "delayed_conflicts": 0,
+          "positive": 910715,
+          "negative": 0,
+          "max_level": 917926,
+          "decisions": 106983,
+          "conflicts": 49344,
+          "propagations": 53571082,
+          "activation": 0.00569233199349,
+          "joint": 0,
+          "rollback": 0.00247424398549,
+          "boundary": 8.893000704,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 910715,
+            "reinstalled": 0,
+            "ordinary": 149,
+            "kept": 149,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.010698159981985,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.034279749030247,
+            "prefix_repeat_s": 0,
+            "jumps": [
+              49344,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              0,
+              0,
+              0
+            ],
+            "jump_removed": [
+              0,
+              0,
+              0
+            ],
+            "progress_calls": [
+              149,
+              0
+            ],
+            "progress_available": [
+              135707809,
+              0
+            ],
+            "progress_visits": [
+              135707809,
+              0
+            ],
+            "progress_seconds": [
+              0.86503147968324,
+              0
+            ],
+            "bcp_roles": [
+              52660367,
+              910715,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              59481752,
+              0,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 497,
+              "resident_end": 497,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 48847,
+              "resident_end": 48847,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 184579,
+              "resident_end": 184579,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1109807,
+        "program_vars": 199091,
+        "selectors": 910715,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 199091,
+        "rejected_ports": 0,
+        "occurrences": 910797,
+        "unique_inputs": 910713,
+        "skipped": 0,
+        "install_seconds": 0.561329027987,
+        "assumption_build_seconds": 0.00190909695812,
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 9.740375155990478,
+        "side": "P0",
+        "native_vars": 199091
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 1696260,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1195185,
+          "processed": 1210260,
+          "prefix": 1195185,
+          "frames": 1428038,
+          "empty": 0,
+          "bcp": 1577984,
+          "pushes": 1428038,
+          "pops": 1428038,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 98228,
+          "cycles": 11277,
+          "co_pairs": 0,
+          "restarts": 369,
+          "discarded_queued": 32892,
+          "delayed_conflicts": 0,
+          "positive": 287429,
+          "negative": 907756,
+          "max_level": 1213137,
+          "decisions": 217779,
+          "conflicts": 133733,
+          "propagations": 860180943,
+          "activation": 0.00470846099779,
+          "joint": 0,
+          "rollback": 0.0021240520291,
+          "boundary": 94.913281043,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 1195185,
+            "reinstalled": 15074,
+            "ordinary": 369,
+            "kept": 369,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.15914668096229,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.056699601002038,
+            "prefix_repeat_s": 0.00052336300723255,
+            "jumps": [
+              133733,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              7,
+              0,
+              0
+            ],
+            "jump_removed": [
+              18089,
+              0,
+              0
+            ],
+            "progress_calls": [
+              369,
+              0
+            ],
+            "progress_available": [
+              441038283,
+              0
+            ],
+            "progress_visits": [
+              441038283,
+              0
+            ],
+            "progress_seconds": [
+              2.7692683736677,
+              0
+            ],
+            "bcp_roles": [
+              858970683,
+              1210260,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              892895134,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 851,
+              "resident_end": 851,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 497,
+              "dormant": 497,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 132882,
+              "resident_end": 132882,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 48847,
+              "dormant": 48847,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 98228,
+              "resident_end": 98228,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 184579,
+              "dormant": 184579,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1460593,
+        "program_vars": 265407,
+        "selectors": 1195185,
+        "co_vars": 0,
+        "reused": 3319,
+        "fresh": 66316,
+        "rejected_ports": 0,
+        "occurrences": 1198308,
+        "unique_inputs": 1195181,
+        "skipped": 0,
+        "install_seconds": 0.19453853101,
+        "assumption_build_seconds": 0.085298054968,
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 95.4244149220176,
+        "side": "P1",
+        "native_vars": 69635
+      }
+    }
+  },
+  "fib-snapshot-11": {
+    "R0": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 3359248,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1002187,
+          "processed": 277054685,
+          "prefix": 1002187,
+          "frames": 277410343,
+          "empty": 0,
+          "bcp": 277518338,
+          "pushes": 277410343,
+          "pops": 277410343,
+          "rebuilds": 276,
+          "replay": 276,
+          "replay_literals": 70127,
+          "theory_props": 18483,
+          "cycles": 19,
+          "co_pairs": 0,
+          "restarts": 275,
+          "discarded_queued": 199,
+          "delayed_conflicts": 0,
+          "positive": 1002187,
+          "negative": 0,
+          "max_level": 1025420,
+          "decisions": 355659,
+          "conflicts": 106466,
+          "propagations": 423923841,
+          "activation": 10.69806769,
+          "joint": 0,
+          "rollback": 0.0029492189642,
+          "boundary": 89.724709463,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 1002187,
+            "reinstalled": 276052497,
+            "ordinary": 275,
+            "kept": 0,
+            "incomplete": 1,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.011663066979963,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.090483114006929,
+            "prefix_repeat_s": 24.384421916213,
+            "jumps": [
+              106466,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              14,
+              0,
+              0
+            ],
+            "jump_removed": [
+              452469,
+              0,
+              0
+            ],
+            "progress_calls": [
+              275,
+              0
+            ],
+            "progress_available": [
+              275643008,
+              0
+            ],
+            "progress_visits": [
+              275643008,
+              0
+            ],
+            "progress_seconds": [
+              1.7341540115303,
+              0
+            ],
+            "bcp_roles": [
+              146869156,
+              277054685,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              157054988,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 9597,
+              "resident_end": 9597,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 96869,
+              "resident_end": 96869,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 18483,
+              "resident_end": 18483,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1202549,
+        "program_vars": 200361,
+        "selectors": 1002187,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 200361,
+        "rejected_ports": 0,
+        "occurrences": 1002193,
+        "unique_inputs": 1002185,
+        "skipped": 0,
+        "install_seconds": 0.718731986999,
+        "assumption_build_seconds": 0.00236760999542,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 90.75951682002051,
+        "side": "P0",
+        "native_vars": 200361
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 6352380,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1944096,
+          "processed": 495751947,
+          "prefix": 1944096,
+          "frames": 496038026,
+          "empty": 0,
+          "bcp": 496131248,
+          "pushes": 496038026,
+          "pops": 496038026,
+          "rebuilds": 255,
+          "replay": 255,
+          "replay_literals": 65027,
+          "theory_props": 18345,
+          "cycles": 40,
+          "co_pairs": 0,
+          "restarts": 254,
+          "discarded_queued": 1383,
+          "delayed_conflicts": 0,
+          "positive": 1002189,
+          "negative": 941907,
+          "max_level": 1955529,
+          "decisions": 286080,
+          "conflicts": 91663,
+          "propagations": 613255779,
+          "activation": 9.89266895433,
+          "joint": 0,
+          "rollback": 0.0052462919848,
+          "boundary": 90.646943136,
+          "restart_study": {
+            "mode": "R0",
+            "ledger": true,
+            "first": 1944096,
+            "reinstalled": 493807850,
+            "ordinary": 254,
+            "kept": 0,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.17496168799698,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.14176144002704,
+            "prefix_repeat_s": 31.541898317169,
+            "jumps": [
+              91663,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              6,
+              0,
+              0
+            ],
+            "jump_removed": [
+              8165,
+              0,
+              0
+            ],
+            "progress_calls": [
+              254,
+              0
+            ],
+            "progress_available": [
+              493835835,
+              0
+            ],
+            "progress_visits": [
+              493835835,
+              0
+            ],
+            "progress_seconds": [
+              3.1061784756021,
+              0
+            ],
+            "bcp_roles": [
+              117503832,
+              495751947,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              125928637,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 9682,
+              "resident_end": 9682,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 9597,
+              "dormant": 9587,
+              "constraining": 10,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 10,
+              "dormant_distinct_used": 0,
+              "hits": [
+                10727,
+                12,
+                2155,
+                1358
+              ]
+            },
+            {
+              "family": "M",
+              "births": 81981,
+              "resident_end": 81981,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 96869,
+              "dormant": 96869,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 18345,
+              "resident_end": 18345,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 18483,
+              "dormant": 18483,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 2315424,
+        "program_vars": 371327,
+        "selectors": 1944096,
+        "co_vars": 0,
+        "reused": 29404,
+        "fresh": 170966,
+        "rejected_ports": 0,
+        "occurrences": 2004388,
+        "unique_inputs": 1944092,
+        "skipped": 0,
+        "install_seconds": 0.811116817,
+        "assumption_build_seconds": 0.093682627019,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 91.98104208498262,
+        "side": "P1",
+        "native_vars": 200370
+      }
+    },
+    "R2": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 3826704,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1002187,
+          "processed": 1447676,
+          "prefix": 1002187,
+          "frames": 1833784,
+          "empty": 0,
+          "bcp": 1956715,
+          "pushes": 1833784,
+          "pops": 1833784,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 17672,
+          "cycles": 28,
+          "co_pairs": 0,
+          "restarts": 317,
+          "discarded_queued": 323,
+          "delayed_conflicts": 0,
+          "positive": 1002187,
+          "negative": 0,
+          "max_level": 1025420,
+          "decisions": 386109,
+          "conflicts": 121335,
+          "propagations": 137156477,
+          "activation": 0.0379058119725,
+          "joint": 0,
+          "rollback": 0.0029596509994,
+          "boundary": 71.808809924,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 1002187,
+            "reinstalled": 445488,
+            "ordinary": 317,
+            "kept": 317,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.011928499967325,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.088366637006402,
+            "prefix_repeat_s": 0.023641690029763,
+            "jumps": [
+              121335,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              5,
+              0,
+              0
+            ],
+            "jump_removed": [
+              446187,
+              0,
+              0
+            ],
+            "progress_calls": [
+              317,
+              0
+            ],
+            "progress_available": [
+              317741201,
+              0
+            ],
+            "progress_visits": [
+              17435,
+              0
+            ],
+            "progress_seconds": [
+              0.00093332247342914,
+              0
+            ],
+            "bcp_roles": [
+              135708801,
+              1447676,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              147305612,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 10947,
+              "resident_end": 10947,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 110388,
+              "resident_end": 110388,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 17672,
+              "resident_end": 17672,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1202549,
+        "program_vars": 200361,
+        "selectors": 1002187,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 200361,
+        "rejected_ports": 0,
+        "occurrences": 1002193,
+        "unique_inputs": 1002185,
+        "skipped": 0,
+        "install_seconds": 0.827149750025,
+        "assumption_build_seconds": 0.00227133696899,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 72.94552382599795,
+        "side": "P0",
+        "native_vars": 200361
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 6216376,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1944096,
+          "processed": 2388126,
+          "prefix": 1944096,
+          "frames": 2683509,
+          "empty": 0,
+          "bcp": 2776457,
+          "pushes": 2683509,
+          "pops": 2683509,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 17842,
+          "cycles": 32,
+          "co_pairs": 0,
+          "restarts": 254,
+          "discarded_queued": 367,
+          "delayed_conflicts": 0,
+          "positive": 1002189,
+          "negative": 941907,
+          "max_level": 1962398,
+          "decisions": 295384,
+          "conflicts": 91421,
+          "propagations": 96675200,
+          "activation": 0.0382445339928,
+          "joint": 0,
+          "rollback": 0.00501069199527,
+          "boundary": 46.4479225,
+          "restart_study": {
+            "mode": "R2",
+            "ledger": true,
+            "first": 1944096,
+            "reinstalled": 444029,
+            "ordinary": 254,
+            "kept": 254,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.17227035999531,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.13976106100017,
+            "prefix_repeat_s": 0.025271554070059,
+            "jumps": [
+              91421,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              7,
+              0,
+              0
+            ],
+            "jump_removed": [
+              444728,
+              0,
+              0
+            ],
+            "progress_calls": [
+              254,
+              0
+            ],
+            "progress_available": [
+              493837232,
+              0
+            ],
+            "progress_visits": [
+              13208,
+              0
+            ],
+            "progress_seconds": [
+              0.00070430344203487,
+              0
+            ],
+            "bcp_roles": [
+              94287074,
+              2388126,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              102391677,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 9219,
+              "resident_end": 9219,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 10947,
+              "dormant": 10942,
+              "constraining": 5,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 5,
+              "dormant_distinct_used": 0,
+              "hits": [
+                8566,
+                11,
+                2356,
+                4354
+              ]
+            },
+            {
+              "family": "M",
+              "births": 82202,
+              "resident_end": 82202,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 110388,
+              "dormant": 110388,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 17842,
+              "resident_end": 17842,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 17672,
+              "dormant": 17672,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 2315424,
+        "program_vars": 371327,
+        "selectors": 1944096,
+        "co_vars": 0,
+        "reused": 29404,
+        "fresh": 170966,
+        "rejected_ports": 0,
+        "occurrences": 2004388,
+        "unique_inputs": 1944092,
+        "skipped": 0,
+        "install_seconds": 0.81775282399,
+        "assumption_build_seconds": 0.0915989679634,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 47.77572510601021,
+        "side": "P1",
+        "native_vars": 200370
+      }
+    },
+    "R1": {
+      "P0": {
+        "version": 1,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 3826576,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1002187,
+          "processed": 1447676,
+          "prefix": 1002187,
+          "frames": 1833784,
+          "empty": 0,
+          "bcp": 1956715,
+          "pushes": 1833784,
+          "pops": 1833784,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 2,
+          "theory_props": 17672,
+          "cycles": 28,
+          "co_pairs": 0,
+          "restarts": 317,
+          "discarded_queued": 323,
+          "delayed_conflicts": 0,
+          "positive": 1002187,
+          "negative": 0,
+          "max_level": 1025420,
+          "decisions": 386109,
+          "conflicts": 121335,
+          "propagations": 137156477,
+          "activation": 0.0373712239671,
+          "joint": 0,
+          "rollback": 0.00336529401829,
+          "boundary": 73.914529126,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 1002187,
+            "reinstalled": 445488,
+            "ordinary": 317,
+            "kept": 317,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.011623886995949,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.090832550020423,
+            "prefix_repeat_s": 0.024095336033497,
+            "jumps": [
+              121335,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              5,
+              0,
+              0
+            ],
+            "jump_removed": [
+              446187,
+              0,
+              0
+            ],
+            "progress_calls": [
+              317,
+              0
+            ],
+            "progress_available": [
+              317741201,
+              0
+            ],
+            "progress_visits": [
+              317741201,
+              0
+            ],
+            "progress_seconds": [
+              2.1760556721129,
+              0
+            ],
+            "bcp_roles": [
+              135708801,
+              1447676,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              147305612,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 10947,
+              "resident_end": 10947,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "M",
+              "births": 110388,
+              "resident_end": 110388,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 17672,
+              "resident_end": 17672,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 0,
+              "dormant": 0,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 1202549,
+        "program_vars": 200361,
+        "selectors": 1002187,
+        "co_vars": 0,
+        "reused": 0,
+        "fresh": 200361,
+        "rejected_ports": 0,
+        "occurrences": 1002193,
+        "unique_inputs": 1002185,
+        "skipped": 0,
+        "install_seconds": 0.983204994991,
+        "assumption_build_seconds": 0.00234066398116,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 75.20721851399867,
+        "side": "P0",
+        "native_vars": 200361
+      },
+      "P1": {
+        "version": 2,
+        "query": 1,
+        "status": "UNSAT",
+        "rss_kib": 6216248,
+        "native": {
+          "boundary_status": "",
+          "assumptions": 1944096,
+          "processed": 2388126,
+          "prefix": 1944096,
+          "frames": 2683509,
+          "empty": 0,
+          "bcp": 2776457,
+          "pushes": 2683509,
+          "pops": 2683509,
+          "rebuilds": 1,
+          "replay": 1,
+          "replay_literals": 3,
+          "theory_props": 17842,
+          "cycles": 32,
+          "co_pairs": 0,
+          "restarts": 254,
+          "discarded_queued": 367,
+          "delayed_conflicts": 0,
+          "positive": 1002189,
+          "negative": 941907,
+          "max_level": 1962398,
+          "decisions": 295384,
+          "conflicts": 91421,
+          "propagations": 96675200,
+          "activation": 0.037554865994,
+          "joint": 0,
+          "rollback": 0.00670106598409,
+          "boundary": 49.632988365,
+          "restart_study": {
+            "mode": "R1",
+            "ledger": true,
+            "first": 1944096,
+            "reinstalled": 444029,
+            "ordinary": 254,
+            "kept": 254,
+            "incomplete": 0,
+            "unsafe": 0,
+            "budget_exit": 0,
+            "query_switch_s": 0.17484010796761,
+            "end_level": 0,
+            "end_graph": 0,
+            "prefix_first_s": 0.13836562499637,
+            "prefix_repeat_s": 0.028957690054085,
+            "jumps": [
+              91421,
+              0,
+              0
+            ],
+            "prefix_jumps": [
+              7,
+              0,
+              0
+            ],
+            "jump_removed": [
+              444728,
+              0,
+              0
+            ],
+            "progress_calls": [
+              254,
+              0
+            ],
+            "progress_available": [
+              493837232,
+              0
+            ],
+            "progress_visits": [
+              493837232,
+              0
+            ],
+            "progress_seconds": [
+              3.0907014117111,
+              0
+            ],
+            "bcp_roles": [
+              94287074,
+              2388126,
+              0,
+              0
+            ],
+            "watcher_roles": [
+              102391677,
+              1,
+              0,
+              0
+            ]
+          },
+          "solver_instance": 1,
+          "collections": 0,
+          "reductions": 0,
+          "families": [
+            {
+              "family": "B",
+              "births": 9219,
+              "resident_end": 9219,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 10947,
+              "dormant": 10942,
+              "constraining": 5,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 5,
+              "dormant_distinct_used": 0,
+              "hits": [
+                8566,
+                11,
+                2356,
+                4354
+              ]
+            },
+            {
+              "family": "M",
+              "births": 82202,
+              "resident_end": 82202,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 110388,
+              "dormant": 110388,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "family": "T",
+              "births": 17842,
+              "resident_end": 17842,
+              "unit_births": 0,
+              "old_units": 0,
+              "physical": 17672,
+              "dormant": 17672,
+              "constraining": 0,
+              "root_unit_used": 0,
+              "root_unit_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "dormant_hits": [
+                0,
+                0,
+                0,
+                0
+              ],
+              "distinct_used": 0,
+              "dormant_distinct_used": 0,
+              "hits": [
+                0,
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        "solver_construct_count": 1,
+        "old_learnt_export_count": 0,
+        "old_learnt_import_count": 0,
+        "per_clause_reproof_count": 0,
+        "global_vars": 2315424,
+        "program_vars": 371327,
+        "selectors": 1944096,
+        "co_vars": 0,
+        "reused": 29404,
+        "fresh": 170966,
+        "rejected_ports": 0,
+        "occurrences": 2004388,
+        "unique_inputs": 1944092,
+        "skipped": 0,
+        "install_seconds": 0.798914065992,
+        "assumption_build_seconds": 0.0912345339893,
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "native_failed_assumptions": 0,
+        "elapsed_backend_transaction_s": 50.94980244297767,
+        "side": "P1",
+        "native_vars": 200370
+      }
+    }
+  }
+}

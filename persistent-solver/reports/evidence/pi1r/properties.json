@@ -1,0 +1,925 @@
+{
+  "fib_updates_8": {
+    "R0": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 0.21536216500680894,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "f4bc282049a00fb5095f5646cd0c4acb2c4c2b1f0c3e481a75c2ef51a8df430f",
+        "witness": {
+          "original_clauses": 50065,
+          "selected_rf": 43,
+          "ordered_events": 81,
+          "visible": {
+            "actions": [
+              [
+                "L",
+                3,
+                "left#5"
+              ],
+              [
+                "R",
+                4,
+                "right#21"
+              ],
+              [
+                "R",
+                7,
+                "right#24"
+              ],
+              [
+                "L",
+                11,
+                "left#8"
+              ],
+              [
+                "R",
+                18,
+                "right#27"
+              ],
+              [
+                "L",
+                30,
+                "left#11"
+              ],
+              [
+                "R",
+                48,
+                "right#30"
+              ],
+              [
+                "L",
+                79,
+                "left#14"
+              ],
+              [
+                "R",
+                127,
+                "right#33"
+              ],
+              [
+                "R",
+                206,
+                "right#36"
+              ],
+              [
+                "L",
+                286,
+                "left#17"
+              ],
+              [
+                "L",
+                493,
+                "left#20"
+              ],
+              [
+                "R",
+                699,
+                "right#39"
+              ],
+              [
+                "L",
+                1193,
+                "left#23"
+              ],
+              [
+                "R",
+                1892,
+                "right#42"
+              ],
+              [
+                "L",
+                3086,
+                "left#26"
+              ]
+            ],
+            "final_left": 3086,
+            "final_right": 1892,
+            "bound": 2584
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 2.069892288011033,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "f4bc282049a00fb5095f5646cd0c4acb2c4c2b1f0c3e481a75c2ef51a8df430f"
+      }
+    },
+    "R1": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 0.21536216500680894,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "f4bc282049a00fb5095f5646cd0c4acb2c4c2b1f0c3e481a75c2ef51a8df430f",
+        "witness": {
+          "original_clauses": 50065,
+          "selected_rf": 43,
+          "ordered_events": 81,
+          "visible": {
+            "actions": [
+              [
+                "R",
+                2,
+                "right#21"
+              ],
+              [
+                "L",
+                4,
+                "left#5"
+              ],
+              [
+                "R",
+                6,
+                "right#24"
+              ],
+              [
+                "L",
+                11,
+                "left#8"
+              ],
+              [
+                "L",
+                18,
+                "left#11"
+              ],
+              [
+                "R",
+                24,
+                "right#27"
+              ],
+              [
+                "R",
+                42,
+                "right#30"
+              ],
+              [
+                "L",
+                61,
+                "left#14"
+              ],
+              [
+                "R",
+                103,
+                "right#33"
+              ],
+              [
+                "L",
+                165,
+                "left#17"
+              ],
+              [
+                "R",
+                268,
+                "right#36"
+              ],
+              [
+                "R",
+                433,
+                "right#39"
+              ],
+              [
+                "L",
+                599,
+                "left#20"
+              ],
+              [
+                "R",
+                1032,
+                "right#42"
+              ],
+              [
+                "L",
+                1632,
+                "left#23"
+              ],
+              [
+                "L",
+                2665,
+                "left#26"
+              ]
+            ],
+            "final_left": 2665,
+            "final_right": 1032,
+            "bound": 2584
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 2.069892288011033,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "f4bc282049a00fb5095f5646cd0c4acb2c4c2b1f0c3e481a75c2ef51a8df430f"
+      }
+    },
+    "R2": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 0.21536216500680894,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "f4bc282049a00fb5095f5646cd0c4acb2c4c2b1f0c3e481a75c2ef51a8df430f",
+        "witness": {
+          "original_clauses": 50065,
+          "selected_rf": 43,
+          "ordered_events": 81,
+          "visible": {
+            "actions": [
+              [
+                "R",
+                2,
+                "right#21"
+              ],
+              [
+                "L",
+                4,
+                "left#5"
+              ],
+              [
+                "R",
+                6,
+                "right#24"
+              ],
+              [
+                "L",
+                11,
+                "left#8"
+              ],
+              [
+                "L",
+                18,
+                "left#11"
+              ],
+              [
+                "R",
+                24,
+                "right#27"
+              ],
+              [
+                "R",
+                42,
+                "right#30"
+              ],
+              [
+                "L",
+                61,
+                "left#14"
+              ],
+              [
+                "R",
+                103,
+                "right#33"
+              ],
+              [
+                "L",
+                165,
+                "left#17"
+              ],
+              [
+                "R",
+                268,
+                "right#36"
+              ],
+              [
+                "R",
+                433,
+                "right#39"
+              ],
+              [
+                "L",
+                599,
+                "left#20"
+              ],
+              [
+                "R",
+                1032,
+                "right#42"
+              ],
+              [
+                "L",
+                1632,
+                "left#23"
+              ],
+              [
+                "L",
+                2665,
+                "left#26"
+              ]
+            ],
+            "final_left": 2665,
+            "final_right": 1032,
+            "bound": 2584
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 2.069892288011033,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "f4bc282049a00fb5095f5646cd0c4acb2c4c2b1f0c3e481a75c2ef51a8df430f"
+      }
+    }
+  },
+  "circular-buffer": {
+    "R1": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 0.5660710340016522,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "11b99911b12827b3fddfd2948dcf2e5e040fcb722e6ad7cbf79f63f16c1b0752",
+        "witness": {
+          "original_clauses": 1161979,
+          "selected_rf": 105,
+          "ordered_events": 481,
+          "visible": {
+            "actions": [
+              [
+                "insert",
+                0,
+                0,
+                "buffer#3[[0]]"
+              ],
+              [
+                "remove",
+                0,
+                0,
+                "first#5"
+              ],
+              [
+                "insert",
+                2,
+                1,
+                "buffer#7[[1]]"
+              ],
+              [
+                "remove",
+                3,
+                2,
+                "first#17"
+              ]
+            ],
+            "failed_consumer_iteration": 3,
+            "returned": 2
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 8.485427341016475,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "11b99911b12827b3fddfd2948dcf2e5e040fcb722e6ad7cbf79f63f16c1b0752"
+      }
+    },
+    "R2": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 0.5660710340016522,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "11b99911b12827b3fddfd2948dcf2e5e040fcb722e6ad7cbf79f63f16c1b0752",
+        "witness": {
+          "original_clauses": 1161979,
+          "selected_rf": 105,
+          "ordered_events": 481,
+          "visible": {
+            "actions": [
+              [
+                "insert",
+                0,
+                0,
+                "buffer#3[[0]]"
+              ],
+              [
+                "remove",
+                0,
+                0,
+                "first#5"
+              ],
+              [
+                "insert",
+                2,
+                1,
+                "buffer#7[[1]]"
+              ],
+              [
+                "remove",
+                3,
+                2,
+                "first#17"
+              ]
+            ],
+            "failed_consumer_iteration": 3,
+            "returned": 2
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 8.485427341016475,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "11b99911b12827b3fddfd2948dcf2e5e040fcb722e6ad7cbf79f63f16c1b0752"
+      }
+    },
+    "R0": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 0.5660710340016522,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "11b99911b12827b3fddfd2948dcf2e5e040fcb722e6ad7cbf79f63f16c1b0752",
+        "witness": {
+          "original_clauses": 1161979,
+          "selected_rf": 99,
+          "ordered_events": 481,
+          "visible": {
+            "actions": [
+              [
+                "insert",
+                0,
+                0,
+                "buffer#3[[0]]"
+              ],
+              [
+                "remove",
+                0,
+                0,
+                "first#5"
+              ],
+              [
+                "insert",
+                2,
+                1,
+                "buffer#7[[1]]"
+              ],
+              [
+                "remove",
+                5,
+                2,
+                "first#25"
+              ]
+            ],
+            "failed_consumer_iteration": 5,
+            "returned": 2
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 8.485427341016475,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "11b99911b12827b3fddfd2948dcf2e5e040fcb722e6ad7cbf79f63f16c1b0752"
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "R2": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 5.528397416986991,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "a83bdc8269abe9544bbcc4aa7124d5b2cbd8c7853c349cf770f7d8de4ce196d3",
+        "witness": {
+          "original_clauses": 910797,
+          "selected_rf": 60,
+          "ordered_events": 132,
+          "visible": {
+            "actions": [
+              [
+                "111",
+                "read",
+                0,
+                "sold#11"
+              ],
+              [
+                "111",
+                "write",
+                1,
+                "sold#12"
+              ],
+              [
+                "92",
+                "read",
+                1,
+                "sold#9"
+              ],
+              [
+                "73",
+                "read",
+                1,
+                "sold#7"
+              ],
+              [
+                "92",
+                "write",
+                2,
+                "sold#10"
+              ],
+              [
+                "35",
+                "read",
+                2,
+                "sold#3"
+              ],
+              [
+                "35",
+                "write",
+                3,
+                "sold#4"
+              ],
+              [
+                "73",
+                "write",
+                2,
+                "sold#8"
+              ],
+              [
+                "130",
+                "read",
+                2,
+                "sold#13"
+              ],
+              [
+                "54",
+                "read",
+                2,
+                "sold#5"
+              ],
+              [
+                "130",
+                "write",
+                3,
+                "sold#14"
+              ],
+              [
+                "54",
+                "write",
+                3,
+                "sold#6"
+              ]
+            ],
+            "final_sold": 3,
+            "capacity": 5,
+            "thread_id_kind": "native spawn context"
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 19.563356355007272,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "a83bdc8269abe9544bbcc4aa7124d5b2cbd8c7853c349cf770f7d8de4ce196d3"
+      }
+    },
+    "R0": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 5.528397416986991,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "a83bdc8269abe9544bbcc4aa7124d5b2cbd8c7853c349cf770f7d8de4ce196d3",
+        "witness": {
+          "original_clauses": 910797,
+          "selected_rf": 60,
+          "ordered_events": 132,
+          "visible": {
+            "actions": [
+              [
+                "73",
+                "read",
+                0,
+                "sold#7"
+              ],
+              [
+                "73",
+                "write",
+                1,
+                "sold#8"
+              ],
+              [
+                "54",
+                "read",
+                1,
+                "sold#5"
+              ],
+              [
+                "130",
+                "read",
+                1,
+                "sold#13"
+              ],
+              [
+                "130",
+                "write",
+                2,
+                "sold#14"
+              ],
+              [
+                "92",
+                "read",
+                2,
+                "sold#9"
+              ],
+              [
+                "35",
+                "read",
+                2,
+                "sold#3"
+              ],
+              [
+                "111",
+                "read",
+                2,
+                "sold#11"
+              ],
+              [
+                "111",
+                "write",
+                3,
+                "sold#12"
+              ],
+              [
+                "54",
+                "write",
+                2,
+                "sold#6"
+              ],
+              [
+                "92",
+                "write",
+                3,
+                "sold#10"
+              ],
+              [
+                "35",
+                "write",
+                3,
+                "sold#4"
+              ]
+            ],
+            "final_sold": 3,
+            "capacity": 5,
+            "thread_id_kind": "native spawn context"
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 19.563356355007272,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "a83bdc8269abe9544bbcc4aa7124d5b2cbd8c7853c349cf770f7d8de4ce196d3"
+      }
+    },
+    "R1": {
+      "P0": {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "unwinding": "VIOLATION",
+        "stock_full_seconds": 5.528397416986991,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "a83bdc8269abe9544bbcc4aa7124d5b2cbd8c7853c349cf770f7d8de4ce196d3",
+        "witness": {
+          "original_clauses": 910797,
+          "selected_rf": 60,
+          "ordered_events": 132,
+          "visible": {
+            "actions": [
+              [
+                "111",
+                "read",
+                0,
+                "sold#11"
+              ],
+              [
+                "111",
+                "write",
+                1,
+                "sold#12"
+              ],
+              [
+                "92",
+                "read",
+                1,
+                "sold#9"
+              ],
+              [
+                "73",
+                "read",
+                1,
+                "sold#7"
+              ],
+              [
+                "92",
+                "write",
+                2,
+                "sold#10"
+              ],
+              [
+                "35",
+                "read",
+                2,
+                "sold#3"
+              ],
+              [
+                "35",
+                "write",
+                3,
+                "sold#4"
+              ],
+              [
+                "73",
+                "write",
+                2,
+                "sold#8"
+              ],
+              [
+                "130",
+                "read",
+                2,
+                "sold#13"
+              ],
+              [
+                "54",
+                "read",
+                2,
+                "sold#5"
+              ],
+              [
+                "130",
+                "write",
+                3,
+                "sold#14"
+              ],
+              [
+                "54",
+                "write",
+                3,
+                "sold#6"
+              ]
+            ],
+            "final_sold": 3,
+            "capacity": 5,
+            "thread_id_kind": "native spawn context"
+          }
+        }
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "unwinding": "BOUNDED_PASS",
+        "stock_full_seconds": 19.563356355007272,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "a83bdc8269abe9544bbcc4aa7124d5b2cbd8c7853c349cf770f7d8de4ce196d3"
+      }
+    }
+  },
+  "fib-snapshot-11": {
+    "R0": {
+      "P0": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "unwinding": "INCOMPLETE_UNWINDING",
+        "stock_full_seconds": 28.53605576400878,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "65611a5114803b57bbd446884495dad20ce2212412ed27bd4ca71599cdd7abd5"
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "unwinding": "INCOMPLETE_UNWINDING",
+        "stock_full_seconds": 36.70697607198963,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "65611a5114803b57bbd446884495dad20ce2212412ed27bd4ca71599cdd7abd5"
+      }
+    },
+    "R2": {
+      "P0": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "unwinding": "INCOMPLETE_UNWINDING",
+        "stock_full_seconds": 28.53605576400878,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "65611a5114803b57bbd446884495dad20ce2212412ed27bd4ca71599cdd7abd5"
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "unwinding": "INCOMPLETE_UNWINDING",
+        "stock_full_seconds": 36.70697607198963,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "65611a5114803b57bbd446884495dad20ce2212412ed27bd4ca71599cdd7abd5"
+      }
+    },
+    "R1": {
+      "P0": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "unwinding": "INCOMPLETE_UNWINDING",
+        "stock_full_seconds": 28.53605576400878,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "65611a5114803b57bbd446884495dad20ce2212412ed27bd4ca71599cdd7abd5"
+      },
+      "P1": {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "unwinding": "INCOMPLETE_UNWINDING",
+        "stock_full_seconds": 36.70697607198963,
+        "stock_elf": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+        "signed_assumptions_sha256": "65611a5114803b57bbd446884495dad20ce2212412ed27bd4ca71599cdd7abd5"
+      }
+    }
+  }
+}

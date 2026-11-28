@@ -1,0 +1,106 @@
+{
+  "fib_updates_8": {
+    "P0": {
+      "normal_native_s": 0.0720340210246,
+      "without_native_s": 0.0521604119567,
+      "native_delta_s": 0.019873609067900005,
+      "normal_backend_s": 0.10476887901313603,
+      "without_backend_s": 0.08422623696969822,
+      "backend_delta_s": 0.02054264204343781,
+      "normal_rss_kib": 23640,
+      "without_rss_kib": 23636,
+      "delta_rss_kib": 4,
+      "equal_native_work_and_model": true
+    },
+    "P1": {
+      "normal_native_s": 3.94280571799,
+      "without_native_s": 3.38361829496,
+      "native_delta_s": 0.5591874230299996,
+      "normal_backend_s": 3.9742343630059622,
+      "without_backend_s": 3.411973381007556,
+      "backend_delta_s": 0.5622609819984064,
+      "normal_rss_kib": 323724,
+      "without_rss_kib": 322572,
+      "delta_rss_kib": 1152,
+      "equal_native_work_and_model": true
+    }
+  },
+  "circular-buffer": {
+    "P0": {
+      "normal_native_s": 0.223098259012,
+      "without_native_s": 0.210003502027,
+      "native_delta_s": 0.013094756985000011,
+      "normal_backend_s": 1.4119420259958133,
+      "without_backend_s": 1.4051610699971206,
+      "backend_delta_s": 0.0067809559986926615,
+      "normal_rss_kib": 470036,
+      "without_rss_kib": 470032,
+      "delta_rss_kib": 4,
+      "equal_native_work_and_model": true
+    },
+    "P1": {
+      "normal_native_s": 22.403937822,
+      "without_native_s": 15.782833027,
+      "native_delta_s": 6.621104794999999,
+      "normal_backend_s": 23.81547622900689,
+      "without_backend_s": 17.137092108023353,
+      "backend_delta_s": 6.678384120983537,
+      "normal_rss_kib": 1048100,
+      "without_rss_kib": 1043508,
+      "delta_rss_kib": 4592,
+      "equal_native_work_and_model": true
+    }
+  },
+  "airline_reservations_6": {
+    "P0": {
+      "normal_native_s": 7.97411341895,
+      "without_native_s": 5.74484157702,
+      "native_delta_s": 2.22927184193,
+      "normal_backend_s": 8.897581155993976,
+      "without_backend_s": 6.630739372048993,
+      "backend_delta_s": 2.266841783944983,
+      "normal_rss_kib": 409732,
+      "without_rss_kib": 409860,
+      "delta_rss_kib": -128,
+      "equal_native_work_and_model": true
+    },
+    "P1": {
+      "normal_native_s": 92.316726517,
+      "without_native_s": 42.451239753,
+      "native_delta_s": 49.865486764,
+      "normal_backend_s": 92.8180906699854,
+      "without_backend_s": 42.80708971002605,
+      "backend_delta_s": 50.01100095995935,
+      "normal_rss_kib": 1696132,
+      "without_rss_kib": 1647492,
+      "delta_rss_kib": 48640,
+      "equal_native_work_and_model": true
+    }
+  },
+  "fib-snapshot-11": {
+    "P0": {
+      "normal_native_s": 71.808809924,
+      "without_native_s": 63.1541637,
+      "native_delta_s": 8.654646224000004,
+      "normal_backend_s": 72.94552382599795,
+      "without_backend_s": 64.13067671004683,
+      "backend_delta_s": 8.814847115951125,
+      "normal_rss_kib": 3826704,
+      "without_rss_kib": 3826576,
+      "delta_rss_kib": 128,
+      "equal_native_work_and_model": true
+    },
+    "P1": {
+      "normal_native_s": 46.4479225,
+      "without_native_s": 39.091777715,
+      "native_delta_s": 7.356144784999998,
+      "normal_backend_s": 47.77572510601021,
+      "without_backend_s": 40.36108493403299,
+      "backend_delta_s": 7.414640171977226,
+      "normal_rss_kib": 6216376,
+      "without_rss_kib": 6196172,
+      "delta_rss_kib": 20204,
+      "equal_native_work_and_model": true
+    }
+  }
+}
