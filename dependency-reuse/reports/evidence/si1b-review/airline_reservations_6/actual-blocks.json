@@ -1,0 +1,78 @@
+{
+  "UsedLeaf_atom_counts": {
+    "LAYOUT_INCOMPATIBLE": 7015,
+    "UNCERTIFIED_THEORY_INTERFACE": 704
+  },
+  "examples": {
+    "LAYOUT_INCOMPATIBLE/pointer": {
+      "ABI": [
+        64,
+        8,
+        1,
+        "x86_64",
+        1
+      ],
+      "A_positive": -1,
+      "P0_universe_key": 0,
+      "category": "pointer_aggregate",
+      "failing_views": [
+        [
+          "symex::args::0",
+          [
+            "pointer",
+            64
+          ],
+          56,
+          35710
+        ]
+      ],
+      "old": 17855
+    },
+    "LAYOUT_INCOMPATIBLE/union_tag": {
+      "ABI": [
+        64,
+        8,
+        1,
+        "x86_64",
+        1
+      ],
+      "A_positive": -1,
+      "P0_universe_key": 0,
+      "category": "pointer_aggregate",
+      "failing_views": [
+        [
+          "bookings#3",
+          [
+            "union_tag",
+            320
+          ],
+          64,
+          1036
+        ],
+        [
+          "bookings#4",
+          [
+            "union_tag",
+            320
+          ],
+          64,
+          1036
+        ]
+      ],
+      "old": 518
+    },
+    "UNCERTIFIED_THEORY_INTERFACE": {
+      "A_positive": -1,
+      "category": "Guard",
+      "direct_blocks": [
+        "UNCERTIFIED_THEORY_INTERFACE"
+      ],
+      "old": 774
+    }
+  },
+  "layout_by_view_kind": {
+    "pointer": 336,
+    "union_tag": 6679
+  },
+  "overlapping_failure_flags": true
+}

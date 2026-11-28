@@ -1,0 +1,582 @@
+{
+  "SAT_RUP_Closure_calls": [
+    0,
+    0,
+    0
+  ],
+  "actual_and_export_support": {
+    "A": {
+      "Boolean": {
+        "matched": 8382,
+        "translated_absent": 30,
+        "unmapped": 4446
+      },
+      "Theory": {
+        "M": 779,
+        "U": 72
+      },
+      "export_B": {
+        "matched": 4403,
+        "translated_absent": 30,
+        "unmapped": 2908
+      },
+      "export_T": {
+        "M": 610
+      }
+    },
+    "B": {
+      "Boolean": {
+        "matched": 8385,
+        "translated_absent": 30,
+        "unmapped": 4443
+      },
+      "Theory": {
+        "M": 753,
+        "U": 98
+      },
+      "export_B": {
+        "matched": 5472,
+        "translated_absent": 30,
+        "unmapped": 1839
+      },
+      "export_T": {
+        "M": 610
+      }
+    },
+    "C": {
+      "Boolean": {
+        "matched": 9847,
+        "translated_absent": 30,
+        "unmapped": 2981
+      },
+      "Theory": {
+        "M": 779,
+        "U": 72
+      },
+      "export_B": {
+        "matched": 5511,
+        "translated_absent": 30,
+        "unmapped": 1800
+      },
+      "export_T": {
+        "M": 610
+      }
+    }
+  },
+  "case": "fib_updates_8",
+  "composition": {
+    "added_certified_ordinary": 248,
+    "already_identical": 8705
+  },
+  "coordinate_failures": 0,
+  "dirty_slots": {
+    "A": [
+      [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28
+      ],
+      [
+        1,
+        2,
+        3,
+        6,
+        7,
+        11,
+        12,
+        13,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        96,
+        97,
+        98,
+        100,
+        101,
+        103,
+        104,
+        105,
+        107,
+        108,
+        114,
+        115,
+        116,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        132,
+        133,
+        146,
+        149,
+        150,
+        151,
+        153,
+        158,
+        162,
+        163,
+        164,
+        165
+      ]
+    ],
+    "B": [
+      [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        11,
+        12,
+        13,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        32
+      ],
+      [
+        1,
+        2,
+        3,
+        6,
+        7,
+        11,
+        12,
+        13,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        53,
+        56,
+        59,
+        61,
+        65,
+        78,
+        82,
+        96,
+        97,
+        98,
+        100,
+        101,
+        103,
+        104,
+        105,
+        107,
+        108,
+        114,
+        115,
+        116,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        132,
+        133,
+        146,
+        149,
+        150,
+        151,
+        153,
+        158,
+        162,
+        163,
+        164,
+        165
+      ]
+    ],
+    "C": [
+      [
+        1,
+        2,
+        4,
+        5,
+        6,
+        7,
+        8,
+        11,
+        15,
+        16,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        28
+      ],
+      [
+        1,
+        2,
+        3,
+        6,
+        7,
+        11,
+        12,
+        13,
+        25,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        96,
+        97,
+        98,
+        100,
+        101,
+        103,
+        104,
+        105,
+        107,
+        108,
+        114,
+        115,
+        116,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        128,
+        129,
+        130,
+        132,
+        133,
+        146,
+        149,
+        150,
+        151,
+        153,
+        158,
+        162,
+        163,
+        164,
+        165
+      ]
+    ]
+  },
+  "independently_compared_exact": true,
+  "mapped": {
+    "A": 10416,
+    "B": 8953,
+    "C": 10664
+  },
+  "native_space": [
+    {
+      "boundary": [
+        12554
+      ],
+      "counts": {
+        "B": 47493,
+        "Q": 2572,
+        "gates": 8422,
+        "installed_EDGE": 386,
+        "installed_GUARD": 36,
+        "installed_IN": 51,
+        "installed_MEMBER": 81,
+        "installed_NODE": 81,
+        "installed_OUT": 51
+      },
+      "first_root_model_sha256": "a5c8ee39813c506e72f87f8193f21dcd2e057a65e102e835eae781a1ef79c57e",
+      "gate_multiset_equal": true,
+      "ordered_gates_equal": true,
+      "ordered_graph_sha256": "93cca1719f4a9252c1464f6a63d59bb4f36dc553e9a16e8e0aeb01136e688031",
+      "permanent_occurrence_sha256": "f6935f69f602366e2072ff5015627e800eb2c8ef02798c98643a08f2a8aeeb7c",
+      "quarantined_ids": [],
+      "query_multiset_equal": true,
+      "query_permutation": {},
+      "signed_port_multiset_equal": true,
+      "signed_port_rows": 9285
+    },
+    {
+      "boundary": [
+        12058
+      ],
+      "counts": {
+        "B": 45757,
+        "Q": 2572,
+        "gates": 7926,
+        "installed_EDGE": 386,
+        "installed_GUARD": 36,
+        "installed_IN": 51,
+        "installed_MEMBER": 81,
+        "installed_NODE": 81,
+        "installed_OUT": 51
+      },
+      "first_root_model_sha256": "bdbe7da287fad9ac9b5ad516818bb14bfca9de806b1830e0c14ff8f3457fe34a",
+      "gate_multiset_equal": true,
+      "ordered_gates_equal": true,
+      "ordered_graph_sha256": "4e204f22d2f7f5e5c8b954f8bf724c57dc363744d0d326d47172c4106ec3979b",
+      "permanent_occurrence_sha256": "97d26dbcf2146a2b089fb8bc7d17ed953733ed1ebb48dabe5b42ad563e5a8aa6",
+      "quarantined_ids": [],
+      "query_multiset_equal": true,
+      "query_permutation": {},
+      "signed_port_multiset_equal": true,
+      "signed_port_rows": 9285
+    }
+  ],
+  "registry_groups": [
+    33,
+    166
+  ],
+  "results": {
+    "births": 1442,
+    "classes": {
+      "A": {
+        "B": {
+          "births": 136,
+          "compact": 31,
+          "exact": 31,
+          "mapped": 80,
+          "permanent": 126,
+          "query": 10
+        },
+        "M": {
+          "births": 1301,
+          "compact": 264,
+          "exact": 282,
+          "mapped": 876,
+          "permanent": 1181,
+          "query": 120
+        },
+        "scope_only": {
+          "births": 5,
+          "query": 5
+        }
+      },
+      "B": {
+        "B": {
+          "births": 136,
+          "compact": 55,
+          "exact": 55,
+          "mapped": 79,
+          "permanent": 126,
+          "query": 10
+        },
+        "M": {
+          "births": 1301,
+          "compact": 334,
+          "exact": 334,
+          "mapped": 927,
+          "permanent": 1181,
+          "query": 120
+        },
+        "scope_only": {
+          "births": 5,
+          "query": 5
+        }
+      },
+      "C": {
+        "B": {
+          "births": 136,
+          "compact": 55,
+          "exact": 55,
+          "mapped": 81,
+          "permanent": 126,
+          "query": 10
+        },
+        "M": {
+          "births": 1301,
+          "compact": 334,
+          "exact": 334,
+          "mapped": 934,
+          "permanent": 1181,
+          "query": 120
+        },
+        "scope_only": {
+          "births": 5,
+          "query": 5
+        }
+      }
+    },
+    "gains": {
+      "B_compact": 94,
+      "B_exact": 76,
+      "C_compact": 94,
+      "C_exact": 76
+    },
+    "lost_vs_A": {
+      "A": {
+        "compact": 0,
+        "exact": 0
+      },
+      "B": {
+        "compact": 0,
+        "exact": 0
+      },
+      "C": {
+        "compact": 0,
+        "exact": 0
+      }
+    },
+    "permanent": 1307,
+    "pre_limit": {
+      "A": {
+        "compact": 295,
+        "exact": 313
+      },
+      "B": {
+        "compact": 389,
+        "exact": 389
+      },
+      "C": {
+        "compact": 389,
+        "exact": 389
+      }
+    },
+    "retirements": {
+      "A": {
+        "failed_actual_support": 643,
+        "group_collateral": 18,
+        "missing_conclusion": 351
+      },
+      "B": {
+        "failed_actual_support": 617,
+        "missing_conclusion": 301
+      },
+      "C": {
+        "failed_actual_support": 626,
+        "missing_conclusion": 292
+      }
+    }
+  },
+  "sources": {
+    "B_map_sha256": "6291edd4090169a4ffe87b4155aeb73e8abe3c07a63eb007b5158d9683a78acd",
+    "E_rounds": [
+      "1",
+      "2",
+      "3"
+    ],
+    "dense_sha256": "36df217d26c19318be20455e2daae253e17be9d39f9f5335202af553c8805ab1",
+    "offline_selector_sha256": "bf40de650a19696f304df54e2745578b55cef49bb1e472fb52510b3431890720",
+    "proof_sha256": "9371ee472b864625fb130adb53aca96561114d7fb837ee94bae98289443fd038",
+    "real_E_map_sha256": "6dd610c1c8d7d336d13ddbb98e3de70e778f01c9a1c1970494b47aefc3480c21"
+  },
+  "status": "READY_FOR_REVIEW",
+  "used_atom_denominators": {
+    "boolean": 8062,
+    "theory": 256,
+    "union": 8062
+  },
+  "used_atoms": {
+    "A": {
+      "boolean": 6515,
+      "theory": 246,
+      "union": 6515
+    },
+    "B": {
+      "boolean": 5629,
+      "theory": 220,
+      "union": 5629
+    },
+    "C": {
+      "boolean": 6760,
+      "theory": 246,
+      "union": 6760
+    }
+  },
+  "variables": [
+    12554,
+    12058
+  ]
+}

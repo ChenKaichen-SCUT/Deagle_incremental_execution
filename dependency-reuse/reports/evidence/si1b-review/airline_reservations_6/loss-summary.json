@@ -1,0 +1,175 @@
+{
+  "UsedLeaf_old_matches_lost": {
+    "RF": 207,
+    "auxiliary": 4181,
+    "ordinary_bool": 17,
+    "pointer_aggregate": 399,
+    "ssa_bit": 1467,
+    "unknown": 320
+  },
+  "all_old_matches_lost": 12573,
+  "exclusive_breakdowns_per_measure": {
+    "RF/cache_missing": {
+      "0": 207
+    },
+    "RF/local_expression": {
+      "no_symbol_producer": 207
+    },
+    "RF/native_port_block": {
+      "UNCERTIFIED_THEORY_INTERFACE": 207
+    },
+    "RF/physical_value": {
+      "1": 207
+    },
+    "RF/reason": {
+      "UNCERTIFIED_THEORY_INTERFACE": 207
+    },
+    "RF/route": {
+      "local_expression_failed": 207
+    },
+    "RF/site": {
+      "solvers/prop/prop_conv_solver.cpp:70 symbol": 207
+    },
+    "auxiliary/cache_missing": {
+      "0": 4172,
+      "1": 9
+    },
+    "auxiliary/local_expression": {
+      "all_values_failed": 3475,
+      "certified": 706
+    },
+    "auxiliary/native_port_block": {
+      "-": 4181
+    },
+    "auxiliary/physical_value": {
+      "1": 4181
+    },
+    "auxiliary/reason": {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 9,
+      "UNCERTIFIED_OWNER_RECIPE_OR_PEER": 4172
+    },
+    "auxiliary/route": {
+      "local_expression_failed": 3475,
+      "no_certified_local_root_path": 706
+    },
+    "auxiliary/site": {
+      "solvers/sat/cnf.cpp:189 =": 162,
+      "solvers/sat/cnf.cpp:189 and": 105,
+      "solvers/sat/cnf.cpp:238 or": 16,
+      "solvers/sat/cnf.cpp:296 +": 315,
+      "solvers/sat/cnf.cpp:296 and": 50,
+      "solvers/sat/cnf.cpp:312 or": 5,
+      "solvers/sat/cnf.cpp:334 =": 3528
+    },
+    "ordinary_bool/cache_missing": {
+      "1": 17
+    },
+    "ordinary_bool/local_expression": {
+      "no_symbol_producer": 17
+    },
+    "ordinary_bool/native_port_block": {
+      "-": 17
+    },
+    "ordinary_bool/physical_value": {
+      "1": 17
+    },
+    "ordinary_bool/reason": {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 17
+    },
+    "ordinary_bool/route": {
+      "local_expression_failed": 17
+    },
+    "ordinary_bool/site": {
+      "solvers/prop/prop_conv_solver.cpp:70 symbol": 17
+    },
+    "pointer_aggregate/cache_missing": {
+      "1": 399
+    },
+    "pointer_aggregate/local_expression": {
+      "no_symbol_producer": 399
+    },
+    "pointer_aggregate/native_port_block": {
+      "-": 399
+    },
+    "pointer_aggregate/physical_value": {
+      "1": 399
+    },
+    "pointer_aggregate/reason": {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 399
+    },
+    "pointer_aggregate/route": {
+      "local_expression_failed": 399
+    },
+    "pointer_aggregate/site": {
+      "solvers/flattening/boolbv_map.cpp:59 symbol": 399
+    },
+    "ssa_bit/cache_missing": {
+      "0": 768,
+      "1": 699
+    },
+    "ssa_bit/local_expression": {
+      "all_values_failed": 768,
+      "no_symbol_producer": 699
+    },
+    "ssa_bit/native_port_block": {
+      "-": 1467
+    },
+    "ssa_bit/physical_value": {
+      "1": 1467
+    },
+    "ssa_bit/reason": {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 699,
+      "UNCERTIFIED_OWNER_RECIPE_OR_PEER": 768
+    },
+    "ssa_bit/route": {
+      "local_expression_failed": 1467
+    },
+    "ssa_bit/site": {
+      "solvers/flattening/boolbv_map.cpp:59 symbol": 699,
+      "solvers/sat/cnf.cpp:296 if": 384,
+      "solvers/sat/cnf.cpp:385 if": 384
+    },
+    "unknown/cache_missing": {
+      "0": 320
+    },
+    "unknown/local_expression": {
+      "no_symbol_producer": 320
+    },
+    "unknown/native_port_block": {
+      "-": 320
+    },
+    "unknown/physical_value": {
+      "1": 320
+    },
+    "unknown/reason": {
+      "UNCERTIFIED_OWNER_RECIPE_OR_PEER": 320
+    },
+    "unknown/route": {
+      "local_expression_failed": 320
+    },
+    "unknown/site": {
+      "solvers/flattening/boolbv_map.cpp:59 symbol": 320
+    }
+  },
+  "interface_missing_event_reasons": {
+    "RF/execution_missing": 7,
+    "RF/execution_missing|source_declaration_or_object_path_missing": 12,
+    "RF/source_declaration_or_object_path_missing": 188
+  },
+  "source_counts": [
+    {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 1,
+      "ambiguous_declaration": 7,
+      "ambiguous_event": 0,
+      "ambiguous_or_unsourced_contexts": 65,
+      "ambiguous_or_unsourced_sites": 12
+    },
+    {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 1,
+      "ambiguous_declaration": 7,
+      "ambiguous_event": 0,
+      "ambiguous_or_unsourced_contexts": 53,
+      "ambiguous_or_unsourced_sites": 12
+    }
+  ]
+}

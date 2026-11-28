@@ -1,0 +1,397 @@
+{
+  "SAT_RUP_Closure_rechecks": [
+    0,
+    0,
+    0
+  ],
+  "added_native_solver_runs": 0,
+  "cases": [
+    {
+      "actual_UsedLeaf_additions": 245,
+      "all_ordinary_additions": 248,
+      "attribution": {
+        "B_compact": {
+          "UsedLeaf_additions_sufficient": 94,
+          "family_B": 24,
+          "family_M": 70
+        },
+        "B_exact": {
+          "UsedLeaf_additions_sufficient": 76,
+          "family_B": 24,
+          "family_M": 52
+        },
+        "C_compact": {
+          "UsedLeaf_additions_sufficient": 94,
+          "family_B": 24,
+          "family_M": 70
+        },
+        "C_exact": {
+          "UsedLeaf_additions_sufficient": 76,
+          "family_B": 24,
+          "family_M": 52
+        }
+      },
+      "case": "fib_updates_8",
+      "cohort": "SAT_to_UNSAT_repair",
+      "compact_first512_counts": {
+        "A": 295,
+        "B": 389,
+        "C": 389
+      },
+      "compact_only_gains": {
+        "B_group_only": 18,
+        "C_group_only": 18
+      },
+      "distinct_gain_ordinals": 94,
+      "gain_births_by_map": {
+        "B": 94,
+        "C": 94
+      },
+      "gains_vs_A": {
+        "B_compact": 94,
+        "B_exact": 76,
+        "C_compact": 94,
+        "C_exact": 76
+      },
+      "logical": {
+        "A": {
+          "compact": 295,
+          "exact": 313
+        },
+        "B": {
+          "compact": 389,
+          "exact": 389
+        },
+        "C": {
+          "compact": 389,
+          "exact": 389
+        }
+      },
+      "losses_vs_A": {
+        "A": {
+          "compact": 0,
+          "exact": 0
+        },
+        "B": {
+          "compact": 0,
+          "exact": 0
+        },
+        "C": {
+          "compact": 0,
+          "exact": 0
+        }
+      },
+      "proposal_decisions": {
+        "added_certified_ordinary": 248,
+        "already_identical": 8705
+      }
+    },
+    {
+      "actual_UsedLeaf_additions": 0,
+      "all_ordinary_additions": 0,
+      "attribution": {
+        "B_compact": {},
+        "B_exact": {},
+        "C_compact": {},
+        "C_exact": {}
+      },
+      "case": "circular-buffer",
+      "cohort": "SAT_to_UNSAT_repair",
+      "compact_first512_counts": {
+        "A": 11,
+        "B": 0,
+        "C": 11
+      },
+      "compact_only_gains": {},
+      "distinct_gain_ordinals": 0,
+      "gain_births_by_map": {},
+      "gains_vs_A": {},
+      "logical": {
+        "A": {
+          "compact": 11,
+          "exact": 42
+        },
+        "B": {
+          "compact": 0,
+          "exact": 0
+        },
+        "C": {
+          "compact": 11,
+          "exact": 42
+        }
+      },
+      "losses_vs_A": {
+        "A": {
+          "compact": 0,
+          "exact": 0
+        },
+        "B": {
+          "compact": 11,
+          "exact": 42
+        },
+        "C": {
+          "compact": 0,
+          "exact": 0
+        }
+      },
+      "proposal_decisions": {
+        "already_identical": 473
+      }
+    },
+    {
+      "actual_UsedLeaf_additions": 158,
+      "all_ordinary_additions": 582,
+      "attribution": {
+        "B_compact": {},
+        "B_exact": {},
+        "C_compact": {},
+        "C_exact": {
+          "UsedLeaf_additions_sufficient": 1,
+          "family_B": 1
+        }
+      },
+      "case": "airline_reservations_6",
+      "cohort": "SAT_to_UNSAT_repair",
+      "compact_first512_counts": {
+        "A": 0,
+        "B": 0,
+        "C": 0
+      },
+      "compact_only_gains": {},
+      "distinct_gain_ordinals": 1,
+      "gain_births_by_map": {
+        "C": 1
+      },
+      "gains_vs_A": {
+        "C_compact": 0,
+        "C_exact": 1
+      },
+      "logical": {
+        "A": {
+          "compact": 0,
+          "exact": 0
+        },
+        "B": {
+          "compact": 0,
+          "exact": 0
+        },
+        "C": {
+          "compact": 0,
+          "exact": 1
+        }
+      },
+      "losses_vs_A": {
+        "A": {
+          "compact": 0,
+          "exact": 0
+        },
+        "B": {
+          "compact": 0,
+          "exact": 0
+        },
+        "C": {
+          "compact": 0,
+          "exact": 0
+        }
+      },
+      "proposal_decisions": {
+        "added_certified_ordinary": 582,
+        "already_identical": 2737
+      }
+    },
+    {
+      "actual_UsedLeaf_additions": 3276,
+      "all_ordinary_additions": 4864,
+      "attribution": {
+        "B_compact": {
+          "UsedLeaf_additions_sufficient": 7,
+          "family_B": 7
+        },
+        "B_exact": {
+          "UsedLeaf_additions_sufficient": 37,
+          "family_B": 37
+        },
+        "C_compact": {
+          "UsedLeaf_additions_sufficient": 1644,
+          "family_B": 1644
+        },
+        "C_exact": {
+          "UsedLeaf_additions_sufficient": 1682,
+          "family_B": 1682
+        }
+      },
+      "case": "fib-snapshot-11",
+      "cohort": "historical_INCOMPLETE_UNWINDING",
+      "compact_first512_counts": {
+        "A": 16,
+        "B": 7,
+        "C": 512
+      },
+      "compact_only_gains": {
+        "B_group_only": 7,
+        "C_group_only": 9
+      },
+      "distinct_gain_ordinals": 1691,
+      "gain_births_by_map": {
+        "B": 44,
+        "C": 1691
+      },
+      "gains_vs_A": {
+        "B_compact": 7,
+        "B_exact": 37,
+        "C_compact": 1644,
+        "C_exact": 1682
+      },
+      "logical": {
+        "A": {
+          "compact": 16,
+          "exact": 40
+        },
+        "B": {
+          "compact": 7,
+          "exact": 44
+        },
+        "C": {
+          "compact": 1660,
+          "exact": 1722
+        }
+      },
+      "losses_vs_A": {
+        "A": {
+          "compact": 0,
+          "exact": 0
+        },
+        "B": {
+          "compact": 16,
+          "exact": 33
+        },
+        "C": {
+          "compact": 0,
+          "exact": 0
+        }
+      },
+      "proposal_decisions": {
+        "added_certified_ordinary": 4864,
+        "already_identical": 24540
+      }
+    }
+  ],
+  "phase": "SI-1B-review",
+  "revision": "4ddaf2843f6f51f1d0621ef2fa155783d402dac2",
+  "status": "READY_FOR_REVIEW",
+  "totals": {
+    "all": {
+      "added_UsedLeaf": 3679,
+      "attribution": {
+        "B_compact": {
+          "UsedLeaf_additions_sufficient": 101,
+          "family_B": 31,
+          "family_M": 70
+        },
+        "B_exact": {
+          "UsedLeaf_additions_sufficient": 113,
+          "family_B": 61,
+          "family_M": 52
+        },
+        "C_compact": {
+          "UsedLeaf_additions_sufficient": 1738,
+          "family_B": 1668,
+          "family_M": 70
+        },
+        "C_exact": {
+          "UsedLeaf_additions_sufficient": 1759,
+          "family_B": 1707,
+          "family_M": 52
+        }
+      },
+      "logical": {
+        "A": {
+          "compact": 322,
+          "exact": 395
+        },
+        "B": {
+          "compact": 396,
+          "exact": 433
+        },
+        "C": {
+          "compact": 2060,
+          "exact": 2154
+        }
+      }
+    },
+    "historical": {
+      "added_UsedLeaf": 3276,
+      "attribution": {
+        "B_compact": {
+          "UsedLeaf_additions_sufficient": 7,
+          "family_B": 7
+        },
+        "B_exact": {
+          "UsedLeaf_additions_sufficient": 37,
+          "family_B": 37
+        },
+        "C_compact": {
+          "UsedLeaf_additions_sufficient": 1644,
+          "family_B": 1644
+        },
+        "C_exact": {
+          "UsedLeaf_additions_sufficient": 1682,
+          "family_B": 1682
+        }
+      },
+      "logical": {
+        "A": {
+          "compact": 16,
+          "exact": 40
+        },
+        "B": {
+          "compact": 7,
+          "exact": 44
+        },
+        "C": {
+          "compact": 1660,
+          "exact": 1722
+        }
+      }
+    },
+    "three_repairs": {
+      "added_UsedLeaf": 403,
+      "attribution": {
+        "B_compact": {
+          "UsedLeaf_additions_sufficient": 94,
+          "family_B": 24,
+          "family_M": 70
+        },
+        "B_exact": {
+          "UsedLeaf_additions_sufficient": 76,
+          "family_B": 24,
+          "family_M": 52
+        },
+        "C_compact": {
+          "UsedLeaf_additions_sufficient": 94,
+          "family_B": 24,
+          "family_M": 70
+        },
+        "C_exact": {
+          "UsedLeaf_additions_sufficient": 77,
+          "family_B": 25,
+          "family_M": 52
+        }
+      },
+      "logical": {
+        "A": {
+          "compact": 306,
+          "exact": 355
+        },
+        "B": {
+          "compact": 389,
+          "exact": 389
+        },
+        "C": {
+          "compact": 400,
+          "exact": 432
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,262 @@
+{
+  "atoms_by_first_differing_fields": {
+    "Guard/producer.context/occurrence.caller/occurrence.loops": 110,
+    "Guard/producer.context/occurrence.loops": 14,
+    "RF/missing_endpoint": 8,
+    "RF/producer.context/occurrence.caller/occurrence.loops": 1939,
+    "RF/producer.context/occurrence.loops": 168
+  },
+  "examples": {
+    "Guard/producer.context/occurrence.caller/occurrence.loops": {
+      "A_positive": 812,
+      "P0_event": "m#5",
+      "P0_source": [
+        {
+          "base": "m",
+          "context": 113,
+          "location": [
+            "<builtin-library-pthread_mutex_lock>",
+            39,
+            "pthread_mutex_lock",
+            "2:1366:11:dereference49:8:typecast36:6:symbol25:pthread_mutex_lock::mutex"
+          ],
+          "role": "write",
+          "site": 74,
+          "symbol": "m#5"
+        }
+      ],
+      "P1_event": "m#5",
+      "P1_source": [
+        {
+          "base": "m",
+          "context": 115,
+          "location": [
+            "<builtin-library-pthread_mutex_lock>",
+            39,
+            "pthread_mutex_lock",
+            "2:1366:11:dereference49:8:typecast36:6:symbol25:pthread_mutex_lock::mutex"
+          ],
+          "role": "write",
+          "site": 74,
+          "symbol": "m#5"
+        }
+      ],
+      "event_pair_id": 1,
+      "field": "producer.context/occurrence.caller/occurrence.loops",
+      "old": 406,
+      "values": [
+        [
+          [
+            2661,
+            0
+          ]
+        ],
+        [
+          [
+            40870,
+            0
+          ]
+        ]
+      ]
+    },
+    "Guard/producer.context/occurrence.loops": {
+      "A_positive": 1708,
+      "P0_event": "receive#3",
+      "P0_source": [
+        {
+          "base": "receive",
+          "context": 136,
+          "location": [
+            "program.i",
+            731,
+            "t1",
+            "2:1317:6:symbol7:receive"
+          ],
+          "role": "write",
+          "site": 120,
+          "symbol": "receive#3"
+        }
+      ],
+      "P1_event": "receive#3",
+      "P1_source": [
+        {
+          "base": "receive",
+          "context": 139,
+          "location": [
+            "program.i",
+            733,
+            "t1",
+            "2:1317:6:symbol7:receive"
+          ],
+          "role": "write",
+          "site": 123,
+          "symbol": "receive#3"
+        }
+      ],
+      "event_pair_id": 13,
+      "field": "producer.context/occurrence.loops",
+      "old": 854,
+      "values": [
+        [
+          [
+            2661,
+            0
+          ]
+        ],
+        [
+          [
+            40870,
+            0
+          ]
+        ]
+      ]
+    },
+    "RF/missing_endpoint": {
+      "A_positive": 89164,
+      "P0_event": "__CPROVER_next_thread_id#1",
+      "P0_source": [
+        {
+          "base": "__CPROVER_next_thread_id",
+          "context": 9,
+          "location": [
+            "<built-in-additions>",
+            8,
+            "__CPROVER_initialize",
+            "2:1335:6:symbol24:__CPROVER_next_thread_id"
+          ],
+          "role": "write",
+          "site": 22,
+          "symbol": "__CPROVER_next_thread_id#1"
+        }
+      ],
+      "P1_event": "__CPROVER_next_thread_id#1",
+      "P1_source": [
+        {
+          "base": "__CPROVER_next_thread_id",
+          "context": 9,
+          "location": [
+            "<built-in-additions>",
+            8,
+            "__CPROVER_initialize",
+            "2:1335:6:symbol24:__CPROVER_next_thread_id"
+          ],
+          "role": "write",
+          "site": 22,
+          "symbol": "__CPROVER_next_thread_id#1"
+        }
+      ],
+      "event_pair_id": 139,
+      "field": "missing_endpoint",
+      "old": 44191,
+      "values": null
+    },
+    "RF/producer.context/occurrence.caller/occurrence.loops": {
+      "A_positive": 89332,
+      "P0_event": "first#3",
+      "P0_source": [
+        {
+          "base": "first",
+          "context": 403,
+          "location": [
+            "program.i",
+            695,
+            "removeLogElement",
+            "1:16:branch.conditional"
+          ],
+          "role": "read",
+          "site": 93,
+          "symbol": "first#3"
+        }
+      ],
+      "P1_event": "first#3",
+      "P1_source": [
+        {
+          "base": "first",
+          "context": 415,
+          "location": [
+            "program.i",
+            695,
+            "removeLogElement",
+            "1:16:branch.conditional"
+          ],
+          "role": "read",
+          "site": 93,
+          "symbol": "first#3"
+        }
+      ],
+      "event_pair_id": 145,
+      "field": "producer.context/occurrence.caller/occurrence.loops",
+      "old": 44275,
+      "values": [
+        [
+          [
+            2680,
+            0
+          ]
+        ],
+        [
+          [
+            40890,
+            0
+          ]
+        ]
+      ]
+    },
+    "RF/producer.context/occurrence.loops": {
+      "A_positive": 106930,
+      "P0_event": "send#3",
+      "P0_source": [
+        {
+          "base": "send",
+          "context": 118,
+          "location": [
+            "program.i",
+            727,
+            "t1",
+            "1:16:branch.conditional"
+          ],
+          "role": "read",
+          "site": 117,
+          "symbol": "send#3"
+        }
+      ],
+      "P1_event": "send#3",
+      "P1_source": [
+        {
+          "base": "send",
+          "context": 120,
+          "location": [
+            "program.i",
+            728,
+            "t1",
+            "1:16:branch.conditional"
+          ],
+          "role": "read",
+          "site": 119,
+          "symbol": "send#3"
+        }
+      ],
+      "event_pair_id": 215,
+      "field": "producer.context/occurrence.loops",
+      "old": 53074,
+      "values": [
+        [
+          [
+            2661,
+            0
+          ]
+        ],
+        [
+          [
+            40870,
+            0
+          ]
+        ]
+      ]
+    }
+  },
+  "signed_role_test": {
+    "Guard/different_or_incomplete_roles": 124,
+    "RF/different_or_incomplete_roles": 2115
+  }
+}

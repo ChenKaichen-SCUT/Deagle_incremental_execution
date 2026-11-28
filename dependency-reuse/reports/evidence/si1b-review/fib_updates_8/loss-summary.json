@@ -1,0 +1,153 @@
+{
+  "UsedLeaf_old_matches_lost": {
+    "RF": 26,
+    "auxiliary": 544,
+    "ordinary_bool": 4,
+    "ssa_bit": 493,
+    "unknown": 64
+  },
+  "all_old_matches_lost": 1711,
+  "exclusive_breakdowns_per_measure": {
+    "RF/cache_missing": {
+      "0": 26
+    },
+    "RF/local_expression": {
+      "no_symbol_producer": 26
+    },
+    "RF/native_port_block": {
+      "UNCERTIFIED_THEORY_INTERFACE": 26
+    },
+    "RF/physical_value": {
+      "1": 26
+    },
+    "RF/reason": {
+      "UNCERTIFIED_THEORY_INTERFACE": 26
+    },
+    "RF/route": {
+      "local_expression_failed": 26
+    },
+    "RF/site": {
+      "solvers/prop/prop_conv_solver.cpp:70 symbol": 26
+    },
+    "auxiliary/cache_missing": {
+      "0": 536,
+      "1": 8
+    },
+    "auxiliary/local_expression": {
+      "all_values_failed": 471,
+      "certified": 73
+    },
+    "auxiliary/native_port_block": {
+      "-": 544
+    },
+    "auxiliary/physical_value": {
+      "1": 544
+    },
+    "auxiliary/reason": {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 8,
+      "UNCERTIFIED_OWNER_RECIPE_OR_PEER": 536
+    },
+    "auxiliary/route": {
+      "local_expression_failed": 471,
+      "no_certified_local_root_path": 65,
+      "no_paired_frame_visit": 8
+    },
+    "auxiliary/site": {
+      "solvers/sat/cnf.cpp:189 =": 27,
+      "solvers/sat/cnf.cpp:189 and": 19,
+      "solvers/sat/cnf.cpp:238 or": 6,
+      "solvers/sat/cnf.cpp:296 +": 71,
+      "solvers/sat/cnf.cpp:296 and": 11,
+      "solvers/sat/cnf.cpp:312 or": 4,
+      "solvers/sat/cnf.cpp:334 =": 406
+    },
+    "ordinary_bool/cache_missing": {
+      "1": 4
+    },
+    "ordinary_bool/local_expression": {
+      "no_symbol_producer": 4
+    },
+    "ordinary_bool/native_port_block": {
+      "-": 4
+    },
+    "ordinary_bool/physical_value": {
+      "1": 4
+    },
+    "ordinary_bool/reason": {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 4
+    },
+    "ordinary_bool/route": {
+      "local_expression_failed": 4
+    },
+    "ordinary_bool/site": {
+      "solvers/prop/prop_conv_solver.cpp:70 symbol": 4
+    },
+    "ssa_bit/cache_missing": {
+      "0": 256,
+      "1": 237
+    },
+    "ssa_bit/local_expression": {
+      "all_values_failed": 256,
+      "no_symbol_producer": 237
+    },
+    "ssa_bit/native_port_block": {
+      "-": 493
+    },
+    "ssa_bit/physical_value": {
+      "1": 493
+    },
+    "ssa_bit/reason": {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 237,
+      "UNCERTIFIED_OWNER_RECIPE_OR_PEER": 256
+    },
+    "ssa_bit/route": {
+      "local_expression_failed": 493
+    },
+    "ssa_bit/site": {
+      "solvers/flattening/boolbv_map.cpp:59 symbol": 237,
+      "solvers/sat/cnf.cpp:296 if": 128,
+      "solvers/sat/cnf.cpp:385 if": 128
+    },
+    "unknown/cache_missing": {
+      "0": 64
+    },
+    "unknown/local_expression": {
+      "no_symbol_producer": 64
+    },
+    "unknown/native_port_block": {
+      "-": 64
+    },
+    "unknown/physical_value": {
+      "1": 64
+    },
+    "unknown/reason": {
+      "UNCERTIFIED_OWNER_RECIPE_OR_PEER": 64
+    },
+    "unknown/route": {
+      "local_expression_failed": 64
+    },
+    "unknown/site": {
+      "solvers/flattening/boolbv_map.cpp:59 symbol": 64
+    }
+  },
+  "interface_missing_event_reasons": {
+    "RF/execution_missing": 18,
+    "RF/source_declaration_or_object_path_missing": 8
+  },
+  "source_counts": [
+    {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 0,
+      "ambiguous_declaration": 7,
+      "ambiguous_event": 0,
+      "ambiguous_or_unsourced_contexts": 22,
+      "ambiguous_or_unsourced_sites": 10
+    },
+    {
+      "CACHED_INTERNAL_ORIGIN_MISSING": 0,
+      "ambiguous_declaration": 7,
+      "ambiguous_event": 0,
+      "ambiguous_or_unsourced_contexts": 22,
+      "ambiguous_or_unsourced_sites": 10
+    }
+  ]
+}

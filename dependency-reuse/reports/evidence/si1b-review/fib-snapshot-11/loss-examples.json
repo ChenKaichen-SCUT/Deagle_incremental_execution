@@ -1,0 +1,4354 @@
+{
+  "RF/expression/no_symbol_producer": {
+    "A_positive": 49126,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_THEORY_INTERFACE",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "RF",
+    "expression": {
+      "id": 1419,
+      "name": "memory_model::choice_rf4",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "UNCERTIFIED_THEORY_INTERFACE",
+    "native_frame": 8857,
+    "old": 24554,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          8856,
+          1
+        ]
+      ],
+      "native_root": 8856,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 12987,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            1419,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 1419,
+          "name": "memory_model::choice_rf4",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1420,
+        "op": "not",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      49108
+    ],
+    "typed_roles_for_atom": []
+  },
+  "RF/reason/UNCERTIFIED_THEORY_INTERFACE": {
+    "A_positive": 49126,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_THEORY_INTERFACE",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "RF",
+    "expression": {
+      "id": 1419,
+      "name": "memory_model::choice_rf4",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "UNCERTIFIED_THEORY_INTERFACE",
+    "native_frame": 8857,
+    "old": 24554,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          8856,
+          1
+        ]
+      ],
+      "native_root": 8856,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 12987,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            1419,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 1419,
+          "name": "memory_model::choice_rf4",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1420,
+        "op": "not",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      49108
+    ],
+    "typed_roles_for_atom": []
+  },
+  "RF/route/local_expression_failed": {
+    "A_positive": 49126,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_THEORY_INTERFACE",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "RF",
+    "expression": {
+      "id": 1419,
+      "name": "memory_model::choice_rf4",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "UNCERTIFIED_THEORY_INTERFACE",
+    "native_frame": 8857,
+    "old": 24554,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          8856,
+          1
+        ]
+      ],
+      "native_root": 8856,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 12987,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            1419,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 1419,
+          "name": "memory_model::choice_rf4",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1420,
+        "op": "not",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      49108
+    ],
+    "typed_roles_for_atom": []
+  },
+  "RF/site/solvers/prop/prop_conv_solver.cpp:70 symbol": {
+    "A_positive": 49126,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_THEORY_INTERFACE",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "RF",
+    "expression": {
+      "id": 1419,
+      "name": "memory_model::choice_rf4",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "UNCERTIFIED_THEORY_INTERFACE",
+    "native_frame": 8857,
+    "old": 24554,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          8856,
+          1
+        ]
+      ],
+      "native_root": 8856,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 12987,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            1419,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 1419,
+          "name": "memory_model::choice_rf4",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1420,
+        "op": "not",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      49108
+    ],
+    "typed_roles_for_atom": []
+  },
+  "RF/source_declaration_or_object_path_missing": {
+    "A_positive": 49126,
+    "P0_roles": [
+      {
+        "events": [
+          {
+            "event": "__CPROVER_next_thread_id#1",
+            "producers": [
+              {
+                "base": "__CPROVER_next_thread_id",
+                "base_declared": false,
+                "ctx": 9,
+                "producer": "__CPROVER_next_thread_id#1",
+                "reason": "source_declaration_or_object_path_missing",
+                "role": "write"
+              }
+            ],
+            "reason": "source_declaration_or_object_path_missing"
+          },
+          {
+            "event": "__CPROVER_next_thread_id#3",
+            "producers": [
+              {
+                "base": "__CPROVER_next_thread_id",
+                "base_declared": false,
+                "ctx": 58,
+                "producer": "__CPROVER_next_thread_id#3",
+                "reason": "source_declaration_or_object_path_missing",
+                "role": "read"
+              }
+            ],
+            "reason": "source_declaration_or_object_path_missing"
+          }
+        ],
+        "installed_match": 1,
+        "role": "RF",
+        "signed_literal": 49108
+      }
+    ],
+    "P1_roles": [
+      {
+        "events": [
+          {
+            "event": "__CPROVER_next_thread_id#1",
+            "producers": [
+              {
+                "base": "__CPROVER_next_thread_id",
+                "base_declared": false,
+                "ctx": 9,
+                "producer": "__CPROVER_next_thread_id#1",
+                "reason": "source_declaration_or_object_path_missing",
+                "role": "write"
+              }
+            ],
+            "reason": "source_declaration_or_object_path_missing"
+          },
+          {
+            "event": "__CPROVER_next_thread_id#3",
+            "producers": [
+              {
+                "base": "__CPROVER_next_thread_id",
+                "base_declared": false,
+                "ctx": 58,
+                "producer": "__CPROVER_next_thread_id#3",
+                "reason": "source_declaration_or_object_path_missing",
+                "role": "read"
+              }
+            ],
+            "reason": "source_declaration_or_object_path_missing"
+          }
+        ],
+        "installed_match": 1,
+        "role": "RF",
+        "signed_literal": 49126
+      }
+    ],
+    "SI_reason": "UNCERTIFIED_THEORY_INTERFACE",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "RF",
+    "expression": {
+      "id": 1419,
+      "name": "memory_model::choice_rf4",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "UNCERTIFIED_THEORY_INTERFACE",
+    "native_frame": 8857,
+    "old": 24554,
+    "physical_value": 1,
+    "route": "local_expression_failed",
+    "signed_P0_blocks": [
+      [
+        "RF",
+        0,
+        0
+      ]
+    ],
+    "signed_P1_blocks": [
+      [
+        "RF",
+        0,
+        0
+      ]
+    ]
+  },
+  "auxiliary/expression/all_values_failed": {
+    "A_positive": 100,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/sat/cnf.cpp:296",
+      "and"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          47,
+          false
+        ],
+        [
+          51,
+          false
+        ]
+      ],
+      "first_failed_child": {
+        "id": 47,
+        "name": "goto_symex::\\guard#24",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "bool"
+      },
+      "id": 52,
+      "op": "and",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 597,
+    "old": 50,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          596,
+          1
+        ],
+        [
+          594,
+          2
+        ],
+        [
+          593,
+          1
+        ],
+        [
+          591,
+          2
+        ],
+        [
+          590,
+          1
+        ],
+        [
+          588,
+          2
+        ],
+        [
+          587,
+          1
+        ],
+        [
+          585,
+          2
+        ],
+        [
+          584,
+          1
+        ],
+        [
+          582,
+          2
+        ],
+        [
+          581,
+          1
+        ],
+        [
+          579,
+          2
+        ],
+        [
+          578,
+          1
+        ],
+        [
+          576,
+          2
+        ],
+        [
+          575,
+          1
+        ],
+        [
+          573,
+          2
+        ],
+        [
+          572,
+          1
+        ],
+        [
+          570,
+          2
+        ],
+        [
+          569,
+          1
+        ],
+        [
+          567,
+          2
+        ],
+        [
+          566,
+          1
+        ],
+        [
+          564,
+          2
+        ],
+        [
+          563,
+          1
+        ],
+        [
+          561,
+          2
+        ],
+        [
+          560,
+          1
+        ],
+        [
+          558,
+          2
+        ],
+        [
+          557,
+          1
+        ],
+        [
+          555,
+          2
+        ],
+        [
+          554,
+          1
+        ],
+        [
+          552,
+          2
+        ],
+        [
+          551,
+          1
+        ],
+        [
+          549,
+          2
+        ],
+        [
+          548,
+          1
+        ],
+        [
+          546,
+          2
+        ],
+        [
+          545,
+          1
+        ],
+        [
+          543,
+          2
+        ],
+        [
+          542,
+          1
+        ],
+        [
+          540,
+          2
+        ],
+        [
+          539,
+          1
+        ],
+        [
+          537,
+          2
+        ],
+        [
+          536,
+          1
+        ],
+        [
+          534,
+          2
+        ],
+        [
+          533,
+          1
+        ],
+        [
+          531,
+          2
+        ],
+        [
+          530,
+          1
+        ],
+        [
+          528,
+          2
+        ],
+        [
+          527,
+          1
+        ]
+      ],
+      "native_root": 527,
+      "owners": [
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 562,
+          "lhs": "prev#52",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 563,
+          "lhs": "goto_symex::return_value::fib!0#1",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 226,
+          "ctx_ok": false,
+          "id": 564,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": -1,
+          "ctx_ok": false,
+          "id": 565,
+          "lhs": "main::$tmp::return_value_fib!0@1#2",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 227,
+          "ctx_ok": true,
+          "id": 566,
+          "lhs": "main::1::correct!0@1#2",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 567,
+          "lhs": "i#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 568,
+          "lhs": "j#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 569,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            121,
+            false
+          ],
+          [
+            122,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "children": [
+            [
+              2,
+              false
+            ],
+            [
+              120,
+              false
+            ]
+          ],
+          "first_failed_child": {
+            "id": 2,
+            "name": "goto_symex::\\guard#1",
+            "op": "symbol",
+            "producer_present": false,
+            "reason": "no_symbol_producer",
+            "type": "bool"
+          },
+          "id": 121,
+          "op": "and",
+          "reason": "all_values_failed",
+          "type": "bool"
+        },
+        "id": 123,
+        "op": "or",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      100
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          0,
+          "cnf-return",
+          0,
+          2
+        ],
+        [
+          100
+        ]
+      ]
+    ]
+  },
+  "auxiliary/expression/certified": {
+    "A_positive": 50996,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/sat/cnf.cpp:189",
+      "="
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "id": 1613,
+      "op": "=",
+      "reason": "certified",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 9431,
+    "old": 25489,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          9429,
+          2
+        ]
+      ],
+      "native_root": 9429,
+      "owners": [
+        {
+          "ctx": 253,
+          "ctx_ok": true,
+          "id": 12989,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            129,
+            false
+          ],
+          [
+            1613,
+            true
+          ]
+        ],
+        "first_failed_child": {
+          "id": 129,
+          "name": "goto_symex::\\guard#27",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1614,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "no_certified_local_root_path",
+    "template_result": [
+      50978
+    ],
+    "typed_roles_for_atom": []
+  },
+  "auxiliary/reason/CACHED_INTERNAL_ORIGIN_MISSING": {
+    "A_positive": 100,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/sat/cnf.cpp:296",
+      "and"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          47,
+          false
+        ],
+        [
+          51,
+          false
+        ]
+      ],
+      "first_failed_child": {
+        "id": 47,
+        "name": "goto_symex::\\guard#24",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "bool"
+      },
+      "id": 52,
+      "op": "and",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 597,
+    "old": 50,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          596,
+          1
+        ],
+        [
+          594,
+          2
+        ],
+        [
+          593,
+          1
+        ],
+        [
+          591,
+          2
+        ],
+        [
+          590,
+          1
+        ],
+        [
+          588,
+          2
+        ],
+        [
+          587,
+          1
+        ],
+        [
+          585,
+          2
+        ],
+        [
+          584,
+          1
+        ],
+        [
+          582,
+          2
+        ],
+        [
+          581,
+          1
+        ],
+        [
+          579,
+          2
+        ],
+        [
+          578,
+          1
+        ],
+        [
+          576,
+          2
+        ],
+        [
+          575,
+          1
+        ],
+        [
+          573,
+          2
+        ],
+        [
+          572,
+          1
+        ],
+        [
+          570,
+          2
+        ],
+        [
+          569,
+          1
+        ],
+        [
+          567,
+          2
+        ],
+        [
+          566,
+          1
+        ],
+        [
+          564,
+          2
+        ],
+        [
+          563,
+          1
+        ],
+        [
+          561,
+          2
+        ],
+        [
+          560,
+          1
+        ],
+        [
+          558,
+          2
+        ],
+        [
+          557,
+          1
+        ],
+        [
+          555,
+          2
+        ],
+        [
+          554,
+          1
+        ],
+        [
+          552,
+          2
+        ],
+        [
+          551,
+          1
+        ],
+        [
+          549,
+          2
+        ],
+        [
+          548,
+          1
+        ],
+        [
+          546,
+          2
+        ],
+        [
+          545,
+          1
+        ],
+        [
+          543,
+          2
+        ],
+        [
+          542,
+          1
+        ],
+        [
+          540,
+          2
+        ],
+        [
+          539,
+          1
+        ],
+        [
+          537,
+          2
+        ],
+        [
+          536,
+          1
+        ],
+        [
+          534,
+          2
+        ],
+        [
+          533,
+          1
+        ],
+        [
+          531,
+          2
+        ],
+        [
+          530,
+          1
+        ],
+        [
+          528,
+          2
+        ],
+        [
+          527,
+          1
+        ]
+      ],
+      "native_root": 527,
+      "owners": [
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 562,
+          "lhs": "prev#52",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 563,
+          "lhs": "goto_symex::return_value::fib!0#1",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 226,
+          "ctx_ok": false,
+          "id": 564,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": -1,
+          "ctx_ok": false,
+          "id": 565,
+          "lhs": "main::$tmp::return_value_fib!0@1#2",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 227,
+          "ctx_ok": true,
+          "id": 566,
+          "lhs": "main::1::correct!0@1#2",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 567,
+          "lhs": "i#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 568,
+          "lhs": "j#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 569,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            121,
+            false
+          ],
+          [
+            122,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "children": [
+            [
+              2,
+              false
+            ],
+            [
+              120,
+              false
+            ]
+          ],
+          "first_failed_child": {
+            "id": 2,
+            "name": "goto_symex::\\guard#1",
+            "op": "symbol",
+            "producer_present": false,
+            "reason": "no_symbol_producer",
+            "type": "bool"
+          },
+          "id": 121,
+          "op": "and",
+          "reason": "all_values_failed",
+          "type": "bool"
+        },
+        "id": 123,
+        "op": "or",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      100
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          0,
+          "cnf-return",
+          0,
+          2
+        ],
+        [
+          100
+        ]
+      ]
+    ]
+  },
+  "auxiliary/reason/UNCERTIFIED_OWNER_RECIPE_OR_PEER": {
+    "A_positive": 730,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/sat/cnf.cpp:296",
+      "+"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          411,
+          false
+        ],
+        [
+          401,
+          true
+        ]
+      ],
+      "first_failed_child": {
+        "id": 411,
+        "name": "__CPROVER_next_thread_id#4",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      },
+      "id": 412,
+      "op": "+",
+      "reason": "all_values_failed",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 7645,
+    "old": 365,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 7645,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 1764,
+          "lhs": "__CPROVER_next_thread_id#5",
+          "lhs_ok": false,
+          "phase": "assignments"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            411,
+            false
+          ],
+          [
+            401,
+            true
+          ]
+        ],
+        "first_failed_child": {
+          "id": 411,
+          "name": "__CPROVER_next_thread_id#4",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "unsignedbv"
+        },
+        "id": 412,
+        "op": "+",
+        "reason": "all_values_failed",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      667,
+      732,
+      736,
+      740,
+      744,
+      748,
+      752,
+      756,
+      760,
+      764,
+      768,
+      772,
+      776,
+      780,
+      784,
+      788,
+      792,
+      796,
+      800,
+      804,
+      808,
+      812,
+      816,
+      820,
+      824,
+      828,
+      832,
+      836,
+      840,
+      844,
+      848,
+      852
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          58078,
+          "adder-carry",
+          1,
+          3
+        ],
+        [
+          730
+        ]
+      ]
+    ]
+  },
+  "auxiliary/route/local_expression_failed": {
+    "A_positive": 100,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/sat/cnf.cpp:296",
+      "and"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          47,
+          false
+        ],
+        [
+          51,
+          false
+        ]
+      ],
+      "first_failed_child": {
+        "id": 47,
+        "name": "goto_symex::\\guard#24",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "bool"
+      },
+      "id": 52,
+      "op": "and",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 597,
+    "old": 50,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          596,
+          1
+        ],
+        [
+          594,
+          2
+        ],
+        [
+          593,
+          1
+        ],
+        [
+          591,
+          2
+        ],
+        [
+          590,
+          1
+        ],
+        [
+          588,
+          2
+        ],
+        [
+          587,
+          1
+        ],
+        [
+          585,
+          2
+        ],
+        [
+          584,
+          1
+        ],
+        [
+          582,
+          2
+        ],
+        [
+          581,
+          1
+        ],
+        [
+          579,
+          2
+        ],
+        [
+          578,
+          1
+        ],
+        [
+          576,
+          2
+        ],
+        [
+          575,
+          1
+        ],
+        [
+          573,
+          2
+        ],
+        [
+          572,
+          1
+        ],
+        [
+          570,
+          2
+        ],
+        [
+          569,
+          1
+        ],
+        [
+          567,
+          2
+        ],
+        [
+          566,
+          1
+        ],
+        [
+          564,
+          2
+        ],
+        [
+          563,
+          1
+        ],
+        [
+          561,
+          2
+        ],
+        [
+          560,
+          1
+        ],
+        [
+          558,
+          2
+        ],
+        [
+          557,
+          1
+        ],
+        [
+          555,
+          2
+        ],
+        [
+          554,
+          1
+        ],
+        [
+          552,
+          2
+        ],
+        [
+          551,
+          1
+        ],
+        [
+          549,
+          2
+        ],
+        [
+          548,
+          1
+        ],
+        [
+          546,
+          2
+        ],
+        [
+          545,
+          1
+        ],
+        [
+          543,
+          2
+        ],
+        [
+          542,
+          1
+        ],
+        [
+          540,
+          2
+        ],
+        [
+          539,
+          1
+        ],
+        [
+          537,
+          2
+        ],
+        [
+          536,
+          1
+        ],
+        [
+          534,
+          2
+        ],
+        [
+          533,
+          1
+        ],
+        [
+          531,
+          2
+        ],
+        [
+          530,
+          1
+        ],
+        [
+          528,
+          2
+        ],
+        [
+          527,
+          1
+        ]
+      ],
+      "native_root": 527,
+      "owners": [
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 562,
+          "lhs": "prev#52",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 563,
+          "lhs": "goto_symex::return_value::fib!0#1",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 226,
+          "ctx_ok": false,
+          "id": 564,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": -1,
+          "ctx_ok": false,
+          "id": 565,
+          "lhs": "main::$tmp::return_value_fib!0@1#2",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 227,
+          "ctx_ok": true,
+          "id": 566,
+          "lhs": "main::1::correct!0@1#2",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 567,
+          "lhs": "i#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 568,
+          "lhs": "j#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 569,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            121,
+            false
+          ],
+          [
+            122,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "children": [
+            [
+              2,
+              false
+            ],
+            [
+              120,
+              false
+            ]
+          ],
+          "first_failed_child": {
+            "id": 2,
+            "name": "goto_symex::\\guard#1",
+            "op": "symbol",
+            "producer_present": false,
+            "reason": "no_symbol_producer",
+            "type": "bool"
+          },
+          "id": 121,
+          "op": "and",
+          "reason": "all_values_failed",
+          "type": "bool"
+        },
+        "id": 123,
+        "op": "or",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      100
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          0,
+          "cnf-return",
+          0,
+          2
+        ],
+        [
+          100
+        ]
+      ]
+    ]
+  },
+  "auxiliary/route/no_certified_local_root_path": {
+    "A_positive": 50996,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/sat/cnf.cpp:189",
+      "="
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "id": 1613,
+      "op": "=",
+      "reason": "certified",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 9431,
+    "old": 25489,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          9429,
+          2
+        ]
+      ],
+      "native_root": 9429,
+      "owners": [
+        {
+          "ctx": 253,
+          "ctx_ok": true,
+          "id": 12989,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            129,
+            false
+          ],
+          [
+            1613,
+            true
+          ]
+        ],
+        "first_failed_child": {
+          "id": 129,
+          "name": "goto_symex::\\guard#27",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1614,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "no_certified_local_root_path",
+    "template_result": [
+      50978
+    ],
+    "typed_roles_for_atom": []
+  },
+  "auxiliary/site/solvers/sat/cnf.cpp:189 =": {
+    "A_positive": 49128,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/sat/cnf.cpp:189",
+      "="
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          410,
+          false
+        ],
+        [
+          1421,
+          false
+        ]
+      ],
+      "first_failed_child": {
+        "id": 410,
+        "name": "__CPROVER_next_thread_id#3",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      },
+      "id": 1422,
+      "op": "=",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 8858,
+    "old": 24555,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 8858,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 12987,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            410,
+            false
+          ],
+          [
+            1421,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 410,
+          "name": "__CPROVER_next_thread_id#3",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "unsignedbv"
+        },
+        "id": 1422,
+        "op": "=",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      49110
+    ],
+    "typed_roles_for_atom": []
+  },
+  "auxiliary/site/solvers/sat/cnf.cpp:189 and": {
+    "A_positive": 51012,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/sat/cnf.cpp:189",
+      "and"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          129,
+          false
+        ],
+        [
+          130,
+          false
+        ],
+        [
+          1622,
+          true
+        ]
+      ],
+      "first_failed_child": {
+        "id": 129,
+        "name": "goto_symex::\\guard#27",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "bool"
+      },
+      "id": 1623,
+      "op": "and",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 9442,
+    "old": 25497,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 9442,
+      "owners": [
+        {
+          "ctx": 259,
+          "ctx_ok": true,
+          "id": 12990,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            129,
+            false
+          ],
+          [
+            130,
+            false
+          ],
+          [
+            1622,
+            true
+          ]
+        ],
+        "first_failed_child": {
+          "id": 129,
+          "name": "goto_symex::\\guard#27",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1623,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      50994
+    ],
+    "typed_roles_for_atom": []
+  },
+  "auxiliary/site/solvers/sat/cnf.cpp:238 or": {
+    "A_positive": 51246,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/sat/cnf.cpp:238",
+      "or"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          249,
+          false
+        ],
+        [
+          246,
+          false
+        ],
+        [
+          243,
+          false
+        ]
+      ],
+      "first_failed_child": {
+        "children": [
+          [
+            129,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 129,
+          "name": "goto_symex::\\guard#27",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 249,
+        "op": "not",
+        "reason": "all_values_failed",
+        "type": "bool"
+      },
+      "id": 1650,
+      "op": "or",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 9491,
+    "old": 25614,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 9491,
+      "owners": [
+        {
+          "ctx": 265,
+          "ctx_ok": true,
+          "id": 12991,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        },
+        {
+          "ctx": 267,
+          "ctx_ok": true,
+          "id": 13044,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        },
+        {
+          "ctx": 269,
+          "ctx_ok": true,
+          "id": 13045,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            249,
+            false
+          ],
+          [
+            246,
+            false
+          ],
+          [
+            243,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "children": [
+            [
+              129,
+              false
+            ]
+          ],
+          "first_failed_child": {
+            "id": 129,
+            "name": "goto_symex::\\guard#27",
+            "op": "symbol",
+            "producer_present": false,
+            "reason": "no_symbol_producer",
+            "type": "bool"
+          },
+          "id": 249,
+          "op": "not",
+          "reason": "all_values_failed",
+          "type": "bool"
+        },
+        "id": 1650,
+        "op": "or",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      51228
+    ],
+    "typed_roles_for_atom": []
+  },
+  "auxiliary/site/solvers/sat/cnf.cpp:296 +": {
+    "A_positive": 730,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/sat/cnf.cpp:296",
+      "+"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          411,
+          false
+        ],
+        [
+          401,
+          true
+        ]
+      ],
+      "first_failed_child": {
+        "id": 411,
+        "name": "__CPROVER_next_thread_id#4",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      },
+      "id": 412,
+      "op": "+",
+      "reason": "all_values_failed",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 7645,
+    "old": 365,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 7645,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 1764,
+          "lhs": "__CPROVER_next_thread_id#5",
+          "lhs_ok": false,
+          "phase": "assignments"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            411,
+            false
+          ],
+          [
+            401,
+            true
+          ]
+        ],
+        "first_failed_child": {
+          "id": 411,
+          "name": "__CPROVER_next_thread_id#4",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "unsignedbv"
+        },
+        "id": 412,
+        "op": "+",
+        "reason": "all_values_failed",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      667,
+      732,
+      736,
+      740,
+      744,
+      748,
+      752,
+      756,
+      760,
+      764,
+      768,
+      772,
+      776,
+      780,
+      784,
+      788,
+      792,
+      796,
+      800,
+      804,
+      808,
+      812,
+      816,
+      820,
+      824,
+      828,
+      832,
+      836,
+      840,
+      844,
+      848,
+      852
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          58078,
+          "adder-carry",
+          1,
+          3
+        ],
+        [
+          730
+        ]
+      ]
+    ]
+  },
+  "auxiliary/site/solvers/sat/cnf.cpp:296 and": {
+    "A_positive": 100,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/sat/cnf.cpp:296",
+      "and"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          47,
+          false
+        ],
+        [
+          51,
+          false
+        ]
+      ],
+      "first_failed_child": {
+        "id": 47,
+        "name": "goto_symex::\\guard#24",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "bool"
+      },
+      "id": 52,
+      "op": "and",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 597,
+    "old": 50,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          596,
+          1
+        ],
+        [
+          594,
+          2
+        ],
+        [
+          593,
+          1
+        ],
+        [
+          591,
+          2
+        ],
+        [
+          590,
+          1
+        ],
+        [
+          588,
+          2
+        ],
+        [
+          587,
+          1
+        ],
+        [
+          585,
+          2
+        ],
+        [
+          584,
+          1
+        ],
+        [
+          582,
+          2
+        ],
+        [
+          581,
+          1
+        ],
+        [
+          579,
+          2
+        ],
+        [
+          578,
+          1
+        ],
+        [
+          576,
+          2
+        ],
+        [
+          575,
+          1
+        ],
+        [
+          573,
+          2
+        ],
+        [
+          572,
+          1
+        ],
+        [
+          570,
+          2
+        ],
+        [
+          569,
+          1
+        ],
+        [
+          567,
+          2
+        ],
+        [
+          566,
+          1
+        ],
+        [
+          564,
+          2
+        ],
+        [
+          563,
+          1
+        ],
+        [
+          561,
+          2
+        ],
+        [
+          560,
+          1
+        ],
+        [
+          558,
+          2
+        ],
+        [
+          557,
+          1
+        ],
+        [
+          555,
+          2
+        ],
+        [
+          554,
+          1
+        ],
+        [
+          552,
+          2
+        ],
+        [
+          551,
+          1
+        ],
+        [
+          549,
+          2
+        ],
+        [
+          548,
+          1
+        ],
+        [
+          546,
+          2
+        ],
+        [
+          545,
+          1
+        ],
+        [
+          543,
+          2
+        ],
+        [
+          542,
+          1
+        ],
+        [
+          540,
+          2
+        ],
+        [
+          539,
+          1
+        ],
+        [
+          537,
+          2
+        ],
+        [
+          536,
+          1
+        ],
+        [
+          534,
+          2
+        ],
+        [
+          533,
+          1
+        ],
+        [
+          531,
+          2
+        ],
+        [
+          530,
+          1
+        ],
+        [
+          528,
+          2
+        ],
+        [
+          527,
+          1
+        ]
+      ],
+      "native_root": 527,
+      "owners": [
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 562,
+          "lhs": "prev#52",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 563,
+          "lhs": "goto_symex::return_value::fib!0#1",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 226,
+          "ctx_ok": false,
+          "id": 564,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": -1,
+          "ctx_ok": false,
+          "id": 565,
+          "lhs": "main::$tmp::return_value_fib!0@1#2",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 227,
+          "ctx_ok": true,
+          "id": 566,
+          "lhs": "main::1::correct!0@1#2",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 567,
+          "lhs": "i#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 568,
+          "lhs": "j#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 569,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            121,
+            false
+          ],
+          [
+            122,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "children": [
+            [
+              2,
+              false
+            ],
+            [
+              120,
+              false
+            ]
+          ],
+          "first_failed_child": {
+            "id": 2,
+            "name": "goto_symex::\\guard#1",
+            "op": "symbol",
+            "producer_present": false,
+            "reason": "no_symbol_producer",
+            "type": "bool"
+          },
+          "id": 121,
+          "op": "and",
+          "reason": "all_values_failed",
+          "type": "bool"
+        },
+        "id": 123,
+        "op": "or",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      100
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          0,
+          "cnf-return",
+          0,
+          2
+        ],
+        [
+          100
+        ]
+      ]
+    ]
+  },
+  "auxiliary/site/solvers/sat/cnf.cpp:312 or": {
+    "A_positive": 102,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/sat/cnf.cpp:312",
+      "or"
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "children": [
+        [
+          52,
+          false
+        ],
+        [
+          53,
+          false
+        ]
+      ],
+      "first_failed_child": {
+        "children": [
+          [
+            47,
+            false
+          ],
+          [
+            51,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 47,
+          "name": "goto_symex::\\guard#24",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 52,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      },
+      "id": 54,
+      "op": "or",
+      "reason": "all_values_failed",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 596,
+    "old": 51,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          594,
+          2
+        ],
+        [
+          593,
+          1
+        ],
+        [
+          591,
+          2
+        ],
+        [
+          590,
+          1
+        ],
+        [
+          588,
+          2
+        ],
+        [
+          587,
+          1
+        ],
+        [
+          585,
+          2
+        ],
+        [
+          584,
+          1
+        ],
+        [
+          582,
+          2
+        ],
+        [
+          581,
+          1
+        ],
+        [
+          579,
+          2
+        ],
+        [
+          578,
+          1
+        ],
+        [
+          576,
+          2
+        ],
+        [
+          575,
+          1
+        ],
+        [
+          573,
+          2
+        ],
+        [
+          572,
+          1
+        ],
+        [
+          570,
+          2
+        ],
+        [
+          569,
+          1
+        ],
+        [
+          567,
+          2
+        ],
+        [
+          566,
+          1
+        ],
+        [
+          564,
+          2
+        ],
+        [
+          563,
+          1
+        ],
+        [
+          561,
+          2
+        ],
+        [
+          560,
+          1
+        ],
+        [
+          558,
+          2
+        ],
+        [
+          557,
+          1
+        ],
+        [
+          555,
+          2
+        ],
+        [
+          554,
+          1
+        ],
+        [
+          552,
+          2
+        ],
+        [
+          551,
+          1
+        ],
+        [
+          549,
+          2
+        ],
+        [
+          548,
+          1
+        ],
+        [
+          546,
+          2
+        ],
+        [
+          545,
+          1
+        ],
+        [
+          543,
+          2
+        ],
+        [
+          542,
+          1
+        ],
+        [
+          540,
+          2
+        ],
+        [
+          539,
+          1
+        ],
+        [
+          537,
+          2
+        ],
+        [
+          536,
+          1
+        ],
+        [
+          534,
+          2
+        ],
+        [
+          533,
+          1
+        ],
+        [
+          531,
+          2
+        ],
+        [
+          530,
+          1
+        ],
+        [
+          528,
+          2
+        ],
+        [
+          527,
+          1
+        ]
+      ],
+      "native_root": 527,
+      "owners": [
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 562,
+          "lhs": "prev#52",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 225,
+          "ctx_ok": true,
+          "id": 563,
+          "lhs": "goto_symex::return_value::fib!0#1",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 226,
+          "ctx_ok": false,
+          "id": 564,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": -1,
+          "ctx_ok": false,
+          "id": 565,
+          "lhs": "main::$tmp::return_value_fib!0@1#2",
+          "lhs_ok": false,
+          "phase": "guards"
+        },
+        {
+          "ctx": 227,
+          "ctx_ok": true,
+          "id": 566,
+          "lhs": "main::1::correct!0@1#2",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 567,
+          "lhs": "i#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 568,
+          "lhs": "j#3",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 228,
+          "ctx_ok": true,
+          "id": 569,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            121,
+            false
+          ],
+          [
+            122,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "children": [
+            [
+              2,
+              false
+            ],
+            [
+              120,
+              false
+            ]
+          ],
+          "first_failed_child": {
+            "id": 2,
+            "name": "goto_symex::\\guard#1",
+            "op": "symbol",
+            "producer_present": false,
+            "reason": "no_symbol_producer",
+            "type": "bool"
+          },
+          "id": 121,
+          "op": "and",
+          "reason": "all_values_failed",
+          "type": "bool"
+        },
+        "id": 123,
+        "op": "or",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      102
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          0,
+          "cnf-return",
+          0,
+          2
+        ],
+        [
+          102
+        ]
+      ]
+    ]
+  },
+  "auxiliary/site/solvers/sat/cnf.cpp:334 =": {
+    "A_positive": 51022,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/sat/cnf.cpp:334",
+      "="
+    ],
+    "category": "auxiliary",
+    "expression": {
+      "id": 1630,
+      "op": "=",
+      "reason": "certified",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 9457,
+    "old": 25502,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          9454,
+          3
+        ]
+      ],
+      "native_root": 9454,
+      "owners": [
+        {
+          "ctx": 259,
+          "ctx_ok": true,
+          "id": 12990,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "constraints"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            129,
+            false
+          ],
+          [
+            130,
+            false
+          ],
+          [
+            1630,
+            true
+          ]
+        ],
+        "first_failed_child": {
+          "id": 129,
+          "name": "goto_symex::\\guard#27",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 1631,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "no_certified_local_root_path",
+    "template_result": [
+      51068
+    ],
+    "typed_roles_for_atom": [
+      [
+        [
+          0,
+          "equal-bit",
+          0,
+          32
+        ],
+        [
+          51005
+        ]
+      ]
+    ]
+  },
+  "ordinary_bool/expression/no_symbol_producer": {
+    "A_positive": 4,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "ordinary_bool",
+    "expression": {
+      "id": 3,
+      "name": "goto_symex::\\guard#2",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 158,
+    "old": 2,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          156,
+          2
+        ]
+      ],
+      "native_root": 156,
+      "owners": [
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 156,
+          "lhs": "prev#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 157,
+          "lhs": "cur#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 158,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 159,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 160,
+          "lhs": "cur#6",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 161,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 162,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 163,
+          "lhs": "next#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 164,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 165,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 166,
+          "lhs": "x#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 167,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 168,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 86,
+          "ctx_ok": true,
+          "id": 169,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 170,
+          "lhs": "x#9",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 171,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            2,
+            false
+          ],
+          [
+            3,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 2,
+          "name": "goto_symex::\\guard#1",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 4,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      4
+    ],
+    "typed_roles_for_atom": []
+  },
+  "ordinary_bool/reason/CACHED_INTERNAL_ORIGIN_MISSING": {
+    "A_positive": 4,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "ordinary_bool",
+    "expression": {
+      "id": 3,
+      "name": "goto_symex::\\guard#2",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 158,
+    "old": 2,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          156,
+          2
+        ]
+      ],
+      "native_root": 156,
+      "owners": [
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 156,
+          "lhs": "prev#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 157,
+          "lhs": "cur#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 158,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 159,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 160,
+          "lhs": "cur#6",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 161,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 162,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 163,
+          "lhs": "next#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 164,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 165,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 166,
+          "lhs": "x#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 167,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 168,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 86,
+          "ctx_ok": true,
+          "id": 169,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 170,
+          "lhs": "x#9",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 171,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            2,
+            false
+          ],
+          [
+            3,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 2,
+          "name": "goto_symex::\\guard#1",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 4,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      4
+    ],
+    "typed_roles_for_atom": []
+  },
+  "ordinary_bool/route/local_expression_failed": {
+    "A_positive": 4,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "ordinary_bool",
+    "expression": {
+      "id": 3,
+      "name": "goto_symex::\\guard#2",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 158,
+    "old": 2,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          156,
+          2
+        ]
+      ],
+      "native_root": 156,
+      "owners": [
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 156,
+          "lhs": "prev#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 157,
+          "lhs": "cur#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 158,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 159,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 160,
+          "lhs": "cur#6",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 161,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 162,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 163,
+          "lhs": "next#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 164,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 165,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 166,
+          "lhs": "x#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 167,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 168,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 86,
+          "ctx_ok": true,
+          "id": 169,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 170,
+          "lhs": "x#9",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 171,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            2,
+            false
+          ],
+          [
+            3,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 2,
+          "name": "goto_symex::\\guard#1",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 4,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      4
+    ],
+    "typed_roles_for_atom": []
+  },
+  "ordinary_bool/site/solvers/prop/prop_conv_solver.cpp:70 symbol": {
+    "A_positive": 4,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/prop/prop_conv_solver.cpp:70",
+      "symbol"
+    ],
+    "category": "ordinary_bool",
+    "expression": {
+      "id": 3,
+      "name": "goto_symex::\\guard#2",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "bool"
+    },
+    "local_native_block": "-",
+    "native_frame": 158,
+    "old": 2,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [
+        [
+          156,
+          2
+        ]
+      ],
+      "native_root": 156,
+      "owners": [
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 156,
+          "lhs": "prev#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 157,
+          "lhs": "cur#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 158,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 82,
+          "ctx_ok": true,
+          "id": 159,
+          "lhs": "next#4",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 160,
+          "lhs": "cur#6",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 161,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 83,
+          "ctx_ok": true,
+          "id": 162,
+          "lhs": "prev#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 163,
+          "lhs": "next#5",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 164,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 84,
+          "ctx_ok": true,
+          "id": 165,
+          "lhs": "cur#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 166,
+          "lhs": "x#7",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 167,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 85,
+          "ctx_ok": true,
+          "id": 168,
+          "lhs": "x#8",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 86,
+          "ctx_ok": true,
+          "id": 169,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 170,
+          "lhs": "x#9",
+          "lhs_ok": true,
+          "phase": "guards"
+        },
+        {
+          "ctx": 87,
+          "ctx_ok": true,
+          "id": 171,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "guards"
+        }
+      ],
+      "root_expression": {
+        "children": [
+          [
+            2,
+            false
+          ],
+          [
+            3,
+            false
+          ]
+        ],
+        "first_failed_child": {
+          "id": 2,
+          "name": "goto_symex::\\guard#1",
+          "op": "symbol",
+          "producer_present": false,
+          "reason": "no_symbol_producer",
+          "type": "bool"
+        },
+        "id": 4,
+        "op": "and",
+        "reason": "all_values_failed",
+        "type": "bool"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      4
+    ],
+    "typed_roles_for_atom": []
+  },
+  "ssa_bit/expression/no_symbol_producer": {
+    "A_positive": 668,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "ssa_bit",
+    "expression": {
+      "id": 410,
+      "name": "__CPROVER_next_thread_id#3",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 7644,
+    "old": 334,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 7644,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 1763,
+          "lhs": "__CPROVER_next_thread_id#4",
+          "lhs_ok": false,
+          "phase": "assignments"
+        }
+      ],
+      "root_expression": {
+        "id": 410,
+        "name": "__CPROVER_next_thread_id#3",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      666,
+      668,
+      670,
+      672,
+      674,
+      676,
+      678,
+      680,
+      682,
+      684,
+      686,
+      688,
+      690,
+      692,
+      694,
+      696,
+      698,
+      700,
+      702,
+      704,
+      706,
+      708,
+      710,
+      712,
+      714,
+      716,
+      718,
+      720,
+      722,
+      724,
+      726,
+      728
+    ],
+    "typed_roles_for_atom": []
+  },
+  "ssa_bit/reason/CACHED_INTERNAL_ORIGIN_MISSING": {
+    "A_positive": 668,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "ssa_bit",
+    "expression": {
+      "id": 410,
+      "name": "__CPROVER_next_thread_id#3",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 7644,
+    "old": 334,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 7644,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 1763,
+          "lhs": "__CPROVER_next_thread_id#4",
+          "lhs_ok": false,
+          "phase": "assignments"
+        }
+      ],
+      "root_expression": {
+        "id": 410,
+        "name": "__CPROVER_next_thread_id#3",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      666,
+      668,
+      670,
+      672,
+      674,
+      676,
+      678,
+      680,
+      682,
+      684,
+      686,
+      688,
+      690,
+      692,
+      694,
+      696,
+      698,
+      700,
+      702,
+      704,
+      706,
+      708,
+      710,
+      712,
+      714,
+      716,
+      718,
+      720,
+      722,
+      724,
+      726,
+      728
+    ],
+    "typed_roles_for_atom": []
+  },
+  "ssa_bit/route/local_expression_failed": {
+    "A_positive": 668,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "ssa_bit",
+    "expression": {
+      "id": 410,
+      "name": "__CPROVER_next_thread_id#3",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 7644,
+    "old": 334,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 7644,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 1763,
+          "lhs": "__CPROVER_next_thread_id#4",
+          "lhs_ok": false,
+          "phase": "assignments"
+        }
+      ],
+      "root_expression": {
+        "id": 410,
+        "name": "__CPROVER_next_thread_id#3",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      666,
+      668,
+      670,
+      672,
+      674,
+      676,
+      678,
+      680,
+      682,
+      684,
+      686,
+      688,
+      690,
+      692,
+      694,
+      696,
+      698,
+      700,
+      702,
+      704,
+      706,
+      708,
+      710,
+      712,
+      714,
+      716,
+      718,
+      720,
+      722,
+      724,
+      726,
+      728
+    ],
+    "typed_roles_for_atom": []
+  },
+  "ssa_bit/site/solvers/flattening/boolbv_map.cpp:59 symbol": {
+    "A_positive": 668,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "CACHED_INTERNAL_ORIGIN_MISSING",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "ssa_bit",
+    "expression": {
+      "id": 410,
+      "name": "__CPROVER_next_thread_id#3",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 7644,
+    "old": 334,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 7644,
+      "owners": [
+        {
+          "ctx": 58,
+          "ctx_ok": true,
+          "id": 1763,
+          "lhs": "__CPROVER_next_thread_id#4",
+          "lhs_ok": false,
+          "phase": "assignments"
+        }
+      ],
+      "root_expression": {
+        "id": 410,
+        "name": "__CPROVER_next_thread_id#3",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      666,
+      668,
+      670,
+      672,
+      674,
+      676,
+      678,
+      680,
+      682,
+      684,
+      686,
+      688,
+      690,
+      692,
+      694,
+      696,
+      698,
+      700,
+      702,
+      704,
+      706,
+      708,
+      710,
+      712,
+      714,
+      716,
+      718,
+      720,
+      722,
+      724,
+      726,
+      728
+    ],
+    "typed_roles_for_atom": []
+  },
+  "unknown/expression/no_symbol_producer": {
+    "A_positive": 48712,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "unknown",
+    "expression": {
+      "id": 1301,
+      "name": "symex::args::7",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 8684,
+    "old": 24347,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 8684,
+      "owners": [
+        {
+          "ctx": 411,
+          "ctx_ok": true,
+          "id": 9272,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "function_calls"
+        }
+      ],
+      "root_expression": {
+        "id": 1301,
+        "name": "symex::args::7",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      48694,
+      48696,
+      48698,
+      48700,
+      48702,
+      48704,
+      48706,
+      48708,
+      48710,
+      48712,
+      48714,
+      48716,
+      48718,
+      48720,
+      48722,
+      48724,
+      48726,
+      48728,
+      48730,
+      48732,
+      48734,
+      48736,
+      48738,
+      48740,
+      48742,
+      48744,
+      48746,
+      48748,
+      48750,
+      48752,
+      48754,
+      48756
+    ],
+    "typed_roles_for_atom": []
+  },
+  "unknown/reason/UNCERTIFIED_OWNER_RECIPE_OR_PEER": {
+    "A_positive": 48712,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "unknown",
+    "expression": {
+      "id": 1301,
+      "name": "symex::args::7",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 8684,
+    "old": 24347,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 8684,
+      "owners": [
+        {
+          "ctx": 411,
+          "ctx_ok": true,
+          "id": 9272,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "function_calls"
+        }
+      ],
+      "root_expression": {
+        "id": 1301,
+        "name": "symex::args::7",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      48694,
+      48696,
+      48698,
+      48700,
+      48702,
+      48704,
+      48706,
+      48708,
+      48710,
+      48712,
+      48714,
+      48716,
+      48718,
+      48720,
+      48722,
+      48724,
+      48726,
+      48728,
+      48730,
+      48732,
+      48734,
+      48736,
+      48738,
+      48740,
+      48742,
+      48744,
+      48746,
+      48748,
+      48750,
+      48752,
+      48754,
+      48756
+    ],
+    "typed_roles_for_atom": []
+  },
+  "unknown/route/local_expression_failed": {
+    "A_positive": 48712,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "unknown",
+    "expression": {
+      "id": 1301,
+      "name": "symex::args::7",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 8684,
+    "old": 24347,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 8684,
+      "owners": [
+        {
+          "ctx": 411,
+          "ctx_ok": true,
+          "id": 9272,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "function_calls"
+        }
+      ],
+      "root_expression": {
+        "id": 1301,
+        "name": "symex::args::7",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      48694,
+      48696,
+      48698,
+      48700,
+      48702,
+      48704,
+      48706,
+      48708,
+      48710,
+      48712,
+      48714,
+      48716,
+      48718,
+      48720,
+      48722,
+      48724,
+      48726,
+      48728,
+      48730,
+      48732,
+      48734,
+      48736,
+      48738,
+      48740,
+      48742,
+      48744,
+      48746,
+      48748,
+      48750,
+      48752,
+      48754,
+      48756
+    ],
+    "typed_roles_for_atom": []
+  },
+  "unknown/site/solvers/flattening/boolbv_map.cpp:59 symbol": {
+    "A_positive": 48712,
+    "P0_layout_blocked_named_views": [],
+    "P1_layout_blocked_named_views": [],
+    "SI_reason": "UNCERTIFIED_OWNER_RECIPE_OR_PEER",
+    "allocation": [
+      "solvers/flattening/boolbv_map.cpp:59",
+      "symbol"
+    ],
+    "category": "unknown",
+    "expression": {
+      "id": 1301,
+      "name": "symex::args::7",
+      "op": "symbol",
+      "producer_present": false,
+      "reason": "no_symbol_producer",
+      "type": "unsignedbv"
+    },
+    "local_native_block": "-",
+    "native_frame": 8684,
+    "old": 24347,
+    "physical_value": 1,
+    "raw_owner_route": {
+      "ancestor_edges": [],
+      "native_root": 8684,
+      "owners": [
+        {
+          "ctx": 411,
+          "ctx_ok": true,
+          "id": 9272,
+          "lhs": "",
+          "lhs_ok": true,
+          "phase": "function_calls"
+        }
+      ],
+      "root_expression": {
+        "id": 1301,
+        "name": "symex::args::7",
+        "op": "symbol",
+        "producer_present": false,
+        "reason": "no_symbol_producer",
+        "type": "unsignedbv"
+      }
+    },
+    "route": "local_expression_failed",
+    "template_result": [
+      48694,
+      48696,
+      48698,
+      48700,
+      48702,
+      48704,
+      48706,
+      48708,
+      48710,
+      48712,
+      48714,
+      48716,
+      48718,
+      48720,
+      48722,
+      48724,
+      48726,
+      48728,
+      48730,
+      48732,
+      48734,
+      48736,
+      48738,
+      48740,
+      48742,
+      48744,
+      48746,
+      48748,
+      48750,
+      48752,
+      48754,
+      48756
+    ],
+    "typed_roles_for_atom": []
+  }
+}

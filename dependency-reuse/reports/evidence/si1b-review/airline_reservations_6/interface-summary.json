@@ -1,0 +1,49 @@
+{
+  "atoms_by_first_differing_fields": {
+    "RF/missing_endpoint": 207
+  },
+  "examples": {
+    "RF/missing_endpoint": {
+      "A_positive": 29906,
+      "P0_event": "__CPROVER_next_thread_id#1",
+      "P0_source": [
+        {
+          "base": "__CPROVER_next_thread_id",
+          "context": 9,
+          "location": [
+            "<built-in-additions>",
+            8,
+            "__CPROVER_initialize",
+            "2:1335:6:symbol24:__CPROVER_next_thread_id"
+          ],
+          "role": "write",
+          "site": 27,
+          "symbol": "__CPROVER_next_thread_id#1"
+        }
+      ],
+      "P1_event": "__CPROVER_next_thread_id#1",
+      "P1_source": [
+        {
+          "base": "__CPROVER_next_thread_id",
+          "context": 9,
+          "location": [
+            "<built-in-additions>",
+            8,
+            "__CPROVER_initialize",
+            "2:1335:6:symbol24:__CPROVER_next_thread_id"
+          ],
+          "role": "write",
+          "site": 27,
+          "symbol": "__CPROVER_next_thread_id#1"
+        }
+      ],
+      "event_pair_id": 1,
+      "field": "missing_endpoint",
+      "old": 21511,
+      "values": null
+    }
+  },
+  "signed_role_test": {
+    "RF/different_or_incomplete_roles": 207
+  }
+}

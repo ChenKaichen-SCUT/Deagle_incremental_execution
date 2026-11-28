@@ -1,0 +1,18 @@
+{
+  "P0": {
+    "Guard_rows": 232,
+    "RF_rows": 5561,
+    "allocation_sha256": "530e3ac85bbf1af9e9783545843914cacd1c866d933b7354d7aa330f8d614a15",
+    "first_root_native_streams_equal": true,
+    "native_variable_count": 200360,
+    "signed_B_port_rows": 29734
+  },
+  "P1": {
+    "Guard_rows": 232,
+    "RF_rows": 5561,
+    "allocation_sha256": "3ca77f77bcb433698d6446363af13cf620e1b73ede4662a68f9d8c0594810cb8",
+    "first_root_native_streams_equal": true,
+    "native_variable_count": 200369,
+    "signed_B_port_rows": 29814
+  }
+}

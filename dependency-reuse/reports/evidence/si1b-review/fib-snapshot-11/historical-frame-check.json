@@ -1,0 +1,12 @@
+{
+  "applied_to_transport": false,
+  "diagnostic_uses_A_to_locate_peer": true,
+  "overlapping_counts": {
+    "also_same_single_valued_native_role_and_signed_literals": 73112,
+    "both_allocating_frames_share_complete_typed_expression": 75719,
+    "lost": 81127,
+    "raw_route_from_owner_valid_root_with_failed_expression": 81096,
+    "same_local_expression_but_P0_route_missing": 75719,
+    "same_local_expression_under_bad_root": 75719
+  }
+}

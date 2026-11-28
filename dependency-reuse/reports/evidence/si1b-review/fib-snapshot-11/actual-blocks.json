@@ -1,0 +1,44 @@
+{
+  "UsedLeaf_atom_counts": {
+    "LAYOUT_INCOMPATIBLE": 56,
+    "UNCERTIFIED_THEORY_INTERFACE": 8
+  },
+  "examples": {
+    "LAYOUT_INCOMPATIBLE/pointer": {
+      "ABI": [
+        32,
+        8,
+        1,
+        "x86_64",
+        1
+      ],
+      "A_positive": -1,
+      "P0_universe_key": 0,
+      "category": "pointer_aggregate",
+      "failing_views": [
+        [
+          "symex::args::1",
+          [
+            "pointer",
+            32
+          ],
+          24,
+          48346
+        ]
+      ],
+      "old": 24173
+    },
+    "UNCERTIFIED_THEORY_INTERFACE": {
+      "A_positive": -1,
+      "category": "Guard",
+      "direct_blocks": [
+        "UNCERTIFIED_THEORY_INTERFACE"
+      ],
+      "old": 197
+    }
+  },
+  "layout_by_view_kind": {
+    "pointer": 56
+  },
+  "overlapping_failure_flags": true
+}

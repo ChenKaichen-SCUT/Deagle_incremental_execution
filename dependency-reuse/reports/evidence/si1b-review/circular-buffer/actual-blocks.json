@@ -1,0 +1,131 @@
+{
+  "UsedLeaf_atom_counts": {
+    "LAYOUT_INCOMPATIBLE": 10648,
+    "SAME_KEY_MULTIBIND": 783,
+    "UNCERTIFIED_THEORY_INTERFACE": 118
+  },
+  "examples": {
+    "LAYOUT_INCOMPATIBLE/pointer": {
+      "ABI": [
+        32,
+        8,
+        1,
+        "x86_64",
+        1
+      ],
+      "A_positive": -1,
+      "P0_universe_key": 0,
+      "category": "pointer_aggregate",
+      "failing_views": [
+        [
+          "symex::args::0",
+          [
+            "pointer",
+            32
+          ],
+          24,
+          85760
+        ]
+      ],
+      "old": 42880
+    },
+    "LAYOUT_INCOMPATIBLE/union_tag": {
+      "ABI": [
+        32,
+        8,
+        1,
+        "x86_64",
+        1
+      ],
+      "A_positive": -1,
+      "P0_universe_key": 0,
+      "category": "pointer_aggregate",
+      "failing_views": [
+        [
+          "m#4",
+          [
+            "union_tag",
+            320
+          ],
+          32,
+          236
+        ],
+        [
+          "m#5",
+          [
+            "union_tag",
+            320
+          ],
+          32,
+          236
+        ]
+      ],
+      "old": 118
+    },
+    "SAME_KEY_MULTIBIND": {
+      "A_positive": -1,
+      "category": "auxiliary",
+      "direct_blocks": [],
+      "native_sources": [
+        {
+          "frame": 3905,
+          "key": [
+            0,
+            "adder-carry",
+            31,
+            0
+          ],
+          "kind": "local_role",
+          "side": 0,
+          "values": [
+            19330,
+            19512,
+            19690,
+            19864,
+            20034,
+            20200,
+            20362,
+            20520,
+            20674,
+            20824,
+            20970,
+            21112,
+            21250,
+            21384,
+            21514,
+            21640,
+            21762,
+            21880,
+            21994,
+            22104,
+            22210,
+            22312,
+            22410,
+            22504,
+            22594,
+            22680,
+            22762,
+            22840,
+            22914,
+            22984,
+            23240
+          ]
+        }
+      ],
+      "old": 9665
+    },
+    "UNCERTIFIED_THEORY_INTERFACE": {
+      "A_positive": -1,
+      "category": "Guard",
+      "direct_blocks": [
+        "UNCERTIFIED_THEORY_INTERFACE"
+      ],
+      "old": 5495
+    }
+  },
+  "layout_by_view_kind": {
+    "pointer": 280,
+    "union_tag": 10368
+  },
+  "overlapping_failure_flags": true
+}
