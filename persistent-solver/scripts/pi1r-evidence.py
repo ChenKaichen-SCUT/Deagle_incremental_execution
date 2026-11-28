@@ -104,9 +104,9 @@ def work_signature(row,ledger):
     return data+[native,[s[k] for k in fields],n["families"] if ledger else None]
 
 
-def verify_small(dest):
+def verify_small(dest, prefix=""):
     with tarfile.open(dest/"small.tar.gz") as t:
-        def data(k):return t.extractfile(k).read()
+        def data(k):return t.extractfile(prefix+k).read()
         def tree(k):return json.loads(data(k))
         info={}
         native=runpy.run_path(str(here/"pi1r-controls.py"))

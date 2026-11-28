@@ -128,3 +128,49 @@ def verify(journal,controls,models,mode,rows):
         else:raise ValueError("unknown activation record")
     must(idx==len(rows) and next(args,None) is None,"missing result")
     return result,layouts
+
+
+def show_control(journal, controls, selector):
+    """Stream one selector's immutable payload, actual installations, occurrences and query activations."""
+    import json
+    def emit(**fields):
+        print(json.dumps(fields, separators=(",", ":")))
+    assumptions=iter(signed(controls))
+    registered=False
+    members=set()
+    for tag, row in records(journal):
+        if tag==1:
+            version, reset=row
+            if reset:registered=False;members.clear()
+        elif tag==3 and row[1]==selector:
+            group, _, first, scope=row
+            assert not registered
+            registered=True
+            emit(kind="group", version=version, id=group, selector=selector, first_version=first, scope=scope)
+        elif tag==4 and row[1]==selector:
+            member, _, scope, *native_clause=row
+            members.add(member)
+            emit(kind="installation", version=version, scope=scope, member=member, native_clause=native_clause)
+        elif tag==5 and row[3] in members:
+            scope, lo, hi, member=row
+            emit(kind="occurrence", version=version, scope=scope, member=member,
+                 occurrence=((hi&0xffffffff)<<32)|(lo&0xffffffff))
+        elif tag==6:
+            version, query, _, _=row
+            v, q, k, words=next(assumptions)
+            assert (v,q)==(version,query)
+            if registered:
+                applied=[p for p in words[:k] if p//2==selector]
+                assert len(applied)==1
+                emit(kind="activation", version=v, query=q, signed_control=applied[0], enabled=(applied[0]&1)==0)
+    assert next(assumptions,None) is None
+
+
+if __name__=="__main__":
+    import argparse
+    parser=argparse.ArgumentParser(description=show_control.__doc__)
+    parser.add_argument("journal",type=Path)
+    parser.add_argument("controls",type=Path)
+    parser.add_argument("selector",type=int)
+    args=parser.parse_args()
+    show_control(args.journal,args.controls,args.selector)

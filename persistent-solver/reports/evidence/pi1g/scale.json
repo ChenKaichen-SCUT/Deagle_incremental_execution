@@ -1,0 +1,298 @@
+{
+  "fib_updates_8": {
+    "seals": [
+      "9e12da197f6c05df4776a00ef2f6e84c96db7a7c002bf0867beb338e54cff00c",
+      "a184c39b224934fe44feb15c54428ca6fdda57f9744cdc54fe77b7f38e2f6719"
+    ],
+    "unique_B": [
+      47493,
+      45757
+    ],
+    "unique_Q": [
+      2560,
+      2560
+    ],
+    "occurrences_B_Q": [
+      [
+        47493,
+        2572
+      ],
+      [
+        45757,
+        2572
+      ]
+    ],
+    "P0_groups": 372,
+    "full": 268,
+    "partial": 14,
+    "absent": 90,
+    "fine_shared": 35234,
+    "grouped_shared": 34304,
+    "partial_reinstalled": 930,
+    "uncovered": 11453,
+    "P1_new_groups": 90,
+    "theory": {
+      "proposed": 8953,
+      "accepted": 8953,
+      "rejected_interfaces": 0,
+      "accepted_interface_variables": 220,
+      "old_interfaces": 256,
+      "new_interfaces": 256,
+      "shared_epoch": false
+    },
+    "arms": {
+      "Fine-Persistent": {
+        "selectors": [
+          50055,
+          63140
+        ],
+        "assumptions": [
+          50055,
+          63140
+        ]
+      },
+      "Grouped-Persistent": {
+        "selectors": [
+          374,
+          466
+        ],
+        "assumptions": [
+          374,
+          466
+        ]
+      },
+      "Grouped-Reset-active": {
+        "selectors": [
+          374,
+          360
+        ],
+        "assumptions": [
+          374,
+          360
+        ]
+      }
+    }
+  },
+  "circular-buffer": {
+    "seals": [
+      "28d81363f7990662187c70329ecddb6bcc603ed1c02f8e66a1f26786561882c0",
+      "6e7e3c5247aca64cdea0d462a4a20bbfd8a3a8e4434ebc1862cc5ab6910ed8b6"
+    ],
+    "unique_B": [
+      1160134,
+      1161265
+    ],
+    "unique_Q": [
+      1833,
+      1833
+    ],
+    "occurrences_B_Q": [
+      [
+        1160134,
+        1845
+      ],
+      [
+        1161265,
+        1845
+      ]
+    ],
+    "P0_groups": 9064,
+    "full": 0,
+    "partial": 7,
+    "absent": 9057,
+    "fine_shared": 394,
+    "grouped_shared": 0,
+    "partial_reinstalled": 394,
+    "uncovered": 1161265,
+    "P1_new_groups": 9073,
+    "theory": {
+      "proposed": 473,
+      "accepted": 473,
+      "rejected_interfaces": 0,
+      "accepted_interface_variables": 4,
+      "old_interfaces": 2353,
+      "new_interfaces": 2353,
+      "shared_epoch": false
+    },
+    "arms": {
+      "Fine-Persistent": {
+        "selectors": [
+          1161969,
+          2324675
+        ],
+        "assumptions": [
+          1161969,
+          2324675
+        ]
+      },
+      "Grouped-Persistent": {
+        "selectors": [
+          9066,
+          18141
+        ],
+        "assumptions": [
+          9066,
+          18141
+        ]
+      },
+      "Grouped-Reset-active": {
+        "selectors": [
+          9066,
+          9075
+        ],
+        "assumptions": [
+          9066,
+          9075
+        ]
+      }
+    }
+  },
+  "airline_reservations_6": {
+    "seals": [
+      "65b2330f3cfae8a5c770cd0a2b9d99fef61177c6974d5aae8863f63151ff1a81",
+      "da129076295a3aec859f04390cd71814d089c8bcc954f1a3a79261827fcf9fbb"
+    ],
+    "unique_B": [
+      866692,
+      243406
+    ],
+    "unique_Q": [
+      44021,
+      44021
+    ],
+    "occurrences_B_Q": [
+      [
+        866692,
+        44105
+      ],
+      [
+        243406,
+        44105
+      ]
+    ],
+    "P0_groups": 6772,
+    "full": 3,
+    "partial": 46,
+    "absent": 6723,
+    "fine_shared": 2959,
+    "grouped_shared": 384,
+    "partial_reinstalled": 2575,
+    "uncovered": 243022,
+    "P1_new_groups": 1899,
+    "theory": {
+      "proposed": 3319,
+      "accepted": 3319,
+      "rejected_interfaces": 0,
+      "accepted_interface_variables": 48,
+      "old_interfaces": 752,
+      "new_interfaces": 344,
+      "shared_epoch": false
+    },
+    "arms": {
+      "Fine-Persistent": {
+        "selectors": [
+          910715,
+          1195185
+        ],
+        "assumptions": [
+          910715,
+          1195185
+        ]
+      },
+      "Grouped-Persistent": {
+        "selectors": [
+          6774,
+          8675
+        ],
+        "assumptions": [
+          6774,
+          8675
+        ]
+      },
+      "Grouped-Reset-active": {
+        "selectors": [
+          6774,
+          1904
+        ],
+        "assumptions": [
+          6774,
+          1904
+        ]
+      }
+    }
+  },
+  "fib-snapshot-11": {
+    "seals": [
+      "7f2d7db7f42a1d77c2ce8b6968a17414b8892e731729d4a6e34d1b874a4d8715",
+      "6354aa3974963ad5d33ac41daec76f30d91ae1caa3b7b7decd57e82e2b66bb71"
+    ],
+    "unique_B": [
+      1001471,
+      1001473
+    ],
+    "unique_Q": [
+      714,
+      714
+    ],
+    "occurrences_B_Q": [
+      [
+        1001471,
+        722
+      ],
+      [
+        1001473,
+        722
+      ]
+    ],
+    "P0_groups": 7824,
+    "full": 348,
+    "partial": 473,
+    "absent": 7003,
+    "fine_shared": 60280,
+    "grouped_shared": 44544,
+    "partial_reinstalled": 15736,
+    "uncovered": 956929,
+    "P1_new_groups": 7477,
+    "theory": {
+      "proposed": 29404,
+      "accepted": 29404,
+      "rejected_interfaces": 0,
+      "accepted_interface_variables": 5576,
+      "old_interfaces": 5638,
+      "new_interfaces": 5638,
+      "shared_epoch": false
+    },
+    "arms": {
+      "Fine-Persistent": {
+        "selectors": [
+          1002187,
+          1944096
+        ],
+        "assumptions": [
+          1002187,
+          1944096
+        ]
+      },
+      "Grouped-Persistent": {
+        "selectors": [
+          7826,
+          15305
+        ],
+        "assumptions": [
+          7826,
+          15305
+        ]
+      },
+      "Grouped-Reset-active": {
+        "selectors": [
+          7826,
+          7827
+        ],
+        "assumptions": [
+          7826,
+          7827
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "native_source": "998c4f9a845d6f59bed5c3cfc96b5ee56181a0a1",
+  "observer_source": "dbe6e1650fe2803349bfade2eefaaa46d9262506",
+  "preregistration": "f1e3135e5566c5697a1b3c0fe88594c0b8b3257c",
+  "baseline": "f8f470468786d018f6c32c9653815df13345492b",
+  "binary": "55ab1c07b0f0cefa7e155210dea564f754768edb1d0beb8af02834a40560a23e",
+  "observer_binary": "043f39c8f60c7b081528ce5b7879de0cc84b6b3dcc7f6f0412d96b245ce58f61",
+  "cpu": 0,
+  "compiler": "g++ (Ubuntu 11.4.0-1ubuntu1~22.04.3) 11.4.0",
+  "system": "Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.35",
+  "stock_kernel": "f8c08f379f3777f7ef36e197346e6fdcef3fa57aa71c35f40d7ef587010ed7ab",
+  "cold_driver": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+  "small_archive_sha256": "49f63ef74869c357a931072e7d5d6727fc45afa9b03f25caf99778cb6360f9a3",
+  "plan_sha256": "0b31e2ebb89c07963c594a88acac5cee6b73499b27bf47782933b2d869758ae1",
+  "timing_windows": {
+    "fib_updates_8/Fine-Persistent": [
+      "2026-11-28 14:40:47.820968438 +0000",
+      "2026-11-28 14:40:51.188967264 +0000"
+    ],
+    "fib_updates_8/Grouped-Persistent": [
+      "2026-11-28 14:40:51.256967252 +0000",
+      "2026-11-28 14:40:53.276967824 +0000"
+    ],
+    "fib_updates_8/Grouped-Reset-active": [
+      "2026-11-28 14:40:53.296967830 +0000",
+      "2026-11-28 14:40:55.104968341 +0000"
+    ],
+    "circular-buffer/Grouped-Persistent": [
+      "2026-11-28 14:40:55.120968346 +0000",
+      "2026-11-28 14:41:09.076969769 +0000"
+    ],
+    "circular-buffer/Grouped-Reset-active": [
+      "2026-11-28 14:41:09.660970038 +0000",
+      "2026-11-28 14:41:22.800971534 +0000"
+    ],
+    "circular-buffer/Fine-Persistent": [
+      "2026-11-28 14:41:23.080971552 +0000",
+      "2026-11-28 14:41:39.836972490 +0000"
+    ],
+    "airline_reservations_6/Grouped-Reset-active": [
+      "2026-11-28 14:41:41.796976705 +0000",
+      "2026-11-28 14:42:21.616967445 +0000"
+    ],
+    "airline_reservations_6/Fine-Persistent": [
+      "2026-11-28 14:42:21.696967417 +0000",
+      "2026-11-28 14:43:09.180957444 +0000"
+    ],
+    "airline_reservations_6/Grouped-Persistent": [
+      "2026-11-28 14:43:10.432957176 +0000",
+      "2026-11-28 14:43:37.616950966 +0000"
+    ],
+    "fib-snapshot-11/Fine-Persistent": [
+      "2026-11-28 14:43:37.944950884 +0000",
+      "2026-11-28 14:45:18.804924349 +0000"
+    ],
+    "fib-snapshot-11/Grouped-Reset-active": [
+      "2026-11-28 14:45:20.632923909 +0000",
+      "2026-11-28 14:45:59.644913366 +0000"
+    ],
+    "fib-snapshot-11/Grouped-Persistent": [
+      "2026-11-28 14:45:59.920913296 +0000",
+      "2026-11-28 14:46:47.248901439 +0000"
+    ]
+  },
+  "observer_build_window": [
+    "2026-11-28 14:43:09.888957293 +0000",
+    "2026-11-28 14:43:37.788950923 +0000"
+  ]
+}

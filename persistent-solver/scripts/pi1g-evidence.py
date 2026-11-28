@@ -17,6 +17,7 @@ import tempfile
 here=Path(__file__).resolve().parent
 g=runpy.run_path(str(here/"pi1g-audit.py"));scale=g["scale"];prev=scale["previous"];root=prev["ROOT"]
 plan=scale["PLAN"];modes=plan["arms"];FINE,GP,RESET=modes
+reviewed=runpy.run_path(str(here/"pi1r-evidence.py"))
 def read(p):return json.loads(p.read_bytes())
 def save(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+"\n")
 def sha(b):return hashlib.sha256(b).hexdigest()
@@ -66,7 +67,8 @@ def archive(work,dest):
             d=work/"raw/timed"/case/arm
             timestamps[case+"/"+arm]=[subprocess.check_output(["stat","-c","%w",d/"stderr"],text=True).strip(),
                                        subprocess.check_output(["stat","-c","%y",d/"rows.json"],text=True).strip()]
-    save(dest/"build.json",dict(native_source="998c4f9a845d6f59bed5c3cfc96b5ee56181a0a1",baseline=plan["baseline"],
+    save(dest/"build.json",dict(native_source="998c4f9a845d6f59bed5c3cfc96b5ee56181a0a1",observer_source="dbe6e1650fe2803349bfade2eefaaa46d9262506",
+         preregistration="f1e3135e5566c5697a1b3c0fe88594c0b8b3257c",baseline=plan["baseline"],
          binary=filehash(work/"bin/pi1"),observer_binary=filehash(work/"audit-build/pi1"),cpu=0,
          compiler=subprocess.check_output(["g++","--version"],text=True).splitlines()[0],system=platform.platform(),
          stock_kernel=read(prev["PI1"]/"build.json")["stock"],cold_driver=read(prev["PI1"]/"build.json")["stock_control_sha256"],
@@ -145,20 +147,38 @@ def check_small(dest):
         def obj(k):return json.load(t.extractfile(k))
         checks=obj("group2/checks.json")
         assert len(checks["grouped-core"])==21
-        assert len(checks[GP]["retire"]["faults"])==3 and checks[GP]["survive"]["actual_hit"]
+        assert len(checks[GP]["retire"]["faults"])==3
+        old,hit=checks[GP]["survive"]["actual_hit"]
+        lines=t.extractfile("group2/"+GP+"/survive/native.txt").read().decode().splitlines()
+        assert " ".join(old) in lines and hit in lines and hit.split()[3]==old[2] and old[4]=="0"
         for name,record in checks[RESET].items():
             assert all(record["partition_matches_persistent"][i] for i,x in enumerate(record["inputs"]) if x["version"]<=2)
         gs=obj("grouped-orders/checks.json");assert all(x["actual"]==x["expected"]==x["stock"] for x in gs.values())
         for m in ("R0","R1","R2"):
             ex=obj("core/"+m+"/exhaustive/checks.json");assert all(x["actual"]==x["stock"]==x["expected"] for x in ex.values())
             ss=obj("core/"+m+"/small/small.json");assert all(x["statuses"]==x["independent_stock"] for x in ss.values())
-        return dict(grouped_cases_per_arm=len(checks[GP]),inherited_sequences=21,grouped_order_valuations=sum(len(x["actual"]) for x in gs.values()),
+        # Re-interpret the original allocator/trail controls and the deliberately damaged native group journals.
+        restart_checks=reviewed["verify_small"](dest, "core/")
+        control=runpy.run_path(str(here/"pi1g-small.py"))
+        name="group2/"+GP+"/retire/"
+        with tempfile.TemporaryDirectory() as tmp:
+            d=Path(tmp)
+            for file in ("input.bin","args.bin","stdout","1.txn","2.txn","3.txn"):
+                (d/file).write_bytes(t.extractfile(name+file).read())
+            paths={v:{0:d/(str(v)+".txn"),1:d/(str(v)+".txn")} for v in (1,2,3)}
+            rows=control["s"]["parse"]((d/"stdout").read_text())
+            recovered=control["faults"](d,paths,GP,rows)
+            assert recovered==checks[GP]["retire"]["faults"]
+        return dict(restart_controls=restart_checks,grouped_cases_per_arm=len(checks[GP]),inherited_sequences=21,grouped_order_valuations=sum(len(x["actual"]) for x in gs.values()),
                     native_kept_hit=checks[GP]["survive"]["actual_hit"],rejected_faults=checks[GP]["retire"]["faults"],
                     persistent_reactivation=checks[GP]["retire"]["inputs"][-1])
 
 
 def verify(repo,fixtures,dest,out):
     out.mkdir(exist_ok=True,parents=True);arch=Archive(dest);build=read(dest/"build.json");small=check_small(dest)
+    reference=reviewed["Archive"](root/"reports/evidence/pi1r")
+    for key in arch.index:
+        if key.startswith("stage/"):arch.data(key)
     assert filehash(dest/"small.tar.gz")==build["small_archive_sha256"] and filehash(root/"configs/pi1g-plan.json")==build["plan_sha256"]
     frozen_props=read(prev["PI1"]/"properties.json");frozen_scale=read(dest/"scale.json")
     witness=runpy.run_path(str(here/"pi1-witness.py"))["inspect"]
@@ -186,6 +206,14 @@ def verify(repo,fixtures,dest,out):
                     assert len(trace)==2 and all(all(r[k]==v for k,v in a.items()) for r,a in zip(rows,trace))
                     if phase=="timed":
                         timed=rows;base=arch.data(k+"assumptions.i32le")
+                        if mode==FINE:
+                            prior="ledger-off/"+case+"/R2/"
+                            assert base==reference.data(prior+"assumptions.i32le")
+                            for actual,old in zip(rows,json.loads(reference.data(prior+"rows.json"))):
+                                native=dict(actual["native"])
+                                for key in ("installed_guarded","guarded_input_fingerprint"):del native[key]
+                                compare=reviewed["work_signature"]
+                                assert compare(dict(actual,native=native),False)==compare(old,False),(case,"reviewed R2")
                     else:
                         assert arch.data(k+"assumptions.i32le")==base and all(signature(a)==signature(b) for a,b in zip(rows,timed)),(case,mode,"trajectory")
                         arch.materialize(k+"activation.bin",temp/"input.bin");(temp/"args.bin").write_bytes(base)
@@ -251,7 +279,7 @@ def verify(repo,fixtures,dest,out):
               persistent_savings_vs_reset_percent=100*(r-p)/r,stock_minus_grouped_s=sw-p,
               diagnostic_signal=case!="fib-snapshot-11" and f-p>=0.2 and (f-p)/f>=.05 and p<sw)
     checks=dict(small=small,production_sessions=12,observer_sessions=12,unguarded_transactions=8,production_ledger=False,per_predicate_trace_count=0,
-                exact_active_partitions_equal=True,production_and_observer_work_equal=True,stock_property_catalogues_equal=True,
+                exact_active_partitions_equal=True,production_and_observer_work_equal=True,fine_matches_reviewed_R2_all_eight_versions=True,stock_property_catalogues_equal=True,
                 verified_SAT_witnesses=sum("witness" in s for x in facts.values() for y in x.values() for s in y),
                 signals=[c for c,v in comparison.items() if v["diagnostic_signal"]])
     for name,obj in (("runs",runs),("learning",stats),("properties",facts),("comparison",comparison),("activation",activation),
@@ -265,6 +293,11 @@ if __name__=="__main__":
     a=s.add_parser("archive");v=s.add_parser("verify")
     for n in ("work","dest"):a.add_argument(n,type=Path)
     for n in ("repo","fixtures","dest","out"):v.add_argument(n,type=Path)
+    retrieve=s.add_parser("extract",help="Restore one original file by its key in raw-index.json")
+    retrieve.add_argument("dest",type=Path)
+    retrieve.add_argument("key")
+    retrieve.add_argument("output",type=Path)
     x=p.parse_args()
     if x.cmd=="archive":archive(x.work,x.dest)
+    elif x.cmd=="extract":Archive(x.dest).materialize(x.key,x.output)
     else:verify(x.repo,x.fixtures,x.dest,x.out)
