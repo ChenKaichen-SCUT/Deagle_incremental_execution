@@ -104,6 +104,9 @@ std::string ClosureSolver::restartReceipt() const {
 
 void ClosureSolver::databaseSnapshot(const std::set<int> &off,unsigned active,unsigned total,const char *phase) {
     if (restartStudy.inventoryPath.empty()) return;
+#ifdef DEAGLE_PI1G_OBSERVER
+    observeGroupLearning(phase);
+#endif
     std::vector<unsigned char> disabled(nVars(),0);
     for(int p:off)disabled[p/2]|=1u<<(p&1);
     std::map<std::pair<int,int>,std::array<unsigned,2>> hist;

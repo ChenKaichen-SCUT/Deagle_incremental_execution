@@ -39,7 +39,16 @@ struct NativeLedger {
     std::unordered_map<Var,unsigned> root_units;
     std::vector<unsigned char> root_theory;
     uint64_t collections = 0, reductions = 0;
+#ifdef DEAGLE_PI1G_OBSERVER
+    ClauseAllocator *auditAllocator=nullptr;
+    const std::vector<unsigned char> *auditRoles=nullptr;
+    std::map<std::array<unsigned,3>,uint64_t> birthLengths;
+    void measureBirth(CRef ref,ClauseFamily family,Var unit);
+#endif
     void born(CRef ref, ClauseFamily family, Var unit = var_Undef) {
+#ifdef DEAGLE_PI1G_OBSERVER
+        if(auditAllocator)measureBirth(ref,family,unit);
+#endif
         unsigned id = births.size();
         births.emplace_back(version, id, family, unit != var_Undef);
         if (audit) *audit<<"BIRTH "<<version<<' '<<id<<' '<<unsigned(family)<<' '<<ref<<' '<<unit<<'\n';

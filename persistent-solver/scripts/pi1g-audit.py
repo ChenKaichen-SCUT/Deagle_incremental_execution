@@ -114,10 +114,17 @@ def verify(journal,controls,models,mode,rows):
                 must(new_flat==expected,"new groups changed native first-occurrence order")
                 w=WIDTH if grouped else 1
                 must(sizes==[min(w,len(expected)-i) for i in range(0,len(expected),w)],"wrong split")
+            risk=[]
+            if not grouped and version==2:
+                old_selectors=[s for s,(born,scope,_) in groups.items() if born==1 and scope<0]
+                for start in range(0,len(old_selectors),WIDTH):
+                    block=old_selectors[start:start+WIDTH]
+                    if not all(states[s] for s in block):
+                        risk.extend(2*s+1 for s in block if states[s])
             packed=layout.tobytes();layouts.append(packed)
             result.append(dict(version=v,query=q,unique_B=len(cover),unique_Q=len(qcover),shared_B=len(existing),
                                active_partition_sha256=hashlib.sha256(packed).hexdigest(),signed_controls=k,
-                               assumptions=len(a),fresh_solver=bool(reset)))
+                               assumptions=len(a),epoch_variable=epoch,query_control=ctrl,fresh_solver=bool(reset),partial_fine_negative_guards=risk))
         else:raise ValueError("unknown activation record")
     must(idx==len(rows) and next(args,None) is None,"missing result")
     return result,layouts

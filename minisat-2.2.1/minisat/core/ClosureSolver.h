@@ -51,6 +51,9 @@ public:
     void configureRestartStudy(const char *mode, const char *ledger, const char *db);
     void databaseSnapshot(const std::set<int>& off, unsigned active, unsigned total, const char *phase);
     std::string restartReceipt() const;
+#ifdef DEAGLE_PI1G_OBSERVER
+    void observeGroupLearning(const char *phase);
+#endif
 private:
     std::ostream *reasonAudit = nullptr;
     std::map<std::string,int> ownedOrder;

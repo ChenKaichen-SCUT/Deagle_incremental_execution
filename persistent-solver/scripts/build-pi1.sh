@@ -6,6 +6,10 @@ mkdir -p "$out"
 cd "$root"
 flags=(-std=c++11 -O2 -g -Wall -Wno-parentheses -Wno-literal-suffix -DDEAGLE_PI1 -I minisat-2.2.1 -I src -I persistent-solver/include)
 sources=(minisat-2.2.1/minisat/core/{Solver,GraphTypes,ClosureTypes,Closure,ClosureSolver,EpochSession,RestartStudy}.cc minisat-2.2.1/minisat/utils/{Options,System}.cc persistent-solver/src/{session,pi1-driver}.cpp)
+if [[ ${PI1G_OBSERVER_BUILD:-0} == 1 ]]; then
+    flags+=(-DDEAGLE_PI1G_OBSERVER)
+    sources+=(minisat-2.2.1/minisat/core/GroupLearningAudit.cc)
+fi
 pids=()
 wait_batch() {
     local result=0

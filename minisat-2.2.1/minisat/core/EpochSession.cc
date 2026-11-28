@@ -13,6 +13,10 @@ void ClosureSolver::epochContext(EpochImage &spec, int frames, unsigned version,
     piLedger = restartStudy.ledger ? &ledger : nullptr;
     epochVersion = version;
     ledger.version = version;
+#ifdef DEAGLE_PI1G_OBSERVER
+    ledger.auditAllocator=restartStudy.inventoryPath.empty()?nullptr:&ca;
+    ledger.auditRoles=&restartStudy.roles;ledger.birthLengths.clear();
+#endif
     for(auto &b:ledger.births)b.hits.fill(0);
     ownedOrder.clear();
     oc_result_order = &ownedOrder;

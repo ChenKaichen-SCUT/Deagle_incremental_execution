@@ -15,6 +15,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 
 def run(repo,binary,fixtures,work,phase,stock):
+    if phase=="audit":binary=work/"audit-build"/"pi1"
     for case,*modes in plan["ordered_sessions"]:
         cfg=real["PLAN"]["cases"][case]
         if phase=="native-cold":
