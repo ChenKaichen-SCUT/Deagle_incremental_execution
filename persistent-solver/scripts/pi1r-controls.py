@@ -68,6 +68,10 @@ def main(binary,stock,out):
     core=model(b=[[1,3,4],[1,3,5]],a=[0,2])
     cases={"rf_projection":ordinary,"guard_propagation":cond,"failed_prefix":core,"restart_co":co,
            "budget":ordinary,"after_collection":ordinary}
+    trip_nodes=[x[0],("x#3","x","w"),x[1]]
+    for name,last in (("triplet_pruned",("rf",1,2,1)),("triplet_retained",("po",1,2,-1))):
+        cases[name]=model(n=6,b=[[0,8,6],[0,8,7]],nodes=trip_nodes,
+                          edges=[("po",0,1,-1),("rf",0,2,2),last],guards=[(0,-1),(1,4)],a=[-1])
     report={}
     for name,m in cases.items():
         d=out/name;d.mkdir(exist_ok=True)
@@ -99,6 +103,11 @@ def main(binary,stock,out):
             assert any(s["removed_edges"] and s["kept_edges"] and s["kept_guards"] and s["removed_assignments"] for s in projections)
             assert native["empty"]>0 and any(p["dummy"] for p in projections)
             assert any(l.startswith("STATE after") and ("2/3/"+str(mu[1])) in l for l in raw)
+        if name.startswith("triplet_") and optimized:
+            i=next(i for i,s in enumerate(states) if s["kind"]=="restart" and s["target"])
+            before,after=states[i:i+2]
+            triplet=(0,1,2,mu[1],mu[2])
+            assert triplet in before["triplets"] and (triplet in after["triplets"])==(name=="triplet_retained")
         if name=="failed_prefix":
             assert r["native_failed_assumptions"] and native["restart_study"]["prefix_jumps"][0]>0
             assert any(s["kind"]=="uip" and 0<s["target"]<s["A"] for s in states)
