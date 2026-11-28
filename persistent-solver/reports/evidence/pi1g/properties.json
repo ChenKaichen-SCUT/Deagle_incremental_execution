@@ -1,0 +1,997 @@
+{
+  "fib_updates_8": {
+    "Fine-Persistent": [
+      {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 50065,
+          "selected_rf": 43,
+          "ordered_events": 81,
+          "visible": {
+            "actions": [
+              [
+                "R",
+                2,
+                "right#21"
+              ],
+              [
+                "L",
+                4,
+                "left#5"
+              ],
+              [
+                "R",
+                6,
+                "right#24"
+              ],
+              [
+                "L",
+                11,
+                "left#8"
+              ],
+              [
+                "L",
+                18,
+                "left#11"
+              ],
+              [
+                "R",
+                24,
+                "right#27"
+              ],
+              [
+                "R",
+                42,
+                "right#30"
+              ],
+              [
+                "L",
+                61,
+                "left#14"
+              ],
+              [
+                "R",
+                103,
+                "right#33"
+              ],
+              [
+                "L",
+                165,
+                "left#17"
+              ],
+              [
+                "R",
+                268,
+                "right#36"
+              ],
+              [
+                "R",
+                433,
+                "right#39"
+              ],
+              [
+                "L",
+                599,
+                "left#20"
+              ],
+              [
+                "R",
+                1032,
+                "right#42"
+              ],
+              [
+                "L",
+                1632,
+                "left#23"
+              ],
+              [
+                "L",
+                2665,
+                "left#26"
+              ]
+            ],
+            "final_left": 2665,
+            "final_right": 1032,
+            "bound": 2584
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ],
+    "Grouped-Persistent": [
+      {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 50065,
+          "selected_rf": 43,
+          "ordered_events": 81,
+          "visible": {
+            "actions": [
+              [
+                "L",
+                3,
+                "left#5"
+              ],
+              [
+                "R",
+                4,
+                "right#21"
+              ],
+              [
+                "R",
+                7,
+                "right#24"
+              ],
+              [
+                "R",
+                10,
+                "right#27"
+              ],
+              [
+                "L",
+                14,
+                "left#8"
+              ],
+              [
+                "R",
+                24,
+                "right#30"
+              ],
+              [
+                "L",
+                39,
+                "left#11"
+              ],
+              [
+                "R",
+                63,
+                "right#33"
+              ],
+              [
+                "L",
+                103,
+                "left#14"
+              ],
+              [
+                "R",
+                166,
+                "right#36"
+              ],
+              [
+                "L",
+                270,
+                "left#17"
+              ],
+              [
+                "L",
+                437,
+                "left#20"
+              ],
+              [
+                "R",
+                603,
+                "right#39"
+              ],
+              [
+                "L",
+                1041,
+                "left#23"
+              ],
+              [
+                "R",
+                1644,
+                "right#42"
+              ],
+              [
+                "L",
+                2686,
+                "left#26"
+              ]
+            ],
+            "final_left": 2686,
+            "final_right": 1644,
+            "bound": 2584
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ],
+    "Grouped-Reset-active": [
+      {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 50065,
+          "selected_rf": 43,
+          "ordered_events": 81,
+          "visible": {
+            "actions": [
+              [
+                "L",
+                3,
+                "left#5"
+              ],
+              [
+                "R",
+                4,
+                "right#21"
+              ],
+              [
+                "R",
+                7,
+                "right#24"
+              ],
+              [
+                "R",
+                10,
+                "right#27"
+              ],
+              [
+                "L",
+                14,
+                "left#8"
+              ],
+              [
+                "R",
+                24,
+                "right#30"
+              ],
+              [
+                "L",
+                39,
+                "left#11"
+              ],
+              [
+                "R",
+                63,
+                "right#33"
+              ],
+              [
+                "L",
+                103,
+                "left#14"
+              ],
+              [
+                "R",
+                166,
+                "right#36"
+              ],
+              [
+                "L",
+                270,
+                "left#17"
+              ],
+              [
+                "L",
+                437,
+                "left#20"
+              ],
+              [
+                "R",
+                603,
+                "right#39"
+              ],
+              [
+                "L",
+                1041,
+                "left#23"
+              ],
+              [
+                "R",
+                1644,
+                "right#42"
+              ],
+              [
+                "L",
+                2686,
+                "left#26"
+              ]
+            ],
+            "final_left": 2686,
+            "final_right": 1644,
+            "bound": 2584
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ]
+  },
+  "circular-buffer": {
+    "Grouped-Persistent": [
+      {
+        "status": "SAT",
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 1161979,
+          "selected_rf": 176,
+          "ordered_events": 481,
+          "visible": {
+            "actions": [
+              [
+                "insert",
+                0,
+                0,
+                "buffer#3[[0]]"
+              ],
+              [
+                "remove",
+                0,
+                0,
+                "first#5"
+              ],
+              [
+                "insert",
+                2,
+                1,
+                "buffer#7[[1]]"
+              ],
+              [
+                "remove",
+                2,
+                2,
+                "first#13"
+              ],
+              [
+                "insert",
+                3,
+                2,
+                "buffer#9[[2]]"
+              ],
+              [
+                "remove",
+                3,
+                3,
+                "first#17"
+              ],
+              [
+                "insert",
+                6,
+                3,
+                "buffer#15[[3]]"
+              ],
+              [
+                "remove",
+                4,
+                6,
+                "first#21"
+              ]
+            ],
+            "failed_consumer_iteration": 4,
+            "returned": 6
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ],
+    "Grouped-Reset-active": [
+      {
+        "status": "SAT",
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 1161979,
+          "selected_rf": 176,
+          "ordered_events": 481,
+          "visible": {
+            "actions": [
+              [
+                "insert",
+                0,
+                0,
+                "buffer#3[[0]]"
+              ],
+              [
+                "remove",
+                0,
+                0,
+                "first#5"
+              ],
+              [
+                "insert",
+                2,
+                1,
+                "buffer#7[[1]]"
+              ],
+              [
+                "remove",
+                2,
+                2,
+                "first#13"
+              ],
+              [
+                "insert",
+                3,
+                2,
+                "buffer#9[[2]]"
+              ],
+              [
+                "remove",
+                3,
+                3,
+                "first#17"
+              ],
+              [
+                "insert",
+                6,
+                3,
+                "buffer#15[[3]]"
+              ],
+              [
+                "remove",
+                4,
+                6,
+                "first#21"
+              ]
+            ],
+            "failed_consumer_iteration": 4,
+            "returned": 6
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ],
+    "Fine-Persistent": [
+      {
+        "status": "SAT",
+        "properties": {
+          "reach_error.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 1161979,
+          "selected_rf": 105,
+          "ordered_events": 481,
+          "visible": {
+            "actions": [
+              [
+                "insert",
+                0,
+                0,
+                "buffer#3[[0]]"
+              ],
+              [
+                "remove",
+                0,
+                0,
+                "first#5"
+              ],
+              [
+                "insert",
+                2,
+                1,
+                "buffer#7[[1]]"
+              ],
+              [
+                "remove",
+                3,
+                2,
+                "first#17"
+              ]
+            ],
+            "failed_consumer_iteration": 3,
+            "returned": 2
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ]
+  },
+  "airline_reservations_6": {
+    "Grouped-Reset-active": [
+      {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 910797,
+          "selected_rf": 60,
+          "ordered_events": 132,
+          "visible": {
+            "actions": [
+              [
+                "92",
+                "read",
+                0,
+                "sold#9"
+              ],
+              [
+                "92",
+                "write",
+                1,
+                "sold#10"
+              ],
+              [
+                "130",
+                "read",
+                1,
+                "sold#13"
+              ],
+              [
+                "35",
+                "read",
+                1,
+                "sold#3"
+              ],
+              [
+                "73",
+                "read",
+                1,
+                "sold#7"
+              ],
+              [
+                "73",
+                "write",
+                2,
+                "sold#8"
+              ],
+              [
+                "130",
+                "write",
+                2,
+                "sold#14"
+              ],
+              [
+                "54",
+                "read",
+                2,
+                "sold#5"
+              ],
+              [
+                "35",
+                "write",
+                2,
+                "sold#4"
+              ],
+              [
+                "111",
+                "read",
+                2,
+                "sold#11"
+              ],
+              [
+                "54",
+                "write",
+                3,
+                "sold#6"
+              ],
+              [
+                "111",
+                "write",
+                3,
+                "sold#12"
+              ]
+            ],
+            "final_sold": 3,
+            "capacity": 5,
+            "thread_id_kind": "native spawn context"
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ],
+    "Fine-Persistent": [
+      {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 910797,
+          "selected_rf": 60,
+          "ordered_events": 132,
+          "visible": {
+            "actions": [
+              [
+                "111",
+                "read",
+                0,
+                "sold#11"
+              ],
+              [
+                "111",
+                "write",
+                1,
+                "sold#12"
+              ],
+              [
+                "92",
+                "read",
+                1,
+                "sold#9"
+              ],
+              [
+                "73",
+                "read",
+                1,
+                "sold#7"
+              ],
+              [
+                "92",
+                "write",
+                2,
+                "sold#10"
+              ],
+              [
+                "35",
+                "read",
+                2,
+                "sold#3"
+              ],
+              [
+                "35",
+                "write",
+                3,
+                "sold#4"
+              ],
+              [
+                "73",
+                "write",
+                2,
+                "sold#8"
+              ],
+              [
+                "130",
+                "read",
+                2,
+                "sold#13"
+              ],
+              [
+                "54",
+                "read",
+                2,
+                "sold#5"
+              ],
+              [
+                "130",
+                "write",
+                3,
+                "sold#14"
+              ],
+              [
+                "54",
+                "write",
+                3,
+                "sold#6"
+              ]
+            ],
+            "final_sold": 3,
+            "capacity": 5,
+            "thread_id_kind": "native spawn context"
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ],
+    "Grouped-Persistent": [
+      {
+        "status": "SAT",
+        "properties": {
+          "main.assertion.1": "FAILURE"
+        },
+        "classification": "VIOLATION",
+        "unfolding_ids": [],
+        "unfolding_messages": [],
+        "witness": {
+          "original_clauses": 910797,
+          "selected_rf": 60,
+          "ordered_events": 132,
+          "visible": {
+            "actions": [
+              [
+                "92",
+                "read",
+                0,
+                "sold#9"
+              ],
+              [
+                "92",
+                "write",
+                1,
+                "sold#10"
+              ],
+              [
+                "130",
+                "read",
+                1,
+                "sold#13"
+              ],
+              [
+                "35",
+                "read",
+                1,
+                "sold#3"
+              ],
+              [
+                "73",
+                "read",
+                1,
+                "sold#7"
+              ],
+              [
+                "73",
+                "write",
+                2,
+                "sold#8"
+              ],
+              [
+                "130",
+                "write",
+                2,
+                "sold#14"
+              ],
+              [
+                "54",
+                "read",
+                2,
+                "sold#5"
+              ],
+              [
+                "35",
+                "write",
+                2,
+                "sold#4"
+              ],
+              [
+                "111",
+                "read",
+                2,
+                "sold#11"
+              ],
+              [
+                "54",
+                "write",
+                3,
+                "sold#6"
+              ],
+              [
+                "111",
+                "write",
+                3,
+                "sold#12"
+              ]
+            ],
+            "final_sold": 3,
+            "capacity": 5,
+            "thread_id_kind": "native spawn context"
+          }
+        }
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "main.assertion.1": "SUCCESS"
+        },
+        "classification": "BOUNDED_PASS",
+        "unfolding_ids": [],
+        "unfolding_messages": []
+      }
+    ]
+  },
+  "fib-snapshot-11": {
+    "Fine-Persistent": [
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "classification": "INCOMPLETE_UNWINDING",
+        "unfolding_ids": [
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "unfolding_messages": [
+          "Not unwinding loop fib.0 iteration 25 file program.i line 706 function fib thread 0",
+          "Not unwinding loop t1.0 iteration 25 file program.i line 688 function t1 thread 1",
+          "Not unwinding loop t2.0 iteration 25 file program.i line 696 function t2 thread 2"
+        ]
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "classification": "INCOMPLETE_UNWINDING",
+        "unfolding_ids": [
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "unfolding_messages": [
+          "Not unwinding loop fib.0 iteration 25 file program.i line 706 function fib thread 0",
+          "Not unwinding loop t1.0 iteration 25 file program.i line 688 function t1 thread 1",
+          "Not unwinding loop t2.0 iteration 25 file program.i line 696 function t2 thread 2"
+        ]
+      }
+    ],
+    "Grouped-Reset-active": [
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "classification": "INCOMPLETE_UNWINDING",
+        "unfolding_ids": [
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "unfolding_messages": [
+          "Not unwinding loop fib.0 iteration 25 file program.i line 706 function fib thread 0",
+          "Not unwinding loop t1.0 iteration 25 file program.i line 688 function t1 thread 1",
+          "Not unwinding loop t2.0 iteration 25 file program.i line 696 function t2 thread 2"
+        ]
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "classification": "INCOMPLETE_UNWINDING",
+        "unfolding_ids": [
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "unfolding_messages": [
+          "Not unwinding loop fib.0 iteration 25 file program.i line 706 function fib thread 0",
+          "Not unwinding loop t1.0 iteration 25 file program.i line 688 function t1 thread 1",
+          "Not unwinding loop t2.0 iteration 25 file program.i line 696 function t2 thread 2"
+        ]
+      }
+    ],
+    "Grouped-Persistent": [
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "classification": "INCOMPLETE_UNWINDING",
+        "unfolding_ids": [
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "unfolding_messages": [
+          "Not unwinding loop fib.0 iteration 25 file program.i line 706 function fib thread 0",
+          "Not unwinding loop t1.0 iteration 25 file program.i line 688 function t1 thread 1",
+          "Not unwinding loop t2.0 iteration 25 file program.i line 696 function t2 thread 2"
+        ]
+      },
+      {
+        "status": "UNSAT",
+        "properties": {
+          "reach_error.assertion.1": "SUCCESS",
+          "fib.unwind.0": "SUCCESS",
+          "t1.unwind.0": "SUCCESS",
+          "t2.unwind.0": "SUCCESS"
+        },
+        "classification": "INCOMPLETE_UNWINDING",
+        "unfolding_ids": [
+          "fib.unwind.0",
+          "t1.unwind.0",
+          "t2.unwind.0"
+        ],
+        "unfolding_messages": [
+          "Not unwinding loop fib.0 iteration 25 file program.i line 706 function fib thread 0",
+          "Not unwinding loop t1.0 iteration 25 file program.i line 688 function t1 thread 1",
+          "Not unwinding loop t2.0 iteration 25 file program.i line 696 function t2 thread 2"
+        ]
+      }
+    ]
+  }
+}

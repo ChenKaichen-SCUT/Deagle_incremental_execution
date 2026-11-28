@@ -1,0 +1,128 @@
+{
+  "fib_updates_8": {
+    "fine_originally_active": 55,
+    "affected_input_controls": 930,
+    "extra_dormant": 2,
+    "extra_dormant_with_real_fine_hit": 2,
+    "affected_births": {
+      "3327": {
+        "family": "B",
+        "negative_guards": [
+          87085,
+          87151,
+          87159
+        ],
+        "native_hits": [
+          298,
+          0,
+          37,
+          15
+        ]
+      },
+      "1202": {
+        "family": "B",
+        "negative_guards": [
+          87085,
+          87151,
+          87159
+        ],
+        "native_hits": [
+          2,
+          0,
+          1,
+          0
+        ]
+      }
+    }
+  },
+  "circular-buffer": {
+    "fine_originally_active": 0,
+    "affected_input_controls": 394,
+    "extra_dormant": 0,
+    "extra_dormant_with_real_fine_hit": 0,
+    "affected_births": {}
+  },
+  "airline_reservations_6": {
+    "fine_originally_active": 0,
+    "affected_input_controls": 2575,
+    "extra_dormant": 0,
+    "extra_dormant_with_real_fine_hit": 0,
+    "affected_births": {}
+  },
+  "fib-snapshot-11": {
+    "fine_originally_active": 5,
+    "affected_input_controls": 15736,
+    "extra_dormant": 5,
+    "extra_dormant_with_real_fine_hit": 5,
+    "affected_births": {
+      "65318": {
+        "family": "B",
+        "negative_guards": [
+          448427,
+          448429,
+          448433
+        ],
+        "native_hits": [
+          193,
+          0,
+          40,
+          0
+        ]
+      },
+      "30635": {
+        "family": "B",
+        "negative_guards": [
+          484783,
+          484789
+        ],
+        "native_hits": [
+          588,
+          1,
+          74,
+          15
+        ]
+      },
+      "36068": {
+        "family": "B",
+        "negative_guards": [
+          478963,
+          478965,
+          478969
+        ],
+        "native_hits": [
+          6636,
+          3,
+          1911,
+          3986
+        ]
+      },
+      "39428": {
+        "family": "B",
+        "negative_guards": [
+          478967,
+          478975
+        ],
+        "native_hits": [
+          312,
+          5,
+          100,
+          6
+        ]
+      },
+      "31427": {
+        "family": "B",
+        "negative_guards": [
+          445519,
+          445521,
+          445525
+        ],
+        "native_hits": [
+          837,
+          2,
+          231,
+          347
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,346 @@
+{
+  "fib_updates_8": {
+    "Fine-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 47493,
+        "unique_Q": 2560,
+        "shared_B": 0,
+        "active_partition_sha256": "ce2481b494db9aea2bedae8522a634d532a2a183838a3a058572e6b0f2acfe63",
+        "signed_controls": 50055,
+        "assumptions": 50055,
+        "epoch_variable": 12555,
+        "query_control": 60049,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 45757,
+        "unique_Q": 2560,
+        "shared_B": 35234,
+        "active_partition_sha256": "25629e245b0d845670f5efbe4152a61f39242aee590929167eb04b9a00c57cde",
+        "signed_controls": 63140,
+        "assumptions": 63140,
+        "epoch_variable": 65715,
+        "query_control": 76239,
+        "fresh_solver": false
+      }
+    ],
+    "Grouped-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 47493,
+        "unique_Q": 2560,
+        "shared_B": 0,
+        "active_partition_sha256": "9f87690c18953ef8d727030be213789bc4c2622efeedfc6c8e36b4445c7e8b1c",
+        "signed_controls": 374,
+        "assumptions": 374,
+        "epoch_variable": 12555,
+        "query_control": 12928,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 45757,
+        "unique_Q": 2560,
+        "shared_B": 34304,
+        "active_partition_sha256": "e58cd672afc1d4e2c0b7ad0dc702339cb034d0aea58add0d4000c67ba39af0d6",
+        "signed_controls": 466,
+        "assumptions": 466,
+        "epoch_variable": 16034,
+        "query_control": 16125,
+        "fresh_solver": false
+      }
+    ],
+    "Grouped-Reset-active": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 47493,
+        "unique_Q": 2560,
+        "shared_B": 0,
+        "active_partition_sha256": "9f87690c18953ef8d727030be213789bc4c2622efeedfc6c8e36b4445c7e8b1c",
+        "signed_controls": 374,
+        "assumptions": 374,
+        "epoch_variable": 12555,
+        "query_control": 12928,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 45757,
+        "unique_Q": 2560,
+        "shared_B": 0,
+        "active_partition_sha256": "e58cd672afc1d4e2c0b7ad0dc702339cb034d0aea58add0d4000c67ba39af0d6",
+        "signed_controls": 360,
+        "assumptions": 360,
+        "epoch_variable": 12059,
+        "query_control": 12418,
+        "fresh_solver": true
+      }
+    ]
+  },
+  "circular-buffer": {
+    "Grouped-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 1160134,
+        "unique_Q": 1833,
+        "shared_B": 0,
+        "active_partition_sha256": "f2f2bd7a1f18c57787196545cd52289ce62ecdeb3d0d985e33b53e1b9ecd8038",
+        "signed_controls": 9066,
+        "assumptions": 9066,
+        "epoch_variable": 245083,
+        "query_control": 254148,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 1161265,
+        "unique_Q": 1833,
+        "shared_B": 0,
+        "active_partition_sha256": "2dcd11f449c0a0952aa97813fd5ae2b351aadf404eebaa15cbfc514b7d5ec6f9",
+        "signed_controls": 18141,
+        "assumptions": 18141,
+        "epoch_variable": 499149,
+        "query_control": 508223,
+        "fresh_solver": false
+      }
+    ],
+    "Grouped-Reset-active": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 1160134,
+        "unique_Q": 1833,
+        "shared_B": 0,
+        "active_partition_sha256": "f2f2bd7a1f18c57787196545cd52289ce62ecdeb3d0d985e33b53e1b9ecd8038",
+        "signed_controls": 9066,
+        "assumptions": 9066,
+        "epoch_variable": 245083,
+        "query_control": 254148,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 1161265,
+        "unique_Q": 1833,
+        "shared_B": 0,
+        "active_partition_sha256": "2dcd11f449c0a0952aa97813fd5ae2b351aadf404eebaa15cbfc514b7d5ec6f9",
+        "signed_controls": 9075,
+        "assumptions": 9075,
+        "epoch_variable": 245474,
+        "query_control": 254548,
+        "fresh_solver": true
+      }
+    ],
+    "Fine-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 1160134,
+        "unique_Q": 1833,
+        "shared_B": 0,
+        "active_partition_sha256": "7d2e4f1bbc26245bfac36e51855e4eed68f9c8cd23158a10f5fc9136dd5c4c95",
+        "signed_controls": 1161969,
+        "assumptions": 1161969,
+        "epoch_variable": 245083,
+        "query_control": 1405218,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 1161265,
+        "unique_Q": 1833,
+        "shared_B": 394,
+        "active_partition_sha256": "aaedf20042c8ce1cfbae9b81a79dddc993d4d2e74427a7cd0a5506fb7a42806f",
+        "signed_controls": 2324675,
+        "assumptions": 2324675,
+        "epoch_variable": 1652052,
+        "query_control": 2812924,
+        "fresh_solver": false
+      }
+    ]
+  },
+  "airline_reservations_6": {
+    "Grouped-Reset-active": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 866692,
+        "unique_Q": 44021,
+        "shared_B": 0,
+        "active_partition_sha256": "7478fb6cf9a919ef41572fa78633fa9fc4c7bbe1e1b317554fe2239feb1fc232",
+        "signed_controls": 6774,
+        "assumptions": 6774,
+        "epoch_variable": 199092,
+        "query_control": 205865,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 243406,
+        "unique_Q": 44021,
+        "shared_B": 0,
+        "active_partition_sha256": "babd47ac723ab3170db0d8541eca6b8315298ec43be91fa5f32a470e9e95766e",
+        "signed_controls": 1904,
+        "assumptions": 1904,
+        "epoch_variable": 69636,
+        "query_control": 71539,
+        "fresh_solver": true
+      }
+    ],
+    "Fine-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 866692,
+        "unique_Q": 44021,
+        "shared_B": 0,
+        "active_partition_sha256": "0d5b8fa92649f494afc31a53cfaa1e6ce84697b2a09c5bb1141fb16e4bcd74bd",
+        "signed_controls": 910715,
+        "assumptions": 910715,
+        "epoch_variable": 199092,
+        "query_control": 1065785,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 243406,
+        "unique_Q": 44021,
+        "shared_B": 2959,
+        "active_partition_sha256": "a4c8928bc1f8053548deb2de670099746718b974494fd95ddd5ebc153804957b",
+        "signed_controls": 1195185,
+        "assumptions": 1195185,
+        "epoch_variable": 1176123,
+        "query_control": 1416571,
+        "fresh_solver": false
+      }
+    ],
+    "Grouped-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 866692,
+        "unique_Q": 44021,
+        "shared_B": 0,
+        "active_partition_sha256": "7478fb6cf9a919ef41572fa78633fa9fc4c7bbe1e1b317554fe2239feb1fc232",
+        "signed_controls": 6774,
+        "assumptions": 6774,
+        "epoch_variable": 199092,
+        "query_control": 205865,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 243406,
+        "unique_Q": 44021,
+        "shared_B": 384,
+        "active_partition_sha256": "babd47ac723ab3170db0d8541eca6b8315298ec43be91fa5f32a470e9e95766e",
+        "signed_controls": 8675,
+        "assumptions": 8675,
+        "epoch_variable": 272182,
+        "query_control": 274082,
+        "fresh_solver": false
+      }
+    ]
+  },
+  "fib-snapshot-11": {
+    "Fine-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 1001471,
+        "unique_Q": 714,
+        "shared_B": 0,
+        "active_partition_sha256": "6745cae6fa6725cac0e227f6fda0da540fecc001304ddd442af49f7fddd88cda",
+        "signed_controls": 1002187,
+        "assumptions": 1002187,
+        "epoch_variable": 200362,
+        "query_control": 1201834,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 1001473,
+        "unique_Q": 714,
+        "shared_B": 60280,
+        "active_partition_sha256": "2d82f5796c51dd91be6e15a66de0cc49b06af7bcc1d8ed4e0a483738d65c2a10",
+        "signed_controls": 1944096,
+        "assumptions": 1944096,
+        "epoch_variable": 1373515,
+        "query_control": 2314709,
+        "fresh_solver": false
+      }
+    ],
+    "Grouped-Reset-active": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 1001471,
+        "unique_Q": 714,
+        "shared_B": 0,
+        "active_partition_sha256": "4b6b0e04c84ba49db1660d3db5af9932692922e067f0288f2713df15763c5905",
+        "signed_controls": 7826,
+        "assumptions": 7826,
+        "epoch_variable": 200362,
+        "query_control": 208187,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 1001473,
+        "unique_Q": 714,
+        "shared_B": 0,
+        "active_partition_sha256": "53138cb45b8200eae6e7f5a96f64ec5c220df36df1f36e34ff820ed3d8ca08d8",
+        "signed_controls": 7827,
+        "assumptions": 7827,
+        "epoch_variable": 200371,
+        "query_control": 208197,
+        "fresh_solver": true
+      }
+    ],
+    "Grouped-Persistent": [
+      {
+        "version": 1,
+        "query": 1,
+        "unique_B": 1001471,
+        "unique_Q": 714,
+        "shared_B": 0,
+        "active_partition_sha256": "4b6b0e04c84ba49db1660d3db5af9932692922e067f0288f2713df15763c5905",
+        "signed_controls": 7826,
+        "assumptions": 7826,
+        "epoch_variable": 200362,
+        "query_control": 208187,
+        "fresh_solver": false
+      },
+      {
+        "version": 2,
+        "query": 1,
+        "unique_B": 1001473,
+        "unique_Q": 714,
+        "shared_B": 44544,
+        "active_partition_sha256": "53138cb45b8200eae6e7f5a96f64ec5c220df36df1f36e34ff820ed3d8ca08d8",
+        "signed_controls": 15305,
+        "assumptions": 15305,
+        "epoch_variable": 379154,
+        "query_control": 386632,
+        "fresh_solver": false
+      }
+    ]
+  }
+}

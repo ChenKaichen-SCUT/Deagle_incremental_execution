@@ -1,0 +1,54 @@
+{
+  "fib_updates_8": {
+    "Fine_P1_s": 3.2668409919715486,
+    "Grouped_P1_s": 1.9713053840096109,
+    "Reset_active_P1_s": 1.7593620659899898,
+    "stock_full_P1_s": 2.069892288011033,
+    "unguarded_P1_s": 2.0198400559602305,
+    "grouped_savings_s": 1.2955356079619378,
+    "grouped_savings_percent": 39.657137006232986,
+    "persistent_savings_vs_reset_s": -0.21194331801962107,
+    "persistent_savings_vs_reset_percent": -12.04660041936058,
+    "stock_minus_grouped_s": 0.09858690400142223,
+    "diagnostic_signal": true
+  },
+  "circular-buffer": {
+    "Fine_P1_s": 15.4370832159766,
+    "Grouped_P1_s": 12.66156985796988,
+    "Reset_active_P1_s": 11.969297602016013,
+    "stock_full_P1_s": 8.485427341016475,
+    "unguarded_P1_s": 8.635578935034573,
+    "grouped_savings_s": 2.7755133580067195,
+    "grouped_savings_percent": 17.979519311874952,
+    "persistent_savings_vs_reset_s": -0.692272255953867,
+    "persistent_savings_vs_reset_percent": -5.783733339851673,
+    "stock_minus_grouped_s": -4.176142516953405,
+    "diagnostic_signal": false
+  },
+  "airline_reservations_6": {
+    "Fine_P1_s": 41.137976702011656,
+    "Grouped_P1_s": 23.303675592003856,
+    "Reset_active_P1_s": 36.38961387099698,
+    "stock_full_P1_s": 19.563356355007272,
+    "unguarded_P1_s": 19.81419908697717,
+    "grouped_savings_s": 17.8343011100078,
+    "grouped_savings_percent": 43.35240218349314,
+    "persistent_savings_vs_reset_s": 13.085938278993126,
+    "persistent_savings_vs_reset_percent": 35.96064065253189,
+    "stock_minus_grouped_s": -3.7403192369965836,
+    "diagnostic_signal": false
+  },
+  "fib-snapshot-11": {
+    "Fine_P1_s": 39.239762209006585,
+    "Grouped_P1_s": 31.513001482991967,
+    "Reset_active_P1_s": 22.526125271979254,
+    "stock_full_P1_s": 36.70697607198963,
+    "unguarded_P1_s": 26.73239730298519,
+    "grouped_savings_s": 7.726760726014618,
+    "grouped_savings_percent": 19.691150738525927,
+    "persistent_savings_vs_reset_s": -8.986876211012714,
+    "persistent_savings_vs_reset_percent": -39.89534863411102,
+    "stock_minus_grouped_s": 5.193974588997662,
+    "diagnostic_signal": false
+  }
+}

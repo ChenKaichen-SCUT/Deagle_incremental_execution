@@ -1,0 +1,106 @@
+{
+  "fib_updates_8": {
+    "P0": {
+      "status": "SAT",
+      "backend_wall_s": 0.12131461303215474,
+      "rss_kib": 13376,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "9e12da197f6c05df4776a00ef2f6e84c96db7a7c002bf0867beb338e54cff00c",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "cpu": 0
+    },
+    "P1": {
+      "status": "UNSAT",
+      "backend_wall_s": 2.0198400559602305,
+      "rss_kib": 23376,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "a184c39b224934fe44feb15c54428ca6fdda57f9744cdc54fe77b7f38e2f6719",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "cpu": 0
+    }
+  },
+  "circular-buffer": {
+    "P0": {
+      "status": "SAT",
+      "backend_wall_s": 0.6668536930228584,
+      "rss_kib": 217984,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "28d81363f7990662187c70329ecddb6bcc603ed1c02f8e66a1f26786561882c0",
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "cpu": 0
+    },
+    "P1": {
+      "status": "UNSAT",
+      "backend_wall_s": 8.635578935034573,
+      "rss_kib": 254612,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "6e7e3c5247aca64cdea0d462a4a20bbfd8a3a8e4434ebc1862cc5ab6910ed8b6",
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "cpu": 0
+    }
+  },
+  "airline_reservations_6": {
+    "P0": {
+      "status": "SAT",
+      "backend_wall_s": 5.5794736910029314,
+      "rss_kib": 194108,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "65b2330f3cfae8a5c770cd0a2b9d99fef61177c6974d5aae8863f63151ff1a81",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "cpu": 0
+    },
+    "P1": {
+      "status": "UNSAT",
+      "backend_wall_s": 19.81419908697717,
+      "rss_kib": 82928,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "da129076295a3aec859f04390cd71814d089c8bcc954f1a3a79261827fcf9fbb",
+      "limits": {
+        "memory_bytes": 21474836480,
+        "timeout_seconds": 300
+      },
+      "cpu": 0
+    }
+  },
+  "fib-snapshot-11": {
+    "P0": {
+      "status": "UNSAT",
+      "backend_wall_s": 17.85796706698602,
+      "rss_kib": 261148,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "7f2d7db7f42a1d77c2ce8b6968a17414b8892e731729d4a6e34d1b874a4d8715",
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "cpu": 0
+    },
+    "P1": {
+      "status": "UNSAT",
+      "backend_wall_s": 26.73239730298519,
+      "rss_kib": 278304,
+      "binary": "adf5a1f84729c7c4d8380a124d1df46a9f9a23315022e37aca716cfa0fbf01ec",
+      "model": "6354aa3974963ad5d33ac41daec76f30d91ae1caa3b7b7decd57e82e2b66bb71",
+      "limits": {
+        "timeout_seconds": 660,
+        "memory_bytes": 7516192768
+      },
+      "cpu": 0
+    }
+  }
+}

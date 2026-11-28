@@ -1,0 +1,261 @@
+{
+  "stage": "PI-1G",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/persistent-minisat-closure",
+  "reviewed_baseline": "f8f470468786d018f6c32c9653815df13345492b",
+  "preregistration": "f1e3135e5566c5697a1b3c0fe88594c0b8b3257c",
+  "production_source": "998c4f9a845d6f59bed5c3cfc96b5ee56181a0a1",
+  "audit_source": "dbe6e1650fe2803349bfade2eefaaa46d9262506",
+  "raw_evidence_commit": "66abf23ca60b2cfbbfc7116982a308394b900483",
+  "group_width": 128,
+  "restart_policy": "R2",
+  "correctness": {
+    "active_input_union_matches_each_version": true,
+    "active_partitions_and_order_GP_reset_identical": true,
+    "ledger_off_and_on_agree": true,
+    "agreement_with_reviewed_Fine_R2": true,
+    "stock_properties_and_unwinding": true,
+    "real_visible_SAT_witnesses": 9,
+    "measured_export_import_reproof": [
+      0,
+      0,
+      0
+    ],
+    "fault_injections_rejected": {
+      "missing_member": "omitted or changed actual input",
+      "rebound_payload": "changed immutable payload",
+      "partial_enabled": "wrong activation of partial or complete old group"
+    }
+  },
+  "observations": {
+    "timed_sessions": 12,
+    "audit_sessions": 12,
+    "pristine_cold_transactions": 8,
+    "timed_native_ledger": false,
+    "per_predicate_trace_count": 0,
+    "cpu": 0,
+    "paired_runs_per_arm": 1
+  },
+  "diagnostic_gate": {
+    "rule": "Actual repair P1 backend at least 5% and 0.2 s faster than Fine, and below same-machine stock full P1 time",
+    "triggered": [
+      "fib_updates_8"
+    ],
+    "eligible_cases": 3,
+    "evidence_level": "one exploratory observation per arm",
+    "stock_headroom_seconds": 0.09858690400142223,
+    "end_to_end_speedup_established": false
+  },
+  "timing_qualification": {
+    "arm": "airline_reservations_6/Grouped-Persistent",
+    "limitation": "Observer compilation overlapped this one exploratory timing on the shared host. The original timing is retained.",
+    "evidence": "evidence/pi1g/build.json"
+  },
+  "controls_note": "Registered pair compares exact active partitions at P0/P1. Third-version reactivation in the small fixture checks formula semantics after the reset arm discarded an older registry; the original overstrict fixture failure was archived.",
+  "cases": {
+    "fib_updates_8": {
+      "classification": "SAT_TO_BOUNDED_UNSAT",
+      "P1_timing": {
+        "Fine_P1_s": 3.2668409919715486,
+        "Grouped_P1_s": 1.9713053840096109,
+        "Reset_active_P1_s": 1.7593620659899898,
+        "stock_full_P1_s": 2.069892288011033,
+        "unguarded_P1_s": 2.0198400559602305,
+        "grouped_savings_s": 1.2955356079619378,
+        "grouped_savings_percent": 39.657137006232986,
+        "persistent_savings_vs_reset_s": -0.21194331801962107,
+        "persistent_savings_vs_reset_percent": -12.04660041936058,
+        "stock_minus_grouped_s": 0.09858690400142223,
+        "diagnostic_signal": true
+      },
+      "fine_grouped_shared_B": [
+        35234,
+        34304
+      ],
+      "partial_group_reinstalled": 930,
+      "extra_dormant_same_fine_births": 2,
+      "fine_resident_learning": {
+        "count": 31076,
+        "mean_length": 2411.0306345733043,
+        "literals": 74925188,
+        "selector_literals": 69169827,
+        "selector_fraction": 0.9231852311134675
+      },
+      "grouped_resident_learning": {
+        "count": 30594,
+        "mean_length": 181.18993920376545,
+        "literals": 5543325,
+        "selector_literals": 2213177,
+        "selector_fraction": 0.3992508106596673
+      },
+      "fine_old_P1": {
+        "physical": 4693,
+        "dormant": 4638,
+        "constraining": 55,
+        "distinct_used": 42,
+        "dormant_distinct_used": 0
+      },
+      "grouped_old_P1": {
+        "physical": 1901,
+        "dormant": 1814,
+        "constraining": 87,
+        "distinct_used": 70,
+        "dormant_distinct_used": 0
+      }
+    },
+    "circular-buffer": {
+      "classification": "SAT_TO_BOUNDED_UNSAT",
+      "P1_timing": {
+        "Fine_P1_s": 15.4370832159766,
+        "Grouped_P1_s": 12.66156985796988,
+        "Reset_active_P1_s": 11.969297602016013,
+        "stock_full_P1_s": 8.485427341016475,
+        "unguarded_P1_s": 8.635578935034573,
+        "grouped_savings_s": 2.7755133580067195,
+        "grouped_savings_percent": 17.979519311874952,
+        "persistent_savings_vs_reset_s": -0.692272255953867,
+        "persistent_savings_vs_reset_percent": -5.783733339851673,
+        "stock_minus_grouped_s": -4.176142516953405,
+        "diagnostic_signal": false
+      },
+      "fine_grouped_shared_B": [
+        394,
+        0
+      ],
+      "partial_group_reinstalled": 394,
+      "extra_dormant_same_fine_births": 0,
+      "fine_resident_learning": {
+        "count": 70634,
+        "mean_length": 1055.4366169266925,
+        "literals": 74549710,
+        "selector_literals": 72421656,
+        "selector_fraction": 0.9714545636730176
+      },
+      "grouped_resident_learning": {
+        "count": 75228,
+        "mean_length": 65.02998883394481,
+        "literals": 4892076,
+        "selector_literals": 3494088,
+        "selector_fraction": 0.7142342024122275
+      },
+      "fine_old_P1": {
+        "physical": 6148,
+        "dormant": 6148,
+        "constraining": 0,
+        "distinct_used": 0,
+        "dormant_distinct_used": 0
+      },
+      "grouped_old_P1": {
+        "physical": 4544,
+        "dormant": 4544,
+        "constraining": 0,
+        "distinct_used": 0,
+        "dormant_distinct_used": 0
+      }
+    },
+    "airline_reservations_6": {
+      "classification": "SAT_TO_BOUNDED_UNSAT",
+      "P1_timing": {
+        "Fine_P1_s": 41.137976702011656,
+        "Grouped_P1_s": 23.303675592003856,
+        "Reset_active_P1_s": 36.38961387099698,
+        "stock_full_P1_s": 19.563356355007272,
+        "unguarded_P1_s": 19.81419908697717,
+        "grouped_savings_s": 17.8343011100078,
+        "grouped_savings_percent": 43.35240218349314,
+        "persistent_savings_vs_reset_s": 13.085938278993126,
+        "persistent_savings_vs_reset_percent": 35.96064065253189,
+        "stock_minus_grouped_s": -3.7403192369965836,
+        "diagnostic_signal": false
+      },
+      "fine_grouped_shared_B": [
+        2959,
+        384
+      ],
+      "partial_group_reinstalled": 2575,
+      "extra_dormant_same_fine_births": 0,
+      "fine_resident_learning": {
+        "count": 465884,
+        "mean_length": 674.5254805917352,
+        "literals": 314250629,
+        "selector_literals": 292919269,
+        "selector_fraction": 0.9321199131155916
+      },
+      "grouped_resident_learning": {
+        "count": 343232,
+        "mean_length": 52.29549400988253,
+        "literals": 17949487,
+        "selector_literals": 6882821,
+        "selector_fraction": 0.3834550257620176
+      },
+      "fine_old_P1": {
+        "physical": 233923,
+        "dormant": 233923,
+        "constraining": 0,
+        "distinct_used": 0,
+        "dormant_distinct_used": 0
+      },
+      "grouped_old_P1": {
+        "physical": 154836,
+        "dormant": 154836,
+        "constraining": 0,
+        "distinct_used": 0,
+        "dormant_distinct_used": 0
+      }
+    },
+    "fib-snapshot-11": {
+      "classification": "INCOMPLETE_UNWINDING",
+      "P1_timing": {
+        "Fine_P1_s": 39.239762209006585,
+        "Grouped_P1_s": 31.513001482991967,
+        "Reset_active_P1_s": 22.526125271979254,
+        "stock_full_P1_s": 36.70697607198963,
+        "unguarded_P1_s": 26.73239730298519,
+        "grouped_savings_s": 7.726760726014618,
+        "grouped_savings_percent": 19.691150738525927,
+        "persistent_savings_vs_reset_s": -8.986876211012714,
+        "persistent_savings_vs_reset_percent": -39.89534863411102,
+        "stock_minus_grouped_s": 5.193974588997662,
+        "diagnostic_signal": false
+      },
+      "fine_grouped_shared_B": [
+        60280,
+        44544
+      ],
+      "partial_group_reinstalled": 15736,
+      "extra_dormant_same_fine_births": 5,
+      "fine_resident_learning": {
+        "count": 248270,
+        "mean_length": 5731.074596205744,
+        "literals": 1422853890,
+        "selector_literals": 1288240967,
+        "selector_fraction": 0.9053923077091212
+      },
+      "grouped_resident_learning": {
+        "count": 206306,
+        "mean_length": 667.8847973398738,
+        "literals": 137788641,
+        "selector_literals": 34601023,
+        "selector_fraction": 0.2511166577221703
+      },
+      "fine_old_P1": {
+        "physical": 139007,
+        "dormant": 139002,
+        "constraining": 5,
+        "distinct_used": 5,
+        "dormant_distinct_used": 0
+      },
+      "grouped_old_P1": {
+        "physical": 84032,
+        "dormant": 84032,
+        "constraining": 0,
+        "distinct_used": 0,
+        "dormant_distinct_used": 0
+      }
+    }
+  },
+  "report": "PI-1G.md",
+  "recompute": "../scripts/pi1g-evidence.py",
+  "evidence_index": "evidence/pi1g/raw-index.json",
+  "stage_boundary": "Await user review"
+}
