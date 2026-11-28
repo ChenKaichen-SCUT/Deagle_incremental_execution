@@ -73,7 +73,7 @@ def stock_run(repo,stock,case,side,out):
     return meta
 
 
-def session(repo,binary,fixtures,case,mode,out,prepare=frozen.prepare):
+def session(repo,binary,fixtures,case,mode,out,prepare=frozen.prepare,constructs=(1,1)):
     cfg=PLAN["cases"][case];out.mkdir(parents=True,exist_ok=True)
     controls=out/"assumptions.i32le";env=dict(os.environ,PI1_ASSUMPTION_FILE=str(controls))
     transcript=out/"native.txt"; rows=[];seals=[]
@@ -97,7 +97,7 @@ def session(repo,binary,fixtures,case,mode,out,prepare=frozen.prepare):
                         save(out/"rows.json",rows);break
                 else:raise RuntimeError("backend exited: "+(out/"stderr").read_text()[-350:])
                 signal.setitimer(signal.ITIMER_REAL,0)
-                require(row["solver_construct_count"]==1 and row["old_learnt_export_count"]==row["old_learnt_import_count"]==row["per_clause_reproof_count"]==0,"isolation")
+                require(row["solver_construct_count"]==constructs[len(rows)-1] and row["old_learnt_export_count"]==row["old_learnt_import_count"]==row["per_clause_reproof_count"]==0,"isolation")
                 print(case,mode,side,row["status"],row["native"]["boundary_status"],round(row["native"]["boundary"],3),row["native"]["prefix"],flush=True)
             child.stdin.close();rc=child.wait(timeout=10);require(rc==0,"backend failed at close")
         finally:

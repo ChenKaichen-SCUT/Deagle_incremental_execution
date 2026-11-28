@@ -47,7 +47,7 @@ public:
 
 struct RestartStudy {
     bool retain = false, skipZero = false, ledger = true, measuring = false;
-    std::string dbPath;
+    std::string dbPath,inventoryPath;
     PredicateTrace db;
     RestartSample sample;
     std::vector<unsigned char> roles;

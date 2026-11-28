@@ -1,4 +1,5 @@
 #include "session_contract.h"
+#include "pi1g-groups.h"
 #include "minisat/core/ClosureSolver.h"
 #include <algorithm>
 #include <climits>
@@ -44,13 +45,16 @@ struct Ports {
     // Entries are (role, endpoint identities, sign), including all aliases of a port.
     std::map<unsigned,std::vector<std::string>> positive, negative;
 };
-struct VectorHash {
-    size_t operator()(const std::vector<int>& v) const {
-        size_t h=v.size();
-        for (int n:v) h=(h^unsigned(n))*1099511628211ULL;
-        return h;
+bool canonical(const InputOccurrence &input,const std::vector<int>& mu,std::vector<int>& out) {
+    for(auto l:input.literals) {
+        int p=translate(wire(l,mu.size()),mu);
+        if(p==-1)return false;
+        if(p>=0)out.push_back(p);
     }
-};
+    std::sort(out.begin(),out.end());out.erase(std::unique(out.begin(),out.end()),out.end());
+    for(size_t i=1;i<out.size();++i)if((out[i-1]^1)==out[i])return false;
+    return true;
+}
 struct Version {
     VersionId id;
     std::string config, receipt;
@@ -58,7 +62,8 @@ struct Version {
     TheorySpec graph;
     std::vector<std::string> event_ids;
     std::vector<unsigned> inputs;
-    struct Query { QueryDescriptor desc; Var control; std::vector<unsigned> inputs; };
+    unsigned activeB=0;
+    struct Query { QueryDescriptor desc; Var control; std::vector<unsigned> inputs; unsigned activeQ=0; };
     std::map<uint64_t,Query> queries;
     unsigned epoch;
 };
@@ -145,6 +150,10 @@ const std::vector<std::string>& portList(const std::map<unsigned,std::vector<std
 struct PersistentClosureSession::Backend {
     Minisat::ClosureSolver solver;
     NativeLedger ledger;
+    GroupRegistry groups;
+    GroupJournal journal;
+    bool study=false,grouped=false,resetActive=false;
+    uint64_t fingerprint=14695981039346656037ULL,guardedCount=0;
     Statistics stats;
     SessionState state=SessionState::idle;
     std::unique_ptr<Version> current;
@@ -154,23 +163,59 @@ struct PersistentClosureSession::Backend {
     std::unordered_map<std::vector<int>,unsigned,VectorHash> registry;
     std::ostream *trace=nullptr, *assumptionOutput=nullptr;
     Var truth;
-    uint64_t published=0;
+    uint64_t published=0,currentInstallVersion=0;
     bool saved=true;
-    Backend() {stats.solver_construct_count=1;solver.configureRestartStudy(std::getenv("PI1R_MODE"),std::getenv("PI1R_LEDGER"),std::getenv("PI1R_DATABASE"));
+    Backend() {
+        const char *setting=std::getenv("PI1G_MODE");study=setting!=nullptr;
+        std::string name=setting?setting:"Fine-Persistent";
+        grouped=name=="Grouped-Persistent" || name=="Grouped-Reset-active";resetActive=name=="Grouped-Reset-active";
+        check(grouped || name=="Fine-Persistent","unknown PI-1G protection mode");
+        journal.open(std::getenv("PI1G_AUDIT"));
+        stats.solver_construct_count=1;solver.configureRestartStudy(std::getenv("PI1R_MODE"),std::getenv("PI1R_LEDGER"),std::getenv("PI1R_DATABASE"));
         truth=solver.newVar(l_Undef,false);solver.restartStudy.tag(truth,Minisat::Constant);check(solver.addClause(mkLit(truth)),"constant root");}
     void boundary() const {check(saved && solver.currentLevel()==0 && (state==SessionState::ready || state==SessionState::idle),"unsafe transaction boundary");}
     Var freshProgram() {++stats.program_vars;auto v=solver.newVar();solver.restartStudy.tag(v,Minisat::Program);return v;}
     Var control() {++stats.selectors;auto v=solver.newVar(l_Undef,false);solver.restartStudy.tag(v,Minisat::Selector);return v;}
+    void submit(int member,Var selector,Var query,vec<Lit>& guarded) {
+        if(study) {
+            auto hash=[&](unsigned word){fingerprint=(fingerprint^word)*1099511628211ULL;};
+            hash(guarded.size());for(int i=0;i<guarded.size();++i)hash(guarded[i].x);
+            ++guardedCount;
+        }
+        journal.clause(member,selector,query,guarded);
+        check(solver.addClause_(guarded),"permanent guarded database became inconsistent");
+        ++stats.unique_inputs;
+    }
+    GroupPlan collect(const std::vector<InputOccurrence>& input,const std::vector<int>& mu) {
+        return groups.collect(input,[&](const InputOccurrence &c,std::vector<int>& out){return canonical(c,mu,out);});
+    }
+    void bindGroup(const InputGroup& g) {
+        journal.words(3,{int(g.id),g.selector,int(g.firstVersion),g.scope});
+        for(unsigned id:g.members) {
+            vec<Lit> guarded; guarded.push(~mkLit(g.selector));
+            for(int p:groups.at(id))guarded.push(lit(p));
+            submit(id,g.selector,g.scope,guarded);
+        }
+    }
+    void track(GroupPlan& plan,Var scope) {
+        stats.occurrences+=plan.occurrences.size();stats.skipped+=plan.skipped;
+        if(journal.enabled())for(const auto &r:plan.occurrences)journal.occurrence(scope,r.occurrence,r.member);
+        groups.origins.push_back({unsigned(currentInstallVersion),scope,std::move(plan.occurrences)});
+    }
+    void installPermanent(Version& v,GroupPlan& plan) {
+        v.inputs=std::move(plan.retained);v.activeB=plan.ordered.size();
+        for(auto &members:plan.fresh) {
+            unsigned id=groups.permanent.size();
+            Var selector=control();selectors.push_back(selector);
+            groups.permanent.push_back({id,unsigned(v.id.id),selector,var_Undef,std::move(members)});
+            bindGroup(groups.permanent.back());v.inputs.push_back(id);
+        }
+        track(plan,var_Undef);
+    }
     void remember(const InputOccurrence &c,Var query,std::vector<unsigned>& active,const std::vector<int>& mu) {
         ++stats.occurrences;
         std::vector<int> v;
-        for(auto l:c.literals) {
-            int p=translate(wire(l,mu.size()),mu);
-            if(p==-1){++stats.skipped;return;}
-            if(p>=0)v.push_back(p);
-        }
-        std::sort(v.begin(),v.end());v.erase(std::unique(v.begin(),v.end()),v.end());
-        for(size_t i=1;i<v.size();++i) if((v[i-1]^1)==v[i]){++stats.skipped;return;}
+        if(!canonical(c,mu,v)){++stats.skipped;journal.occurrence(query,c.occurrence,-1);return;}
         // Negative context codes cannot collide with any translated program literal.
         v.push_back(-2-query);
         auto inserted=registry.emplace(std::move(v),unsigned(selectors.size()));
@@ -181,16 +226,22 @@ struct PersistentClosureSession::Backend {
             if(query!=var_Undef)guarded.push(~mkLit(query));
             const auto &v0=inserted.first->first;
             for(size_t i=0;i+1<v0.size();++i) guarded.push(lit(v0[i]));
-            check(solver.addClause_(guarded),"permanent guarded database became inconsistent");
-            ++stats.unique_inputs;
+            journal.words(3,{int(idx),s,int(currentInstallVersion),query});
+            submit(idx,s,query,guarded);
         }
-        active.push_back(idx);
+        active.push_back(idx);journal.occurrence(query,c.occurrence,idx);
         if(trace)*trace<<"OCC "<<published+1<<' '<<query<<' '<<c.occurrence<<' '<<selectors[idx]<<'\n';
     }
     void installQuery(Version &v,QueryDescriptor q) {
         Version::Query result;
         result.control=control();queryControls.push_back(result.control);
-        for(const auto &c:q.scoped_inputs) remember(c,result.control,result.inputs,v.mu);
+        journal.words(7,{int(v.id.id),int(q.id.id),result.control});
+        if(grouped) {
+            auto plan=collect(q.scoped_inputs,v.mu);
+            result.activeQ=plan.ordered.size();
+            groups.queries.push_back({unsigned(groups.queries.size()),unsigned(v.id.id),result.control,result.control,std::move(plan.ordered)});
+            bindGroup(groups.queries.back());track(plan,result.control);
+        } else for(const auto &c:q.scoped_inputs) remember(c,result.control,result.inputs,v.mu);
         q.scoped_inputs.clear(); result.desc=std::move(q);
         auto id=result.desc.id.id;
         v.queries.emplace(id,std::move(result));
@@ -233,6 +284,8 @@ struct PersistentClosureSession::Backend {
 #undef FIELD
         o<<",\"restart_study\":"<<solver.restartReceipt();
         o<<",\"solver_instance\":"<<solver.nativeInstance();
+        if(study)o<<",\"guarded_input_fingerprint\":\""<<std::hex<<fingerprint<<std::dec
+                  <<"\",\"installed_guarded\":"<<guardedCount;
         o<<",\"collections\":"<<ledger.collections<<",\"reductions\":"<<ledger.reductions<<",\"families\":[";
         for(unsigned f=0;f<3;++f){
             unsigned born=0,res=0,units=0,used=0,dormantUsed=0; std::array<uint64_t,4> h{},unitHits{},sleepHits{};unsigned unitUsed=0;
@@ -284,6 +337,7 @@ struct PersistentClosureSession::Backend {
             for(int i=0;i<args.size();++i)word(args[i].x);
             check(assumptionOutput->good(),"assumption receipt failed");
         }
+        journal.words(6,{int(published),int(id.id),q.control,var(epochs[v.epoch]->control)});
         solver.epochContext(*epochs[v.epoch],epochs.size(),published,ledger);
         solver.classifyResident(off);
         std::vector<unsigned> phys(3),inactive(3),oldUnits(3);
@@ -292,16 +346,16 @@ struct PersistentClosureSession::Backend {
         for(const auto &kv:ledger.resident)count(kv.second);
         for(const auto &kv:ledger.root_units)count(kv.second);
         unsigned active=0;
-        if(!solver.restartStudy.dbPath.empty()) {
-            active=std::count(enabled.begin(),enabled.end(),1);
-            solver.databaseSnapshot(off,active,selectors.size(),"entry");
+        if(!solver.restartStudy.inventoryPath.empty()) {
+            active=grouped?v.activeB+q.activeQ:std::count(enabled.begin(),enabled.end(),1);
+            solver.databaseSnapshot(off,active,stats.unique_inputs,"entry");
         }
         const double switchTime=epochClock()-t;
         state=SessionState::solving;
         try {
             lbool status=solver.runEpoch(args,probe);
             solver.restartStudy.sample.switchSeconds=switchTime;
-            solver.databaseSnapshot(off,active,selectors.size(),"exit");
+            solver.databaseSnapshot(off,active,stats.unique_inputs,"exit");
             if(status==l_True) {
                 result.status=QueryResult::Status::sat;
                 for(unsigned i=0;i<q.desc.native_variable_count_at_boundary;++i){auto value=solver.modelValue(lit(v.mu[i]));
@@ -392,15 +446,51 @@ VersionId PersistentClosureSession::append_version(ModelTransaction txn) {
     }
     b.state=SessionState::installing;
     try {
-        for(auto &a:v->mu)if(a<0)a=mkLit(b.freshProgram()).x;
-        if (b.trace) { *b.trace<<"MU "<<v->id.id;for(int raw:v->mu)*b.trace<<' '<<raw;*b.trace<<'\n'; }
-        v->epoch=b.installGraph(*v);
-        for(const auto &c:txn.inputs)b.remember(c,var_Undef,v->inputs,v->mu);
-        b.installQuery(*v,std::move(txn.first_query));
-        b.published=v->id.id;b.current=std::move(v);b.saved=false;b.state=SessionState::ready;
-        b.stats.reused=reused;b.stats.fresh=n-reused;b.stats.rejected_ports=rejected;b.stats.install_seconds=epochClock()-start;
-    } catch(...) {b.state=SessionState::failed;throw;}
-    return {b.published};
+        const bool reset=b.resetActive && b.current;
+        std::vector<std::vector<unsigned>> layout;
+        if(reset) {
+            // Planning coordinates are never allocated in the new solver.
+            int next=b.solver.nVars();
+            for(auto &a:v->mu)if(a<0)a=mkLit(next++).x;
+            {
+                auto plan=b.collect(txn.inputs,v->mu);b.groups.partition(plan);
+                layout=b.groups.localLayout(plan);
+            }
+            std::unique_ptr<Backend> fresh(new Backend);
+            fresh->published=b.published;
+            fresh->stats.solver_construct_count=b.stats.solver_construct_count+1;
+            fresh->trace=b.trace;fresh->solver.auditTo(b.trace);fresh->ledger.audit=b.trace;
+            fresh->assumptionOutput=b.assumptionOutput;
+            backend=std::move(fresh);
+            std::fill(v->mu.begin(),v->mu.end(),-1);
+        }
+        auto &dst=live();
+        for(auto &a:v->mu)if(a<0)a=mkLit(dst.freshProgram()).x;
+        dst.currentInstallVersion=v->id.id;
+        dst.fingerprint=14695981039346656037ULL;dst.guardedCount=0;
+        dst.journal.words(1,{int(v->id.id),int(reset)});dst.journal.mapping(v->mu);
+        if(dst.trace) { *dst.trace<<"MU "<<v->id.id;for(int raw:v->mu)*dst.trace<<' '<<raw;*dst.trace<<'\n'; }
+        v->epoch=dst.installGraph(*v);
+        if(dst.grouped){
+            auto plan=dst.collect(txn.inputs,v->mu);
+            if(reset) {
+                for(const auto &indices:layout) {
+                    plan.fresh.emplace_back();
+                    for(unsigned i:indices){
+                        int member=plan.occurrences.at(i).member;
+                        check(member>=0,"active reset lost a signed input");
+                        plan.fresh.back().push_back(unsigned(member));
+                    }
+                }
+            } else dst.groups.partition(plan);
+            dst.installPermanent(*v,plan);
+        } else for(const auto &c:txn.inputs)dst.remember(c,var_Undef,v->inputs,v->mu);
+        dst.installQuery(*v,std::move(txn.first_query));
+        dst.published=v->id.id;dst.current=std::move(v);dst.saved=false;dst.state=SessionState::ready;
+        dst.stats.reused=reset?0:reused;dst.stats.fresh=n-dst.stats.reused;dst.stats.rejected_ports=rejected;
+        dst.stats.install_seconds=epochClock()-start;
+    } catch(...) {live().state=SessionState::failed;throw;}
+    return {live().published};
 }
 QueryId PersistentClosureSession::append_query(VersionId ver,QueryDescriptor q){
     std::lock_guard<std::mutex> guard(access);
@@ -415,6 +505,7 @@ QueryId PersistentClosureSession::append_query(VersionId ver,QueryDescriptor q){
     validateQuery(q,n);auto id=q.id;
     try {
         while(v.mu.size()<n)v.mu.push_back(mkLit(b.freshProgram()).x);
+        b.journal.mapping(v.mu);
         b.installQuery(v,std::move(q));b.saved=false;b.state=SessionState::ready;
     }catch(...){b.state=SessionState::failed;throw;}
     return id;

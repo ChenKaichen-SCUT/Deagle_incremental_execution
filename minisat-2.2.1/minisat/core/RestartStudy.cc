@@ -45,7 +45,11 @@ void ClosureSolver::configureRestartStudy(const char *mode, const char *ledger, 
     restartStudy.retain=name!="R0"; restartStudy.skipZero=name=="R2";
     if (ledger && std::string(ledger)!="off") throw std::invalid_argument("PI1R_LEDGER");
     restartStudy.ledger=!ledger;
-    if (db) restartStudy.dbPath=db;
+    if (db) {restartStudy.dbPath=db;restartStudy.inventoryPath=std::string(db)+".inventory";}
+    if(const char *inventory=std::getenv("PI1G_INVENTORY")) {
+        if(db)throw std::invalid_argument("conflicting inventory modes");
+        restartStudy.inventoryPath=inventory;
+    }
 }
 
 bool ClosureSolver::prefixSafe() const {
@@ -99,13 +103,15 @@ std::string ClosureSolver::restartReceipt() const {
 }
 
 void ClosureSolver::databaseSnapshot(const std::set<int> &off,unsigned active,unsigned total,const char *phase) {
-    if (restartStudy.dbPath.empty()) return;
+    if (restartStudy.inventoryPath.empty()) return;
+    std::vector<unsigned char> disabled(nVars(),0);
+    for(int p:off)disabled[p/2]|=1u<<(p&1);
     std::map<std::pair<int,int>,std::array<unsigned,2>> hist;
     for (int i=0;i<learnts.size();++i) {
         const Clause &c=ca[learnts[i]]; int ns=0;bool dormant=false;
         for(int j=0;j<c.size();++j) {
             ns+=restartStudy.roles[var(c[j])]==Selector;
-            dormant|=off.count(c[j].x)!=0;
+            dormant|=(disabled[var(c[j])] & (1u<<sign(c[j])))!=0;
         }
         ++hist[{c.size(),ns}][dormant];
     }
@@ -114,7 +120,7 @@ void ClosureSolver::databaseSnapshot(const std::set<int> &off,unsigned active,un
     }
     uint64_t wused=0,wcap=0;
     for(int i=0;i<nVars()*2;++i) { auto &ws=watches[toLit(i)]; wused+=ws.size(); wcap+=ws.capacity(); }
-    std::ofstream f(restartStudy.dbPath+".inventory",std::ios::app);
+    std::ofstream f(restartStudy.inventoryPath,std::ios::app);
     f.exceptions(std::ios::badbit|std::ios::failbit);
     f<<"{\"version\":"<<epochVersion<<",\"phase\":\""<<phase<<"\",\"active_inputs\":"<<active<<",\"union_inputs\":"<<total
      <<",\"allocator_bytes\":"<<uint64_t(ca.size())*4<<",\"allocator_reserved\":"<<uint64_t(ca.reservedWords())*4

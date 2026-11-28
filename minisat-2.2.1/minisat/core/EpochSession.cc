@@ -213,6 +213,11 @@ void ClosureSolver::classifyResident(const std::set<int> &off)
         const Clause &clause = ca[entry.first];
         for (int i=0; i<clause.size(); ++i)
             if (off.count(clause[i].x)) { birth.dormant = true; break; }
+        if(reasonAudit) {
+            *reasonAudit<<"OLDCLAUSE "<<epochVersion<<' '<<birth.id<<' '<<entry.first<<' '<<birth.dormant;
+            for(int i=0;i<clause.size();++i)*reasonAudit<<' '<<clause[i].x;
+            *reasonAudit<<'\n';
+        }
     }
     for (const auto &u : piLedger->root_units)
         piLedger->births[u.second].dormant = off.count(mkLit(u.first, value(u.first) == l_False).x) != 0;
