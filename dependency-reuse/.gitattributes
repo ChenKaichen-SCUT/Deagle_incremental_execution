@@ -29,4 +29,6 @@ reports/evidence/d43c/** -text
 tests/d43c/** text eol=lf
 reports/evidence/d43d/** -text
 reports/evidence/d43e/** -text
+reports/evidence/si1a/** -text
+stable-identity/** text eol=lf
 tests/d43d/** text eol=lf

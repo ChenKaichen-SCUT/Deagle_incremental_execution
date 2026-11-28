@@ -1,0 +1,59 @@
+{
+  "stage": "SI-1A",
+  "status": "READY_FOR_REVIEW",
+  "branch": "codex/stable-model-identity",
+  "baseline_sha": "b3803564e0c9badedbdd8ca0ad8acd85a002081f",
+  "observation_and_analysis_code_sha": "b392c62e1e6234d051f7a9b0f6881b658ba63e34",
+  "report_and_evidence_sha": "b69bbc4f48a1826b0df318c68abafbac2e93b55b",
+  "report": "SI-1A.md",
+  "report_sha256": "b63028c590f1153c9c81d6f5f3667145cfebe5b6258039ef3253963037a346e3",
+  "cohort": {
+    "repairs": [
+      "fib_updates_8",
+      "circular-buffer",
+      "airline_reservations_6"
+    ],
+    "historical_control": "fib-snapshot-11",
+    "historical_scope": "INCOMPLETE_UNWINDING"
+  },
+  "checks": {
+    "verified_patches": 4,
+    "first_root_models_equal": 8,
+    "observed_P0_atoms": 657084,
+    "observed_P1_atoms": 527532,
+    "archived_births": 152817,
+    "archived_permanent_births": 97901,
+    "archived_query_births": 54916,
+    "archived_unknown_births": 0,
+    "all_exact_support_and_eligibility_decisions_reconciled": true,
+    "matched_disabled_smoke": true,
+    "offline_files_recomputed_byte_identical": 17
+  },
+  "airline_permanent_births": {
+    "old_conclusion_translatable": 2,
+    "old_support_intact": 0,
+    "uncertified_ancestors_only": 296,
+    "changed_or_absent_ancestors_only": 0,
+    "both_uncertified_and_changed_or_absent": 41504
+  },
+  "evidence": {
+    "origins": "evidence/si1a/cohorts.tsv",
+    "allocation": "evidence/si1a/allocation-sites.tsv",
+    "mapping": "evidence/si1a/mapping-reasons.tsv",
+    "support": "evidence/si1a/proof-dispositions.tsv",
+    "model_checks": "evidence/si1a/model-equivalence.json",
+    "cost_bounds": "evidence/si1a/zero-worker-pairs.tsv",
+    "size_estimate": "evidence/si1a/wire-size-scenarios.tsv",
+    "reproduction": "evidence/si1a/reproduction-check.json"
+  },
+  "limits": [
+    "Cache intervals quantify exposure; per-role recoverability requires an identity prototype.",
+    "All support dispositions use the frozen E mapping.",
+    "Wire sizes and the zero-worker residuals are scenarios; stable-identity performance has not been measured."
+  ],
+  "stable_identity_prototype_executed": false,
+  "new_P1_imports": 0,
+  "formal_performance_runs": 0,
+  "next_stage_started": false,
+  "awaiting": "Explicit user review and authorization for SI-1B."
+}
